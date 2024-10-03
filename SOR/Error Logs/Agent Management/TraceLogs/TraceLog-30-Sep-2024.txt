@@ -1,0 +1,24 @@
+Time : 30-Sep-2024 13:29 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 13:29 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 13:29 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 13:37 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 13:37 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 13:37 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 14:29 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 15:49 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 17:15 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 17:15 Message : AgentRegistration: BindDropdownCountryState(): Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 17:15 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 17:15 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 17:19 Message : AgentRegistration: BindDropdownCountryState(): Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 17:19 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 17:24 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 17:24 Message : AgentRegistration: BindDropdownCountryState(): Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 17:24 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 17:25 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Can't write CLR type System.Int32 with handler type TextHandler
+Time : 30-Sep-2024 19:04 Message : TrRule: BindRules(): Exception: 42883: function public.sp_geteditruledetails(p_username => text, p_groupid => integer) does not exist
+Time : 30-Sep-2024 19:06 Message : TrRule: BindRules(): Exception: 42883: function public.sp_geteditruledetails(p_username => text, p_groupid => integer) does not exist
+Time : 30-Sep-2024 19:35 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42601: syntax error at or near "SP_GetStateCity"
+Time : 30-Sep-2024 19:35 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 30-Sep-2024 19:56 Message : SwitchConfig : Page_Load(): Exception: Object reference not set to an instance of an object.
+Time : 30-Sep-2024 20:02 Message : SwitchConfig : Page_Load(): Exception: Object reference not set to an instance of an object.

@@ -1,0 +1,48 @@
+Time : 26-Sep-2024 11:38 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: operator does not exist: text = integer
+Time : 26-Sep-2024 11:45 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:45 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:45 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:45 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:45 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:45 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 11:46 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 12:00 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: operator does not exist: text = integer
+Time : 26-Sep-2024 12:02 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 12:07 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 12:11 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42702: column reference "switchid" is ambiguous
+Time : 26-Sep-2024 12:13 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 13:15 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 13:25 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42P01: relation "json_data" does not exist
+Time : 26-Sep-2024 13:27 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42P01: relation "json_data" does not exist
+Time : 26-Sep-2024 13:27 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 13:31 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42703: column temp_switch_data.failoverswitchid does not exist
+Time : 26-Sep-2024 14:16 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42P07: relation "temp_switch_data" already exists
+Time : 26-Sep-2024 14:17 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 14:20 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: operator does not exist: character varying = integer
+Time : 26-Sep-2024 14:20 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: operator does not exist: character varying = integer
+Time : 26-Sep-2024 14:24 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: operator does not exist: character varying = integer
+Time : 26-Sep-2024 14:27 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42P01: missing FROM-clause entry for table "p_switchid"
+Time : 26-Sep-2024 14:27 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 14:29 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 14:35 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42702: column reference "switchid" is ambiguous
+Time : 26-Sep-2024 14:36 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 15:21 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 16:37 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 16:44 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42703: column "data" does not exist
+Time : 26-Sep-2024 16:45 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42703: column "data" does not exist
+Time : 26-Sep-2024 16:47 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42703: column "data" does not exist
+Time : 26-Sep-2024 16:47 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 16:52 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 16:55 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 16:56 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Sep-2024 16:56 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

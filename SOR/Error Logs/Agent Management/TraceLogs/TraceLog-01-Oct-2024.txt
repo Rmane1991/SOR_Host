@@ -1,0 +1,15 @@
+Time : 01-Oct-2024 11:44 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42601: syntax error at or near "SP_GetStateCity"
+Time : 01-Oct-2024 11:44 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 11:44 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42601: syntax error at or near "SP_GetStateCity"
+Time : 01-Oct-2024 11:44 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 11:57 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42804: structure of query does not match function result type
+Time : 01-Oct-2024 11:57 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 12:41 Message : AgentRegistration: BindDropdownCountryState(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'District'.
+Time : 01-Oct-2024 12:41 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 12:42 Message : AgentRegistration: BindDropdownCountryState(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'District'.
+Time : 01-Oct-2024 12:42 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 12:54 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:24 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:24 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:24 Message : BCEntity: GetBCRequestList: UserName:  Exception: Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:33 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist

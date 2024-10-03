@@ -1,0 +1,1 @@
+Time : 16-Sep-2024 15:46 Message : SwitchConfig : BindSwitch(): Exception: 42883: procedure public.sp_getswitchdetails(text, integer) does not exist

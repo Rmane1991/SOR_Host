@@ -1,0 +1,85 @@
+26-09-2024 11:27:30:6572 : Login Successful. Username Maximus. SessionID : 3rej2c2xjdrwg2paynob20uu
+26-09-2024 11:34:37:1036 : Login Successful. Username Maximus. SessionID : fbu02hefvadqzjnp4p4hor3r
+26-09-2024 11:38:35:3188 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: operator does not exist: text = integer
+26-09-2024 12:00:30:2712 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: operator does not exist: text = integer
+26-09-2024 12:11:31:7338 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42702: column reference "switchid" is ambiguous
+26-09-2024 13:15:04:9394 : Login Successful. Username Maximus. SessionID : rwzzz2z23oejxdxaqsm3e5zb
+26-09-2024 13:24:43:7034 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42P01: relation "json_data" does not exist
+26-09-2024 13:27:18:3075 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42P01: relation "json_data" does not exist
+26-09-2024 13:31:33:2279 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column temp_switch_data.failoverswitchid does not exist
+26-09-2024 14:14:58:9643 : Login Successful. Username Maximus. SessionID : omfraaqjk2tvcswosn3v455i
+26-09-2024 14:16:55:4397 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42P07: relation "temp_switch_data" already exists
+26-09-2024 14:20:30:0460 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: operator does not exist: character varying = integer
+26-09-2024 14:20:40:2209 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: operator does not exist: character varying = integer
+26-09-2024 14:20:56:1291 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: operator does not exist: character varying = integer
+26-09-2024 14:27:44:1695 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42P01: missing FROM-clause entry for table "p_switchid"
+26-09-2024 14:35:39:4586 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42702: column reference "switchid" is ambiguous
+26-09-2024 15:20:08:7628 : Login Successful. Username Maximus. SessionID : g55swrcpykeeoorl1fvcka0u
+26-09-2024 16:36:55:8263 : Login Successful. Username Maximus. SessionID : qj0xalcqmyz5bq0dzxatvwsd
+26-09-2024 16:44:37:7130 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column "data" does not exist
+26-09-2024 16:45:24:4144 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column "data" does not exist
+26-09-2024 16:47:15:4369 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column "data" does not exist
+26-09-2024 17:14:05:7347 : Login Successful. Username Maximus. SessionID : fsuaww2iucdk3lqej1msbq2d
+26-09-2024 17:16:41:7500 : Login Successful. Username Maximus. SessionID : yqf40ey1u0ycieezvaven0je
+26-09-2024 17:20:51:9024 : Login Successful. Username Maximus. SessionID : lbuzf5dnidm4l3ghxsrp2suy
+26-09-2024 17:50:25:4809 : Login Successful. Username Maximus. SessionID : kmgeq2mq2hmtszjygnqzemt1
+26-09-2024 17:54:55:7285 : Login Successful. Username Maximus. SessionID : o0rh50yasntreohronmret1s
+26-09-2024 17:58:15:6799 : Login Successful. Username Maximus. SessionID : sqcwpkucslu0bf5rpnsgc4zm
+26-09-2024 18:00:08:5931 : Login Successful. Username Maximus. SessionID : 3qpa1urwzbs1lz0ljmzt3nae
+26-09-2024 18:00:38:7891 : Login Successful. Username Maximus. SessionID : qlrqa5swaidympcyroikldvc
+26-09-2024 18:03:45:4689 : Login Successful. Username Maximus. SessionID : 4b1nghqt50sysp4k1yjiokgl
+26-09-2024 18:11:12:7096 : Login Successful. Username Maximus. SessionID : m2vif5lyybks3sligpilwoze
+26-09-2024 18:12:41:8880 : Login Successful. Username Maximus. SessionID : o5xnxde55lr30jpx2j40n5nm
+26-09-2024 18:14:46:2501 : Login Successful. Username Maximus. SessionID : i2zcdmgwiqgqxzbzxeaf2pab
+26-09-2024 18:16:47:8763 : Login Successful. Username Maximus. SessionID : axhl100sauhvsincjntngqft
+26-09-2024 18:41:00:2231 : Login Successful. Username Maximus. SessionID : 0c43qt1wpbor4uqraiu4gdo0
+26-09-2024 18:45:28:9739 : Login Successful. Username Maximus. SessionID : fhl2cajnh0blfsqqol0y5tt3
+26-09-2024 19:03:06:8163 : Login Successful. Username Maximus. SessionID : p4crht1yra3rujt4gtzi0bab
+26-09-2024 19:10:34:8092 : Login Successful. Username Maximus. SessionID : xewlfzuiqthfrowukszs0rql
+26-09-2024 19:12:31:3613 : Login Successful. Username Maximus. SessionID : qwlerqutbwlkq0acoq1n4hkg
+26-09-2024 19:21:15:0269 : Login Successful. Username Maximus. SessionID : cx10kwhssv4uljvqlzk5hvqs

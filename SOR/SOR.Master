@@ -1,0 +1,795 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SOR.master.cs" Inherits="SOR.SOR" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <title>PayRakam</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="././images/favicon.ico" />
+    <!-- bootstrap CDN -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <%--      <link rel="stylesheet" href='<%= ResolveUrl("~/css/select2.min.css")%>' />--%>
+    <link href="./css/select2.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/icons.css">
+    <!-- OWN CSS -->
+         <link href="./css/Thumbnil.css" rel="stylesheet">
+    
+    <link href="./css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tables.css">
+    <link rel="stylesheet" href="./css/date-picker.css">
+    <link rel="stylesheet" href="./css/ticket-center.css">
+    <link rel="stylesheet" href="./assets/vendor/toastr/toastr.min.css">
+    <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+    <style>
+        div.dataTables_wrapper {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 80%;
+            border-radius: 30px;
+        }
+        div.dataTables_scrollHead {
+            border-radius: 6px;
+        }
+        div.datatables_filter {
+            padding: 10px;
+        }
+        div.dataTables_length {
+            padding: 10px;
+        }
+        div.dataTables_info {
+            padding: 10px;
+        }
+        div.dataTables_paginate paging_simple_numbers {
+            padding: 30px;
+            font-size: 50%;
+        }
+        table.dataTable thead tr {
+            background-color: #fbd2ce;
+            background-size: 20%;
+        }
+    </style>
+    
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+            ::-webkit-scrollbar:horizontal {
+                height: 10px;
+            }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+    </style>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .GridView {
+            width: 100%;
+            height: auto;
+            overflow-y: auto;
+            border: solid 0px #B9B9B9 !important;
+        }
+            .GridView table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .GridView th {
+                background: #fbd2ce;
+                color: black;
+                font-weight: bold !important;
+                padding: 4px 20px 4px 4px !important;
+            }
+            .GridView td {
+                background: none;
+                color: #420629;
+                padding: 5px;
+                border: 1px solid #CCC;
+            }
+            .GridView tr:nth-child(even) {
+                background: #eaecff !important;
+            }
+            .GridView tr:nth-child(odd) {
+                background: #FFF !important;
+            }
+    </style>
+    <style>
+        .modalBackground {
+            filter: alpha(opacity=70);
+            background-color: lightgray;
+            border-width: 3px;
+            border-style: solid;
+            border-color: Gray;
+            width: 250px;
+            opacity: 0.7;
+        }
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 6px;
+            outline: 0;
+        }
+        .modal-body {
+            position: relative;
+            padding: 15px;
+        }
+        .modalBackground {
+            filter: alpha(opacity=70);
+            background-color: lightgray;
+            border-width: 3px;
+            border-style: solid;
+            border-color: Gray;
+            width: 250px;
+            opacity: 0.7;
+        }
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 6px;
+            outline: 0;
+        }
+        .modal-body {
+            position: relative;
+            padding: 15px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<script type="text/javascript">
+        function startCountdown(timeLeft) {
+            var interval = setInterval(countdown, 1000);
+            update();
+            function countdown() {
+                if (++timeLeft > 0) {
+                    update();
+                } else {
+                    clearInterval(interval);
+                    update();
+                    //Show the alert message , change the message as per your need
+                    alert('Time Up!');
+                    completed();
+                }
+            }
+            function update() {
+                hours = Math.floor(timeLeft / 3600);
+                minutes = Math.floor((timeLeft % 3600) / 60);
+                seconds = timeLeft % 60;
+                document.getElementById('time-left').innerHTML = '' + hours + ':' + minutes + ':' + seconds;
+            }
+            function completed() {
+                //Call the Delete Method
+                PageMethods.YourMethodName();
+                //Change the url here
+                window.location = "http://www.asp.net";
+            }
+        }
+    </script>--%>
+</head>
+<body class="default-theme">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="smModalPopupExtender" EnablePageMethods="true" EnablePartialRendering="true">
+        </asp:ScriptManager>
+        <!-- header design -->
+        <nav class="navbar navbar-expand-lg nav-wrap">
+            <div class="container-fluid nav-container">
+                <div class="nav-left">
+                    <div class="nav-left2">
+                        <button class="navbar-toggler hamburgerBtn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="icon-hamburger"></span>
+                        </button>
+                        <span id="navbar-module" class="navbar-module" data-bs-toggle="tooltip"
+                            <%--data-bs-placement="bottom" data-bs-title="Version 6.0.0"--%>
+                            >
+                            <img src="../../images/nsdl.PNG" class="module-logo" alt="module_logo" style="width:127px">
+                            <img src="../../images/nsdl.PNG" class="module-dark-logo" alt="module_logo">
+                        </span>
+                    </div>
+                    <p class="session-time-text" style="display:none">Session : <span id="time-left"></span></p>
+                    <%--Redirect in <span id="time-left"></span>--%>
+                    <asp:LinkButton ID="lnkFake" runat="server" />
+                </div>
+                <div class="nav-right">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <div class="nav-link p-0">
+                                <div class="dropdown dropdown-center">
+                                    <button class="nav-setting-btn icon-setting nav-link-icons nav-links-btn dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="nav-popover-list nav-setting-dropdown dropdown-menu">
+                                      <%--  <li class="nav-popover-item"><a type="button" class="nav-popoverBtns" data-bs-toggle="modal"
+                                            data-bs-target="#siteConfigModal">Site Configuration</a></li>--%>
+                                        <li class="nav-popover-item default-theme-item"><a type="button" class="nav-popoverBtns"
+                                            data-bs-toggle="modal" data-bs-target="#defaultThemeModal">Default Theme</a></li>
+                                        <li class="nav-popover-item light-theme-item"><a type="button" class="nav-popoverBtns"
+                                            data-bs-toggle="modal" data-bs-target="#lightThemeModal">Light Theme</a></li>
+                                        <li class="nav-popover-item dark-theme-item"><a type="button" class="nav-popoverBtns border-bottom-0"
+                                            data-bs-toggle="modal" data-bs-target="#darkThemeModal">Dark Theme</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <%--<li class="nav-item">
+                            <div class="nav-link p-0">
+                                <button class="nav-notification-btn icon-notification nav-link-icons nav-links-btn" >
+                                    <span class="position-absolute translate-middle notification-pill">10
+                                    <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>--%>
+                        <li class="nav-item">
+                            <div class="nav-link p-0">
+                                <div class="dropdown dropdown-center">
+                                    <button class="nav-user-btn  nav-links-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <span class="icon-user nav-link-icons"></span>
+                                        <div class="user-box" style="color:#FFFFFF">
+                                            <asp:Label ID="lblWelcome" runat="server"></asp:Label>
+                                        </div>
+                                    </button>
+                                    <ul class="nav-popover-list nav-user-dropdown dropdown-menu">
+                                        <li class="nav-popover-item"><a type="button" id="btnProfile" runat="server" onserverclick="btnProfile_ServerClick" class="nav-popoverBtns">My Profile</a></li>
+                                        <li class="nav-popover-item"><a type="button" id="btnchange" runat="server" onserverclick="btnchange_ServerClick" class="nav-popoverBtns border-bottom-0">Change Password</a> </li>
+                                        <li class="nav-popover-item"><a type="button" id="LbLoginStatus" runat="server" onserverclick="LbLoginStatus_Click" onclientclick="RidLogo();" class="nav-popoverBtns border-bottom-0">Logout</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="navbar-portal" href="#">
+                        <img src="../../images/proxima_logo.png" class="brand-logo" alt="brand_logo">
+                        <img src="../../images/YES-BANK.png" class="brand-dark-logo" alt="brand_logo">
+                    </a>
+                </div>
+                <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+                <!-- offcanvas Start -->
+                <div class="offcanvas offcanvas-start d-flex d-lg-none" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-body">
+                        <!--  -->
+                        <div class="sidebar-open">
+                            <!-- accordion -->
+                            <div class="accordion" id="accordionExample2">
+                                <!-- accordion Item with body -->
+                                <asp:Literal ID="accordionExamplesd" runat="server"></asp:Literal>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider -->
+                    <button id="slider-btn2" class="slider-btn icon-slider-arrow" class="btn-close" data-bs-dismiss="offcanvas">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="main-container">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <!-- sidebar open -->
+                <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+                <div class="sidebar-open" style="overflow:auto; max-height:600px">
+                    <!-- accordion -->
+                    <div class="accordion" id="accordionExample">
+                         <!-- accordion Item with body -->
+                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                    </div>
+
+                   
+                </div>
+                <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+                <!-- sidebar closed -->
+                <div class="sidebar-closed">
+                   <%-- <ul>
+                        <!-- List Item with body -->
+                        <li>
+                            <a class="closedSidebarBtn icon-dashboard" data-bs-toggle="popover" data-bs-placement="right"
+                                data-bs-content-id="dashboard" tabindex="0" role="button" data-bs-trigger="focus"></a>
+                            <div id="dashboard" class="d-none">
+                                
+                                    <ul class="sub-menu">
+                                                <!-- sub-menu-list -->
+                                                <li class="sub-menu-list" id="CED1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/BCRegistration.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Registration</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- sub-menu-list -->
+                                                <li class="sub-menu-list" id="MED1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/BCVerificationLevelOne.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Verification Level 1</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/BCVerificationLevelTwo.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Verification Level 2</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/ActiveBcReport.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Active BC</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/DeactiveBcReport.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Deactive BC</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/DeclinedBCReport.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Decline BC</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/TerminatedBCReport.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Terminate BC</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                 <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/EditBCDetails.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">Edit BC Details</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="sub-menu-list" id="ES1">
+                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/FrmBcStatus.aspx") %>">
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon-list-line"></span>
+                                                            <span class="list-line-text">BC Status</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                            </div>
+                        </li>
+                    </ul>--%>
+                </div>
+                <!-- slider -->
+                <button id="slider-btn" class="slider-btn icon-slider-arrow" onclick="return false;">
+                </button>
+            </div>
+            <div class="main-window" style="margin-bottom: 250px;">
+                <div>
+                    <asp:ContentPlaceHolder ID="CPHMasterMain" runat="server"  >
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p class="main-footer-text">
+                © Maximus Infoware (India) Private Limited 2022
+            </p>
+        </footer>
+        <!-- Modals -->
+        <section id="modal-section">
+            <!-- theme modal - Default -->
+            <div class="modal commmonModal fade" id="defaultThemeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Apply Theme</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex align-items-center justify-content-center">
+                            <p class="themesure-text">Are you sure to change the your theme to Default Theme?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="themeBtn themeCancelBtn" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" id="defaultThemeButton" class="themeBtn themeApplyBtn" data-bs-dismiss="modal">
+                                Apply
+              Theme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- theme modal - Dark -->
+            <div class="modal commmonModal fade" id="darkThemeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Apply Theme</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex align-items-center justify-content-center">
+                            <p class="themesure-text">Are you sure to change the your theme to Dark Theme?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="themeBtn themeCancelBtn" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" id="darkThemeButton" class="themeBtn themeApplyBtn" data-bs-dismiss="modal">
+                                Apply
+              Theme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- theme modal - Light -->
+            <div class="modal commmonModal fade" id="lightThemeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Apply Theme</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex align-items-center justify-content-center">
+                            <p class="themesure-text">Are you sure to change the your theme to Light Theme?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="themeBtn themeCancelBtn" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" id="lightThemeButton" class="themeBtn themeApplyBtn" data-bs-dismiss="modal">
+                                Apply
+              Theme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- site-config -->
+            <div class="modal commmonModal siteConfigModal fade" id="siteConfigModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Site Configuration</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex align-items-center justify-content-center">
+                            <div class="w-100 mx-3">
+                                <label class="selectInputLabel" for="selectInputLabel">Select Startup Page</label>
+                                <div class="selectInputBox">
+                                    <select class="maximus-select w-100" name="values">
+                                        <option></option>
+                                        <option value="Chocolate">Chocolate</option>
+                                        <option value="Strawberry">Strawberry</option>
+                                        <option value="Vanilla">Vanilla</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer mx-3">
+                            <button type="button" class="themeBtn themeApplyBtn w-100" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- filter Reset Modal -->
+           <%-- <div class="modal commmonModal filtersmodal resetFilterModal fade" id="resetFilterModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Filters</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                            <img class="filterModalImg" src="../images/error.svg" alt="error svg">
+                            <p class="filtermodalText-1">Filters could not be reset due to internal server error.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>--%>
+            <!-- filter Search Modal -->
+          <%--  <div class="modal commmonModal SearchFilterModal filtersmodal fade" id="SearchFilterModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Filters</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                            <img class="filterModalImg" src="../images/success.svg" alt="error svg">
+                            <p class="filtermodalText-1 w-100">Filters Reset Successfully!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>--%>
+            <!-- edit Table -->
+            <div class="modal commmonModal filtersmodal editTableModal fade" id="editTableModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Filters</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Enter your comment here..."></textarea>
+                            <div class="editTableBtns w-100 d-flex align-items-center">
+                                <button type="button" class="themeBtn themeCancelBtn w-100" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" id="lightThemeButton" class="themeBtn themeApplyBtn w-100"
+                                    data-bs-dismiss="modal">
+                                    Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- JS Libraries -->
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+         <script src="../../scripts/jquery-3.3.1.js"></script>
+<%--        <script src="../../js/jquery-3.6.1.slim.js"></script>--%>
+
+        <script src="../../js/select2.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.min.js"></script>
+        <script src="../../js/script.js"></script>
+        <script src="../../js/theme.js"></script>
+        <!-- toastr -->
+        <%--<script src="../Login/assets/vendor/jquery/jquery.min.js"></script>
+        <script src="../Login/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../Login/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../Login/assets/vendor/toastr/toastr.js"></script>--%>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" class="init">
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    scrollY: 200,
+                    scrollX: true,
+                });
+            });
+        </script>
+         <%--<script src="../../assets/vendor/toastr/jquery.min.js" type="text/jscript"></script>--%>
+         
+        <script src="../../assets/vendor/toastr/toastr.min.js" type="text/jscript"></script>
+        <script type="text/javascript">
+            function showDefault(msg, title) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "positionClass": "toast-top-center",
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "8000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                toastr.warning(msg, title);
+                //return false;
+            }
+        </script>
+        <script type="text/javascript">
+            function showWarning(msg, title) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "positionClass": "toast-top-center",
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "8000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                toastr.warning(msg, title);
+                //return false;
+            }
+        </script>
+        <script type="text/javascript">
+            function showSuccess(msg, title) {
+                debugger;
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "positionClass": "toast-top-center",
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                toastr.success(msg, title);
+                //return false;
+            }
+        </script>
+        <script type="text/javascript">
+            function showError(msg, title) {
+                debugger;
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "positionClass": "toast-top-center",
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "6000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                toastr.error(msg, title);
+                //return false;
+            }
+        </script>
+        <!--End Region toastr -->
+        <script>
+            // script for sidebar popovers
+            const list = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            list.map((el) => {
+                let opts = {
+                    animation: false,
+                    customClass: "sidebarPopover"
+                }
+                if (el.hasAttribute('data-bs-content-id')) {
+                    opts.content = document.getElementById(el.getAttribute('data-bs-content-id')).innerHTML;
+                    opts.html = true;
+                }
+                new bootstrap.Popover(el, opts);
+            })
+        </script>
+        <script>
+            // Module tooltip
+            const navbarModule = document.getElementById('navbar-module')
+            const tooltip = new bootstrap.Tooltip(navbarModule, {
+                customClass: "module-tooltip"
+            })
+            // Pdf tooltip
+            const pdfTooltip = document.getElementById('pdf-tooltip')
+            const tooltipPdf = new bootstrap.Tooltip(pdfTooltip, {
+                customClass: "module-tooltip"
+            })
+            // Excel tooltip
+            const excelTooltip = document.getElementById('excel-tooltip')
+            const tooltipExcel = new bootstrap.Tooltip(excelTooltip, {
+                customClass: "module-tooltip"
+            })
+            // Edit Table tooltip
+            const editTooltip = document.getElementById('edit-tooltip')
+            const edittipExcel = new bootstrap.Tooltip(editTooltip, {
+                customClass: "module-tooltip"
+            })
+        </script>
+        <script>
+            // select2
+            $('.maximus-select').select2({
+                placeholder: "All",
+            });
+            $('.maximus-entry').select2({
+                placeholder: "10 Entries",
+            });
+            $('.maximus-addToWork').select2({
+                placeholder: "Add to worklist",
+            });
+        </script>
+        <%--<script>
+            const allFilterBtn = document.getElementById('allFilterBtn');
+            const showHideBtn = document.getElementById('someHideFilterBtn');
+            const searchBox = document.querySelector('.searchbox');
+            allFilterBtn.addEventListener('click', () => {
+                if (searchBox.classList.contains('hide')) {
+                    searchBox.classList.remove('hide')
+                    searchBox.classList.add('show')
+                    searchBox.classList.remove('hide-some-filters')
+                }
+                else {
+                    searchBox.classList.toggle('hide-some-filters')
+                }
+            })
+            showHideBtn.addEventListener('click', () => {
+                if (searchBox.classList.contains('show')) {
+                    searchBox.classList.remove('show')
+                    searchBox.classList.add('hide')
+                } else {
+                    searchBox.classList.add('show')
+                    searchBox.classList.remove('hide')
+                }
+            })
+        </script>--%>
+        <script type="text/javascript">
+            $(function () {
+                $('#datepicker').datepicker();
+            });
+        </script>
+        <%--<script>
+            const tableToggle1 = document.getElementById('tableToggle-1')
+            const pinkNestedTable = document.querySelector('.lightPinkNestedTable')
+            tableToggle1.addEventListener('click', () => {
+                tableToggle1.classList.toggle('tableToggle-active')
+                if (pinkNestedTable.classList.contains('hide')) {
+                    pinkNestedTable.classList.add('show')
+                    pinkNestedTable.classList.remove('hide')
+                } else {
+                    pinkNestedTable.classList.remove('show')
+                    pinkNestedTable.classList.add('hide')
+                }
+            })
+        </script>--%>
+        <%--<script>
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("btn");
+            var btns = header.getElementsByClassName("accordion-button");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>--%>
+    </form>
+</body>
+</html>

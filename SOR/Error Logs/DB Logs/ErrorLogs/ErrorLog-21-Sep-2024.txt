@@ -1,0 +1,229 @@
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 13:25
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 558
+Message - : 23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 14:20
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 558
+Message - : 23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 14:27
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 558
+Message - : 23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 14:28
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 558
+Message - : 23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 16:28
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 558
+Message - : 23502: null value in column "switch_address" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 16:29
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 558
+Message - : 23502: null value in column "switch_address" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 16:56
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlCommand.CheckReadyAndGetConnector()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 561
+Message - : Cannot access a disposed object.
+Object name: 'Npgsql.NpgsqlCommand'.
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 16:57
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 561
+Message - : 42703: column "dt2" does not exist
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 16:58
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 561
+Message - : 23502: null value in column "switch_address" of relation "tbl_switch_routing" violates not-null constraint
+----------------------------------------------------------------------------
+Time : 21-Sep-2024 16:59
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteReader()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 561
+Message - : 23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint

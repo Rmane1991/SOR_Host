@@ -1,0 +1,2 @@
+Time : 18-Sep-2024 13:17 Message : SwitchConfig : Page_Load(): Exception: 42809: public.get_ddl_switches() is a procedure
+Time : 18-Sep-2024 13:18 Message : SwitchConfig : Page_Load(): Exception: 42809: public.get_ddl_switches() is a procedure

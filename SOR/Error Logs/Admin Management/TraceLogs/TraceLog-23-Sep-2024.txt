@@ -1,0 +1,5 @@
+Time : 23-Sep-2024 11:09 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: Parameter 'p_username' must have its value set
+Time : 23-Sep-2024 13:10 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42P01: relation "aggid" does not exist
+Time : 23-Sep-2024 13:10 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42P01: relation "aggid" does not exist
+Time : 23-Sep-2024 13:11 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42804: structure of query does not match function result type
+Time : 23-Sep-2024 13:13 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42804: structure of query does not match function result type

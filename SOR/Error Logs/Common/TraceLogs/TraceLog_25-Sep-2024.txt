@@ -1,0 +1,197 @@
+25-09-2024 11:24:01:3977 : Login Successful. Username Maximus. SessionID : umbbmyjzwuaaiwfymdvi3bg5
+25-09-2024 11:38:43:7942 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+25-09-2024 11:43:09:8486 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+25-09-2024 11:44:41:2937 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+25-09-2024 11:53:40:6268 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+25-09-2024 11:55:38:6694 : Login Successful. Username Maximus. SessionID : efblz3b3nj1icpubdnknhvx0
+25-09-2024 12:05:03:9342 : Login Successful. Username Maximus. SessionID : gcrr005x1yyp3cpdod5skzfg
+25-09-2024 12:13:45:3012 : Login Successful. Username Maximus. SessionID : fvtu0n3kjcu2a04mgnyzuxdp
+25-09-2024 12:17:47:8222 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column "p_failover_switchid" does not exist
+25-09-2024 12:19:54:0838 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column "p_failover_switchid" does not exist
+25-09-2024 12:24:46:8199 : Login Successful. Username Maximus. SessionID : cm2flx50cd0fv1wnfdgkod20
+25-09-2024 12:28:30:2853 : Login Successful. Username Maximus. SessionID : cvqpxfw2hntmwlvgwbitytjq
+25-09-2024 12:33:17:1038 : Login Successful. Username Maximus. SessionID : t4priyiw50lxr0v4naimu4x3
+25-09-2024 12:34:18:8721 : Login Successful. Username Maximus. SessionID : ofaerhrgse0uayeb2ugxeykz
+25-09-2024 12:39:28:3227 : Login Successful. Username Maximus. SessionID : jocylnmv3ijhjhtfe1fpqdfv
+25-09-2024 12:50:40:3099 : Login Successful. Username Maximus. SessionID : upuvkh2yxbqszzza4z50mcce
+25-09-2024 13:08:18:7520 : Login Successful. Username Maximus. SessionID : ol5tdwcjnntlnboq0kocn2ng
+25-09-2024 13:20:40:1577 : Login Successful. Username Maximus. SessionID : lcihqbxps3hxevuia0gnjqw3
+25-09-2024 13:40:10:4489 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: text + integer
+25-09-2024 13:40:19:8043 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: text + integer
+25-09-2024 13:41:11:2329 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: text + integer
+25-09-2024 14:32:06:3730 : Login Successful. Username Maximus. SessionID : fgcd1ncwsjktlscpfe5x3vzp
+25-09-2024 14:41:41:1433 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_aggregator => text, p_txntype => text, p_switch => integer, p_iin => text, p_channel => integer, p_percentage => integer, p_count => integer, p_flag => integer) does not exist
+25-09-2024 14:50:59:0464 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_aggregator => text, p_txntype => text, p_switch => integer, p_iin => text, p_channel => integer, p_percentage => integer, p_count => integer, p_flag => integer) does not exist
+25-09-2024 15:22:09:8068 : Login Successful. Username Maximus. SessionID : 4i25fkubdrkwe2zqjhtanrba
+25-09-2024 15:24:58:8555 : Login Successful. Username Maximus. SessionID : vbwayynatpewbflverpocfiu
+25-09-2024 15:26:59:6808 : Login Successful. Username Maximus. SessionID : 0a231f1trpw0dxvrmlrycwcv
+25-09-2024 15:43:26:9278 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:43:28:8298 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:44:16:8464 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:46:27:3069 : Login Successful. Username Maximus. SessionID : dtn1yhqlwwal4ozc20wtfj1o
+25-09-2024 15:46:30:9732 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:46:33:2663 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:54:27:5963 : Login Successful. Username Maximus. SessionID : hfbnfi3vaeeq5qjq4zfxztzl
+25-09-2024 15:56:01:9126 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:56:03:2103 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:59:13:6269 : Login Successful. Username Maximus. SessionID : ctadhfcqckaa2gl1bqpf0elv
+25-09-2024 15:59:17:5503 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 15:59:19:1425 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 16:06:30:5058 : Login Successful. Username Maximus. SessionID : ikkvgl30ycfc5idabljmo1z3
+25-09-2024 16:06:34:4490 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 16:06:35:9051 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 16:07:36:4978 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42804: column "switchstatus" is of type integer but expression is of type bit
+25-09-2024 16:07:42:6917 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 16:07:44:0514 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 16:08:01:4511 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42804: column "switchstatus" is of type integer but expression is of type bit
+25-09-2024 16:08:04:9221 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: operator does not exist: integer = bit
+25-09-2024 16:09:13:9954 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42804: column "switchstatus" is of type integer but expression is of type bit
+25-09-2024 16:09:39:9853 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+22023: cannot extract elements from a scalar
+25-09-2024 16:12:14:5332 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+22023: cannot extract elements from a scalar
+25-09-2024 16:15:09:7501 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+22023: cannot extract elements from a scalar
+25-09-2024 16:42:56:1608 : Login Successful. Username Maximus. SessionID : ra4ywfzbvckby0srhwhw0itv
+25-09-2024 16:50:31:0399 : Login Successful. Username Maximus. SessionID : c52kre3zrl0gwx3hkpy4cv2e
+25-09-2024 16:58:20:1538 : Login Successful. Username Maximus. SessionID : dfvfwpqxzki5r1cigch1r0ka
+25-09-2024 17:04:05:5233 : Login Successful. Username Maximus. SessionID : tomxu3njfpoehed5w0pizwg2
+25-09-2024 17:21:28:5519 : Login Successful. Username Maximus. SessionID : escc514020a2hxo5f35vkekt
+25-09-2024 17:28:46:7089 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 17:29:01:7185 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 17:33:56:9487 : Login Successful. Username Maximus. SessionID : i0pex2jp3my1on0bctjzs0gt
+25-09-2024 17:34:13:4371 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 17:34:38:2524 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 17:35:23:2317 : Login Successful. Username Maximus. SessionID : j0ffdgzkfmxvu4pbecor1k5v
+25-09-2024 17:35:55:8835 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 18:07:18:6692 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 18:08:36:0362 : Login Successful. Username Maximus. SessionID : kiikj2eo3wxv2kdpto2bzffe
+25-09-2024 18:08:43:5972 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+25-09-2024 19:10:27:8420 : Login Successful. Username Maximus. SessionID : bmtzbpopgswxv55f5bekapww
+25-09-2024 19:13:15:3589 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+Input string was not in a correct format.Couldn't store <"http://localhost:5092/api/Rule/Gradually"> in id Column.  Expected type is Int32.
+25-09-2024 19:15:26:5264 : Login Successful. Username Maximus. SessionID : kfvv54vuunktfwibcgpe2uby
+25-09-2024 19:15:53:3907 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+Input string was not in a correct format.Couldn't store <"http://localhost:5092/api/Rule/Gradually"> in id Column.  Expected type is Int32.
+25-09-2024 19:17:22:3973 : Login Successful. Username Maximus. SessionID : bg4g40nzo50543ex4oodxoog
+25-09-2024 19:35:02:5257 : Login Successful. Username Maximus. SessionID : ikgy2plvkbcm4v0hil1j35cb
+25-09-2024 19:40:59:1770 : Login Successful. Username Maximus. SessionID : krjnvef0hyiqw5a0xfrzuifz
+25-09-2024 19:42:47:9538 : Login Successful. Username Maximus. SessionID : hblfhsi1he2cofoqxsoxucd2
+25-09-2024 19:51:34:7609 : Login Successful. Username Maximus. SessionID : tqdwjbbtfk24emwuqzev5qqt
+25-09-2024 19:52:41:5051 : Login Successful. Username Maximus. SessionID : uxiqw2qep03azhgy4pmnvdsj
+25-09-2024 20:12:42:9458 : Login Successful. Username Maximus. SessionID : ya400qoi12hazm4mn1yjohyc

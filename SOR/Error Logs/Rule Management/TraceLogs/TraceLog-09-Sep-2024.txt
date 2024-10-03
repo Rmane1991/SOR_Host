@@ -1,0 +1,12 @@
+Time : 09-Sep-2024 13:57 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Unable to cast object of type 'System.Web.UI.WebControls.Button' to type 'System.Web.UI.WebControls.LinkButton'.
+Time : 09-Sep-2024 14:50 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Input string was not in a correct format.
+Time : 09-Sep-2024 15:00 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42804: column "createdon" is of type timestamp without time zone but expression is of type time with time zone
+Time : 09-Sep-2024 15:00 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 09-Sep-2024 17:10 Message : TrRule: UpdateGroup() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 09-Sep-2024 17:18 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Input string was not in a correct format.
+Time : 09-Sep-2024 17:19 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Input string was not in a correct format.
+Time : 09-Sep-2024 17:22 Message : TrRule: EditGroup() | DB_StatusCode : VERI00 | ResponseCode : VERI00 | ResponseMessage : Request Going For Verification
+Time : 09-Sep-2024 17:23 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 09-Sep-2024 17:23 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 09-Sep-2024 17:24 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 09-Sep-2024 17:32 Message : TrRule: Delete() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

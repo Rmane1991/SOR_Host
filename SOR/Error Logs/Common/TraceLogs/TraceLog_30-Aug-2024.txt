@@ -1,0 +1,13 @@
+30-08-2024 13:40:24:2923 : Login Successful. Username Maximus. SessionID : ileiwy3heocrnb1qsddj4lzb
+30-08-2024 13:41:20:3079 : Login Successful. Username Maximus. SessionID : 24c4arepa4a0xyufu5eumtvo
+30-08-2024 14:54:38:9761 : Login Successful. Username Maximus. SessionID : oiozomgrlnaiz4khmsskl3kp
+30-08-2024 15:49:08:0277 : Login Successful. Username Maximus. SessionID : xbmp3byfjfn54u4gundx4ggl
+30-08-2024 16:50:54:2401 : Login Request Failed (Login Page). Exception : Could not load file or assembly 'Npgsql, Version=4.0.17.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040) Username : Maximus
+30-08-2024 17:12:45:3219 : Class : LoginEntity.cs 
+Function : GetLoginAttemptCount() 
+Exception Occurred
+42P01: relation "tblUserMaster" does not exist
+30-08-2024 17:50:23:8826 : Class : LoginEntity.cs 
+Function : GetLoginAttemptCount() 
+Exception Occurred
+42883: function proc_get_login_attempt_count(p_username => character varying) does not exist

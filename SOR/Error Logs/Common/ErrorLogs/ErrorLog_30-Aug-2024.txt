@@ -1,0 +1,6 @@
+Time : 30-Aug-2024 16:50
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.LoginEntity.TrackUsers(String& _OutStatus, String& _OutStatusMsg)
+   at PayRakamSBM.Login.LoginMe() in D:\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 83
+Message - : Could not load file or assembly 'Npgsql, Version=4.0.17.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+

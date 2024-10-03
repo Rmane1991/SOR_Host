@@ -1,0 +1,6 @@
+Time : 04-Sep-2024 11:46 Message : pgCreateUser: Page_Load: Exception: Object reference not set to an instance of an object.
+Time : 04-Sep-2024 19:14 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42804: structure of query does not match function result type
+Time : 04-Sep-2024 19:58 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'bcpartner_id'.
+Time : 04-Sep-2024 20:03 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'bcpartner_id'.
+Time : 04-Sep-2024 20:05 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'bcpartner_id'.
+Time : 04-Sep-2024 20:13 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'bcpartner_id'.

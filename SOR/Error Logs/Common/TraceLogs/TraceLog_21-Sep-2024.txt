@@ -1,0 +1,76 @@
+21-09-2024 11:45:11:5383 : Login Successful. Username Maximus. SessionID : ig2ot3sglso5kva2ikk4wudw
+21-09-2024 12:06:45:8971 : Login Successful. Username Maximus. SessionID : j0xppon2n3vj2rj211gub3s5
+21-09-2024 12:32:39:3810 : Login Successful. Username Maximus. SessionID : do1jemwabyzsyr4tjm2qjfsh
+21-09-2024 12:34:24:7632 : Login Successful. Username Maximus. SessionID : xaokpczshnkobkpwskvmlcqw
+21-09-2024 12:40:35:9890 : Login Successful. Username Maximus. SessionID : vbboflpgjhomobdcez0axyul
+21-09-2024 12:42:38:1645 : Login Successful. Username Maximus. SessionID : lcflk15qcampfe1d2bmvz4hx
+21-09-2024 12:53:51:5893 : Login Successful. Username Maximus. SessionID : adpo1kfivk2mtcq4huzrttqr
+21-09-2024 13:01:55:0866 : Login Successful. Username Maximus. SessionID : ahare35ss4y5gpvpzediz1sj
+21-09-2024 13:10:00:5777 : Login Successful. Username Maximus. SessionID : nk5tzltjd3i3nzkbyu1xfmuv
+21-09-2024 13:16:54:8884 : Login Successful. Username Maximus. SessionID : lrenfc5zgv2etjq1fkzsdews
+21-09-2024 13:22:07:3203 : Login Successful. Username Maximus. SessionID : e0msfmrptwdbvqaaknlvxuge
+21-09-2024 13:25:20:3708 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 13:30:20:9087 : Login Successful. Username Maximus. SessionID : m4xtec0rkkf1g0mzchppx4zn
+21-09-2024 14:14:26:6764 : Login Successful. Username Maximus. SessionID : 212i4uej4thsijnnxcbyju4b
+21-09-2024 14:17:44:0866 : Login Successful. Username Maximus. SessionID : surwzy3hnkmpkgmim41reohz
+21-09-2024 14:20:04:4815 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 14:23:30:8656 : Login Successful. Username Maximus. SessionID : 1pjlai1v1o5h1h12ulfbsina
+21-09-2024 14:25:20:4378 : Login Successful. Username Maximus. SessionID : wjrcffqkt15hezeammouugn1
+21-09-2024 14:27:19:2130 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 14:28:51:6991 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 14:58:28:4295 : Login Successful. Username Maximus. SessionID : h5akundsz04xjbzbbakjbtwp
+21-09-2024 15:43:32:9757 : Login Successful. Username Maximus. SessionID : nfftqdtan2qkchrzlrrverm0
+21-09-2024 15:56:33:4028 : Login Successful. Username Maximus. SessionID : h11ldhqtkbmjnczjbmzblnpw
+21-09-2024 16:00:25:1633 : Login Successful. Username Maximus. SessionID : ggrbjruisoo2gdvntrdzgo1m
+21-09-2024 16:25:33:3579 : Login Successful. Username Maximus. SessionID : fspioyulkj2kvnax1tuhkmws
+21-09-2024 16:28:34:2095 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "switch_address" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 16:29:00:9660 : Login Successful. Username Maximus. SessionID : 5ydw0zxrwhehewodhmbzczwx
+21-09-2024 16:29:40:9069 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "switch_address" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 16:30:20:9159 : Login Successful. Username Maximus. SessionID : i4tfcznfocfic324miklzqhf
+21-09-2024 16:38:11:0509 : Login Successful. Username Maximus. SessionID : 0e4vtwmuamp2zb0ky35jfwh2
+21-09-2024 16:56:11:4973 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+Cannot access a disposed object.
+Object name: 'Npgsql.NpgsqlCommand'.
+21-09-2024 16:57:15:2255 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42703: column "dt2" does not exist
+21-09-2024 16:58:51:4964 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "switch_address" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 16:59:05:1320 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+21-09-2024 17:54:15:8507 : Login Successful. Username Maximus. SessionID : ffgih0mcd1x50jtsuz432tjp
+21-09-2024 17:56:27:7188 : Login Successful. Username Maximus. SessionID : 2awz2hlpynw3suy1k2h024ox
+21-09-2024 17:58:30:8636 : Login Successful. Username Maximus. SessionID : 23xlnymvhkgaltwvdv2u235j
+21-09-2024 18:01:41:8049 : Login Successful. Username Maximus. SessionID : nsfimlv5hwfoqs4mboudxgqy
+21-09-2024 18:09:03:1765 : Login Successful. Username Maximus. SessionID : km1224uxg33janhopzn5ubdp
+21-09-2024 18:14:50:3981 : Login Successful. Username Maximus. SessionID : 4hek0micnmkgmctnjhomta2t
+21-09-2024 18:17:39:1995 : Login Successful. Username Maximus. SessionID : hepjmpgjmfywfu00pbpj41or
+21-09-2024 18:22:50:7674 : Login Successful. Username Maximus. SessionID : 0e3xnrgqn0h55tcjlu0vczwp
+21-09-2024 18:24:47:4955 : Login Successful. Username Maximus. SessionID : x5pxutknauvokh2pevctdcf3
+21-09-2024 18:28:17:0406 : Login Successful. Username Maximus. SessionID : u2pj5bhsokandh2tujmtndda
+21-09-2024 19:00:49:6072 : Login Successful. Username Maximus. SessionID : 2l5rwzt4115xerqwm0u23r2a

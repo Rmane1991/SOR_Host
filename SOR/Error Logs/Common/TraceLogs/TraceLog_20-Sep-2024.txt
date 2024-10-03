@@ -1,0 +1,104 @@
+20-09-2024 10:32:01:3271 : Login Successful. Username Maximus. SessionID : rrcwrupd0dyranbvrxnobmwr
+20-09-2024 11:04:49:5661 : Login Successful. Username Maximus. SessionID : yrtxnlrmipgm0lnda4rr2cjh
+20-09-2024 11:15:39:0391 : Login Successful. Username Maximus. SessionID : cyhjpvbyyvqgxqp05yhb4kdd
+20-09-2024 11:41:08:8090 : Login Successful. Username Maximus. SessionID : fwcp5j3wra55yhbblildtuu1
+20-09-2024 12:31:55:0434 : Login Successful. Username Maximus. SessionID : oxmc1wdazvvr15sxrq4eeiiz
+20-09-2024 12:33:47:6750 : Login Successful. Username Maximus. SessionID : cgtbj2bly55rkpjpl2kp0dvf
+20-09-2024 13:01:21:9363 : Login Successful. Username Maximus. SessionID : zibptkbrqsous44nogbe24zm
+20-09-2024 13:03:41:4826 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+20-09-2024 13:05:13:9663 : Login Successful. Username Maximus. SessionID : l5djw12ay1kaz15jsdmozv3c
+20-09-2024 13:06:15:0085 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+20-09-2024 13:07:46:8808 : Login Successful. Username Maximus. SessionID : i0iuz53uu4xg1obfheumsdvv
+20-09-2024 13:18:30:3315 : Login Successful. Username Maximus. SessionID : nkqdkmflns3wfhr4itvoaxbp
+20-09-2024 13:19:34:7844 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42701: column "switch_address" specified more than once
+20-09-2024 13:21:15:8418 : Login Successful. Username Maximus. SessionID : 0u31xwmnqj02jf0zswxzkgs4
+20-09-2024 13:24:47:5671 : Login Successful. Username Maximus. SessionID : pmvkaps4bgjdomyle5lylv51
+20-09-2024 13:25:27:5122 : Login Successful. Username Maximus. SessionID : pqhrzixvwamv1bw40fr0xrbq
+20-09-2024 13:25:57:5254 : Login Successful. Username Maximus. SessionID : fck25yzj2brwutkrczvjb2xt
+20-09-2024 13:26:34:5624 : Login Successful. Username Maximus. SessionID : vlhvdmfa4wgyodjbd4st3jyz
+20-09-2024 13:31:42:4930 : Login Successful. Username Maximus. SessionID : dnqwdtdvb54yddo4eyym0i13
+20-09-2024 13:38:41:2631 : Login Successful. Username Maximus. SessionID : x1xlvexv52zgsm15p4v0jvqf
+20-09-2024 13:39:49:7976 : Login Successful. Username Maximus. SessionID : wwu5lit5b2ckvmxu33mcn54f
+20-09-2024 13:48:21:9960 : Login Successful. Username Maximus. SessionID : 0ylwnqogyji0cccau5cnjkdl
+20-09-2024 13:49:05:4674 : Login Successful. Username Maximus. SessionID : yu5dmqnp0do5a4hu2lyxrt5z
+20-09-2024 13:50:05:1070 : Login Successful. Username Maximus. SessionID : hwghe50doozevn2uwuxsn3yp
+20-09-2024 13:56:32:1435 : Login Successful. Username Maximus. SessionID : hhurl3fv4mtlhugmnkaesscp
+20-09-2024 14:00:11:2482 : Login Successful. Username Maximus. SessionID : skfszafsjtjz0vtwagg5bvus
+20-09-2024 14:01:57:0633 : Login Successful. Username Maximus. SessionID : 4yd2ih04k4owmmkx2h453p0y
+20-09-2024 14:03:49:9388 : Login Successful. Username Maximus. SessionID : 52kpkiif44mlhjn4cmjbp0nc
+20-09-2024 14:06:25:5545 : Login Successful. Username Maximus. SessionID : 4yeepzyn0yhewug4houwvdai
+20-09-2024 14:07:08:7144 : Login Successful. Username Maximus. SessionID : 5iwfc00k3fvyjn3cprhekels
+20-09-2024 14:08:20:0852 : Login Successful. Username Maximus. SessionID : jhlatz1qbb00awhofmoj3nrh
+20-09-2024 14:12:15:3183 : Login Successful. Username Maximus. SessionID : g0jqxirjm21own2mmxx0fqhw
+20-09-2024 14:14:15:8063 : Login Successful. Username Maximus. SessionID : 20usphkk4ep2px4lecnt2qkh
+20-09-2024 14:16:29:4566 : Login Successful. Username Maximus. SessionID : hujjpgngpz2nmgybx2pax0yv
+20-09-2024 14:17:20:1042 : Login Successful. Username Maximus. SessionID : ebynasoaggxyh1o0eketsknq
+20-09-2024 14:58:03:6794 : Login Successful. Username Maximus. SessionID : mfkjgcygkalgj5gwfhlwaw02
+20-09-2024 16:44:47:2705 : Login Successful. Username Maximus. SessionID : jz2ceazb1zg4tcr1xqj1wdht
+20-09-2024 16:44:52:9262 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42804: structure of query does not match function result type
+20-09-2024 16:45:03:6170 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42804: structure of query does not match function result type
+20-09-2024 16:45:41:1844 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42804: structure of query does not match function result type
+20-09-2024 16:51:56:6175 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42703: column tbl.priority does not exist
+20-09-2024 16:53:16:3838 : Login Successful. Username Maximus. SessionID : u5d0vryaaq504ylnzwruruh0
+20-09-2024 16:53:21:9768 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42703: column tbl.priority does not exist
+20-09-2024 16:53:38:9963 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42703: column tbl.priority does not exist
+20-09-2024 16:54:20:3190 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42703: column tbl.priority does not exist
+20-09-2024 16:57:54:7708 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42703: column tbl.priority does not exist
+20-09-2024 16:58:49:9536 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42804: structure of query does not match function result type
+20-09-2024 17:00:46:2750 : Class: RuleEntity.cs 
+Function: GetEditRuleDetails() 
+Exception Occurred
+42703: column "priority" does not exist
+20-09-2024 17:03:41:7685 : Login Successful. Username Maximus. SessionID : bdhsr532ratkpdxpe3hrsibc
+20-09-2024 17:07:24:8191 : Login Successful. Username Maximus. SessionID : ryb2zwy4ep20ahvi5iu4yx2b
+20-09-2024 17:09:34:2110 : Login Successful. Username Maximus. SessionID : m0pdwgoxry5o2btoq55mwxew
+20-09-2024 17:10:29:5958 : Login Successful. Username Maximus. SessionID : 2n15f1r4mf2yvm1h0e1mjvbv
+20-09-2024 17:11:54:7426 : Login Successful. Username Maximus. SessionID : ysyohaiuoy50tlj2agypi5hm
+20-09-2024 17:13:58:0567 : Login Successful. Username Maximus. SessionID : tbybs53dqt2sleyp3mgbwkj0
+20-09-2024 17:19:00:5329 : Login Successful. Username Maximus. SessionID : a54ojft0fpkv5zo4diljljse
+20-09-2024 17:21:27:4844 : Login Successful. Username Maximus. SessionID : 0sgxnxtxuqdbzpibffxrjxal
+20-09-2024 17:24:10:3526 : Login Successful. Username Maximus. SessionID : luvgmtvz5pur43ramyhjthc0
+20-09-2024 17:25:32:5420 : Login Successful. Username Maximus. SessionID : qnnrttnjkahoeiavxk3qyn5n
+20-09-2024 17:34:12:7947 : Login Successful. Username Maximus. SessionID : haugmehefxtmconbwfhibh1d
+20-09-2024 17:36:06:2965 : Login Successful. Username Maximus. SessionID : h5ekjnrkdzfd3dlnerxlpc0e
+20-09-2024 18:06:22:9580 : Login Successful. Username Maximus. SessionID : efb5w5s5sqj05d1cw3xrv0qw
+20-09-2024 18:11:08:3760 : Login Successful. Username Maximus. SessionID : q1w03pm4kyvmcyczr2xybg5i
+20-09-2024 18:15:06:1896 : Login Successful. Username Maximus. SessionID : 2oknxkb4iifxzxkiewr3fy0d
+20-09-2024 18:19:55:7869 : Login Successful. Username Maximus. SessionID : 0g0ogew1mblvlzzlikvyamun
+20-09-2024 18:34:45:2607 : Login Successful. Username Maximus. SessionID : 0retpsmk33teise0fsyv1yvo

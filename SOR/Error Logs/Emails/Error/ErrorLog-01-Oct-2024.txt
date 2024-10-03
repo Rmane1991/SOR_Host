@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------
+Time : 01-Oct-2024 11:44
+Message : Class: ClientRegistrationEntity.cs 
+Function: BindClient() 
+Exception Occurred
+42601: syntax error at or near "SP_GetStateCity"
+----------------------------------------------------------------------------
+Time : 01-Oct-2024 11:44
+Message : Class: ClientRegistrationEntity.cs 
+Function: BindClient() 
+Exception Occurred
+42601: syntax error at or near "SP_GetStateCity"
+----------------------------------------------------------------------------
+Time : 01-Oct-2024 11:57
+Message : Class: ClientRegistrationEntity.cs 
+Function: GetCountryStateCityD() 
+Exception Occurred
+42804: structure of query does not match function result type

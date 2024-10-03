@@ -1,0 +1,8 @@
+Time : 18-Sep-2024 11:13 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 18-Sep-2024 11:13 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 18-Sep-2024 11:14 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 18-Sep-2024 15:53 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 18-Sep-2024 16:02 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 18-Sep-2024 16:57 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Input string was not in a correct format.
+Time : 18-Sep-2024 17:02 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => integer, p_failover_percentage => integer, p_failover_count => integer, p_dt => text) does not exist

@@ -1,0 +1,3 @@
+Time : 30-Sep-2024 17:54 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Sep-2024 17:58 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 30-Sep-2024 17:58 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

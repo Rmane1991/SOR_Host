@@ -1,0 +1,260 @@
+31-08-2024 12:07:49:4456 : Class : LoginEntity.cs 
+Function : StoreLoginActivities() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 12:15:27:6163 : Login Successful. Username Maximus. SessionID : jdrh311kmw0yviwo3we1x5cm
+31-08-2024 12:19:49:6028 : Login Successful. Username Maximus. SessionID : jrw1iuwn2kptp34epo4zzgfc
+31-08-2024 12:32:54:8153 : Class : LoginEntity.cs 
+Function : SetLoginAttemptCount() 
+Exception Occurred
+42809: proc_setloginattemptcount(p_username => character varying, p_flag => character varying) is a procedure
+31-08-2024 12:32:54:8382 : Login Request Failed (Login Page). Exception : 42809: proc_setloginattemptcount(p_username => character varying, p_flag => character varying) is a procedure Username : Maximus
+31-08-2024 12:33:03:9457 : Login Successful. Username Maximus. SessionID : 0a4mkxbrrr1fn0npzjwypxpw
+31-08-2024 12:33:03:9611 : Class : LoginEntity.cs 
+Function : SetLoginAttemptCount() 
+Exception Occurred
+42809: proc_setloginattemptcount(p_username => character varying, p_flag => character varying) is a procedure
+31-08-2024 12:33:03:9736 : Login Unsuccessful. Home Page Not Found. Unable To Process The Login Request. Exception : 42809: proc_setloginattemptcount(p_username => character varying, p_flag => character varying) is a procedure Username : Maximus Home Page Path: Pages/Dashboard/TransactionTrend.aspx?
+31-08-2024 12:33:17:2043 : Login Successful. Username Maximus. SessionID : 0a4mkxbrrr1fn0npzjwypxpw
+31-08-2024 12:34:18:7142 : Login Successful. Username Maximus. SessionID : 5pvdmtgjjppd2hd11f3ecjt0
+31-08-2024 12:42:08:1575 : Login Successful. Username Maximus. SessionID : 40h2vholskfdnd2fnwvbi1de
+31-08-2024 12:44:01:6916 : Login Successful. Username Maximus. SessionID : bqxj1fhotjf1v5ri2tb20i0p
+31-08-2024 12:44:35:0527 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 12:44:35:2085 : Class : LoginEntity.cs 
+Function : getMenuListData() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 12:44:35:2361 : Class : LoginEntity.cs 
+Function : getMenuListData() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 12:55:52:6237 : Login Successful. Username Maximus. SessionID : oc5qq5afbo31oys2gz4sqego
+31-08-2024 12:55:54:4373 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 13:01:49:3950 : Login Successful. Username Maximus. SessionID : k3quvi520ew2ht5mlyaf2si4
+31-08-2024 13:01:49:5627 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 13:06:55:9463 : Login Successful. Username Maximus. SessionID : rkojcdhlj5izgoppvsdugoil
+31-08-2024 13:06:56:1515 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 13:12:42:1309 : Login Successful. Username Maximus. SessionID : qmoe3hyhiskrpui5ugzztxm1
+31-08-2024 13:12:42:6992 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 14:47:17:4049 : Login Successful. Username Maximus. SessionID : teyvzyiesvgyf3sldfv2o4v1
+31-08-2024 14:47:17:7186 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 14:47:32:0652 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 14:59:18:0606 : Login Successful. Username Maximus. SessionID : 4tbr14vyhz5mmhylhdmkygq0
+31-08-2024 14:59:18:2455 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 15:08:17:1189 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 15:08:50:8723 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 15:11:13:2551 : Login Successful. Username Maximus. SessionID : d5a00srff3ryqqc0wb5j3kth
+31-08-2024 15:11:13:4120 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:27:45:6844 : Login Successful. Username Maximus. SessionID : 3hxfgq0mkzxv5glrkcjdlmas
+31-08-2024 16:27:46:6385 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:27:59:9998 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:43:58:8841 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:45:12:5106 : Login Successful. Username Maximus. SessionID : m3s4kh4gypj5tlbal035vbom
+31-08-2024 16:45:13:1250 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:45:46:1623 : Login Successful. Username Maximus. SessionID : 0m1lnugv45huf23a4xijsafq
+31-08-2024 16:45:46:8270 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:45:55:9212 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:46:04:9879 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:46:08:4533 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:46:12:5781 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:46:43:4099 : Login Successful. Username Maximus. SessionID : glcrntivnrcgsdeqj52lxx5w
+31-08-2024 16:46:43:9675 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:46:49:1399 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:56:20:3277 : Login Successful. Username Maximus. SessionID : q5ryb2e4b5bm0so2jz53iyxe
+31-08-2024 16:56:20:5532 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 16:56:25:6402 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:09:28:3415 : Login Successful. Username Maximus. SessionID : cgrjlyrqgn5jxf21anojuqk1
+31-08-2024 17:09:29:3915 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:09:34:5289 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:09:47:4872 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:13:40:1246 : Login Successful. Username Maximus. SessionID : hzizr400nf1uskfgqk53wl2l
+31-08-2024 17:13:40:2430 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:13:45:1336 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:14:00:3112 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:14:08:8913 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:19:03:5172 : Login Successful. Username Maximus. SessionID : 53swm0up4bzdbzhwqbl2x5ft
+31-08-2024 17:19:04:2203 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:19:09:1443 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:19:44:3942 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:20:12:2990 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:21:27:3659 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:33:48:0571 : Login Successful. Username Maximus. SessionID : g0efuspddefr2uoqu4wr4tcb
+31-08-2024 17:33:48:8049 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:33:54:0649 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:34:07:6678 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:34:10:6247 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:35:23:1044 : Login Successful. Username Maximus. SessionID : r3ryzzmtdxt3q2qab3pnumf5
+31-08-2024 17:35:23:6590 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:35:27:8211 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:39:11:7689 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:44:41:9010 : Login Successful. Username Maximus. SessionID : ushc4l3unaqho4hs2zxaqgyn
+31-08-2024 17:45:06:9124 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:45:32:0855 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+31-08-2024 17:45:40:7902 : Login Successful. Username Maximus. SessionID : ushc4l3unaqho4hs2zxaqgyn
+31-08-2024 17:45:40:8141 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:46:37:8647 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:46:42:2060 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 17:46:44:5257 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 18:38:59:2156 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+31-08-2024 18:39:08:0113 : Login Successful. Username Maximus. SessionID : ap1rslfcphouncwj1rukmqb0
+31-08-2024 18:39:08:9061 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 18:39:22:9889 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 19:20:41:7730 : Login Successful. Username Maximus. SessionID : 0tj4ds5erkpae51ynsink0lx
+31-08-2024 19:20:42:3846 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+31-08-2024 19:20:45:7851 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.

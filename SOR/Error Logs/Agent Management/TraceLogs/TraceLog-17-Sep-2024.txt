@@ -1,0 +1,2 @@
+Time : 17-Sep-2024 18:42 Message : SwitchConfig : BindSwitch(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+Time : 17-Sep-2024 18:44 Message : SwitchConfig : BindSwitch(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.

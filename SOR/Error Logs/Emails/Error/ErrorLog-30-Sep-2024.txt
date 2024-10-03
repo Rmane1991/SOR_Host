@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------
+Time : 30-Sep-2024 13:27
+Message : Class : ClientRegistrationEntity.cs 
+Function : BindClient() 
+Exception Occured
+42883: function fn_bindclient(unknown, unknown, unknown, integer, integer, integer, unknown, integer, text) does not exist
+----------------------------------------------------------------------------
+Time : 30-Sep-2024 13:29
+Message : Class : ClientRegistrationEntity.cs 
+Function : BindClient() 
+Exception Occured
+42883: function fn_bindclient(unknown, unknown, unknown, integer, integer, integer, unknown, integer, text) does not exist
+----------------------------------------------------------------------------
+Time : 30-Sep-2024 13:37
+Message : Class : ClientRegistrationEntity.cs 
+Function : BindClient() 
+Exception Occurred
+42804: structure of query does not match function result type
+----------------------------------------------------------------------------
+Time : 30-Sep-2024 19:35
+Message : Class: ClientRegistrationEntity.cs 
+Function: BindClient() 
+Exception Occurred
+42601: syntax error at or near "SP_GetStateCity"

@@ -1,0 +1,49 @@
+16-09-2024 11:24:27:6699 : Login Successful. Username Maximus. SessionID : pigwxyjfwneo2b5rkctidjaf
+16-09-2024 11:39:55:1060 : Login Successful. Username Maximus. SessionID : wszi4rc2wbgkjktyxgprm0do
+16-09-2024 12:15:36:3654 : Login Successful. Username Maximus. SessionID : uexxmfxizrqyduzmce23jrmk
+16-09-2024 12:17:52:1372 : Login Successful. Username Maximus. SessionID : obquqoxzu4xwstetjbg4l4cw
+16-09-2024 12:21:22:1507 : Login Successful. Username Maximus. SessionID : fr4oberwxi33fmrb11r42rfn
+16-09-2024 12:23:37:7175 : Login Successful. Username Maximus. SessionID : o4lae5edrk4so21xznwrozpv
+16-09-2024 12:25:03:1082 : Login Successful. Username Maximus. SessionID : kh0h2l45dfdwyqikjx1nxgpg
+16-09-2024 12:31:48:1753 : Login Successful. Username Maximus. SessionID : tgphj5gohahlk15cpyfnkmeo
+16-09-2024 12:33:56:8991 : Login Successful. Username Maximus. SessionID : o2u0xfarpmvakwl30lcgh5qi
+16-09-2024 12:36:32:2361 : Login Successful. Username Maximus. SessionID : l2ishh41byhjqpboeict2fi1
+16-09-2024 13:03:30:6361 : Login Successful. Username Maximus. SessionID : 22ydbpp3i5ve3ewsgoup2rmz
+16-09-2024 13:06:49:9376 : Login Successful. Username Maximus. SessionID : 1gjuat5u0dfoioslfacwxd2m
+16-09-2024 13:07:50:1894 : Login Successful. Username Maximus. SessionID : x3h5wvd0zgztw22qyvw5uwmm
+16-09-2024 13:17:43:1226 : Login Successful. Username Maximus. SessionID : 5epg2yyv1eevn0odqururrp3
+16-09-2024 13:18:54:6072 : Login Successful. Username Maximus. SessionID : etjrj4ar1fglha5ybvvr3uv2
+16-09-2024 13:47:20:6322 : Login Successful. Username Maximus. SessionID : 4i14cyohtn0veb5n3mg2vvdf
+16-09-2024 13:49:21:9093 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+23505: duplicate key value violates unique constraint "tbl_switch_configuration_pkey"
+16-09-2024 15:11:47:4693 : Login Successful. Username Maximus. SessionID : guw2if214m1f3kmqy5rh5lz0
+16-09-2024 15:18:56:0395 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+23502: null value in column "switchid" of relation "tbl_switch_configuration" violates not-null constraint
+16-09-2024 15:26:31:2173 : Login Successful. Username Maximus. SessionID : m5bf5iuk2jb3hujm1dpye5qa
+16-09-2024 15:46:05:9083 : Login Successful. Username Maximus. SessionID : y4cb4v2xl1a2mozcftmaj0wm
+16-09-2024 15:46:14:0902 : Class : RuleEntity.cs
+Function : GetSwitch()
+Exception Occurred
+42883: procedure public.sp_getswitchdetails(text, integer) does not exist
+16-09-2024 15:47:08:8213 : Login Successful. Username Maximus. SessionID : oohyvhykr0sscpknhpte5c2p
+16-09-2024 15:59:26:7614 : Login Successful. Username Maximus. SessionID : ejuf3leiecagjsccksajcja0
+16-09-2024 16:01:51:0067 : Login Successful. Username Maximus. SessionID : tmigdbsqcopezkn5ts5rflvv
+16-09-2024 16:09:55:7763 : Login Successful. Username Maximus. SessionID : tmv3d5ghi4bmchpf5zia01lk
+16-09-2024 16:24:53:5334 : Login Successful. Username Maximus. SessionID : bynjfl4cphwdb0yxcebt4cwg
+16-09-2024 16:26:41:8776 : Login Successful. Username Maximus. SessionID : ofu41wem2k4d5u20zjwlscuv
+16-09-2024 16:31:40:4936 : Login Successful. Username Maximus. SessionID : ddarontimgsayvrmxfu5oxkr
+16-09-2024 16:37:18:9913 : Login Successful. Username Maximus. SessionID : k1lphilnhlyryjhrllupmipn
+16-09-2024 17:24:59:9997 : Login Successful. Username Maximus. SessionID : yoxxkngfeg3uoag0gyn1n4hv
+16-09-2024 17:26:51:1796 : Login Successful. Username Maximus. SessionID : ch2xbtahw2owb5za3bbimerg
+16-09-2024 17:36:57:8203 : Login Successful. Username Maximus. SessionID : swgsykx4d3uiwmvqwf4upaos
+16-09-2024 17:38:11:5346 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42804: column "switch_id" is of type integer but expression is of type character varying
+16-09-2024 17:39:00:8800 : Login Successful. Username Maximus. SessionID : vpngfv3lv44voc0fewuzg0e1
+16-09-2024 17:49:14:2052 : Login Successful. Username Maximus. SessionID : c3rhqneomjevp3pjnqmmfyxh
+16-09-2024 17:51:31:6730 : Login Successful. Username Maximus. SessionID : rkhpuu2uz3npx04exdvtpfqq

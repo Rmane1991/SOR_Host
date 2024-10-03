@@ -1,0 +1,639 @@
+Time : 02-Sep-2024 11:24 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:25 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:25 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:25 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:25 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:25 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:26 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:26 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:26 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:26 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:26 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:26 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:50 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:50 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:50 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:50 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:50 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:50 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:54 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:54 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:54 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:54 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:54 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 11:54 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 12:03 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 12:03 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 12:03 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 12:03 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 12:03 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 12:03 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:11 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:11 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:11 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:11 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:11 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:11 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:21 Message : TrRule: BindRules(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Id'.
+Time : 02-Sep-2024 13:23 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:23 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:23 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:23 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:23 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:23 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:25 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:25 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:25 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:25 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:25 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:25 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:27 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:27 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:27 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:27 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:27 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:27 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:30 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:30 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:30 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:30 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:30 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:30 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:31 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:31 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:31 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:31 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:31 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:31 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:42 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:42 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:42 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:42 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:42 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:42 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:44 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:44 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:44 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:44 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:44 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:44 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:50 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:50 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:50 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:50 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:50 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:50 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : UserManagement: FillGridCreateRoles() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : CreateRoles: BindDropdownRolesFilter(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : UserManagement: FillGridCreateRoles() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 13:55 Message : CreateRoles: fillRoleDetailsGrid(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:00 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:00 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:00 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:00 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:00 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:00 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:08 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:08 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:08 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:08 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:08 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 14:08 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:10 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:10 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:10 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:10 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:10 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:10 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:16 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:16 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:16 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:16 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:16 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:16 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:20 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:20 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:20 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:20 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:20 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:20 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:41 Message : TrRule: BindRules(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Name'.
+Time : 02-Sep-2024 15:42 Message : TrRule: BindRules(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Id'.
+Time : 02-Sep-2024 15:43 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:43 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:43 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:43 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:43 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:43 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:44 Message : TrRule: BindRules(): Exception: Specified cast is not valid.
+Time : 02-Sep-2024 15:45 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:45 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:45 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:45 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:45 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:45 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:45 Message : TrRule: BindRules(): Exception: Specified cast is not valid.
+Time : 02-Sep-2024 15:46 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:46 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:46 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:46 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:46 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:46 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:54 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:54 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:54 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:54 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:54 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:54 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:58 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:58 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:58 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:58 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:58 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 15:58 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:00 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:00 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:00 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:00 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:00 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:00 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:11 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:11 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:11 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:11 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:11 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:11 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:15 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:15 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:15 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:15 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:15 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:15 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:28 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:28 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:28 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:28 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:28 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:28 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:32 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:32 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:32 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:32 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:32 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:32 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:33 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:33 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:33 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:33 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:33 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:33 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:34 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:34 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:34 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:34 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:34 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:34 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:37 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:37 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:37 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:37 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:37 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:37 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:40 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:40 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:40 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:40 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:40 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:40 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:45 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:45 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:45 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:45 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:45 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 16:45 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:02 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:02 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:02 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:02 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:02 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:02 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:47 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:47 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:47 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:47 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:47 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 17:47 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:04 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:04 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:04 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:04 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:04 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:04 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:12 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:12 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:12 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:12 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:12 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 18:12 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 20:04 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 20:04 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 20:04 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageData() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 20:04 Message : TransactionTrend: BindChart(): Exception: Keyword not supported: 'port'.
+Time : 02-Sep-2024 20:04 Message : Class : DashBoardDAL.cs 
+Function : GetMaximusHomePageCount() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 02-Sep-2024 20:04 Message : TransactionTrend: GetHomePageData(): Exception: Keyword not supported: 'port'.

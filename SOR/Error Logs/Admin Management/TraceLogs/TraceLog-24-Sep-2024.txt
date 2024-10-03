@@ -1,0 +1,3 @@
+Time : 24-Sep-2024 12:17 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42804: structure of query does not match function result type
+Time : 24-Sep-2024 12:20 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42883: function fn_bindiin(text) does not exist
+Time : 24-Sep-2024 16:23 Message : pgManageUserAccount: Page_Load: Exception: Object reference not set to an instance of an object.

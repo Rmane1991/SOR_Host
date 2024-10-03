@@ -1,0 +1,271 @@
+09-09-2024 10:31:18:3986 : Login Successful. Username Maximus. SessionID : wj3c4mchnx4i1c4omywv0a10
+09-09-2024 10:31:19:6089 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 10:31:23:7055 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 11:09:41:3040 : Login Successful. Username Maximus. SessionID : 4oz0oteneubdibr1w01c113l
+09-09-2024 11:09:47:0033 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 11:18:33:5727 : Login Successful. Username Maximus. SessionID : 4c5wq1xg1yfcjgmsbc0fxk2h
+09-09-2024 11:18:34:3883 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 11:18:51:8524 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 11:31:23:8364 : Login Successful. Username Maximus. SessionID : 1c3rqojqzkvyy3zoah5cgzyz
+09-09-2024 11:31:31:0339 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 11:31:39:3064 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 11:46:18:8938 : Login Successful. Username Maximus. SessionID : ojeeseuocblzulsxcaruz1op
+09-09-2024 11:46:19:8163 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 11:46:25:5690 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 12:43:51:6322 : Login Successful. Username Maximus. SessionID : cl1133ulneh30kc1ofv4fb00
+09-09-2024 12:43:52:7103 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 12:43:55:8738 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 12:48:05:2670 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 12:49:17:8808 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 13:25:09:4881 : Login Successful. Username Maximus. SessionID : i1z4tfzxjsefd0rx31wac55e
+09-09-2024 13:25:10:4316 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 13:25:13:4026 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 13:26:47:4545 : Login Successful. Username Maximus. SessionID : tibrr500qpsrrvvaj4kofdpj
+09-09-2024 13:26:48:3780 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 13:26:51:8617 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 13:27:54:1081 : Login Successful. Username Maximus. SessionID : lkh0yuqmtavquijqcggr2j1k
+09-09-2024 13:27:54:2288 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 13:27:56:4140 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 13:55:30:7079 : Login Successful. Username Maximus. SessionID : ygwei53cpn2iw2vslxzqhxwe
+09-09-2024 13:55:33:6431 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 13:55:37:0141 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 13:59:12:6419 : Login Successful. Username Maximus. SessionID : la2oyca53ajgxwgj0bvwb4cn
+09-09-2024 13:59:13:2971 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 13:59:17:6545 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 14:01:02:2228 : Login Successful. Username Maximus. SessionID : 5amus1zdkcucfxoe35rsebrn
+09-09-2024 14:01:02:9598 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 14:01:05:8211 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 14:49:37:3133 : Login Successful. Username Maximus. SessionID : 4pqrokqdn2lnfzkgh1rj03bs
+09-09-2024 14:49:38:0014 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 14:49:52:5545 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 14:52:36:7409 : Login Successful. Username Maximus. SessionID : yiijamhx4qneizf3dltwy2ua
+09-09-2024 14:52:37:6395 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 14:52:40:5039 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 14:54:38:4612 : Login Successful. Username Maximus. SessionID : m5pzoqx0koyoumyz5bhgxe3x
+09-09-2024 14:54:39:0686 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 14:54:46:0968 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 15:00:05:3864 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42804: column "createdon" is of type timestamp without time zone but expression is of type time with time zone
+09-09-2024 15:01:58:6440 : Login Successful. Username Maximus. SessionID : lwyioyekv5qqkoeg2v3zguzp
+09-09-2024 15:01:59:2025 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 15:02:01:5263 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:03:00:9759 : Login Successful. Username Maximus. SessionID : ustiucngedcbzalcajxwyc2l
+09-09-2024 16:03:02:3812 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:03:05:9596 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:03:32:1240 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+Parameter 'p_username' must have its value set
+09-09-2024 16:04:38:3262 : Login Successful. Username Maximus. SessionID : ui1gpqfqelefw4zeoufrovdu
+09-09-2024 16:04:39:4831 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:04:43:3847 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:05:24:9926 : Login Successful. Username Maximus. SessionID : axfw25xo4hnb11m4c3dz13dg
+09-09-2024 16:05:25:5162 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:05:28:5312 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:06:47:7906 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42702: column reference "group_name" is ambiguous
+09-09-2024 16:07:27:4270 : Login Successful. Username Maximus. SessionID : a4ejiot3hz1surjs1teqfif4
+09-09-2024 16:07:27:6654 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:07:30:0141 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:08:26:9803 : Login Successful. Username Maximus. SessionID : vy5mscvggpr11sldcwh4hn4d
+09-09-2024 16:08:27:6625 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:08:33:4889 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:38:18:2905 : Login Successful. Username Maximus. SessionID : hj5l3rysyppoqvjr1ofjifge
+09-09-2024 16:38:18:8500 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:38:22:1072 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 16:44:59:1982 : Login Successful. Username Maximus. SessionID : hd3jtqylhpju34nivymj3hc3
+09-09-2024 16:44:59:7707 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 16:45:02:2440 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 17:08:57:2037 : Login Successful. Username Maximus. SessionID : 4gicdyxu2mlnd3rdz2axkiic
+09-09-2024 17:08:58:1422 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 17:09:14:7205 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 17:17:36:9719 : Login Successful. Username Maximus. SessionID : uznclvrb21qdvfsae5jjlcze
+09-09-2024 17:17:41:4609 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 17:17:50:2214 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 17:21:53:8642 : Login Successful. Username Maximus. SessionID : yjrg00aivq1m32223arkinq1
+09-09-2024 17:21:54:4656 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 17:21:57:2790 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 17:23:09:9322 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 17:23:14:6576 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 17:43:47:0791 : Login Successful. Username Maximus. SessionID : mzc1asjzclnetvfklgyuynvv
+09-09-2024 17:43:48:2559 : Class : UserPermissions.cs 
+Function : IsPageAccessibleToUser() 
+Exception Occured
+Keyword not supported: 'port'.
+09-09-2024 17:43:51:6189 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist
+09-09-2024 17:51:01:5842 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42883: function public.sp_ruledetails(p_username => text) does not exist

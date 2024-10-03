@@ -1,0 +1,232 @@
+.datepicker {
+    padding: 0;
+}
+
+.datepicker-days th {
+    background-color: var(--color-secondary-light-defaut);
+    font-size: var(--font-m-size12) !important;
+}
+
+.datepicker td,
+.datepicker th {
+    text-align: center;
+    width: 20px;
+    width: 34.29px;
+    height: 20px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+    font-size: var(--font-m-size12) !important;
+    color: var(--color-black);
+}
+
+.datepicker-switch {
+    font-size: var(--font-m-size12) !important;
+}
+
+
+
+
+.datepicker-days {
+    background-color: var(--border-box-bg)
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+    background-color: var(--color-secondary-light-defaut);
+}
+
+
+.datepicker table tr td.day:hover {
+    background: var(--color-secondary-light-defaut);
+    cursor: pointer;
+}
+
+
+
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active.disabled:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active[disabled] {
+    background-color: var(--color-primary-default) !important;
+    background-image: none;
+}
+
+tr .active.day {
+    background-color: var(--color-primary-default) !important;
+    background-image: none !important;
+}
+
+td.day {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 4px !important;
+
+}
+
+th.dow {
+    width: 34px !important;
+    height: 34px !important;
+}
+
+
+.datepicker tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    padding: 10px;
+}
+
+
+
+
+
+
+.datepicker-months th {
+    background-color: var(--color-secondary-light-defaut);
+    font-size: var(--font-m-size12) !important;
+}
+
+.datepicker-months {
+    background-color: var(--border-box-bg)
+}
+
+
+
+.datepicker table tr td span {
+    font-size: var(--font-m-size12) !important;
+    color: var(--color-black) !important;
+}
+
+.month.focused {
+    background-color: var(--color-secondary-light-defaut) !important;
+}
+
+.datepicker table tr td span.focused,
+.datepicker table tr td span:hover {
+    background: var(--color-secondary-light-defaut);
+}
+
+
+.month.focused.active {
+    background-color: var(--color-primary-default) !important;
+    background-image: none !important;
+}
+
+
+
+
+.datepicker-years th {
+    background-color: var(--color-secondary-light-defaut);
+    font-size: var(--font-m-size12) !important;
+}
+
+.datepicker-years {
+    background-color: var(--border-box-bg);
+}
+
+
+
+.datepicker-decades th {
+    background-color: var(--color-secondary-light-defaut);
+    font-size: var(--font-m-size12) !important;
+}
+
+.datepicker-decades {
+    background-color: var(--border-box-bg);
+}
+
+
+.datepicker-dropdown.datepicker-orient-top:after {
+    bottom: -6px;
+    border-bottom: 0;
+    border-top: 6px solid var(--border-box-bg);
+}
+
+
+.datepicker-dropdown.datepicker-orient-bottom:after {
+
+    border-bottom: 6px solid var(--color-secondary-light-defaut);
+    ;
+}
+
+
+
+.datepicker-centuries th {
+    background-color: var(--color-secondary-light-defaut);
+    font-size: var(--font-m-size12) !important;
+}
+
+.datepicker-centuries {
+    background-color: var(--border-box-bg);
+}
+
+
+
+@media(max-width:576px) {
+
+    .datepicker td,
+    .datepicker th {
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        border: none;
+        font-size: var(--font-m-size12) !important;
+        color: var(--color-black);
+    }
+
+
+    td.day {
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 4px !important;
+
+    }
+
+    th.dow {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+
+    .datepicker tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        padding: 8px;
+    }
+
+
+}

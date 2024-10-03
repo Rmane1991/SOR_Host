@@ -1,0 +1,66 @@
+17-09-2024 11:05:18:1567 : Login Successful. Username Maximus. SessionID : wwznx3su0jqrhluo2qdwvtka
+17-09-2024 11:10:15:8854 : Login Successful. Username Maximus. SessionID : kxty5nd0qen3qhpbve0ebqid
+17-09-2024 11:24:59:7463 : Login Successful. Username Maximus. SessionID : hl5rf0ma3noweoqzman1tpac
+17-09-2024 11:28:41:7829 : Login Successful. Username Maximus. SessionID : nqato1yfsorjseci2u4micxd
+17-09-2024 11:31:58:1901 : Login Successful. Username Maximus. SessionID : rgw1ftv0mirwmvopxgpjpohf
+17-09-2024 11:35:30:0625 : Login Successful. Username Maximus. SessionID : b4kuiulo2rusqcltsvwxnmuv
+17-09-2024 11:40:23:7058 : Login Successful. Username Maximus. SessionID : y3za3yzytnkjgw5pm5uiyrer
+17-09-2024 11:43:25:6013 : Login Successful. Username Maximus. SessionID : eezjprpys4tynyhsttoohipt
+17-09-2024 11:45:44:6837 : Login Successful. Username Maximus. SessionID : vcu0tzg04gq1c2tu42ixleqp
+17-09-2024 11:51:35:8989 : Login Successful. Username Maximus. SessionID : nkw2kbxeldssdpaht3yd2rb5
+17-09-2024 12:37:56:6340 : Login Successful. Username Maximus. SessionID : 4sgoldpdcf4d4xyqv4utips3
+17-09-2024 13:23:28:9415 : Login Successful. Username Maximus. SessionID : fmpry4quj1u2npxeqq5hwpbz
+17-09-2024 13:33:44:1459 : Login Successful. Username Maximus. SessionID : zx30yk1rxfye3aueu1wnsycw
+17-09-2024 13:40:32:7879 : Login Successful. Username Maximus. SessionID : 04421qi0obvzcks32zifzdtt
+17-09-2024 14:32:12:4659 : Login Successful. Username Maximus. SessionID : q0sytz5m0j1imc52na4ucmwx
+17-09-2024 14:43:09:6823 : Login Successful. Username Maximus. SessionID : g0p5rr3dh4a1hbhze3mnwq1a
+17-09-2024 15:17:19:7340 : Login Successful. Username Maximus. SessionID : sqbv4pmm0itjqmaqu1iivnml
+17-09-2024 15:20:54:7370 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42804: column "channel" is of type integer but expression is of type character varying
+17-09-2024 15:21:15:0325 : Login Successful. Username Maximus. SessionID : okgdfgo5fhjpsuqpslxyiuac
+17-09-2024 15:34:43:2724 : Login Successful. Username Maximus. SessionID : cxiblwuv1eexboly4v1vmuyu
+17-09-2024 15:41:06:6907 : Login Successful. Username Maximus. SessionID : fkflavbyk05s4mzzmnhbe1pt
+17-09-2024 15:45:02:0455 : Login Successful. Username Maximus. SessionID : hvbhlmgu4iah0p2glqsodywh
+17-09-2024 16:04:15:8132 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42804: column "channel" is of type integer but expression is of type character varying
+17-09-2024 16:06:50:8330 : Login Successful. Username Maximus. SessionID : xu1vwt5j5deafqbphqlvjcc3
+17-09-2024 16:40:56:0527 : Login Successful. Username Maximus. SessionID : luq20ry4ihkao4qhsptj1apq
+17-09-2024 16:54:53:2275 : Login Successful. Username Maximus. SessionID : dd4hlfsyaqja3udspqgtqxof
+17-09-2024 16:56:52:9282 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_priority => integer, p_aggregator => text, p_txntype => text, p_switch => text, p_iin => text, p_channel => text, p_percentage => integer, p_count => integer, p_flag => integer) does not exist
+17-09-2024 16:59:49:4533 : Login Successful. Username Maximus. SessionID : 5apfyuulvu3yqu11grrxynx3
+17-09-2024 17:05:42:6197 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+17-09-2024 17:09:22:8621 : Login Successful. Username Maximus. SessionID : hnltds2m2uafdxocauzckq4g
+17-09-2024 17:16:41:8515 : Login Successful. Username Maximus. SessionID : jjfxuvea3xtqptftvzqnooj5
+17-09-2024 17:19:35:8713 : Login Successful. Username Maximus. SessionID : 1x2cqv42bkwdo4kkgx4ox4hl
+17-09-2024 17:23:11:4464 : Login Successful. Username Maximus. SessionID : 443wtc3grwufqauk5vh0rguw
+17-09-2024 17:23:56:5718 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42703: column "maxcount" of relation "tbl_rule_configuration_tracker" does not exist
+17-09-2024 17:25:02:2027 : Login Successful. Username Maximus. SessionID : hwgzsd1mz4kwx5la2eaqrnsk
+17-09-2024 17:36:35:7056 : Login Successful. Username Maximus. SessionID : 3p5rjmqeb2ifbzyji4dos2av
+17-09-2024 17:45:48:8313 : Login Successful. Username Maximus. SessionID : xc2chqh3i3g2biaexat3gnj1
+17-09-2024 18:10:02:4717 : Login Successful. Username Maximus. SessionID : bfwa1nziv0c2xwqfnlsrfx13
+17-09-2024 18:13:10:1298 : Login Successful. Username Maximus. SessionID : idl2tzqq4wt3xo1rsgnnmmxv
+17-09-2024 18:22:03:9901 : Login Successful. Username Maximus. SessionID : cw5r3qwe2lrs3r0ubztgajx3
+17-09-2024 18:28:37:0635 : Login Successful. Username Maximus. SessionID : 5hl3trxeetdcivjvfkdepxbr
+17-09-2024 18:29:36:2676 : Login Successful. Username Maximus. SessionID : lm4cmdw5ms4rxqpibibuypsu
+17-09-2024 18:31:59:8267 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+17-09-2024 18:41:58:6937 : Login Successful. Username Maximus. SessionID : bd1bj035ncgfqdhscistfvoa
+17-09-2024 18:44:27:6906 : Login Successful. Username Maximus. SessionID : otbshyplhmieyik4nwpcwspg
+17-09-2024 18:52:06:8451 : Login Successful. Username Maximus. SessionID : 4r0mlajsvfbfotxutim0ilcz

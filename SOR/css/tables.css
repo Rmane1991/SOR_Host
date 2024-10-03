@@ -1,0 +1,508 @@
+/* Table Css */
+
+/* Table Border Box */
+
+.table-box {
+    margin-top: 12px;
+}
+
+.tableBorderBox {
+    background-color: var(--border-box-bg);
+    padding: 0 12px;
+    border: 1px solid var(--color-border-default);
+    border-radius: 8px;
+}
+
+.table-box-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+
+.ps-18 {
+    padding-left: 18px !important;
+}
+
+.tableBorderBox .tableContentBox {
+    max-height: 391px;
+}
+
+.tableBorderBox .table {
+    --bs-table-striped-bg: var(--border-box-bg);
+    --bs-table-striped-color: var(--color-black);
+    --bs-table-hover-bg: var(--table-hover-color);
+    --bs-table-hover-color: var(--color-black);
+    color: var(--color-black);
+    width: 2258px;
+}
+
+.tableBorderBox .table tbody {
+    --bs-table-bg: var(--table-striped-color);
+    --bs-table-accent-bg: var(--table-striped-color);
+}
+
+.tableBorderBox .table thead {
+    position: sticky;
+    top: 0;
+}
+
+.tableBorderBox .table thead tr th,
+.tableBorderBox .table tbody tr th {
+    font-weight: 500;
+    font-size: var(--font-m-size12);
+    background-color: var(--color-secondary-light-defaut);
+    height: 32px;
+    padding: 0;
+    /* padding-left: 14px; */
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tableBorderBox .table thead tr th:first-child,
+.tableBorderBox .table tbody tr td:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 24px;
+}
+
+.tableBorderBox .table thead tr th:last-child,
+.tableBorderBox .table tbody tr td:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.tableBorderBox .table tbody tr td {
+    font-size: var(--font-m-size12);
+    height: 34px;
+    padding: 0;
+    /* padding-left: 14px; */
+    text-align: center;
+}
+
+.tableBorderBox .table tbody tr {
+    border-bottom: 1px solid var(--color-table-border);
+}
+
+.tableBorderBox .table tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+
+.ticketCentreTableResponsive .table {
+    width: 1850px;
+}
+
+/* Table Scroll Bar */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background-color: var(--color-background-default);
+}
+
+.lightPinkNestedTable.hide {
+    display: none;
+}
+
+.lightPinkNestedTable.show {
+    display: table-cell;
+}
+
+.tableBorderBox .table .lightPinkNestedTable {
+    --bs-table-bg: var(--light-pink-bg);
+    --bs-table-accent-bg: var(--light-pink-bg);
+    background-color: var(--light-pink-bg) !important;
+    padding: 6px !important;
+}
+
+.tableBorderBox .table .lightPinkNestedTable .table thead tr th {
+    background-color: var(--light-pink-bg);
+}
+
+
+
+
+
+
+.ticket-center-dropdown {
+    width: 115px;
+}
+
+
+
+
+
+
+/* Search Box */
+.has-search {
+    position: relative;
+}
+
+.has-search .form-control {
+    width: 160px;
+    height: 32px;
+    border-color: var(--color-border-default);
+    padding-left: 30px;
+    font-size: var(--font-m-size12);
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+    background-color: transparent;
+}
+
+.has-search .form-control::placeholder {
+    font-size: var(--font-m-size12);
+    letter-spacing: 0.02em;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 9px;
+}
+
+
+/* --Search Box */
+
+
+/* Icon Button Box */
+.iconButtonBox {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--color-border-default);
+    background-color: transparent;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+
+.iconButtonBox img {
+    width: 16px;
+    height: auto;
+}
+
+
+/* -- Icon Button Box */
+
+
+/* dropdown2 */
+
+.addToWorkList {
+    width: 175px;
+    margin-left: 6px;
+}
+
+
+/* add ticket btns */
+.ticketAddBtn {
+    background-color: var(--color-primary-default);
+    border: none;
+    font-size: var(--font-m-size12);
+    color: var(--color-white);
+    font-weight: 600;
+    width: 70px;
+    height: 32px;
+    margin-left: 6px;
+    border-radius: 4px;
+}
+
+.ticketAddBtnOutline {
+    font-size: var(--font-m-size12);
+    font-weight: 600;
+    width: 70px;
+    height: 32px;
+    border: 1px solid var(--color-primary-default);
+    color: var(--color-primary-default);
+    background-color: transparent;
+    margin-left: 6px;
+    border-radius: 4px;
+}
+
+
+
+/*--  dropdown2 */
+
+
+
+/* table css 1 */
+
+
+
+.tableContentBox .form-check {
+    min-height: inherit;
+    margin-bottom: 0;
+}
+
+.tableContentBox .form-check-input {
+    margin-top: 0;
+    margin-right: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+.tableContentBox .form-check-input:checked {
+    background-color: var(--color-primary-default);
+    border-color: var(--color-primary-default);
+}
+
+.circleNo {
+    border-bottom: 12px dotted #e4b830;
+    width: 12px;
+    height: 12px;
+    margin-right: 9px;
+}
+
+.ticketIdBox {
+    width: 21px;
+    height: 21px;
+    border-radius: 4px;
+    background-color: rgba(16, 157, 74, 0.1);
+    font-weight: 700;
+    font-size: var(--font-m-size10);
+    color: #109d49;
+    margin-right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.atmIdBox {
+    width: 21px;
+    height: 21px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 10%);
+    font-weight: 700;
+    font-size: var(--font-m-size10);
+    color: var(--color-black);
+    margin-right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.callTypeBox {
+    color: var(--color-secondary-default) !important;
+}
+
+.editYellowBox {
+    background: #fff9d7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-Icon-2 {
+    color: #fff !important;
+}
+
+.circleNoTwo {
+    border-color: #c54031;
+}
+
+.circleNoThree {
+    border-color: #424f66;
+}
+
+.circleNoFour {
+    border-color: #e933a7;
+}
+
+.circleNoFive {
+    border-color: #109d49;
+}
+
+.circleNoSix {
+    border-color: #00b6ef;
+}
+
+.circleNoSeven {
+    border-color: #c54031;
+    color: #fff;
+}
+
+.tableToggle {
+    width: 12px;
+    height: 12px;
+    background-color: #109d49;
+    border-radius: 50px;
+    margin-left: 9px;
+}
+
+.tableToggle .icon-Plus:before {
+    content: "\e904";
+    color: #fff;
+}
+
+.tableToggle.tableToggle-active {
+    background-color: #e4b830;
+}
+
+.tableToggle.tableToggle-active .icon-Plus:before {
+    content: "\e902";
+    color: #fff;
+}
+
+.ticketCentreTableResponsive .table {
+    width: 1892px;
+}
+
+
+
+
+
+/* table spacing */
+.table-icons {
+    font-size: 12px;
+}
+
+.mr-9 {
+    margin-right: 9px !important;
+}
+
+
+
+/* table */
+
+.TicketCentreTableHeadBottom {
+    display: none;
+}
+
+
+
+
+
+/* Pagination */
+.icon-page-right-arrow:before {
+    font-size: var(--font-m-size16);
+}
+
+.my-12 {
+    margin-bottom: 12px !important;
+    margin-top: 12px !important;
+}
+
+.paginationLeft {
+    color: var(--color-black);
+    font-size: var(--font-m-size10);
+}
+
+.pagination {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.pagination .paginationBottom {
+    border: none;
+    font-size: var(--font-m-size10);
+    padding: 0;
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-right: 6px;
+    background-color: transparent;
+}
+
+.pagination .active .paginationBottom,
+.pagination .paginationBottom:hover {
+    background-color: var(--color-primary-default);
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.previousPagination,
+.nextPagination {
+    border: none;
+    font-weight: 500;
+    font-size: var(--font-m-size10);
+    padding: 0;
+    letter-spacing: 0.02em;
+    color: var(--color-primary-default);
+    display: flex;
+    align-items: center;
+    height: 24px;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.previousPagination {
+    margin-right: 4px;
+    text-decoration: none;
+}
+
+.previousPagination span:last-child {
+    margin-left: 2px;
+    text-decoration: underline;
+    font-size: var(--font-m-size10);
+}
+
+.nextPagination {
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+.nextPagination span:first-child {
+    margin-right: 2px;
+    text-decoration: underline;
+    font-size: var(--font-m-size10);
+}
+
+.previousPagination:hover,
+.nextPagination:hover {
+    background-color: transparent;
+}
+
+
+
+/* media */
+
+/* Config Right */
+@media (min-width: 1600px) {
+    .tableBorderBox .table {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 426px) {
+
+    .tableBorderBox .table thead tr th,
+    .tableBorderBox .table tbody tr td {
+        font-size: var(--font-m-size10);
+    }
+}
+
+
+
+@media (max-width: 426px) {
+    .paginationBox {
+        flex-direction: column;
+        margin: 16px 0 24px !important;
+    }
+
+    .paginationBox .paginationLeft {
+        margin-bottom: 8px;
+    }
+}
+
+

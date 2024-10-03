@@ -1,0 +1,40 @@
+Time : 01-Oct-2024 11:44 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 11:44 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 11:57 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 12:41 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 12:42 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 12:54 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:24 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:24 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:24 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 01-Oct-2024 15:33 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist

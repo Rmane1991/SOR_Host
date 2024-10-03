@@ -1,0 +1,7 @@
+Time : 06-Sep-2024 18:09 Message : TrRule: ToggleSlider(): statusCode: UPD00 ResponseCode : UPD00 ResponseMessageUpdate Successful
+Time : 06-Sep-2024 18:10 Message : TrRule: ToggleSlider(): statusCode: UPD00 ResponseCode : UPD00 ResponseMessageUpdate Successful
+Time : 06-Sep-2024 18:12 Message : TrRule: ToggleSlider(): DBstatusCode | UPD00 ResponseCode | UPD00 ResponseMessage | Update Successful
+Time : 06-Sep-2024 18:14 Message : TrRule: ToggleSlider(): DBstatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 06-Sep-2024 19:31 Message : TrRule: Delete | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 06-Sep-2024 19:47 Message : TrRule: Delete() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 06-Sep-2024 19:47 Message : TrRule: Delete() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

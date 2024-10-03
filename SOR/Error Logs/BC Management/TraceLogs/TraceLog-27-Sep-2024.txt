@@ -1,0 +1,8 @@
+Time : 27-Sep-2024 16:16 Message : Class : BCRegistration.cs 
+Function : fillClient() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 27-Sep-2024 16:16 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.

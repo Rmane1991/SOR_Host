@@ -1,0 +1,94 @@
+18-09-2024 10:30:10:4813 : Login Successful. Username Maximus. SessionID : 1awy1m3arv0p42p320xbdwod
+18-09-2024 11:11:45:7301 : Login Successful. Username Maximus. SessionID : sv0zal1xyhylp220nsbv1sf1
+18-09-2024 11:53:29:5660 : Login Successful. Username Maximus. SessionID : 15r14hz3oowckz01tm1rznbs
+18-09-2024 12:12:58:3778 : Login Successful. Username Maximus. SessionID : cbxfl2qjr5zijgakj5ochkbg
+18-09-2024 12:15:10:8910 : Login Successful. Username Maximus. SessionID : pypg1f4130em5bufj3v3bdag
+18-09-2024 12:28:24:9670 : Login Successful. Username Maximus. SessionID : lcdrdzqki2ftgn100elco0lx
+18-09-2024 12:31:54:8978 : Login Successful. Username Maximus. SessionID : b5rbv21e221alkoioyk2uwdv
+18-09-2024 13:05:39:2396 : Login Successful. Username Maximus. SessionID : 3omqrsxhhvptlw2gp3domb2d
+18-09-2024 13:06:41:4297 : Login Successful. Username Maximus. SessionID : wmxpdnzrdnrmedyuh5n2po1c
+18-09-2024 13:08:07:9913 : Login Successful. Username Maximus. SessionID : tr2o1lu2rqfkm0n0ceutalyo
+18-09-2024 13:09:29:0650 : Login Successful. Username Maximus. SessionID : nsfvxtdmy4dslsbc3yjpy30v
+18-09-2024 13:11:30:4336 : Login Successful. Username Maximus. SessionID : kb0zizyg04lwo2lqyfxdc50a
+18-09-2024 13:11:37:6357 : Class : RuleEntity.cs 
+Function : Get_ddl_switches() 
+Exception Occurred
+Parameter 'cursor' referenced in SQL but is an out-only parameter
+18-09-2024 13:12:44:1905 : Login Successful. Username Maximus. SessionID : wfsvcuz1sunujecgt4i1q1en
+18-09-2024 13:17:22:3504 : Login Successful. Username Maximus. SessionID : w5exqtx10f1mnz3ycaseftp2
+18-09-2024 13:17:28:1748 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42809: public.get_ddl_switches() is a procedure
+18-09-2024 13:18:03:4070 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42809: public.get_ddl_switches() is a procedure
+18-09-2024 13:19:47:5958 : Login Successful. Username Maximus. SessionID : myqrl4xxgbyphinfs0q4t5pa
+18-09-2024 13:24:08:7585 : Login Successful. Username Maximus. SessionID : 0pz5t5mawdynpvy1sd5ufjvv
+18-09-2024 13:24:15:8697 : Class : RuleEntity.cs 
+Function : Get_ddl_switches() 
+Exception Occurred
+42809: public.get_ddl_switches() is a procedure
+18-09-2024 13:25:53:2466 : Login Successful. Username Maximus. SessionID : iwvaywvbm5cbbi5cqgufnuzy
+18-09-2024 13:27:50:8987 : Login Successful. Username Maximus. SessionID : ac0bnc2shq4hhait35garhsd
+18-09-2024 13:29:51:0277 : Login Successful. Username Maximus. SessionID : dpn2eeqdtl5ijdkizsa4nxnj
+18-09-2024 13:29:59:0693 : Class : RuleEntity.cs 
+Function : Get_ddl_switches() 
+Exception Occurred
+42601: syntax error at or near ")"
+18-09-2024 13:32:02:4122 : Login Successful. Username Maximus. SessionID : gtahirtzxnhwix4jb4mvr5au
+18-09-2024 13:37:49:8892 : Login Successful. Username Maximus. SessionID : esqyxvsqutczbiogcntu4f0f
+18-09-2024 13:40:32:3510 : Login Successful. Username Maximus. SessionID : qy3zndp1iwkagxxq13hfkrre
+18-09-2024 13:40:32:3520 : Login Successful. Username Maximus. SessionID : ywvjpadjbxmpzfhcgfha3rvq
+18-09-2024 14:49:24:2019 : Login Successful. Username Maximus. SessionID : svmrfobepqdjuek4nbqlvhhu
+18-09-2024 15:00:10:5163 : Login Successful. Username Maximus. SessionID : c2zejuhwnntpeh2mqtigill0
+18-09-2024 15:03:48:7485 : Login Successful. Username Maximus. SessionID : 3aekac1zcn4rlh5plxafa2dd
+18-09-2024 15:12:28:3063 : Login Successful. Username Maximus. SessionID : 2nnazfpsujozt13p5ypqsrnf
+18-09-2024 15:16:18:7033 : Login Successful. Username Maximus. SessionID : a1vpxtzqdnk5liqoqg1omc5b
+18-09-2024 15:23:25:7888 : Login Successful. Username Maximus. SessionID : rp2jgd2tldleapyxwufxzgkh
+18-09-2024 15:28:11:5118 : Login Successful. Username Maximus. SessionID : j2smv55yabjlgjijj2gf1hhd
+18-09-2024 15:33:35:6278 : Login Successful. Username Maximus. SessionID : xuvivqzkicfjiy2ozugfnmfh
+18-09-2024 15:37:09:8350 : Login Successful. Username Maximus. SessionID : ozx3qidvlvqayntk3toezoam
+18-09-2024 15:47:44:3106 : Login Successful. Username Maximus. SessionID : nm1lmjojwr1yaa5mevyn4de1
+18-09-2024 15:53:46:7780 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+18-09-2024 15:56:30:9475 : Login Successful. Username Maximus. SessionID : hleibnao5yr33oea5l42qjef
+18-09-2024 16:01:18:5180 : Login Successful. Username Maximus. SessionID : deb5eibzle05pj04o0gxpe1h
+18-09-2024 16:16:57:3849 : Login Successful. Username Maximus. SessionID : bd1bsvhwescwppxw4gf14j1t
+18-09-2024 16:37:32:4463 : Login Successful. Username Maximus. SessionID : atjk43osnp3cubialqqo2xqh
+18-09-2024 16:42:46:0929 : Login Successful. Username Maximus. SessionID : ze1sfa5a2fup1wohlrqzy4hh
+18-09-2024 16:46:33:8699 : Login Successful. Username Maximus. SessionID : 452lbtp00ay1xg2w4fyndu4f
+18-09-2024 17:01:03:3118 : Login Successful. Username Maximus. SessionID : djwbflhwyreiahbweftt10if
+18-09-2024 17:02:38:0468 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => integer, p_failover_percentage => integer, p_failover_count => integer, p_dt => text) does not exist
+18-09-2024 17:03:32:3500 : Login Successful. Username Maximus. SessionID : bawbxjclvj3f53vqs3ofrapd
+18-09-2024 17:04:42:0858 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42601: argument name "p_dt" used more than once
+18-09-2024 17:04:46:7147 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42601: argument name "p_dt" used more than once
+18-09-2024 17:14:31:6692 : Login Successful. Username Maximus. SessionID : 1auanj3gxztqhpemkgigbf1f
+18-09-2024 18:57:30:3053 : Login Successful. Username Maximus. SessionID : 3hwvgew2vem3jli0dyoksxqz
+18-09-2024 19:10:15:6484 : Login Successful. Username Maximus. SessionID : ackhs4yp22wk3hekmglxl1ix
+18-09-2024 19:15:28:0447 : Login Successful. Username Maximus. SessionID : ytg4wev0dgxdduohjeiir0kw
+18-09-2024 19:18:22:6816 : Login Successful. Username Maximus. SessionID : yhsfa0gkigs5tvvg2lfaltdf
+18-09-2024 19:22:05:3275 : Login Successful. Username Maximus. SessionID : rnkub0ctdyf0idlaug4xxfge
+18-09-2024 19:23:09:8413 : Login Successful. Username Maximus. SessionID : svzyb3amfhu5qyqxxrfcfsdc
+18-09-2024 19:31:29:3232 : Login Successful. Username Maximus. SessionID : hdio5uwy3d4dmomywq1r0duy
+18-09-2024 19:32:53:6298 : Login Successful. Username Maximus. SessionID : e0qz5fhd3hgbjviqpu0sax3x
+18-09-2024 19:35:37:9522 : Login Successful. Username Maximus. SessionID : vfkfricaoirlp00ki0vlegss
+18-09-2024 19:40:12:3744 : Login Successful. Username Maximus. SessionID : ef0wlgtccmmbko2a02vmjhfp
+18-09-2024 19:43:36:7033 : Login Successful. Username Maximus. SessionID : rnrtfukgo3ygr3fssbeq12ai
+18-09-2024 19:46:15:1652 : Login Successful. Username Maximus. SessionID : smigcljoegewcfyi2lakdsfu
+18-09-2024 19:47:23:7479 : Login Successful. Username Maximus. SessionID : rhk1bnyiofwk0ew5bgezqibg
+18-09-2024 19:47:50:9652 : Login Successful. Username Maximus. SessionID : 4twi10ftqm1z33ne3b5xrttb
+18-09-2024 19:51:03:6944 : Login Successful. Username Maximus. SessionID : eg1sqcoekr2wzijhzuwuknwt

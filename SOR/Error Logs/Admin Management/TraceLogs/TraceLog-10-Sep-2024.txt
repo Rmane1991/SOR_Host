@@ -1,0 +1,6 @@
+Time : 10-Sep-2024 11:38 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42809: fetch_group_rule_ddl(p_username => text) is a procedure
+Time : 10-Sep-2024 11:40 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42809: fetch_group_rule_ddl(p_username => text) is a procedure
+Time : 10-Sep-2024 11:42 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42809: fetch_group_rule_ddl(p_username => text) is a procedure
+Time : 10-Sep-2024 11:43 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42809: fetch_group_rule_ddl(p_username => text) is a procedure
+Time : 10-Sep-2024 16:35 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: Parameter 'p_username' must have its value set
+Time : 10-Sep-2024 17:31 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: Parameter 'p_username' must have its value set

@@ -1,0 +1,6 @@
+Time : 20-Sep-2024 16:44 Message : TrRule: BindRules(): Exception: 42804: structure of query does not match function result type
+Time : 20-Sep-2024 16:45 Message : TrRule: BindRules(): Exception: 42804: structure of query does not match function result type
+Time : 20-Sep-2024 16:51 Message : TrRule: BindRules(): Exception: 42703: column tbl.priority does not exist
+Time : 20-Sep-2024 16:53 Message : TrRule: BindRules(): Exception: 42703: column tbl.priority does not exist
+Time : 20-Sep-2024 16:54 Message : TrRule: BindRules(): Exception: 42703: column tbl.priority does not exist
+Time : 20-Sep-2024 16:57 Message : TrRule: BindRules(): Exception: 42703: column tbl.priority does not exist

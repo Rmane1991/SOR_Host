@@ -1,0 +1,1428 @@
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:38
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:38
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:38
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:40
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:40
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:40
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:42
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:42
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:42
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:44
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:44
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:44
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:47
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:47
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:47
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:59
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:59
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 11:59
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:02
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:02
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:02
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:12
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:12
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:12
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:13
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:13
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:13
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:16
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:16
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:16
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:19
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:19
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:19
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:50
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:50
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 12:50
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:41
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:41
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:41
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:47
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:47
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:47
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:49
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:49
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 13:49
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:02
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:02
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:02
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:22
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:22
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:22
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:37
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:37
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 16:37
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 17:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 17:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 17:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 17:50
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 17:50
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 17:50
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 18:04
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 18:04
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 18:04
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:00
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:00
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:00
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:07
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:07
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:07
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:14
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:14
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:14
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:16
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:16
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:16
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:18
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:18
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:18
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:26
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:26
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:26
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:29
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:29
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:29
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:32
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:32
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:32
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 274
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageData1() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 390
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 10-Sep-2024 19:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.DashBoardDAL.GetMaximusHomePageCount() in D:\Aakash\SOR\SOR\BussinessAccessLayer\DashBoardDAL.cs:line 311
+Message - : Keyword not supported: 'port'.

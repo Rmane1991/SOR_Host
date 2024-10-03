@@ -1,0 +1,6 @@
+Time : 20-Sep-2024 13:04 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 23502: null value in column "transaction_type" of relation "tbl_switch_routing" violates not-null constraint
+Time : 20-Sep-2024 13:08 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 20-Sep-2024 17:27 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 20-Sep-2024 17:27 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 20-Sep-2024 17:29 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 20-Sep-2024 18:21 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

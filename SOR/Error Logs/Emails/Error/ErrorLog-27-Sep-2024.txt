@@ -1,0 +1,12 @@
+----------------------------------------------------------------------------
+Time : 27-Sep-2024 16:16
+Message : Class : ClientRegistrationEntity.cs 
+Function : BindClient() 
+Exception Occured
+Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 27-Sep-2024 19:04
+Message : Class : ClientRegistrationEntity.cs 
+Function : BindClient() 
+Exception Occured
+Keyword not supported: 'port'.

@@ -1,0 +1,4 @@
+Time : 24-Sep-2024 15:08 Message : TrRule: Page_Load(): Exception: Object reference not set to an instance of an object.
+Time : 24-Sep-2024 19:05 Message : SwitchConfig : Page_Load(): Exception: Unable to cast object of type 'System.Int32' to type 'System.String'.
+Time : 24-Sep-2024 19:05 Message : SwitchConfig : Page_Load(): Exception: Unable to cast object of type 'System.Int32' to type 'System.String'.
+Time : 24-Sep-2024 19:06 Message : SwitchConfig : Page_Load(): Exception: Unable to cast object of type 'System.Int32' to type 'System.String'.

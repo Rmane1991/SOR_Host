@@ -1,0 +1,930 @@
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 11:38
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 11:43
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 11:44
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 11:53
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42883: function public.insert_or_update_switch(p_username => text, p_switchname => text, p_switchdescription => text, p_percentage => integer, p_switchid => integer, p_flag => integer, p_count => integer, p_failover_switchid => unknown, p_failover_percentage => integer, p_failover_count => integer, p_dt => jsonb, p_dt2 => jsonb, p_dt3 => jsonb) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 12:17
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42703: column "p_failover_switchid" does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 12:19
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42703: column "p_failover_switchid" does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 13:40
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.<>c__DisplayClass41_0.<<ReadMessage>g__ReadMessageSequential|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteScalar>d__90.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteScalar()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateRule() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 395
+Message - : 42883: operator does not exist: text + integer
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 13:40
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.<>c__DisplayClass41_0.<<ReadMessage>g__ReadMessageSequential|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteScalar>d__90.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteScalar()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateRule() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 395
+Message - : 42883: operator does not exist: text + integer
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 13:41
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.<>c__DisplayClass41_0.<<ReadMessage>g__ReadMessageSequential|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteScalar>d__90.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteScalar()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateRule() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 395
+Message - : 42883: operator does not exist: text + integer
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 14:41
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteScalar>d__90.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteScalar()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateRule() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 395
+Message - : 42883: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_aggregator => text, p_txntype => text, p_switch => integer, p_iin => text, p_channel => integer, p_percentage => integer, p_count => integer, p_flag => integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 14:50
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteScalar>d__90.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteScalar()
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateRule() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 395
+Message - : 42883: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_aggregator => text, p_txntype => text, p_switch => integer, p_iin => text, p_channel => integer, p_percentage => integer, p_count => integer, p_flag => integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:43
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:43
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:44
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:46
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:46
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:56
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:56
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:59
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 15:59
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:06
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:06
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:07
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42804: column "switchstatus" is of type integer but expression is of type bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:07
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:07
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:08
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42804: column "switchstatus" is of type integer but expression is of type bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:08
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: operator does not exist: integer = bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:09
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 42804: column "switchstatus" is of type integer but expression is of type bit
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:09
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 22023: cannot extract elements from a scalar
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:12
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 22023: cannot extract elements from a scalar
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 16:15
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at BussinessAccessLayer.RuleEntity.InsertOrUpdateSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 564
+Message - : 22023: cannot extract elements from a scalar
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 17:28
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 17:29
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 17:34
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 17:34
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 468
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 17:35
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 504
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 18:07
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 504
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 18:08
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass158_0.<<DoReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 504
+Message - : 42883: procedure public.sp_getswitchdetails(text, integer, integer) does not exist
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 19:13
+Source - : System.Data
+StackTrace -  :    at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataTable.NewRecordFromArray(Object[] value)
+   at System.Data.DataRowCollection.Add(Object[] values)
+   at BussinessAccessLayer.RuleEntity.GetSwitch()
+Message - : Input string was not in a correct format.Couldn't store <"http://localhost:5092/api/Rule/Gradually"> in id Column.  Expected type is Int32.
+----------------------------------------------------------------------------
+Time : 25-Sep-2024 19:15
+Source - : System.Data
+StackTrace -  :    at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataTable.NewRecordFromArray(Object[] value)
+   at System.Data.DataRowCollection.Add(Object[] values)
+   at BussinessAccessLayer.RuleEntity.GetSwitch() in D:\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 549
+Message - : Input string was not in a correct format.Couldn't store <"http://localhost:5092/api/Rule/Gradually"> in id Column.  Expected type is Int32.

@@ -1,0 +1,30 @@
+01-10-2024 11:23:10:3434 : Login Successful. Username Maximus. SessionID : cqbrl1qo3j2duqgeecn5v22v
+01-10-2024 11:28:47:9181 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+01-10-2024 11:28:53:7308 : Login Successful. Username Maximus. SessionID : jz154wusangjkdp23e1i2hbx
+01-10-2024 11:41:30:7771 : Login Successful. Username Maximus. SessionID : isud5fgjovxd0sywoqidnokj
+01-10-2024 11:49:00:0265 : Login Successful. Username Maximus. SessionID : riki0ds0c1vsor5ebd1d1h2d
+01-10-2024 11:50:52:5676 : Login Successful. Username Maximus. SessionID : mts1elyijefojmgy1qsuw10i
+01-10-2024 11:52:15:3185 : Login Successful. Username Maximus. SessionID : hv04hiybu4xv50hxevjqwiuz
+01-10-2024 11:56:39:5387 : Login Successful. Username Maximus. SessionID : vuvyxjpbfwqxb0xken3pooxn
+01-10-2024 12:39:33:1568 : Login Successful. Username Maximus. SessionID : roo50iptb4lrimhsiqeadads
+01-10-2024 12:53:33:3801 : Login Successful. Username Maximus. SessionID : os2i5raqnfjscnrszobovlf3
+01-10-2024 15:22:06:1103 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+01-10-2024 15:22:06:5962 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+01-10-2024 15:22:06:8696 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+01-10-2024 15:22:10:4701 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+01-10-2024 15:22:10:5030 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+01-10-2024 15:22:10:5349 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+01-10-2024 15:22:15:3177 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+01-10-2024 15:22:15:3519 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+01-10-2024 15:22:15:3875 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+01-10-2024 15:24:01:4736 : Login Successful. Username Maximus. SessionID : 00vhpwddmokwwmqkhy21aiep
+01-10-2024 15:26:22:4207 : Login Successful. Username Maximus. SessionID : hdw2utxnysu5hldgkopjdn4e

@@ -1,0 +1,70 @@
+13-09-2024 11:34:41:5499 : Login Successful. Username Maximus. SessionID : opxpwmykz4x4e2dfdwo2pj3p
+13-09-2024 11:40:06:7690 : Login Successful. Username Maximus. SessionID : 1amuxtf3izmj0mk353udf0si
+13-09-2024 11:41:17:4017 : Login Successful. Username Maximus. SessionID : hgoidmcaiynrouuo0doocarx
+13-09-2024 11:43:36:5438 : Login Successful. Username Maximus. SessionID : xyr53qczr4ps1n4xqcykthw4
+13-09-2024 11:45:13:6095 : Login Successful. Username Maximus. SessionID : jdpu54oqt3j3j3aitfnh2yoj
+13-09-2024 11:47:32:4352 : Login Successful. Username Maximus. SessionID : 5mijzpqplnmktppt5lrudyvg
+13-09-2024 11:49:54:9281 : Login Successful. Username Maximus. SessionID : 2hhqrt0owq3bjllke2200gbk
+13-09-2024 11:52:37:1957 : Login Successful. Username Maximus. SessionID : l5nhdf5d0d3xfh5zp5cgd1e2
+13-09-2024 12:00:57:6121 : Login Successful. Username Maximus. SessionID : mofzujduc01rpy034nsjlmdh
+13-09-2024 12:05:20:8409 : Login Successful. Username Maximus. SessionID : b21beb3nztukfwpnrliimxkm
+13-09-2024 12:07:00:3208 : Login Successful. Username Maximus. SessionID : ozedai5fr553hjncuqpm1vlu
+13-09-2024 12:08:37:8615 : Login Successful. Username Maximus. SessionID : lj0vej3nhoxbqr4rnfo0ynps
+13-09-2024 12:11:57:6450 : Login Successful. Username Maximus. SessionID : ht4daqqghjhyu14l0hdnwjgp
+13-09-2024 12:20:00:1691 : Login Successful. Username Maximus. SessionID : rc5md304hxtq5z4y3uk2rdac
+13-09-2024 12:47:34:1338 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42846: cannot cast type bit to boolean
+13-09-2024 12:47:34:2315 : Login Request Failed (Login Page). Exception : 42846: cannot cast type bit to boolean Username : Maximus
+13-09-2024 12:47:39:6207 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42846: cannot cast type bit to boolean
+13-09-2024 12:47:39:6297 : Login Request Failed (Login Page). Exception : 42846: cannot cast type bit to boolean Username : Maximus
+13-09-2024 12:48:46:0577 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42846: cannot cast type bit to boolean
+13-09-2024 12:48:46:0656 : Login Request Failed (Login Page). Exception : 42846: cannot cast type bit to boolean Username : Maximus
+13-09-2024 12:48:48:3343 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42846: cannot cast type bit to boolean
+13-09-2024 12:48:48:3423 : Login Request Failed (Login Page). Exception : 42846: cannot cast type bit to boolean Username : Maximus
+13-09-2024 12:49:07:3661 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42846: cannot cast type bit to boolean
+13-09-2024 12:49:07:3748 : Login Request Failed (Login Page). Exception : 42846: cannot cast type bit to boolean Username : Maximus
+13-09-2024 12:51:51:2584 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42804: structure of query does not match function result type
+13-09-2024 12:51:51:2691 : Login Request Failed (Login Page). Exception : 42804: structure of query does not match function result type Username : Maximus
+13-09-2024 13:02:50:6851 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+42809: proc_userlogin(p_username => text, p_password => text) is a procedure
+13-09-2024 13:02:51:0462 : Login Request Failed (Login Page). Exception : 42809: proc_userlogin(p_username => text, p_password => text) is a procedure Username : Maximus
+13-09-2024 13:13:50:3578 : Class : LoginEntity.cs 
+Function : Login() 
+Exception Occurred
+34000: cursor "ref_cursor" does not exist
+13-09-2024 13:13:50:4146 : Login Request Failed (Login Page). Exception : 34000: cursor "ref_cursor" does not exist Username : Maximus
+13-09-2024 13:49:16:9198 : Login Successful. Username Maximus. SessionID : igt5ztvcedrefklw0ehrmwsx
+13-09-2024 15:31:21:9890 : Login Successful. Username Maximus. SessionID : twtuk5xkqo0anc5zknzawqhu
+13-09-2024 15:46:49:7456 : Login Successful. Username Maximus. SessionID : t4cmgm5g1mshfyqinayxtcjo
+13-09-2024 15:47:06:0772 : Login Successful. Username Maximus. SessionID : pwarcqs2z02qlahqqnpbadly
+13-09-2024 16:04:34:3849 : Login Successful. Username Maximus. SessionID : gxdzhik1oxgstjvg1qpnvrmk
+13-09-2024 16:04:54:1420 : Login Successful. Username Maximus. SessionID : dxkcfxlfbzqcssm5xhukvl3i
+13-09-2024 16:06:01:0048 : Login Successful. Username Maximus. SessionID : yt1lqwkdoxhjpflna2xjhg3p
+13-09-2024 16:56:47:4856 : Login Successful. Username Maximus. SessionID : bk13gra21inntdgmjjgkwpxi
+13-09-2024 16:57:13:1570 : Login Successful. Username Maximus. SessionID : qyjlwcevz0qxljrmk5etzrco
+13-09-2024 18:22:38:4804 : Login Successful. Username Maximus. SessionID : bbqx0pbffrvfuj0dtqlbpxuu
+13-09-2024 18:38:46:3628 : Login Successful. Username Maximus. SessionID : e1qhg2cvewj4xh3uvzq423gr
+13-09-2024 18:44:47:0894 : Login Successful. Username Maximus. SessionID : skzy5fxw1mdz54du0u5urd2d
+13-09-2024 18:45:55:5631 : Login Successful. Username Maximus. SessionID : er05dgrp1v44q0c0u1m0bfn0
+13-09-2024 18:47:38:6688 : Login Successful. Username Maximus. SessionID : xrvha2apopik4ryzt5b2s2vp
+13-09-2024 18:52:04:5066 : Login Successful. Username Maximus. SessionID : oz5r0eb2on1uiqw1zos5gc1e
+13-09-2024 18:59:27:6469 : Login Successful. Username Maximus. SessionID : foolcltxna5a5k0cvwhqz3mn

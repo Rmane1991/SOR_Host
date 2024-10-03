@@ -1,0 +1,17 @@
+Time : 17-Sep-2024 11:06 Message : TrRule: EditGroup() | DB_StatusCode : VERI00 | ResponseCode : VERI00 | ResponseMessage : Request Going For Verification
+Time : 17-Sep-2024 11:46 Message : TrRule: EditGroup() | DB_StatusCode : VERI00 | ResponseCode : VERI00 | ResponseMessage : Request Going For Verification
+Time : 17-Sep-2024 12:43 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 17-Sep-2024 12:44 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 17-Sep-2024 12:52 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 17-Sep-2024 12:57 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 17-Sep-2024 13:26 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 17-Sep-2024 15:20 Message : TrRule: btnCreateRule_Click() | Username :MaximusException : 42804: column "channel" is of type integer but expression is of type character varying
+Time : 17-Sep-2024 16:04 Message : TrRule: btnCreateRule_Click() | Username :MaximusException : 42804: column "channel" is of type integer but expression is of type character varying
+Time : 17-Sep-2024 16:56 Message : TrRule: btnCreateRule_Click() | Username :MaximusException : 42883: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_priority => integer, p_aggregator => text, p_txntype => text, p_switch => text, p_iin => text, p_channel => text, p_percentage => integer, p_count => integer, p_flag => integer) does not exist
+Time : 17-Sep-2024 17:18 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 17-Sep-2024 17:26 Message : TrRule: EditGroup() | DB_StatusCode : VERI00 | ResponseCode : VERI00 | ResponseMessage : Request Going For Verification
+Time : 17-Sep-2024 18:23 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 17-Sep-2024 18:23 Message : TrRule: EditGroup() | DB_StatusCode : VERI00 | ResponseCode : VERI00 | ResponseMessage : Request Going For Verification
+Time : 17-Sep-2024 18:29 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Input string was not in a correct format.
+Time : 17-Sep-2024 18:32 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 17-Sep-2024 18:32 Message : TrRule: EditGroup() | DB_StatusCode : VERI00 | ResponseCode : VERI00 | ResponseMessage : Request Going For Verification
