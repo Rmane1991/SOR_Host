@@ -1,0 +1,91 @@
+Time : 05-Oct-2024 16:04
+Source - : System.Data
+StackTrace -  :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 118
+Message - : There is no row at position 0.
+
+Time : 05-Oct-2024 16:05
+Source - : System.Data
+StackTrace -  :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 118
+Message - : There is no row at position 0.
+
+Time : 05-Oct-2024 16:06
+Source - : System.Data
+StackTrace -  :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 118
+Message - : There is no row at position 0.
+
+Time : 05-Oct-2024 16:08
+Source - : System.Data
+StackTrace -  :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 118
+Message - : There is no row at position 0.
+
+Time : 05-Oct-2024 16:15
+Source - : System.Data
+StackTrace -  :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at PayRakamSBM.Login.LoginMe()
+Message - : There is no row at position 0.
+
+Time : 05-Oct-2024 16:19
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at BussinessAccessLayer.LoginEntity.updateAttemptFailed(String[] _Params) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\LoginEntity.cs:line 722
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 281
+Message - : Keyword not supported: 'port'.
+
+Time : 05-Oct-2024 16:19
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at BussinessAccessLayer.LoginEntity.updateAttemptFailed(String[] _Params) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\LoginEntity.cs:line 722
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 281
+Message - : Keyword not supported: 'port'.
+
+Time : 05-Oct-2024 16:20
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at BussinessAccessLayer.LoginEntity.updateAttemptFailed(String[] _Params) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\LoginEntity.cs:line 722
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 281
+Message - : Keyword not supported: 'port'.
+
+Time : 05-Oct-2024 16:21
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at BussinessAccessLayer.LoginEntity.updateAttemptFailed(String[] _Params) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\LoginEntity.cs:line 722
+   at PayRakamSBM.Login.LoginMe() in D:\D Data\Aakash\SOR\SOR\SOR\Login.aspx.cs:line 281
+Message - : Keyword not supported: 'port'.
+

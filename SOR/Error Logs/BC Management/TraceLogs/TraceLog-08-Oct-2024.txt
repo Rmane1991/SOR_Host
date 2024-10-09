@@ -1,0 +1,106 @@
+Time : 08-Oct-2024 11:38 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  RequestId: 0
+Time : 08-Oct-2024 12:24 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 29
+Time : 08-Oct-2024 12:32 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 30
+Time : 08-Oct-2024 12:32 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 31
+Time : 08-Oct-2024 12:45 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 32
+Time : 08-Oct-2024 12:47 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 33
+Time : 08-Oct-2024 12:52 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 34
+Time : 08-Oct-2024 12:56 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 35
+Time : 08-Oct-2024 13:02 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 35
+Time : 08-Oct-2024 13:02 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 08-Oct-2024 13:03 Message : Class : BCRegistration.cs 
+Function : ImageButton2_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 08-Oct-2024 13:18 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 36
+Time : 08-Oct-2024 13:23 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 37
+Time : 08-Oct-2024 13:23 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 08-Oct-2024 13:24 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 37
+Time : 08-Oct-2024 14:30 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 38
+Time : 08-Oct-2024 14:30 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 38
+Time : 08-Oct-2024 14:34 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 39
+Time : 08-Oct-2024 14:34 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 39
+Time : 08-Oct-2024 14:38 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+42883: function proc_getreceiptdata(BCCode => text) does not exist
+Time : 08-Oct-2024 14:45 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 08-Oct-2024 14:45 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 08-Oct-2024 14:49 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 41
+Time : 08-Oct-2024 14:49 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 41
+Time : 08-Oct-2024 14:52 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+42703: column "p_bccode" does not exist
+Time : 08-Oct-2024 14:52 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 08-Oct-2024 14:53 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 42
+Time : 08-Oct-2024 14:53 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 42
+Time : 08-Oct-2024 14:54 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+42703: column "p_bccode" does not exist
+Time : 08-Oct-2024 14:56 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 08-Oct-2024 14:57 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 08-Oct-2024 14:59 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 08-Oct-2024 15:00 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 43
+Time : 08-Oct-2024 15:01 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 43
+Time : 08-Oct-2024 15:05 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 44
+Time : 08-Oct-2024 15:05 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 08-Oct-2024 15:05 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 44
+Time : 08-Oct-2024 15:06 Message : Class : BCRegistration.cs 
+Function : ImageButton2_Click() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 08-Oct-2024 15:20 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 45
+Time : 08-Oct-2024 15:20 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 45
+Time : 08-Oct-2024 15:21 Message : Class : BCRegistration.cs 
+Function : DeleteFile() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 08-Oct-2024 15:23 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 46
+Time : 08-Oct-2024 15:23 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 46
+Time : 08-Oct-2024 15:29 Message : Class : BCRegistration.cs 
+Function : DeleteFile() 
+Exception Occured
+42883: procedure sp_insertorupdatebctrackerdetails(integer, text, text, unknown) does not exist
+Time : 08-Oct-2024 15:34 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 47
+Time : 08-Oct-2024 15:34 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 47
+Time : 08-Oct-2024 15:47 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 08-Oct-2024 15:47 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 08-Oct-2024 16:04 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 49
+Time : 08-Oct-2024 16:04 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 49
+Time : 08-Oct-2024 16:07 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 50
+Time : 08-Oct-2024 16:07 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 50
+Time : 08-Oct-2024 16:10 Message : Class : BCRegistration.cs 
+Function : DeleteFile() 
+Exception Occured
+42883: procedure sp_insertorupdatebctrackerdetails(integer, text, text, unknown) does not exist
+Time : 08-Oct-2024 16:12 Message : Class : BCRegistration.cs 
+Function : DeleteFile() 
+Exception Occured
+42883: procedure sp_insertorupdatebctrackerdetails(integer, text, text, unknown) does not exist
+Time : 08-Oct-2024 16:37 Message : Class : BCRegistration.cs 
+Function : DeleteFile() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 08-Oct-2024 16:42 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 51
+Time : 08-Oct-2024 16:42 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 51
+Time : 08-Oct-2024 16:47 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 52
+Time : 08-Oct-2024 16:47 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 52
+Time : 08-Oct-2024 17:01 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 08-Oct-2024 17:03 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 08-Oct-2024 17:57 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 53
+Time : 08-Oct-2024 17:58 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 53
+Time : 08-Oct-2024 18:00 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 54
+Time : 08-Oct-2024 18:00 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 54
+Time : 08-Oct-2024 18:16 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 55
+Time : 08-Oct-2024 18:16 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 55

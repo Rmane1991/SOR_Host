@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -28,6 +27,7 @@ namespace SOR.Pages.BC
 
         public string pathId, PathAdd, PathSig;
         bool _IsValidFileAttached = false;
+        string RequestId = string.Empty;
         #endregion
 
         #region Objects Declaration
@@ -327,7 +327,7 @@ namespace SOR.Pages.BC
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
 
-                    string _status, _statusmsg, RequestId = string.Empty;
+                    
                     Session["PanNo"] = txtPANNo.Text;
 
                     txtPANNo.Text = !string.IsNullOrEmpty(hidPan.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidPan.Value)) : txtPANNo.Text;
@@ -371,13 +371,12 @@ namespace SOR.Pages.BC
                         _BCEntity.BCReqId = HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value) ? Convert.ToString(HidBCID.Value) : "0";
                         // _BCEntity.BCReqId = HidBCID.Value;
                         // string _status = _BCEntity.SetInsertUpdateBCDetails(out string _statusmsg, out string RequestId);
-
-                        if (_BCEntity.Insert_BCRequest(Session["UserName"].ToString(), out RequestId, out _status, out _statusmsg))
+                        if (_BCEntity.Insert_BCRequest(Session["UserName"].ToString(), out int RequestId, out string _status, out string _statusmsg))
                         {
                             ErrorLog.BCManagementTrace("BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
                             DivBcDetails.Visible = true;
-                            _BCEntity.BCCode = RequestId;
-                            HidBCID.Value = RequestId;
+                            _BCEntity.BCCode = RequestId.ToString();
+                            HidBCID.Value = RequestId.ToString();
                             div_Upload.Visible = true;
                             DivBcDetails.Visible = false;
                             DIVDetails.Visible = false;
@@ -386,7 +385,7 @@ namespace SOR.Pages.BC
                         else
                         {
                             ErrorLog.BCManagementTrace("BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
-                            //ClearAllControls();
+                            ClearAllControls();
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('" + _statusmsg + "', 'Alert');", true);
                             return;
                         }
@@ -752,32 +751,62 @@ namespace SOR.Pages.BC
         {
             try
             {
-                if (ddlBucketId.SelectedValue == "1" && ddlRequestStatus.SelectedValue == "0")
+                //if (ddlBucketId.SelectedValue == "1" && ddlRequestStatus.SelectedValue == "0")
+                //{
+                //    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerPending);
+                //}
+
+                //else if (ddlBucketId.SelectedValue == "1" && ddlRequestStatus.SelectedValue == "1")
+                //{
+                //    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
+                //}
+
+                //else if (ddlBucketId.SelectedValue == "1" && ddlRequestStatus.SelectedValue == "2")
+                //{
+                //    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerDecline);
+                //}
+
+                //else if (ddlBucketId.SelectedValue == "2" && ddlRequestStatus.SelectedValue == "0")
+                //{
+                //    _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerPending);
+                //}
+
+                //else if (ddlBucketId.SelectedValue == "2" && ddlRequestStatus.SelectedValue == "1")
+                //{
+                //    _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerApprove);
+                //}
+
+                //else if (ddlBucketId.SelectedValue == "2" && ddlRequestStatus.SelectedValue == "2")
+                //{
+                //    _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerDecline);
+                //}
+                ////////////////////////
+                if (ddlRequestStatus.SelectedValue == "0")
                 {
                     _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerPending);
                 }
 
-                else if (ddlBucketId.SelectedValue == "1" && ddlRequestStatus.SelectedValue == "1")
+                else if ( ddlRequestStatus.SelectedValue == "1")
                 {
                     _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
                 }
 
-                else if (ddlBucketId.SelectedValue == "1" && ddlRequestStatus.SelectedValue == "2")
+                else if (ddlRequestStatus.SelectedValue == "2")
                 {
                     _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerDecline);
                 }
 
-                else if (ddlBucketId.SelectedValue == "2" && ddlRequestStatus.SelectedValue == "0")
+                else if (ddlRequestStatus.SelectedValue == "0")
                 {
                     _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerPending);
                 }
 
-                else if (ddlBucketId.SelectedValue == "2" && ddlRequestStatus.SelectedValue == "1")
+                else if (ddlRequestStatus.SelectedValue == "1")
                 {
                     _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerApprove);
                 }
 
-                else if (ddlBucketId.SelectedValue == "2" && ddlRequestStatus.SelectedValue == "2")
+                else if (ddlRequestStatus.SelectedValue == "2")
                 {
                     _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerDecline);
                 }
@@ -1087,38 +1116,38 @@ namespace SOR.Pages.BC
                         _BCEntity.SignatureProofType = ddlSignature.SelectedValue;
                         _BCEntity.BCReqId = HidBCID.Value;
 
-                        // string _status = _BCEntity.Insert_BCRequest(Session["UserName"], out string RequestId, out string _statusmsg);
+                    //string _status = _BCEntity.Insert_BCRequest(Session["UserName"], out string RequestId, out string _statusmsg);
 
-                        if (_BCEntity.Insert_BCRequest(Session["UserName"].ToString(), out string RequestId, out string _status, out string _statusmsg))
-                        {
-                            ErrorLog.BCManagementTrace("BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
-                            DivBcDetails.Visible = true;
-                            _BCEntity.BCCode = RequestId;
-                            HidBCID.Value = RequestId;
-                            Bindreceipt();
-                            div_Upload.Visible = false;
-                            DivBcDetails.Visible = true;
-                            DIVDetails.Visible = false;
-                            Session["IdFilePath"] = string.Empty;
-                            Session["AddFilePath"] = string.Empty;
-                            Session["SigFilePath"] = string.Empty;
+                    if (_BCEntity.Insert_BCRequest(Session["UserName"].ToString(), out int RequestId, out string _status, out string _statusmsg))
+                    {
+                        ErrorLog.BCManagementTrace("BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
+                        DivBcDetails.Visible = true;
+                        _BCEntity.BCCode = RequestId.ToString();
+                        HidBCID.Value = RequestId.ToString();
+                        Bindreceipt();
+                        div_Upload.Visible = false;
+                        DivBcDetails.Visible = true;
+                        DIVDetails.Visible = false;
+                        Session["IdFilePath"] = string.Empty;
+                        Session["AddFilePath"] = string.Empty;
+                        Session["SigFilePath"] = string.Empty;
 
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Data Uploaded Successfully', 'BC Registration');", true);
-                        }
-                        else
-                        {
-                            ErrorLog.BCManagementTrace("BCRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
-                            ClearAllControls();
-                            Session["IdFilePath"] = string.Empty;
-                            Session["IdFileName"] = string.Empty;
-                            Session["AddFilePath"] = string.Empty;
-                            Session["AddFileName"] = string.Empty;
-                            Session["SigFilePath"] = string.Empty;
-                            Session["SigFileName"] = string.Empty;
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('" + _statusmsg + "', 'Alert');", true);
-                            return;
-                        }
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Uploaded Successfully', 'BC Registration');", true);
                     }
+                    else
+                    {
+                        ErrorLog.BCManagementTrace("BCRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
+                        ClearAllControls();
+                        Session["IdFilePath"] = string.Empty;
+                        Session["IdFileName"] = string.Empty;
+                        Session["AddFilePath"] = string.Empty;
+                        Session["AddFileName"] = string.Empty;
+                        Session["SigFilePath"] = string.Empty;
+                        Session["SigFileName"] = string.Empty;
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('" + _statusmsg + "', 'Alert');", true);
+                        return;
+                    }
+                }
                 
                 else
                 {
@@ -1420,11 +1449,12 @@ namespace SOR.Pages.BC
                         _BCEntity.CreatedBy = Session["Username"].ToString();
                         _BCEntity.BCReqId = HidBCID.Value.ToString();
                         _BCEntity.Flag = 1;
-                        DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
-                        if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
+                        //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
+                        string statusMessage = _BCEntity.SetInsertUpdateBCTrackerDetails();
+
+                        if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
                         {
-                            //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'BC Registration');", true);
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
                             div_Upload.Visible = false;
                             divOnboardFranchise.Visible = false;
                             DivBcDetails.Visible = false;
@@ -1434,8 +1464,10 @@ namespace SOR.Pages.BC
                             ClearAllControls();
                             Session["BCCode"] = string.Empty;
                             FillGrid(EnumCollection.EnumBindingType.BindGrid);
-                            //Response.Redirect("~/Pages/bc/BCRegistration.aspx", false);
-                            //HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        }
+                        else if (statusMessage == "Updated")
+                        {
+                            // Handle the case when the record is updated
                         }
                         else
                         {
@@ -1830,7 +1862,7 @@ namespace SOR.Pages.BC
             try
             {
                 ddlRequestType.SelectedValue = null;
-                ddlBucketId.SelectedValue = null;
+                //ddlBucketId.SelectedValue = null;
                 ddlRequestStatus.SelectedValue = null;
 
                 txtPanNoF.Text = string.Empty;
@@ -1884,7 +1916,7 @@ namespace SOR.Pages.BC
                         GridViewRow gvr = (GridViewRow)lb.NamingContainer;
                         string BCRequestId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["BCReqId"]).ToString();
                         string reqtype = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["ActivityType"]).ToString();
-                        string reqstatus = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["Request Status"]).ToString();
+                        string reqstatus = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["RequestStatus"]).ToString();
                         string bucket = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["Bucket"]).ToString();
                         _BCEntity.BCReqId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["BCReqId"]).ToString();
                         if (ValidateReEditRequest())

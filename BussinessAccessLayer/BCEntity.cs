@@ -5,6 +5,12 @@ using System.Data;
 using System.Configuration;
 using MaxiSwitch.EncryptionDecryption;
 using Npgsql;
+using DocumentFormat.OpenXml.ExtendedProperties;
+using System.Collections.Generic;
+using static BussinessAccessLayer.EnumCollection;
+using NpgsqlTypes;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Drawing;
 
 namespace BussinessAccessLayer
 {
@@ -80,7 +86,7 @@ namespace BussinessAccessLayer
         public string FatherName { get; set; }
         public string Category { get; set; }
         public string Clientcode { get; set; }
-        public int ForMicroATM { get; set; }
+        public int? ForMicroATM { get; set; }
         public string ModifiedBy { get; set; }
         //public string BCFranchiseID { get; set; }
         public string BCID { get; set; }
@@ -190,34 +196,43 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    // Call the procedure with the correct parameter
+                    using (var cmd = new NpgsqlCommand("CALL sp_getReceiptData(@p_bccode)", sqlConn))
                     {
-                        SqlParameter[] _Params =
-                        {
-                            new SqlParameter("@BCCode", BCCode)
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_getReceiptData";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+                        // Use the correct parameter name with the @ prefix
+                        cmd.Parameters.AddWithValue("p_bccode", BCCode);
+                        cmd.ExecuteNonQuery(); // Execute the procedure
+                    }
+
+                    // Now retrieve the data from the temporary table
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM temp_receipt_data", sqlConn))
+                    {
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet); // Fill the DataSet with the results
+                        }
+
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : getReceiptData() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.CommonTrace($"Class: BCEntity.cs \nFunction: GetReceiptData() \nException Occurred\n{ex.Message}");
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
-#endregion
+
+
+
+
+        #endregion
 
         #region EditValidate
         public string EditValidate()
@@ -324,87 +339,135 @@ namespace BussinessAccessLayer
             }
         }
         #endregion
-  
-        ///////////////////////////////
 
         #region Insert_BCRequest out string
-        public bool Insert_BCRequest(string UserName, out string RequestId, out string Status, out string StatusMsg)
+        public bool Insert_BCRequest(string UserName, out int requestId, out string status, out string statusMsg)
         {
-            RequestId = "0";
-            Status = "-1";
-            StatusMsg = string.Empty;
+            requestId = 0; // Default value
+            status = "-1";
+            statusMsg = string.Empty;
+            var notices = new List<string>();
+
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    // Subscribe to the Notice event
+                    sqlConn.Notice += (o, e) =>
                     {
-                        SqlParameter[] _Params =
+                        var message = e.Notice.MessageText;
+                        ErrorLog.CommonTrace($"NOTICE: {message}");
+                        notices.Add(message);
+                    };
+
+                    // Open the connection
+                    sqlConn.Open();
+
+                    using (var cmd = new NpgsqlCommand("CALL public.sp_bc_request_registration_insert(NULL,NULL,NULL, @p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)", sqlConn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        var outputRequestId = new NpgsqlParameter("p_reqid", NpgsqlTypes.NpgsqlDbType.Integer)
                         {
-                              new SqlParameter("@ClientId",ClientId),
-                              new SqlParameter("@MasterID",BCCode),
-                              new SqlParameter("@BcReqId", BCReqId),
-                              new SqlParameter("@CreatedBy", CreatedBy),
-                              new SqlParameter("@FirstName", FirstName),
-                              new SqlParameter("@MiddleName", MiddleName),
-                              new SqlParameter("@LastName", LastName),
-                              new SqlParameter("@BcCategory", BcCategory),
-                              new SqlParameter("@BcAddress", RegisteredAddress),
-                              new SqlParameter("@Pincode", Pincode),
-                              new SqlParameter("@TypeOfOrg",TypeOfOrg ),
-                              new SqlParameter("@AccountName","" ),
-                              new SqlParameter("@AccountNumber",AccountNumber ),
-                              new SqlParameter("@IFSCCode",IFSCCode ),
-                              new SqlParameter("@Bank","" ),
-                              new SqlParameter("@AEPS",ForAEPS ),
-                              new SqlParameter("@MATM",ForMicroATM ),
-                              new SqlParameter("@Gender",Gender ),
-                              new SqlParameter("@AadharNo",AadharNo ),
-                              new SqlParameter("@PanNo",PanNo ),
-                              new SqlParameter("@GSTNo",GSTNo ),
-                              new SqlParameter("@EmailID",PersonalEmail ),
-                              new SqlParameter("@ContactNo",PersonalContact ),
-                              new SqlParameter("@LandlineNo",LandlineContact ),
-                              new SqlParameter("@AlternateNo",AlternetNo ),
-                              new SqlParameter("@Country",Country ),
-                              new SqlParameter("@State",State ),
-                              new SqlParameter("@City",City ),
-                              new SqlParameter("@District",District ),
-                              new SqlParameter("@IdentityProofType",IdentityProofType ),
-                              new SqlParameter("@IdentityProofDocument",IdentityProofDocument),
-                              new SqlParameter("@AddressProofType",AddressProofType ),
-                              new SqlParameter("@AddressProofDocument",AddressProofDocument),
-                              new SqlParameter("@SignatureProofType",SignatureProofType ),
-                              new SqlParameter("@SignatureProofDocument",SignatureProofDocument),
-                              new SqlParameter("@IsAPIEnable",IsAPIEnable),
-                              new SqlParameter("@Flag",Flag),
-                              new SqlParameter("@ActivityType",Activity),
-                              new SqlParameter("@Status", SqlDbType.Int) { Direction = ParameterDirection.Output },
-                              new SqlParameter("@StatusMsg", SqlDbType.VarChar, 200) { Direction = ParameterDirection.Output },
-                              new SqlParameter("@RequestId", SqlDbType.Int) { Direction = ParameterDirection.Output }
+                            Direction = ParameterDirection.Output
                         };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BcRequest_Registration_Insert";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        sqlConn.Open();
-                        cmd.ExecuteNonQuery();
-                        Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        StatusMsg = Convert.ToString(cmd.Parameters["@StatusMsg"].Value);
-                        RequestId = Convert.ToString(cmd.Parameters["@RequestId"].Value);
-                        sqlConn.Close();
-                        cmd.Dispose();
-                        return Status == "1" ? true : false;
+                        cmd.Parameters.Add(outputRequestId);
+                        var outputStatus = new NpgsqlParameter("p_status", NpgsqlTypes.NpgsqlDbType.Integer)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(outputStatus);
+
+                        // Output parameter for Status Message
+                        var outputStatusMsg = new NpgsqlParameter("p_statusmsg", NpgsqlTypes.NpgsqlDbType.Text)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(outputStatusMsg);
+
+                        cmd.Parameters.AddWithValue("p_clientid", (object)ClientId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_createdby", (object)CreatedBy ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_firstname", (object)FirstName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_middlename", (object)MiddleName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_lastname", (object)LastName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_gender", (object)Gender ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_emailid", (object)PersonalEmail ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_contactno", (object)PersonalContact ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_landlineno", (object)LandlineContact ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_alternateno", (object)AlternetNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_aadharno", (object)AadharNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_panno", (object)PanNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_gstno", (object)GSTNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bcaddress", (object)RegisteredAddress ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_country", (object)Country ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_state", (object)State ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_city", (object)City ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_pincode", (object)Pincode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_district", (object)District ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_typeoforg", (object)TypeOfOrg ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bccategory", (object)BcCategory ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bccode", (object)BCCode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_accountname", (object)string.Empty ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_accountnumber", (object)AccountNumber ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ifsccode", (object)IFSCCode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bank", (object)string.Empty ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_identityprooftype", (object)IdentityProofType ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_identityproofdocument", (object)IdentityProofDocument ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_addressprooftype", (object)AddressProofType ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_addressproofdocument", (object)AddressProofDocument ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_signatureprooftype", (object)SignatureProofType ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_signatureproofdocument", (object)SignatureProofDocument ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bcreqid", BCReqId);
+                        cmd.Parameters.AddWithValue("p_masterid", (object)BCCode ?? DBNull.Value);
+                        //cmd.Parameters.AddWithValue("p_aeps", ForAEPS);
+                        //cmd.Parameters.AddWithValue("p_matm", ForMicroATM);
+                        cmd.Parameters.AddWithValue("p_aeps", ForAEPS.HasValue ? ForAEPS.Value : 0);
+                        cmd.Parameters.AddWithValue("p_matm", ForMicroATM.HasValue ? ForMicroATM.Value : 0);
+                        cmd.Parameters.AddWithValue("p_flag", Flag);
+                        cmd.Parameters.AddWithValue("p_activitytype", string.IsNullOrEmpty(Activity) ? "0" : Activity);
+
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                            requestId = Convert.ToInt32(outputRequestId.Value);
+                            status = Convert.ToString(outputStatus.Value);
+                            statusMsg = outputStatusMsg.Value.ToString();
+                            Console.WriteLine($"Request ID: {requestId}, Status: {status}, Status Message: {statusMsg}");
+                            return true;
+                        }
+                        catch (PostgresException ex)
+                        {
+                            ErrorLog.CommonTrace($"Postgres Error: {ex.Message}");
+                            return false;
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorLog.CommonTrace($"General Error: {ex.Message}");
+                            return false;
+                        }
+
+                        if (notices.Count > 0)
+                        {
+                            foreach (var notice in notices)
+                            {
+                                ErrorLog.CommonTrace($"NOTICE: {notice}");
+                            }
+                        }
+                        else
+                        {
+                            ErrorLog.CommonTrace("No notices captured.");
+                        }
+                        return true; // Assuming success if no exceptions were thrown
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("BCEntity: Insert_BCRequest: UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
+                ErrorLog.CommonTrace($"Error connecting to database: {ex.Message}");
+                return false;
             }
         }
+        
         #endregion
 
         #region validatreq
@@ -577,33 +640,41 @@ namespace BussinessAccessLayer
         #endregion
 
         #region GetBCRequestList
+
         public DataSet GetBCRequestList()
         {
             try
             {
                 using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (var cmd = new NpgsqlCommand("CALL SP_BCRequest_Registration_Get(:PanNo, 0, :RequestTypeId, NULL, NULL, :AadharNo, :GSTNo, NULL, :ContactNo, :PersonalEmailID, :Makerstatus, :Checkstatus, :Authstatus, :Flag)", sqlConn))
-                    {
-                        // Add parameters
-                        cmd.Parameters.AddWithValue("PanNo", (object)PanNo ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("RequestTypeId", (object)RequestTypeId ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("AadharNo", (object)AadharNo ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("GSTNo", (object)GSTNo ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("ContactNo", (object)PersonalContact ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("PersonalEmailID", (object)PersonalEmail ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("Makerstatus", (object)Mstatus ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("Checkstatus", (object)CHstatus ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("Authstatus", (object)ATStatus ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("Flag", Flag);
+                    sqlConn.Open(); // Open the connection
 
-                        sqlConn.Open();
+                    // Execute the stored procedure
+                    using (var cmd = new NpgsqlCommand("CALL public.sp_bcrequest_registration_get(@P_BCCode, @P_StageId, @P_RequestTypeId, NULL, NULL, @P_PanNo, @P_AadharNo, @P_GSTNo, NULL, @P_ContactNo, @P_PersonalEmailID, @P_Makerstatus, @P_Checkstatus, @P_Authstatus, @P_Flag)", sqlConn))
+                    {
+                        // Add parameters with explicit types
+                        cmd.Parameters.AddWithValue("P_BCCode", (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_StageId", 0);
+                        cmd.Parameters.AddWithValue("P_RequestTypeId", (object)RequestTypeId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_PanNo", (object)PanNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_AadharNo", (object)AadharNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_GSTNo", (object)GSTNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_ContactNo", (object)PersonalContact ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_PersonalEmailID", (object)PersonalEmail ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_Makerstatus", (object)Mstatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_Checkstatus", (object)CHstatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_Authstatus", (object)ATStatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("P_Flag", Flag); // Use the appropriate variable for Flag
+
+                        cmd.ExecuteNonQuery(); // Execute the stored procedure
+                    }
+
+                    // Now retrieve the data from the temporary table
+                    using (var dataAdapter = new NpgsqlDataAdapter("SELECT * FROM temp_results", sqlConn))
+                    {
                         DataSet dataTable = new DataSet();
-                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
-                        {
-                            dataAdapter.Fill(dataTable);
-                        }
-                        return dataTable;
+                        dataAdapter.Fill(dataTable); // Fill the DataSet with data from the temp table
+                        return dataTable; // Return the populated DataSet
                     }
                 }
             }
@@ -611,7 +682,7 @@ namespace BussinessAccessLayer
             {
                 ErrorLog.AgentManagementTrace("BCEntity: GetBCRequestList: UserName: " + UserName + " Exception: " + ex.Message);
                 ErrorLog.DBError(ex);
-                throw;
+                throw; // Rethrow the exception for further handling
             }
         }
 
@@ -660,7 +731,7 @@ namespace BussinessAccessLayer
             }
         }
         #endregion
-    
+
         #region BindExport
         public DataSet BindExport()
         {
@@ -794,40 +865,48 @@ namespace BussinessAccessLayer
         #endregion
 
         #region SetInsertUpdateBCTrackerDetails
-        public DataSet SetInsertUpdateBCTrackerDetails()
+        public string SetInsertUpdateBCTrackerDetails()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    using (var cmd = new NpgsqlCommand("CALL sp_InsertOrUpdateBCtrackerDetails(null, @p_Flag, @p_CreatedBy, @p_BcReqId, @p_ActivityType)", sqlConn))
                     {
-                        SqlParameter[] _Params =
+                        // Ensure parameters are added correctly
+                        var statusParam = new NpgsqlParameter("v_status", NpgsqlTypes.NpgsqlDbType.Varchar)
                         {
-                                new SqlParameter("@Flag", Flag),
-                                new SqlParameter("@CreatedBy", CreatedBy),
-                                new SqlParameter("@BcReqId",BCReqId ),
-                                new SqlParameter("@ActivityType",Activity),
+                            Direction = ParameterDirection.Output
                         };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_InsertOrUpdateBCtrackerDetails";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        cmd.Parameters.Add(statusParam);
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+                        cmd.Parameters.AddWithValue("p_CreatedBy", CreatedBy);
+                        cmd.Parameters.AddWithValue("p_BcReqId", BCReqId); // Ensure this is an integer
+                        cmd.Parameters.AddWithValue("p_ActivityType", Activity ?? (object)DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery();
+                        string statusMsg = statusParam.Value.ToString();
+                        // Retrieve the status message
+                        return statusMsg.ToString();
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : SetInsertUpdateBCTrackerDetails() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.CommonTrace($"Class: BCEntity.cs \nFunction: SetInsertUpdateBCTrackerDetails() \nException Occurred\n{ex.Message}");
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
+
+
+
+
+
         #endregion
 
         #region BCStatusReport
@@ -1023,40 +1102,38 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM fn_BindBCVerification(@ClientID, @UserName, @BCCode, @Checkstatus, @Authstatus, @Makerstatus, @IsRemoved, @Flag)", sqlConn))
                     {
-                        SqlParameter[] _Params =
-                        {
-                                  new SqlParameter("@UserName", UserName),
-                                  new SqlParameter("@IsRemoved", IsRemoved),
-                                  new SqlParameter("@BCCode", BCID),
-                                  new SqlParameter("@ClientID", Clientcode),
-                                  new SqlParameter("@Flag", Flag),
-                                  new SqlParameter("@Makerstatus",Mstatus),
-                                  new SqlParameter("@Checkstatus",CHstatus),
-                                  new SqlParameter("@Authstatus",ATStatus)
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindBCVerification";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("ClientID", (object)Clientcode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("UserName", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("BCCode", (object)BCID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Checkstatus", (object)CHstatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Authstatus", (object)ATStatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Makerstatus", (object)Mstatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("IsRemoved", (object)IsRemoved ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Flag", Flag); // Use the appropriate variable for Flag
+
+                        sqlConn.Open();
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : BindBCVerification() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.CommonTrace($"Class : BCEntity.cs \nFunction : BindBCVerification() \nException Occurred\n{ex.Message}");
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
         #endregion
 
         #region GetBCDocuments
@@ -1064,65 +1141,104 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is open
+
+                    using (var cmd = new NpgsqlCommand("CALL public.sp_getbcdocuments(@p_mode, @p_bcid)", sqlConn))
                     {
-                        SqlParameter[] _Params =
+                        cmd.CommandType = CommandType.Text; // Use CommandType.Text for CALL
+
+                        // Adding parameters
+                        cmd.Parameters.AddWithValue("p_mode", Mode);
+                        cmd.Parameters.AddWithValue("p_bcid", BCReqId);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Execute the stored procedure
+
+                        // Prepare the SQL query for the appropriate temporary table based on the mode
+                        string tempTableQuery;
+                        if (Mode == "GetBCDetails")
                         {
-                                new SqlParameter("@Mode", Mode),
-                                new SqlParameter("@BCID", BCReqId),
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_GetBCDocuments";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                            tempTableQuery = "SELECT * FROM temp_bc_details"; // Query for GetBCDetails
+                        }
+                        else if (Mode == "GetBCDocumentByID")
+                        {
+                            tempTableQuery = "SELECT * FROM temp_bc_documents"; // Query for GetBCDocumentById
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("Invalid mode specified."); // Handle unexpected mode
+                        }
+
+                        // Now retrieve the data from the appropriate temporary table
+                        using (var dataAdapter = new NpgsqlDataAdapter(tempTableQuery, sqlConn))
+                        {
+                            var dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet); // Fill the DataSet with data from the temp table
+                            return dataSet; // Return the populated DataSet
+                        }
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : GetBCDocuments() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
+                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : GetBCDocuments() \nException Occurred\n" + ex.Message);
+                ErrorLog.DBError(ex);
+                throw; // Rethrow the exception for further handling
             }
         }
+
 
         public DataSet GetBCDocumentByID()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is open
+
+                    using (var cmd = new NpgsqlCommand("CALL public.sp_getbcdocuments(@p_mode, @p_bcid)", sqlConn))
                     {
-                        SqlParameter[] _Params =
+                        cmd.CommandType = CommandType.Text; // Use CommandType.Text for CALL
+
+                        // Adding parameters
+                        cmd.Parameters.AddWithValue("p_mode", Mode);
+                        cmd.Parameters.AddWithValue("p_bcid", BCReqId);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Execute the stored procedure
+
+                        // Prepare the SQL query for the appropriate temporary table based on the mode
+                        string tempTableQuery;
+                        if (Mode == "GetBCDetails")
                         {
-                                new SqlParameter("@Mode", Mode),
-                                new SqlParameter("@ID", DocumentID)
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_GetBCDocuments";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                            tempTableQuery = "SELECT * FROM temp_bc_details"; // Query for GetBCDetails
+                        }
+                        else if (Mode == "GetBCDocumentById")
+                        {
+                            tempTableQuery = "SELECT * FROM temp_bc_documents"; // Query for GetBCDocumentById
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("Invalid mode specified."); // Handle unexpected mode
+                        }
+
+                        // Now retrieve the data from the appropriate temporary table
+                        using (var dataAdapter = new NpgsqlDataAdapter(tempTableQuery, sqlConn))
+                        {
+                            var dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet); // Fill the DataSet with data from the temp table
+                            return dataSet; // Return the populated DataSet
+                        }
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : GetBCDocumentByID() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
+                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : GetBCDocuments() \nException Occurred\n" + ex.Message);
+                ErrorLog.DBError(ex);
+                throw; // Rethrow the exception for further handling
             }
         }
         #endregion
@@ -1287,51 +1403,55 @@ namespace BussinessAccessLayer
         #endregion
 
         #region GetBCDetailsToProcessOnboaring
-        public DataSet GetBCDetailsToProcessOnboaring()   
+        public DataSet GetBCDetailsToProcessOnboaring()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@bccode",BCID),
-                                            new SqlParameter("@BCID",BCID),
-                                            new SqlParameter("@ClientID",Clientcode),
-                                            new SqlParameter("@City", City),
-                                            new SqlParameter("@State", State),
-                                            new SqlParameter("@User",UserName),
-                                            new SqlParameter("@IsDocUploaded",IsdocUploaded),
-                                            new SqlParameter("@Makerstatus",Mstatus),
-                                            new SqlParameter("@Checkstatus",CHstatus),
-                                            new SqlParameter("@Authstatus",ATStatus),
-                                            new SqlParameter("@IsVerified",VerificationStatus),
-                                            new SqlParameter("@IsActive",IsActive),
-                                            new SqlParameter("@ActivityType",Activity),
-                                            new SqlParameter("@IsRemoved",IsRemoved),
-                                            new SqlParameter("@Flag",Flag),
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_GetBCDetailsToProcessOnboaring";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+
+                        // Call the procedure with SELECT
+                        cmd.CommandText = "CALL Proc_GetBCDetailsToProcessOnboarding(@bccode, @BCID, @ClientID, @City, @State, @User, @IsDocUploaded, @Makerstatus, @Checkstatus, @Authstatus, @IsVerified, @IsActive, @ActivityType, @IsRemoved, @Flag)";
+
+                        // Add parameters with null handling and correct types
+                        cmd.Parameters.AddWithValue("bccode", (object)BCID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("BCID", (object)BCID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("ClientID", (object)Clientcode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("City", (object)City ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("State", (object)State ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("User", UserName);
+                        cmd.Parameters.AddWithValue("IsDocUploaded", (object)IsdocUploaded ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Makerstatus", (object)Mstatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Checkstatus", (object)CHstatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Authstatus", (object)ATStatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("IsVerified", (object)VerificationStatus ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("IsActive", (object)IsActive ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("ActivityType", (object)Activity ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("IsRemoved", (object)IsRemoved ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("Flag", Flag);
+
+                        // Execute the command and fill the DataSet
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            DataSet dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet);
+                            return dataSet;
+                        }
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : GetBCDetailsToProcessOnboaring() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : GetBCDetailsToProcessOnboarding() \nException Occurred\n" + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
         #endregion
 
         #region Change BcOnBoard Status
@@ -1571,42 +1691,45 @@ namespace BussinessAccessLayer
             string _Status = null;
             string _StatusMsg = null;
             _Requestid = string.Empty;
+
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+                    using (var cmd = new NpgsqlCommand("public.spBCRequestValidationGetValidate", sqlConn))
                     {
-                        SqlParameter[] _Params =
-                        {
-                              new SqlParameter("@BCReqId",BCReqId),
-                              new SqlParameter("@Flag",Flag),
-                              new SqlParameter("@Status", SqlDbType.VarChar, 200) { Direction = ParameterDirection.Output },
-                              new SqlParameter("@RequestId", SqlDbType.VarChar, 200) { Direction = ParameterDirection.Output },
-                               new SqlParameter("@StatusMsg", SqlDbType.VarChar, 200) { Direction = ParameterDirection.Output }
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "sp_BCRequest_Validation_GetValidate";
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        _Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        _StatusMsg = Convert.ToString(cmd.Parameters["@StatusMsg"].Value);
-                        _Requestid = Convert.ToString(cmd.Parameters["@RequestId"].Value);
-                        cmd.Dispose();
+
+                        // Adding parameters with correct types
+                        cmd.Parameters.AddWithValue("p_BCReqId", (object)BCReqId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", int.TryParse(Flag, out int flagValue) ? (object)flagValue : DBNull.Value);
+                        cmd.Parameters.Add("p_Status", NpgsqlTypes.NpgsqlDbType.Varchar).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("p_RequestId", NpgsqlTypes.NpgsqlDbType.Varchar).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("p_StatusMsg", NpgsqlTypes.NpgsqlDbType.Varchar).Direction = ParameterDirection.Output;
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+
+                        // Retrieve output parameters
+                        _Status = cmd.Parameters["p_Status"].Value?.ToString();
+                        _Requestid = cmd.Parameters["p_RequestId"].Value?.ToString();
+                        _StatusMsg = cmd.Parameters["p_StatusMsg"].Value?.ToString();
+
                         return _Status;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : ValidateEditBcDetails() \nException Occured\n" + Ex.Message);
+                // Log your exception as needed
+                ErrorLog.CommonTrace($"Class : BCEntity.cs \nFunction : ValidateEditBcDetails() \nException Occurred\n{Ex.Message}");
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
+
         #endregion
 
         #region Delete Agent

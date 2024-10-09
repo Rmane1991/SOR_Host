@@ -76,7 +76,7 @@ namespace SOR.Pages.BC
             {
                 if (Session["UserName"] != null && Session["UserRoleID"] != null)
                 {
-                        bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["UserName"].ToString(), Session["UserRoleID"].ToString(), "BCVerificationLevelTwo.aspx", "15");
+                        bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["UserName"].ToString(), Session["UserRoleID"].ToString(), "BCVerificationLevelTwo.aspx", "11");
                         if (!HasPagePermission)
                         {
                             try
@@ -98,7 +98,7 @@ namespace SOR.Pages.BC
                         FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
                         ViewState["SelectionType"] = SelectionType.UnCheckAll.ToString();
                     }
-                    UserPermissions.RegisterStartupScriptForNavigationListActive("3", "15");
+                    UserPermissions.RegisterStartupScriptForNavigationListActive("4", "11");
                       }
                 }
                 else

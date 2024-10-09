@@ -14,11 +14,10 @@ namespace SOR.Pages.BC
     /// </summary>
     public class AddFileUpload : IHttpHandler, IRequiresSessionState
     {
-
         public void ProcessRequest(HttpContext context)
         {
             string filedata = string.Empty;
-            string fname , filepath = string.Empty;
+            string fname, filepath = string.Empty;
             string filename = string.Empty;
 
             if (context.Request.Files.Count > 0)
@@ -93,7 +92,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-                string FileThumbnail=string.Empty;
+                string FileThumbnail = string.Empty;
                 string FinalPathLocation = AppDomain.CurrentDomain.BaseDirectory + "OnBoarding Documents\\BCDocuments\\" + id + "\\" + "AddressProof" + "\\";
                 //string PathLocation = ConfigurationManager.AppSettings["BcDocumentPath"].ToString();
                 //string FinalPathLocation = PathLocation + "\\" + id + "\\" + "AddressProof" + "\\";
@@ -103,7 +102,7 @@ namespace SOR.Pages.BC
                 }
                 FileThumbnail = FinalPathLocation + Path.GetFileNameWithoutExtension(fileUpload.FileName) + "_Thumbnail.png";
                 FinalPathLocation += fileUpload.FileName;
-                
+
                 if (File.Exists(FinalPathLocation))
                 {
                     //File.Delete(FinalPathLocation);
@@ -144,5 +143,6 @@ namespace SOR.Pages.BC
             }
         }
         #endregion
+
     }
 }

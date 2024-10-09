@@ -263,8 +263,8 @@
                                         </div>
                                     </button>
                                     <ul class="nav-popover-list nav-user-dropdown dropdown-menu">
-                                        <li class="nav-popover-item"><a type="button" id="btnProfile" runat="server" onserverclick="btnProfile_ServerClick" class="nav-popoverBtns">My Profile</a></li>
-                                        <li class="nav-popover-item"><a type="button" id="btnchange" runat="server" onserverclick="btnchange_ServerClick" class="nav-popoverBtns border-bottom-0">Change Password</a> </li>
+                                        <%--<li class="nav-popover-item"><a type="button" id="btnProfile" runat="server" onserverclick="btnProfile_ServerClick" class="nav-popoverBtns">My Profile</a></li>
+                                        <li class="nav-popover-item"><a type="button" id="btnchange" runat="server" onserverclick="btnchange_ServerClick" class="nav-popoverBtns border-bottom-0">Change Password</a> </li>--%>
                                         <li class="nav-popover-item"><a type="button" id="LbLoginStatus" runat="server" onserverclick="LbLoginStatus_Click" onclientclick="RidLogo();" class="nav-popoverBtns border-bottom-0">Logout</a> </li>
                                     </ul>
                                 </div>

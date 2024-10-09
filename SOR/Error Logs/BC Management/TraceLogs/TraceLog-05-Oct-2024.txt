@@ -1,0 +1,52 @@
+Time : 05-Oct-2024 11:36 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+42883: function public.sp_bcrequest_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_IsAPIEnable => integer, p_Flag => text, p_ActivityType => text) does not exist
+Time : 05-Oct-2024 11:52 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+42883: function public.sp_bc_request_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_Flag => text, p_ActivityType => text) does not exist
+Time : 05-Oct-2024 12:00 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+42883: function public.sp_bc_request_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_Flag => text, p_ActivityType => text) does not exist
+Time : 05-Oct-2024 12:15 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Can't write CLR type System.String with handler type Int32Handler
+Time : 05-Oct-2024 12:16 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Can't write CLR type System.String with handler type Int32Handler
+Time : 05-Oct-2024 12:44 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Can't write CLR type System.String with handler type Int32Handler
+Time : 05-Oct-2024 12:47 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Can't write CLR type System.String with handler type Int32Handler
+Time : 05-Oct-2024 12:53 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Oct-2024 12:57 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Oct-2024 13:06 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Oct-2024 13:06 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Oct-2024 19:56 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 05-Oct-2024 19:57 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 05-Oct-2024 19:58 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 05-Oct-2024 20:04 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 05-Oct-2024 20:04 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist

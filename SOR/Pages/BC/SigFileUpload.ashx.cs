@@ -18,7 +18,7 @@ namespace SOR.Pages.BC
         public void ProcessRequest(HttpContext context)
         {
             string filedata = string.Empty;
-            string fname , filepath = string.Empty;
+            string fname, filepath = string.Empty;
             string filename = string.Empty;
 
             if (context.Request.Files.Count > 0)
@@ -87,7 +87,6 @@ namespace SOR.Pages.BC
                 return false;
             }
         }
-
         #region SaveFile SignatureProof
         private string SaveFileSignproof(HttpPostedFile fileUpload, string id, out string FileName, out string FilePath)
         {
@@ -103,12 +102,12 @@ namespace SOR.Pages.BC
                 }
                 FileThumbnail = FinalPathLocation + Path.GetFileNameWithoutExtension(fileUpload.FileName) + "_Thumbnail.png";
                 FinalPathLocation += fileUpload.FileName;
-                
+
                 if (File.Exists(FinalPathLocation))
                 {
                     //File.Delete(FinalPathLocation);
                     fileUpload.SaveAs(FinalPathLocation);
-                     if (Path.GetExtension(fileUpload.FileName) == ".pdf")
+                    if (Path.GetExtension(fileUpload.FileName) == ".pdf")
                     {
                         string png_filename = Path.GetDirectoryName(FinalPathLocation) + "\\" + Path.GetFileNameWithoutExtension(FinalPathLocation) + "_Thumbnail.png";
                         List<string> errors = cs_pdf_to_image.Pdf2Image.Convert(FinalPathLocation, png_filename);
@@ -144,7 +143,5 @@ namespace SOR.Pages.BC
             }
         }
         #endregion
-
-
     }
 }

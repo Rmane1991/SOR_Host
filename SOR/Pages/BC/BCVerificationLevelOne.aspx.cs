@@ -87,7 +87,7 @@ namespace SOR.Pages.BC
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
 
-                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCVerificationLevelOne.aspx", "14");
+                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCVerificationLevelOne.aspx", "10");
                     if (!HasPagePermission)
                     {
                         try
@@ -101,7 +101,7 @@ namespace SOR.Pages.BC
                     }
                     else
                     {
-                        UserPermissions.RegisterStartupScriptForNavigationListActive("3", "14");
+                        UserPermissions.RegisterStartupScriptForNavigationListActive("4", "10");
                         if (!IsPostBack && HasPagePermission)
                         {
                             Session["CheckRefresh"] = Server.UrlDecode(System.DateTime.Now.ToString());

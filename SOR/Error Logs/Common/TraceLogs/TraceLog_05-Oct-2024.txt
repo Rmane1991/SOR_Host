@@ -1,0 +1,1082 @@
+05-10-2024 11:30:25:4776 : Login Successful. Username Maximus. SessionID : g442kopfgxfgmmicfjmyafva
+05-10-2024 11:32:51:6507 : Login Successful. Username Maximus. SessionID : xxcolgpqsnemqsua04p1osfz
+05-10-2024 11:36:43:8589 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: 42883: function public.sp_bcrequest_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_IsAPIEnable => integer, p_Flag => text, p_ActivityType => text) does not exist
+05-10-2024 11:48:31:0787 : Login Successful. Username Maximus. SessionID : craeogyzeqaz1qswgtsxhnrb
+05-10-2024 11:52:27:5302 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: 42883: function public.sp_bc_request_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_Flag => text, p_ActivityType => text) does not exist
+05-10-2024 11:52:38:1187 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: 42883: function public.sp_bc_request_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_Flag => text, p_ActivityType => text) does not exist
+05-10-2024 11:59:30:6866 : Login Successful. Username Maximus. SessionID : rjsfly4xp3vq5myf0avua4dt
+05-10-2024 12:00:19:1473 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: 42883: function public.sp_bc_request_registration_insert(p_ClientId => text, p_MasterID => unknown, p_BcReqId => text, p_CreatedBy => text, p_FirstName => text, p_MiddleName => text, p_LastName => text, p_BcCategory => text, p_BcAddress => text, p_Pincode => text, p_TypeOfOrg => text, p_AccountName => text, p_AccountNumber => text, p_IFSCCode => text, p_Bank => text, p_AEPS => integer, p_MATM => integer, p_Gender => text, p_AadharNo => text, p_PanNo => text, p_GSTNo => text, p_EmailID => text, p_ContactNo => text, p_LandlineNo => text, p_AlternateNo => text, p_Country => text, p_State => text, p_City => text, p_District => text, p_IdentityProofType => unknown, p_IdentityProofDocument => unknown, p_AddressProofType => unknown, p_AddressProofDocument => unknown, p_SignatureProofType => unknown, p_SignatureProofDocument => unknown, p_Flag => text, p_ActivityType => text) does not exist
+05-10-2024 12:01:29:8009 : Login Successful. Username Maximus. SessionID : l35nw1omgxibizrn0wiaov2e
+05-10-2024 12:08:08:6356 : Login Successful. Username Maximus. SessionID : elsyh3d54tenpvovazzt20gk
+05-10-2024 12:14:37:0774 : Login Successful. Username Maximus. SessionID : imrmi2vucjlrtvv3xrescnk0
+05-10-2024 12:15:28:4925 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 12:15:53:8048 : Login Successful. Username Maximus. SessionID : r30huuoadjjkulbfm1jizsii
+05-10-2024 12:16:32:9750 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 12:17:09:2990 : Login Successful. Username Maximus. SessionID : fgkb1isjofikwuc4ccfkrfpp
+05-10-2024 12:17:09:5371 : Login Successful. Username Maximus. SessionID : fgkb1isjofikwuc4ccfkrfpp
+05-10-2024 12:20:45:6744 : Login Successful. Username Maximus. SessionID : qyhvnkaruxtsb5jnrtjqoayy
+05-10-2024 12:28:52:9078 : Login Successful. Username Maximus. SessionID : 3ipummfs5b2ntvoz3mnsrktd
+05-10-2024 12:34:38:2412 : Login Successful. Username Maximus. SessionID : 0unqcgifeodopqxl1whr5dsb
+05-10-2024 12:43:39:0364 : Login Successful. Username Maximus. SessionID : yhpzk510fppk0u0nreu1ub5f
+05-10-2024 12:44:19:3369 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 12:45:53:0222 : Login Successful. Username Maximus. SessionID : yoiwdp2uuqhtkjfvs1gyqrhc
+05-10-2024 12:47:30:4653 : Class: BCEntity.cs 
+Function: Insert_BCRequest 
+UserName: Maximus 
+Exception Occurred: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 12:50:26:9055 : Login Successful. Username Maximus. SessionID : teciea21unmu1rf0dvdhbbmu
+05-10-2024 12:53:08:5135 : Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 12:56:24:7725 : Login Successful. Username Maximus. SessionID : a0wzqmqhdetphipgkk5i50ja
+05-10-2024 12:57:29:4643 : Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 12:59:01:7980 : Login Successful. Username Maximus. SessionID : bssd1ylx5wcwm4itqneucmwa
+05-10-2024 13:03:41:5300 : Login Successful. Username Maximus. SessionID : kjztvuyevdkd0skxja0hlfnw
+05-10-2024 13:05:29:6925 : Login Successful. Username Maximus. SessionID : rc1kjmevmn1tlb3t342x34g3
+05-10-2024 13:06:11:8676 : Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 13:06:17:2896 : Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 13:06:46:1866 : Login Successful. Username Maximus. SessionID : igrbrje3w1k21zxdlrybna30
+05-10-2024 13:09:28:4886 : Login Successful. Username Maximus. SessionID : g0vaeht2u0h2h1wzcbbxpqgo
+05-10-2024 13:12:32:1933 : Login Successful. Username Maximus. SessionID : wslbaswtjfqonsnc1aukv4kf
+05-10-2024 13:16:12:0885 : Login Successful. Username Maximus. SessionID : ex2mhmpk3mdws15htimfqgku
+05-10-2024 13:27:52:9324 : Login Successful. Username Maximus. SessionID : v0uld1ckmudljzy5gkndi1xu
+05-10-2024 13:28:41:6145 : Unexpected error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 13:30:06:7865 : Login Successful. Username Maximus. SessionID : re34xpmcyyr40jpw0qiw0fqh
+05-10-2024 13:30:53:3554 : Unexpected error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 13:31:29:3558 : Login Successful. Username Maximus. SessionID : n3gy3b4zpv0bu3uugll1f2db
+05-10-2024 13:34:24:5572 : Login Successful. Username Maximus. SessionID : knewejcvhtqxcmnokx1hdzs3
+05-10-2024 13:34:24:8847 : Login Successful. Username Maximus. SessionID : knewejcvhtqxcmnokx1hdzs3
+05-10-2024 13:35:28:0077 : Error: 42883: function public.sp_bc_request_registration_insert(p_ClientId => character varying, p_CreatedBy => character varying, p_FirstName => character varying, p_MiddleName => character varying, p_LastName => character varying, p_BcCategory => character varying, p_BcAddress => character varying, p_Pincode => character varying, p_TypeOfOrg => character varying, p_AccountName => character varying, p_AccountNumber => character varying, p_IFSCCode => character varying, p_Bank => character varying, p_Gender => character varying, p_AadharNo => character varying, p_PanNo => character varying, p_GSTNo => character varying, p_EmailID => character varying, p_ContactNo => character varying, p_LandlineNo => character varying, p_AlternateNo => character varying, p_Country => character varying, p_State => character varying, p_City => character varying, p_District => character varying, p_IdentityProofType => character varying, p_IdentityProofDocument => character varying, p_AddressProofType => character varying, p_AddressProofDocument => character varying, p_SignatureProofType => character varying, p_SignatureProofDocument => character varying, p_Flag => integer) does not exist
+05-10-2024 14:54:43:0360 : Login Successful. Username Maximus. SessionID : ukjha3wwikfpweadbjspfthp
+05-10-2024 14:57:35:4094 : Error: 42883: function public.sp_bc_request_registration_insert(p_ClientId => character varying, p_CreatedBy => character varying, p_FirstName => character varying, p_MiddleName => character varying, p_LastName => character varying, p_BcCategory => character varying, p_BcAddress => character varying, p_Pincode => character varying, p_TypeOfOrg => character varying, p_AccountName => character varying, p_AccountNumber => character varying, p_IFSCCode => character varying, p_Bank => character varying, p_Gender => character varying, p_AadharNo => character varying, p_PanNo => character varying, p_GSTNo => character varying, p_EmailID => character varying, p_ContactNo => character varying, p_LandlineNo => character varying, p_AlternateNo => character varying, p_Country => character varying, p_State => character varying, p_City => character varying, p_District => character varying, p_IdentityProofType => character varying, p_IdentityProofDocument => character varying, p_AddressProofType => character varying, p_AddressProofDocument => character varying, p_SignatureProofType => character varying, p_SignatureProofDocument => character varying, p_Flag => integer) does not exist
+05-10-2024 14:59:57:7062 : Error: 42883: function public.sp_bc_request_registration_insert(p_ClientId => character varying, p_CreatedBy => character varying, p_FirstName => character varying, p_MiddleName => character varying, p_LastName => character varying, p_BcCategory => character varying, p_BcAddress => character varying, p_Pincode => character varying, p_TypeOfOrg => character varying, p_AccountName => character varying, p_AccountNumber => character varying, p_IFSCCode => character varying, p_Bank => character varying, p_Gender => character varying, p_AadharNo => character varying, p_PanNo => character varying, p_GSTNo => character varying, p_EmailID => character varying, p_ContactNo => character varying, p_LandlineNo => character varying, p_AlternateNo => character varying, p_Country => character varying, p_State => character varying, p_City => character varying, p_District => character varying, p_IdentityProofType => character varying, p_IdentityProofDocument => character varying, p_AddressProofType => character varying, p_AddressProofDocument => character varying, p_SignatureProofType => character varying, p_SignatureProofDocument => character varying, p_Flag => integer) does not exist
+05-10-2024 15:00:22:1476 : Error: 42883: function public.sp_bc_request_registration_insert(p_ClientId => character varying, p_CreatedBy => character varying, p_FirstName => character varying, p_MiddleName => character varying, p_LastName => character varying, p_BcCategory => character varying, p_BcAddress => character varying, p_Pincode => character varying, p_TypeOfOrg => character varying, p_AccountName => character varying, p_AccountNumber => character varying, p_IFSCCode => character varying, p_Bank => character varying, p_Gender => character varying, p_AadharNo => character varying, p_PanNo => character varying, p_GSTNo => character varying, p_EmailID => character varying, p_ContactNo => character varying, p_LandlineNo => character varying, p_AlternateNo => character varying, p_Country => character varying, p_State => character varying, p_City => character varying, p_District => character varying, p_IdentityProofType => character varying, p_IdentityProofDocument => character varying, p_AddressProofType => character varying, p_AddressProofDocument => character varying, p_SignatureProofType => character varying, p_SignatureProofDocument => character varying, p_Flag => integer) does not exist
+05-10-2024 15:05:39:0951 : Login Successful. Username Maximus. SessionID : 5up2x2rnhhi3g3soiqxsp5tz
+05-10-2024 15:07:03:8596 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_ClientId => character varying, p_CreatedBy => character varying, p_FirstName => character varying, p_MiddleName => character varying, p_LastName => character varying, p_BcCategory => character varying, p_BcAddress => character varying, p_Pincode => character varying, p_TypeOfOrg => character varying, p_AccountName => character varying, p_AccountNumber => character varying, p_IFSCCode => character varying, p_Bank => character varying, p_Gender => character varying, p_AadharNo => character varying, p_PanNo => character varying, p_GSTNo => character varying, p_EmailID => character varying, p_ContactNo => character varying, p_LandlineNo => character varying, p_AlternateNo => character varying, p_Country => character varying, p_State => character varying, p_City => character varying, p_District => character varying, p_IdentityProofType => character varying, p_IdentityProofDocument => character varying, p_AddressProofType => character varying, p_AddressProofDocument => character varying, p_SignatureProofType => character varying, p_SignatureProofDocument => character varying, p_Flag => integer) does not exist
+05-10-2024 15:16:12:1984 : Login Successful. Username Maximus. SessionID : 22olcwttegqmg2lh0pfhw5dq
+05-10-2024 15:17:57:1078 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 15:18:20:9517 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 15:18:36:2205 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 15:41:36:7003 : Login Successful. Username Maximus. SessionID : bp15oolryknrucebhmbhfxxa
+05-10-2024 15:42:18:3396 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 15:43:39:0616 : Login Successful. Username Maximus. SessionID : qukqgjn2t2v1bb30ayexr3v3
+05-10-2024 15:44:59:8219 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_flag => integer) does not exist
+05-10-2024 15:45:19:5531 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_matm => integer, p_flag => integer) does not exist
+05-10-2024 15:45:39:7139 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 15:45:59:6017 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 15:47:16:1224 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_aeps => integer, p_matm => integer, p_flag => integer) does not exist
+05-10-2024 15:47:41:4954 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 16:01:54:0347 : Login Successful. Username Maximus. SessionID : yunb1kkkbf5neqz0xjoenx2r
+05-10-2024 16:03:22:2791 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+05-10-2024 16:04:01:5024 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : Maximusvb
+05-10-2024 16:05:19:3930 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : Maximusvcfv
+05-10-2024 16:06:23:8023 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : dvdfvfv
+05-10-2024 16:07:20:2554 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+05-10-2024 16:08:17:0542 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : Maximusfcbgfb
+05-10-2024 16:14:57:7050 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+05-10-2024 16:15:10:1333 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : Maximusvdfvfdv
+05-10-2024 16:19:50:1996 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+05-10-2024 16:19:50:4071 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+05-10-2024 16:19:50:4709 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+05-10-2024 16:19:56:4972 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+05-10-2024 16:19:56:5939 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+05-10-2024 16:19:56:7356 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+05-10-2024 16:20:13:2560 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+05-10-2024 16:20:13:3296 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+05-10-2024 16:20:13:3925 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+05-10-2024 16:21:31:7644 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+05-10-2024 16:21:31:8199 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+05-10-2024 16:21:31:8758 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+05-10-2024 16:21:33:4845 : Login Successful. Username Maximus. SessionID : fzuu013yxd0e1kzi2wbvchsf
+05-10-2024 16:22:30:9781 : General Error: Parameter 'p_masterid' must have its value set
+05-10-2024 16:24:03:5361 : General Error: Parameter 'p_masterid' must have its value set
+05-10-2024 16:26:31:4162 : Login Successful. Username Maximus. SessionID : pgqhjnyobtvrs0xwr0ajgmil
+05-10-2024 16:28:09:8557 : General Error: Parameter 'p_masterid' must have its value set
+05-10-2024 16:28:49:0602 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:32:24:8486 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:35:30:2364 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:35:45:2282 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:36:14:9926 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:38:05:0213 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => text, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:38:07:2304 : No notices captured.
+05-10-2024 16:38:19:4793 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:38:23:2650 : No notices captured.
+05-10-2024 16:39:48:8947 : Login Successful. Username Maximus. SessionID : mhsmk2htyh3u1irul3zt10hn
+05-10-2024 16:41:00:6209 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:41:03:2760 : No notices captured.
+05-10-2024 16:51:19:7387 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:51:19:7397 : No notices captured.
+05-10-2024 16:54:20:9581 : Login Successful. Username Maximus. SessionID : 4ub1ntn1t3aa3vbggpdj5loh
+05-10-2024 16:57:46:6766 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:58:01:2383 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 16:59:33:4386 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 17:02:02:5290 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 17:02:02:5310 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 17:02:02:5340 : Parameter: p_firstname, Value: BCName, Type: Varchar
+05-10-2024 17:02:02:5359 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 17:02:02:5389 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 17:02:02:5409 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 17:02:02:5439 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Varchar
+05-10-2024 17:02:02:5449 : Parameter: p_contactno, Value: 9874561321, Type: Varchar
+05-10-2024 17:02:02:5469 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 17:02:02:5489 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 17:02:02:5738 : Parameter: p_aadharno, Value: 987455132132, Type: Varchar
+05-10-2024 17:02:02:5758 : Parameter: p_panno, Value: CMGPD4564L, Type: Varchar
+05-10-2024 17:02:02:5788 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 17:02:02:5798 : Parameter: p_bcaddress, Value: Thane, Type: Varchar
+05-10-2024 17:02:02:5818 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 17:02:02:5828 : Parameter: p_state, Value: Lakshadweep, Type: Varchar
+05-10-2024 17:02:02:5838 : Parameter: p_city, Value: Nellore, Type: Varchar
+05-10-2024 17:02:02:5848 : Parameter: p_pincode, Value: 400001, Type: Varchar
+05-10-2024 17:02:02:5868 : Parameter: p_district, Value: Mokokchung, Type: Varchar
+05-10-2024 17:02:02:5888 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 17:02:02:5901 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 17:02:02:5911 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:5921 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 17:02:02:5931 : Parameter: p_accountnumber, Value: 9878411321231321, Type: Varchar
+05-10-2024 17:02:02:5941 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 17:02:02:5952 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 17:02:02:5970 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:5980 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:5990 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:6000 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:6010 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:6020 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:02:02:6050 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 17:02:02:6070 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 17:02:02:6080 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 17:02:02:6090 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 17:02:02:6100 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 17:02:02:6110 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 17:05:38:3697 : Login Successful. Username Maximus. SessionID : v3riewlxmlmhf11lee2jyzh4
+05-10-2024 17:06:28:3556 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 17:08:02:4131 : Login Successful. Username Maximus. SessionID : gfgq2ugtsg0q1fnrrqmy2emy
+05-10-2024 17:09:04:7929 : Executing command: public.sp_bc_request_registration_insert
+05-10-2024 17:09:09:9313 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 17:09:12:1444 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 17:09:12:1444 : Parameter: p_firstname, Value: BCName, Type: Varchar
+05-10-2024 17:09:12:1453 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 17:09:12:1463 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 17:09:12:1473 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 17:09:12:1493 : Parameter: p_emailid, Value: cgbv@gmail.com, Type: Varchar
+05-10-2024 17:09:12:1503 : Parameter: p_contactno, Value: 9874513212, Type: Varchar
+05-10-2024 17:09:12:1513 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 17:09:12:1523 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 17:09:12:1523 : Parameter: p_aadharno, Value: 897984132121, Type: Varchar
+05-10-2024 17:09:12:1533 : Parameter: p_panno, Value: CMGPD5421L, Type: Varchar
+05-10-2024 17:09:12:1543 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 17:09:12:1553 : Parameter: p_bcaddress, Value: Thane, Type: Varchar
+05-10-2024 17:09:12:1553 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 17:09:12:1563 : Parameter: p_state, Value: Lakshadweep, Type: Varchar
+05-10-2024 17:09:12:1573 : Parameter: p_city, Value: Sambalpur, Type: Varchar
+05-10-2024 17:09:12:1583 : Parameter: p_pincode, Value: 400000, Type: Varchar
+05-10-2024 17:09:12:1583 : Parameter: p_district, Value: Jayashankar, Type: Varchar
+05-10-2024 17:09:12:1593 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 17:09:12:1603 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 17:09:12:1613 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1623 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 17:09:12:1633 : Parameter: p_accountnumber, Value: 9878561231321321, Type: Varchar
+05-10-2024 17:09:12:1653 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 17:09:12:1663 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 17:09:12:1673 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1683 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1683 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1693 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1703 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1713 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:09:12:1733 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 17:09:12:1753 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 17:09:12:1753 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 17:09:12:1763 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 17:09:12:1773 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 17:09:12:1773 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 17:21:30:2873 : Login Successful. Username Maximus. SessionID : vhzwzd2urkihx1r23hokrwkq
+05-10-2024 17:22:11:8540 : Executing command: public.sp_bc_request_registration_insert
+05-10-2024 17:22:11:8560 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 17:22:11:8570 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 17:22:11:8570 : Parameter: p_firstname, Value: sdvdfv, Type: Varchar
+05-10-2024 17:22:11:8580 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 17:22:11:8600 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 17:22:11:8610 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 17:22:11:8610 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Varchar
+05-10-2024 17:22:11:8620 : Parameter: p_contactno, Value: 9746143213, Type: Varchar
+05-10-2024 17:22:11:8620 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 17:22:11:8630 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 17:22:11:8650 : Parameter: p_aadharno, Value: 987456132123, Type: Varchar
+05-10-2024 17:22:11:8660 : Parameter: p_panno, Value: CMGPD6456L, Type: Varchar
+05-10-2024 17:22:11:8700 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 17:22:11:8710 : Parameter: p_bcaddress, Value: Thanbe, Type: Varchar
+05-10-2024 17:22:11:8720 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 17:22:11:8730 : Parameter: p_state, Value: Maharashtra, Type: Varchar
+05-10-2024 17:22:11:8740 : Parameter: p_city, Value: Sangli, Type: Varchar
+05-10-2024 17:22:11:8749 : Parameter: p_pincode, Value: 987513, Type: Varchar
+05-10-2024 17:22:11:8749 : Parameter: p_district, Value: Faridkot, Type: Varchar
+05-10-2024 17:22:11:8759 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 17:22:11:8769 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 17:22:11:8769 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8779 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 17:22:11:8789 : Parameter: p_accountnumber, Value: 9875152132132132, Type: Varchar
+05-10-2024 17:22:11:8799 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 17:22:11:8819 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 17:22:11:8849 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8869 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8879 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8889 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8899 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8909 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:22:11:8939 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 17:22:11:8959 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 17:22:11:8959 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 17:22:11:9009 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 17:22:11:9029 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 17:22:11:9029 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 17:22:12:0046 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 17:23:17:3356 : Login Successful. Username Maximus. SessionID : 1c0hjl3rma1xhrrsnhur5iel
+05-10-2024 17:24:06:2978 : Executing command: public.sp_bc_request_registration_insert
+05-10-2024 17:24:06:2998 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 17:24:06:3008 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 17:24:06:3019 : Parameter: p_firstname, Value: BCNAme, Type: Varchar
+05-10-2024 17:24:06:3028 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 17:24:06:3068 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 17:24:06:3078 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 17:24:06:3088 : Parameter: p_emailid, Value: dscvd@gmail.com, Type: Varchar
+05-10-2024 17:24:06:3098 : Parameter: p_contactno, Value: 9874151321, Type: Varchar
+05-10-2024 17:24:06:3098 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 17:24:06:3108 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 17:24:06:3118 : Parameter: p_aadharno, Value: 897456121321, Type: Varchar
+05-10-2024 17:24:06:3128 : Parameter: p_panno, Value: CMGPD4561L, Type: Varchar
+05-10-2024 17:24:06:3128 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 17:24:06:3138 : Parameter: p_bcaddress, Value: Thane, Type: Varchar
+05-10-2024 17:24:06:3148 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 17:24:06:3158 : Parameter: p_state, Value: Jharkhand, Type: Varchar
+05-10-2024 17:24:06:3168 : Parameter: p_city, Value: Sambalpur, Type: Varchar
+05-10-2024 17:24:06:3168 : Parameter: p_pincode, Value: 400000, Type: Varchar
+05-10-2024 17:24:06:3178 : Parameter: p_district, Value: Mokokchung, Type: Varchar
+05-10-2024 17:24:06:3188 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 17:24:06:3218 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 17:24:06:3248 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3258 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 17:24:06:3258 : Parameter: p_accountnumber, Value: 9874212313213213, Type: Varchar
+05-10-2024 17:24:06:3268 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 17:24:06:3278 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 17:24:06:3278 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3288 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3288 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3298 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3308 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3308 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 17:24:06:3327 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 17:24:06:3347 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 17:24:06:3357 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 17:24:06:3377 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 17:24:06:3397 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 17:24:06:3417 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 17:24:06:3983 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 17:28:03:0409 : Login Successful. Username Maximus. SessionID : gupgil4p4teu0vdcpjyu0hpq
+05-10-2024 17:30:23:7512 : Login Successful. Username Maximus. SessionID : nqlmvz44iml2anns5204ldpv
+05-10-2024 18:00:42:7045 : Login Successful. Username Maximus. SessionID : fvl0uhk1divf1ia33wqqvwj1
+05-10-2024 18:01:36:8963 : Executing command: public.sp_bc_request_registration_insert
+05-10-2024 18:01:38:9484 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 18:01:40:6856 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 18:01:41:8957 : Parameter: p_firstname, Value: vdfv, Type: Varchar
+05-10-2024 18:01:41:8987 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 18:01:41:9017 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 18:01:41:9047 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 18:01:41:9067 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Varchar
+05-10-2024 18:01:41:9097 : Parameter: p_contactno, Value: 9874312321, Type: Varchar
+05-10-2024 18:01:41:9117 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 18:01:41:9157 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 18:01:41:9177 : Parameter: p_aadharno, Value: 984121213132, Type: Varchar
+05-10-2024 18:01:41:9207 : Parameter: p_panno, Value: CMGPD4651L, Type: Varchar
+05-10-2024 18:01:41:9227 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 18:01:41:9257 : Parameter: p_bcaddress, Value: Thane, Type: Varchar
+05-10-2024 18:01:41:9277 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 18:01:41:9297 : Parameter: p_state, Value: Jharkhand, Type: Varchar
+05-10-2024 18:01:41:9317 : Parameter: p_city, Value: Nellore, Type: Varchar
+05-10-2024 18:01:41:9336 : Parameter: p_pincode, Value: 400000, Type: Varchar
+05-10-2024 18:01:41:9366 : Parameter: p_district, Value: Mokokchung, Type: Varchar
+05-10-2024 18:01:41:9387 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 18:01:41:9419 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 18:01:41:9449 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9469 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 18:01:41:9479 : Parameter: p_accountnumber, Value: 8974132132123132, Type: Varchar
+05-10-2024 18:01:41:9503 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 18:01:41:9513 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 18:01:41:9532 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9542 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9562 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9582 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9594 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9614 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:01:41:9644 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:01:41:9674 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 18:01:41:9684 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:01:41:9698 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:01:41:9698 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:01:41:9708 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 18:03:20:7282 : Postgres Error: 42883: function public.sp_bc_request_registration_insert(p_clientid => character varying, p_createdby => character varying, p_firstname => character varying, p_middlename => character varying, p_lastname => character varying, p_gender => character varying, p_emailid => character varying, p_contactno => character varying, p_landlineno => character varying, p_alternateno => character varying, p_aadharno => character varying, p_panno => character varying, p_gstno => character varying, p_bcaddress => character varying, p_country => character varying, p_state => character varying, p_city => character varying, p_pincode => character varying, p_district => character varying, p_typeoforg => character varying, p_bccategory => character varying, p_bccode => character varying, p_accountname => character varying, p_accountnumber => character varying, p_ifsccode => character varying, p_bank => character varying, p_identityprooftype => character varying, p_identityproofdocument => character varying, p_addressprooftype => character varying, p_addressproofdocument => character varying, p_signatureprooftype => character varying, p_signatureproofdocument => character varying, p_bcreqid => text, p_masterid => unknown, p_aeps => integer, p_matm => integer, p_flag => integer, p_activitytype => text) does not exist
+05-10-2024 18:04:25:9745 : Login Successful. Username Maximus. SessionID : rvds4epzoxr4i0q1v51qqb30
+05-10-2024 18:08:12:5625 : Login Successful. Username Maximus. SessionID : ieeelw2ualpxsjszcokwoube
+05-10-2024 18:09:06:4129 : Executing command: public.sp_bc_request_registration_insert
+05-10-2024 18:09:08:7011 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:09:12:3556 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:09:12:3556 : Parameter: p_firstname, Value: BC, Type: Text
+05-10-2024 18:09:12:3566 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:09:12:3581 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:09:12:3588 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:09:12:3598 : Parameter: p_emailid, Value: GH@GMAIL.COM, Type: Text
+05-10-2024 18:09:12:3598 : Parameter: p_contactno, Value: 9600000000, Type: Text
+05-10-2024 18:09:12:3608 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:09:12:3619 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:09:12:3619 : Parameter: p_aadharno, Value: 987413213213, Type: Text
+05-10-2024 18:09:12:3628 : Parameter: p_panno, Value: CMGPD5145K, Type: Text
+05-10-2024 18:09:12:3638 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:09:12:3638 : Parameter: p_bcaddress, Value: BGFBNG, Type: Text
+05-10-2024 18:09:12:3648 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:09:12:3658 : Parameter: p_state, Value: Maharashtra, Type: Text
+05-10-2024 18:09:12:3658 : Parameter: p_city, Value: Sambalpur, Type: Text
+05-10-2024 18:09:12:3668 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:09:12:3678 : Parameter: p_district, Value: Jayashankar, Type: Text
+05-10-2024 18:09:12:3683 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:09:12:3693 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:09:12:3703 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3713 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:09:12:3723 : Parameter: p_accountnumber, Value: 9879861213213212, Type: Text
+05-10-2024 18:09:12:3723 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:09:12:3733 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:09:12:3743 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3753 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3773 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3774 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3784 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3794 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3794 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:09:12:3804 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 18:09:12:3814 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:09:12:3814 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:09:12:3824 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:09:12:3834 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 18:14:25:6086 : Login Successful. Username Maximus. SessionID : lobu2xb4a3wlhq3if2aikeb2
+05-10-2024 18:15:22:9719 : Executing command: CALL public.sp_bc_request_registration_insert(
+05-10-2024 18:15:24:9728 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 18:15:24:9748 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 18:15:24:9768 : Parameter: p_firstname, Value: CMGPD, Type: Varchar
+05-10-2024 18:15:24:9778 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 18:15:24:9788 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 18:15:24:9798 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 18:15:24:9808 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Varchar
+05-10-2024 18:15:24:9808 : Parameter: p_contactno, Value: 9879845113, Type: Varchar
+05-10-2024 18:15:24:9818 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 18:15:24:9828 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 18:15:24:9838 : Parameter: p_aadharno, Value: 987412013213, Type: Varchar
+05-10-2024 18:15:24:9838 : Parameter: p_panno, Value: CMGPD1232L, Type: Varchar
+05-10-2024 18:15:24:9848 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 18:15:24:9848 : Parameter: p_bcaddress, Value: Thane, Type: Varchar
+05-10-2024 18:15:24:9858 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 18:15:24:9868 : Parameter: p_state, Value: Maharashtra, Type: Varchar
+05-10-2024 18:15:24:9878 : Parameter: p_city, Value: Sangli, Type: Varchar
+05-10-2024 18:15:24:9878 : Parameter: p_pincode, Value: 400000, Type: Varchar
+05-10-2024 18:15:24:9888 : Parameter: p_district, Value: Mokokchung, Type: Varchar
+05-10-2024 18:15:24:9898 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 18:15:24:9898 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 18:15:24:9908 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9918 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 18:15:24:9928 : Parameter: p_accountnumber, Value: 9874213213213213, Type: Varchar
+05-10-2024 18:15:24:9938 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 18:15:24:9948 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 18:15:24:9948 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9958 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9958 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9968 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9978 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9978 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:15:24:9988 : Parameter: p_bcreqid, Value: 0, Type: Integer
+05-10-2024 18:15:24:9998 : Parameter: p_masterid, Value: NULL, Type: Integer
+05-10-2024 18:15:24:9998 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:15:25:0007 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:15:25:0018 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:15:25:0027 : Parameter: p_activitytype, Value: 0, Type: Integer
+05-10-2024 18:17:43:7703 : Login Successful. Username Maximus. SessionID : zzu4ixqbsdd0wol5a2tfuga5
+05-10-2024 18:18:31:3848 : Executing command: CALL public.sp_bc_request_registration_insert(
+05-10-2024 18:18:31:3870 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 18:18:31:3890 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 18:18:31:3900 : Parameter: p_firstname, Value: bvfb, Type: Varchar
+05-10-2024 18:18:31:3910 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 18:18:31:3920 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 18:18:31:3930 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 18:18:31:3940 : Parameter: p_emailid, Value: DCD@GMAIL.COM, Type: Varchar
+05-10-2024 18:18:31:3950 : Parameter: p_contactno, Value: 9871321321, Type: Varchar
+05-10-2024 18:18:31:3960 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 18:18:31:3966 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 18:18:31:3976 : Parameter: p_aadharno, Value: 798413212132, Type: Varchar
+05-10-2024 18:18:31:3987 : Parameter: p_panno, Value: CMGPD3213L, Type: Varchar
+05-10-2024 18:18:31:3996 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 18:18:31:3996 : Parameter: p_bcaddress, Value: VFDV, Type: Varchar
+05-10-2024 18:18:31:4006 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 18:18:31:4017 : Parameter: p_state, Value: Maharashtra, Type: Varchar
+05-10-2024 18:18:31:4026 : Parameter: p_city, Value: Sambalpur, Type: Varchar
+05-10-2024 18:18:31:4046 : Parameter: p_pincode, Value: 100000, Type: Varchar
+05-10-2024 18:18:31:4066 : Parameter: p_district, Value: Jayashankar, Type: Varchar
+05-10-2024 18:18:31:4085 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 18:18:31:4095 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 18:18:31:4105 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4105 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 18:18:31:4115 : Parameter: p_accountnumber, Value: 1213213215464564, Type: Varchar
+05-10-2024 18:18:31:4125 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 18:18:31:4135 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 18:18:31:4135 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4145 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4155 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4155 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4167 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4167 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:18:31:4177 : Parameter: p_bcreqid, Value: 0, Type: Integer
+05-10-2024 18:18:31:4187 : Parameter: p_masterid, Value: NULL, Type: Integer
+05-10-2024 18:18:31:4187 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:18:31:4197 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:18:31:4207 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:18:31:4217 : Parameter: p_activitytype, Value: 0, Type: Integer
+05-10-2024 18:18:31:4745 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 18:18:34:5117 : Executing command: CALL public.sp_bc_request_registration_insert(
+05-10-2024 18:18:34:5127 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 18:18:34:5127 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 18:18:34:5147 : Parameter: p_firstname, Value: bvfb, Type: Varchar
+05-10-2024 18:18:34:5157 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 18:18:34:5167 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 18:18:34:5177 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 18:18:34:5186 : Parameter: p_emailid, Value: DCD@GMAIL.COM, Type: Varchar
+05-10-2024 18:18:34:5196 : Parameter: p_contactno, Value: 9871321321, Type: Varchar
+05-10-2024 18:18:34:5196 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 18:18:34:5206 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 18:18:34:5216 : Parameter: p_aadharno, Value: 798413212132, Type: Varchar
+05-10-2024 18:18:34:5216 : Parameter: p_panno, Value: CMGPD3213L, Type: Varchar
+05-10-2024 18:18:34:5226 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 18:18:34:5236 : Parameter: p_bcaddress, Value: VFDV, Type: Varchar
+05-10-2024 18:18:34:5236 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 18:18:34:5246 : Parameter: p_state, Value: Maharashtra, Type: Varchar
+05-10-2024 18:18:34:5256 : Parameter: p_city, Value: Sambalpur, Type: Varchar
+05-10-2024 18:18:34:5256 : Parameter: p_pincode, Value: 100000, Type: Varchar
+05-10-2024 18:18:34:5266 : Parameter: p_district, Value: Jayashankar, Type: Varchar
+05-10-2024 18:18:34:5286 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 18:18:34:5296 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 18:18:34:5306 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5316 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 18:18:34:5326 : Parameter: p_accountnumber, Value: 1213213215464564, Type: Varchar
+05-10-2024 18:18:34:5336 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 18:18:34:5336 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 18:18:34:5346 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5356 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5356 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5366 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5386 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5386 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:18:34:5396 : Parameter: p_bcreqid, Value: 0, Type: Integer
+05-10-2024 18:18:34:5406 : Parameter: p_masterid, Value: NULL, Type: Integer
+05-10-2024 18:18:34:5416 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:18:34:5426 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:18:34:5436 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:18:34:5476 : Parameter: p_activitytype, Value: 0, Type: Integer
+05-10-2024 18:18:34:6005 : General Error: Can't write CLR type System.String with handler type Int32Handler
+05-10-2024 18:19:42:7117 : Login Successful. Username Maximus. SessionID : i5rjjjetvicjipd4ugnsd4ip
+05-10-2024 18:20:42:6954 : Executing command: CALL public.sp_bc_request_registration_insert(
+05-10-2024 18:20:42:6974 : Parameter: p_clientid, Value: CL000001, Type: Varchar
+05-10-2024 18:20:42:6984 : Parameter: p_createdby, Value: Maximus, Type: Varchar
+05-10-2024 18:20:42:6994 : Parameter: p_firstname, Value: hjvdHJ, Type: Varchar
+05-10-2024 18:20:42:7004 : Parameter: p_middlename, Value: , Type: Varchar
+05-10-2024 18:20:42:7014 : Parameter: p_lastname, Value: , Type: Varchar
+05-10-2024 18:20:42:7014 : Parameter: p_gender, Value: Male, Type: Varchar
+05-10-2024 18:20:42:7024 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Varchar
+05-10-2024 18:20:42:7034 : Parameter: p_contactno, Value: 9874132123, Type: Varchar
+05-10-2024 18:20:42:7044 : Parameter: p_landlineno, Value: , Type: Varchar
+05-10-2024 18:20:42:7044 : Parameter: p_alternateno, Value: , Type: Varchar
+05-10-2024 18:20:42:7054 : Parameter: p_aadharno, Value: 987812121111, Type: Varchar
+05-10-2024 18:20:42:7064 : Parameter: p_panno, Value: CMGPD1321L, Type: Varchar
+05-10-2024 18:20:42:7064 : Parameter: p_gstno, Value: , Type: Varchar
+05-10-2024 18:20:42:7074 : Parameter: p_bcaddress, Value: Thane, Type: Varchar
+05-10-2024 18:20:42:7084 : Parameter: p_country, Value: 0, Type: Varchar
+05-10-2024 18:20:42:7084 : Parameter: p_state, Value: Maharashtra, Type: Varchar
+05-10-2024 18:20:42:7094 : Parameter: p_city, Value: Sambalpur, Type: Varchar
+05-10-2024 18:20:42:7114 : Parameter: p_pincode, Value: 400000, Type: Varchar
+05-10-2024 18:20:42:7124 : Parameter: p_district, Value: Jayashankar, Type: Varchar
+05-10-2024 18:20:42:7124 : Parameter: p_typeoforg, Value: Select, Type: Varchar
+05-10-2024 18:20:42:7134 : Parameter: p_bccategory, Value: Select, Type: Varchar
+05-10-2024 18:20:42:7144 : Parameter: p_bccode, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7144 : Parameter: p_accountname, Value: , Type: Varchar
+05-10-2024 18:20:42:7154 : Parameter: p_accountnumber, Value: 1111111111111111, Type: Varchar
+05-10-2024 18:20:42:7164 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Varchar
+05-10-2024 18:20:42:7164 : Parameter: p_bank, Value: , Type: Varchar
+05-10-2024 18:20:42:7174 : Parameter: p_identityprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7184 : Parameter: p_identityproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7184 : Parameter: p_addressprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7194 : Parameter: p_addressproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7204 : Parameter: p_signatureprooftype, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7204 : Parameter: p_signatureproofdocument, Value: NULL, Type: Varchar
+05-10-2024 18:20:42:7214 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:26:28:5550 : Login Successful. Username Maximus. SessionID : qhcd0ixgyhl0mbywqn2hiwwt
+05-10-2024 18:27:18:4812 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_flag)
+05-10-2024 18:27:22:6827 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:27:22:6857 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:27:22:6877 : Parameter: p_firstname, Value: fvdf, Type: Text
+05-10-2024 18:27:22:6897 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:27:22:6907 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:27:22:6917 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:27:22:6917 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:27:22:6927 : Parameter: p_contactno, Value: 8974121321, Type: Text
+05-10-2024 18:27:22:6937 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:27:22:6947 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:27:22:6957 : Parameter: p_aadharno, Value: 987432123132, Type: Text
+05-10-2024 18:27:22:6957 : Parameter: p_panno, Value: CMGPD1212L, Type: Text
+05-10-2024 18:27:22:6967 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:27:22:6977 : Parameter: p_bcaddress, Value: SDCDSC, Type: Text
+05-10-2024 18:27:22:6987 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:27:22:6997 : Parameter: p_state, Value: Jharkhand, Type: Text
+05-10-2024 18:27:22:6997 : Parameter: p_city, Value: Jalgaon, Type: Text
+05-10-2024 18:27:22:7007 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:27:22:7017 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:27:22:7017 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:27:22:7027 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:27:22:7056 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7066 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:27:22:7066 : Parameter: p_accountnumber, Value: 9874964123132131, Type: Text
+05-10-2024 18:27:22:7076 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:27:22:7087 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:27:22:7096 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7096 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7106 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7106 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7116 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7127 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:27:22:7136 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:28:27:2366 : Postgres Error: 42725: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, integer) is not unique
+05-10-2024 18:28:33:4059 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_flag)
+05-10-2024 18:28:33:4078 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:28:33:4108 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:28:33:4138 : Parameter: p_firstname, Value: fvdf, Type: Text
+05-10-2024 18:28:33:4148 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:28:33:4168 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:28:33:4178 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:28:33:4188 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:28:33:4208 : Parameter: p_contactno, Value: 8974121321, Type: Text
+05-10-2024 18:28:33:4218 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:28:33:4228 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:28:33:4238 : Parameter: p_aadharno, Value: 987432123132, Type: Text
+05-10-2024 18:28:33:4248 : Parameter: p_panno, Value: CMGPD1212L, Type: Text
+05-10-2024 18:28:33:4268 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:28:33:4278 : Parameter: p_bcaddress, Value: SDCDSC, Type: Text
+05-10-2024 18:28:33:4288 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:28:33:4298 : Parameter: p_state, Value: Jharkhand, Type: Text
+05-10-2024 18:28:33:4298 : Parameter: p_city, Value: Jalgaon, Type: Text
+05-10-2024 18:28:33:4308 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:28:33:4318 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:28:33:4328 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:28:33:4328 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:28:33:4338 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4348 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:28:33:4358 : Parameter: p_accountnumber, Value: 9874964123132131, Type: Text
+05-10-2024 18:28:33:4368 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:28:33:4378 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:28:33:4388 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4398 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4408 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4418 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4418 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4438 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:28:33:4448 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:28:34:3018 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 18:28:34:3018 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 18:28:34:3028 : NOTICE: Inserting new record...
+05-10-2024 18:29:03:8628 : Postgres Error: 42703: column "p_activitytype" does not exist
+05-10-2024 18:29:08:1428 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_flag)
+05-10-2024 18:29:08:1468 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:29:08:1478 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:29:08:1488 : Parameter: p_firstname, Value: fvdf, Type: Text
+05-10-2024 18:29:08:1499 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:29:08:1508 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:29:08:1508 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:29:08:1518 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:29:08:1528 : Parameter: p_contactno, Value: 8974121321, Type: Text
+05-10-2024 18:29:08:1538 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:29:08:1548 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:29:08:1548 : Parameter: p_aadharno, Value: 987432123132, Type: Text
+05-10-2024 18:29:08:1558 : Parameter: p_panno, Value: CMGPD1212L, Type: Text
+05-10-2024 18:29:08:1568 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:29:08:1578 : Parameter: p_bcaddress, Value: SDCDSC, Type: Text
+05-10-2024 18:29:08:1578 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:29:08:1588 : Parameter: p_state, Value: Jharkhand, Type: Text
+05-10-2024 18:29:08:1608 : Parameter: p_city, Value: Jalgaon, Type: Text
+05-10-2024 18:29:08:1618 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:29:08:1618 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:29:08:1628 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:29:08:1638 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:29:08:1648 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1658 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:29:08:1658 : Parameter: p_accountnumber, Value: 9874964123132131, Type: Text
+05-10-2024 18:29:08:1668 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:29:08:1678 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:29:08:1688 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1698 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1708 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1718 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1718 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1728 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:29:08:1738 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:29:09:1178 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 18:29:09:1208 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 18:29:09:1218 : NOTICE: Inserting new record...
+05-10-2024 18:29:09:1228 : NOTICE: Insert successful, RequestId: 6
+05-10-2024 18:29:09:7440 : Insert successful
+05-10-2024 18:31:16:2066 : Login Successful. Username Maximus. SessionID : 1tsje5hz14wyp3t5rriqrhpp
+05-10-2024 18:32:11:3359 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_flag)
+05-10-2024 18:32:11:3399 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:32:11:3409 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:32:11:3419 : Parameter: p_firstname, Value: AirPay, Type: Text
+05-10-2024 18:32:11:3419 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:32:11:3429 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:32:11:3429 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:32:11:3439 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:32:11:3449 : Parameter: p_contactno, Value: 8974512121, Type: Text
+05-10-2024 18:32:11:3449 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:32:11:3459 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:32:11:3469 : Parameter: p_aadharno, Value: 987546123000, Type: Text
+05-10-2024 18:32:11:3469 : Parameter: p_panno, Value: CMGPD9878Q, Type: Text
+05-10-2024 18:32:11:3479 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:32:11:3489 : Parameter: p_bcaddress, Value: Thane, Type: Text
+05-10-2024 18:32:11:3489 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:32:11:3499 : Parameter: p_state, Value: Maharashtra, Type: Text
+05-10-2024 18:32:11:3509 : Parameter: p_city, Value: Nellore, Type: Text
+05-10-2024 18:32:11:3529 : Parameter: p_pincode, Value: 400001, Type: Text
+05-10-2024 18:32:11:3539 : Parameter: p_district, Value: Jayashankar, Type: Text
+05-10-2024 18:32:11:3549 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:32:11:3559 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:32:11:3579 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3588 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:32:11:3588 : Parameter: p_accountnumber, Value: 98741321213220, Type: Text
+05-10-2024 18:32:11:3598 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:32:11:3598 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:32:11:3608 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3618 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3618 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3628 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3638 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3638 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:32:11:3648 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:32:11:3698 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 18:32:11:3708 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+05-10-2024 18:32:11:3718 : Insert successful
+05-10-2024 18:32:11:3728 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 18:32:11:3738 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+05-10-2024 18:35:30:4476 : Login Successful. Username Maximus. SessionID : oavpjisidglog5mybznsib1q
+05-10-2024 18:36:43:1188 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)
+05-10-2024 18:36:43:1218 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:36:43:1228 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:36:43:1238 : Parameter: p_firstname, Value: AirPay, Type: Text
+05-10-2024 18:36:43:1238 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:36:43:1248 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:36:43:1258 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:36:43:1258 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:36:43:1268 : Parameter: p_contactno, Value: 7945132102, Type: Text
+05-10-2024 18:36:43:1278 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:36:43:1278 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:36:43:1288 : Parameter: p_aadharno, Value: 987413210213, Type: Text
+05-10-2024 18:36:43:1298 : Parameter: p_panno, Value: CMGPD1213L, Type: Text
+05-10-2024 18:36:43:1298 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:36:43:1308 : Parameter: p_bcaddress, Value: Thane, Type: Text
+05-10-2024 18:36:43:1318 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:36:43:1328 : Parameter: p_state, Value: Maharashtra, Type: Text
+05-10-2024 18:36:43:1328 : Parameter: p_city, Value: Sambalpur, Type: Text
+05-10-2024 18:36:43:1338 : Parameter: p_pincode, Value: 400001, Type: Text
+05-10-2024 18:36:43:1348 : Parameter: p_district, Value: Jayashankar, Type: Text
+05-10-2024 18:36:43:1348 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:36:43:1358 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:36:43:1388 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1388 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:36:43:1398 : Parameter: p_accountnumber, Value: 9876532513213213, Type: Text
+05-10-2024 18:36:43:1408 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:36:43:1418 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:36:43:1427 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1437 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1447 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1447 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1457 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1467 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1467 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:36:43:1477 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 18:36:43:1487 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:36:43:1497 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:36:43:1497 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:36:43:1507 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 18:38:34:4371 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+05-10-2024 18:38:39:7295 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)
+05-10-2024 18:38:39:7325 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:38:39:7335 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:38:39:7355 : Parameter: p_firstname, Value: AirPay, Type: Text
+05-10-2024 18:38:39:7375 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:38:39:7385 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:38:39:7395 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:38:39:7405 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:38:39:7415 : Parameter: p_contactno, Value: 7945132102, Type: Text
+05-10-2024 18:38:39:7435 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:38:39:7445 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:38:39:7455 : Parameter: p_aadharno, Value: 987413210213, Type: Text
+05-10-2024 18:38:39:7465 : Parameter: p_panno, Value: CMGPD1213L, Type: Text
+05-10-2024 18:38:39:7475 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:38:39:7475 : Parameter: p_bcaddress, Value: Thane, Type: Text
+05-10-2024 18:38:39:7484 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:38:39:7494 : Parameter: p_state, Value: Maharashtra, Type: Text
+05-10-2024 18:38:39:7504 : Parameter: p_city, Value: Sambalpur, Type: Text
+05-10-2024 18:38:39:7504 : Parameter: p_pincode, Value: 400001, Type: Text
+05-10-2024 18:38:39:7514 : Parameter: p_district, Value: Jayashankar, Type: Text
+05-10-2024 18:38:39:7525 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:38:39:7525 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:38:39:7534 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7544 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:38:39:7544 : Parameter: p_accountnumber, Value: 9876532513213213, Type: Text
+05-10-2024 18:38:39:7555 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:38:39:7555 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:38:39:7564 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7574 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7574 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7584 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7594 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7604 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7614 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:38:39:7624 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 18:38:39:7634 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:38:39:7644 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:38:39:7644 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:38:39:7654 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 18:42:51:6008 : Login Successful. Username Maximus. SessionID : x3dclu2a315sskv3zr4mimqj
+05-10-2024 18:42:51:7159 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+05-10-2024 18:42:53:1650 : Login Successful. Username Maximus. SessionID : x3dclu2a315sskv3zr4mimqj
+05-10-2024 18:43:34:6102 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)
+05-10-2024 18:43:34:6131 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:43:34:6141 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:43:34:6151 : Parameter: p_firstname, Value: sdvdsv, Type: Text
+05-10-2024 18:43:34:6151 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:43:34:6161 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:43:34:6171 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:43:34:6181 : Parameter: p_emailid, Value: cds@gmail.com, Type: Text
+05-10-2024 18:43:34:6191 : Parameter: p_contactno, Value: 9841321321, Type: Text
+05-10-2024 18:43:34:6211 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:43:34:6221 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:43:34:6231 : Parameter: p_aadharno, Value: 987421212154, Type: Text
+05-10-2024 18:43:34:6241 : Parameter: p_panno, Value: CMGPD6145L, Type: Text
+05-10-2024 18:43:34:6241 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:43:34:6251 : Parameter: p_bcaddress, Value: Thane, Type: Text
+05-10-2024 18:43:34:6261 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:43:34:6261 : Parameter: p_state, Value: Maharashtra, Type: Text
+05-10-2024 18:43:34:6271 : Parameter: p_city, Value: Sambalpur, Type: Text
+05-10-2024 18:43:34:6281 : Parameter: p_pincode, Value: 400001, Type: Text
+05-10-2024 18:43:34:6281 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:43:34:6291 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:43:34:6301 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:43:34:6311 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6321 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:43:34:6331 : Parameter: p_accountnumber, Value: 9879854321345654, Type: Text
+05-10-2024 18:43:34:6351 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:43:34:6371 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:43:34:6381 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6381 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6391 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6401 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6401 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6411 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6421 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:43:34:6421 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 18:43:34:6431 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:43:34:6441 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:43:34:6441 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:43:34:6451 : Parameter: p_activitytype, Value: 0, Type: Text
+05-10-2024 18:43:34:7009 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+05-10-2024 18:45:16:8927 : Login Successful. Username Maximus. SessionID : yydn554ue3fkkyw12xaasd5v
+05-10-2024 18:46:24:6191 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_aeps, @p_matm, @p_flag)
+05-10-2024 18:46:26:3799 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:46:27:8681 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:46:27:8691 : Parameter: p_firstname, Value: scdscx, Type: Text
+05-10-2024 18:46:27:8696 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:46:27:8696 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:46:27:8712 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:46:27:8722 : Parameter: p_emailid, Value: sxcs@gmail.com, Type: Text
+05-10-2024 18:46:27:8732 : Parameter: p_contactno, Value: 9842100000, Type: Text
+05-10-2024 18:46:27:8742 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:46:27:8752 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:46:27:8752 : Parameter: p_aadharno, Value: 987413213213, Type: Text
+05-10-2024 18:46:27:8762 : Parameter: p_panno, Value: CMGPD1212L, Type: Text
+05-10-2024 18:46:27:8772 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:46:27:8782 : Parameter: p_bcaddress, Value: Thane, Type: Text
+05-10-2024 18:46:27:8792 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:46:27:8797 : Parameter: p_state, Value: Jharkhand, Type: Text
+05-10-2024 18:46:27:8807 : Parameter: p_city, Value: Jalgaon, Type: Text
+05-10-2024 18:46:27:8817 : Parameter: p_pincode, Value: 400001, Type: Text
+05-10-2024 18:46:27:8827 : Parameter: p_district, Value: Jayashankar, Type: Text
+05-10-2024 18:46:27:8837 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:46:27:8847 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:46:27:8877 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:8887 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:46:27:8898 : Parameter: p_accountnumber, Value: 9854115641561321, Type: Text
+05-10-2024 18:46:27:8899 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:46:27:8909 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:46:27:8919 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:8949 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:8989 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:9001 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:9011 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:9021 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:46:27:9031 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:46:27:9041 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:46:27:9050 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:46:28:8087 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 18:46:28:8097 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 18:46:28:8117 : NOTICE: Inserting new record...
+05-10-2024 18:46:28:8126 : NOTICE: Insert successful, RequestId: 1
+05-10-2024 18:46:29:7337 : Insert successful
+05-10-2024 18:49:34:9298 : Login Successful. Username Maximus. SessionID : bw3xafujs2vu2yax4dlo32ht
+05-10-2024 18:50:37:1547 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag)
+05-10-2024 18:50:41:2111 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:50:41:2131 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:50:41:2131 : Parameter: p_firstname, Value: scddsc, Type: Text
+05-10-2024 18:50:41:2141 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:50:41:2151 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:50:41:2161 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:50:41:2161 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:50:41:2171 : Parameter: p_contactno, Value: 9874132132, Type: Text
+05-10-2024 18:50:41:2181 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:50:41:2191 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:50:41:2201 : Parameter: p_aadharno, Value: 894132132132, Type: Text
+05-10-2024 18:50:41:2201 : Parameter: p_panno, Value: CMGPD5452L, Type: Text
+05-10-2024 18:50:41:2211 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:50:41:2221 : Parameter: p_bcaddress, Value: BNGHNG, Type: Text
+05-10-2024 18:50:41:2231 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:50:41:2231 : Parameter: p_state, Value: Lakshadweep, Type: Text
+05-10-2024 18:50:41:2241 : Parameter: p_city, Value: Sangli, Type: Text
+05-10-2024 18:50:41:2251 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:50:41:2261 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:50:41:2271 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:50:41:2271 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:50:41:2301 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2310 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:50:41:2320 : Parameter: p_accountnumber, Value: 9874513213213213, Type: Text
+05-10-2024 18:50:41:2330 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:50:41:2340 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:50:41:2351 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2361 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2370 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2370 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2380 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2391 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2400 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:50:41:2400 : Parameter: p_masterid, Value: NULL, Type: Unknown
+05-10-2024 18:50:41:2410 : Parameter: p_aeps, Value: 1, Type: Integer
+05-10-2024 18:50:41:2420 : Parameter: p_matm, Value: 0, Type: Integer
+05-10-2024 18:50:41:2430 : Parameter: p_flag, Value: 1, Type: Integer
+05-10-2024 18:52:05:4123 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer) does not exist
+05-10-2024 18:52:09:3771 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag)
+05-10-2024 18:52:09:3781 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:52:09:3801 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:52:09:3821 : Parameter: p_firstname, Value: scddsc, Type: Text
+05-10-2024 18:52:09:3831 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:52:09:3851 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:52:09:3861 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:52:09:3881 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:52:09:3911 : Parameter: p_contactno, Value: 9874132132, Type: Text
+05-10-2024 18:52:09:3931 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:52:09:3941 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:52:09:3960 : Parameter: p_aadharno, Value: 894132132132, Type: Text
+05-10-2024 18:52:09:3971 : Parameter: p_panno, Value: CMGPD5452L, Type: Text
+05-10-2024 18:52:09:3980 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:52:09:3990 : Parameter: p_bcaddress, Value: BNGHNG, Type: Text
+05-10-2024 18:52:09:4000 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:52:09:4000 : Parameter: p_state, Value: Lakshadweep, Type: Text
+05-10-2024 18:52:09:4010 : Parameter: p_city, Value: Sangli, Type: Text
+05-10-2024 18:52:09:4020 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:52:09:4030 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:52:09:4040 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:52:09:4050 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:52:09:4060 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4070 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:52:09:4080 : Parameter: p_accountnumber, Value: 9874513213213213, Type: Text
+05-10-2024 18:52:09:4090 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:52:09:4100 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:52:09:4100 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4110 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4120 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4130 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4130 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4140 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:52:09:4150 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:52:12:3254 : Unexpected error: Object reference not set to an instance of an object.
+05-10-2024 18:52:16:7733 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag)
+05-10-2024 18:52:16:7742 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:52:16:7752 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:52:16:7762 : Parameter: p_firstname, Value: scddsc, Type: Text
+05-10-2024 18:52:16:7762 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:52:16:7772 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:52:16:7782 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:52:16:7782 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:52:16:7792 : Parameter: p_contactno, Value: 9874132132, Type: Text
+05-10-2024 18:52:16:7802 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:52:16:7802 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:52:16:7812 : Parameter: p_aadharno, Value: 894132132132, Type: Text
+05-10-2024 18:52:16:7812 : Parameter: p_panno, Value: CMGPD5452L, Type: Text
+05-10-2024 18:52:16:7822 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:52:16:7832 : Parameter: p_bcaddress, Value: BNGHNG, Type: Text
+05-10-2024 18:52:16:7832 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:52:16:7842 : Parameter: p_state, Value: Lakshadweep, Type: Text
+05-10-2024 18:52:16:7852 : Parameter: p_city, Value: Sangli, Type: Text
+05-10-2024 18:52:16:7862 : Parameter: p_pincode, Value: 400000, Type: Text
+05-10-2024 18:52:16:7872 : Parameter: p_district, Value: Mokokchung, Type: Text
+05-10-2024 18:52:16:7882 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:52:16:7882 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:52:16:7902 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7902 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:52:16:7912 : Parameter: p_accountnumber, Value: 9874513213213213, Type: Text
+05-10-2024 18:52:16:7922 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:52:16:7932 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:52:16:7942 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7942 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7952 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7962 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7972 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7972 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:52:16:7982 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:53:13:9497 : Login Successful. Username Maximus. SessionID : c4e2pmcc5b1d4lm3c20mbrzh
+05-10-2024 18:54:13:2131 : Executing command: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag)
+05-10-2024 18:54:45:7282 : Parameter: p_clientid, Value: CL000001, Type: Text
+05-10-2024 18:54:46:3486 : Parameter: p_createdby, Value: Maximus, Type: Text
+05-10-2024 18:54:46:3498 : Parameter: p_firstname, Value: BC, Type: Text
+05-10-2024 18:54:46:3508 : Parameter: p_middlename, Value: , Type: Text
+05-10-2024 18:54:46:3508 : Parameter: p_lastname, Value: , Type: Text
+05-10-2024 18:54:46:3518 : Parameter: p_gender, Value: Male, Type: Text
+05-10-2024 18:54:46:3528 : Parameter: p_emailid, Value: xyz@gmail.com, Type: Text
+05-10-2024 18:54:46:3538 : Parameter: p_contactno, Value: 9874131213, Type: Text
+05-10-2024 18:54:46:3538 : Parameter: p_landlineno, Value: , Type: Text
+05-10-2024 18:54:46:3548 : Parameter: p_alternateno, Value: , Type: Text
+05-10-2024 18:54:46:3548 : Parameter: p_aadharno, Value: 987412213132, Type: Text
+05-10-2024 18:54:46:3558 : Parameter: p_panno, Value: CMGPD4564L, Type: Text
+05-10-2024 18:54:46:3568 : Parameter: p_gstno, Value: , Type: Text
+05-10-2024 18:54:46:3568 : Parameter: p_bcaddress, Value: Thane, Type: Text
+05-10-2024 18:54:46:3578 : Parameter: p_country, Value: 0, Type: Text
+05-10-2024 18:54:46:3578 : Parameter: p_state, Value: Jharkhand, Type: Text
+05-10-2024 18:54:46:3588 : Parameter: p_city, Value: Sambalpur, Type: Text
+05-10-2024 18:54:46:3598 : Parameter: p_pincode, Value: 400001, Type: Text
+05-10-2024 18:54:46:3605 : Parameter: p_district, Value: Banda, Type: Text
+05-10-2024 18:54:46:3609 : Parameter: p_typeoforg, Value: Select, Type: Text
+05-10-2024 18:54:46:3619 : Parameter: p_bccategory, Value: Select, Type: Text
+05-10-2024 18:54:46:3629 : Parameter: p_bccode, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3639 : Parameter: p_accountname, Value: , Type: Text
+05-10-2024 18:54:46:3649 : Parameter: p_accountnumber, Value: 9841321213213213, Type: Text
+05-10-2024 18:54:46:3659 : Parameter: p_ifsccode, Value: HDFC0000001, Type: Text
+05-10-2024 18:54:46:3669 : Parameter: p_bank, Value: , Type: Text
+05-10-2024 18:54:46:3679 : Parameter: p_identityprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3679 : Parameter: p_identityproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3689 : Parameter: p_addressprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3699 : Parameter: p_addressproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3702 : Parameter: p_signatureprooftype, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3713 : Parameter: p_signatureproofdocument, Value: NULL, Type: Unknown
+05-10-2024 18:54:46:3722 : Parameter: p_bcreqid, Value: 0, Type: Text
+05-10-2024 18:57:19:3387 : Login Successful. Username Maximus. SessionID : rp2se0mroxlpfxerkc2y3oiw
+05-10-2024 18:59:10:0273 : General Error: Parameter 'p_masterid' must have its value set
+05-10-2024 19:01:32:4036 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer) does not exist
+05-10-2024 19:03:06:7114 : Login Successful. Username Maximus. SessionID : akwzfzts1kdolg0lhsaxlvjz
+05-10-2024 19:06:26:9045 : Login Successful. Username Maximus. SessionID : spnzv52lmsytsuyyqe3y1413
+05-10-2024 19:07:19:5012 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer) does not exist
+05-10-2024 19:08:26:4881 : Login Successful. Username Maximus. SessionID : vvfkuwiqporngezdiqdvaclu
+05-10-2024 19:10:06:1237 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, integer, integer, integer) does not exist
+05-10-2024 19:10:27:3120 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, integer, integer, integer) does not exist
+05-10-2024 19:12:14:8786 : Login Successful. Username Maximus. SessionID : ocuaeofcp1ccl2zufueo1ulm
+05-10-2024 19:12:15:1885 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+05-10-2024 19:12:17:1188 : Login Successful. Username Maximus. SessionID : ocuaeofcp1ccl2zufueo1ulm
+05-10-2024 19:12:59:2881 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:12:59:2901 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:12:59:2911 : NOTICE: Inserting new record...
+05-10-2024 19:12:59:2921 : NOTICE: Insert successful, RequestId: 4
+05-10-2024 19:12:59:2931 : Insert successful
+05-10-2024 19:12:59:2941 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:12:59:2941 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:12:59:2951 : NOTICE: Inserting new record...
+05-10-2024 19:12:59:2961 : NOTICE: Insert successful, RequestId: 4
+05-10-2024 19:16:36:9886 : Login Successful. Username Maximus. SessionID : yapdfxeovxic32ejugiyn0ds
+05-10-2024 19:17:25:0740 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, integer, integer, integer) does not exist
+05-10-2024 19:17:29:4252 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, integer, integer, integer) does not exist
+05-10-2024 19:17:31:6476 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, integer, integer, integer) does not exist
+05-10-2024 19:19:52:3825 : Login Successful. Username Maximus. SessionID : yw51zspdnldyfnftec3xubsz
+05-10-2024 19:21:30:3043 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:21:30:3043 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:21:30:3053 : NOTICE: Inserting new record...
+05-10-2024 19:21:30:3063 : NOTICE: Insert successful, RequestId: 5
+05-10-2024 19:21:31:2905 : Insert successful
+05-10-2024 19:24:01:7793 : Login Successful. Username Maximus. SessionID : qoasf110vxopgnyx5buql4r5
+05-10-2024 19:25:07:4736 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+05-10-2024 19:26:01:2930 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:26:01:2940 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:26:01:2950 : NOTICE: Inserting new record...
+05-10-2024 19:26:01:2960 : NOTICE: Insert successful, RequestId: 6
+05-10-2024 19:26:01:8587 : Insert successful
+05-10-2024 19:28:10:5188 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:29:04:2441 : Postgres Error: 42804: COALESCE types character varying and integer cannot be matched
+05-10-2024 19:29:10:3189 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:29:10:3199 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:29:10:3209 : NOTICE: Inserting new record...
+05-10-2024 19:29:10:3219 : NOTICE: Insert successful, RequestId: 7
+05-10-2024 19:29:10:8893 : Insert successful
+05-10-2024 19:37:09:2300 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:37:09:2300 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:37:09:2300 : NOTICE: Inserting new record...
+05-10-2024 19:37:09:2300 : NOTICE: Insert successful, RequestId: 7
+05-10-2024 19:37:15:4768 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:37:15:4788 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:38:58:5629 : Postgres Error: 42703: column "panno" does not exist
+05-10-2024 19:39:03:2044 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:39:03:2054 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:46:36:0620 : Login Successful. Username Maximus. SessionID : 2zos3tn1m43mwougl0hgxdpk
+05-10-2024 19:47:33:5975 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:47:33:5985 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:47:33:6014 : NOTICE: Inserting new record...
+05-10-2024 19:47:33:6024 : NOTICE: Insert successful, RequestId: 8
+05-10-2024 19:47:34:2266 : Insert successful
+05-10-2024 19:47:36:2061 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:47:36:2071 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:47:36:2081 : NOTICE: Inserting new record...
+05-10-2024 19:47:36:2091 : NOTICE: Insert successful, RequestId: 8
+05-10-2024 19:56:03:9299 : Login Successful. Username Maximus. SessionID : tglmzsvpj0zcwyih0sdlhmqd
+05-10-2024 19:58:36:9801 : Login Successful. Username Maximus. SessionID : clz1hlddmrsg1egkya1ycifc
+05-10-2024 19:59:31:7707 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:59:31:7717 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:59:31:7737 : NOTICE: Inserting new record...
+05-10-2024 19:59:31:7747 : NOTICE: Insert successful, RequestId: 9
+05-10-2024 19:59:32:4414 : Insert successful
+05-10-2024 19:59:32:8932 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-10-2024 19:59:32:8951 : NOTICE: Flag is set to 1, proceeding with validations...
+05-10-2024 19:59:32:8961 : NOTICE: Inserting new record...
+05-10-2024 19:59:32:9011 : NOTICE: Insert successful, RequestId: 9

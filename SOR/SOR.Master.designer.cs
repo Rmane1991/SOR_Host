@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SOR {
-    
-    
-    public partial class SOR {
-        
+namespace SOR
+{
+
+
+    public partial class SOR
+    {
+
         /// <summary>
         /// head control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// smModalPopupExtender control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager smModalPopupExtender;
-        
+
         /// <summary>
         /// lnkFake control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkFake;
-        
+
         /// <summary>
         /// lblWelcome control.
         /// </summary>
@@ -56,25 +58,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblWelcome;
-        
-        /// <summary>
-        /// btnProfile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnProfile;
-        
-        /// <summary>
-        /// btnchange control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnchange;
-        
+
         /// <summary>
         /// LbLoginStatus control.
         /// </summary>
@@ -83,7 +67,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor LbLoginStatus;
-        
+
         /// <summary>
         /// accordionExamplesd control.
         /// </summary>
@@ -92,7 +76,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal accordionExamplesd;
-        
+
         /// <summary>
         /// Literal1 control.
         /// </summary>
@@ -101,7 +85,7 @@ namespace SOR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Literal1;
-        
+
         /// <summary>
         /// CPHMasterMain control.
         /// </summary>

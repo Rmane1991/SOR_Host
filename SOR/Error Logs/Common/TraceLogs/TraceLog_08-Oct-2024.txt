@@ -1,0 +1,375 @@
+08-10-2024 11:19:36:0427 : Login Successful. Username Maximus. SessionID : ef4adlfzgljjm4yurv3do4vd
+08-10-2024 11:21:08:1276 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+08-10-2024 11:21:14:1704 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+08-10-2024 11:21:32:1415 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+08-10-2024 11:24:30:3935 : Login Successful. Username Maximus. SessionID : cbumntfco2u3izrb32vvgc1s
+08-10-2024 11:25:32:0274 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:25:32:0274 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:25:32:0274 : NOTICE: Inserting new record...1
+08-10-2024 11:28:47:3084 : Postgres Error: 42883: operator does not exist: integer = character varying
+08-10-2024 11:29:00:5131 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:29:00:7249 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:29:00:7249 : NOTICE: Inserting new record...1
+08-10-2024 11:29:00:7261 : NOTICE: Inserting new record...
+08-10-2024 11:29:00:7271 : NOTICE: Insert successful, RequestId: 20
+08-10-2024 11:29:18:1842 : General Error: A command is already in progress: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)
+08-10-2024 11:29:30:9928 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:29:30:9938 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:29:30:9948 : NOTICE: Inserting new record...1
+08-10-2024 11:29:30:9958 : NOTICE: Inserting new record...
+08-10-2024 11:29:30:9965 : NOTICE: Insert successful, RequestId: 21
+08-10-2024 11:30:57:0077 : Login Successful. Username Maximus. SessionID : dkqzegt545qhrh2kvcoinsvl
+08-10-2024 11:31:52:5615 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:31:52:5625 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:31:52:5635 : NOTICE: Inserting new record...1
+08-10-2024 11:31:52:5645 : NOTICE: Inserting new record...
+08-10-2024 11:31:52:5655 : NOTICE: Insert successful, RequestId: 22
+08-10-2024 11:31:52:6025 : General Error: A command is already in progress: CALL public.sp_bc_request_registration_insert(@p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)
+08-10-2024 11:32:42:5880 : Login Successful. Username Maximus. SessionID : y2r1aa20zfjklbt2jzqrwovl
+08-10-2024 11:33:49:3629 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:33:49:3639 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:33:49:3649 : NOTICE: Inserting new record...1
+08-10-2024 11:33:49:3659 : NOTICE: Inserting new record...
+08-10-2024 11:33:49:3669 : NOTICE: Insert successful, RequestId: 23
+08-10-2024 11:36:46:5723 : Login Successful. Username Maximus. SessionID : tyaiotq4nw0t3j2maxhhjr10
+08-10-2024 11:37:52:6423 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:37:52:6433 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:37:52:6433 : NOTICE: Inserting new record...1
+08-10-2024 11:37:52:6443 : NOTICE: Inserting new record...
+08-10-2024 11:37:52:6453 : NOTICE: Insert successful, RequestId: 24
+08-10-2024 11:37:53:4555 : Insert successful, RequestId: 0
+08-10-2024 11:38:52:7628 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:38:52:7638 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:38:52:7648 : NOTICE: Inserting new record...1
+08-10-2024 11:38:52:7658 : NOTICE: Inserting new record...
+08-10-2024 11:38:52:7668 : NOTICE: Insert successful, RequestId: 24
+08-10-2024 11:51:08:9944 : Login Successful. Username Maximus. SessionID : 13ice1axvu0idy0o2pjle0lb
+08-10-2024 11:51:47:7113 : Login Successful. Username Maximus. SessionID : pcf1feixszvmcgicctbo14ov
+08-10-2024 11:56:48:0705 : Login Successful. Username Maximus. SessionID : cwflzbrz0mgs0srsq4ufxd35
+08-10-2024 11:57:48:7652 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:57:48:7662 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:57:48:7672 : NOTICE: Inserting new record...1
+08-10-2024 11:57:48:7682 : NOTICE: Inserting new record...
+08-10-2024 11:57:48:7692 : NOTICE: Insert successful, RequestId: 25
+08-10-2024 11:58:12:0008 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 11:58:12:0018 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 11:58:12:0028 : NOTICE: Inserting new record...1
+08-10-2024 11:58:12:0038 : NOTICE: Inserting new record...
+08-10-2024 11:58:12:0048 : NOTICE: Insert successful, RequestId: 25
+08-10-2024 12:00:32:1675 : Login Successful. Username Maximus. SessionID : x5145accfsqmkmn1lpawvtpp
+08-10-2024 12:01:25:5784 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:01:25:5824 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:01:25:5834 : NOTICE: Inserting new record...1
+08-10-2024 12:01:25:5844 : NOTICE: Inserting new record...
+08-10-2024 12:01:25:5844 : NOTICE: Insert successful, RequestId: 26
+08-10-2024 12:05:11:1526 : Login Successful. Username Maximus. SessionID : onjxgrytdhogjunnt4cxulkh
+08-10-2024 12:06:23:8047 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:06:23:8057 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:06:23:8057 : NOTICE: Inserting new record...1
+08-10-2024 12:06:23:8067 : NOTICE: Inserting new record...
+08-10-2024 12:06:23:8077 : NOTICE: Insert successful, RequestId: 27
+08-10-2024 12:07:45:7444 : Login Successful. Username Maximus. SessionID : iy3giobnwsusnx5o32hbjz4t
+08-10-2024 12:08:47:3794 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:08:47:3804 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:08:47:3814 : NOTICE: Inserting new record...1
+08-10-2024 12:08:47:3814 : NOTICE: Inserting new record...
+08-10-2024 12:08:47:3824 : NOTICE: Insert successful, RequestId: 28
+08-10-2024 12:22:45:5900 : Login Successful. Username Maximus. SessionID : drf3khtdszlofgghtr0gmtld
+08-10-2024 12:23:51:9331 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:23:51:9341 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:23:51:9341 : NOTICE: Inserting new record...1
+08-10-2024 12:23:51:9351 : NOTICE: Inserting new record...
+08-10-2024 12:23:51:9361 : NOTICE: Insert successful, RequestId: 29
+08-10-2024 12:30:25:7140 : Login Successful. Username Maximus. SessionID : za4yhvj2nrgfsms4r3bnfktm
+08-10-2024 12:32:18:9177 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:32:18:9187 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:32:18:9197 : NOTICE: Inserting new record...1
+08-10-2024 12:32:18:9207 : NOTICE: Inserting new record...
+08-10-2024 12:32:18:9217 : NOTICE: Insert successful, RequestId: 30
+08-10-2024 12:32:37:7868 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:32:37:7868 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:32:37:7868 : NOTICE: Inserting new record...1
+08-10-2024 12:32:37:7868 : NOTICE: Inserting new record...
+08-10-2024 12:32:37:7868 : NOTICE: Insert successful, RequestId: 31
+08-10-2024 12:44:36:3678 : Login Successful. Username Maximus. SessionID : n20nkl3zvmnhbvgtrazcresk
+08-10-2024 12:45:28:4303 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:45:28:4303 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:45:28:4313 : NOTICE: Inserting new record...1
+08-10-2024 12:45:28:4323 : NOTICE: Inserting new record...
+08-10-2024 12:45:28:4323 : NOTICE: Insert successful, RequestId: 32
+08-10-2024 12:47:05:9158 : Login Successful. Username Maximus. SessionID : n0tuh4bazu4w1bfijpxuy4jf
+08-10-2024 12:47:59:7042 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:47:59:7052 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:47:59:7062 : NOTICE: Inserting new record...1
+08-10-2024 12:47:59:7062 : NOTICE: Inserting new record...
+08-10-2024 12:47:59:7082 : NOTICE: Insert successful, RequestId: 33
+08-10-2024 12:48:21:7827 : General Error: Parameter 'p_activitytype' must have its value set
+08-10-2024 12:49:47:4980 : General Error: Parameter 'p_activitytype' must have its value set
+08-10-2024 12:50:29:0735 : General Error: Parameter 'p_activitytype' must have its value set
+08-10-2024 12:51:37:8493 : Login Successful. Username Maximus. SessionID : 21wufx3llcoqde05ln3tlowe
+08-10-2024 12:52:33:1167 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:52:33:1167 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:52:33:1177 : NOTICE: Inserting new record...1
+08-10-2024 12:52:33:1187 : NOTICE: Inserting new record...
+08-10-2024 12:52:33:1187 : NOTICE: Insert successful, RequestId: 34
+08-10-2024 12:53:57:3531 : General Error: Parameter 'p_activitytype' must have its value set
+08-10-2024 12:55:10:4107 : Login Successful. Username Maximus. SessionID : bl1oemoatq0ntqmttxjbj4ov
+08-10-2024 12:56:12:3488 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 12:56:12:3498 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 12:56:12:3498 : NOTICE: Inserting new record...1
+08-10-2024 12:56:12:3508 : NOTICE: Inserting new record...
+08-10-2024 12:56:12:3518 : NOTICE: Insert successful, RequestId: 35
+08-10-2024 13:00:31:9444 : General Error: Parameter 'p_activitytype' must have its value set
+08-10-2024 13:00:46:6634 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 13:00:46:6644 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 13:01:43:9959 : Postgres Error: 42883: operator does not exist: integer = character varying
+08-10-2024 13:02:04:9556 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 13:02:04:9576 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 13:02:31:5872 : Postgres Error: 42703: column "p_isapienable" does not exist
+08-10-2024 13:02:43:6439 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 13:02:43:6449 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 13:02:49:9140 : Class : BCEntity.cs 
+Function : getReceiptData() 
+Exception Occured
+Keyword not supported: 'port'.
+08-10-2024 13:13:50:6142 : Login Successful. Username Maximus. SessionID : thvl5r005rn5wzsdqh2u2flm
+08-10-2024 13:17:58:8187 : Login Successful. Username Maximus. SessionID : kzwtf3rmv40bntt00rvf5ym3
+08-10-2024 13:18:57:0025 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 13:18:57:0035 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 13:18:57:0045 : NOTICE: Inserting new record...1
+08-10-2024 13:18:57:0045 : NOTICE: Inserting new record...
+08-10-2024 13:18:57:0055 : NOTICE: Insert successful, RequestId: 36
+08-10-2024 13:19:24:8388 : General Error: Parameter 'p_activitytype' must have its value set
+08-10-2024 13:22:06:7009 : Login Successful. Username Maximus. SessionID : ezaog421e1vo0q1p2n3jzrjn
+08-10-2024 13:23:07:2176 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 13:23:07:2186 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 13:23:07:2196 : NOTICE: Inserting new record...1
+08-10-2024 13:23:07:2206 : NOTICE: Inserting new record...
+08-10-2024 13:23:07:2206 : NOTICE: Insert successful, RequestId: 37
+08-10-2024 13:24:10:6322 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 13:24:10:6332 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 14:29:38:4581 : Login Successful. Username Maximus. SessionID : ltyti3rodekuibyxh41wd3pj
+08-10-2024 14:30:26:9398 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:30:26:9408 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:30:26:9438 : NOTICE: Inserting new record...1
+08-10-2024 14:30:26:9448 : NOTICE: Inserting new record...
+08-10-2024 14:30:26:9458 : NOTICE: Insert successful, RequestId: 38
+08-10-2024 14:30:45:0774 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 14:30:45:0784 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 14:33:35:1947 : Login Successful. Username Maximus. SessionID : fm134cujw45cu53xlgza3lrg
+08-10-2024 14:34:26:9151 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:34:26:9160 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:34:26:9170 : NOTICE: Inserting new record...1
+08-10-2024 14:34:26:9170 : NOTICE: Inserting new record...
+08-10-2024 14:34:26:9180 : NOTICE: Insert successful, RequestId: 39
+08-10-2024 14:34:43:2643 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 14:34:43:2663 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 14:38:40:9961 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+42883: function proc_getreceiptdata(BCCode => text) does not exist
+08-10-2024 14:42:39:4501 : Login Successful. Username Maximus. SessionID : v1ewta2ebrmy0cewq4q4nwu5
+08-10-2024 14:45:34:6498 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:45:34:6498 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:45:34:6508 : NOTICE: Inserting new record...1
+08-10-2024 14:45:34:6518 : NOTICE: Inserting new record...
+08-10-2024 14:45:34:6518 : NOTICE: Insert successful, RequestId: 40
+08-10-2024 14:45:52:6523 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 14:45:52:6533 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 14:48:43:8612 : Login Successful. Username Maximus. SessionID : kqip4uxoapg4e4grbo5yscml
+08-10-2024 14:49:35:5609 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:49:35:5609 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:49:35:5619 : NOTICE: Inserting new record...1
+08-10-2024 14:49:35:5629 : NOTICE: Inserting new record...
+08-10-2024 14:49:35:5629 : NOTICE: Insert successful, RequestId: 41
+08-10-2024 14:49:49:2342 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 14:49:49:2352 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 14:52:24:4884 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+42703: column "p_bccode" does not exist
+08-10-2024 14:52:41:9092 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:52:41:9112 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:52:41:9121 : NOTICE: Inserting new record...1
+08-10-2024 14:52:41:9131 : NOTICE: Updating existing record with ID: 41
+08-10-2024 14:52:42:0663 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 14:53:44:8106 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:53:44:8116 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:53:44:8126 : NOTICE: Inserting new record...1
+08-10-2024 14:53:44:8126 : NOTICE: Inserting new record...
+08-10-2024 14:53:44:8136 : NOTICE: Insert successful, RequestId: 42
+08-10-2024 14:53:58:1719 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 14:53:58:1729 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 14:54:42:0205 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+42703: column "p_bccode" does not exist
+08-10-2024 14:56:58:0625 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:56:58:0635 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:56:58:0645 : NOTICE: Inserting new record...1
+08-10-2024 14:56:58:0645 : NOTICE: Updating existing record with ID: 42
+08-10-2024 14:56:58:0864 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 14:57:49:3018 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:57:49:3028 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:57:49:3038 : NOTICE: Inserting new record...1
+08-10-2024 14:57:49:3048 : NOTICE: Updating existing record with ID: 42
+08-10-2024 14:57:49:3278 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 14:59:12:5901 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:59:12:5911 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:59:12:5921 : NOTICE: Inserting new record...1
+08-10-2024 14:59:12:5931 : NOTICE: Updating existing record with ID: 42
+08-10-2024 14:59:12:6140 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 14:59:37:2361 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 14:59:37:2371 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 14:59:37:2381 : NOTICE: Inserting new record...1
+08-10-2024 14:59:37:2391 : NOTICE: Updating existing record with ID: 42
+08-10-2024 14:59:52:4597 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 15:00:55:5000 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 15:00:55:5010 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 15:00:55:5020 : NOTICE: Inserting new record...1
+08-10-2024 15:00:55:5030 : NOTICE: Inserting new record...
+08-10-2024 15:00:55:5030 : NOTICE: Insert successful, RequestId: 43
+08-10-2024 15:01:09:7097 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 15:01:09:7097 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 15:04:29:5019 : Login Successful. Username Maximus. SessionID : x35hbsemgt45uhfzaj1oc5hl
+08-10-2024 15:05:19:0396 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 15:05:19:0396 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 15:05:19:0406 : NOTICE: Inserting new record...1
+08-10-2024 15:05:19:0416 : NOTICE: Inserting new record...
+08-10-2024 15:05:19:0426 : NOTICE: Insert successful, RequestId: 44
+08-10-2024 15:05:51:5354 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 15:05:51:5364 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 15:06:25:1286 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occured
+Keyword not supported: 'port'.
+08-10-2024 15:18:57:0409 : Login Successful. Username Maximus. SessionID : 2qxhxhielmdicz5fvbyoif3e
+08-10-2024 15:20:21:4971 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 15:20:21:4981 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 15:20:21:5001 : NOTICE: Inserting new record...1
+08-10-2024 15:20:21:5031 : NOTICE: Inserting new record...
+08-10-2024 15:20:21:5041 : NOTICE: Insert successful, RequestId: 45
+08-10-2024 15:20:36:8865 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 15:20:36:8895 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 15:20:52:4135 : Class : BCEntity.cs 
+Function : SetInsertUpdateBCTrackerDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+08-10-2024 15:21:23:9054 : Class : BCEntity.cs 
+Function : SetInsertUpdateBCTrackerDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+08-10-2024 15:22:39:2185 : Login Successful. Username Maximus. SessionID : v42gcsracedwy5hnvd3whrtg
+08-10-2024 15:23:40:6129 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 15:23:40:6129 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 15:23:40:6139 : NOTICE: Inserting new record...1
+08-10-2024 15:23:40:6149 : NOTICE: Inserting new record...
+08-10-2024 15:23:40:6158 : NOTICE: Insert successful, RequestId: 46
+08-10-2024 15:23:55:1722 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 15:23:55:1732 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 15:29:13:6948 : Class: BCEntity.cs 
+Function: SetInsertUpdateBCTrackerDetails() 
+Exception Occurred
+42883: procedure sp_insertorupdatebctrackerdetails(integer, text, text, unknown) does not exist
+08-10-2024 15:33:38:0377 : Login Successful. Username Maximus. SessionID : rldkhecluk5n42h3fptywuj1
+08-10-2024 15:34:38:6201 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 15:34:38:6201 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 15:34:38:6211 : NOTICE: Inserting new record...1
+08-10-2024 15:34:38:6220 : NOTICE: Inserting new record...
+08-10-2024 15:34:38:6230 : NOTICE: Insert successful, RequestId: 47
+08-10-2024 15:34:54:5617 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 15:34:54:5647 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 15:35:15:5744 : Class: BCEntity.cs 
+Function: SetInsertUpdateBCTrackerDetails() 
+Exception Occurred
+42P01: relation "temp_receipt_data" does not exist
+08-10-2024 15:44:38:6126 : Login Successful. Username Maximus. SessionID : btvjhcrgkt2r5glq0f4wflxq
+08-10-2024 15:47:01:7549 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 15:47:01:7559 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 15:47:01:7569 : NOTICE: Inserting new record...1
+08-10-2024 15:47:01:7579 : NOTICE: Inserting new record...
+08-10-2024 15:47:01:7589 : NOTICE: Insert successful, RequestId: 48
+08-10-2024 15:47:25:7673 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 15:47:25:7683 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 16:02:33:6147 : Login Successful. Username Maximus. SessionID : 3xvco32w43jvkcp0ycbdtg5k
+08-10-2024 16:04:01:9413 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 16:04:01:9423 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 16:04:01:9463 : NOTICE: Inserting new record...1
+08-10-2024 16:04:01:9473 : NOTICE: Inserting new record...
+08-10-2024 16:04:01:9483 : NOTICE: Insert successful, RequestId: 49
+08-10-2024 16:04:17:9015 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 16:04:17:9025 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 16:04:30:2680 : Class: BCEntity.cs 
+Function: SetInsertUpdateBCTrackerDetails() 
+Exception Occurred
+Parameter 'status' referenced in SQL but is an out-only parameter
+08-10-2024 16:05:59:9022 : Login Successful. Username Maximus. SessionID : yc0gdlgxfivpg5bbgqwyw4bk
+08-10-2024 16:07:18:2636 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 16:07:18:2636 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 16:07:18:2646 : NOTICE: Inserting new record...1
+08-10-2024 16:07:18:2656 : NOTICE: Inserting new record...
+08-10-2024 16:07:18:2656 : NOTICE: Insert successful, RequestId: 50
+08-10-2024 16:07:34:9548 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 16:07:34:9548 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 16:10:56:3964 : Class: BCEntity.cs 
+Function: SetInsertUpdateBCTrackerDetails() 
+Exception Occurred
+42883: procedure sp_insertorupdatebctrackerdetails(integer, text, text, unknown) does not exist
+08-10-2024 16:12:50:3424 : Class: BCEntity.cs 
+Function: SetInsertUpdateBCTrackerDetails() 
+Exception Occurred
+42883: procedure sp_insertorupdatebctrackerdetails(integer, text, text, unknown) does not exist
+08-10-2024 16:37:41:9150 : Login Successful. Username Maximus. SessionID : ebhiquti120tczsg5dzlbqu2
+08-10-2024 16:42:03:5397 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 16:42:03:5417 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 16:42:03:5427 : NOTICE: Inserting new record...1
+08-10-2024 16:42:03:5437 : NOTICE: Inserting new record...
+08-10-2024 16:42:03:5447 : NOTICE: Insert successful, RequestId: 51
+08-10-2024 16:42:22:8533 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 16:42:22:8543 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 16:46:16:9119 : Login Successful. Username Maximus. SessionID : gvhmqhxoyux0z1lzsvkbyonl
+08-10-2024 16:47:29:8934 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 16:47:29:8944 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 16:47:29:8944 : NOTICE: Inserting new record...1
+08-10-2024 16:47:29:8954 : NOTICE: Inserting new record...
+08-10-2024 16:47:29:8964 : NOTICE: Insert successful, RequestId: 52
+08-10-2024 16:47:47:6380 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 16:47:47:6390 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 17:01:39:4268 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 17:01:39:4278 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 17:01:39:4288 : NOTICE: Inserting new record...1
+08-10-2024 17:01:39:4298 : NOTICE: Updating existing record with ID: 52
+08-10-2024 17:01:39:4609 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 17:03:05:1668 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 17:03:05:1688 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 17:03:05:1698 : NOTICE: Inserting new record...1
+08-10-2024 17:03:05:1708 : NOTICE: Updating existing record with ID: 52
+08-10-2024 17:03:05:1947 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+08-10-2024 17:56:38:9706 : Login Successful. Username Maximus. SessionID : sszz4zu0jj04shf1gselzafu
+08-10-2024 17:57:59:1941 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 17:57:59:1961 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 17:57:59:1961 : NOTICE: Inserting new record...1
+08-10-2024 17:57:59:1971 : NOTICE: Inserting new record...
+08-10-2024 17:57:59:1981 : NOTICE: Insert successful, RequestId: 53
+08-10-2024 17:58:16:8493 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 17:58:16:8503 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 18:00:20:5104 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 18:00:20:5114 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 18:00:20:5124 : NOTICE: Inserting new record...1
+08-10-2024 18:00:20:5134 : NOTICE: Inserting new record...
+08-10-2024 18:00:20:5134 : NOTICE: Insert successful, RequestId: 54
+08-10-2024 18:00:42:1326 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 18:00:42:1336 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 18:13:19:5725 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occured
+Keyword not supported: 'port'.
+08-10-2024 18:14:47:7665 : Login Successful. Username Maximus. SessionID : 41h0cnoqsx3vracmxsie1rkb
+08-10-2024 18:16:04:7074 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+08-10-2024 18:16:04:7084 : NOTICE: Flag is set to 1, proceeding with validations...
+08-10-2024 18:16:04:7094 : NOTICE: Inserting new record...1
+08-10-2024 18:16:04:7094 : NOTICE: Inserting new record...
+08-10-2024 18:16:04:7104 : NOTICE: Insert successful, RequestId: 55
+08-10-2024 18:16:22:3420 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+08-10-2024 18:16:22:3430 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+08-10-2024 18:56:31:8022 : Login Successful. Username Maximus. SessionID : nssyk3nj4m2glh0wpu3d3i5e

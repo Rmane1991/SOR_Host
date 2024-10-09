@@ -1,0 +1,67 @@
+Time : 07-Oct-2024 11:20 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 11:20 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 11:20 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 11:21 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 11:25 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 11:26 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 11:27 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure sp_bcrequest_registration_get(unknown, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 07-Oct-2024 12:34 Message : Page : BCVerificationLevelOne.cs 
+Function : Page_Load() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 07-Oct-2024 12:46 Message : Page : BCVerificationLevelOne.cs 
+Function : Page_Load() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 07-Oct-2024 12:50 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 07-Oct-2024 14:20 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure proc_getbcdetailstoprocessonboarding(unknown, unknown, unknown, unknown, unknown, text, text, text, text, unknown, text, text, unknown, text, integer) does not exist
+Time : 07-Oct-2024 14:20 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+42883: procedure proc_getbcdetailstoprocessonboarding(unknown, unknown, unknown, unknown, unknown, text, text, text, text, unknown, text, text, unknown, text, integer) does not exist
+Time : 07-Oct-2024 14:28 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+42883: function proc_getbcdetailstoprocessonboarding(unknown, unknown, unknown, unknown, unknown, text, text, text, text, unknown, text, text, unknown, text, integer) does not exist
+Time : 07-Oct-2024 14:32 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = integer
+Time : 07-Oct-2024 14:46 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 07-Oct-2024 14:46 Message : Class : BCVerificationLevelOne.cs 
+Function : FillGrid() 
+Exception Occured
+42601: query has no destination for result data
+Time : 07-Oct-2024 15:51 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 07-Oct-2024 17:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  RequestId: 0
+Time : 07-Oct-2024 19:26 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  RequestId: 0

@@ -1,0 +1,5 @@
+Time : 09-Oct-2024 14:26 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 09-Oct-2024 14:26 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 09-Oct-2024 14:33 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+Time : 09-Oct-2024 14:34 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+Time : 09-Oct-2024 14:34 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist

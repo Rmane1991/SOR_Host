@@ -31,7 +31,7 @@ namespace PayRakamSBM
         #region Page Load
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtUserName.Text = "Maximus";
+            //txtUserName.Text = "Maximus";
 
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             if (!Page.IsPostBack)
@@ -77,8 +77,8 @@ namespace PayRakamSBM
                 DataSet _dsValiDateUser = new DataSet();
                 string OutStatus = null; string OutStatusMsg = null;
 
-                //_strPassWord = !string.IsNullOrEmpty(hidpassword.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidpassword.Value)) : txtPassword.Value;
-                _strPassWord = "admin@1234";// !string.IsNullOrEmpty(hidpassword.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidpassword.Value)) : txtPassword.Value;
+                _strPassWord = !string.IsNullOrEmpty(hidpassword.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidpassword.Value)) : txtPassword.Value;
+                //_strPassWord = "admin@1234";// !string.IsNullOrEmpty(hidpassword.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidpassword.Value)) : txtPassword.Value;
                 _strUserName = txtUserName.Text;
                 #region Track Users
                 _LoginEntity.UserName = _strUserName;
@@ -102,10 +102,17 @@ namespace PayRakamSBM
                         ErrorLog.CommonTrace("Fetching Username By Mobile No(" + _strUserName + "). Mobile Number Not Exist In The System.");
                     }
                 }
-                if (string.IsNullOrEmpty(_strPassWord) || string.IsNullOrEmpty(_strUserName))
+                if (string.IsNullOrEmpty(_strUserName))
                 {
                     lblErrorMsg.Visible = true;
-                    lblErrorMsg.InnerHtml = "Login failed";
+                    lblErrorMsg.InnerHtml = "Please Enter Username";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "HideLabel();", true);
+                    return;
+                }
+                if (string.IsNullOrEmpty(_strPassWord))
+                {
+                    lblErrorMsg.Visible = true;
+                    lblErrorMsg.InnerHtml = "Please Enter Password";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "HideLabel();", true);
                     return;
                 }
@@ -282,7 +289,9 @@ namespace PayRakamSBM
                     {
                         ErrorLog.CommonTrace("Login Request Failed (Login Page). Exception : " + Ex.Message + " Username : " + txtUserName.Text);
                         ErrorLog.CommonError(Ex);
-                        Response.Write("<script>alert('Invalid Username/Password. Try again later');</script>");
+                        //Response.Write("<script>alert('Invalid Username/Password. Try again later');</script>");
+                        lblErrorMsg.Visible = true;
+                        lblErrorMsg.InnerHtml = "Incorrect Username or Password";
                         return;
                     }
                 }

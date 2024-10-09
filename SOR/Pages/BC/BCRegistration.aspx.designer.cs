@@ -150,15 +150,6 @@ namespace SOR.Pages.BC
         protected global::System.Web.UI.WebControls.DropDownList ddlRequestType;
 
         /// <summary>
-        /// ddlBucketId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBucketId;
-
-        /// <summary>
         /// ddlRequestStatus control.
         /// </summary>
         /// <remarks>
@@ -751,15 +742,6 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-
-        /// <summary>
-        /// RequiredFieldValidator15 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator15;
 
         /// <summary>
         /// ddlCountry control.

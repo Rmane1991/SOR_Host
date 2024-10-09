@@ -1,0 +1,147 @@
+07-10-2024 11:20:05:6979 : Login Successful. Username Maximus. SessionID : aaw4lye3qejc4wtgjab4lgxs
+07-10-2024 12:06:32:1260 : Login Successful. Username Maximus. SessionID : hgzfnrhxwjwnxfd1l1cuelc4
+07-10-2024 12:10:05:1412 : Login Successful. Username Maximus. SessionID : sauvykhm3ae2bps11xy0u5ti
+07-10-2024 12:16:12:9985 : Login Successful. Username Maximus. SessionID : hgs4yf50k1wro3rggg2wix1j
+07-10-2024 12:19:22:6799 : Login Successful. Username Maximus. SessionID : vmg232gqunpmsysgma1usmpj
+07-10-2024 12:25:54:1315 : Login Successful. Username Maximus. SessionID : osadzfnrahug5bh5g3rxfrq5
+07-10-2024 12:34:19:0990 : Login Successful. Username Maximus. SessionID : jxgyllmyhqkzkyujsky2ll4c
+07-10-2024 12:43:01:4846 : Login Successful. Username Maximus. SessionID : lrj2knpcl4qbcgtsbu5ypia0
+07-10-2024 12:50:14:7115 : Login Successful. Username Maximus. SessionID : mpdf5b2rv02msir1eb1xlgml
+07-10-2024 12:50:33:4496 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboaring() 
+Exception Occured
+Keyword not supported: 'port'.
+07-10-2024 13:08:51:1465 : Login Successful. Username Maximus. SessionID : 0euusqgds0dghxgustbmpd34
+07-10-2024 13:11:22:7902 : Login Successful. Username Maximus. SessionID : frwutwxs0tfdoyyplk1r3sfi
+07-10-2024 13:14:24:2700 : Login Successful. Username Maximus. SessionID : nbcrulq4lqvcl5oiqcsutcs3
+07-10-2024 13:28:40:6156 : Login Successful. Username Maximus. SessionID : foyanooz4ewld20sdjbnalqz
+07-10-2024 14:20:33:3552 : Login Successful. Username Maximus. SessionID : saucnksdpu0hfor534t40imi
+07-10-2024 14:20:37:7314 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occured
+42883: procedure proc_getbcdetailstoprocessonboarding(unknown, unknown, unknown, unknown, unknown, text, text, text, text, unknown, text, text, unknown, text, integer) does not exist
+07-10-2024 14:20:41:4434 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occured
+42883: procedure proc_getbcdetailstoprocessonboarding(unknown, unknown, unknown, unknown, unknown, text, text, text, text, unknown, text, text, unknown, text, integer) does not exist
+07-10-2024 14:24:34:1846 : Login Successful. Username Maximus. SessionID : 4elgqbt2vi42cysvo3mhcokn
+07-10-2024 14:28:15:8045 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42883: function proc_getbcdetailstoprocessonboarding(unknown, unknown, unknown, unknown, unknown, text, text, text, text, unknown, text, text, unknown, text, integer) does not exist
+07-10-2024 14:30:10:1325 : Login Successful. Username Maximus. SessionID : uxa4jildna4x3javrbsk501w
+07-10-2024 14:32:11:1662 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42883: operator does not exist: boolean = integer
+07-10-2024 14:46:10:4978 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+07-10-2024 14:46:32:3739 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42601: query has no destination for result data
+07-10-2024 15:15:36:9243 : Login Successful. Username Maximus. SessionID : tzogg3pek03gg30sm40daxgu
+07-10-2024 15:20:04:4465 : Login Successful. Username Maximus. SessionID : etgh3ggsuxjpxce3g1qw44b2
+07-10-2024 15:24:47:9861 : Login Successful. Username Maximus. SessionID : wbrz5fk1vahog2cg5fbqtefo
+07-10-2024 15:29:28:9732 : Login Successful. Username Maximus. SessionID : zsf3413wdodpwm3yrwtpdf1c
+07-10-2024 15:43:19:0326 : Login Successful. Username Maximus. SessionID : gbagyprn0rcnaprvwuqd2jds
+07-10-2024 15:46:31:7257 : Login Successful. Username Maximus. SessionID : 3eakrmcghww5irssnybr12yz
+07-10-2024 15:48:34:9901 : Login Successful. Username Maximus. SessionID : 13s50azh3rizpoj253edexeb
+07-10-2024 15:50:16:5326 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 15:50:16:5346 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 15:50:16:5346 : NOTICE: Inserting new record...
+07-10-2024 15:50:16:5356 : NOTICE: Insert successful, RequestId: 10
+07-10-2024 15:50:16:6353 : Insert successful
+07-10-2024 15:50:16:6363 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 15:50:16:6363 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 15:50:16:6373 : NOTICE: Inserting new record...
+07-10-2024 15:50:16:6383 : NOTICE: Insert successful, RequestId: 10
+07-10-2024 15:55:53:8779 : Login Successful. Username Maximus. SessionID : gaxxo401shh4caso0zsmpzpv
+07-10-2024 15:57:17:5445 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 15:57:17:5445 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 15:57:17:5455 : NOTICE: Inserting new record...
+07-10-2024 15:57:17:5465 : NOTICE: Insert successful, RequestId: 11
+07-10-2024 15:57:17:8367 : Insert successful
+07-10-2024 15:57:27:8070 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 15:57:27:8120 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 15:57:27:8129 : NOTICE: Inserting new record...
+07-10-2024 15:57:27:8139 : NOTICE: Insert successful, RequestId: 11
+07-10-2024 16:25:27:5923 : Login Successful. Username Maximus. SessionID : us3lofardcdodzaqpsui3j4v
+07-10-2024 16:26:19:5521 : Login Successful. Username Maximus. SessionID : uzmyvkif1u40ceoosvrjqqqi
+07-10-2024 16:27:21:5160 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 16:27:21:5170 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 16:27:21:5180 : NOTICE: Inserting new record...
+07-10-2024 16:27:21:5190 : NOTICE: Insert successful, RequestId: 12
+07-10-2024 16:27:21:9028 : Insert successful
+07-10-2024 16:27:29:1253 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 16:27:32:7158 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 16:27:34:0053 : NOTICE: Inserting new record...
+07-10-2024 16:42:39:9925 : Login Successful. Username Maximus. SessionID : yee0hmhtsru1pri4xtxgilty
+07-10-2024 16:43:47:5882 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+07-10-2024 16:43:55:7759 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist
+07-10-2024 16:44:49:6719 : Login Successful. Username Maximus. SessionID : 2a2xg4nrcx2zgqeeff1mjybu
+07-10-2024 16:59:03:8755 : Login Successful. Username Maximus. SessionID : splcnji3nz10iohgg5f3a3ul
+07-10-2024 17:00:31:2583 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 17:00:31:2593 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 17:00:31:2593 : NOTICE: Inserting new record...
+07-10-2024 17:00:31:2613 : NOTICE: Insert successful, RequestId: 13
+07-10-2024 17:00:41:7053 : Insert successful
+07-10-2024 17:00:44:8908 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 17:00:44:8918 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 17:00:44:8928 : NOTICE: Inserting new record...
+07-10-2024 17:00:44:8938 : NOTICE: Insert successful, RequestId: 13
+07-10-2024 17:04:59:2476 : Login Successful. Username Maximus. SessionID : ttgebvqpengwlr4jlaax1ouz
+07-10-2024 17:06:21:9085 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 17:23:16:8860 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 17:23:28:6254 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 17:23:28:6264 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 17:23:28:6284 : NOTICE: Inserting new record...
+07-10-2024 17:23:28:6294 : NOTICE: Insert successful, RequestId: 14
+07-10-2024 17:23:30:9088 : Insert successful, RequestId: 
+07-10-2024 17:25:25:1567 : Login Successful. Username Maximus. SessionID : ja5c0gvcbhuo1hmzddfzi0we
+07-10-2024 17:26:21:8095 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 17:27:16:2582 : Login Successful. Username Maximus. SessionID : hayspgtmlowlj1fwcmxdwfsh
+07-10-2024 17:28:31:8295 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 17:28:31:8295 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 17:28:31:8305 : NOTICE: Inserting new record...
+07-10-2024 17:28:31:8315 : NOTICE: Insert successful, RequestId: 15
+07-10-2024 17:28:46:8829 : Insert successful, RequestId: 0
+07-10-2024 17:28:59:6885 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 17:28:59:6905 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 17:28:59:6905 : NOTICE: Inserting new record...
+07-10-2024 17:28:59:6915 : NOTICE: Insert successful, RequestId: 15
+07-10-2024 18:38:07:4976 : Login Successful. Username Maximus. SessionID : sug1u0mdnxn4wqk0dkubfzfh
+07-10-2024 18:51:02:4722 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 18:51:02:4732 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 18:51:02:4742 : NOTICE: Inserting new record...
+07-10-2024 18:53:26:1423 : Postgres Error: 42601: query has no destination for result data
+07-10-2024 18:53:39:1639 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 18:53:39:1679 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 18:53:39:1689 : NOTICE: Inserting new record...
+07-10-2024 18:53:39:1699 : NOTICE: Insert successful, RequestId: 17
+07-10-2024 18:53:40:8298 : Insert successful, RequestId: 0
+07-10-2024 19:25:04:9166 : Login Successful. Username Maximus. SessionID : mkwkhhmqscydcihv2mkr4pg0
+07-10-2024 19:26:05:1078 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 19:26:05:1098 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 19:26:05:1108 : NOTICE: Inserting new record...1
+07-10-2024 19:26:05:1118 : NOTICE: Inserting new record...
+07-10-2024 19:26:05:1118 : NOTICE: Insert successful, RequestId: 19
+07-10-2024 19:26:05:1128 : Insert successful, RequestId: 0
+07-10-2024 19:26:05:1138 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+07-10-2024 19:26:05:1138 : NOTICE: Flag is set to 1, proceeding with validations...
+07-10-2024 19:26:05:1148 : NOTICE: Inserting new record...1
+07-10-2024 19:26:05:1158 : NOTICE: Inserting new record...
+07-10-2024 19:26:05:1158 : NOTICE: Insert successful, RequestId: 19
+07-10-2024 19:30:53:7321 : Login Successful. Username Maximus. SessionID : ttd3trp0u5stad3p2yypko5u
+07-10-2024 19:33:45:6617 : Login Successful. Username Maximus. SessionID : ceuyeeyxinuv2umog2wbouee
+07-10-2024 19:34:36:8106 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 19:37:09:1235 : Login Successful. Username Maximus. SessionID : euvceyjq3ml3do14fabhjubm
+07-10-2024 19:38:01:9341 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 19:43:31:9968 : Login Successful. Username Maximus. SessionID : lwgrx1p13nwt5z1ektwt0jvw
+07-10-2024 19:51:49:5012 : Login Successful. Username Maximus. SessionID : jrw1v3y3myq3u0zbjuhjdrm4
+07-10-2024 19:52:44:5922 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 19:52:46:0054 : General Error: Parameter 'p_reqid' referenced in SQL but is an out-only parameter
+07-10-2024 20:17:42:4932 : Login Successful. Username Maximus. SessionID : jxsqfgbvvpitktz1nloewnle
+07-10-2024 20:22:56:9248 : Postgres Error: 42883: procedure public.sp_bc_request_registration_insert(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, text, text, unknown, unknown, unknown, unknown, unknown, unknown, text, unknown, integer, integer, integer, text) does not exist

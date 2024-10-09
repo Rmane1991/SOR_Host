@@ -1,0 +1,137 @@
+09-10-2024 11:40:55:1872 : Login Successful. Username Maximus. SessionID : lfd0w3pes5rtvsjfyouw2pp2
+09-10-2024 11:41:48:5171 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 11:41:48:5181 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 11:41:48:5181 : NOTICE: Inserting new record...1
+09-10-2024 11:41:48:5191 : NOTICE: Inserting new record...
+09-10-2024 11:41:48:5201 : NOTICE: Insert successful, RequestId: 56
+09-10-2024 11:42:32:6678 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 11:42:32:6688 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 11:54:56:9706 : Login Successful. Username Maximus. SessionID : yubjm1eeacdm5lrs34w35qmy
+09-10-2024 11:55:49:2052 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 11:55:49:2052 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 11:55:49:2052 : NOTICE: Inserting new record...1
+09-10-2024 11:55:49:2052 : NOTICE: Inserting new record...
+09-10-2024 11:55:49:2052 : NOTICE: Insert successful, RequestId: 57
+09-10-2024 11:56:06:5296 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 11:56:06:5306 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 11:56:16:0103 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+42883: function sp_getbcdocuments(p_Mode => text, p_BCID => text) does not exist
+09-10-2024 11:57:24:2450 : Login Successful. Username Maximus. SessionID : mf1xd20fjfjacpihw00ww2h3
+09-10-2024 11:58:52:6077 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 11:58:52:6087 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 11:58:52:6097 : NOTICE: Inserting new record...1
+09-10-2024 11:58:52:6107 : NOTICE: Inserting new record...
+09-10-2024 11:58:52:6136 : NOTICE: Insert successful, RequestId: 58
+09-10-2024 11:59:08:6895 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 11:59:08:6905 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 11:59:24:1395 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+42883: function sp_getbcdocuments(p_Mode => text, p_BCID => text) does not exist
+09-10-2024 12:00:17:4224 : Login Successful. Username Maximus. SessionID : 5aeonqfhwzddkyzbvj55ppt2
+09-10-2024 12:09:14:8667 : Login Successful. Username Maximus. SessionID : puntru0v3x2ahzozjxoee5c1
+09-10-2024 12:11:34:2121 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 12:11:34:2131 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 12:11:34:2141 : NOTICE: Inserting new record...1
+09-10-2024 12:11:34:2141 : NOTICE: Inserting new record...
+09-10-2024 12:11:34:2151 : NOTICE: Insert successful, RequestId: 59
+09-10-2024 12:11:49:6148 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 12:11:49:6157 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 12:16:10:9049 : Login Successful. Username Maximus. SessionID : pq3ddp2yszt2vygx1ldzsssb
+09-10-2024 12:17:09:3606 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 12:17:09:3616 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 12:17:09:3626 : NOTICE: Inserting new record...1
+09-10-2024 12:17:09:3626 : NOTICE: Inserting new record...
+09-10-2024 12:17:09:3636 : NOTICE: Insert successful, RequestId: 60
+09-10-2024 12:17:49:2141 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 12:17:49:2141 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 12:25:00:5294 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+42P01: relation "temp_bc_documents" does not exist
+09-10-2024 12:44:57:2187 : Login Successful. Username Maximus. SessionID : aol4hntxcvsoy1rekcv0vtl1
+09-10-2024 12:45:47:6929 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 12:45:47:6938 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 12:45:47:6938 : NOTICE: Inserting new record...1
+09-10-2024 12:45:47:6948 : NOTICE: Inserting new record...
+09-10-2024 12:45:47:6958 : NOTICE: Insert successful, RequestId: 61
+09-10-2024 12:46:02:3180 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 12:46:02:3190 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 12:46:09:7923 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+09-10-2024 12:46:58:5887 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+09-10-2024 12:49:42:3511 : Login Successful. Username Maximus. SessionID : mlwpb3km2wwxwkdedor3mmnf
+09-10-2024 12:50:32:8076 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 12:50:32:8086 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 12:50:32:8096 : NOTICE: Inserting new record...1
+09-10-2024 12:50:32:8096 : NOTICE: Inserting new record...
+09-10-2024 12:50:32:8106 : NOTICE: Insert successful, RequestId: 62
+09-10-2024 12:50:47:3270 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 12:50:47:3270 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 12:51:56:3993 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+42P01: relation "temp_bc_documents" does not exist
+09-10-2024 13:00:29:4605 : Login Successful. Username Maximus. SessionID : tdsntyfqbu5revyyug0jdfwk
+09-10-2024 13:01:24:1988 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 13:01:24:1998 : NOTICE: Flag is set to 1, proceeding with validations...
+09-10-2024 13:01:24:2008 : NOTICE: Inserting new record...1
+09-10-2024 13:01:24:2018 : NOTICE: Inserting new record...
+09-10-2024 13:01:24:2028 : NOTICE: Insert successful, RequestId: 63
+09-10-2024 13:01:46:9759 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+09-10-2024 13:01:46:9769 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 13:10:38:8404 : Login Successful. Username Maximus. SessionID : xwfz50xyb1jhx2krg3w5c0fc
+09-10-2024 13:11:58:1879 : Login Successful. Username Maximus. SessionID : dlupoku5x1rjivaebjj0dddd
+09-10-2024 13:14:19:4520 : Login Successful. Username Maximus. SessionID : txkhj4qquvvz5dlckcszzfts
+09-10-2024 13:15:28:3959 : Login Successful. Username Maximus. SessionID : rdzafdyhdbfuecdnztrl0jqr
+09-10-2024 13:17:26:0754 : Login Successful. Username Maximus. SessionID : jzzhi0ohblskscrnfen35p2o
+09-10-2024 13:19:03:5408 : Login Successful. Username Maximus. SessionID : epce1q54udv51f0vfmnjzwuf
+09-10-2024 13:22:35:2272 : Login Successful. Username Maximus. SessionID : 0wksrf4aq52vd44sop5g5bje
+09-10-2024 14:25:53:6107 : Login Successful. Username Maximus. SessionID : 0rafcv3fxaeqw3hvqt1owuir
+09-10-2024 14:26:04:2866 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 14:26:04:3420 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 14:26:15:6011 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 14:26:21:7411 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 14:33:11:7679 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+09-10-2024 14:33:11:8167 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+09-10-2024 14:34:22:1159 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+09-10-2024 14:34:22:1408 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+09-10-2024 14:34:47:2167 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+09-10-2024 14:34:47:2466 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist

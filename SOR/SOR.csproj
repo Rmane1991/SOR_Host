@@ -960,27 +960,29 @@
     <Content Include="Pages\Admin\pgManageUserAccount.aspx" />
     <Content Include="Pages\Admin\pgUserAccessManagement.aspx" />
     <Content Include="Pages\Admin\pgUserPageManagement.aspx" />
-    <Content Include="Pages\BC\AddFileUpload.ashx" />
     <Content Include="Pages\BC\BCRegistration.aspx" />
     <Content Include="Pages\BC\BCStatus.aspx" />
     <Content Include="Pages\BC\BCVerificationLevelOne.aspx" />
     <Content Include="Pages\BC\BCVerificationLevelTwo.aspx" />
     <Content Include="Pages\BC\EditBCRegistrationDetails.aspx" />
     <Content Include="Pages\BC\FrmBcStatus.aspx" />
-    <Content Include="Pages\BC\IdFileupload.ashx" />
     <Content Include="Pages\BC\OnBoardBcStatus.aspx" />
     <Content Include="Pages\BC\ReprocessBCDetails.aspx" />
-    <Content Include="Pages\BC\SigFileUpload.ashx" />
     <Content Include="Pages\Dashboard\TransactionTrend.aspx" />
     <Content Include="Pages\Rule\CreateRules.aspx" />
     <Content Include="Pages\Rule\SwitchConfig.aspx" />
     <Content Include="Pages\Rule\TrRule_old.aspx" />
     <Content Include="Pages\Rule\TrRule1.aspx" />
     <Content Include="Pages\Rule\TrRule.aspx" />
+    <Content Include="pdfhandler.aspx" />
     <Content Include="Scripts\aes.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\executeSec.js" />
+    <Content Include="Pages\BC\AddFileUpload.ashx" />
+    <Content Include="Pages\BC\IdFileupload.ashx" />
+    <Content Include="Pages\BC\SigFileUpload_.ashx" />
+    <Content Include="Pages\BC\SigFileUpload.ashx" />
     <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -1175,6 +1177,9 @@
     <Compile Include="Pages\BC\SigFileUpload.ashx.cs">
       <DependentUpon>SigFileUpload.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BC\SigFileUpload_.ashx.cs">
+      <DependentUpon>SigFileUpload_.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dashboard\TransactionTrend.aspx.cs">
       <DependentUpon>TransactionTrend.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1216,6 +1221,12 @@
     </Compile>
     <Compile Include="Pages\Rule\TrRule.aspx.designer.cs">
       <DependentUpon>TrRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdfhandler.aspx.cs">
+      <DependentUpon>pdfhandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdfhandler.aspx.designer.cs">
+      <DependentUpon>pdfhandler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SOR.Master.cs">

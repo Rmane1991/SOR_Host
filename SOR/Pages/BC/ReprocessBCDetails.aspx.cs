@@ -311,53 +311,53 @@ namespace SOR.Pages.BC
                         _BCEntity.BCReqId = HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value) ? Convert.ToString(HidBCID.Value) : Convert.ToString(Page.Request.QueryString["BCReqId"]);
                        // _BCEntity.BCReqId = BCReqId;
                        
-                        if (_BCEntity.Insert_BCRequest(Convert.ToString(Session["Username"]), out RequestId, out Status, out StatusMsg))
-                        {
-                            _BCEntity.BCReqId = Page.Request.QueryString["BCReqId"].ToString();
-                            DataSet ds = _BCEntity.GetDocs();
+                        //if (_BCEntity.Insert_BCRequest(Convert.ToString(Session["Username"]), out RequestId, out Status, out StatusMsg))
+                        //{
+                        //    _BCEntity.BCReqId = Page.Request.QueryString["BCReqId"].ToString();
+                        //    DataSet ds = _BCEntity.GetDocs();
 
-                            if (ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
-                            {
-                                divAddressProof1.Visible = true;
-                                divIdProof1.Visible = true;
-                                divSigProof1.Visible = true;
-                                string idthumb = ds.Tables[0].Rows[0]["IdentityProofDocument"].ToString();
-                                pathlnkId = "../../" + idthumb;
-                                Session["IdFilePath"] = idthumb;
+                        //    if (ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+                        //    {
+                        //        divAddressProof1.Visible = true;
+                        //        divIdProof1.Visible = true;
+                        //        divSigProof1.Visible = true;
+                        //        string idthumb = ds.Tables[0].Rows[0]["IdentityProofDocument"].ToString();
+                        //        pathlnkId = "../../" + idthumb;
+                        //        Session["IdFilePath"] = idthumb;
 
-                                string idType = ds.Tables[0].Rows[0]["IdentityProofType"].ToString();
+                        //        string idType = ds.Tables[0].Rows[0]["IdentityProofType"].ToString();
 
-                                string Addthumb = ds.Tables[0].Rows[0]["AddressProofDocument"].ToString();
-                                PathlnkAdd = "../../" + Addthumb;
-                                Session["AddFilePath"] = Addthumb;
+                        //        string Addthumb = ds.Tables[0].Rows[0]["AddressProofDocument"].ToString();
+                        //        PathlnkAdd = "../../" + Addthumb;
+                        //        Session["AddFilePath"] = Addthumb;
 
-                                string AddType = ds.Tables[0].Rows[0]["AddressProofType"].ToString();
+                        //        string AddType = ds.Tables[0].Rows[0]["AddressProofType"].ToString();
 
-                                string Sigthumb = ds.Tables[0].Rows[0]["SignatureProofDocument"].ToString();
-                                PathlnkSig = "../../" + Sigthumb;
-                                Session["SigFilePath"] = Sigthumb;
+                        //        string Sigthumb = ds.Tables[0].Rows[0]["SignatureProofDocument"].ToString();
+                        //        PathlnkSig = "../../" + Sigthumb;
+                        //        Session["SigFilePath"] = Sigthumb;
 
-                                string SigType = ds.Tables[0].Rows[0]["SignatureProofType"].ToString();
+                        //        string SigType = ds.Tables[0].Rows[0]["SignatureProofType"].ToString();
 
-                                ddlIdentityProof.SelectedValue = idType;
-                                ddlAddressProof.SelectedValue = AddType;
-                                ddlSignature.SelectedValue = SigType;
+                        //        ddlIdentityProof.SelectedValue = idType;
+                        //        ddlAddressProof.SelectedValue = AddType;
+                        //        ddlSignature.SelectedValue = SigType;
 
-                            }
+                        //    }
 
-                            HidBCID.Value = RequestId.ToString();
-                            div_Upload.Visible = true;
-                            DIVDetails.Visible = false;
-                            DivBcDetails.Visible = false;
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Processed for Document Upload', 'BC Registration');", true);
-                            return;
-                        }
-                        else
-                        {
-                            ErrorLog.AgentManagementTrace("EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),"Warning", "showWarning('" + StatusMsg + "', 'Alert');", true);
-                            return;
-                        }
+                        //    HidBCID.Value = RequestId.ToString();
+                        //    div_Upload.Visible = true;
+                        //    DIVDetails.Visible = false;
+                        //    DivBcDetails.Visible = false;
+                        //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Processed for Document Upload', 'BC Registration');", true);
+                        //    return;
+                        //}
+                        //else
+                        //{
+                        //    ErrorLog.AgentManagementTrace("EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
+                        //    ScriptManager.RegisterStartupScript(this, typeof(Page),"Warning", "showWarning('" + StatusMsg + "', 'Alert');", true);
+                        //    return;
+                        //}
 
                     }
                 }
@@ -867,24 +867,24 @@ namespace SOR.Pages.BC
                     _BCEntity.SignatureProofType = ddlSignature.SelectedValue;
                     _BCEntity.BCReqId = HidBCID.Value;
 
-                    if (_BCEntity.Insert_BCRequest(Convert.ToString(Session["Username"]), out string RequestId, out string Status, out string StatusMsg))
-                    {
-                        ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
-                        DivBcDetails.Visible = true;
-                        _BCEntity.BCCode = RequestId.ToString();
-                        HidBCID.Value = RequestId.ToString();
-                        Bindreceipt();
-                        div_Upload.Visible = false;
-                        DivBcDetails.Visible = true;
-                        DIVDetails.Visible = false;
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Uploaded Successfully', 'BC Registration');", true);
-                    }
-                    else
-                    {
-                        ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
-                        ScriptManager.RegisterStartupScript(this, typeof(Page),"Warning", "showWarning('" + StatusMsg + "', 'Alert');", true);
-                        return;
-                    }
+                    //if (_BCEntity.Insert_BCRequest(Convert.ToString(Session["Username"]), out string RequestId, out string Status, out string StatusMsg))
+                    //{
+                    //    ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
+                    //    DivBcDetails.Visible = true;
+                    //    _BCEntity.BCCode = RequestId.ToString();
+                    //    HidBCID.Value = RequestId.ToString();
+                    //    Bindreceipt();
+                    //    div_Upload.Visible = false;
+                    //    DivBcDetails.Visible = true;
+                    //    DIVDetails.Visible = false;
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Uploaded Successfully', 'BC Registration');", true);
+                    //}
+                    //else
+                    //{
+                    //    ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page),"Warning", "showWarning('" + StatusMsg + "', 'Alert');", true);
+                    //    return;
+                    //}
                 }
             }
             catch (Exception Ex)
@@ -1180,20 +1180,42 @@ namespace SOR.Pages.BC
                    _BCEntity.BCReqId = HidBCID.Value.ToString();
                     _BCEntity.Activity = Convert.ToString(Session["RequestType"]);
                     _BCEntity.Flag = 2;
-                   DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
-                   if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
-                   {
-                       //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'BC Registration');", true);
-                       ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
-                       div_Upload.Visible = false;
-                       divOnboardFranchise.Visible = false;
-                       DivBcDetails.Visible = false;
-                       DIVDetails.Visible = false;
-                       ClearAllControls();
+                    //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
+                    //if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
+                    //{
+                    //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'BC Registration');", true);
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                    //    div_Upload.Visible = false;
+                    //    divOnboardFranchise.Visible = false;
+                    //    DivBcDetails.Visible = false;
+                    //    DIVDetails.Visible = false;
+                    //    ClearAllControls();
+                    //     Session["AGCode"] = string.Empty;
+                    //     Session["BCReqId"] = string.Empty;
+                    //     Response.Redirect("~/Pages/BC/BCRegistration.aspx", false);
+                    //     //HttpContext.Current.ApplicationInstance.CompleteRequest();
+                    // }
+                    // else
+                    // {
+                    //     ClearAllControls();
+                    // }
+                    string statusMessage = _BCEntity.SetInsertUpdateBCTrackerDetails();
+
+                    if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
+                    {
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                        div_Upload.Visible = false;
+                        divOnboardFranchise.Visible = false;
+                        DivBcDetails.Visible = false;
+                        DIVDetails.Visible = false;
+                        ClearAllControls();
                         Session["AGCode"] = string.Empty;
                         Session["BCReqId"] = string.Empty;
-                        Response.Redirect("~/Pages/BC/BCRegistration.aspx", false);
-                        //HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+                    }
+                    else if (statusMessage == "Updated")
+                    {
+                        // Handle the case when the record is updated
                     }
                     else
                     {

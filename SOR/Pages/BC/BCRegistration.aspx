@@ -964,7 +964,7 @@
                                                 <asp:ListItem Text="Termination" Value="3"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                        <div class="col">
+                                        <%--<div class="col">
                                             <label class="selectInputLabel" for="selectInputLabel">Bucket</label>
                                             <asp:DropDownList ID="ddlBucketId" runat="server" CssClass="maximus-select w-100" Width="100%" AutoPostBack="false">
                                                 <asp:ListItem Text="All" Value="-1"></asp:ListItem>
@@ -973,7 +973,7 @@
                                                 <asp:ListItem Text="Level -2" Value="2"></asp:ListItem>
                                                 <asp:ListItem Text="Level -3" Value="3"></asp:ListItem>
                                             </asp:DropDownList>
-                                        </div>
+                                        </div>--%>
                                         <div class="col">
                                             <label class="selectInputLabel" for="selectInputLabel">RequestStatus</label>
                                             <asp:DropDownList ID="ddlRequestStatus" runat="server" CssClass="maximus-select w-100" Width="100%" AutoPostBack="false">
@@ -1029,11 +1029,12 @@
                                         AllowPaging="true"
                                         CssClass="GridView"
                                         Visible="true"
+                                        PageSize="10"
                                         PagerSettings-Mode="NumericFirstLast"
                                         PagerSettings-FirstPageText="First Page"
                                         PagerSettings-LastPageText="Last Page"
                                         OnRowCommand="gvBCOnboard_RowCommand"
-                                        DataKeyNames="Bucket,Request Status,Request Type,ActivityType,BCReqId"
+                                        DataKeyNames="Bucket,RequestStatus,RequestType,ActivityType,BCReqId"
                                         OnPageIndexChanging="gvBCOnboard_PageIndexChanging"
                                         OnRowDataBound="gvBCOnboard_RowDataBound">
                                         <HeaderStyle HorizontalAlign="Center" Wrap="false" />
@@ -1065,11 +1066,10 @@
                                             <asp:BoundField DataField="BCName" HeaderText="BCName" />
                                             <asp:BoundField DataField="BCAddress" HeaderText="BCAddress" />
                                             <asp:BoundField DataField="ContactNo" HeaderText="ContactNo" />
-                                            <asp:BoundField DataField="Request Type" HeaderText="Request Type" />
+                                            <asp:BoundField DataField="RequestType" HeaderText="RequestType" />
                                             <asp:BoundField DataField="Bucket" HeaderText="Bucket" />
-                                            <asp:BoundField DataField="Request Status" HeaderText="Request Status" />
+                                            <asp:BoundField DataField="RequestStatus" HeaderText="RequestStatus" />
                                             <asp:BoundField DataField="ActivityType" HeaderText="ActivityType" Visible="false" />
-                                            <asp:BoundField DataField="Onboarding Status" HeaderText="Onboarding Status"/>
                                         </Columns>
                                         <HeaderStyle BackColor="#8DCCF6" ForeColor="#3D62B6" />
                                     </asp:GridView>
@@ -1290,7 +1290,7 @@
                                                                         <!-- input -->
                                                                         <div class="col" style="display:none">
                                                                             <label for="exampleInputEmail1">Country <span class="err">*</span></label>
-                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator15" ControlToValidate="ddlCountry" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select country"></asp:RequiredFieldValidator>
+                                                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator15" ControlToValidate="ddlCountry" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select country"></asp:RequiredFieldValidator>--%>
                                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCountry" Width="100%" AutoPostBack="true"></asp:DropDownList>
                                                                             <%--OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged"--%>
                                                                             <asp:HiddenField ID="hd_ddlCountry" runat="server" Value="1" />
@@ -1731,7 +1731,7 @@
                                                             <%--width: 196px;--%>
                                                             <div class="spk-img">
                                                                 <center>
-                                                                    <%--<img class="img-fluid" id="img1" src="<%=pathId%>" alt="trainer-img" style="height: 86px;width: 128px;" />--%></center>
+                                                                    <img class="img-fluid" id="img1" src="<%=pathId%>" alt="trainer-img" style="height: 86px;width: 128px;" /></center>
                                                                 <ul>
                                                                     <li>
                                                                         <asp:ImageButton ID="btnViewDownloadID" ImageUrl="../../images/download.png"  runat="server" Width="36px" Height="36px" Style="margin-left: -41px; margin-top: 9px;" ToolTip="View Doc" OnClick="DownloadDocOne_Click" />
@@ -1752,7 +1752,7 @@
                                                         <div class="speakers xs-mb30"  style="width: 132px; height: 108px;">
                                                             <div class="spk-img">
                                                                 <center>
-                                                                         <%--<img class="img-fluid" imageurl="<%=PathAdd%>" alt="trainer-img"  style="height: 86px;width: 128px;" />--%></center>
+                                                                         <img class="img-fluid" src="<%=PathAdd%>" alt="trainer-img"  style="height: 86px;width: 128px;" /></center>
                                                                 <ul>
                                                                     <li>
                                                                          <asp:ImageButton ID="btnViewDownloadAdd"  ImageUrl="../../images/download.png" runat="server" Width="36px" Height="36px" style="margin-left: -41px; margin-top: 9px;" ToolTip="View Doc" OnClick="DownloadDocTwo_Click" />
@@ -1774,7 +1774,7 @@
                                                         <div class="speakers xs-mb30"  style="width: 132px; height: 108px;">
                                                             <div class="spk-img">
                                                                 <center>
-                                                                          <%--<img class="img-fluid" src="<%=PathSig%>" alt="trainer-img" style="height: 86px;width: 128px;"  />--%></center>
+                                                                          <img class="img-fluid" src="<%=PathSig%>" alt="trainer-img" style="height: 86px;width: 128px;"  /></center>
                                                                 <ul>
                                                                     <li>
                                                                          <asp:ImageButton ID="btnViewDownloadSig"  ImageUrl="../../images/download.png" runat="server" Width="36px" Height="36px" style="margin-left: -41px; margin-top: 9px;" ToolTip="View Doc" OnClick="DownloadDocThree_Click"/>
@@ -1989,7 +1989,7 @@
                     $("#<%=ddlAddressProof.ClientID%>").select2();
                     $("#<%=ddlIdentityProof.ClientID%>").select2();
                     $("#<%=ddlSignature.ClientID%>").select2();
-                    $("#<%=ddlBucketId.ClientID%>").select2();
+                    <%--$("#<%=ddlBucketId.ClientID%>").select2();--%>
                     $("#<%=ddlRequestStatus.ClientID%>").select2();
                     $("#<%=ddlRequestType.ClientID%>").select2();
                     $("#<%=ddlDistrict.ClientID%>").select2();

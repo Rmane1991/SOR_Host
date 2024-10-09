@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="AddFileUpload.ashx.cs" Class="PayRakamSBM.Pages.BC.AddFileUpload" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="AddFileUpload.ashx.cs" Class="SOR.Pages.BC.AddFileUpload" %>

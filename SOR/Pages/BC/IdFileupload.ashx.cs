@@ -6,11 +6,10 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
-
-namespace SOR
+namespace SOR.Pages.BC
 {
     /// <summary>
-    /// Summary description for Fileupload
+    /// Summary description for IdFileupload
     /// </summary>
     public class IdFileupload : IHttpHandler, IRequiresSessionState
     {
@@ -18,7 +17,7 @@ namespace SOR
         public void ProcessRequest(HttpContext context)
         {
             string filedata = string.Empty;
-            string fname , filepath = string.Empty;
+            string fname, filepath = string.Empty;
             string filename = string.Empty;
 
 
@@ -63,10 +62,10 @@ namespace SOR
 
                     filedata = context.Session["PanNo"].ToString();
                     //filedata ="ADF4857bG";
-                    SaveFile(file, filedata,out filename,out filepath);
+                    SaveFile(file, filedata, out filename, out filepath);
                 }
             }
-           
+
             if (filepath != string.Empty && filename != string.Empty)
             {
                 context.Response.ContentType = "text/plain";
@@ -93,7 +92,7 @@ namespace SOR
         }
 
         #region SaveFile IdentityProof
-        private string SaveFile(HttpPostedFile fileUpload, string id,out string FileName,out string FilePath)
+        private string SaveFile(HttpPostedFile fileUpload, string id, out string FileName, out string FilePath)
         {
             try
             {
@@ -109,7 +108,7 @@ namespace SOR
                 FileThumbnail = FinalPathLocation + Path.GetFileNameWithoutExtension(fileUpload.FileName) + "_Thumbnail.png";
                 FinalPathLocation += fileUpload.FileName;
 
-               // string pdf_filename = @"D:\Transit\Sbm_Payrakam_new\taimur\New folder\Images\document-1_220422_110414 (1) (1).pdf";
+                // string pdf_filename = @"D:\Transit\Sbm_Payrakam_new\taimur\New folder\Images\document-1_220422_110414 (1) (1).pdf";
 
                 if (File.Exists(FinalPathLocation))
                 {
@@ -118,7 +117,7 @@ namespace SOR
 
                     if (Path.GetExtension(fileUpload.FileName) == ".pdf")
                     {
-                        string png_filename = Path.GetDirectoryName(FinalPathLocation)+"\\" + Path.GetFileNameWithoutExtension(FinalPathLocation) + "_Thumbnail.png";
+                        string png_filename = Path.GetDirectoryName(FinalPathLocation) + "\\" + Path.GetFileNameWithoutExtension(FinalPathLocation) + "_Thumbnail.png";
                         List<string> errors = cs_pdf_to_image.Pdf2Image.Convert(FinalPathLocation, png_filename);
                     }
                     else
@@ -142,7 +141,7 @@ namespace SOR
                 }
 
                 FileName = fileUpload.FileName;
-                FilePath = "OnBoarding Documents\\BCDocuments\\" + id + "\\" + "IdentityProof" + "\\"+ fileUpload.FileName;
+                FilePath = "OnBoarding Documents\\BCDocuments\\" + id + "\\" + "IdentityProof" + "\\" + fileUpload.FileName;
                 return FinalPathLocation;
             }
             catch (Exception Ex)

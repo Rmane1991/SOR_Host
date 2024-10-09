@@ -191,7 +191,7 @@
                     <div runat="server" class="form-group">
                         <label class="sr-only" for="inputName">User Name</label>
                         <asp:TextBox ID="txtUserName" runat="server" class="form-control" placeholder="Username or 10 digits Mobile No." MaxLength="30"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtUserName" SetFocusOnError="true" runat="server" CssClass="err" ErrorMessage="Please enter UserName "></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtUserName" SetFocusOnError="true" runat="server"></asp:RequiredFieldValidator>
                     </div>
                     <div runat="server" class="form-group" id="PasswordBox">
                         <label class="sr-only" for="inputPassword">Password</label>
