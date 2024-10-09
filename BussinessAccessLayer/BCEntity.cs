@@ -1703,7 +1703,7 @@ namespace BussinessAccessLayer
 
                         // Adding parameters with correct types
                         cmd.Parameters.AddWithValue("p_BCReqId", (object)BCReqId ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("p_Flag", int.TryParse(Flag, out int flagValue) ? (object)flagValue : DBNull.Value);
+                        //cmd.Parameters.AddWithValue("p_Flag", int.TryParse(Flag, out int flagValue) ? (object)flagValue : DBNull.Value);
                         cmd.Parameters.Add("p_Status", NpgsqlTypes.NpgsqlDbType.Varchar).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("p_RequestId", NpgsqlTypes.NpgsqlDbType.Varchar).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("p_StatusMsg", NpgsqlTypes.NpgsqlDbType.Varchar).Direction = ParameterDirection.Output;
