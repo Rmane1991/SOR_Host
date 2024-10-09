@@ -11,7 +11,7 @@
 
     <script src="../../NewStyle/script.js"></script>
     <link href="../../NewStyle/styles.css" rel="stylesheet" />
-
+    <%--<link href="../../NewStyle/styles.css" rel="stylesheet" />--%>
     <style>
         /*.mb-2 {
             font-weight: bold;
@@ -25,10 +25,6 @@
             background-color: none;
         }
         
-
-
-
-
         .formcontrol {
             width: 200px;
             height: 25px;

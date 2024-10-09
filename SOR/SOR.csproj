@@ -1224,6 +1224,7 @@
     </Compile>
     <Compile Include="pdfhandler.aspx.cs">
       <DependentUpon>pdfhandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pdfhandler.aspx.designer.cs">
       <DependentUpon>pdfhandler.aspx</DependentUpon>
