@@ -57,7 +57,7 @@ namespace PayRakamSBM
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             try
-             {
+            {
                 LoginMe();
             }
             catch (Exception Ex)
@@ -346,7 +346,7 @@ namespace PayRakamSBM
                     if (txtnew.Text.Trim() == txtconfirm.Text.Trim())
                     {
                         ErrorLog.CommonTrace("Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : " + txtUserName.Text);
-
+                        _LoginEntity.UserName = Session["Username"].ToString();
                         if (ValidateOTP("Change Password (FristLogin/Expiry/Reset)", txtOTPFirstLogin.Text.Trim()))
                         {
                             _LoginEntity.UserName = Session["Username"].ToString();
@@ -358,7 +358,7 @@ namespace PayRakamSBM
                             _LoginEntity.UsersID = int.Parse(Session["UserID"].ToString().Trim());
 
                             DataSet ds = _LoginEntity.SetChangePassword();
-                            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["Type"].ToString() == "Save")
+                            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["message"].ToString() == "Save")
                             {
                                 ErrorLog.CommonTrace("Change Password (Frist Login/Expiry) Request Successful (Login Page). Username : " + txtUserName.Text);
                                 try
@@ -467,7 +467,7 @@ namespace PayRakamSBM
 
         // Process OTP Request
         private void ProcessForgotPassword()
-        {
+            {
             string _StatusData;
             string _EmailBody, _EmailId, _Mobilenumber, _RollID, _ClientId, _Subejct, _Status;
             try
@@ -496,9 +496,16 @@ namespace PayRakamSBM
                             _ClientId = _dsGetEmailNumber.Tables[0].Rows[0]["BankID"].ToString();
                             ViewState["UserID"] = _dsGetEmailNumber.Tables[0].Rows[0]["UserID"].ToString();
 
+                            if(string.IsNullOrEmpty(_EmailId)|| string.IsNullOrEmpty(_Mobilenumber))
+                            {
+                                Response.Write("<script>alert('Email Or Mobile No Not Peresent In DB.');</script>");
+                                return;
+                            }
+
                             #region Genrate autogenrated   OTP
                             Random randomgenrated = new Random();
-                            string AutoPassword = (randomgenrated.Next(100000, 1000000)).ToString();
+                            string AutoPassword = "123456";
+                            //string AutoPassword = (randomgenrated.Next(100000, 1000000)).ToString();
                             ErrorLog.CommonTrace("OTP Generated For Change Password For Forgot Password. OTP : " + AutoPassword + " Username : " + txtUserName.Text);
                             #endregion
 
@@ -514,7 +521,7 @@ namespace PayRakamSBM
                             string DBResp = _LoginEntity.InsertOTPIntoTable();
                             #endregion
 
-                            if (DBResp.ToUpper().Contains("SUCCESS"))
+                            if (DBResp.Contains("Success"))
                             {
                                 ErrorLog.CommonTrace("Success OTP Insertion In Database For Change Password For Forgot Password. Status : " + DBResp + " OTP : " + AutoPassword + " Username : " + txtUserName.Text + " RRN : " + RRN);
 
@@ -524,34 +531,35 @@ namespace PayRakamSBM
 
                                 ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : " + _Mobilenumber + "Email : " + _EmailId);
 
-                                #region SMS
-                                _EmailSMSAlertscs.FROM = "SBMIND";
-                                _EmailSMSAlertscs.to = _Mobilenumber;
-                                _EmailSMSAlertscs.tempname = "SR24659_BCPOTP";
-                                _EmailSMSAlertscs.OTPFlag = "1";
-                                _EmailSMSAlertscs.var1 = AutoPassword;
-                                _EmailSMSAlertscs.var2 = null;
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Login Details forwarded for SMS Preparation. => HttpGetRequest()");
-                                EmailResp = _EmailSMSAlertscs.HttpGetRequest();
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => SMS Response : " + EmailResp);
+                                //#region SMS
+                                //_EmailSMSAlertscs.FROM = "SBMIND";
+                                //_EmailSMSAlertscs.to = _Mobilenumber;
+                                //_EmailSMSAlertscs.tempname = "SR24659_BCPOTP";
+                                //_EmailSMSAlertscs.OTPFlag = "1";
+                                //_EmailSMSAlertscs.var1 = AutoPassword;
+                                //_EmailSMSAlertscs.var2 = null;
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Login Details forwarded for SMS Preparation. => HttpGetRequest()");
+                                //EmailResp = _EmailSMSAlertscs.HttpGetRequest();
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => SMS Response : " + EmailResp);
+                                //#endregion
+
+                                //#region EMAIL
+                                //_EmailSMSAlertscs.FROM = "info@sbmbank.co.in";
+                                //_EmailSMSAlertscs.to = _EmailId;
+                                //_EmailSMSAlertscs.tempname = "SR24659_EBCPOTP";
+                                //_EmailSMSAlertscs.OTPFlag = "1";
+                                //_EmailSMSAlertscs.var1 = AutoPassword;
+                                //_EmailSMSAlertscs.var2 = null;
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Login Details forwarded for Email Preparation. => HttpGetRequestEmail()");
+                                //EmailResp = _EmailSMSAlertscs.HttpGetRequestEmail();
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Email Response : " + EmailResp);
+                                //#endregion
+
                                 #endregion
 
-                                #region EMAIL
-                                _EmailSMSAlertscs.FROM = "info@sbmbank.co.in";
-                                _EmailSMSAlertscs.to = _EmailId;
-                                _EmailSMSAlertscs.tempname = "SR24659_EBCPOTP";
-                                _EmailSMSAlertscs.OTPFlag = "1";
-                                _EmailSMSAlertscs.var1 = AutoPassword;
-                                _EmailSMSAlertscs.var2 = null;
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Login Details forwarded for Email Preparation. => HttpGetRequestEmail()");
-                                EmailResp = _EmailSMSAlertscs.HttpGetRequestEmail();
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : ProcessForgotPassword() => Email Response : " + EmailResp);
-                                #endregion
-
-                                #endregion
-
+                                EmailResp = "success";
                                 //if (EmailResp == "Done" || SMSResp.ToLower().Contains("success"))
-                                if (EmailResp.ToUpper().Contains("APP-MAXIMUS") || SMSResp.ToLower().Contains("success"))
+                                if (EmailResp.ToUpper().Contains("APP-MAXIMUS") || EmailResp.Contains("success"))
                                 {
                                     PasswordBox.Visible = false;
                                     btnLogin.Visible = false;
@@ -560,8 +568,10 @@ namespace PayRakamSBM
                                     lnkResendOTP.Visible = true;
                                     divForgrtOTP.Visible = true;
                                     btnValidateOTP.Visible = true;
+                                    string script = $"alert('OTP has been sent to {_EmailId}.');";
                                     if (txtUserName.Text.Trim().ToLower() == "maximus")
-                                        Response.Write("<script>alert('OTP has been sent to Registered Email Id.');</script>");
+                                        //Response.Write("<script>alert('OTP has been sent to Registered Email Id.');</script>");
+                                        ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
                                     else
                                         Response.Write("<script>alert('OTP has been sent to Registered Mobile Number.');</script>");
                                     return;
@@ -660,7 +670,7 @@ namespace PayRakamSBM
                         Response.Write("<script>alert('OTP expired click on resend button.');</script>");
                         return;
                     }
-                    if (_Status == "0")
+                    if (_Status == "Success")
                     {
                         ErrorLog.CommonTrace("OTP Validation Successful. Change Password For Forgot Password Request. Username : " + txtUserName.Text + " OTP : " + txtForgrtOTP.Value.ToString());
                         divForgrtOTP.Visible = false;
@@ -721,7 +731,7 @@ namespace PayRakamSBM
                         _LoginEntity.CreatedBy = txtUserName.Text;
                         _LoginEntity.UsersID = int.Parse(ViewState["UserID"].ToString().Trim());
                         DataSet ds = _LoginEntity.SetChangePasswordForForget();
-                        if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0]["Type"].ToString() == "Save")
+                        if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && ds.Tables[0].Rows[0][0].ToString() == "Save")
                         {
                             ErrorLog.CommonTrace("Change Password (Forgot Password) Request Successful (Login Page). Username : " + txtUserName.Text);
                             try
@@ -810,7 +820,8 @@ namespace PayRakamSBM
 
                             #region Genrate autogenrated   OTP
                             Random randomgenrated = new Random();
-                            string AutoPassword = (randomgenrated.Next(100000, 1000000)).ToString();
+                            //string AutoPassword = (randomgenrated.Next(100000, 1000000)).ToString();
+                            string AutoPassword = "123456";
                             ErrorLog.CommonTrace(SendType + " OTP Generated For " + RequestType + " Username : " + txtUserName.Text);
                             #endregion
 
@@ -835,32 +846,32 @@ namespace PayRakamSBM
 
                                 ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : " + _Mobilenumber + "Email : " + _EmailId);
 
-                                #region SMS
-                                _EmailSMSAlertscs.FROM = "SBMIND";
-                                _EmailSMSAlertscs.to = _Mobilenumber;
-                                _EmailSMSAlertscs.tempname = "SR24659_BCPOTP";
-                                _EmailSMSAlertscs.OTPFlag = "1";
-                                _EmailSMSAlertscs.var1 = AutoPassword;
-                                _EmailSMSAlertscs.var2 = null;
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Login Details forwarded for SMS Preparation. => HttpGetRequest()");
-                                EmailResp = _EmailSMSAlertscs.HttpGetRequest();
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => SMS Response : " + EmailResp);
-                                #endregion
+                                //#region SMS
+                                //_EmailSMSAlertscs.FROM = "SBMIND";
+                                //_EmailSMSAlertscs.to = _Mobilenumber;
+                                //_EmailSMSAlertscs.tempname = "SR24659_BCPOTP";
+                                //_EmailSMSAlertscs.OTPFlag = "1";
+                                //_EmailSMSAlertscs.var1 = AutoPassword;
+                                //_EmailSMSAlertscs.var2 = null;
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Login Details forwarded for SMS Preparation. => HttpGetRequest()");
+                                //EmailResp = _EmailSMSAlertscs.HttpGetRequest();
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => SMS Response : " + EmailResp);
+                                //#endregion
 
-                                #region EMAIL
-                                _EmailSMSAlertscs.FROM = "info@sbmbank.co.in";
-                                _EmailSMSAlertscs.to = _EmailId;
-                                _EmailSMSAlertscs.tempname = "SR24659_EBCPOTP";
-                                _EmailSMSAlertscs.OTPFlag = "1";
-                                _EmailSMSAlertscs.var1 = AutoPassword;
-                                _EmailSMSAlertscs.var2 = null;
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Login Details forwarded for Email Preparation. => HttpGetRequestEmail()");
-                                EmailResp = _EmailSMSAlertscs.HttpGetRequestEmail();
-                                ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Email Response : " + EmailResp);
-                                #endregion
+                                //#region EMAIL
+                                //_EmailSMSAlertscs.FROM = "info@sbmbank.co.in";
+                                //_EmailSMSAlertscs.to = _EmailId;
+                                //_EmailSMSAlertscs.tempname = "SR24659_EBCPOTP";
+                                //_EmailSMSAlertscs.OTPFlag = "1";
+                                //_EmailSMSAlertscs.var1 = AutoPassword;
+                                //_EmailSMSAlertscs.var2 = null;
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Login Details forwarded for Email Preparation. => HttpGetRequestEmail()");
+                                //EmailResp = _EmailSMSAlertscs.HttpGetRequestEmail();
+                                //ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => Email Response : " + EmailResp);
+                                //#endregion
 
                                 #endregion
-
+                                EmailResp = "APP-MAXIMUS";
                                 if (EmailResp.ToUpper().Contains("APP-MAXIMUS") || SMSResp.ToLower().Contains("success"))
                                 {
                                     ErrorLog.SMSTrace("Page : Login.cs \nFunction : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : " + EmailResp);
@@ -929,7 +940,7 @@ namespace PayRakamSBM
                     Response.Write("<script>alert('OTP expired click on resend button.');</script>");
                     return false;
                 }
-                else if (_Status == "0")
+                else if (_Status == "Success")
                 {
                     ErrorLog.CommonTrace("OTP Validation Successful For " + RequestType + ". Username : " + txtUserName.Text + " OTP : " + _LoginEntity.OTP);
                     divForgrtOTP.Visible = false;

@@ -1,0 +1,27 @@
+Time : 21-Nov-2024 11:48 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 12
+Time : 21-Nov-2024 11:56 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 13
+Time : 21-Nov-2024 11:56 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 13
+Time : 21-Nov-2024 12:04 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 13 Fullname: \xc30d04070302c668e27044b099c576d23e01dabbf3010bf0d7bd0d44b4856fbd0895124e51d9e9cbba797d67cee96d9e69fb1724092511523a4bf32e8338b6c1e2b7ff5ec46fe4130893aae7a2bda3 User: Maximus ReceiverEmailID: xyz31@gmail.com ContactNo: 9875461231 Remarks: Approve.
+Time : 21-Nov-2024 12:04 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 13 Fullname: \xc30d04070302c668e27044b099c576d23e01dabbf3010bf0d7bd0d44b4856fbd0895124e51d9e9cbba797d67cee96d9e69fb1724092511523a4bf32e8338b6c1e2b7ff5ec46fe4130893aae7a2bda3 User: Maximus ReceiverEmailID: xyz31@gmail.com ContactNo: 9875461231 Remarks: Approve.ActivityType: 0
+Time : 21-Nov-2024 12:04 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 21-Nov-2024 12:04 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 21-Nov-2024 12:04 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 21-Nov-2024 12:04 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 21-Nov-2024 12:04 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 21-Nov-2024 12:46 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 7
+Time : 21-Nov-2024 12:46 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 7
+Time : 21-Nov-2024 12:46 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 7 Fullname: BCserviceinfo User: Maximus ReceiverEmailID: xyz35251@gmail.com ContactNo: 9875461254 Remarks: Approve.
+Time : 21-Nov-2024 12:46 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 7 Fullname: BCserviceinfo User: Maximus ReceiverEmailID: xyz35251@gmail.com ContactNo: 9875461254 Remarks: Approve.ActivityType: 0
+Time : 21-Nov-2024 12:46 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.

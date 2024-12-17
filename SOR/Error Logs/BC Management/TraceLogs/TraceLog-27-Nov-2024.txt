@@ -1,0 +1,39 @@
+Time : 27-Nov-2024 18:19 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 17
+Time : 27-Nov-2024 18:20 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 17
+Time : 27-Nov-2024 18:21 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 17
+Time : 27-Nov-2024 18:21 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 17
+Time : 27-Nov-2024 18:22 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 18
+Time : 27-Nov-2024 18:22 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 18
+Time : 27-Nov-2024 18:23 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Vakrangi User: Maximus ReceiverEmailID: xyz12@gmail.com ContactNo: 8954621312 Remarks: Approve.
+Time : 27-Nov-2024 18:23 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Vakrangi User: Maximus ReceiverEmailID: xyz12@gmail.com ContactNo: 8954621312 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:23 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 27-Nov-2024 18:23 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 27-Nov-2024 18:23 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:23 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 27-Nov-2024 18:24 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 19
+Time : 27-Nov-2024 18:24 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 19
+Time : 27-Nov-2024 18:25 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 19
+Time : 27-Nov-2024 18:26 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 19
+Time : 27-Nov-2024 18:26 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 19 Fullname: PAYINC User: Maximus ReceiverEmailID: xyz533@gmail.com ContactNo: 8954621333 Remarks: Approve.
+Time : 27-Nov-2024 18:26 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 19 Fullname: PAYINC User: Maximus ReceiverEmailID: xyz533@gmail.com ContactNo: 8954621333 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:26 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 27-Nov-2024 18:27 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 20
+Time : 27-Nov-2024 18:27 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 20
+Time : 27-Nov-2024 18:27 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 20 Fullname: Quicksun User: Maximus ReceiverEmailID: xyz56@gmail.com ContactNo: 8954621365 Remarks: Approve.
+Time : 27-Nov-2024 18:27 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 20 Fullname: Quicksun User: Maximus ReceiverEmailID: xyz56@gmail.com ContactNo: 8954621365 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:27 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 27-Nov-2024 18:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 21
+Time : 27-Nov-2024 18:28 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 21
+Time : 27-Nov-2024 18:28 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 21 Fullname: Accupaydtech User: Maximus ReceiverEmailID: xy86z@gmail.com ContactNo: 8954621368 Remarks: Approve.
+Time : 27-Nov-2024 18:28 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 21 Fullname: Accupaydtech User: Maximus ReceiverEmailID: xy86z@gmail.com ContactNo: 8954621368 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:28 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 27-Nov-2024 18:29 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 22
+Time : 27-Nov-2024 18:29 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 22
+Time : 27-Nov-2024 18:30 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 22 Fullname: PaymentBazar User: Maximus ReceiverEmailID: xy86899@gmail.com ContactNo: 8954621398 Remarks: Approve.
+Time : 27-Nov-2024 18:30 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 22 Fullname: PaymentBazar User: Maximus ReceiverEmailID: xy86899@gmail.com ContactNo: 8954621398 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:30 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 27-Nov-2024 18:30 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 23
+Time : 27-Nov-2024 18:31 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 23
+Time : 27-Nov-2024 18:31 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 23 Fullname: SEVENXFINTECH User: Maximus ReceiverEmailID: xy8689914@gmail.com ContactNo: 8954621314 Remarks: Approve.
+Time : 27-Nov-2024 18:31 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 23 Fullname: SEVENXFINTECH User: Maximus ReceiverEmailID: xy8689914@gmail.com ContactNo: 8954621314 Remarks: Approve.ActivityType: 0
+Time : 27-Nov-2024 18:31 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.

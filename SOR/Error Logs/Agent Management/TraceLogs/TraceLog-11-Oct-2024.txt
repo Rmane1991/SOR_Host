@@ -1,0 +1,15 @@
+Time : 11-Oct-2024 12:42 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: function sp_bcstatus(p_VerificationLevel => unknown, p_OperationType => unknown, p_Status => integer, p_BCStatus => unknown, p_CHStatus => unknown, p_Authstatus => unknown, p_ActivityType => integer, p_User => unknown, p_Flag => integer) does not exist
+Time : 11-Oct-2024 12:48 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: function sp_bcstatus(p_VerificationLevel => unknown, p_OperationType => unknown, p_Status => integer, p_BCStatus => unknown, p_CHStatus => unknown, p_Authstatus => unknown, p_ActivityType => integer, p_User => unknown, p_Flag => integer) does not exist
+Time : 11-Oct-2024 12:54 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42P01: relation "agentmaster" does not exist
+Time : 11-Oct-2024 12:55 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column am.agentreqid does not exist
+Time : 11-Oct-2024 13:01 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: bit = integer
+Time : 11-Oct-2024 13:04 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 13:07 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 13:09 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42804: argument of IS TRUE must be type boolean, not type bit
+Time : 11-Oct-2024 13:10 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42601: syntax error at or near "THEN"
+Time : 11-Oct-2024 13:11 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42846: cannot cast type bit to boolean
+Time : 11-Oct-2024 14:16 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 14:25 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 14:25 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: bit = integer
+Time : 11-Oct-2024 14:28 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 14:29 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42883: operator does not exist: integer = character varying

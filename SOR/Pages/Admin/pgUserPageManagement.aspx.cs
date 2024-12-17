@@ -57,29 +57,29 @@ namespace SOR.Pages.Admin
             {
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
-                      bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgUserPageManagement.aspx", "12");
-                      if (!HasPagePermission)
-                      {
-                          try
-                          {
-                              Response.Redirect(ConfigurationManager.AppSettings["RedirectTo404"].ToString(), false);
-                              HttpContext.Current.ApplicationInstance.CompleteRequest();
-                          }
-                          catch (ThreadAbortException)
-                          {
-                          }
-                      }
-                      else
-                      {
-                    if (!IsPostBack && HasPagePermission)
-                {
+                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgUserPageManagement.aspx", "6");
+                    if (!HasPagePermission)
+                    {
+                        try
+                        {
+                            Response.Redirect(ConfigurationManager.AppSettings["RedirectTo404"].ToString(), false);
+                            HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        }
+                        catch (ThreadAbortException)
+                        {
+                        }
+                    }
+                    else
+                    {
+                        if (!IsPostBack && HasPagePermission)
+                        {
                             hidTAB.Value = "#home";
-                            UserPermissions.RegisterStartupScriptForNavigationList("2", "12", "SearchPages", "docket-tab");
+                            UserPermissions.RegisterStartupScriptForNavigationList("2", "6", "SearchPages", "docket-tab");
                             BindDropdowns();
                             BindDropdownClientDetails();
                             FillGrid();
-                       }
-                       }
+                        }
+                    }
                 }
                 else
                 {
@@ -132,7 +132,7 @@ namespace SOR.Pages.Admin
                     panelGrid.Visible = false;
                     gvPages.Visible = false;
                     lblRecordCount.Text = "Total 0 Record(s) Found.";
-                    
+
                 }
             }
             catch (Exception Ex)
@@ -140,7 +140,7 @@ namespace SOR.Pages.Admin
                 ErrorLog.AdminManagementTrace("pgUserPageManagement: FillGrid: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 throw;
-            }            
+            }
             return _dsUsersList;
         }
 
@@ -167,7 +167,7 @@ namespace SOR.Pages.Admin
                             ddlClient.DataSource = _dsClient.Tables[0].Copy();
                             ddlClient.DataTextField = "ClientName";
                             ddlClient.DataValueField = "ClientID";
-                         
+
                             ddlClient.DataBind();
 
                             ddlClientForMenu.Items.Clear();
@@ -1128,5 +1128,59 @@ namespace SOR.Pages.Admin
             return pageFilters;
         }
         #endregion
+
+        protected void ddlMenuMapping_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ddlSubMenuMapping.Items.Clear();
+                ddlSubMenuMapping.DataSource = null;
+                ddlSubMenuMapping.DataBind();
+                DataSet _dsPages = new DataSet();
+
+                _UserManagement._UserName = Session["Username"].ToString();
+                _UserManagement._MenuID = ddlMenuMapping.SelectedValue.ToString();
+                _UserManagement.Flag = (int)EnumCollection.EnumBindingType.BindGrid;
+
+                _dsPages = _UserManagement.BindSubMenu();
+                if (_dsPages != null && _dsPages.Tables[0].Rows.Count > 0 && _dsPages.Tables[0].Rows.Count > 0)
+                {
+                    if (_dsPages.Tables[0].Rows.Count == 1)
+                    {
+                        ddlSubMenuMapping.Items.Clear();
+                        ddlSubMenuMapping.DataSource = _dsPages.Tables[0].Copy();
+                        ddlSubMenuMapping.DataTextField = "SubMenuName";
+                        ddlSubMenuMapping.DataValueField = "SubMenuID";
+                        ddlSubMenuMapping.DataBind();
+                        ddlSubMenuMapping.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select --", "0"));
+                    }
+                    else
+                    {
+                        ddlSubMenuMapping.Items.Clear();
+                        ddlSubMenuMapping.DataSource = _dsPages.Tables[0].Copy();
+                        ddlSubMenuMapping.DataTextField = "SubMenuName";
+                        ddlSubMenuMapping.DataValueField = "SubMenuID";
+                        ddlSubMenuMapping.DataBind();
+                        ddlSubMenuMapping.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select --", "0"));
+                    }
+                }
+                else
+                {
+                    ddlSubMenuMapping.DataSource = null;
+                    ddlSubMenuMapping.DataBind();
+                    ddlSubMenuMapping.Items.Insert(0, new ListItem("No Data Found", "0"));
+                }
+                TabName.Value = "MapPages";
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false); return;
+            }
+            catch (Exception ex)
+            {
+                TabName.Value = "MapPages";
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
+                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : FillBc()\nException Occured\n" + ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Agent Registration');", true);
+                return;
+            }
+        }
     }
 }

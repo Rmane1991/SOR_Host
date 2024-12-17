@@ -1,0 +1,7 @@
+Time : 25-Oct-2024 12:13 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 22023: cannot call jsonb_to_recordset on a non-array
+Time : 25-Oct-2024 12:24 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 25-Oct-2024 12:24 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 25-Oct-2024 15:09 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 25-Oct-2024 16:27 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 25-Oct-2024 16:28 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 22023: cannot call jsonb_to_recordset on a non-array
+Time : 25-Oct-2024 17:00 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

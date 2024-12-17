@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SOR.master.cs" Inherits="SOR.SOR" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html>
 <html>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <title>PayRakam</title>
+    <title>Proxima-SOR</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="././images/favicon.ico" />
     <!-- bootstrap CDN -->
@@ -17,8 +18,8 @@
     <link href="./css/bootstrap-datepicker.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/icons.css">
     <!-- OWN CSS -->
-         <link href="./css/Thumbnil.css" rel="stylesheet">
-    
+    <link href="./css/Thumbnil.css" rel="stylesheet">
+
     <link href="./css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tables.css">
@@ -33,33 +34,40 @@
             font-size: 80%;
             border-radius: 30px;
         }
+
         div.dataTables_scrollHead {
             border-radius: 6px;
         }
+
         div.datatables_filter {
             padding: 10px;
         }
+
         div.dataTables_length {
             padding: 10px;
         }
+
         div.dataTables_info {
             padding: 10px;
         }
+
         div.dataTables_paginate paging_simple_numbers {
             padding: 30px;
             font-size: 50%;
         }
+
         table.dataTable thead tr {
             background-color: #fbd2ce;
             background-size: 20%;
         }
     </style>
-    
+
     <style>
         /* width */
         ::-webkit-scrollbar {
             width: 10px;
         }
+
             ::-webkit-scrollbar:horizontal {
                 height: 10px;
             }
@@ -80,31 +88,37 @@
         .form-group {
             margin-bottom: 15px;
         }
+
         .GridView {
             width: 100%;
             height: auto;
             overflow-y: auto;
             border: solid 0px #B9B9B9 !important;
         }
+
             .GridView table {
                 width: 100%;
                 border-collapse: collapse;
             }
+
             .GridView th {
                 background: #fbd2ce;
                 color: black;
                 font-weight: bold !important;
                 padding: 4px 20px 4px 4px !important;
             }
+
             .GridView td {
                 background: none;
                 color: #420629;
                 padding: 5px;
                 border: 1px solid #CCC;
             }
+
             .GridView tr:nth-child(even) {
                 background: #eaecff !important;
             }
+
             .GridView tr:nth-child(odd) {
                 background: #FFF !important;
             }
@@ -119,10 +133,12 @@
             width: 250px;
             opacity: 0.7;
         }
+
         .modal-header {
             padding: 15px;
             border-bottom: 1px solid #e5e5e5;
         }
+
         .modal-content {
             position: relative;
             background-color: #fff;
@@ -133,10 +149,12 @@
             border-radius: 6px;
             outline: 0;
         }
+
         .modal-body {
             position: relative;
             padding: 15px;
         }
+
         .modalBackground {
             filter: alpha(opacity=70);
             background-color: lightgray;
@@ -146,10 +164,12 @@
             width: 250px;
             opacity: 0.7;
         }
+
         .modal-header {
             padding: 15px;
             border-bottom: 1px solid #e5e5e5;
         }
+
         .modal-content {
             position: relative;
             background-color: #fff;
@@ -160,10 +180,29 @@
             border-radius: 6px;
             outline: 0;
         }
+
         .modal-body {
             position: relative;
             padding: 15px;
         }
+    </style>
+    <style>
+        /*.accordion-button.collapsed .sidebar-icons {
+            display: block; 
+            font-size: 20px;
+        }
+
+        .accordion-button.collapsed h5 {
+            display: none; 
+        }
+
+        .accordion-button:not(.collapsed) .sidebar-icons {
+            display: none; 
+        }
+
+        .accordion-button:not(.collapsed) h5 {
+            display: block;
+        }*/
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -211,13 +250,12 @@
                             <span class="icon-hamburger"></span>
                         </button>
                         <span id="navbar-module" class="navbar-module" data-bs-toggle="tooltip"
-                            <%--data-bs-placement="bottom" data-bs-title="Version 6.0.0"--%>
-                            >
-                            <img src="../../images/nsdl.PNG" class="module-logo" alt="module_logo" style="width:127px">
-                            <img src="../../images/nsdl.PNG" class="module-dark-logo" alt="module_logo">
+                            <%--data-bs-placement="bottom" data-bs-title="Version 6.0.0"--%>>
+                            <img src="../../images/nsdl.jpg" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">
+                            <img src="../../images/nsdl.jpg" class="module-dark-logo" alt="module_logo">
                         </span>
                     </div>
-                    <p class="session-time-text" style="display:none">Session : <span id="time-left"></span></p>
+                    <p class="session-time-text" style="display: none">Session : <span id="time-left"></span></p>
                     <%--Redirect in <span id="time-left"></span>--%>
                     <asp:LinkButton ID="lnkFake" runat="server" />
                 </div>
@@ -230,7 +268,7 @@
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                     </button>
                                     <ul class="nav-popover-list nav-setting-dropdown dropdown-menu">
-                                      <%--  <li class="nav-popover-item"><a type="button" class="nav-popoverBtns" data-bs-toggle="modal"
+                                        <%--  <li class="nav-popover-item"><a type="button" class="nav-popoverBtns" data-bs-toggle="modal"
                                             data-bs-target="#siteConfigModal">Site Configuration</a></li>--%>
                                         <li class="nav-popover-item default-theme-item"><a type="button" class="nav-popoverBtns"
                                             data-bs-toggle="modal" data-bs-target="#defaultThemeModal">Default Theme</a></li>
@@ -258,7 +296,7 @@
                                     <button class="nav-user-btn  nav-links-btn" type="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         <span class="icon-user nav-link-icons"></span>
-                                        <div class="user-box" style="color:#FFFFFF">
+                                        <div class="user-box" style="color: #FFFFFF">
                                             <asp:Label ID="lblWelcome" runat="server"></asp:Label>
                                         </div>
                                     </button>
@@ -287,12 +325,12 @@
                             <div class="accordion" id="accordionExample2">
                                 <!-- accordion Item with body -->
                                 <asp:Literal ID="accordionExamplesd" runat="server"></asp:Literal>
-                              
+
                             </div>
                         </div>
                     </div>
                     <!-- slider -->
-                    <button id="slider-btn2" class="slider-btn icon-slider-arrow" class="btn-close" data-bs-dismiss="offcanvas">
+                    <button id="slider-btn2" class="slider-btn icon-slider-arrow rotate" class="btn-close" data-bs-dismiss="offcanvas">
                     </button>
                 </div>
             </div>
@@ -302,19 +340,24 @@
             <div class="sidebar">
                 <!-- sidebar open -->
                 <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
-                <div class="sidebar-open" style="overflow:auto; max-height:600px">
+                <div class="sidebar-open" style="overflow: auto; max-height: 600px">
                     <!-- accordion -->
                     <div class="accordion" id="accordionExample">
-                         <!-- accordion Item with body -->
+                        <!-- accordion Item with body -->
                         <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                     </div>
 
-                   
+
                 </div>
                 <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
                 <!-- sidebar closed -->
                 <div class="sidebar-closed">
-                   <%-- <ul>
+                    <div class="accordion" id="accordionExample">
+                        <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+
+<%--                        <asp:Literal ID="Literal2" runat="server"></asp:Literal>--%>
+                    </div>
+                    <%-- <ul>
                         <!-- List Item with body -->
                         <li>
                             <a class="closedSidebarBtn icon-dashboard" data-bs-toggle="popover" data-bs-placement="right"
@@ -402,21 +445,22 @@
                     </ul>--%>
                 </div>
                 <!-- slider -->
-                <button id="slider-btn" class="slider-btn icon-slider-arrow" onclick="return false;">
+                <button id="slider-btn" class="slider-btn icon-slider-arrow rotate" onclick="return false;">
                 </button>
             </div>
             <div class="main-window" style="margin-bottom: 250px;">
                 <div>
-                    <asp:ContentPlaceHolder ID="CPHMasterMain" runat="server"  >
+                    <asp:ContentPlaceHolder ID="CPHMasterMain" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>
         <footer class="main-footer">
             <p class="main-footer-text">
-                © Maximus Infoware (India) Private Limited 2022
+                © Maximus Infoware (India) Private Limited <%= DateTime.Now.Year %>
             </p>
         </footer>
+
         <!-- Modals -->
         <section id="modal-section">
             <!-- theme modal - Default -->
@@ -511,7 +555,7 @@
                 </div>
             </div>
             <!-- filter Reset Modal -->
-           <%-- <div class="modal commmonModal filtersmodal resetFilterModal fade" id="resetFilterModal" tabindex="-1"
+            <%-- <div class="modal commmonModal filtersmodal resetFilterModal fade" id="resetFilterModal" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -527,7 +571,7 @@
                 </div>
             </div>--%>
             <!-- filter Search Modal -->
-          <%--  <div class="modal commmonModal SearchFilterModal filtersmodal fade" id="SearchFilterModal" tabindex="-1"
+            <%--  <div class="modal commmonModal SearchFilterModal filtersmodal fade" id="SearchFilterModal" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -567,8 +611,8 @@
         </section>
         <!-- JS Libraries -->
         <script src="../../js/bootstrap.bundle.min.js"></script>
-         <script src="../../scripts/jquery-3.3.1.js"></script>
-<%--        <script src="../../js/jquery-3.6.1.slim.js"></script>--%>
+        <script src="../../scripts/jquery-3.3.1.js"></script>
+        <%--        <script src="../../js/jquery-3.6.1.slim.js"></script>--%>
 
         <script src="../../js/select2.min.js"></script>
         <script src="../../js/bootstrap-datepicker.min.js"></script>
@@ -588,8 +632,8 @@
                 });
             });
         </script>
-         <%--<script src="../../assets/vendor/toastr/jquery.min.js" type="text/jscript"></script>--%>
-         
+        <%--<script src="../../assets/vendor/toastr/jquery.min.js" type="text/jscript"></script>--%>
+
         <script src="../../assets/vendor/toastr/toastr.min.js" type="text/jscript"></script>
         <script type="text/javascript">
             function showDefault(msg, title) {
@@ -790,6 +834,24 @@
                 });
             }
         </script>--%>
+        <script>
+            // You can add an event listener to change the visibility when the sidebar collapses or expands
+// Example JavaScript for toggling icons when sidebar is closed
+//function toggleSidebarIcon(isClosed) {
+//    var iconElements = document.querySelectorAll('.accordion-button .sidebar-headings span');
+//    iconElements.forEach(function(icon) {
+//        if (isClosed) {
+//            icon.classList.remove('fa-chevron-down');  // Replace with the collapsed state icon
+//            icon.classList.add('fa-chevron-up');       // Replace with the expanded state icon
+//        } else {
+//            icon.classList.remove('fa-chevron-up');    // Revert icon when expanded
+//            icon.classList.add('fa-chevron-down');     // Revert to default expanded icon
+//        }
+//    });
+//}
+
+
+        </script>
     </form>
 </body>
 </html>

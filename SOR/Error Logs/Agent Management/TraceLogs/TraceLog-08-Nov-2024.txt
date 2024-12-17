@@ -1,0 +1,27 @@
+Time : 08-Nov-2024 14:51 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 08-Nov-2024 14:51 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 08-Nov-2024 14:51 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 08-Nov-2024 14:51 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 08-Nov-2024 14:51 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 08-Nov-2024 14:51 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 08-Nov-2024 14:51 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_08Nov24145155.FileID:
+Time : 08-Nov-2024 14:51 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_08Nov24145155.FileID:.
+Time : 08-Nov-2024 14:51 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_08Nov24145155
+Time : 08-Nov-2024 14:51 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_08Nov24145155
+Time : 08-Nov-2024 14:51 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_08Nov24145155.FileExtension : .xls.
+Time : 08-Nov-2024 14:51 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 08-Nov-2024 14:51 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 47.
+Time : 08-Nov-2024 14:51 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 47.
+Time : 08-Nov-2024 14:51 Message : Successful Insert File Data For Agent Registration. Username : Maximus. FileID : 47.
+Time : 08-Nov-2024 14:51 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentBulkDocuments.zip
+Time : 08-Nov-2024 14:51 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 08-Nov-2024 14:51 Message : Successful Validate File Format For Agent Registration . FileType : AgentBulkDocuments.zip
+Time : 08-Nov-2024 14:51 Message : Initiated Save File Request. File Type : AgentBulkDocuments.zip
+Time : 08-Nov-2024 14:51 Message : Successful Save File Request. File Type : AgentBulkDocuments.zip
+Time : 08-Nov-2024 14:51 Message : Successful File Process For Agent Registration. FileType : AgentRegistration.xls Total Record Processed : 1 Successful : 1 Unsuccessful : 0
+Time : 08-Nov-2024 14:56 Message : AgLvl3: Commonsave:CheckAll(): Successful - Authorizer Verification. StatusFlag: Approve Flag: 5 AgentrequestID: 7 User: System.Security.Principal.WindowsPrincipalActivityType: 0
+Time : 08-Nov-2024 14:59 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42703: column a.bccode does not exist
+Time : 08-Nov-2024 14:59 Message : AgentStatus: fillGrid: Exception: 42703: column a.bccode does not exist
+Time : 08-Nov-2024 15:04 Message : Initiated Agent Registration Upload Sample File Download Request.
+Time : 08-Nov-2024 15:04 Message : Error AgentRegistration Sample File Download.
+Time : 08-Nov-2024 18:04 Message : BCLimitStatus: FillGrid(): Exception: 42P01: relation "temp_agentrequests" does not exist

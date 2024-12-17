@@ -1,0 +1,32 @@
+Time : 18-Nov-2024 11:16 Message : BCLimitStatus: FillGrid(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'YourIDField'.
+Time : 18-Nov-2024 11:17 Message : BCLimitStatus: FillGrid(): Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'YourIDField'.
+Time : 18-Nov-2024 12:04 Message : BankConfiguration: BtnXls_Click: Exception: Index was outside the bounds of the array.
+Time : 18-Nov-2024 12:04 Message : BankConfiguration: BtnXls_Click: Exception: Index was outside the bounds of the array.
+Time : 18-Nov-2024 12:06 Message : BankConfiguration: BtnXls_Click: Exception: Index was outside the bounds of the array.
+Time : 18-Nov-2024 12:14 Message : BankConfiguration: BtnXls_Click: Exception: Index was outside the bounds of the array.
+Time : 18-Nov-2024 14:34 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:34 Message : BlockAgentL2: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:35 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:35 Message : BlockAgentL2: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:35 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:35 Message : BlockAgentL2: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:35 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:35 Message : BlockAgentL2: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:36 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:36 Message : BlockAgentL2: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:36 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 14:36 Message : BlockAgentL2: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 18-Nov-2024 15:19 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: sxc User: Maximus Remarks: Approve
+Time : 18-Nov-2024 15:19 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Nov-2024 15:19 Message : BankConfigVeri: SingleSave: Failed - Maker Verification. Exception: Keyword not supported: 'port'.
+Time : 18-Nov-2024 15:20 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 6 User: Maximus Remarks: Approve
+Time : 18-Nov-2024 15:20 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Nov-2024 15:20 Message : BankConfigVeri: SingleSave: Failed - Maker Verification. Exception: Keyword not supported: 'port'.
+Time : 18-Nov-2024 16:59 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 1 id: 2 reqid: 6 Remarks: A
+Time : 18-Nov-2024 18:15 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 1 id: 2 reqid: 18-11-2024 00:00:00 Remarks: hj
+Time : 18-Nov-2024 18:16 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 1 id: 2 reqid: 18-11-2024 00:00:00 Remarks: ukj
+Time : 18-Nov-2024 18:20 Message : BankConfigVeri: SingleSave: Failed - Maker Verification. Exception: 42703: column "a" of relation "aepsbanktransactiondetail" does not exist
+Time : 18-Nov-2024 18:21 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 1 id: 2 reqid: 6 Remarks: v f
+Time : 18-Nov-2024 18:28 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 1 id: 2 reqid: 6 Remarks: A
+Time : 18-Nov-2024 18:31 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 1 id: 2 reqid: 6 Remarks: 1
+Time : 18-Nov-2024 18:35 Message : BankConfigVeri: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 2 id: 2 reqid: 6 Remarks: Dec

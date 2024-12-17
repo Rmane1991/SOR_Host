@@ -229,22 +229,47 @@
                                         <div class="searchbox-btns">
                                                         <asp:Button ID="buttonSearch" runat="server" Text="Search" CssClass="themeBtn themeApplyBtn" data-bs-target="modal" OnClientClick="return HoldDateOnServerClick();" OnClick="buttonSearch_Click"/>
                                                         <asp:Button ID="btnReset" runat="server" Text="Reset" CssClass="themeBtn resetBtn themeCancelBtn me-0" data-bs-toggle="modal" OnClientClick="return ClearForm();"  OnClick="btnReset_Click" data-bs-target="#SearchFilterModal" />
-                                                        <div class="col-md-1">
+                                                        <%--<div class="col-md-1">
                                                             <div class="col">
                                                                 <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
                                                                     ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
                                                                 <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
                                                                     ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
                                                             </div>
-                                                        </div>
+                                                        </div>--%>
                                                     </div>
                                     </div>
                                      </center>
-                                    <div class="row">
+                                    <%--<div class="row">
                                         <div class="form-group">
                                             <div class="col-sm-12 col-md-12 col-lg-12">
                                                 <center><strong><asp:Label ID="lblRecordsCount" runat="server" Text=""></asp:Label></strong></center>
                                             </div>
+                                        </div>
+                                    </div>--%>
+                                    <%--<div class="form-group">
+                                        <div class="col-12 text-center">
+                                            <strong>
+                                                <asp:Label ID="lblRecordsCount" runat="server" Text="" class="selectInputLabel" for="selectInputLabel"></asp:Label></strong>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
+
+                                            <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
+                                        </div>
+                                    </div>--%>
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <div class="col-auto text-center">
+                                            <strong>
+                                                <asp:Label ID="lblRecordsCount" runat="server" Text=""></asp:Label></strong>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
+                                            <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
                                         </div>
                                     </div>
                                 </div>

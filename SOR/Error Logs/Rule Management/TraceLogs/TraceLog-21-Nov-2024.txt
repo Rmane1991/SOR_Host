@@ -1,0 +1,16 @@
+Time : 21-Nov-2024 12:49 Message : SwitchConfig: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 21-Nov-2024 12:49 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 12:50 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 12:51 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 12:51 Message : TrRule: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 21-Nov-2024 12:52 Message : SwitchConfig: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 21-Nov-2024 14:17 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 14:17 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 14:17 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 14:17 Message : TrRule: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 21-Nov-2024 14:18 Message : SwitchConfig: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 21-Nov-2024 14:19 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 14:19 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 21-Nov-2024 14:19 Message : TrRule: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 21-Nov-2024 14:20 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 21-Nov-2024 14:20 Message : SwitchConfig: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful

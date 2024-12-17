@@ -1,0 +1,34 @@
+Time : 07-Nov-2024 10:56 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration (3).xls
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 07-Nov-2024 10:56 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration (3).xls
+Time : 07-Nov-2024 10:56 Message : Initiated Save File Request. File Type : AgentRegistration (3).xls
+Time : 07-Nov-2024 10:56 Message : Successful Save File Request. File Type : AgentRegistration (3).xls
+Time : 07-Nov-2024 10:56 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (3).xls_07Nov24105641.FileID:
+Time : 07-Nov-2024 10:56 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (3).xls_07Nov24105641.FileID:.
+Time : 07-Nov-2024 10:56 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (3).xls_07Nov24105641
+Time : 07-Nov-2024 10:56 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (3).xls_07Nov24105641
+Time : 07-Nov-2024 10:56 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (3).xls_07Nov24105641.FileExtension : .xls.
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 07-Nov-2024 10:56 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 41.
+Time : 07-Nov-2024 10:56 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 41.
+Time : 07-Nov-2024 10:56 Message : Successful Insert File Data For Agent Registration. Username : Maximus. FileID : 41.
+Time : 07-Nov-2024 10:56 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentBulkDocuments (2).zip
+Time : 07-Nov-2024 10:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 07-Nov-2024 10:56 Message : Successful Validate File Format For Agent Registration . FileType : AgentBulkDocuments (2).zip
+Time : 07-Nov-2024 10:56 Message : Initiated Save File Request. File Type : AgentBulkDocuments (2).zip
+Time : 07-Nov-2024 10:56 Message : Successful Save File Request. File Type : AgentBulkDocuments (2).zip
+Time : 07-Nov-2024 10:56 Message : Successful File Process For Agent Registration. FileType : AgentRegistration (3).xls Total Record Processed : 6 Successful : 6 Unsuccessful : 0
+Time : 07-Nov-2024 11:34 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42601: syntax error at or near "WHERE"
+Time : 07-Nov-2024 11:34 Message : RGSReport: FillGrid: Exception: 42601: syntax error at or near "WHERE"
+Time : 07-Nov-2024 11:35 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42601: syntax error at or near "WHERE"
+Time : 07-Nov-2024 11:35 Message : RGSReport: FillGrid: Exception: 42601: syntax error at or near "WHERE"
+Time : 07-Nov-2024 11:45 Message : Page : RGSReport.cs 
+Function : BindRule()
+Exception Occured
+42883: operator does not exist: integer = text

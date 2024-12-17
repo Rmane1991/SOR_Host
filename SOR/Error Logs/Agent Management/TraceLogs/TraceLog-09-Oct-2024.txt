@@ -3,3 +3,16 @@ Time : 09-Oct-2024 14:26 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 
 Time : 09-Oct-2024 14:33 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
 Time : 09-Oct-2024 14:34 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
 Time : 09-Oct-2024 14:34 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+Time : 09-Oct-2024 17:03 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42703: column "pflag" does not exist
+Time : 09-Oct-2024 17:05 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42703: column "pflag" does not exist
+Time : 09-Oct-2024 17:06 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42703: column "pbcreqid" does not exist
+Time : 09-Oct-2024 17:07 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: operator does not exist: integer = character varying
+Time : 09-Oct-2024 18:13 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 09-Oct-2024 18:14 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 09-Oct-2024 18:14 Message : BCEntity: ChangeAgentOnboardStatus: UserName:  Exception: Keyword not supported: 'port'.
+Time : 09-Oct-2024 18:15 Message : BCEntity: ChangeAgentOnboardStatus: UserName:  Exception: Keyword not supported: 'port'.
+Time : 09-Oct-2024 18:18 Message : BCEntity: ChangeAgentOnboardStatus: UserName:  Exception: Keyword not supported: 'port'.
+Time : 09-Oct-2024 19:41 Message : BCEntity: ChangeAgentOnboardStatus: UserName:  Exception: 42703: column "p_bcreqid" does not exist
+Time : 09-Oct-2024 19:43 Message : BCEntity: GetDocs: UserName:  Exception: 42809: public.sp_get_bc_documents(p_bcreqid => text) is a procedure
+Time : 09-Oct-2024 19:50 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 09-Oct-2024 20:03 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 2

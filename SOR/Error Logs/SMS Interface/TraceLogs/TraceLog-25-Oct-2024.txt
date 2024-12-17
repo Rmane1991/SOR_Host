@@ -1,0 +1,16 @@
+Time : 25-Oct-2024 10:42 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 10:44 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 11:06 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 11:13 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 11:15 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 11:19 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 11:20 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 25-Oct-2024 11:22 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in

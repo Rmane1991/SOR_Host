@@ -1,0 +1,58 @@
+19-11-2024 11:54:04:7157 : Login Successful. Username Maximus. SessionID : nowzrnbh03lwveuk5ov5zaou
+19-11-2024 12:04:52:2184 : Login Successful. Username Maximus. SessionID : e5g2gzgou5cukra4qpumaplg
+19-11-2024 12:07:38:6443 : Login Successful. Username Maximus. SessionID : kyiivsx4svula4ykzgn05vjc
+19-11-2024 12:09:15:3380 : Login Successful. Username Maximus. SessionID : kkcouudvz31flvocrsxf05hw
+19-11-2024 12:10:34:5335 : Login Successful. Username Maximus. SessionID : y45aewfp3mgk0nzvia2nqht0
+19-11-2024 12:13:52:9664 : Login Successful. Username Maximus. SessionID : ta1ljlpz4bm3qrpowkpla35w
+19-11-2024 12:18:19:4093 : Login Successful. Username Maximus. SessionID : zhjypwje0clxzforaimwwsmp
+19-11-2024 12:29:18:3222 : Login Successful. Username Maximus. SessionID : 50jtr4sk4nei4w4csmybaxjt
+19-11-2024 12:43:12:2221 : Login Successful. Username Maximus. SessionID : 4qoyi3m1tw320tzmi1gav130
+19-11-2024 13:01:56:8434 : Login Successful. Username Maximus. SessionID : uslsqx3aheac54grwczngbwi
+19-11-2024 14:07:00:5900 : Login Successful. Username Maximus. SessionID : bw5wb33y42sbtvfqfu2ly5fq
+19-11-2024 14:08:55:2688 : Login Successful. Username Maximus. SessionID : iz3dxqicjufhz2cql3lq5edd
+19-11-2024 14:27:36:5049 : Login Successful. Username Maximus. SessionID : ghybbbrbcrjaljtd14gen4rq
+19-11-2024 14:41:30:9004 : Login Successful. Username Maximus. SessionID : cmzzxbmabca1sdvrkuce5w5s
+19-11-2024 14:41:48:0708 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+42883: procedure proc_restrictedpin_getexcel(text, text, text, text, unknown, text, integer) does not exist
+19-11-2024 14:42:32:2125 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+42P01: relation "restrictedpinhistory" does not exist
+19-11-2024 14:47:58:7171 : Login Successful. Username Maximus. SessionID : vcwm4014ihv2ctiesjidtr5z
+19-11-2024 15:10:51:9088 : Login Successful. Username Maximus. SessionID : rfwxgdel544heoj0njkonzmi
+19-11-2024 15:46:00:9678 : Login Successful. Username Maximus. SessionID : civuzagp5l02n4wr34mjfgsq
+19-11-2024 15:50:48:6540 : Login Successful. Username Maximus. SessionID : k1fbovh53ifvjmqjb5ius0xd
+19-11-2024 16:30:42:5722 : Login Successful. Username Maximus. SessionID : xr0wfy4blrdfckd2og3wcinx
+19-11-2024 16:31:47:5770 : Login Successful. Username Maximus. SessionID : lbko3gfx25qdblb5fmebbols
+19-11-2024 16:31:47:6807 : Login Successful. Username Maximus. SessionID : lbko3gfx25qdblb5fmebbols
+19-11-2024 16:34:24:7546 : Login Successful. Username Maximus. SessionID : erjkzguz0xywq1j1couatjbg
+19-11-2024 16:45:08:2679 : Login Successful. Username Maximus. SessionID : pd2v2ahuokw13g3qwov13dwd
+19-11-2024 16:46:49:6067 : Login Successful. Username Maximus. SessionID : qoybo2d3yesrw3fghf1cvbii
+19-11-2024 16:58:18:2326 : Login Successful. Username Maximus. SessionID : obmplhoosq1nrzseem3rndoh
+19-11-2024 17:32:21:2265 : Login Successful. Username Maximus. SessionID : qbeafnddeydiujdac0mdpzr3
+19-11-2024 18:00:13:6981 : Login Successful. Username Maximus. SessionID : opbwhkya4tqustdy34bac3po
+19-11-2024 18:20:01:2316 : Login Successful. Username Maximus. SessionID : amkwkobarektizf521ephadm
+19-11-2024 18:51:45:2199 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: integer - character varying
+19-11-2024 18:52:37:4394 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: integer - character varying
+19-11-2024 18:52:51:0375 : Login Successful. Username Maximus. SessionID : a02hw03op2e323rjwfawabmy
+19-11-2024 18:53:11:2489 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: integer - character varying
+19-11-2024 18:53:52:1415 : Login Successful. Username Maximus. SessionID : cyeincuu3npairrdrjbnbjv5
+19-11-2024 18:54:16:7028 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: integer - character varying
+19-11-2024 18:55:16:2166 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: operator does not exist: integer - character varying

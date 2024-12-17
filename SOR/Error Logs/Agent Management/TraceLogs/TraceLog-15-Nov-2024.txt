@@ -1,0 +1,89 @@
+Time : 15-Nov-2024 10:32 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:32 Message : AgentRegistration: FillGrid(): Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:32 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:35 Message : AgentRegistration: FillGrid(): Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:36 Message : AgentRegistration: FillGrid(): Exception: A field or property with the name 'AgentName' was not found on the selected data source.
+Time : 15-Nov-2024 10:37 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:37 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:37 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42703: column ar.agentname does not exist
+Time : 15-Nov-2024 10:37 Message : AgLvl3: FillGrid: Exception: 42703: column ar.agentname does not exist
+Time : 15-Nov-2024 10:40 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:40 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:40 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: missing FROM-clause entry for table "a"
+Time : 15-Nov-2024 10:40 Message : AgLvl3: FillGrid: Exception: 42P01: missing FROM-clause entry for table "a"
+Time : 15-Nov-2024 10:40 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:40 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:47 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: missing FROM-clause entry for table "a"
+Time : 15-Nov-2024 10:47 Message : AgLvl3: FillGrid: Exception: 42P01: missing FROM-clause entry for table "a"
+Time : 15-Nov-2024 10:47 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:47 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:48 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:48 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:48 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:48 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:49 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:49 Message : AgLvl3: BindDropdownsAgent: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 10:59 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Nov-2024 10:59 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 32
+Time : 15-Nov-2024 11:00 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 32
+Time : 15-Nov-2024 11:00 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 42703: column am.agentname does not exist
+Time : 15-Nov-2024 11:00 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: 42703: column am.agentname does not exist UserName:  PanNo: CMGPD7896P RequestId: 32
+Time : 15-Nov-2024 11:00 Message : AgentRegistration: btnCloseReceipt_Click: Successful - Summary Close. UserName: 
+Time : 15-Nov-2024 11:00 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Nov-2024 11:00 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 32
+Time : 15-Nov-2024 11:02 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 32
+Time : 15-Nov-2024 11:03 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 11:03 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: 39000: Wrong key or corrupt data UserName:  PanNo: CMGPD7896P RequestId: 32
+Time : 15-Nov-2024 11:05 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Nov-2024 11:05 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 33
+Time : 15-Nov-2024 11:05 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 33
+Time : 15-Nov-2024 11:05 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 11:16 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 11:16 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: 39000: Wrong key or corrupt data UserName:  PanNo: CMDPD9847P RequestId: 33
+Time : 15-Nov-2024 11:17 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Nov-2024 11:18 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 34
+Time : 15-Nov-2024 11:18 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 34
+Time : 15-Nov-2024 11:18 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9875P RequestId: 34
+Time : 15-Nov-2024 11:19 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:19 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:19 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:19 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:27 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:27 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:28 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:28 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:29 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:29 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:54 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Nov-2024 11:54 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 35
+Time : 15-Nov-2024 11:54 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 35
+Time : 15-Nov-2024 11:54 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8974P RequestId: 35
+Time : 15-Nov-2024 11:54 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:54 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:56 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 11:56 Message : AgLvl3: btnView_Click: Exception: 42703: column a.agentname does not exist
+Time : 15-Nov-2024 12:14 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 35
+Time : 15-Nov-2024 12:14 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 35 Fullname: A B C User: Maximus ReceiverEmailID: xyz5416@gmail.com ContactNo: 9784132132 Remarks: Approve.
+Time : 15-Nov-2024 12:14 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 35 Fullname: A B C User: Maximus ReceiverEmailID: xyz5416@gmail.com ContactNo: 9784132132 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 12:15 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'agname'.
+Time : 15-Nov-2024 12:18 Message : EditRegistrationDetails: btnSubmitDetails_Click: Exception: Object reference not set to an instance of an object.
+Time : 15-Nov-2024 12:18 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'agname'.
+Time : 15-Nov-2024 12:18 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'agname'.
+Time : 15-Nov-2024 12:21 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 36
+Time : 15-Nov-2024 12:21 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8974P RequestId: 36
+Time : 15-Nov-2024 12:22 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42703: column ar.agentname does not exist
+Time : 15-Nov-2024 12:22 Message : AgentStatus: fillGrid: Exception: 42703: column ar.agentname does not exist
+Time : 15-Nov-2024 12:22 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42883: function gp_sym_decrypt(bytea, character varying) does not exist
+Time : 15-Nov-2024 12:23 Message : AgentStatus: fillGrid: Exception: 42883: function gp_sym_decrypt(bytea, character varying) does not exist
+Time : 15-Nov-2024 12:29 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42883: function gp_sym_decrypt(bytea, character varying) does not exist
+Time : 15-Nov-2024 12:29 Message : AgentStatus: fillGrid: Exception: 42883: function gp_sym_decrypt(bytea, character varying) does not exist
+Time : 15-Nov-2024 14:49 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Nov-2024 14:50 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 14:50 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:09 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:09 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:14 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:14 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:15 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:15 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:25 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data

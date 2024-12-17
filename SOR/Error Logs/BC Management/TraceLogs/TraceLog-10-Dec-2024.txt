@@ -1,0 +1,4 @@
+Time : 10-Dec-2024 11:21 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 32
+Time : 10-Dec-2024 11:22 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 32
+Time : 10-Dec-2024 11:22 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 32 Fullname: Aa User: Maximus ReceiverEmailID: xyz9874651@gmail.com ContactNo: 9878415613 Remarks: Approve.
+Time : 10-Dec-2024 11:22 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Decline Flag: 6 AgentCode: 32 Fullname: Aa User: Maximus ReceiverEmailID: xyz9874651@gmail.com ContactNo: 9878415613 Remarks: Approve.

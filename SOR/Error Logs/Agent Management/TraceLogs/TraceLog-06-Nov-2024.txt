@@ -1,0 +1,26 @@
+Time : 06-Nov-2024 12:36 Message : Initiated Agent Registration Upload Sample File Download Request.
+Time : 06-Nov-2024 12:36 Message : Error AgentRegistration Sample File Download.
+Time : 06-Nov-2024 12:36 Message : Initiated Document Upload Sample File Download Request.
+Time : 06-Nov-2024 12:36 Message : Error AgentRegistration Document Sample File Download.
+Time : 06-Nov-2024 12:36 Message : Initiated Agent Registration Upload Sample File Download Request.
+Time : 06-Nov-2024 12:36 Message : Error AgentRegistration Sample File Download.
+Time : 06-Nov-2024 12:36 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration (1).xls
+Time : 06-Nov-2024 12:36 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 06-Nov-2024 12:36 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 06-Nov-2024 12:36 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration (1).xls
+Time : 06-Nov-2024 12:36 Message : Initiated Save File Request. File Type : AgentRegistration (1).xls
+Time : 06-Nov-2024 12:36 Message : Successful Save File Request. File Type : AgentRegistration (1).xls
+Time : 06-Nov-2024 12:36 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (1).xls_06Nov24123639.FileID:
+Time : 06-Nov-2024 12:36 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (1).xls_06Nov24123639.FileID:.
+Time : 06-Nov-2024 12:36 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (1).xls_06Nov24123639
+Time : 06-Nov-2024 12:36 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (1).xls_06Nov24123639
+Time : 06-Nov-2024 12:36 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration (1).xls_06Nov24123639.FileExtension : .xls.
+Time : 06-Nov-2024 12:36 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 06-Nov-2024 12:36 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 36.
+Time : 06-Nov-2024 12:36 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 36.
+Time : 06-Nov-2024 12:36 Message : Failed Insert File Data For Agent Registration. Username : Maximus. FileID : 36.
+Time : 06-Nov-2024 12:36 Message : Failed To Insert File Data In Database For Agent Registration. FileType : AgentRegistration (1).xls Description :Total Records Processed: 1<br>Invalid Records: 1<br>Duplicate Records: 0<br>Inserted Records: 0
+Time : 06-Nov-2024 15:25 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: 42804: column "parentroleid" is of type integer but expression is of type character varying
+Time : 06-Nov-2024 16:48 Message : SwitchConfig : Page_Load(): Exception: Column 'txntype' does not belong to table .
+Time : 06-Nov-2024 18:29 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 06-Nov-2024 18:29 Message : AllTransactions: fillGrid: Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"

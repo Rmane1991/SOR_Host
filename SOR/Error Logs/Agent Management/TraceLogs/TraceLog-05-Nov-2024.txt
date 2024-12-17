@@ -1,0 +1,6 @@
+Time : 05-Nov-2024 12:01 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Object reference not set to an instance of an object.
+Time : 05-Nov-2024 12:12 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Object reference not set to an instance of an object.
+Time : 05-Nov-2024 12:12 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Object reference not set to an instance of an object.
+Time : 05-Nov-2024 12:19 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Parameter 'p_Status' referenced in SQL but is an out-only parameter
+Time : 05-Nov-2024 12:22 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Parameter 'p_Status' referenced in SQL but is an out-only parameter
+Time : 05-Nov-2024 12:23 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: 42883: procedure bcrequest_delete(integer, unknown) does not exist

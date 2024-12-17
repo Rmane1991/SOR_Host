@@ -1,0 +1,57 @@
+28-10-2024 11:18:20:5417 : Login Successful. Username Maximus. SessionID : 5sh2w24ndrzyq32aexttckde
+28-10-2024 11:21:42:4908 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+28-10-2024 11:21:42:4918 : NOTICE: Flag is set to 1, proceeding with validations...
+28-10-2024 11:21:42:4978 : NOTICE: Inserting new record...1
+28-10-2024 11:21:42:4998 : NOTICE: Inserting new record...
+28-10-2024 11:21:42:4998 : NOTICE: Insert successful, RequestId: 109
+28-10-2024 11:22:02:0430 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+28-10-2024 11:22:02:0440 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+28-10-2024 11:22:46:9608 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+28-10-2024 11:23:03:0747 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+28-10-2024 11:25:18:3580 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+28-10-2024 11:25:52:5960 : Login Successful. Username Maximus. SessionID : hnkojvcls2mkgbpcok5zunvh
+28-10-2024 11:27:51:5991 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+28-10-2024 11:30:27:8645 : Login Successful. Username Maximus. SessionID : nve2olcs43fe2vfllyk5yikc
+28-10-2024 11:31:52:5355 : Login Successful. Username Maximus. SessionID : qgaec5oelpol05hsyfaz50bh
+28-10-2024 12:03:03:4265 : Login Successful. Username Maximus. SessionID : mn00owbuzp4kkeatuayqmy4j
+28-10-2024 12:20:44:9280 : Login Successful. Username Maximus. SessionID : r022rok1tl1shfp02armexmz
+28-10-2024 12:30:11:8019 : Login Successful. Username Maximus. SessionID : 2gubsfroussff3fhcom5ulvi
+28-10-2024 12:33:13:9046 : Login Successful. Username Maximus. SessionID : yanbscseulnsocae1e3bqgjm
+28-10-2024 12:41:47:5481 : Login Successful. Username Maximus. SessionID : ry25g3qenazabptt4whiuoou
+28-10-2024 13:03:32:6195 : Login Successful. Username Maximus. SessionID : swepzhd3yhgjscgn2ap2dhhy
+28-10-2024 13:06:44:4504 : Login Successful. Username Maximus. SessionID : odm1fh5ag4q1oyvxfdq01zgs
+28-10-2024 13:09:02:4978 : Login Successful. Username Maximus. SessionID : 1k5is23hhac1cdtiwzm5ejwv
+28-10-2024 14:40:42:3578 : Login Successful. Username Maximus. SessionID : uniem0aepgdrxllnj3lkvodq
+28-10-2024 14:41:00:4272 : Login Successful. Username Maximus. SessionID : 2gbkxcf52pnmdldxkk0launb
+28-10-2024 14:55:34:1353 : Login Successful. Username Maximus. SessionID : hc0tr3doeezj23jvw5syy5qt
+28-10-2024 14:59:58:6286 : Login Successful. Username Maximus. SessionID : bgu1hdzmwgjzcd1xuifv11uk
+28-10-2024 15:01:40:9256 : Login Successful. Username Maximus. SessionID : zkmiplbylnd3chx2zjfqybh3
+28-10-2024 16:56:06:9335 : Login Successful. Username Maximus. SessionID : 0aiuurxkfseulagebh43kmvx
+28-10-2024 17:04:29:0179 : Class : ImportEntity.cs 
+Function : ImportBulkKycValidate() 
+Exception Occured
+42P01: relation "restrictedpinmain" does not exist
+28-10-2024 17:05:45:5565 : Login Successful. Username Maximus. SessionID : rknke1sc0dczohnarsh1kq2z
+28-10-2024 17:06:44:7066 : Class : ImportEntity.cs 
+Function : ImportBulkKycValidate() 
+Exception Occured
+42P01: relation "restrictednamemain" does not exist
+28-10-2024 17:08:07:4891 : Class : ImportEntity.cs 
+Function : ImportBulkKycValidate() 
+Exception Occured
+42883: operator does not exist: bit = integer
+28-10-2024 17:59:45:3079 : Login Successful. Username Maximus. SessionID : jhz3lkpm5wf1gq4rwscqoz1v
+28-10-2024 18:08:13:8097 : Login Successful. Username Maximus. SessionID : v10dv3s0n1zxyyvjy1rkusip
+28-10-2024 18:13:36:6083 : Login Successful. Username Maximus. SessionID : lm2mgrt050v4wsyczp5klibz

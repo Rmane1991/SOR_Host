@@ -1,0 +1,2 @@
+Time : 10-Oct-2024 12:58 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 23505: duplicate key value violates unique constraint "tbl_switch_routing_pkey"
+Time : 10-Oct-2024 12:59 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

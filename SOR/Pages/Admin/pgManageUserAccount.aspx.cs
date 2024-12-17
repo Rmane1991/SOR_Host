@@ -84,7 +84,7 @@ namespace SOR.Pages.Admin
             {
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
-                       bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgManageUserAccount.aspx", "11");
+                       bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgManageUserAccount.aspx", "4");
                        if (!HasPagePermission)
                        {
                            try
@@ -100,7 +100,7 @@ namespace SOR.Pages.Admin
                        {
                     if (!IsPostBack  && HasPagePermission)
                     {
-                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "11");
+                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "4");
                             BindDropdownRoles();
                             BindDropdownUsers();
                             BindDropdownClientDetails();
@@ -296,33 +296,36 @@ namespace SOR.Pages.Admin
                     _UserManagement._Password = _tempPassword;
                     _UserManagement._RandomStringForSalt = _RandomStringForSalt;
                     _UserManagement.UserName = Session["Username"].ToString();
+                    _UserManagement.Reason = "Reset Password";
                     _UserManagement.Flag = 1;
-                    DataSet ds = _UserManagement.ManageUserAccounts();
-
+                    //DataSet ds = _UserManagement.ManageUserAccounts();
+                    _UserManagement.ManageUserAccountsAction(out _Status);
                     _Status = !String.IsNullOrEmpty(_Status) ? _Status : null;
 
                     if (!string.IsNullOrEmpty(_Status) && (_Status == "SUCCESSFUL" || _Status == "ALLOWED"))
                     {
-                        // Send email.
-                        Email.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.EmailAlert);
-                        Email.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.ResetPassword);
-                        Email.SubCategoryTypeId = null;
-                        Email.ClientID = ddlClient.SelectedValue != "0" ? ddlClient.SelectedValue : null;
-                        Email.UserName = Session["Username"].ToString();
-                        Email.UserID = lblID.Text;
-                        Email.Flag = "3";
-                        ErrorLog.writeLogEmail("Page : pgManageUserAccount.cs \nFunction : ResetPassword() => Reset  Details forwarded for Email Preparation. => PrepareEmailFormat()");
-                        Email.PrepareEmailFormat();
-                        // Send SMS.
-                        Email.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.SMSAlert);
-                        Email.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.ResetPassword);
-                        Email.SubCategoryTypeId = null;
-                        Email.ClientID = ddlClient.SelectedValue != "0" ? ddlClient.SelectedValue : null;
-                        Email.UserName = Session["Username"].ToString();
-                        Email.UserID = lblID.Text;
-                        Email.Flag = "3";
-                        ErrorLog.writeLogEmail("Page : pgManageUserAccount.cs \nFunction : ResetPassword() =>  Reset  Details forwarded for SMS Preparation. => PrepareSMSFormat()");
-                        Email.PrepareSMSFormat();
+
+                        //Need To Un-Comment
+                        //// Send email.
+                        //Email.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.EmailAlert);
+                        //Email.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.ResetPassword);
+                        //Email.SubCategoryTypeId = null;
+                        //Email.ClientID = ddlClient.SelectedValue != "0" ? ddlClient.SelectedValue : null;
+                        //Email.UserName = Session["Username"].ToString();
+                        //Email.UserID = lblID.Text;
+                        //Email.Flag = "3";
+                        //ErrorLog.writeLogEmail("Page : pgManageUserAccount.cs \nFunction : ResetPassword() => Reset  Details forwarded for Email Preparation. => PrepareEmailFormat()");
+                        //Email.PrepareEmailFormat();
+                        //// Send SMS.
+                        //Email.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.SMSAlert);
+                        //Email.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.ResetPassword);
+                        //Email.SubCategoryTypeId = null;
+                        //Email.ClientID = ddlClient.SelectedValue != "0" ? ddlClient.SelectedValue : null;
+                        //Email.UserName = Session["Username"].ToString();
+                        //Email.UserID = lblID.Text;
+                        //Email.Flag = "3";
+                        //ErrorLog.writeLogEmail("Page : pgManageUserAccount.cs \nFunction : ResetPassword() =>  Reset  Details forwarded for SMS Preparation. => PrepareSMSFormat()");
+                        //Email.PrepareSMSFormat();
 
                         ModalPopupExtenderToGetReason.Hide();
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Password reset successfully.','" + lblModalHeaderName.Text + "');", true);

@@ -95,7 +95,7 @@ namespace SOR.Pages.BC
                         Session["CheckRefresh"] = Server.UrlDecode(System.DateTime.Now.ToString());
                         BindDropdownClients();
                         BindDropdownsBC();
-                        FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                        FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
                         ViewState["SelectionType"] = SelectionType.UnCheckAll.ToString();
                     }
                     UserPermissions.RegisterStartupScriptForNavigationListActive("4", "11");
@@ -118,10 +118,10 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
                 ////_dbAccess.StoreErrorDescription(UserName, "BCVerificationLevelTwo.cs", "Page_Load()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -186,7 +186,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : BindDropdownClients() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : BindDropdownClients() \nException Occured\n" + Ex.Message);
                 ////_dbAccess.StoreErrorDescription(UserName, "BCVerificationLevelTwo.cs", "BindDropdownClients()", Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
                 return;
@@ -241,7 +241,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : BindDropdownsBC() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : BindDropdownsBC() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
 
                 return;
@@ -256,7 +256,8 @@ namespace SOR.Pages.BC
                 gvBusinessCorrespondents.DataBind();
                 lblRecordsTotal.Text = "";
                 ViewState["SelectionType"] = SelectionType.UnCheckAll.ToString();
-                _BCEntity.Flag = ((int)EnumCollection.EnumPermissionType.EnableMakerChecker);
+                //_BCEntity.Flag = ((int)EnumCollection.EnumPermissionType.EnableMakerChecker);
+                _BCEntity.Flag = (int)_EnumPermissionType;
                 _BCEntity.Clientcode = ddlClientCode.SelectedValue != "0" ? ddlClientCode.SelectedValue : null;
                 _BCEntity.BCID = ddlBCCode.SelectedValue != "0" ? ddlBCCode.SelectedValue : null;
                 _BCEntity.Activity = ddlActivityType.SelectedValue != "-1" ? ddlActivityType.SelectedValue : null;
@@ -292,9 +293,9 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
             }
             return ds;
         }
@@ -402,7 +403,7 @@ namespace SOR.Pages.BC
                                         if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[1].Rows[0]["Status"].ToString() == "Inserted")
                                         {
                                             _dsVerification = _BCEntity.ChangeBCStatus();
-                                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Data Registered Successfully', 'Verification Level 2-BC');", true);
+                                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Data Registered Successfully', 'BC-Verification');", true);
                                         }
                                     }
                                     if (_ActivityType == 1)
@@ -563,9 +564,9 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : CommonSave() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : CommonSave() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
             }
         }
 
@@ -573,7 +574,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-                ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks);
+                ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks);
                 _BCEntity.ActivityType = _ActivityType;
                 _BCEntity.BCCode = _BCCode;
                 _BCEntity.BCReqId = _BCReqId;
@@ -587,9 +588,10 @@ namespace SOR.Pages.BC
 
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Decline.ToString())
                 {
+                    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
                     _dsVerification = _BCEntity.ChangeBCStatus();
-                    ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Declined Successfully', 'Verification Level 2-BC');", true);
-                    ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Declined Successfully', 'BC-Verification');", true);
+                    ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks);
                 }
                 else
                 {
@@ -613,16 +615,17 @@ namespace SOR.Pages.BC
                         if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && status == "Inserted")
                         {
                             _BCCode = dsBCMaster.Tables[0].Rows[0]["BCCode"].ToString();
+                            _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
                             _dsVerification = _BCEntity.ChangeBCStatus();
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Data Registered Successfully', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Data Registered Successfully', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
 
                         }
                         else
                         {
                             ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Registration Unscuccessful : '" + status + " ');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated ");
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
                         }
                     }
@@ -637,15 +640,15 @@ namespace SOR.Pages.BC
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;
                             _dsVerification = _BCEntity.ChangeBCStatus();
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
 
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated ");
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
                         }
                     }
@@ -660,16 +663,16 @@ namespace SOR.Pages.BC
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;
                             _dsVerification = _BCEntity.ChangeBCStatus();
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated ");
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
 
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated ");
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
                         }
                     }
@@ -684,15 +687,15 @@ namespace SOR.Pages.BC
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;
                             _dsVerification = _BCEntity.ChangeBCStatus();
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
 
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated ");
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
                         }
                     }
@@ -701,86 +704,38 @@ namespace SOR.Pages.BC
                     {
                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.Reprocess;
                         _dsActivate = _BCEntity.ChangeBCStatusReEdit();
-                        if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
+                        if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "00")
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;
                             _dsVerification = _BCEntity.ChangeBCStatus();
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('Request Approved Successfully', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Successful - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
 
                         }
-                        else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
+                        else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "03")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification Level 2-BC');", true);
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
-                            ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'BC-Verification');", true);
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated ");
+                            ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
                         }
                     }
                 }
                 if (Convert.ToInt32(Convert.ToString(_dsVerification.Tables[0].Rows[0][0])) > 0)
                 {
-                    string BC_ID = string.Empty;
-                    string _ClientID = string.Empty;
-                    BC_ID = _BCEntity.BCReqId;
-                    _ClientID = _BCEntity.Clientcode;
-                    if (_Flag == 5) //Approve
-                    {
-                        _EmailAlerts.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.EmailAlert);
-                        //_EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.Active);
-                        _EmailAlerts.SubCategoryTypeId = null;
-                        _EmailAlerts.ClientID = _ClientID;
-                        _EmailAlerts.UserName = Session["Username"].ToString();
-                        _EmailAlerts.UserID = _BCCode;
-                        _EmailAlerts.Flag = "3";
-                        ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : BCVerificationLevelTwo() => active BC  Success. Details forwarded for Email Preparation. => PrepareEmailFormat()");
-                        _EmailAlerts.PrepareEmailFormat();
-
-                        //_EmailAlerts.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.SMSAlert);
-                        //_EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.Active);
-                        //_EmailAlerts.SubCategoryTypeId = null;
-                        //_EmailAlerts.ClientID = _ClientID;
-                        //_EmailAlerts.UserName = Session["Username"].ToString();
-                        //_EmailAlerts.UserID = BC_ID;
-                        //_EmailAlerts.Flag = "3";
-                        //ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : BCVerificationLevelTwo() => active BC  Success. Details forwarded for SMS Preparation. => PrepareSMSFormat()");
-                        //_EmailAlerts.PrepareSMSFormat();
-                    }
-                    if (_Flag == 6) //Decline
-                    {
-                        _EmailAlerts.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.EmailAlert);
-                        _EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.Onboarding.Decline);
-                        _EmailAlerts.SubCategoryTypeId = null;
-                        _EmailAlerts.ClientID = _ClientID;
-                        _EmailAlerts.UserName = Session["Username"].ToString();
-                        _EmailAlerts.UserID = _BCCode;
-                        _EmailAlerts.Flag = "1";
-                        ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : BCVerificationLevelTwo() => decline BC  Success. Details forwarded for Email Preparation. => PrepareEmailFormat()");
-                        _EmailAlerts.PrepareEmailFormat();
-
-                        //_EmailAlerts.AlertTypeId = Convert.ToString((int)EnumCollection.AlertType.SMSAlert);
-                        //_EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.Decline);
-                        //_EmailAlerts.SubCategoryTypeId = null;
-                        //_EmailAlerts.ClientID = _ClientID;
-                        //_EmailAlerts.UserName = Session["Username"].ToString();
-                        //_EmailAlerts.UserID = BC_ID;
-                        //_EmailAlerts.Flag = "1";
-                        //ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : BCVerificationLevelTwo() => decline BC  Success. Details forwarded for SMS Preparation. => PrepareSMSFormat()");
-                        //_EmailAlerts.PrepareSMSFormat();
-                    }
                     _successful = _successful + 1;
                 }
                 else
                 {
                     _unsuessful = _unsuessful + 1;
                 }
-                FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: " + Ex.Message);
+                ErrorLog.BCManagementTrace("BC-Verification : SingleSave: Failed - Verification. Exception: " + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -792,12 +747,12 @@ namespace SOR.Pages.BC
         {
             try
             {
-                FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -816,12 +771,12 @@ namespace SOR.Pages.BC
                 //ddlCity.DataBind();
                 //ddlCity.Items.Insert(0, new ListItem("-- City --", "0"));
 
-                FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnClear_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnClear_Click() \nException Occured\n" + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -859,8 +814,8 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnApprove_ServerClick() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnApprove_ServerClick() \nException Occured\n" + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -898,9 +853,9 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnDecline_ServerClick() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnDecline_ServerClick() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -938,7 +893,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Select at least one record.','Terminate BC(s)');", true);
                 return;
             }
@@ -953,7 +908,7 @@ namespace SOR.Pages.BC
                 if (TxtRemarks.Text == null || TxtRemarks.Text == "")
                 {
                     ModalPopupExtender_Declincard.Show();
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter Remarks', 'Verification Level 2-BC');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter Remarks', 'BC-Verification');", true);
                     return;
                 }
                 else
@@ -967,7 +922,7 @@ namespace SOR.Pages.BC
                     else
                         CommonSave("MultiCheck");
 
-                    FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                    FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
                     TxtRemarks.Text = string.Empty;
 
                     ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('" + _strAlertMessage_Total + _reocrdsProcessed + "  Successful : " + _successful + "  Unsuccessful : " + _unsuessful + " ');", true);
@@ -978,9 +933,9 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 ViewState["ActionType"] = null;
                 ViewState["SelectionType"] = null;
                 return;
@@ -1007,12 +962,12 @@ namespace SOR.Pages.BC
                 ModalPopupExtender_Declincard.Hide();
                 TxtRemarks.Text = string.Empty;
                 ViewState["ActionType"] = null;
-                FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
                 return;
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 ViewState["ActionType"] = null;
@@ -1051,12 +1006,12 @@ namespace SOR.Pages.BC
                     }
                 }
                 else
-                    FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                    FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
                 CheckBoxAllOperationOnPageIndex();
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : gvBusinessCorrespondents_PageIndexChanging() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : gvBusinessCorrespondents_PageIndexChanging() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 return;
@@ -1114,7 +1069,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : chBoxSelectRow_CheckedChanged() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : chBoxSelectRow_CheckedChanged() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 return;
@@ -1153,7 +1108,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : CheckBoxAll_CheckedChanged() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : CheckBoxAll_CheckedChanged() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 return;
@@ -1196,7 +1151,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : CheckBoxAllOperationOnPageIndex() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : CheckBoxAllOperationOnPageIndex() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 return;
@@ -1209,11 +1164,11 @@ namespace SOR.Pages.BC
         {
             try
             {
-                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.Export);
+                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ExportGrid);
                 ExportFormat _ExportFormat = new ExportFormat();
                 if (dt.Tables.Count > 0 && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["UserName"]), "PayRakam", "BC Verification Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["UserName"]), "Proxima", "BC-Verification", dt);
                 }
                 else
                 {
@@ -1223,7 +1178,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnExportCSV_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnExportCSV_Click() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 return;
@@ -1236,11 +1191,11 @@ namespace SOR.Pages.BC
         {
             try
             {
-                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.Export);
+                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ExportGrid);
                 ExportFormat _ExportFormat = new ExportFormat();
                 if (dt.Tables.Count > 0 && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["UserName"]), "PayRakam", "BC Verification Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["UserName"]), "Proxima", "BC-Verification", dt);
                 }
                 else
                 {
@@ -1250,7 +1205,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btndownload_ServerClick() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btndownload_ServerClick() \nException Occured\n" + Ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
                 return;
@@ -1270,7 +1225,7 @@ namespace SOR.Pages.BC
                 _BCEntity.BCReqId = BCReqId;
                 ViewState["BCReqId"] = BCReqId;
                 string ReceiverEmailID = Convert.ToString(commandArgs[1]);
-                string Activity_Type = Convert.ToString(commandArgs[4]);
+                string Activity_Type = Convert.ToString(commandArgs[3]);
                 ViewState["Activity Type"] = Activity_Type;
                 _BCEntity.Mode = "GetBCDetails";
                 //_BCEntity.BCBCID = BCReqId;
@@ -1278,12 +1233,12 @@ namespace SOR.Pages.BC
                 ViewState["ReceiverEmailID"] = ReceiverEmailID;
                 string contactNo = Convert.ToString(commandArgs[2]);
                 ViewState["ReceiverContactNo"] = contactNo;
-                string BCCode = Convert.ToString(commandArgs[5]);
+                string BCCode = Convert.ToString(commandArgs[3]);
                 ViewState["BC Code"] = BCCode;
 
                 DataSet ds = _BCEntity.GetBCDocuments();
 
-                _BCEntity.Mode = "GetBCDocumentById";
+                _BCEntity.Mode = "GetBCDocumentByID";
                 DataSet get = _BCEntity.GetBCDocuments();
 
                 string defaultimage = "images/Question.png";
@@ -1300,8 +1255,8 @@ namespace SOR.Pages.BC
                 }
                 Session["pdfPathID"] = idthumb;
 
-                string Addthumb = !string.IsNullOrEmpty(get.Tables[1].Rows[0]["AddressProofDocument"].ToString()) ? get.Tables[1].Rows[0]["AddressProofDocument"].ToString() : defaultimage.ToString();
-                if (!string.IsNullOrEmpty(get.Tables[1].Rows[0]["AddressProofDocument"].ToString()))
+                string Addthumb = !string.IsNullOrEmpty(get.Tables[0].Rows[0]["AddressProofDocument"].ToString()) ? get.Tables[0].Rows[0]["AddressProofDocument"].ToString() : defaultimage.ToString();
+                if (!string.IsNullOrEmpty(get.Tables[0].Rows[0]["AddressProofDocument"].ToString()))
                 {
                     string FileThumbnailAdd = Path.GetDirectoryName(Addthumb) + "\\" + Path.GetFileNameWithoutExtension(Addthumb) + "_Thumbnail.png";
                     PathAdd = "../../" + FileThumbnailAdd;
@@ -1312,8 +1267,8 @@ namespace SOR.Pages.BC
                 }
                 Session["pdfPathAdd"] = Addthumb;
 
-                string Sigthumb = !string.IsNullOrEmpty(get.Tables[2].Rows[0]["SignatureProofDocument"].ToString()) ? get.Tables[2].Rows[0]["SignatureProofDocument"].ToString() : defaultimage.ToString();
-                if (!string.IsNullOrEmpty(get.Tables[2].Rows[0]["SignatureProofDocument"].ToString()))
+                string Sigthumb = !string.IsNullOrEmpty(get.Tables[0].Rows[0]["SignatureProofDocument"].ToString()) ? get.Tables[0].Rows[0]["SignatureProofDocument"].ToString() : defaultimage.ToString();
+                if (!string.IsNullOrEmpty(get.Tables[0].Rows[0]["SignatureProofDocument"].ToString()))
                 {
                     string FileThumbnailSig = Path.GetDirectoryName(Sigthumb) + "\\" + Path.GetFileNameWithoutExtension(Sigthumb) + "_Thumbnail.png";
                     PathSig = "../../" + FileThumbnailSig;
@@ -1336,8 +1291,8 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                 return;
             }
         }
@@ -1406,7 +1361,7 @@ namespace SOR.Pages.BC
             try
             {
                 ImageButton Imgbtn = (ImageButton)sender;
-                _BCEntity.Mode = "GetBCDocumentById";
+                _BCEntity.Mode = "GetBCDocumentByID";
                 _BCEntity.BCReqId = ViewState["BCReqId"].ToString();
                 //_BCEntity.DocumentID = int.Parse(Imgbtn.CommandArgument);
                 DataSet Ds = _BCEntity.GetBCDocuments();
@@ -1432,8 +1387,8 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnViewDownload_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnViewDownload_Click() \nException Occured\n" + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
 
                 return;
             }
@@ -1444,7 +1399,7 @@ namespace SOR.Pages.BC
             try
             {
                 ImageButton Imgbtn = (ImageButton)sender;
-                _BCEntity.Mode = "GetBCDocumentById";
+                _BCEntity.Mode = "GetBCDocumentByID";
                 _BCEntity.BCReqId = ViewState["BCReqId"].ToString();
                 //_BCEntity.DocumentID = int.Parse(Imgbtn.CommandArgument);
                 DataSet Ds = _BCEntity.GetBCDocuments();
@@ -1454,7 +1409,7 @@ namespace SOR.Pages.BC
                     string strURL = string.Empty;
                     //string fileName = Ds.Tables[1].Rows[0]["AddressProofType"].ToString();
                     string filepath = AppDomain.CurrentDomain.BaseDirectory;
-                    strURL = Ds.Tables[1].Rows[0]["AddressProofDocument"].ToString();
+                    strURL = Ds.Tables[0].Rows[0]["AddressProofDocument"].ToString();
                     string FinalPath = filepath + strURL;
                     string fileName = Path.GetFileName(FinalPath);
                     WebClient req = new WebClient();
@@ -1471,8 +1426,8 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : ImageButton1_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Business Correspondents Verification');", true);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : ImageButton1_Click() \nException Occured\n" + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC Verification');", true);
 
                 return;
             }
@@ -1483,17 +1438,17 @@ namespace SOR.Pages.BC
             try
             {
                 ImageButton Imgbtn = (ImageButton)sender;
-                _BCEntity.Mode = "GetBCDocumentById";
+                _BCEntity.Mode = "GetBCDocumentByID";
                 _BCEntity.BCReqId = ViewState["BCReqId"].ToString();
                 //_BCEntity.DocumentID = int.Parse(Imgbtn.CommandArgument);
                 DataSet Ds = _BCEntity.GetBCDocuments();
-                if (Ds.Tables[2].Rows.Count > 0)
+                if (Ds.Tables[0].Rows.Count > 0)
                 {
 
                     string strURL = string.Empty;
                    // string fileName = Ds.Tables[2].Rows[0]["SignatureProofType"].ToString();
                     string filepath = AppDomain.CurrentDomain.BaseDirectory;
-                    strURL = Ds.Tables[2].Rows[0]["SignatureProofDocument"].ToString();
+                    strURL = Ds.Tables[0].Rows[0]["SignatureProofDocument"].ToString();
                     string FinalPath = filepath + strURL;
                     string fileName = Path.GetFileName(FinalPath);
                     WebClient req = new WebClient();
@@ -1510,9 +1465,9 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : ImageButton2_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : ImageButton2_Click() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Business Correspondents Verification');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC Verification');", true);
 
                 return;
             }
@@ -1538,7 +1493,7 @@ namespace SOR.Pages.BC
                         }
                         Session["Username"] = Session["Username"].ToString();
                         CommonSave("RadionButtonClick");
-                        FillGrid(EnumCollection.EnumPermissionType.Export);
+                        FillGrid(EnumCollection.EnumPermissionType.EnableMakerChecker);
                         txtFinalRemarks.Text = string.Empty;
                         ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showSuccess('" + _strAlertMessage_Total + _reocrdsProcessed + "  Successful : " + _successful + "  Unsuccessful : " + _unsuessful + " ');", true);
                         ViewState["ActionType"] = null;
@@ -1548,14 +1503,14 @@ namespace SOR.Pages.BC
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
 
-                        ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Please enter Remarks', 'Verification Level 2-BC');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Please enter Remarks', 'BC-Verification');", true);
                     }
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.BCManagementTrace("Class : BCVerificationLevelTwo.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                    ErrorLog.BCManagementTrace("Class : BC-Verification.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
 
-                    ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification Level 2-BC');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BC-Verification');", true);
                     return;
                 }
             }
@@ -1593,7 +1548,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception ex)
             {
-                ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : ddlState_SelectedIndexChanged\nException Occured\n" + ex.Message);
+                ErrorLog.BCManagementTrace("Page : BC-Verification.cs \nFunction : ddlState_SelectedIndexChanged\nException Occured\n" + ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification BC');", true);
                 return;
@@ -1608,7 +1563,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception ex)
             {
-                ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : ddlClientCode_SelectedIndexChanged\nException Occured\n" + ex.Message);
+                ErrorLog.BCManagementTrace("Page : BC-Verification.cs \nFunction : ddlClientCode_SelectedIndexChanged\nException Occured\n" + ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Verification BC');", true);
                 return;
@@ -1675,11 +1630,11 @@ namespace SOR.Pages.BC
             {
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
-                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.Export);
+                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ExportGrid);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "L2 Approval Business Correspondents Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BC-Verification", dt);
                 }
                 else
                 {
@@ -1690,7 +1645,7 @@ namespace SOR.Pages.BC
 
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : btnexport_ServerClick\nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Page : BC-Verification.cs \nFunction : BtnCsv_Click\nException Occured\n" + Ex.Message);
 
             }
         }
@@ -1701,20 +1656,20 @@ namespace SOR.Pages.BC
             {
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
-                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.Export);
+                DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ExportGrid);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "L2 Approval Business Correspondents Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "BC-Verification", dt);
                 }
+                else
                 {
-                    //lblRecordCount.Text = "No Record's Found.";
                     ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('No data found.', 'Alert');", true);
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Page : BCVerificationLevelTwo.cs \nFunction : btnexport_ServerClick\nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Page : BC-Verification.cs \nFunction : BtnXls_Click\nException Occured\n" + Ex.Message);
 
             }
         }

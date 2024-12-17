@@ -1,0 +1,5 @@
+Time : 09-Dec-2024 15:01 Message : SMS Format Preperation Request Failed. Exception : Keyword not supported: 'port'.
+Time : 09-Dec-2024 15:05 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621300Email : xyz@gmail.com
+Time : 09-Dec-2024 15:05 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS

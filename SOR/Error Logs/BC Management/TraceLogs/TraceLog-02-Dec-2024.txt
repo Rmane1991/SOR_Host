@@ -1,0 +1,15 @@
+Time : 02-Dec-2024 14:43 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 25
+Time : 02-Dec-2024 14:43 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 25
+Time : 02-Dec-2024 16:32 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: character varying = bytea
+Time : 02-Dec-2024 16:33 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 02-Dec-2024 16:56 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: character varying = bytea

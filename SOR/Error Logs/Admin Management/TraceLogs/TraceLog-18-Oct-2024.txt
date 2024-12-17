@@ -1,0 +1,54 @@
+Time : 18-Oct-2024 10:41 Message : pgCreateUser: ddlRole_SelectedIndexChanged: Exception: 42883: procedure sp_bindrolegroups_createuser(unknown, unknown, integer, text, unknown) does not exist
+Time : 18-Oct-2024 11:51 Message : pgCreateUser: btnSave_Click(): Exception: 42883: function proc_createuser(p_username => text, p_password => text, p_email => text, p_rollid => text, p_UserRoleGroup => text, p_createdBy => text, p_Salt => text, p_Salt1 => text, p_Salt2 => unknown, p_Salt3 => unknown, p_Salt4 => unknown, p_ClientId => text, p_UserId => text, p_Mobile => text) does not exist
+Time : 18-Oct-2024 12:01 Message : pgCreateUser: btnSave_Click(): Exception: 22P02: invalid input syntax for type integer: "Maximus"
+Time : 18-Oct-2024 15:11 Message : pgManageUserAccount: BindDropdownRoles: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:11 Message : pgManageUserAccount: BindDropdownUsers: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:11 Message : pgManageUserAccount: FillUsers: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgUserAccessManagement: fillRoleDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgUserPageManagement: BindDropdowns: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgUserPageManagement: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgUserPageManagement: Page_Load: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgManageUserAccount: BindDropdownRoles: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgManageUserAccount: BindDropdownUsers: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : pgManageUserAccount: FillUsers: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 17:01 Message : pgManageUserAccount: IsOperationValid: Exception: Parameter 'p_Status' referenced in SQL but is an out-only parameter
+Time : 18-Oct-2024 18:19 Message : pgUserAccessManagement: fillRoleDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : pgUserPageManagement: BindDropdowns: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : pgUserPageManagement: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : pgUserPageManagement: Page_Load: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : pgUserAccessManagement: fillRoleDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:24 Message : pgUserAccessManagement: fillRoleDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:31 Message : pgUserAccessManagement: fillEditMenuDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:37 Message : pgUserAccessManagement: fillEditMenuDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:38 Message : pgUserAccessManagement: fillEditMenuDetailsGrid: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:42 Message : pgUserAccessManagement: fillEditMenuDetailsGrid: Exception: 42883: procedure sp_selecteditmenu(text, text, integer, text) does not exist
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: Keyword not supported: 'port'.

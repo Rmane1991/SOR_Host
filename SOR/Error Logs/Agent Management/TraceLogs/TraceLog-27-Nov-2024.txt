@@ -1,0 +1,39 @@
+Time : 27-Nov-2024 11:40 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 27-Nov-2024 11:40 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 27-Nov-2024 11:40 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 27-Nov-2024 11:40 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 27-Nov-2024 11:40 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\27112024114017\ReleaseNote.pdf
+Time : 27-Nov-2024 11:40 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\27112024114017\ReleaseNote.pdf
+Time : 27-Nov-2024 11:40 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 27-Nov-2024 11:40 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 27-Nov-2024 12:07 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 12:09 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:38 Message : Versioning : Error At gvVersioning_RowDataBound(). Username : Maximus Exception : Unable to cast object of type 'System.Web.UI.WebControls.ImageButton' to type 'System.Web.UI.WebControls.Button'.
+Time : 27-Nov-2024 14:43 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Time : 27-Nov-2024 14:48 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:52 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:52 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:52 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:55 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:56 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 14:57 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:14 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:15 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:32 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:32 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:33 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:33 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:35 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 15:35 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:03 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:03 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:05 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:05 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:07 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:08 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:13 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 16:17 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 18:59 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 18:59 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 27-Nov-2024 19:10 Message : Versioning: btnSubmitDetails_Click(): Going For Insert

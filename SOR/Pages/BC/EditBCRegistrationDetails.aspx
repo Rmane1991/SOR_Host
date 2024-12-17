@@ -1680,7 +1680,7 @@
                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
                                         <%--<button type="button" id="downloadPass" runat="server" visible="true" OnClick="" class="btn btn-success">Submit</button>--%>
                                         <asp:Button runat="server" ID="downloadPass" CssClass="themeBtn themeApplyBtn" OnClick="ProcessBCData_Click"  ToolTip="Submit" Text="Submit" OnClientClick="Confirm3();"></asp:Button>
-                                        <asp:Button runat="server" ID="btnCloseReceipt" CssClass="themeBtn resetBtn themeCancelBtn me-0r" OnClick="btnCloseReceipt_Click"  ToolTip="Close" Text="Back"></asp:Button>
+                                        <asp:Button runat="server" ID="btnCloseReceipt" CssClass="themeBtn resetBtn themeCancelBtn me-0r" OnClick="btnCloseReceipt_Click" style="margin-top: -7px;" ToolTip="Close" Text="Back"></asp:Button>
                                     </div>
 
 

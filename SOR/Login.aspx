@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <meta name="author" content="" />
 
-    <title>Login | Pay₹कम</title>
+    <title>Login | Proxima SOR</title>
 
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <link rel="shortcut icon" href="images/Rupee.png" />
@@ -191,7 +191,7 @@
                     <div runat="server" class="form-group">
                         <label class="sr-only" for="inputName">User Name</label>
                         <asp:TextBox ID="txtUserName" runat="server" class="form-control" placeholder="Username or 10 digits Mobile No." MaxLength="30"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtUserName" SetFocusOnError="true" runat="server"></asp:RequiredFieldValidator>
+                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtUserName" SetFocusOnError="true" runat="server"></asp:RequiredFieldValidator>--%>
                     </div>
                     <div runat="server" class="form-group" id="PasswordBox">
                         <label class="sr-only" for="inputPassword">Password</label>
@@ -216,7 +216,8 @@
                     <asp:HiddenField ID="hidUsername" runat="server" />
                     <asp:HiddenField ID="hidCount" runat="server" />
                     <asp:HiddenField ID="hidInfo" runat="server" Value="" />
-                    <asp:Button ID="btnLogin" Style="margin-left: 0px;" runat="server" Class="btn btn-primary btn-block" OnClientClick="ChangeBackround();" OnClick="btnLogin_Click" Text="Submit" />
+                    <asp:Button ID="btnLogin" Style="margin-left: 0px;" runat="server" Class="btn btn-primary btn-block" OnClick="btnLogin_Click" Text="Submit" />
+                    <%--<asp:Button ID="btnLogin" Style="margin-left: 0px;" runat="server" Class="btn btn-primary btn-block" OnClientClick="ChangeBackround();" OnClick="btnLogin_Click" Text="Submit" />--%>
                     <asp:Button ID="btnValidateOTP" Visible="false" Style="margin-left: 0px;" runat="server" CssClass="btn btn-primary btn-block" Text="Validate OTP" OnClick="btnValidateOTP_Click"></asp:Button>
                     <div class="form-group">
                         <div class="form-che"></div>

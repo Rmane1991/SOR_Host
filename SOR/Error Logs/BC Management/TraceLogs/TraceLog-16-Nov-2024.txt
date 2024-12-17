@@ -1,0 +1,66 @@
+Time : 16-Nov-2024 12:02 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 6
+Time : 16-Nov-2024 12:03 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 6
+Time : 16-Nov-2024 12:03 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 6 Fullname: \xc30d04070302fc97606aa78ba65a61d23801b6bc6d60506ef61b25f6336109e1bc2003c839c02400038ec15b414ddff23fdfcecca127811343034c991d0f70ec6a3c59c6068332cc5a User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 16-Nov-2024 12:03 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 6 Fullname: \xc30d04070302fc97606aa78ba65a61d23801b6bc6d60506ef61b25f6336109e1bc2003c839c02400038ec15b414ddff23fdfcecca127811343034c991d0f70ec6a3c59c6068332cc5a User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 16-Nov-2024 12:03 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 16-Nov-2024 12:24 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 8
+Time : 16-Nov-2024 12:24 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 8
+Time : 16-Nov-2024 12:24 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 8 Fullname: \xc30d040703022f88603490aa910673d23801e90a45629e51b3eff2f01f0baaf7b396455f2112212745774d4401f9591b66f4fb08236258d3f45cba008f0ec61a7ee4e5dd402d79a2b6 User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 16-Nov-2024 12:24 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 8 Fullname: \xc30d040703022f88603490aa910673d23801e90a45629e51b3eff2f01f0baaf7b396455f2112212745774d4401f9591b66f4fb08236258d3f45cba008f0ec61a7ee4e5dd402d79a2b6 User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 16-Nov-2024 12:24 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 16-Nov-2024 12:32 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42703: column "bc_id" does not exist
+Time : 16-Nov-2024 15:48 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 16-Nov-2024 15:48 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 16-Nov-2024 15:48 Message : Class : AggRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+42701: column "pgp_sym_decrypt" specified more than once
+Time : 16-Nov-2024 15:49 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 16-Nov-2024 16:02 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 16-Nov-2024 16:05 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 16-Nov-2024 16:05 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 16-Nov-2024 16:50 Message : Class : AggVerification.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Mobile No'.
+Time : 16-Nov-2024 16:54 Message : Class : AggVerification.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Mobile No'.
+Time : 16-Nov-2024 16:55 Message : Class : AggVerification.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Mobile No'.
+Time : 16-Nov-2024 16:55 Message : Class : AggVerification.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Created By' was not found on the selected data source.
+Time : 16-Nov-2024 16:56 Message : Class : AggVerification.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Authorizer Status' was not found on the selected data source.
+Time : 16-Nov-2024 16:59 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 2 Fullname: BCFirst User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Nov-2024 16:59 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 2 Fullname: BCFirst User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 16-Nov-2024 16:59 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 16-Nov-2024 17:07 Message : Class : OnBoardAggStatus.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BcStatus'.
+Time : 16-Nov-2024 17:08 Message : Class : OnBoardAggStatus.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BcStatus'.
+Time : 16-Nov-2024 18:14 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: Test User: Maximus ReceiverEmailID: rr@r.com ContactNo: 8520771407 Remarks: Approve.
+Time : 16-Nov-2024 18:14 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: Test User: Maximus ReceiverEmailID: rr@r.com ContactNo: 8520771407 Remarks: Approve.ActivityType: 0
+Time : 16-Nov-2024 18:16 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 16-Nov-2024 19:01 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 9 Fullname: \xc30d04070302037937179d00e1736dd2380111bd0fcb53e65a8d6575ff0663e6dc4fe5ea7e43146d569ed3cbef907c134adf4b2422dd8427dc5074b9f59578f890c57d0e3e13730f36 User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 16-Nov-2024 19:01 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Keyword not supported: 'port'.
+Time : 16-Nov-2024 19:02 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 9 Fullname: \xc30d04070302037937179d00e1736dd2380111bd0fcb53e65a8d6575ff0663e6dc4fe5ea7e43146d569ed3cbef907c134adf4b2422dd8427dc5074b9f59578f890c57d0e3e13730f36 User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 16-Nov-2024 19:02 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Keyword not supported: 'port'.
+Time : 16-Nov-2024 19:12 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42703: column "bc_id" does not exist

@@ -71,6 +71,7 @@ namespace BussinessAccessLayer
             EnableRoles = 2,
             Export = 3,
             ActiveDeactive = 4,
+            ExportGrid = 5,
             PreExport = 6,
             AgL1Export = 7,
             AgL2Export = 8,

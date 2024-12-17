@@ -1,0 +1,15 @@
+Time : 16-Nov-2024 12:25 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 9
+Time : 16-Nov-2024 12:32 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column "bc_id" does not exist
+Time : 16-Nov-2024 17:09 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 36
+Time : 16-Nov-2024 17:09 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 36 Fullname: A B C User: Maximus ReceiverEmailID: xyz5416@gmail.com ContactNo: 9784132132 Remarks: Approve.
+Time : 16-Nov-2024 17:09 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Nov-2024 17:09 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: Keyword not supported: 'port'.
+Time : 16-Nov-2024 17:10 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 36
+Time : 16-Nov-2024 17:10 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 36 Fullname: A B C User: Maximus ReceiverEmailID: xyz5416@gmail.com ContactNo: 9784132132 Remarks: Approve.
+Time : 16-Nov-2024 17:10 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Nov-2024 19:03 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 16-Nov-2024 19:03 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 16-Nov-2024 19:03 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 16-Nov-2024 19:06 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 5
+Time : 16-Nov-2024 19:07 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 6
+Time : 16-Nov-2024 19:12 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column "bc_id" does not exist

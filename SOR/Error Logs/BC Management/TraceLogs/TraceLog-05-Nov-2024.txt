@@ -1,0 +1,22 @@
+Time : 05-Nov-2024 10:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 126
+Time : 05-Nov-2024 10:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Nov-2024 10:30 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Nov-2024 10:33 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Nov-2024 11:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 05-Nov-2024 11:28 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 05-Nov-2024 11:33 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 128
+Time : 05-Nov-2024 11:33 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 128
+Time : 05-Nov-2024 11:33 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 128
+Time : 05-Nov-2024 11:33 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 128
+Time : 05-Nov-2024 11:34 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 128
+Time : 05-Nov-2024 12:38 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+42883: function public.validate_group(p_name => text) does not exist
+Time : 05-Nov-2024 12:54 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Bucket'.

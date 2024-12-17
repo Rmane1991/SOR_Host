@@ -1,0 +1,8 @@
+Time : 08-Nov-2024 10:48 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 08-Nov-2024 11:38 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 08-Nov-2024 11:39 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 08-Nov-2024 11:40 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 08-Nov-2024 11:42 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 08-Nov-2024 12:37 Message : TrRule: btnSubmit_ServerClick() | DB_StatusCode : FLG96 | ResponseCode : FLG96 | ResponseMessage : Flag Not Exist
+Time : 08-Nov-2024 12:49 Message : TrRule: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 08-Nov-2024 12:50 Message : TrRule: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

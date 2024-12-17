@@ -1,0 +1,101 @@
+16-11-2024 11:31:43:2990 : Login Successful. Username Maximus. SessionID : vkmvdpkotyv03et2ocrduv51
+16-11-2024 11:59:37:8714 : Login Successful. Username Maximus. SessionID : te2eles22ww4ytpj0jnycprk
+16-11-2024 12:00:35:4544 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+16-11-2024 12:00:56:8988 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+16-11-2024 12:01:30:9948 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+16-11-2024 12:02:39:3638 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+16-11-2024 12:02:39:3638 : NOTICE: Flag is set to 1, proceeding with validations...
+16-11-2024 12:02:39:3658 : NOTICE: Inserting new record...1
+16-11-2024 12:02:39:3678 : NOTICE: Inserting new record...
+16-11-2024 12:02:39:3847 : NOTICE: Insert successful, RequestId: 6
+16-11-2024 12:03:03:2512 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+16-11-2024 12:03:03:2522 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+16-11-2024 12:03:59:2687 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+16-11-2024 12:03:59:2716 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+16-11-2024 12:03:59:2746 : NOTICE: Reediting/Declining insert for Request ID: 6
+16-11-2024 12:06:26:6802 : Login Successful. Username Maximus. SessionID : rhr2qtutzwsdtqdqrbhfr3ek
+16-11-2024 12:06:42:5984 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+16-11-2024 12:24:00:0379 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+16-11-2024 12:24:17:7196 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+16-11-2024 12:24:17:7196 : NOTICE: Flag is set to 1, proceeding with validations...
+16-11-2024 12:24:17:7206 : NOTICE: Inserting new record...1
+16-11-2024 12:24:17:7216 : NOTICE: Inserting new record...
+16-11-2024 12:24:17:7385 : NOTICE: Insert successful, RequestId: 8
+16-11-2024 12:24:32:3184 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+16-11-2024 12:24:32:3214 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+16-11-2024 12:24:50:2958 : Page : AppSecurity.cs 
+Function : RandomStringGenerator() 
+Exception Occured
+Index was outside the bounds of the array.
+16-11-2024 12:25:00:8817 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+16-11-2024 12:25:00:8827 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+16-11-2024 12:25:00:8837 : NOTICE: Reediting/Declining insert for Request ID: 8
+16-11-2024 12:25:24:0062 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+16-11-2024 12:25:24:0072 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+16-11-2024 12:25:24:0082 : NOTICE: Reediting/Declining update for Request ID: 9
+16-11-2024 12:25:34:3602 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+16-11-2024 12:25:34:3652 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+16-11-2024 14:34:17:5343 : Login Successful. Username Maximus. SessionID : o454yefhaab3ocxdvoioy0be
+16-11-2024 15:44:35:9185 : Login Successful. Username Maximus. SessionID : fsxbou0ctodubjva45ogsijc
+16-11-2024 15:47:30:5093 : Login Successful. Username Maximus. SessionID : xtskkegqxznny4eol13u0hmm
+16-11-2024 15:48:28:2198 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+42701: column "pgp_sym_decrypt" specified more than once
+16-11-2024 15:49:23:2290 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+16-11-2024 15:51:04:6956 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+16-11-2024 15:54:23:4376 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+16-11-2024 16:02:23:3922 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+16-11-2024 16:50:38:9705 : Login Successful. Username Maximus. SessionID : ajhn5lebb2btvxvhp5bsn0rq
+16-11-2024 16:52:25:7106 : Login Successful. Username Maximus. SessionID : 4rqjge30ztbprzhofmhb5zx2
+16-11-2024 17:06:51:8618 : Login Successful. Username Maximus. SessionID : cryjtt5gwlgzpz4eaec0aps2
+16-11-2024 17:09:22:5539 : Login Successful. Username Maximus. SessionID : 5zygdapzorsm4pwc0tqdnrh0
+16-11-2024 18:13:25:0109 : Login Successful. Username Maximus. SessionID : 4fytylohljntxtvgyf1fyhfw
+16-11-2024 18:25:25:1930 : Class : BCRegistration.cs 
+Function : fillClient() 
+Exception Occured
+Object reference not set to an instance of an object.
+16-11-2024 18:26:27:1677 : Login Successful. Username Maximus. SessionID : okmiz0i2rjcotlkd1yxcsv5d
+16-11-2024 18:58:58:4362 : Login Successful. Username Maximus. SessionID : kwu13n5ape43njzdqmg1lexf
+16-11-2024 19:01:15:5223 : Login Successful. Username Maximus. SessionID : awzb1l0hq1gmrmma4enynq4k
+16-11-2024 19:01:48:2780 : Class : BCEntity.cs 
+Function : ChangeBCStatusReEdit() 
+Exception Occured
+Keyword not supported: 'port'.
+16-11-2024 19:02:52:1041 : Class : BCEntity.cs 
+Function : ChangeBCStatusReEdit() 
+Exception Occured
+Keyword not supported: 'port'.
+16-11-2024 19:03:23:0225 : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Column 'BCAddress' does not belong to table Table.
+16-11-2024 19:03:29:1352 : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Column 'BCAddress' does not belong to table Table.
+16-11-2024 19:04:53:7959 : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Column 'BCName' does not belong to table Table.
+16-11-2024 19:05:16:0084 : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+16-11-2024 19:05:33:9294 : Login Successful. Username Maximus. SessionID : tm1rnxdpbd2eve4m01ailnnc
+16-11-2024 19:06:40:8845 : Login Successful. Username Maximus. SessionID : jj0u0cv1g0anepssyk1uytyq

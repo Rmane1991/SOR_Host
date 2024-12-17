@@ -8,6 +8,7 @@ using MaxiSwitch.EncryptionDecryption;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using Npgsql;
 
 namespace BussinessAccessLayer
 {
@@ -87,36 +88,44 @@ namespace BussinessAccessLayer
             DataSet dataSet = new DataSet();
             try
             {
-
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
-                    {
-                        SqlParameter[] _paramsAggregatorDetails = {
-                                                 new SqlParameter("@UserName", UserName),
-                                                 new SqlParameter("@FromDate", FromDate),
-                                                 new SqlParameter("@ToDate", ToDate),
-                                             };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_NegativeAgent_Report";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_paramsAggregatorDetails);
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                    sqlConn.Open();
 
+                    // Create a command to call the stored procedure
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = sqlConn;
+                        cmd.CommandText = "CALL SP_NegativeAgent_Report(@p_UserName, @p_FromDate, @p_ToDate)";
+                        cmd.CommandType = CommandType.Text; // Use CommandType.Text for CALL
+
+                        // Add parameters with p_ prefix
+                        cmd.Parameters.AddWithValue("@p_UserName", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@p_FromDate", (object)FromDate ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@p_ToDate", (object)ToDate ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = "SELECT * FROM TempResults"; // Replace with your actual temp table name
+                        cmd.CommandType = CommandType.Text;
+
+                        // Fill the DataSet with the results
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.TransactionReportTrace("TransactionReportDAL: BindBCddl: UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
+                // Log the exception
+                ErrorLog.CommonTrace($"Class: YourClassName \nFunction: NegativeAgentDetails() \nException Occurred\n{ex.Message}");
             }
-
+            return dataSet;
         }
+
         #endregion
     }
 }

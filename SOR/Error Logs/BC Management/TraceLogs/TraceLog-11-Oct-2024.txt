@@ -1,0 +1,401 @@
+Time : 11-Oct-2024 11:36 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column f.fstatus does not exist
+Time : 11-Oct-2024 11:36 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:36 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:47 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42702: column reference "isdocuploaded" is ambiguous
+Time : 11-Oct-2024 11:47 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:47 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:49 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42702: column reference "isdocuploaded" is ambiguous
+Time : 11-Oct-2024 11:49 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:49 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:52 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42702: column reference "isverified" is ambiguous
+Time : 11-Oct-2024 11:52 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:52 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:53 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 11:53 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:53 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:54 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42601: query has no destination for result data
+Time : 11-Oct-2024 11:54 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:54 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:57 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42601: query has no destination for result data
+Time : 11-Oct-2024 11:57 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 11:57 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:03 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 12:03 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:03 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:04 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42601: query has no destination for result data
+Time : 11-Oct-2024 12:04 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:04 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:07 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 12:07 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 12:17 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42601: query has no destination for result data
+Time : 11-Oct-2024 12:17 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:17 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:17 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:17 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:28 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+42804: structure of query does not match function result type
+Time : 11-Oct-2024 12:28 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:31 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+42804: structure of query does not match function result type
+Time : 11-Oct-2024 12:31 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:31 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:32 Message : Class : OnBoardBcStatus.cs 
+Function : BindDropdownsFranchise() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 11-Oct-2024 12:42 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: function sp_bcstatus(p_VerificationLevel => unknown, p_OperationType => unknown, p_Status => integer, p_BCStatus => unknown, p_CHStatus => unknown, p_Authstatus => unknown, p_ActivityType => integer, p_User => unknown, p_Flag => integer) does not exist
+Time : 11-Oct-2024 12:49 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: function sp_bcstatus(p_VerificationLevel => unknown, p_OperationType => unknown, p_Status => integer, p_BCStatus => unknown, p_CHStatus => unknown, p_Authstatus => unknown, p_ActivityType => integer, p_User => unknown, p_Flag => integer) does not exist
+Time : 11-Oct-2024 12:54 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42P01: relation "agentmaster" does not exist
+Time : 11-Oct-2024 12:55 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42703: column am.agentreqid does not exist
+Time : 11-Oct-2024 13:01 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: bit = integer
+Time : 11-Oct-2024 13:04 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 13:07 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 13:09 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42804: argument of IS TRUE must be type boolean, not type bit
+Time : 11-Oct-2024 13:10 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42601: syntax error at or near "THEN"
+Time : 11-Oct-2024 13:11 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42846: cannot cast type bit to boolean
+Time : 11-Oct-2024 14:16 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 14:25 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = integer
+Time : 11-Oct-2024 14:25 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: bit = integer
+Time : 11-Oct-2024 14:28 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 14:29 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+Time : 11-Oct-2024 14:57 Message : Page : BCStatus.cs 
+Function : btnexport_ServerClick
+Exception Occured
+Thread was being aborted.
+Time : 11-Oct-2024 15:07 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 65
+Time : 11-Oct-2024 15:07 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 65
+Time : 11-Oct-2024 15:08 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 65 Fullname: AirPay User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9872300000 Remarks: Approve.
+Time : 11-Oct-2024 15:08 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 65 Fullname: AirPay User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9872300000 Remarks: Approve.ActivityType: 0
+Time : 11-Oct-2024 15:08 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 11-Oct-2024 18:05 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:06 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:06 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:07 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:07 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:30 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:31 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:31 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:33 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:34 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:36 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:36 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:38 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:39 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:42 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:44 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:45 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:47 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:48 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:53 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:55 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:56 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:57 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:57 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:58 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:59 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 18:59 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:00 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:00 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:38 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:38 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:39 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:40 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:41 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:43 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:47 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:47 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:55 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 19:58 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 20:00 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 20:05 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 20:06 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 11-Oct-2024 20:07 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.

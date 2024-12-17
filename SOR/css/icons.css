@@ -69,10 +69,11 @@
   content: "\e905";
   color: #ff5c49;
 }
-.icon-dashboard:before {
-  content: "\e906";
-  color: var(--color-primary-default);
-}
+/*.icon-dashboard:before {
+    content: "\e90b";*/
+    /*content: "\e90b";*/
+    /*color: var(--color-primary-default);*/
+/*}*/
 .icon-filter:before {
   content: "\e907";
   color: var(--color-primary-default);
@@ -98,8 +99,10 @@
     color: var(--color-primary-default);
 }
 .icon-terminal-status:before {
-  content: "\e90d";
-  color: var(--color-primary-default);
+    /*content: "\e91c";*/
+    /*content: "\e91c";*/
+    content: "\e90d";
+    color: var(--color-primary-default);
 }
 .icon-ticket-centre:before {
   content: "\e90e";
@@ -109,10 +112,10 @@
   content: "\e90f";
   color: var(--color-primary-default);
 }
-.icon-uploads:before {
-    content: "\e90c";
+/*.icon-uploads:before {
+    content: "\e901";
     color: var(--color-primary-default);
-}
+}*/
 .icon-hamburger:before {
   content: "\e911";
   color: var(--color-black);
@@ -156,4 +159,85 @@
     left: 0;
     opacity: .7;
     position: absolute;
+}
+
+.icon-admin:before {
+    content: "\e900"; /* Unicode for admin icon */
+    color: var(--color-primary-default);
+}
+
+.icon-briefcase:before {
+    content: "\e915"; /* Unicode for briefcase (business/client) icon --BC*/
+    color: var(--color-primary-default);
+}
+
+.icon-rule-management:before {
+    content: "\e90e"; /* Unicode for balance scale */
+    font-family: "Font Awesome 5 Free";
+    color: var(--color-primary-default);
+}
+
+
+.icon-network:before {
+    content: "\e910"; /* Unicode for network (aggregation) icon --Agg*/
+    color: var(--color-primary-default);
+}
+
+.icon-userr:before {
+    content: "\e902"; /* Unicode for user icon --Agent*/
+    color: var(--color-primary-default);
+}
+
+.icon-file-alt:before {
+    content: "\e905"; /* Unicode for file (reports) icon */
+    color: var(--color-primary-default);
+}
+
+.icon-cogs:before {
+    content: "\e907"; /* Unicode for cogs (settings) icon */
+    color: var(--color-primary-default);
+}
+
+.icon-settings:before {
+    content: "\e908"; /* Unicode for settings icon */
+    color: var(--color-primary-default);
+}
+
+.icon-upload:before {
+    content: "\e901"; /* Unicode for upload icon - Admin */
+    color: var(--color-primary-default);
+}
+
+.icon-clipboard-list:before {
+    content: "\e903"; /* Unicode for clipboard/list (patch management) icon */
+    color: var(--color-primary-default);
+}
+
+.icon-lab:before {
+    content: "\e90b"; /* Unicode for lab (test menu) icon */
+    color: var(--color-primary-default);
+}
+
+.icon-restricted:before {
+    content: "\f076"; /* Magnet icon from FontAwesome */
+    font-family: 'FontAwesome'; /* Ensure correct font family */
+    color: var(--color-primary-default); /* Your color */
+    font-size: 16px; /* Smaller size for the magnet icon */
+    position: relative;
+}
+.icon-rule-status:before {
+    content: "\f0cb"; /* Unicode for clipboard icon from FontAwesome */
+    font-family: 'FontAwesome';
+    color: var(--color-primary-default); /* Your color */
+}
+
+.icon-dashboard:before {
+    content: "\e906";
+    color: var(--color-primary-default);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /*font-family: 'icomoon' !important;
+    
+    margin: 10px;*/
 }

@@ -1,0 +1,45 @@
+Time : 28-Nov-2024 15:44 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024154411\ReleaseNote.pdf
+Time : 28-Nov-2024 15:44 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024154411\ReleaseNote.pdf
+Time : 28-Nov-2024 15:44 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 28-Nov-2024 15:44 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 28-Nov-2024 15:44 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 15:44 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024154427\ReleaseNote.pdf
+Time : 28-Nov-2024 15:44 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024154427\ReleaseNote.pdf
+Time : 28-Nov-2024 15:44 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 28-Nov-2024 15:44 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 28-Nov-2024 15:47 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 15:47 Message : Versioning : Error At btnSubmitRemarks_Click(). Username : Maximus Exception : 42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 28-Nov-2024 15:47 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 15:47 Message : Versioning : Error At btnSubmitRemarks_Click(). Username : Maximus Exception : 42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 28-Nov-2024 16:29 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 16:29 Message : Versioning : Error At btnSubmitRemarks_Click(). Username : Maximus Exception : 42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 28-Nov-2024 16:32 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 16:32 Message : Versioning : Error At btnSubmitRemarks_Click(). Username : Maximus Exception : 42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+Time : 28-Nov-2024 18:50 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 18:52 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 18:55 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 18:56 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 18:59 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 28-Nov-2024 19:05 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:05 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:05 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:05 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:05 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024190531\ReleaseNote.pdf
+Time : 28-Nov-2024 19:05 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024190531\ReleaseNote.pdf
+Time : 28-Nov-2024 19:05 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 28-Nov-2024 19:05 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 28-Nov-2024 19:06 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:06 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:06 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:06 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 28-Nov-2024 19:06 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024190621\ReleaseNote.pdf
+Time : 28-Nov-2024 19:06 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\28112024190621\ReleaseNote.pdf
+Time : 28-Nov-2024 19:06 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 28-Nov-2024 19:06 Message : Versioning: btnSave_Click(): Going For Insert

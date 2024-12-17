@@ -1,0 +1,59 @@
+Time : 02-Dec-2024 11:00 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:00 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:00 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:00 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:00 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024110026\ReleaseNote.pdf
+Time : 02-Dec-2024 11:00 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024110026\ReleaseNote.pdf
+Time : 02-Dec-2024 11:00 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 02-Dec-2024 11:00 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 02-Dec-2024 11:03 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 02-Dec-2024 11:15 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:15 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:15 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:15 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 11:15 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024111518\ReleaseNote.pdf
+Time : 02-Dec-2024 11:15 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024111518\ReleaseNote.pdf
+Time : 02-Dec-2024 11:15 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 02-Dec-2024 11:15 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 02-Dec-2024 11:15 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 02-Dec-2024 11:23 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 02-Dec-2024 11:23 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 02-Dec-2024 11:23 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 02-Dec-2024 12:18 Message : Versioning : btncugstatus_Click() No file uploaded. Please select a file to upload.
+Time : 02-Dec-2024 12:23 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ProdDocuments\ReleaseNote.pdf
+Time : 02-Dec-2024 12:23 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ProdDocuments\ReleaseNote.pdf
+Time : 02-Dec-2024 12:23 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 02-Dec-2024 12:51 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:51 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:51 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:51 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:51 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024125131\ReleaseNote.pdf
+Time : 02-Dec-2024 12:51 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024125131\ReleaseNote.pdf
+Time : 02-Dec-2024 12:51 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 02-Dec-2024 12:51 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 02-Dec-2024 12:51 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 02-Dec-2024 12:52 Message : AgentRegistrationDAL: ChangeAgentStatus: UserName: Maximus Exception: 42883: operator does not exist: integer = character varying
+Time : 02-Dec-2024 12:53 Message : PatchVerification: Commonsave:SingleSave(): Successful - Patch Verification. StatusFlag: Decline Flag: 2 id: 10 UserName: Maximus
+Time : 02-Dec-2024 12:57 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:57 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:57 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:57 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 02-Dec-2024 12:57 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024125734\ReleaseNote.pdf
+Time : 02-Dec-2024 12:57 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\02122024125734\ReleaseNote.pdf
+Time : 02-Dec-2024 12:57 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 02-Dec-2024 12:57 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 02-Dec-2024 12:57 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 02-Dec-2024 12:58 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 02-Dec-2024 12:58 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 02-Dec-2024 12:58 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 02-Dec-2024 13:01 Message : PatchVerification: Commonsave:SingleSave(): Successful - Patch Verification. StatusFlag: Decline Flag: 4 id: 11 UserName: Maximus
+Time : 02-Dec-2024 15:17 Message : UserManagement: BindDropdowns() : UserName: Maximus Exception: 42883: procedure sp_bindsubmenu(text, text, integer) does not exist
+Time : 02-Dec-2024 15:17 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42883: procedure sp_bindsubmenu(text, text, integer) does not exist
+Time : 02-Dec-2024 16:31 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42883: operator does not exist: character varying = bytea
+Time : 02-Dec-2024 16:32 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42883: operator does not exist: character varying = bytea
+Time : 02-Dec-2024 16:33 Message : BCEntity: GetBCRequestList: UserName:  Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 02-Dec-2024 16:56 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42883: operator does not exist: character varying = bytea

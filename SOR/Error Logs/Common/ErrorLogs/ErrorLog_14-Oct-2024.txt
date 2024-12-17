@@ -1,0 +1,7 @@
+Time : 14-Oct-2024 19:19
+Source - : System.Web
+StackTrace -  :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at SOR.Pages.Aggregator.EditAggRegistrationDetails.GetDetails(String BCReqId) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Aggregator\EditAggRegistrationDetails.aspx.cs:line 172
+Message - : 'ddlCategory' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+

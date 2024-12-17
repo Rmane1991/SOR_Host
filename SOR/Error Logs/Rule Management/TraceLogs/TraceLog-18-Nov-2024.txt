@@ -1,0 +1,2 @@
+Time : 18-Nov-2024 12:38 Message : BankConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 18-Nov-2024 18:50 Message : BankConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

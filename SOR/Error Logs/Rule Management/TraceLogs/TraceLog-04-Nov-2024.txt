@@ -1,0 +1,7 @@
+Time : 04-Nov-2024 11:00 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 04-Nov-2024 12:24 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 04-Nov-2024 12:32 Message : TrRule: EditGroup() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 04-Nov-2024 18:02 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 04-Nov-2024 18:09 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : 42883: function public.validate_group(p_username => text, p_groupName => text) does not exist
+Time : 04-Nov-2024 18:18 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 04-Nov-2024 18:19 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

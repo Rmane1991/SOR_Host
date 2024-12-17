@@ -1,0 +1,62 @@
+Time : 30-Nov-2024 11:59 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 11:59 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 11:59 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 11:59 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 11:59 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024115955\ReleaseNote.pdf
+Time : 30-Nov-2024 11:59 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024115955\ReleaseNote.pdf
+Time : 30-Nov-2024 11:59 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 30-Nov-2024 11:59 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 30-Nov-2024 12:00 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 12:13 Message : AgentRegistrationDAL: ChangeAgentStatus: UserName: Maximus Exception: 22P02: invalid input syntax for type integer: ""
+Time : 30-Nov-2024 12:13 Message : PatchVerification: SingleSave: Failed - Maker Verification. Exception: 22P02: invalid input syntax for type integer: ""
+Time : 30-Nov-2024 12:43 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 15:59 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 16:05 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:05 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:05 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:05 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:05 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024160553\ReleaseNote.pdf
+Time : 30-Nov-2024 16:05 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024160553\ReleaseNote.pdf
+Time : 30-Nov-2024 16:05 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 30-Nov-2024 16:05 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 30-Nov-2024 16:05 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 16:06 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:06 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:06 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:06 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:06 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024160634\ReleaseNote.pdf
+Time : 30-Nov-2024 16:06 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024160634\ReleaseNote.pdf
+Time : 30-Nov-2024 16:06 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 30-Nov-2024 16:06 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 30-Nov-2024 16:06 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 16:09 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:09 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:09 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:09 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:09 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024160909\ReleaseNote.pdf
+Time : 30-Nov-2024 16:09 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024160909\ReleaseNote.pdf
+Time : 30-Nov-2024 16:09 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 30-Nov-2024 16:09 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 30-Nov-2024 16:09 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 16:20 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:20 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:20 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:20 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 30-Nov-2024 16:20 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024162020\ReleaseNote.pdf
+Time : 30-Nov-2024 16:20 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\30112024162020\ReleaseNote.pdf
+Time : 30-Nov-2024 16:20 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 30-Nov-2024 16:20 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 30-Nov-2024 16:20 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 30-Nov-2024 16:31 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:31 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:31 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 30-Nov-2024 16:33 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:33 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:33 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 30-Nov-2024 16:35 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 30-Nov-2024 16:43 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:43 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:43 Message : Versioning: btncugstatus_Click(): Going For Insert
+Time : 30-Nov-2024 16:46 Message : CUG document uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:46 Message : Successfully uploaded CUG document to: D:\Data\Aakash\SOR\SOR\SOR\Patch\CUGDocuments\ReleaseNote.pdf
+Time : 30-Nov-2024 16:46 Message : Versioning: btncugstatus_Click(): Going For Insert

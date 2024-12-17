@@ -1,0 +1,22 @@
+29-10-2024 15:39:19:9695 : Login Successful. Username Maximus. SessionID : 41mjdfq4dnbvu0mn24ux4xnu
+29-10-2024 15:57:48:6541 : Class : ImportEntity.cs 
+Function : GetFileImportDetails_ManualcommissionUpload() 
+Exception Occured
+Keyword not supported: 'port'.
+29-10-2024 15:58:16:6732 : Class : ImportEntity.cs 
+Function : GetFileImportDetails_ManualcommissionUpload() 
+Exception Occured
+Keyword not supported: 'port'.
+29-10-2024 15:58:19:4620 : Class : ImportEntity.cs 
+Function : GetFileImportDetails_ManualcommissionUpload() 
+Exception Occured
+Keyword not supported: 'port'.
+29-10-2024 15:58:36:8624 : Class : ImportEntity.cs 
+Function : GetFileImportDetails_ManualcommissionUpload() 
+Exception Occured
+Keyword not supported: 'port'.
+29-10-2024 15:58:38:8997 : Class : ImportEntity.cs 
+Function : GetFileImportDetails_ManualcommissionUpload() 
+Exception Occured
+Keyword not supported: 'port'.
+29-10-2024 15:59:21:4640 : Login Successful. Username Maximus. SessionID : llxa2ouen0qqr315icgsm2yi

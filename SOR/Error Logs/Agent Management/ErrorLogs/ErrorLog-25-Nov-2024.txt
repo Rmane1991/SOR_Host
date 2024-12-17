@@ -1,0 +1,341 @@
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 11:30
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.SetPropertise() in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 206
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 11:30
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.SetPropertise() in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 217
+   at SOR.Pages.Patch.Versioning.FillGrid(EnumBindingType _EnumBindingType, String sortExpression) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 151
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 11:30
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.SetPropertise() in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 206
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 11:30
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.SetPropertise() in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 217
+   at SOR.Pages.Patch.Versioning.FillGrid(EnumBindingType _EnumBindingType, String sortExpression) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 151
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 11:47
+Source - : System.Web
+StackTrace -  :    at System.Web.UI.WebControls.BoundField.TryGetSimplePropertyValue(Object dataItem, Object& data)
+   at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at SOR.Pages.Patch.Versioning.FillGrid(EnumBindingType _EnumBindingType, String sortExpression) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 170
+Message - : A field or property with the name 'createdby' was not found on the selected data source.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 12:34
+Source - : System.Web
+StackTrace -  :    at System.Web.UI.WebControls.BoundField.TryGetSimplePropertyValue(Object dataItem, Object& data)
+   at System.Web.UI.WebControls.BoundField.GetValue(Control controlContainer)
+   at System.Web.UI.WebControls.BoundField.OnDataBindField(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at SOR.Pages.Patch.Versioning.FillGrid(EnumBindingType _EnumBindingType, String sortExpression) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 170
+Message - : A field or property with the name 'FileID' was not found on the selected data source.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 12:40
+Source - : mscorlib
+StackTrace -  :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Web.HttpResponse.TransmitFile(String filename, Int64 offset, Int64 length)
+   at System.Web.HttpResponse.TransmitFile(String filename)
+   at SOR.Pages.Patch.Versioning.DownloadPatch(String patchPath) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 791
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 739
+Message - : Could not find file 'C:\Users\aakash.tomar\AppData\Local\Temp\22112024181723_20241125124031.zip'.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 15:29
+Source - : mscorlib
+StackTrace -  :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at System.IO.Directory.CreateDirectory(String path)
+   at SOR.Pages.Patch.Versioning.Save() in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 274
+Message - : Access to the path '~\\TempFiles\\UploadedPatches\\' is denied.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:12
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 726
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:12
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 726
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:14
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:14
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:19
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:21
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e)
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:21
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e)
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:21
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e)
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:24
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 729
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:45
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 730
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 16:45
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 730
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 19:16
+Source - : mscorlib
+StackTrace -  :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at System.Web.UI.WebControls.FileUpload.SaveAs(String filename)
+   at SOR.Pages.Patch.Versioning.Save() in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 283
+Message - : Access to the path 'D:\UploadedPatches' is denied.
+----------------------------------------------------------------------------
+Time : 25-Nov-2024 19:27
+Source - : mscorlib
+StackTrace -  :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalDelete(String path, Boolean checkHost)
+   at System.IO.File.Delete(String path)
+   at SOR.Pages.Patch.Versioning.Save()
+Message - : The process cannot access the file 'D:\Data\Aakash\SOR\SOR\SOR\Patch\BussinessAccessLayer.zip' because it is being used by another process.

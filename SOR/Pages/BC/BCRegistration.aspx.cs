@@ -9,6 +9,7 @@ using System.Net;
 using BussinessAccessLayer;
 using AppLogger;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace SOR.Pages.BC
 {
@@ -16,7 +17,7 @@ namespace SOR.Pages.BC
     {
 
         #region Object Declarations
-
+        //BCEntity _BCEntity = new BCEntity();
         ClientRegistrationEntity clientMngnt = new ClientRegistrationEntity();
         public clsCustomeRegularExpressions customeRegExpValidation = null;
         public clsCustomeRegularExpressions _CustomeRegExpValidation
@@ -27,7 +28,7 @@ namespace SOR.Pages.BC
 
         public string pathId, PathAdd, PathSig;
         bool _IsValidFileAttached = false;
-        string RequestId = string.Empty;
+        int RequestId = 0;
         #endregion
 
         #region Objects Declaration
@@ -48,7 +49,7 @@ namespace SOR.Pages.BC
             {
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
-                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCRegistration.aspx", "13");
+                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCRegistration.aspx", "9");
                     if (!HasPagePermission)
                     {
                         try
@@ -65,10 +66,10 @@ namespace SOR.Pages.BC
 
                         if (!IsPostBack == true)
                         {
-                            fillClient();
-                            BindDropdownCountryState();
+                            //fillClient();
+                            //BindDropdownCountryState();
                             FillGrid(EnumCollection.EnumBindingType.BindGrid);
-                            UserPermissions.RegisterStartupScriptForNavigationListActive("3", "13");
+                            UserPermissions.RegisterStartupScriptForNavigationListActive("4", "9");
                         }
                     }
                 }
@@ -154,8 +155,7 @@ namespace SOR.Pages.BC
                 ErrorLog.BCManagementTrace("Class : BCRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
             }
         }
-
-
+        
         public bool valiadtereqid(string BCReqId)
         {
             DataSet ds = new DataSet();
@@ -219,6 +219,7 @@ namespace SOR.Pages.BC
                         ddlCity.Items.Insert(0, new ListItem("-- Select --", "0"));
 
                     }
+
                     txtFirstName.Text = ds.Tables[0].Rows[0]["FirstName"].ToString();
                     txtMiddleName.Text = ds.Tables[0].Rows[0]["Middle"].ToString();
                     txtLastName.Text = ds.Tables[0].Rows[0]["LastName"].ToString();
@@ -227,9 +228,7 @@ namespace SOR.Pages.BC
                     {
                         ddlGender.SelectedValue = ds.Tables[0].Rows[0]["Gender"].ToString();
                     }
-
-
-
+                    
                     txtPANNo.Text = ds.Tables[0].Rows[0]["PanNo"].ToString();
                     txtGSTNo.Text = ds.Tables[0].Rows[0]["GSTNo"].ToString();
                     txtaadharno.Text = ds.Tables[0].Rows[0]["AadharNo"].ToString();
@@ -344,6 +343,7 @@ namespace SOR.Pages.BC
                         _BCEntity.LastName = txtLastName.Text.Trim();
                         _BCEntity.PersonalEmail = txtEmailID.Text.Trim();
                         _BCEntity.AadharNo = txtaadharno.Text.Trim();
+                        _BCEntity.AadharNo = MaskingAadhar(txtaadharno.Text.Trim());
                         _BCEntity.PanNo = txtPANNo.Text.Trim();
                         _BCEntity.GSTNo = txtGSTNo.Text.Trim();
                         _BCEntity.RegisteredAddress = txtRegisteredAddress.Text.Trim();
@@ -371,6 +371,7 @@ namespace SOR.Pages.BC
                         _BCEntity.BCReqId = HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value) ? Convert.ToString(HidBCID.Value) : "0";
                         // _BCEntity.BCReqId = HidBCID.Value;
                         // string _status = _BCEntity.SetInsertUpdateBCDetails(out string _statusmsg, out string RequestId);
+                        
                         if (_BCEntity.Insert_BCRequest(Session["UserName"].ToString(), out int RequestId, out string _status, out string _statusmsg))
                         {
                             ErrorLog.BCManagementTrace("BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
@@ -408,13 +409,13 @@ namespace SOR.Pages.BC
             {
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
-                DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
 
 
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "Business Correspondents Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BC Registration Details", dt);
                 }
                 else
                 {
@@ -450,10 +451,10 @@ namespace SOR.Pages.BC
             {
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
-                DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "BC Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "BC Registration Details", dt);
                 }
                 {
                     //lblRecordCount.Text = "No Record's Found.";
@@ -468,10 +469,21 @@ namespace SOR.Pages.BC
                 ErrorLog.BCManagementTrace("Page : BCRegistration.cs \nFunction : btndownload_Click\nException Occured\n" + Ex.Message);
             }
         }
-
+        public bool AreContactNumbersDifferent(string contactNo, string alternateNo)
+        {
+            return contactNo != alternateNo;
+        }
         #region Manual Insert Validations and Set Properties
         private bool ValidateSetProperties()
         {
+            string contactNo = txtContactNo.Text;
+            string alternateNo = txtAlterNateNo.Text;
+
+            if (!AreContactNumbersDifferent(contactNo, alternateNo))
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact Number and Alternate Number must be different.', 'First Name');", true);
+                return false; // Stop further processing
+            }
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
@@ -501,7 +513,7 @@ namespace SOR.Pages.BC
 
                 // AccountNumber
                 if (hd_txtAccountNumber.Value == "1" || !string.IsNullOrEmpty(txtAccountNumber.Text))
-                    if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.NumberOnly, txtAccountNumber.Text))
+                    if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.AccountNumber, txtAccountNumber.Text))
                     {
                         txtAccountNumber.Focus();
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
@@ -513,7 +525,7 @@ namespace SOR.Pages.BC
 
                 // IFSCCode
                 if (hd_txtIFsccode.Value == "1" || !string.IsNullOrEmpty(txtIFsccode.Text))
-                    if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.TextWithNumbers, txtIFsccode.Text))
+                    if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.IFSC, txtIFsccode.Text))
                     {
                         txtIFsccode.Focus();
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
@@ -705,7 +717,6 @@ namespace SOR.Pages.BC
         }
         #endregion
 
-
         #region FillGrid
         public DataSet FillGrid(EnumCollection.EnumBindingType enumBinding)
         {
@@ -781,22 +792,22 @@ namespace SOR.Pages.BC
                 //    _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerDecline);
                 //}
                 ////////////////////////
+                //if (ddlRequestStatus.SelectedValue == "0")
+                //{
+                //    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerPending);
+                //}
+
+                //else if ( ddlRequestStatus.SelectedValue == "1")
+                //{
+                //    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
+                //}
+
+                //else if (ddlRequestStatus.SelectedValue == "2")
+                //{
+                //    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerDecline);
+                //}
+
                 if (ddlRequestStatus.SelectedValue == "0")
-                {
-                    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerPending);
-                }
-
-                else if ( ddlRequestStatus.SelectedValue == "1")
-                {
-                    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
-                }
-
-                else if (ddlRequestStatus.SelectedValue == "2")
-                {
-                    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerDecline);
-                }
-
-                else if (ddlRequestStatus.SelectedValue == "0")
                 {
                     _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerPending);
                 }
@@ -1104,17 +1115,16 @@ namespace SOR.Pages.BC
                 if (HiddenField1.Value.ToString() == "Yes" && HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value))
                 {
 
-                        _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
-                        _BCEntity.ClientId = ddlclient.SelectedValue.ToString();
+                    _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
+                    _BCEntity.ClientId = ddlclient.SelectedValue.ToString();
                     _BCEntity.CreatedBy = Session["Username"].ToString();
                     _BCEntity.IdentityProofDocument = Session["IdFilePath"].ToString();
-
-                        _BCEntity.IdentityProofType = ddlIdentityProof.SelectedValue;
-                        _BCEntity.AddressProofDocument = Session["AddFilePath"].ToString();
-                        _BCEntity.AddressProofType = ddlAddressProof.SelectedValue;
-                        _BCEntity.SignatureProofDocument = Session["SigFilePath"].ToString();
-                        _BCEntity.SignatureProofType = ddlSignature.SelectedValue;
-                        _BCEntity.BCReqId = HidBCID.Value;
+                    _BCEntity.IdentityProofType = ddlIdentityProof.SelectedValue;
+                    _BCEntity.AddressProofDocument = Session["AddFilePath"].ToString();
+                    _BCEntity.AddressProofType = ddlAddressProof.SelectedValue;
+                    _BCEntity.SignatureProofDocument = Session["SigFilePath"].ToString();
+                    _BCEntity.SignatureProofType = ddlSignature.SelectedValue;
+                    _BCEntity.BCReqId = HidBCID.Value;
 
                     //string _status = _BCEntity.Insert_BCRequest(Session["UserName"], out string RequestId, out string _statusmsg);
 
@@ -1148,7 +1158,6 @@ namespace SOR.Pages.BC
                         return;
                     }
                 }
-                
                 else
                 {
                     ErrorLog.BCManagementTrace("BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: " + UserName);
@@ -1209,7 +1218,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : PgClicentdocumentUplolad.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BCRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
                 return string.Empty; ;
             }
         }
@@ -1239,7 +1248,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : PgClicentdocumentUplolad.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BCRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
                 return string.Empty; ;
             }
         }
@@ -1269,7 +1278,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : PgClicentdocumentUplolad.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BCRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
                 return string.Empty; ;
             }
         }
@@ -1323,7 +1332,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : frmBCDocumentUpload.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BCRegistration.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
                 _IsValidFileAttached = false;
                 return false;
             }
@@ -1379,7 +1388,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : frmBCDocumentUpload.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BCRegistration.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
                 _IsValidFileAttached = false;
                 return false;
             }
@@ -1438,7 +1447,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-                if (HiddenField1.Value.ToString() == "Yes")
+                if (HiddenField3.Value.ToString() == "Yes")
                 {
                     if (ChkConfirmBC.Checked == true)
                     {
@@ -1902,8 +1911,7 @@ namespace SOR.Pages.BC
             }
             return IsvalidRecord;
         }
-
-
+        
         protected void gvBCOnboard_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             try
@@ -1954,7 +1962,7 @@ namespace SOR.Pages.BC
                         {
                             ImageButton lb = (ImageButton)e.CommandSource;
                             GridViewRow gvr = (GridViewRow)lb.NamingContainer;
-                            string BCReqId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["AgentReqId"]).ToString();
+                            string BCReqId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["BCReqId"]).ToString();
                             _BCEntity.BCReqId = BCReqId;
                             string _status = _BCEntity.DeleteBcDetails();
                             if (_status == "00")
@@ -1966,7 +1974,7 @@ namespace SOR.Pages.BC
                             else
                             {
                                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Data Delete Unsuccessful.', 'Warning');", true);
-                                return;
+                                return; 
                             }
 
                         }
@@ -2055,8 +2063,17 @@ namespace SOR.Pages.BC
             _BCEntity.Pincode = txtPinCode.Text.Trim();
             BindDropdownCountryState();
         }
+        public string MaskingAadhar(string adharno)
+        {
+            string masked = string.Empty;
+            var cardNumber = adharno;
+            //var firstDigits = cardNumber.Substring(0, 6);
+            var lastDigits = cardNumber.Substring(cardNumber.Length - 4, 4);
+            var requiredMask = new String('X', cardNumber.Length - lastDigits.Length);
+            var maskedString = string.Concat(requiredMask, lastDigits);
+            var maskedCardNumberWithSpaces = Regex.Replace(maskedString, ".{4}", "$0 ");
+            masked = maskedCardNumberWithSpaces;
+            return masked;
+        }
     }
 }
-
-
-

@@ -149,7 +149,7 @@
         <ContentTemplate>
             <div class="container-fluid">
                 <div class="breadHeader">
-                    <h5 class="page-title">BC Verification Level Two</h5>
+                    <h5 class="page-title">BC Verification</h5>
                 </div>
                 <!-- Filter Accordion -->
                 <div class="accordion summary-accordion" id="history-accordion">
@@ -205,22 +205,28 @@
                                             </div>
                                         </div>
 
-                                        <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
-                                            <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" onserverclick="btnSearch_Click">
-                                                Search</button>
-                                            <button type="button" id="btnClear" runat="server" onserverclick="btnClear_Click" class="themeBtn resetBtn themeCancelBtn me-0" data-bs-toggle="modal">
-                                                Reset</button>
+                                        <div >
+                                        </div>
 
-                                            <div class="col">
+                                        <div class="row d-flex justify-content-center align-items-center">
+                                            <div class="col-auto text-center">
+                                                <strong>
+                                                    <asp:Label ID="lblRecordsTotal" runat="server" Text=""></asp:Label>
+                                                </strong>
+                                            </div>
+                                            <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
+                                                <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" onserverclick="btnSearch_Click">
+                                                    Search</button>
+                                                <button type="button" id="btnClear" runat="server" onserverclick="btnClear_Click" class="themeBtn resetBtn themeCancelBtn me-0" data-bs-toggle="modal">
+                                                    Reset</button>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
                                                 <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
                                                     ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
 
                                                 <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
                                                     ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
                                             </div>
-                                        </div>
-                                        <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
-                                            <center><strong><asp:Label ID="lblRecordsTotal" runat="server" Text=""></asp:Label></strong></center>
                                         </div>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
@@ -286,25 +292,23 @@
                                         <ItemTemplate>
                                             <%-- CommandArgument='<%#Eval("BC Code")+","+ Eval("numBCID")%>'--%>
                                             <asp:ImageButton ID="btnView" runat="server" ImageUrl="../../images/edit.png" Width="20px" Height="20px"
-                                                ToolTip="Click here to verify" OnClick="btnView_Click" CommandArgument='<%#Eval("BC ID")+"="+Eval("Email")+"="+Eval("Mobile No")+"="+Eval("Client ID")+"="+Eval("Activity Type")+"="+Eval("BC Code")%>' data-toggle="modal" data-target="#myModal" />
+                                                ToolTip="Click here to verify" OnClick="btnView_Click" CommandArgument='<%#Eval("BC ID")+"="+Eval("Email")+"="+Eval("Mobile No")+"="+Eval("Activity Type")+"="+Eval("BC Code")%>' data-toggle="modal" data-target="#myModal" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="BC ID" HeaderText="BC ID" />
-                                    <asp:BoundField DataField="BC Code" HeaderText="BC Code" />
-                                    <asp:BoundField DataField="BC Name" HeaderText="BC Name" />
-                                    <asp:BoundField DataField="Client ID" HeaderText="Client ID" />
-                                    <asp:BoundField DataField="Client Name" HeaderText="Client Name" />
-                                    <asp:BoundField DataField="Contact No." HeaderText="Contact No." />
-                                    <asp:BoundField DataField="Email" HeaderText="Email Id" />
+                                    <asp:BoundField DataField="BC ID" HeaderText="BC ID" Visible="false" />
+                                    <asp:BoundField DataField="BC Code" HeaderText="Code" />
+                                    <asp:BoundField DataField="BC Name" HeaderText="Name" />
+                                    <asp:BoundField DataField="Mobile No" HeaderText="Mobile No" />
+                                    <asp:BoundField DataField="Email" HeaderText="Email" />
                                     <asp:BoundField DataField="State" HeaderText="State" />
-                                    <asp:BoundField DataField="Pincode" HeaderText="Pincode" />
-                                    <asp:BoundField DataField="Created By" HeaderText="Created By" />
-                                    <asp:BoundField DataField="CreatedOn" HeaderText="Created On" />
-                                    <asp:BoundField DataField="Maker Status" HeaderText="Maker Status" />
-                                    <asp:BoundField DataField="Checker Status" HeaderText="Checker Status" />
-                                    <asp:BoundField DataField="Authorizer Status" HeaderText="Authorizer Status" />
+                                    <asp:BoundField DataField="District" HeaderText="District" />
+                                    <asp:BoundField DataField="City" HeaderText="City" />
+                                    <asp:BoundField DataField="PinCode" HeaderText="Pin Code" />
+                                    <asp:BoundField DataField="CreatedBy" HeaderText="Onboarded By" />
+                                    <asp:BoundField DataField="CreatedOn" HeaderText="Onboarded On" />
+                                    <asp:BoundField DataField="Status" HeaderText="Verification Status" />
                                     <asp:BoundField DataField="Activity Type" HeaderText="Activity Type" />
-                                    <asp:BoundField DataField="Onboarding Status" HeaderText="Onboarding Status" />
+
                                 </Columns>
                             </asp:GridView>
                         </div>
@@ -530,26 +534,26 @@
 
                         </div>
                         <hr class="hr-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-3 offset-5 col-xm-12" style="margin-left: 220px; width: 40%;">
-                                        <asp:Button runat="server" ID="btnSubmitDetails" ValidationGroup="Veri" OnClick="btnSubmitDetails_Click" class="themeBtn themeApplyBtn" Text="Submit" OnClientClick="Confirm();CloseModal();"></asp:Button>
-                                <button type="button" class="themeBtn resetBtn themeCancelBtn me-0" onclick="ClearRemark()">Close</button>
-                               </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-3 offset-5 col-xm-12" style="margin-left: 220px; width: 40%;">
+                                    <asp:Button runat="server" ID="btnSubmitDetails" ValidationGroup="Veri" OnClick="btnSubmitDetails_Click" class="themeBtn themeApplyBtn" Text="Submit" OnClientClick="Confirm();CloseModal();"></asp:Button>
+                                    <button type="button" class="themeBtn resetBtn themeCancelBtn me-0" onclick="ClearRemark()">Close</button>
                                 </div>
-                                <asp:ValidationSummary
-                                    HeaderText="You must enter or select a value in the following fields:"
-                                    DisplayMode="BulletList"
-                                    EnableClientScript="true"
-                                    CssClass="err"
-                                    ShowMessageBox="true"
-                                    ShowSummary="false"
-                                    ForeColor="Red"
-                                    ValidationGroup="Veri"
-                                    runat="server" />
                             </div>
+                            <asp:ValidationSummary
+                                HeaderText="You must enter or select a value in the following fields:"
+                                DisplayMode="BulletList"
+                                EnableClientScript="true"
+                                CssClass="err"
+                                ShowMessageBox="true"
+                                ShowSummary="false"
+                                ForeColor="Red"
+                                ValidationGroup="Veri"
+                                runat="server" />
                         </div>
-                    
+                    </div>
+
                 </div>
             </div>
 

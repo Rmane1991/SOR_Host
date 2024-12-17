@@ -1,0 +1,46 @@
+Time : 28-Oct-2024 11:21 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 109
+Time : 28-Oct-2024 11:22 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 109
+Time : 28-Oct-2024 11:22 Message : Class : BCVerificationLevelTwo.cs 
+Function : btnViewDownload_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 28-Oct-2024 11:22 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton1_Click() 
+Exception Occured
+Invalid mode specified.
+Time : 28-Oct-2024 11:23 Message : Class : BCVerificationLevelTwo.cs 
+Function : btnViewDownload_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 28-Oct-2024 11:23 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton1_Click() 
+Exception Occured
+Invalid mode specified.
+Time : 28-Oct-2024 11:25 Message : Class : BCVerificationLevelTwo.cs 
+Function : btnViewDownload_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 28-Oct-2024 11:25 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton1_Click() 
+Exception Occured
+Invalid mode specified.
+Time : 28-Oct-2024 11:27 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton1_Click() 
+Exception Occured
+Invalid mode specified.
+Time : 28-Oct-2024 11:32 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton1_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 28-Oct-2024 11:32 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton1_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 28-Oct-2024 11:32 Message : Class : BCVerificationLevelTwo.cs 
+Function : ImageButton2_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 28-Oct-2024 11:38 Message : Page : BCVerificationLevelTwo.cs 
+Function : btnexport_ServerClick
+Exception Occured
+Thread was being aborted.

@@ -1,0 +1,11 @@
+Time : 09-Dec-2024 11:06 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenumaster_pkey"
+Time : 09-Dec-2024 11:12 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenumaster_pkey"
+Time : 09-Dec-2024 11:21 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblsubmenumaster_pkey"
+Time : 09-Dec-2024 11:24 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblsubmenumaster_pkey"
+Time : 09-Dec-2024 11:50 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 09-Dec-2024 14:18 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 09-Dec-2024 14:25 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 09-Dec-2024 14:40 Message : UserManagement: UserAccessManagementDeleteRole() : UserName: Maximus Exception: Parameter 'p_Reason' must have its value set
+Time : 09-Dec-2024 14:41 Message : UserManagement: UserAccessManagementDeleteRole() : UserName: Maximus Exception: Parameter 'p_Reason' must have its value set
+Time : 09-Dec-2024 17:11 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 28
+Time : 09-Dec-2024 18:02 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 31

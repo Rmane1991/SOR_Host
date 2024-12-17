@@ -33,7 +33,7 @@ namespace SOR.Pages.BC
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
 
-                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCStatus.aspx", "17");
+                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCStatus.aspx", "13");
                     if (!HasPagePermission)
                     {
                         try
@@ -47,10 +47,11 @@ namespace SOR.Pages.BC
                     }
                     else
                     {
-                        UserPermissions.RegisterStartupScriptForNavigationListActive("3", "17");
+                        UserPermissions.RegisterStartupScriptForNavigationListActive("4", "13");
                         if (!IsPostBack && HasPagePermission)
                         {
                             fillGrid();
+                            ddlVerification.SelectedValue = "2";
                         }
                     }
                 }
@@ -289,8 +290,9 @@ namespace SOR.Pages.BC
                 //}
                 else
                 {
-                    gvTransactions.DataSource = null;
-                    gvTransactions.DataBind();
+                    fillGrid();
+                    //gvTransactions.DataSource = null;
+                    //gvTransactions.DataBind();
 
                 }
 
@@ -519,9 +521,10 @@ namespace SOR.Pages.BC
             try
             {
                 ExportFormat _ExportFormat = new ExportFormat();
-                _BCEntity.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
-                setProperties();
-                DataSet _dsAllAgents = _BCEntity.BCStatusReportGrid();
+                //_BCEntity.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
+                //setProperties();
+                //DataSet _dsAllAgents = _BCEntity.BCStatusReportGrid();
+                DataSet _dsAllAgents = ViewState["Data"] as DataSet;
                 if (_dsAllAgents != null && _dsAllAgents.Tables[0].Rows.Count > 0)
                 {
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "BC Status Report", _dsAllAgents);

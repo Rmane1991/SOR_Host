@@ -1,0 +1,8 @@
+Time : 17-Dec-2024 11:26 Message : Page : AggregatorStatus.cs 
+Function : fillGrid() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 17-Dec-2024 11:26 Message : Page : AggregatorStatus.cs 
+Function : fillGrid() 
+Exception Occured
+Object reference not set to an instance of an object.

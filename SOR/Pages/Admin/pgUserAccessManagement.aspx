@@ -303,7 +303,7 @@
                             <div id="collapseSummaryOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#summary-accordion">
                                 <div class="accordion-body">
-                                    <hr class="hr-line">
+                                    <%--<hr class="hr-line">--%>
 
                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap" style="display: none">
                                         <div class="col">
@@ -314,21 +314,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
+                                    <%--<div class="form-group row">
                                         <div class="searchbox-btns">
                                             <div class="col" style="margin-left: 935px;">
+                                            </div>
+                                        </div>
+                                    </div>--%>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-12 text-center">
+                                                <strong>
+                                                    <asp:Label ID="lblRecordsCount" runat="server" Text="" class="selectInputLabel" for="selectInputLabel"></asp:Label></strong>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-end">
                                                 <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
                                                     ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
 
                                                 <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
                                                     ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                                <center><strong><asp:Label ID="lblRecordsCount" runat="server" Text="" class="selectInputLabel" for="selectInputLabel" ></asp:Label></strong></center>
                                             </div>
                                         </div>
                                     </div>
@@ -354,7 +357,7 @@
                                 OnRowCommand="gvRoleDetails_RowCommand">
                                 <HeaderStyle HorizontalAlign="left" />
                                 <Columns>
-                                     <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Action" HeaderStyle-CssClass="text-center">
+                                    <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Action" HeaderStyle-CssClass="text-center">
                                         <ItemTemplate>
                                             <asp:ImageButton ID="lbtnEdit" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "RoleId") %>'
                                                 CommandName="EditRole" ToolTip="Edit role" Width="16" Height="16" ImageUrl="~/Images/Edit-01-512.png" />
@@ -370,7 +373,7 @@
                                     <asp:BoundField DataField="CreatedOn" HeaderText="Created On" />
                                     <asp:BoundField DataField="ModifiedBy" HeaderText="Modified By" />
                                     <asp:BoundField DataField="ModifiedOn" HeaderText="Modified On" />
-                                   
+
                                 </Columns>
                             </asp:GridView>
                         </div>

@@ -1,0 +1,9 @@
+----------------------------------------------------------------------------
+Time : 22-Nov-2024 16:31
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Patch.Versioning.btnsample_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 587
+Message - : Thread was being aborted.

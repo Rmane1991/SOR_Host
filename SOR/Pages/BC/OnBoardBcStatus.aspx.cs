@@ -61,7 +61,7 @@ namespace SOR.Pages.BC
             {
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
-                    bool HasPagePermission =  HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "OnBoardBcStatus.aspx", "16");
+                    bool HasPagePermission =  HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "OnBoardBcStatus.aspx", "12");
                     if (!HasPagePermission)
                     {
                         try
@@ -82,9 +82,9 @@ namespace SOR.Pages.BC
                             BindDropdownsBc();
                             //BindDropdownState();
                             ViewState["SelectionType"] = SelectionType.UnCheckAll.ToString();
-                            BindExport();
+                            //BindExport();
                         }
-                        UserPermissions.RegisterStartupScriptForNavigationListActive("3", "16");
+                        UserPermissions.RegisterStartupScriptForNavigationListActive("4", "12");
                     }
                 }
                 else
@@ -274,7 +274,7 @@ namespace SOR.Pages.BC
                 return;
             }
         }
-
+        
         public DataSet FillGrid(EnumCollection.EnumPermissionType _EnumPermissionType)
         {
             DataSet _dsDeActivate = null;
@@ -622,7 +622,7 @@ namespace SOR.Pages.BC
                     string requestid = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
-                    _BCEntity.BCReqId = (gvBlockBC.DataKeys[gvr.RowIndex].Values["BCId"]).ToString();
+                    _BCEntity.BCReqId = (gvBlockBC.DataKeys[gvr.RowIndex].Values["BC ID"]).ToString();
                     if (ValidateReEditRequest())
                     {
                         if (CheckSelfRequest(out requestid))
@@ -748,7 +748,7 @@ namespace SOR.Pages.BC
                                     _reocrdsProcessed = _reocrdsProcessed + 1;
                                     _BCEntity.BC_Code = Convert.ToString(BCDataSet.Rows[i]["BC Code"]);
                                     _strBCFullName = Convert.ToString(BCDataSet.Rows[i]["BC Name"]);
-                                    _BCEntity.BCReqId = Convert.ToString(BCDataSet.Rows[i]["BCId"]);
+                                    _BCEntity.BCReqId = Convert.ToString(BCDataSet.Rows[i]["BC ID"]);
                                     _BCEntity.Clientcode = Convert.ToString(BCDataSet.Rows[i]["Client ID"]);
                                     _BCEntity.BCStatus = Convert.ToString((int)EnumCollection.Onboarding.Approve);
                                     _BCEntity.Mstatus = Convert.ToString((int)EnumCollection.Onboarding.MakerApprove);
@@ -870,7 +870,7 @@ namespace SOR.Pages.BC
 
         protected void btnView_Click(object sender, ImageClickEventArgs e)
         {
-
+            
         }
 
         protected void gvBlockBC_RowDataBound(object sender, GridViewRowEventArgs e)

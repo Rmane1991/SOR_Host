@@ -229,132 +229,136 @@
 
                     <%-- <div class="tab-content border mb-3">--%>
                     <%--<div class="tab-content">--%>
-                        <div id="AddRole" class="tab-pane fade show active" tabindex="0">
-                            <asp:Panel ID="pnlAddPages" runat="server" Width="100%" Style="overflow: hidden;">
-                                <div class="accordion summary-accordion" id="history-accordions">
-                                    <div class="accordion-item">
-                                        <div class="accordion-header d-flex align-items-center justify-content-between" id="headingSummaryOnes">
-                                            <h6 class="searchHeader-heading">Filter</h6>
-                                            <button class="show-hide-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummaryOne"
-                                                aria-expanded="true" aria-controls="collapseOne">
-                                                <span class="icon-hide"></span>
-                                                <p>Show / Hide</p>
-                                            </button>
-                                        </div>
-                                        <div id="collapseSummaryOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                            data-bs-parent="#summary-accordion">
-                                            <div class="accordion-body">
-                                                <hr class="hr-line">
-                                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
-                                                    <div class="col">
+                    <div id="AddRole" class="tab-pane fade show active" tabindex="0">
+                        <asp:Panel ID="pnlAddPages" runat="server" Width="100%" Style="overflow: hidden;">
+                            <div class="accordion summary-accordion" id="history-accordions">
+                                <div class="accordion-item">
+                                    <div class="accordion-header d-flex align-items-center justify-content-between" id="headingSummaryOnes">
+                                        <h6 class="searchHeader-heading">Filter</h6>
+                                        <button class="show-hide-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSummaryOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="icon-hide"></span>
+                                            <p>Show / Hide</p>
+                                        </button>
+                                    </div>
+                                    <div id="collapseSummaryOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                        data-bs-parent="#summary-accordion">
+                                        <div class="accordion-body">
+                                            <hr class="hr-line">
+                                            <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
+                                                <%--<div class="col">
                                                         <label class="selectInputLabel" for="selectInputLabel">Role:</label>
                                                         <div class="selectInputBox">
                                                             <asp:DropDownList ID="ddlRoleID" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlRoleID_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </div>
-                                                    </div>
-                                                     <div class="searchbox-btns">
-                                                        <button type="button" id="lbtnAddRole" runat="server" class="themeBtn themeApplyBtn" onclick="$('#dvLoading').show();" onserverclick="lbtnAddRole_ServerClick">
-                                                            Add New Role</button>
-                                                            <div class="col" style="margin-left: 610px;">
+                                                    </div>--%>
+                                                <div class="searchbox-btns">
+                                                    <button type="button" id="lbtnAddRole" runat="server" class="themeBtn themeApplyBtn" onclick="$('#dvLoading').show();" onserverclick="lbtnAddRole_ServerClick">
+                                                        Add New Role</button>
+                                                    <%--<div class="col" style="margin-left: 610px;">
                                                                 <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
                                                                     ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
                                                             </div>
                                                          <div class="col">
                                                              <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
                                                                     ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
-                                                         </div>
-                                                        
+                                                         </div>--%>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                                        <center><strong><asp:Label ID="lblRecordsCount" runat="server" Text=""></asp:Label></strong></center>
                                                     </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                   
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-sm-12 col-md-12 col-lg-12">
-                                                            <center><strong><asp:Label ID="lblRecordsCount" runat="server" Text=""></asp:Label></strong></center>
-                                                        </div>
+                                                    <div class="col-12 d-flex justify-content-end">
+                                                        <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                            ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
+                                                        <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                            ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </asp:Panel>
+                            </div>
+                        </asp:Panel>
 
-                            <asp:Panel ID="panelGrid" runat="server" Width="100%" HorizontalScroll="false" ScrollBars="None" Style="margin: 5px 10px 0px 0px; padding-right: 0px;">
-                                <div class="table-box" id="divRoleDetails" runat="server">
-                                    <div class="tableBorderBox" style="padding: 10px 10px;">
-                                        <asp:GridView ID="gvRoleDetails" runat="server"
-                                            AutoGenerateColumns="false"
-                                            Font-Size="Small"
-                                            GridLines="None"
-                                            AllowPaging="true"
-                                            CssClass="GridView"
-                                            PageSize="10"
-                                            Visible="true"
-                                            OnPageIndexChanging="gvRoleDetails_PageIndexChanging"
-                                            DataKeyNames="RoleId,RoleName"
-                                            OnRowCommand="gvRoleDetails_RowCommand">
-                                            <HeaderStyle HorizontalAlign="left" />
-                                            <Columns>
-                                                
-                                                <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Action" HeaderStyle-CssClass="text-center">
-                                                    <ItemTemplate>
-                                                        <asp:ImageButton ID="lbtnEdit" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "RoleId") %>'
-                                                            CommandName="EditRole" ToolTip="Edit role" Width="16" Height="16" ImageUrl="~/Images/Edit-01-512.png" />
+                        <asp:Panel ID="panelGrid" runat="server" Width="100%" HorizontalScroll="false" ScrollBars="None" Style="margin: 5px 10px 0px 0px; padding-right: 0px;">
+                            <div class="table-box" id="divRoleDetails" runat="server">
+                                <div class="tableBorderBox" style="padding: 10px 10px;">
+                                    <asp:GridView ID="gvRoleDetails" runat="server"
+                                        AutoGenerateColumns="false"
+                                        Font-Size="Small"
+                                        GridLines="None"
+                                        AllowPaging="true"
+                                        CssClass="GridView"
+                                        PageSize="10"
+                                        Visible="true"
+                                        OnPageIndexChanging="gvRoleDetails_PageIndexChanging"
+                                        DataKeyNames="RoleId,RoleName"
+                                        OnRowCommand="gvRoleDetails_RowCommand">
+                                        <HeaderStyle HorizontalAlign="left" />
+                                        <Columns>
 
-                                                        <asp:ImageButton ID="lbtnDelete" runat="server" ToolTip="Delete role" Width="16" Height="16" ImageUrl="~/Images/document-delete.png" CommandName="DeleteRole"
-                                                            CommandArgument='<%# DataBinder.Eval(Container.DataItem, "RoleId") %>' />
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:BoundField DataField="RoleId" Visible="false" />
-                                                <asp:TemplateField HeaderText="Role">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblRolename" runat="server" Text='<%#Eval("RoleName") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                    <EditItemTemplate>
-                                                        <asp:TextBox ID="txtRleName" runat="server" Width="100px" Text='<%#Eval("RoleName")%>' />
-                                                    </EditItemTemplate>
-                                                </asp:TemplateField>
+                                            <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Action" HeaderStyle-CssClass="text-center">
+                                                <ItemTemplate>
+                                                    <asp:ImageButton ID="lbtnEdit" runat="server" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "RoleId") %>'
+                                                        CommandName="EditRole" ToolTip="Edit role" Width="16" Height="16" ImageUrl="~/Images/Edit-01-512.png" />
 
-                                                <asp:TemplateField HeaderText="Created By">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblCreatedBy" runat="server" Text='<%#Eval("CreatedBy") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                                    <asp:ImageButton ID="lbtnDelete" runat="server" ToolTip="Delete role" Width="16" Height="16" ImageUrl="~/Images/document-delete.png" CommandName="DeleteRole"
+                                                        CommandArgument='<%# DataBinder.Eval(Container.DataItem, "RoleId") %>' />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:BoundField DataField="RoleId" Visible="false" />
+                                            <asp:TemplateField HeaderText="Role">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblRolename" runat="server" Text='<%#Eval("RoleName") %>'></asp:Label>
+                                                </ItemTemplate>
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="txtRleName" runat="server" Width="100px" Text='<%#Eval("RoleName")%>' />
+                                                </EditItemTemplate>
+                                            </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="Created On">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblCreatedOn" runat="server" Text='<%#Eval("CreatedOn") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Created By">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblCreatedBy" runat="server" Text='<%#Eval("CreatedBy") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="Modified By">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblModifiedBy" runat="server" Text='<%#Eval("ModifiedBy") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Created On">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblCreatedOn" runat="server" Text='<%#Eval("CreatedOn") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
 
-                                                <asp:TemplateField HeaderText="Modified On">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblModifiedOn" runat="server" Text='<%#Eval("ModifiedOn") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Modified By">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblModifiedBy" runat="server" Text='<%#Eval("ModifiedBy") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+
+                                            <asp:TemplateField HeaderText="Modified On">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblModifiedOn" runat="server" Text='<%#Eval("ModifiedOn") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
 
 
-                                            </Columns>
-                                        </asp:GridView>
-                                    </div>
+                                        </Columns>
+                                    </asp:GridView>
                                 </div>
-                            </asp:Panel>
+                            </div>
+                        </asp:Panel>
 
-                        </div>
+                    </div>
 
-                        <%--<div id="MapRole" class="tab-pane fade">
+                    <%--<div id="MapRole" class="tab-pane fade">
                             <asp:Panel ID="PanelMappingPages" runat="server" Width="100%" Style="overflow: hidden; margin: 0px 0px;">
                                 <div class="accordion summary-accordion" id="history-accordion">
                                     <div class="accordion-item">
@@ -550,20 +554,20 @@
                                     </div>
                                 </div>
                                 <%--</fieldset>--%>
-                            <%--</asp:Panel>
+                    <%--</asp:Panel>
                         </div>--%>
-                    </div>
+                </div>
 
-                    <asp:Button ID="btnhidresetDelete" runat="server" Text="Button" Visible="true" Style="visibility: hidden" />
-                    <cc1:ModalPopupExtender ID="ModalPopupExtender_Declincard" runat="server"
-                        TargetControlID="btnhidresetDelete" PopupControlID="Panel_Declincard"
-                        PopupDragHandleControlID="PopupHeader_Declincard" Drag="true"
-                        BackgroundCssClass="modalBackground">
-                    </cc1:ModalPopupExtender>
+                <asp:Button ID="btnhidresetDelete" runat="server" Text="Button" Visible="true" Style="visibility: hidden" />
+                <cc1:ModalPopupExtender ID="ModalPopupExtender_Declincard" runat="server"
+                    TargetControlID="btnhidresetDelete" PopupControlID="Panel_Declincard"
+                    PopupDragHandleControlID="PopupHeader_Declincard" Drag="true"
+                    BackgroundCssClass="modalBackground">
+                </cc1:ModalPopupExtender>
 
 
-                    <asp:Panel ID="Panel_Declincard" Style="display: none;" runat="server">
-                        <center>
+                <asp:Panel ID="Panel_Declincard" Style="display: none;" runat="server">
+                    <center>
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content" style="width: 469px;height: 200px;">
                                 <!-- Modal Header -->
@@ -614,19 +618,19 @@
                             </div>
                         </div>
                          </center>
-                    </asp:Panel>
-                    </center>
+                </asp:Panel>
+                </center>
                 <asp:Button ID="btnRoleEdit" runat="server" Text="Button" Style="display: none;" />
-                    <cc1:ModalPopupExtender ID="ModalPopupExtender_EditRole" runat="server"
-                        TargetControlID="btnRoleEdit" PopupControlID="Panel_EditRole"
-                        PopupDragHandleControlID="PopupHeader_EditRole" Drag="true"
-                        BackgroundCssClass="modalBackground">
-                    </cc1:ModalPopupExtender>
+                <cc1:ModalPopupExtender ID="ModalPopupExtender_EditRole" runat="server"
+                    TargetControlID="btnRoleEdit" PopupControlID="Panel_EditRole"
+                    PopupDragHandleControlID="PopupHeader_EditRole" Drag="true"
+                    BackgroundCssClass="modalBackground">
+                </cc1:ModalPopupExtender>
 
-                    <asp:Panel ID="Panel_EditRole" TabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
-                        Style="display: none;" runat="server">
-                        <center>
-                    <div class="modal-content" style="width: 469px;height: 200px;">
+                <asp:Panel ID="Panel_EditRole" TabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                    Style="display: none;" runat="server">
+                    <center>
+                    <div class="modal-content" style="width: 469px;height: 311px;">
                         <!-- Modal Header -->
                         <div class="modal-header">
                             <h4 class="modal-title">Add New Role</h4>
@@ -658,7 +662,7 @@
                  </div>
                     </div>
                     </center>
-                    </asp:Panel>
+                </asp:Panel>
 
                 </div>
             </ContentTemplate>
@@ -677,7 +681,7 @@
                 if (sender._postBackSettings.panelsToUpdate != null) {
                   <%--  $("#<%=ddlClient.ClientID%>").select2();
                     $("#<%=ddluserRoleGroup.ClientID%>").select2();--%>
-                    $("#<%=ddlRoleID.ClientID%>").select2();
+                    <%--$("#<%=ddlRoleID.ClientID%>").select2();--%>
                     <%--$("#<%=ddlRoles.ClientID%>").select2();--%>
                 }
             });

@@ -1,0 +1,26 @@
+Time : 03-Dec-2024 10:36 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 03-Dec-2024 10:50 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 11:18 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 11:18 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 11:22 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 11:23 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 11:26 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 11:32 Message : TrRule: btnCreateRule_Click() | Username :MaximusException : 42601: query has no destination for result data
+Time : 03-Dec-2024 11:32 Message : TrRule: btnCreateRule_Click() | Username :MaximusException : 42601: query has no destination for result data
+Time : 03-Dec-2024 11:37 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 14:52 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 14:52 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 14:52 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 03-Dec-2024 14:54 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 03-Dec-2024 15:09 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 15:12 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 15:12 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 15:23 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 03-Dec-2024 15:50 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 15:51 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 15:51 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 15:54 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 16:11 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 16:13 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 03-Dec-2024 16:15 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 03-Dec-2024 16:16 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

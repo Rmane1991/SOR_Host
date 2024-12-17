@@ -1,0 +1,13 @@
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:39 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: 42883: operator does not exist: bit = boolean

@@ -175,7 +175,7 @@
                     processData: false,
                     data: test,
                     success: function (result) {
-                        
+
                         document.getElementById("<%=lbl_smsg1.ClientID%>").innerText = "";
                         document.getElementById("<%=lbl_emsg1.ClientID%>").innerText = "";
 
@@ -946,11 +946,7 @@
                                     <span class="spanbtn">
                                         <asp:Button ID="btnAddnew" runat="server" Text="Add New" CssClass="themeBtn themeApplyBtn" Width="102px" Height="32px" OnClick="btnAddnew_Click" />
                                     </span>
-                                    <asp:ImageButton ID="btnExportCSV" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
-                                        ToolTip="Csv" data-toggle="modal" data-target="#myModal" OnClick="btnExportCSV_Click" />
-                                    <%--OnClick="btnExportCSV_ServerClick"--%>
-                                    <asp:ImageButton ID="btndownload" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
-                                        ToolTip="Xls" data-toggle="modal" data-target="#myModal" OnClick="btndownload_Click" />
+
                                     <%--OnClick="btndownload_ServerClick"--%>
                                     <hr class="hr-line">
                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
@@ -962,6 +958,7 @@
                                                 <asp:ListItem Text="Activation" Value="1"></asp:ListItem>
                                                 <asp:ListItem Text="De-activation" Value="2"></asp:ListItem>
                                                 <asp:ListItem Text="Termination" Value="3"></asp:ListItem>
+                                                <asp:ListItem Text="ReEdit" Value="4"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
                                         <%--<div class="col">
@@ -983,25 +980,38 @@
                                                 <asp:ListItem Text="Declined" Value="2"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                       <%-- <div class="col">
+                                        <%-- <div class="col">
                                             <label class="selectInputLabel" for="selectInputLabel">PanNo</label>
                                             <div class="inputBox w-100">
                                                 <input type="text" id="txtPanNoF" runat="server" class="input-text form-control" style="width: 100%" placeholder="Pan No" />
                                             </div>
                                         </div>--%>
-                                        <div class="col"><label class="selectInputLabel" for="selectInputLabel">PanNo</label>
-                                         <div class="inputBox w-100">
-                                         <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" />--%>
-                                        <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10"></asp:TextBox>
-                                        <asp:HiddenField ID="hd_txtPanNoF" runat="server" Value="1" />
-                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPanNoF" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />
-                                        <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender52" runat="server" FilterType="UppercaseLetters,Numbers" TargetControlID="txtPanNoF" />
-                                       </div>
+                                        <div class="col">
+                                            <label class="selectInputLabel" for="selectInputLabel">PanNo</label>
+                                            <div class="inputBox w-100">
+                                                <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" />--%>
+                                                <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10"></asp:TextBox>
+                                                <asp:HiddenField ID="hd_txtPanNoF" runat="server" Value="1" />
+                                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPanNoF" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />
+                                                <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender52" runat="server" FilterType="UppercaseLetters,Numbers" TargetControlID="txtPanNoF" />
+                                            </div>
                                         </div>
                                         <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
                                             <div>
                                                 <asp:Button runat="server" ID="btnSearch" OnClick="btnSearch_Click" class="themeBtn themeApplyBtn" Text="Search"></asp:Button>
                                                 <asp:Button ID="butnCancel" runat="server" CausesValidation="false" class="themeBtn resetBtn themeCancelBtn me-0" Text="Clear" OnClick="butnCancel_Click"></asp:Button>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-auto ms-auto d-flex justify-content-end">
+                                        </div>
+                                        <div class="row d-flex justify-content-center align-items-center">
+
+                                            <div class="d-flex justify-content-end">
+                                                <asp:ImageButton ID="btnExportCSV" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                    ToolTip="Csv" data-toggle="modal" data-target="#myModal" OnClick="btnExportCSV_Click" />
+                                                <asp:ImageButton ID="btndownload" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                    ToolTip="Xls" data-toggle="modal" data-target="#myModal" OnClick="btndownload_Click" />
                                             </div>
                                         </div>
                                     </div>
@@ -1061,13 +1071,16 @@
                                                 </ItemTemplate>
                                             </asp:TemplateField>
                                             <%--   <asp:BoundField DataField="Sr.No." HeaderText="Sr.No." />--%>
-                                            <asp:BoundField DataField="BCCode" HeaderText="BCCode" />
-                                            <asp:BoundField DataField="BCReqId" HeaderText="BC ID" />
-                                            <asp:BoundField DataField="BCName" HeaderText="BCName" />
-                                            <asp:BoundField DataField="BCAddress" HeaderText="BCAddress" />
-                                            <asp:BoundField DataField="ContactNo" HeaderText="ContactNo" />
+                                            <asp:BoundField DataField="BCCode" HeaderText="Code" />
+                                            <asp:BoundField DataField="BCReqId" HeaderText="ID" />
+                                            <asp:BoundField DataField="Name" HeaderText="Name" />
+                                            <asp:BoundField DataField="Address" HeaderText="Address" />
+                                            <asp:BoundField DataField="Pan No" HeaderText="Pan No" />
+                                            <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No" />
+                                            <asp:BoundField DataField="Contact No" HeaderText="Mobile No" />
+                                            <asp:BoundField DataField="Email Id" HeaderText="Email Id" />
                                             <asp:BoundField DataField="RequestType" HeaderText="RequestType" />
-                                            <asp:BoundField DataField="Bucket" HeaderText="Bucket" />
+                                            <asp:BoundField DataField="Bucket" HeaderText="Bucket" Visible="false" />
                                             <asp:BoundField DataField="RequestStatus" HeaderText="RequestStatus" />
                                             <asp:BoundField DataField="ActivityType" HeaderText="ActivityType" Visible="false" />
                                         </Columns>
@@ -1117,10 +1130,13 @@
                                                         </div>
 
                                                         <div class="col" id="Div_Chk" runat="server" style="width: 800px">
-                                                            <asp:Label ID="lblServicesOffer" runat="server" Text="Services Offer "></asp:Label><span class="err">*</span><br />
+                                                            <asp:Label ID="lblServicesOffer" runat="server" Text="Services offered "></asp:Label><span class="err">*</span><br />
 
                                                             <asp:CheckBox ID="chkAEPS" runat="server" Style="font-weight: 500" />
-                                                            <asp:Label ID="lblchkAEPS" runat="server">AEPS &emsp;</asp:Label>
+                                                            <asp:Label ID="lblchkAEPS" runat="server">AePS &emsp;</asp:Label>
+
+                                                            <asp:CheckBox ID="chkdmt" runat="server" />
+                                                            <asp:Label ID="lblchkdmt" runat="server">DMT &emsp;</asp:Label>
 
                                                             <asp:CheckBox ID="chkMATM" runat="server" />
                                                             <asp:Label ID="lblchkMATM" runat="server">Micro ATM &emsp;</asp:Label>
@@ -1161,7 +1177,7 @@
                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" FilterType="LowercaseLetters, UppercaseLetters,Custom" ValidChars=" " TargetControlID="txtFatherName" />
 
                                                         </div>
-                                                        <div class="col" style="display:none">
+                                                        <div class="col" style="display: none">
                                                             <label for="exampleInputEmail1">Gender </label>
                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlGender" Width="100%">
                                                                 <asp:ListItem Value="Male">Male</asp:ListItem>
@@ -1212,13 +1228,13 @@
                                                                 <asp:ListItem Value="IT">IT</asp:ListItem>
                                                                 <asp:ListItem Value="Agricultural">Agricultural</asp:ListItem>
                                                                 <asp:ListItem Value="Commercial">Commercial</asp:ListItem>
-                                                           <%--     <asp:ListItem Value="ST">ST</asp:ListItem>--%>
+                                                                <%--     <asp:ListItem Value="ST">ST</asp:ListItem>--%>
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="col">
                                                             <label for="exampleInputAccountNumber">Account Number <span class="err">*</span></label>
                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator36" ControlToValidate="txtAccountNumber" ValidationGroup="FranchiseReg" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please enter Account Number"></asp:RequiredFieldValidator>
-                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtAccountNumber" Width="100%" PlaceHolder="Account Number" MaxLength="16"></asp:TextBox>
+                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtAccountNumber" Width="100%" PlaceHolder="Account Number" MaxLength="19"></asp:TextBox>
                                                             <asp:HiddenField ID="hd_txtAccountNumber" runat="server" Value="1" />
                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender22" runat="server" FilterType="Numbers" TargetControlID="txtAccountNumber" />
                                                         </div>
@@ -1281,42 +1297,42 @@
                                                         </div>
                                                         <!-- input -->
                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Pincode <span class="err">*</span></label>
-                                                                            <asp:TextBox runat="server" CssClass="input-text form-control" PlaceHolder="eg.400601" Width="100%" ID="txtPinCode" MaxLength="6" AutoPostBack="true" OnTextChanged="txtPinCode_TextChanged"></asp:TextBox>
-                                                                            <asp:HiddenField ID="hd_txtPinCode" runat="server" Value="1" />
-                                                                            <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender28" runat="server" FilterType="Numbers" TargetControlID="txtPinCode" />
-                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtPinCode" ValidationGroup="FranchiseReg" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please enter pincode"></asp:RequiredFieldValidator>
-                                                                        </div>
-                                                                        <!-- input -->
-                                                                        <div class="col" style="display:none">
-                                                                            <label for="exampleInputEmail1">Country <span class="err">*</span></label>
-                                                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator15" ControlToValidate="ddlCountry" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select country"></asp:RequiredFieldValidator>--%>
-                                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCountry" Width="100%" AutoPostBack="true"></asp:DropDownList>
-                                                                            <%--OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged"--%>
-                                                                            <asp:HiddenField ID="hd_ddlCountry" runat="server" Value="1" />
-                                                                        </div>
-                                                                        <div class="col">
-                                                                            <label for="exampleInputEmail1">State <span class="err">*</span></label>
-                                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlState" Width="100%" OnSelectedIndexChanged="ddlState_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
-                                                                            <%--OnSelectedIndexChanged="ddlState_SelectedIndexChanged"--%>
-                                                                            <asp:HiddenField ID="hd_ddlState" runat="server" Value="1" />
-                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator16" ControlToValidate="ddlState" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select state"></asp:RequiredFieldValidator>
-                                                                        </div>
-                                                                        <div class="col">
-                                                                            <label for="exampleInputEmail1">District<span class="err">*</span></label>
-                                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlDistrict" Width="100%" OnSelectedIndexChanged="ddlDistrict_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
-                                                                            <%--<asp:TextBox runat="server" CssClass="input-text form-control" ID="txtDistrict" Width="100%" PlaceHolder="Enter district" MaxLength="25"></asp:TextBox>--%>
-                                                                            <asp:HiddenField ID="hd_ddlDistrict" runat="server" Value="1" />
-                                                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator14" ControlToValidate="ddlDistrict" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter district Name "></asp:RequiredFieldValidator>--%>
-                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="ddlDistrict" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select state"></asp:RequiredFieldValidator>
-                                                                            <%--<Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender8" runat="server" FilterType="LowercaseLetters, UppercaseLetters" TargetControlID="ddlDistrict" />--%>
-                                                                        </div>
-                                                                        <div class="col">
-                                                                            <label for="exampleInputEmail1">City <span class="err">*</span></label>
-                                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" Width="100%" ID="ddlCity"></asp:DropDownList>
-                                                                            <asp:HiddenField ID="hd_ddlCity" runat="server" Value="1" />
-                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator17" ControlToValidate="ddlCity" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select city"></asp:RequiredFieldValidator>
-                                                                        </div>
+                                                            <label for="exampleInputEmail1">Pincode <span class="err">*</span></label>
+                                                            <asp:TextBox runat="server" CssClass="input-text form-control" PlaceHolder="eg.400601" Width="100%" ID="txtPinCode" MaxLength="6" AutoPostBack="true" OnTextChanged="txtPinCode_TextChanged"></asp:TextBox>
+                                                            <asp:HiddenField ID="hd_txtPinCode" runat="server" Value="1" />
+                                                            <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender28" runat="server" FilterType="Numbers" TargetControlID="txtPinCode" />
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtPinCode" ValidationGroup="FranchiseReg" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please enter pincode"></asp:RequiredFieldValidator>
+                                                        </div>
+                                                        <!-- input -->
+                                                        <div class="col" style="display: none">
+                                                            <label for="exampleInputEmail1">Country <span class="err">*</span></label>
+                                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator15" ControlToValidate="ddlCountry" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select country"></asp:RequiredFieldValidator>--%>
+                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCountry" Width="100%" AutoPostBack="true"></asp:DropDownList>
+                                                            <%--OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged"--%>
+                                                            <asp:HiddenField ID="hd_ddlCountry" runat="server" Value="1" />
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="exampleInputEmail1">State <span class="err">*</span></label>
+                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlState" Width="100%" OnSelectedIndexChanged="ddlState_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                                            <%--OnSelectedIndexChanged="ddlState_SelectedIndexChanged"--%>
+                                                            <asp:HiddenField ID="hd_ddlState" runat="server" Value="1" />
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator16" ControlToValidate="ddlState" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select state"></asp:RequiredFieldValidator>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="exampleInputEmail1">District<span class="err">*</span></label>
+                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlDistrict" Width="100%" OnSelectedIndexChanged="ddlDistrict_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                                                            <%--<asp:TextBox runat="server" CssClass="input-text form-control" ID="txtDistrict" Width="100%" PlaceHolder="Enter district" MaxLength="25"></asp:TextBox>--%>
+                                                            <asp:HiddenField ID="hd_ddlDistrict" runat="server" Value="1" />
+                                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator14" ControlToValidate="ddlDistrict" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter district Name "></asp:RequiredFieldValidator>--%>
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="ddlDistrict" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select state"></asp:RequiredFieldValidator>
+                                                            <%--<Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender8" runat="server" FilterType="LowercaseLetters, UppercaseLetters" TargetControlID="ddlDistrict" />--%>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="exampleInputEmail1">City <span class="err">*</span></label>
+                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" Width="100%" ID="ddlCity"></asp:DropDownList>
+                                                            <asp:HiddenField ID="hd_ddlCity" runat="server" Value="1" />
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator17" ControlToValidate="ddlCity" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select city"></asp:RequiredFieldValidator>
+                                                        </div>
                                                         <div class="col">
                                                             <label for="exampleInputEmail1">Personal Email Id <span class="err">*</span></label>
                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtEmailID" PlaceHolder="Email ID" Width="100%" MaxLength="50"></asp:TextBox>

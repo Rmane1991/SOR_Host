@@ -1,0 +1,64 @@
+Time : 14-Nov-2024 10:58 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Email'.
+Time : 14-Nov-2024 10:58 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Email'.
+Time : 14-Nov-2024 10:58 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Email'.
+Time : 14-Nov-2024 10:59 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'MobileNo'.
+Time : 14-Nov-2024 10:59 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'MobileNo'.
+Time : 14-Nov-2024 10:59 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'MobileNo'.
+Time : 14-Nov-2024 14:12 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42846: cannot cast type integer to bytea
+Time : 14-Nov-2024 14:12 Message : AgLvl3: btnView_Click: Exception: 42846: cannot cast type integer to bytea
+Time : 14-Nov-2024 14:14 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42846: cannot cast type integer to bytea
+Time : 14-Nov-2024 14:18 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 24
+Time : 14-Nov-2024 14:18 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: Rajendra T Mane User: Maximus ReceiverEmailID: rmane565@gmail.com ContactNo: 8275370066 Remarks: jgyhk
+Time : 14-Nov-2024 14:34 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 14-Nov-2024 14:34 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 14-Nov-2024 14:34 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 24
+Time : 14-Nov-2024 14:34 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: Rajendra T Mane User: Maximus ReceiverEmailID: rmane565@gmail.com ContactNo: 8275370066 Remarks: Approve
+Time : 14-Nov-2024 14:34 Message : AgLvl3: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Nov-2024 14:34 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: Rajendra T Mane User: Maximus ReceiverEmailID: rmane565@gmail.com ContactNo: 8275370066 Remarks: ApproveActivityType: 0
+Time : 14-Nov-2024 14:35 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 24
+Time : 14-Nov-2024 14:35 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: Rajendra T Mane User: Maximus ReceiverEmailID: rmane565@gmail.com ContactNo: 8275370066 Remarks: gbngn
+Time : 14-Nov-2024 14:35 Message : AgLvl3: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Nov-2024 14:35 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: Rajendra T Mane User: Maximus ReceiverEmailID: rmane565@gmail.com ContactNo: 8275370066 Remarks: gbngnActivityType: 0
+Time : 14-Nov-2024 14:36 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 23
+Time : 14-Nov-2024 14:36 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 23 Fullname: FVDFV   User: Maximus ReceiverEmailID: xyz9876@gmail.com ContactNo: 9875442102 Remarks: Approve.
+Time : 14-Nov-2024 14:36 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 23 Fullname: FVDFV   User: Maximus ReceiverEmailID: xyz9876@gmail.com ContactNo: 9875442102 Remarks: Approve.ActivityType: 0
+Time : 14-Nov-2024 15:51 Message : EditRegistrationDetails: FillBc: Exception: Object reference not set to an instance of an object.
+Time : 14-Nov-2024 15:51 Message : OBAgStatus: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Agent ReqId'.
+Time : 14-Nov-2024 15:53 Message : OBAgStatus: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Agent ReqId'.
+Time : 14-Nov-2024 15:59 Message : OBAgStatus: FillGrid: Exception: A field or property with the name 'Onboarded By' was not found on the selected data source.
+Time : 14-Nov-2024 16:01 Message : OBAgStatus: FillGrid: Exception: A field or property with the name 'Onboarded By' was not found on the selected data source.
+Time : 14-Nov-2024 16:06 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BCName'.
+Time : 14-Nov-2024 16:08 Message : EditRegitsration: GetDetails: Exception: Column 'BusinessEmailID' does not belong to table AgentData.
+Time : 14-Nov-2024 16:09 Message : EditRegitsration: GetDetails: Exception: Column 'BusinessEmailID' does not belong to table AgentData.
+Time : 14-Nov-2024 16:10 Message : EditRegitsration: GetDetails: Exception: Column 'ShopEmailId' does not belong to table AgentData.
+Time : 14-Nov-2024 16:11 Message : EditRegitsration: GetDetails: Exception: Column 'ShopEmailId' does not belong to table AgentData.
+Time : 14-Nov-2024 16:11 Message : EditRegitsration: GetDetails: Exception: Column 'ShopEmailId' does not belong to table AgentData.
+Time : 14-Nov-2024 17:46 Message : EditRegitsration: GetDetails: Exception: Column 'ShopEmailId' does not belong to table AgentData.
+Time : 14-Nov-2024 18:20 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'agname'.
+Time : 14-Nov-2024 18:20 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'agname'.
+Time : 14-Nov-2024 18:21 Message : EditRegitsration: GetDetails: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'agname'.
+Time : 14-Nov-2024 18:43 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 27
+Time : 14-Nov-2024 18:43 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9896P RequestId: 27
+Time : 14-Nov-2024 18:49 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42703: column "Created On" does not exist
+Time : 14-Nov-2024 18:49 Message : AgentStatus: fillGrid: Exception: 42703: column "Created On" does not exist
+Time : 14-Nov-2024 18:55 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42703: column "Created On" does not exist
+Time : 14-Nov-2024 18:55 Message : AgentStatus: fillGrid: Exception: 42703: column "Created On" does not exist
+Time : 14-Nov-2024 18:57 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Nov-2024 18:57 Message : AgentStatus: fillGrid: Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Nov-2024 18:58 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Nov-2024 19:00 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Nov-2024 19:00 Message : AgentStatus: fillGrid: Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Nov-2024 19:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 14-Nov-2024 19:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 28
+Time : 14-Nov-2024 19:04 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 39000: Wrong key or corrupt data
+Time : 14-Nov-2024 19:04 Message : AgentRegistration: FillGrid(): Exception: 39000: Wrong key or corrupt data
+Time : 14-Nov-2024 19:05 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 39000: Wrong key or corrupt data
+Time : 14-Nov-2024 19:08 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 14-Nov-2024 19:08 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 29
+Time : 14-Nov-2024 19:18 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 14-Nov-2024 19:18 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 30
+Time : 14-Nov-2024 19:20 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 42703: column a.agentname does not exist
+Time : 14-Nov-2024 19:20 Message : AgentRegistration: FillGrid(): Exception: 42703: column a.agentname does not exist
+Time : 14-Nov-2024 19:20 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 14-Nov-2024 19:20 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 31
+Time : 14-Nov-2024 19:21 Message : AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. Exception: Object reference not set to an instance of an object. UserName: 

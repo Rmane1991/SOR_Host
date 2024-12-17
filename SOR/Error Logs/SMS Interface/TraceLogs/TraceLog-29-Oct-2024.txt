@@ -1,0 +1,8 @@
+Time : 29-Oct-2024 15:57 Message : Page : AgentRegistration.cs 
+Function : Registration() => Reistration Details forwarded for Email Preparation. Email : 
+Time : 29-Oct-2024 15:57 Message : Page : EmailSMSAlertscs.cs 
+Function : HttpGetRequestEmail() => Send Email Process Started. : 
+Time : 29-Oct-2024 15:57 Message : Page : EmailSMSAlertscs.cs 
+Function : HttpGetRequestEmail() => URL : http://100.112.5.78:8181/publisher/http6listener/dynamic?dcode=Maximus&subuid=BCPortal&pwd=8W2h3PM/Lnyok5ftkSPclQ==&msgtype=E&from=info@sbmbank.co.in&to=scfdvkjrgvg@maximusinfoeare.in&intflag=2&OTPFlag=0&ctype=1&tempname=SR24659_EBCP1&var1=SBM&var2=29-10-2024 15:57:02
+Time : 29-Oct-2024 15:57 Message : Page : EmailSMSAlertscs.cs 
+Function : HttpGetRequestEmail() => Exception : Unable to connect to the remote server

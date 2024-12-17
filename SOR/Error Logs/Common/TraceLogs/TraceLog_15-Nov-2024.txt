@@ -1,0 +1,124 @@
+15-11-2024 10:32:03:1067 : Login Successful. Username Maximus. SessionID : qnagq3qkcncbcxjzfs0onb4y
+15-11-2024 10:57:05:6604 : Login Successful. Username Maximus. SessionID : ahtevmb2daeuupck1lniblsl
+15-11-2024 12:18:33:6142 : Login Successful. Username Maximus. SessionID : pkwjmr5zs5cqw5vr5jcs1t3l
+15-11-2024 12:20:29:9585 : Login Successful. Username Maximus. SessionID : 5r14qfmnguhiiy41cma3hhwa
+15-11-2024 12:53:12:9316 : Login Successful. Username Maximus. SessionID : 1xvleasgms5ku2isk0kqs45g
+15-11-2024 12:54:12:4252 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 12:54:12:4262 : NOTICE: Flag is set to 1, proceeding with validations...
+15-11-2024 12:54:12:4272 : NOTICE: Personal Email ID Already Registered
+15-11-2024 12:55:18:6360 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 12:55:18:6370 : NOTICE: Flag is set to 1, proceeding with validations...
+15-11-2024 12:55:18:6370 : NOTICE: Inserting new record...1
+15-11-2024 12:55:18:6380 : NOTICE: Inserting new record...
+15-11-2024 12:55:18:6549 : NOTICE: Insert successful, RequestId: 1
+15-11-2024 12:56:18:6514 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+15-11-2024 12:56:18:6524 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 13:00:56:0534 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+42701: column "bank" specified more than once
+15-11-2024 13:02:19:9344 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 13:02:19:9354 : NOTICE: Flag is set to 1, proceeding with validations...
+15-11-2024 13:02:19:9364 : NOTICE: PanCard Already Registered
+15-11-2024 13:03:17:0645 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 13:03:17:0645 : NOTICE: Flag is set to 1, proceeding with validations...
+15-11-2024 13:03:17:0664 : NOTICE: Inserting new record...1
+15-11-2024 13:03:17:0674 : NOTICE: Inserting new record...
+15-11-2024 13:03:17:0854 : NOTICE: Insert successful, RequestId: 2
+15-11-2024 13:03:30:5812 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+15-11-2024 13:03:30:5871 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 14:00:23:6167 : Login Successful. Username Maximus. SessionID : h10bjg3h55svbozz53lm4fej
+15-11-2024 14:46:26:1624 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+42P01: missing FROM-clause entry for table "a"
+15-11-2024 14:49:12:4887 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 14:49:12:4897 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 14:49:23:0455 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 14:49:23:0475 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 14:49:23:0904 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+39000: Wrong key or corrupt data
+15-11-2024 14:49:23:1183 : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+39000: Wrong key or corrupt data
+15-11-2024 14:49:29:0988 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+15-11-2024 14:49:34:3671 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+15-11-2024 15:14:45:4354 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 15:14:45:4364 : NOTICE: Flag is set to 1, proceeding with validations...
+15-11-2024 15:14:45:4364 : NOTICE: Inserting new record...1
+15-11-2024 15:14:45:4374 : NOTICE: Inserting new record...
+15-11-2024 15:14:45:4523 : NOTICE: Insert successful, RequestId: 3
+15-11-2024 15:15:03:5932 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+15-11-2024 15:15:03:5942 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 15:25:23:3704 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 15:25:23:3714 : NOTICE: Flag is set to 1, proceeding with validations...
+15-11-2024 15:25:23:3734 : NOTICE: Inserting new record...1
+15-11-2024 15:25:23:3744 : NOTICE: Inserting new record...
+15-11-2024 15:25:23:3983 : NOTICE: Insert successful, RequestId: 4
+15-11-2024 15:25:38:7973 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+15-11-2024 15:25:38:7983 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 16:01:55:7478 : Login Successful. Username Maximus. SessionID : tch4xrv3hvzpakj0gf0qlvsg
+15-11-2024 16:20:18:2626 : Login Successful. Username Maximus. SessionID : dlfca2s5eab5t2l21q4aqn04
+15-11-2024 16:25:07:8592 : Login Successful. Username Maximus. SessionID : 4zabspyokufngkdwflfkdpjz
+15-11-2024 16:27:12:4382 : Login Successful. Username Maximus. SessionID : naie4o2d42qmkkh10rdqa3vf
+15-11-2024 17:30:06:3260 : Login Successful. Username Maximus. SessionID : si0lwpiy4tcm3pt1bnohovxe
+15-11-2024 17:38:51:9595 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.pincode does not exist
+15-11-2024 17:41:52:1692 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.pincode does not exist
+15-11-2024 17:41:52:2221 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occurred
+42804: structure of query does not match function result type
+15-11-2024 17:42:00:1716 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.pincode does not exist
+15-11-2024 17:45:38:8938 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occurred
+42804: structure of query does not match function result type
+15-11-2024 17:45:41:2595 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.pincode does not exist
+15-11-2024 17:45:48:1975 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.pincode does not exist
+15-11-2024 17:53:25:1911 : Login Successful. Username Maximus. SessionID : 11fnhcvp5hhxqfddohmyaewq
+15-11-2024 18:06:15:3408 : Login Successful. Username Maximus. SessionID : mmludm2a0xzri3q24pu0obqm
+15-11-2024 18:09:47:9536 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 18:09:47:9546 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 18:09:47:9606 : NOTICE: Reediting/Declining insert for Request ID: 4
+15-11-2024 18:10:52:6171 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 18:10:52:6180 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 18:10:52:6190 : NOTICE: Reediting/Declining insert for Request ID: 4
+15-11-2024 18:11:51:6779 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 18:11:51:6789 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 18:11:51:6799 : NOTICE: Reediting/Declining insert for Request ID: 4
+15-11-2024 18:12:16:8197 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+15-11-2024 18:12:16:8237 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+15-11-2024 18:12:16:8257 : NOTICE: Reediting/Declining insert for Request ID: 4
+15-11-2024 18:12:42:0811 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+15-11-2024 18:12:53:1521 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+15-11-2024 18:42:32:1525 : Login Successful. Username Maximus. SessionID : 1elzuxnzozw55muu1xcg23f5

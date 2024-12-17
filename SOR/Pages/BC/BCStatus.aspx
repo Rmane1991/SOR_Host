@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SOR.Master" AutoEventWireup="true" CodeBehind="BCStatus.aspx.cs" Inherits="SOR.Pages.BC.BCStatus" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-      <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
     <script type="text/javascript" src="../../JavaScripts/FranchiseManagement.js"></script>
     <style type="text/css">
         .auto-style1 {
@@ -178,7 +179,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
-     <asp:HiddenField ID="hdFromDate" runat="server" />
+    <asp:HiddenField ID="hdFromDate" runat="server" />
     <asp:HiddenField ID="hdToDate" runat="server" />
     <asp:Panel ID="upPanel" runat="server" HorizontalAlign="Center" Width="100%">
         <asp:UpdateProgress ID="upContentBodyUpdateProgress" runat="server" AssociatedUpdatePanelID="upContentBody">
@@ -190,7 +191,7 @@
         </asp:UpdateProgress>
     </asp:Panel>
 
-      <asp:UpdatePanel ID="upContentBody" runat="server">
+    <asp:UpdatePanel ID="upContentBody" runat="server">
         <ContentTemplate>
             <asp:HiddenField ID="hidAccIFC" runat="server" />
             <asp:HiddenField ID="hidAccNo" runat="server" />
@@ -202,7 +203,7 @@
             <div id="DIVFilter" runat="server" visible="true">
                 <div class="container-fluid">
                     <div class="breadHeader">
-                        <h5 class="page-title">BC Status</h5>
+                        <h5 class="page-title">Overall BC Status</h5>
                     </div>
                     <!-- Filter Accordion -->
                     <div class="accordion summary-accordion" id="history-accordion">
@@ -245,16 +246,16 @@
                                                     </div>
                                                 </div>
 
-                                                  <div class="col" style="display: none;">
+                                                <div class="col" style="display: none;">
                                                     <label class="selectInputLabel" for="selectInputLabel">Client:</label>
                                                     <div class="selectInputBox" style="display: none;">
-                                                        <asp:DropDownList ID="ddlClient" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" ></asp:DropDownList>
+                                                        <asp:DropDownList ID="ddlClient" runat="server" CssClass="maximus-select w-100" AutoPostBack="true"></asp:DropDownList>
                                                     </div>
                                                 </div>
 
-                                                   <div class="col">
+                                                <div class="col">
                                                     <label class="selectInputLabel" for="selectInputLabel">Operation Type</label>
-                                                    <div class="selectInputBox" >
+                                                    <div class="selectInputBox">
                                                         <%-- <asp:DropDownList ID="ddlClientCode" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlClientCode_SelectedIndexChanged">
                                                     <asp:ListItem Value="0">--Client--</asp:ListItem>
                                                 </asp:DropDownList>--%>
@@ -263,36 +264,28 @@
                                                             <asp:ListItem Text="-- Select --" Value="0" Selected="True"></asp:ListItem>
                                                             <%--      <asp:ListItem Text="Aproove" Value=""></asp:ListItem>
                                                         <asp:ListItem Text="" Value=""></asp:ListItem>--%>
-                                                            <asp:ListItem Text="Approve" Value="1"></asp:ListItem>
-                                                            <asp:ListItem Text="Decline" Value="2"></asp:ListItem>
+                                                            <asp:ListItem Text="Approved" Value="1"></asp:ListItem>
+                                                            <asp:ListItem Text="Declined" Value="2"></asp:ListItem>
                                                             <asp:ListItem Text="Pending" Value="3"></asp:ListItem>
-                                                         </asp:DropDownList>
+                                                        </asp:DropDownList>
                                                     </div>
                                                 </div>
 
-                                                 <div class="col">
+                                                <div class="col" style="display: none">
                                                     <label class="selectInputLabel" for="selectInputLabel">Verification Level</label>
-                                                    <div class="selectInputBox" >
-                                                        <%-- <asp:DropDownList ID="ddlClientCode" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlClientCode_SelectedIndexChanged">
-                                                    <asp:ListItem Value="0">--Client--</asp:ListItem>
-                                                </asp:DropDownList>--%>
+                                                    <div class="selectInputBox">
 
                                                         <asp:DropDownList ID="ddlVerification" runat="server" CssClass="maximus-select w-100" AutoPostBack="false">
                                                             <asp:ListItem Text="-- Select --" Value="0" Selected="True"></asp:ListItem>
-                                                            <%--      <asp:ListItem Text="Aproove" Value=""></asp:ListItem>
-                                                        <asp:ListItem Text="" Value=""></asp:ListItem>--%>
-                                                          
-                                                            
-                                                            
                                                             <asp:ListItem Text="Checker" Value="1"></asp:ListItem>
                                                             <asp:ListItem Text="Authorizer" Value="2"></asp:ListItem>
-                                                         </asp:DropDownList>
+                                                        </asp:DropDownList>
                                                     </div>
                                                 </div>
 
-                                                  <div class="col" style="display: none;">
+                                                <div class="col" style="display: none;">
                                                     <label class="selectInputLabel" for="selectInputLabel">BC Type</label>
-                                                    <div class="selectInputBox"  style="display: none;">
+                                                    <div class="selectInputBox" style="display: none;">
                                                         <%-- <asp:DropDownList ID="ddlClientCode" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlClientCode_SelectedIndexChanged">
                                                     <asp:ListItem Value="0">--Client--</asp:ListItem>
                                                 </asp:DropDownList>--%>
@@ -304,14 +297,14 @@
                                                             <asp:ListItem Text="BC" Value="1"></asp:ListItem>
                                                             <asp:ListItem Text="SubBc" Value="2"></asp:ListItem>
                                                             <asp:ListItem Text="All" Value="0"></asp:ListItem>
-                                                            
-                                                         </asp:DropDownList>
+
+                                                        </asp:DropDownList>
                                                     </div>
                                                 </div>
 
-                                                 <div class="col" style="display: none;">
+                                                <div class="col" style="display: none;">
                                                     <label class="selectInputLabel" for="selectInputLabel">Status</label>
-                                                    <div class="selectInputBox"  style="display: none;">
+                                                    <div class="selectInputBox" style="display: none;">
                                                         <%-- <asp:DropDownList ID="ddlClientCode" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlClientCode_SelectedIndexChanged">
                                                     <asp:ListItem Value="0">--Client--</asp:ListItem>
                                                 </asp:DropDownList>--%>
@@ -321,16 +314,16 @@
                                                             <%--      <asp:ListItem Text="Aproove" Value=""></asp:ListItem>
                                                         <asp:ListItem Text="" Value=""></asp:ListItem>--%>
                                                             <asp:ListItem Text="Onbord" Value="1"></asp:ListItem>
-                                                            <asp:ListItem Text="Active" Value="2" ></asp:ListItem>
+                                                            <asp:ListItem Text="Active" Value="2"></asp:ListItem>
                                                             <asp:ListItem Text="Deactive" Value="3"></asp:ListItem>
-                                                            <asp:ListItem Text="Terminate" Value="4" ></asp:ListItem>
+                                                            <asp:ListItem Text="Terminate" Value="4"></asp:ListItem>
                                                             <asp:ListItem Text="ReEdit" Value="5"></asp:ListItem>
-                                                          
-                                                         </asp:DropDownList>
+
+                                                        </asp:DropDownList>
                                                     </div>
                                                 </div>
                                                 <!-- input -->
-                                              
+
 
                                                 <div class="col" style="display: none;">
                                                     <label class="selectInputLabel" for="selectInputLabel">Agent</label>
@@ -343,39 +336,40 @@
 
                                             <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
 
-                                                <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" backcolor="#003087" onserverclick="btnSearch_Click">
+                                               
+
+                                                <div class="col-md-2" runat="server" visible="false">
+                                                    <div class="selectInputBox">
+                                                        <asp:DropDownList runat="server" ID="ddlExport" CssClass="maximus-select w-100" AutoPostBack="true">
+                                                            <asp:ListItem Text="Excel" Value="1"></asp:ListItem>
+                                                            <asp:ListItem Text="CSV" Value="2"></asp:ListItem>
+
+                                                        </asp:DropDownList>
+                                                    </div>
+                                                </div>
+                                                <button type="button" id="btnExport" runat="server" class="themeBtn themeApplyBtn" data-bs-toggle="modal" onserverclick="btnexport_ServerClick" style="display: none">Export</button>
+                                            </div>
+                                            
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-auto text-center">
+                                                    <strong>
+                                                        <asp:Label ID="lblRecordCount" runat="server" Text=""></asp:Label>
+                                                    </strong>
+                                                </div>
+                                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
+                                                     <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" backcolor="#003087" onserverclick="btnSearch_Click">
                                                     Search</button>
-
-
                                                 <button type="button" id="btnClear" runat="server" class="themeBtn resetBtn themeCancelBtn me-0" data-bs-toggle="modal"
                                                     onserverclick="btnReset_Click">
                                                     Reset</button>
-
-                                               <div class="col-md-2" runat="server" visible="false">
-                                                <div class="selectInputBox">
-                                                    <asp:DropDownList runat="server" ID="ddlExport" CssClass="maximus-select w-100" AutoPostBack="true">
-                                                        <asp:ListItem Text="Excel" Value="1"></asp:ListItem>
-                                                        <asp:ListItem Text="CSV" Value="2"></asp:ListItem>
-
-                                                    </asp:DropDownList>
                                                 </div>
-                                            </div>
-                                            <div class="col">
-                                                <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png"  CssClass="iconButtonBox"
-                                                    ToolTip="Csv" onclick="BtnCsv_Click" data-toggle="modal" data-target="#myModal"/>
+                                                <div class="d-flex justify-content-end">
+                                                    <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                        ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
 
-                                                 <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png"  CssClass="iconButtonBox"
-                                                    ToolTip="Xls"  onclick="BtnXls_Click" data-toggle="modal" data-target="#myModal"/>
-                                            </div>
-                                           
-
-                                            <button type="button" id="btnExport" runat="server" class="themeBtn themeApplyBtn" data-bs-toggle="modal" onserverclick="btnexport_ServerClick" style="display:none">Export</button>
-                                        </div>
-
-                                          
-
-                                            <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
-                                                <center><strong><asp:Label ID="lblRecordCount" runat="server" Text=""></asp:Label></strong></center>
+                                                    <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                        ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
+                                                </div>
                                             </div>
                                         </ContentTemplate>
                                         <Triggers>
@@ -390,7 +384,7 @@
                         <!-- bottom btns -->
 
                     </div>
-                     <asp:Panel ID="panelGrid" runat="server" HorizontalScroll="false" ScrollBars="None" Style="padding: 5px 10px 0px 0px;">
+                    <asp:Panel ID="panelGrid" runat="server" HorizontalScroll="false" ScrollBars="None" Style="padding: 5px 10px 0px 0px;">
                         <div class="form-group row">
                             <div class="table-box">
                                 <div class="tableBorderBox HeaderStyle" style="width: 100%; padding: 10px 10px; overflow: scroll; max-height: 400px;">
@@ -403,9 +397,8 @@
                                         Visible="true"
                                         PagerSettings-Mode="NumericFirstLast"
                                         PagerSettings-FirstPageText="First Page"
-                                       
                                         PagerSettings-LastPageText="Last Page"
-                                        OnPageIndexChanging="gvTransactions_PageIndexChanging" >
+                                        OnPageIndexChanging="gvTransactions_PageIndexChanging">
                                         <HeaderStyle HorizontalAlign="Center" Wrap="false" />
                                         <RowStyle Wrap="false" />
                                         <Columns>
@@ -415,7 +408,7 @@
                                                 </ItemTemplate>
                                                 <ItemStyle HorizontalAlign="Center" />
                                             </asp:TemplateField>
-                                           <%-- <asp:TemplateField>
+                                            <%-- <asp:TemplateField>
                                                 <HeaderTemplate>
                                                     <table>
                                                         <tr>
@@ -558,7 +551,7 @@
                                     </div>
                                     <div class="panel-body">
                                         <div class="form-group" style="margin: -32px; height: 100px;">
-                                        <center>
+                                            <center>
                                         <div  class="whos-speaking-area speakers pad100">
                                             <div class="container">
                                                 <div class="row">
@@ -654,20 +647,19 @@
                                                         </div>
 
                                                     </div>
-
-                                                </div>
-                                                <!-- /row end-->
-
-                                            </div>
-                                            <!-- /container end-->
                                         </div>
-                                        </center>
-                                    </div>
-                                    </div>
-                                      <div class="panel-body" style="margin-top: 50px; padding-top: 55px;">
-                                    <div class="form-group" style="align-content:center">
+                                        <!-- /row end-->
 
-                                      <%--  <div class="col-md-6 col-xm-12" style="margin-bottom: 2%;">
+                                    </div>
+                                    <!-- /container end-->
+                                </div>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="panel-body" style="margin-top: 50px; padding-top: 55px;">
+                            <div class="form-group" style="align-content: center">
+
+                                <%--  <div class="col-md-6 col-xm-12" style="margin-bottom: 2%;">
                                             <label for="exampleInputEmail1">Status<span class="err">*</span> </label>
                                             <asp:RadioButtonList ID="rdbtnApproveDecline" CssClass="rbl" runat="server" RepeatDirection="Horizontal" RepeatLayout="Table">
                                                 <asp:ListItem Value="Approve">Approve   &nbsp;&nbsp;&nbsp;&nbsp; </asp:ListItem>
@@ -675,23 +667,23 @@
                                             </asp:RadioButtonList>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="None" CssClass="err" ErrorMessage="Please select status" ControlToValidate="rdbtnApproveDecline" ValidationGroup="Veri" runat="server"></asp:RequiredFieldValidator>
                                         </div>--%>
-                                       <%-- <div class="col-md-6 col-xm-12">
+                                <%-- <div class="col-md-6 col-xm-12">
                                             <label for="exampleInputEmail1">Final Remarks<span class="err">*</span> </label>
                                             <asp:TextBox runat="server" class="form-control" Style="resize: none" ID="txtFinalRemarks" MaxLength="200"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="reqName" Display="None" CssClass="err" ErrorMessage="Please enter Remarks" ControlToValidate="txtFinalRemarks" ValidationGroup="Veri" runat="server"></asp:RequiredFieldValidator>
                                         </div>--%>
-                                      <%--  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearRemark();">Close</button>--%>
-                                        <button type="button" class="themeBtn resetBtn themeCancelBtn me-0" onclick="ClearRemark()">Close</button>
+                                <%--  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearRemark();">Close</button>--%>
+                                <button type="button" class="themeBtn resetBtn themeCancelBtn me-0" onclick="ClearRemark()">Close</button>
 
-                                    </div>
-                                </div>
-                                </div>
                             </div>
-                            <%--<div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearRemark();">Close</button>
-                            </div>--%>
                         </div>
                     </div>
+                </div>
+                <%--<div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="ClearRemark();">Close</button>
+                            </div>--%>
+            </div>
+            </div>
                 </div>
             </div>
             <%-- Edit Image Click--%>
@@ -896,7 +888,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <label for="exampleInputEmail1">State <span class="err">*</span></label>
-                                                    <asp:DropDownList runat="server" class="form-control" ID="ddlState" Width="100%"  CssClass="maximus-select w-100" AutoPostBack="true"></asp:DropDownList>
+                                                    <asp:DropDownList runat="server" class="form-control" ID="ddlState" Width="100%" CssClass="maximus-select w-100" AutoPostBack="true"></asp:DropDownList>
                                                     <%--OnSelectedIndexChanged="ddlState_SelectedIndexChanged"--%>
                                                     <asp:HiddenField ID="hd_ddlState" runat="server" Value="1" />
                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator16" ControlToValidate="ddlState" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="AgentReg" runat="server" CssClass="err" ErrorMessage="Please select state"></asp:RequiredFieldValidator>
@@ -957,16 +949,16 @@
 
                                                 <div class="col">
                                                     <label for="exampleInputEmail1">Alternate No </label>
-                                                     <div class="inputBox w-100">
-                                                    <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtAlterNateNo" PlaceHolder="Enter contact No." Width="100%" MaxLength="10"></asp:TextBox>
-                                                    <asp:HiddenField ID="hd_txtAlterNateNo" runat="server" Value="0" />
-                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" Display="None" ValidationGroup="AgentReg" ErrorMessage="Provided mobile number is not valid! Please enter valid 10 digit mobile number start with '7/8/9'." ControlToValidate="txtAlterNateNo" ValidationExpression="^[789]\d{9}$" />
-                                                    <cc1 id="FilteredTextBoxExtender20" runat="server" filtertype="Numbers" targetcontrolid="txtAlterNateNo" />
-                                                </div>
+                                                    <div class="inputBox w-100">
+                                                        <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtAlterNateNo" PlaceHolder="Enter contact No." Width="100%" MaxLength="10"></asp:TextBox>
+                                                        <asp:HiddenField ID="hd_txtAlterNateNo" runat="server" Value="0" />
+                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" Display="None" ValidationGroup="AgentReg" ErrorMessage="Provided mobile number is not valid! Please enter valid 10 digit mobile number start with '7/8/9'." ControlToValidate="txtAlterNateNo" ValidationExpression="^[789]\d{9}$" />
+                                                        <cc1 id="FilteredTextBoxExtender20" runat="server" filtertype="Numbers" targetcontrolid="txtAlterNateNo" />
                                                     </div>
+                                                </div>
                                             </div>
 
-                                          <%--  <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns" >
+                                            <%--  <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns" >
                                                 <asp:Button runat="server" ID="btnSubmitDetails" ValidationGroup="AgentReg" OnClientClick="javascript:return  disableMultipleClick();" OnClick="btnSubmitDetails_Click" CssClass="themeBtn themeApplyBtn" BackColor="#003087" Text="Submit"></asp:Button>
                                                 <asp:Button ID="btnCancel" runat="server" CausesValidation="false" CssClass="themeBtn resetBtn themeCancelBtn me-0" Text="Cancel" OnClick="btnCancel_Click"></asp:Button>
                                                 <asp:ValidationSummary
@@ -995,7 +987,7 @@
     </asp:UpdatePanel>
     <cc1:ModalPopupExtender ID="mpeProgress" runat="server" TargetControlID="upPanel" PopupControlID="upContentBodyUpdateProgress" BackgroundCssClass="modalBackground" DropShadow="false" />
 
-      <script>
+    <script>
 
         var prm = Sys.WebForms.PageRequestManager.getInstance();
         if (prm != null) {
@@ -1014,7 +1006,7 @@
                     $("#<%=ddlOperationType.ClientID%>").select2();
                     $("#<%=ddlVerification.ClientID%>").select2();
                     $("#<%=ddlBCType.ClientID%>").select2();
-                     $("#<%=ddlStatus.ClientID%>").select2();
+                    $("#<%=ddlStatus.ClientID%>").select2();
 
                 }
             });

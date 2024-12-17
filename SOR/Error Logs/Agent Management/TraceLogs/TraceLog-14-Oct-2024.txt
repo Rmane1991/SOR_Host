@@ -1,0 +1,40 @@
+Time : 14-Oct-2024 12:01 Message : AgentRegistrationDAL: BindBC: UserName: Maximus Exception: Parameter '@ClientID' must have its value set
+Time : 14-Oct-2024 12:01 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+Parameter '@ClientID' must have its value set
+Time : 14-Oct-2024 12:11 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:11 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:20 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:20 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:23 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:23 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:26 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:26 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:31 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:31 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:31 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 12:31 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42P08: could not determine data type of parameter $5
+Time : 14-Oct-2024 15:20 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 14-Oct-2024 18:59 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 14-Oct-2024 19:14 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 8
+Time : 14-Oct-2024 19:15 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 8
+Time : 14-Oct-2024 19:18 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 9

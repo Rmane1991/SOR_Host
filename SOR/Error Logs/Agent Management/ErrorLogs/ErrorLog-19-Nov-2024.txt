@@ -1,0 +1,113 @@
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 11:54
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Upload.RestrictedName.Page_Load(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedName.aspx.cs:line 108
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 11:54
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Upload.RestrictedPIN.Page_Load(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedPIN.aspx.cs:line 95
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 11:54
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Upload.RestrictedName.Page_Load(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedName.aspx.cs:line 108
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 12:30
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Upload.RestrictedName.btnsample_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedName.aspx.cs:line 643
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 12:31
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.ImportEntity.InsertFileImport(String& FileId) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\ImportEntity.cs:line 136
+   at SOR.Pages.Upload.RestrictedName.FileImportEntry(FileValidator _FileValidator, String& FileId) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedName.aspx.cs:line 556
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 14:20
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Upload.RestrictedName.gvNegativeAgent_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedName.aspx.cs:line 727
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 14:32
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.ImportEntity.ExportRestrictedPIN() in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\ImportEntity.cs:line 396
+   at SOR.Pages.Upload.RestrictedPIN.FillGrid(EnumBindingType _EnumBindingType, String sortExpression) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedPIN.aspx.cs:line 146
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 14:33
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.ImportEntity.ExportRestrictedPIN() in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\ImportEntity.cs:line 396
+   at SOR.Pages.Upload.RestrictedPIN.FillGrid(EnumBindingType _EnumBindingType, String sortExpression) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedPIN.aspx.cs:line 146
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 14:45
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Upload.RestrictedPIN.btnsample_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedPIN.aspx.cs:line 597
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 14:46
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.ImportEntity.InsertFileImportPIN(String& FileId) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\ImportEntity.cs:line 464
+   at SOR.Pages.Upload.RestrictedPIN.FileImportEntry(FileValidator _FileValidator, String& FileId) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedPIN.aspx.cs:line 510
+Message - : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 19-Nov-2024 15:16
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Upload.RestrictedPIN.gvRestrictedPIN_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedPIN.aspx.cs:line 681
+Message - : Thread was being aborted.

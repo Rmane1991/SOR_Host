@@ -1,0 +1,104 @@
+Time : 25-Nov-2024 11:30 Message : Versioning: SetPropertise(): Exception: Object reference not set to an instance of an object.
+Time : 25-Nov-2024 11:30 Message : Versioning: FillGrid(): Exception: Object reference not set to an instance of an object.
+Time : 25-Nov-2024 11:30 Message : Versioning: SetPropertise(): Exception: Object reference not set to an instance of an object.
+Time : 25-Nov-2024 11:30 Message : Versioning: FillGrid(): Exception: Object reference not set to an instance of an object.
+Time : 25-Nov-2024 11:47 Message : Versioning: FillGrid(): Exception: A field or property with the name 'createdby' was not found on the selected data source.
+Time : 25-Nov-2024 12:34 Message : Versioning: FillGrid(): Exception: A field or property with the name 'FileID' was not found on the selected data source.
+Time : 25-Nov-2024 12:35 Message : File not found: D:\UploadedPatches\Patches\22112024181723
+Time : 25-Nov-2024 12:40 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Could not find file 'C:\Users\aakash.tomar\AppData\Local\Temp\22112024181723_20241125124031.zip'.
+Time : 25-Nov-2024 14:41 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:43 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:45 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:49 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:49 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:50 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:51 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:52 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 14:52 Message : User viewed release note at: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 25-Nov-2024 15:29 Message : Versioning: Save(): Exception: Access to the path '~\\TempFiles\\UploadedPatches\\' is denied.
+Time : 25-Nov-2024 15:45 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:45 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:45 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:45 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:45 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\25112024154454\ReleaseNote (3).docx
+Time : 25-Nov-2024 15:45 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\25112024154454\ReleaseNote (3).docx
+Time : 25-Nov-2024 15:45 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 25-Nov-2024 15:45 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 25-Nov-2024 15:46 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:46 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:46 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:46 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 15:46 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\25112024154632\ReleaseNote (3).docx
+Time : 25-Nov-2024 15:46 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\25112024154632\ReleaseNote (3).docx
+Time : 25-Nov-2024 15:46 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 25-Nov-2024 15:46 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 25-Nov-2024 16:12 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:12 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:14 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:14 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:19 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:19 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:19 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:19 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:19 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:19 Message : No valid release note uploaded. Please upload a .docx file.
+Time : 25-Nov-2024 16:20 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : No valid release note uploaded. Please upload a .docx file.
+Time : 25-Nov-2024 16:20 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 16:20 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\25112024162022\ReleaseNote.pdf
+Time : 25-Nov-2024 16:20 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\25112024162022\ReleaseNote.pdf
+Time : 25-Nov-2024 16:20 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 25-Nov-2024 16:20 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 25-Nov-2024 16:21 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:21 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:21 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:24 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:45 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 16:45 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 25-Nov-2024 17:07 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 17:07 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 17:07 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 17:07 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 17:07 Message : Release note uploaded: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\UploadedPatches\ReleaseNotes\25112024170754\ReleaseNote.pdf
+Time : 25-Nov-2024 17:07 Message : Successfully uploaded release note to: D:\D Data\Aakash\SOR\SOR\SOR\TempFiles\UploadedPatches\ReleaseNotes\25112024170754\ReleaseNote.pdf
+Time : 25-Nov-2024 17:07 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 25-Nov-2024 17:07 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 25-Nov-2024 19:16 Message : Versioning: Save(): Exception: Access to the path 'D:\UploadedPatches' is denied.
+Time : 25-Nov-2024 19:19 Message : Error extracting file: Access to the path 'D:\Data\Aakash\SOR\SOR\SOR\Patch' is denied.
+Time : 25-Nov-2024 19:26 Message : Error extracting file: Cannot create "D:\Data\Aakash\SOR\SOR\SOR\Patch\BussinessAccessLayer.zip" because a file or directory with the same name already exists.
+Time : 25-Nov-2024 19:26 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:26 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:26 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:26 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:26 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\25112024192631\ReleaseNote.pdf
+Time : 25-Nov-2024 19:26 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\25112024192631\ReleaseNote.pdf
+Time : 25-Nov-2024 19:27 Message : Versioning: Save(): Exception: The process cannot access the file 'D:\Data\Aakash\SOR\SOR\SOR\Patch\BussinessAccessLayer.zip' because it is being used by another process.
+Time : 25-Nov-2024 19:30 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:30 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:30 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:30 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 25-Nov-2024 19:31 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\25112024193047\ReleaseNote.pdf
+Time : 25-Nov-2024 19:31 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\25112024193047\ReleaseNote.pdf
+Time : 25-Nov-2024 19:31 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 25-Nov-2024 19:31 Message : Versioning: btnSave_Click(): Going For Insert

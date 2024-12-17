@@ -11,6 +11,7 @@ using System.Xml;
 using System.Security.Cryptography;
 using MaxiSwitch.EncryptionDecryption;
 using System.Configuration;
+using Npgsql;
 
 namespace BussinessAccessLayer
 {
@@ -385,54 +386,65 @@ namespace BussinessAccessLayer
         #endregion
 
         #region ImportBulkKycValidateData
-        public string ImportBulkKycValidateData(out string StatusCode, out string SatatusDesc)
+        public string ImportBulkKycValidateData(out string StatusCode, out string StatusDesc)
         {
-            StatusCode = string.Empty; SatatusDesc = string.Empty;
+            StatusCode = string.Empty;
+            StatusDesc = string.Empty;
+
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var conn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params = {
+                        cmd.Connection = conn;
+                        cmd.CommandText = "CALL Proc_BulkCheckAgent(null, null, @p_flag, @p_State, @p_City, @p_PanNo, @p_ContactNo, @p_AadharNo, @p_PersonalEmail, @p_AgentPincode, @p_ClientID, @p_FranchiseID, @p_AgentCode, @p_TerminalId)";
+                        cmd.CommandType = CommandType.Text;
 
-                                             new SqlParameter("@flag",Flag),
-                                             new SqlParameter("@State",State),
-                                             new SqlParameter("@City",City),
-                                             new SqlParameter("@ClientID",ClientID),
-                                             new SqlParameter("@FranchiseID",BCID),
-                                             new SqlParameter("@AadharNo",AadharNo),
-                                             new SqlParameter("@PanNo",PanNo),
-                                             new SqlParameter("@AgentPincode",Pincode),
-                                             new SqlParameter("@PersonalEmail",EmailId),
-                                             new SqlParameter("@ContactNo",ContactNo),
-                                             new SqlParameter("@AgentCode",AgentCode),
-                                             new SqlParameter("@TerminalID",TerminalId),
-                                             new SqlParameter("@OutStatus", SqlDbType.VarChar, 100) { Direction = ParameterDirection.Output },
-                                             new SqlParameter("@OutStatusMsg", SqlDbType.VarChar, 100) { Direction = ParameterDirection.Output }
-                                         };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_BulkCheckAgent";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        sqlConn.Open();
+                        // Adding output parameters first
+                        var outStatusParam = new NpgsqlParameter("p_OutStatus", NpgsqlTypes.NpgsqlDbType.Varchar, 10)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(outStatusParam);
+
+                        var outStatusMsgParam = new NpgsqlParameter("p_OutStatusMsg", NpgsqlTypes.NpgsqlDbType.Varchar, 200)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(outStatusMsgParam);
+
+                        // Adding input parameters with null handling
+                        cmd.Parameters.AddWithValue("p_flag", (object)Flag ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_State", (object)State ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_City", (object)City ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_PanNo", (object)PanNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ContactNo", (object)ContactNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_AadharNo", (object)AadharNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_PersonalEmail", (object)EmailId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_AgentPincode", (object)Pincode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ClientID", (object)ClientID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_FranchiseID", (object)BCID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_AgentCode", (object)AgentCode ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_TerminalId", (object)TerminalId ?? DBNull.Value);
+
+                        conn.Open();
                         cmd.ExecuteNonQuery();
-                        StatusCode = Convert.ToString(cmd.Parameters["@OutStatus"].Value);
-                        SatatusDesc = Convert.ToString(cmd.Parameters["@OutStatusMsg"].Value);
-                        //StatusMsg = Convert.ToString(cmd.Parameters["@Status_Out"].Value);
-                        sqlConn.Close();
-                        cmd.Dispose();
-                        
+
+                        StatusCode = Convert.ToString(outStatusParam.Value);
+                        StatusDesc = Convert.ToString(outStatusMsgParam.Value);
                     }
                 }
-                //dataSet = _dbAccess.SelectRecordsWithOutParams("Proc_BulkCheckAgent", _Params, out StatusCode, out SatatusDesc);
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : ImportEntity.cs \nFunction : ImportBulkKycValidate() \nException Occured\n" + Ex.Message);
+                // Log error
+                ErrorLog.CommonTrace("Class : ImportEntity.cs \nFunction : ImportBulkKycValidate() \nException Occured\n" + ex.Message);
             }
+
             return StatusCode;
         }
+
         #endregion
     }
 }

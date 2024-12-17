@@ -1,0 +1,71 @@
+Time : 04-Dec-2024 11:09 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 33 Fullname: AlexJohn User: Maximus ReceiverEmailID: priyabob95@test.com ContactNo: 6520467777 Remarks: Approve.
+Time : 04-Dec-2024 11:12 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 33 Fullname: AlexJohn User: Maximus ReceiverEmailID: priyabob95@test.com ContactNo: 6520467777 Remarks: Approve.
+Time : 04-Dec-2024 11:14 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 33 Fullname: AlexJohn User: Maximus ReceiverEmailID: priyabob95@test.com ContactNo: 6520467777 Remarks: Approve.
+Time : 04-Dec-2024 11:14 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 33 Fullname: AlexJohn User: Maximus ReceiverEmailID: priyabob95@test.com ContactNo: 6520467777 Remarks: Approve.ActivityType: 4
+Time : 04-Dec-2024 11:14 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 04-Dec-2024 11:21 Message : Page : BCVerificationLevelTwo.cs 
+Function : btnexport_ServerClick
+Exception Occured
+Thread was being aborted.
+Time : 04-Dec-2024 11:51 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+42P01: relation "temp_results" does not exist
+Time : 04-Dec-2024 11:51 Message : Page : BCVerificationLevelTwo.cs 
+Function : btnexport_ServerClick
+Exception Occured
+Cannot find table 0.
+Time : 04-Dec-2024 11:51 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+42P01: relation "temp_results" does not exist
+Time : 04-Dec-2024 11:51 Message : Page : BCVerificationLevelTwo.cs 
+Function : btnexport_ServerClick
+Exception Occured
+Cannot find table 0.
+Time : 04-Dec-2024 11:54 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BC ID'.
+Time : 04-Dec-2024 11:54 Message : Page : BCVerificationLevelTwo.cs 
+Function : btnexport_ServerClick
+Exception Occured
+Thread was being aborted.
+Time : 04-Dec-2024 12:53 Message : Class : AggRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Pan No' was not found on the selected data source.
+Time : 04-Dec-2024 12:56 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 15 Fullname: SaraAlice User: Maximus ReceiverEmailID: emmajohn52@example.com ContactNo: 9496120530 Remarks: Approve.
+Time : 04-Dec-2024 12:57 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 15 Fullname: SaraAlice User: Maximus ReceiverEmailID: emmajohn52@example.com ContactNo: 9496120530 Remarks: Approve.ActivityType: 4
+Time : 04-Dec-2024 12:59 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 16 Fullname: Aggbc User: Maximus ReceiverEmailID: r4@r.com ContactNo: 9658745632 Remarks: Approve.
+Time : 04-Dec-2024 13:00 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 16 Fullname: Aggbc User: Maximus ReceiverEmailID: r4@r.com ContactNo: 9658745632 Remarks: Approve.ActivityType: 4
+Time : 04-Dec-2024 14:35 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: BCFirst User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 04-Dec-2024 14:39 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: BCFirst User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 04-Dec-2024 14:40 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 18
+Time : 04-Dec-2024 14:40 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 18
+Time : 04-Dec-2024 14:41 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAggregator User: Maximus ReceiverEmailID: xyz9856656@gmail.com ContactNo: 9874564785 Remarks: Approve.
+Time : 04-Dec-2024 14:41 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAggregator User: Maximus ReceiverEmailID: xyz9856656@gmail.com ContactNo: 9874564785 Remarks: Approve.ActivityType: 0
+Time : 04-Dec-2024 14:41 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 19 Fullname: TestAggregator User: Maximus ReceiverEmailID: xyz9856656@gmail.com ContactNo: 9874564785 Remarks: Approve.
+Time : 04-Dec-2024 14:42 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 19 Fullname: TestAggregator User: Maximus ReceiverEmailID: xyz9856656@gmail.com ContactNo: 9874564785 Remarks: Approve.ActivityType: 4
+Time : 04-Dec-2024 14:47 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 20 Fullname: Aggbc User: Maximus ReceiverEmailID: r4@r.com ContactNo: 9658745632 Remarks: Approve.
+Time : 04-Dec-2024 14:47 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 20 Fullname: Aggbc User: Maximus ReceiverEmailID: r4@r.com ContactNo: 9658745632 Remarks: Approve.ActivityType: 4
+Time : 04-Dec-2024 14:48 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 21 Fullname: BCAPITEST User: Maximus ReceiverEmailID: rrrr@r.com ContactNo: 8520469777 Remarks: Approve.
+Time : 04-Dec-2024 14:48 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Decline Flag: 6 AgentCode: 21 Fullname: BCAPITEST User: Maximus ReceiverEmailID: rrrr@r.com ContactNo: 8520469777 Remarks: Approve.
+Time : 04-Dec-2024 18:04 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 24
+Time : 04-Dec-2024 18:05 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 24
+Time : 04-Dec-2024 18:05 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: AggOne User: Maximus ReceiverEmailID: xyz6566@gmail.com ContactNo: 9874564159 Remarks: Approve.
+Time : 04-Dec-2024 18:05 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: AggOne User: Maximus ReceiverEmailID: xyz6566@gmail.com ContactNo: 9874564159 Remarks: Approve.ActivityType: 0
+Time : 04-Dec-2024 18:08 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 25
+Time : 04-Dec-2024 18:09 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 25
+Time : 04-Dec-2024 18:09 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 25 Fullname: AggTwo User: Maximus ReceiverEmailID: xyz65666896@gmail.com ContactNo: 9874564166 Remarks: Approve.
+Time : 04-Dec-2024 18:09 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 04-Dec-2024 18:09 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 25 Fullname: AggTwo User: Maximus ReceiverEmailID: xyz65666896@gmail.com ContactNo: 9874564166 Remarks: Approve.ActivityType: 0
+Time : 04-Dec-2024 18:09 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 25 Fullname: AggTwo User: Maximus ReceiverEmailID: xyz65666896@gmail.com ContactNo: 9874564166 Remarks: Approve.
+Time : 04-Dec-2024 18:09 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 04-Dec-2024 18:09 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 25 Fullname: AggTwo User: Maximus ReceiverEmailID: xyz65666896@gmail.com ContactNo: 9874564166 Remarks: Approve.ActivityType: 0
+Time : 04-Dec-2024 18:09 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 25 Fullname: AggTwo User: Maximus ReceiverEmailID: xyz65666896@gmail.com ContactNo: 9874564166 Remarks: Approve.
+Time : 04-Dec-2024 18:11 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 25 Fullname: AggTwo User: Maximus ReceiverEmailID: xyz65666896@gmail.com ContactNo: 9874564166 Remarks: Approve.ActivityType: 0
+Time : 04-Dec-2024 19:07 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 26
+Time : 04-Dec-2024 19:07 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 26
+Time : 04-Dec-2024 19:07 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 26 Fullname: AggTwoThree User: Maximus ReceiverEmailID: xyz777@gmail.com ContactNo: 9874564777 Remarks: Approve.
+Time : 04-Dec-2024 19:07 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 26 Fullname: AggTwoThree User: Maximus ReceiverEmailID: xyz777@gmail.com ContactNo: 9874564777 Remarks: Approve.ActivityType: 0

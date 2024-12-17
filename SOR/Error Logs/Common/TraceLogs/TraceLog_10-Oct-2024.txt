@@ -1,0 +1,274 @@
+10-10-2024 11:21:03:8347 : Login Successful. Username Maximus. SessionID : avmq43tyf3ajm0mdawxnpy2t
+10-10-2024 11:32:05:1976 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+10-10-2024 11:32:05:1976 : NOTICE: Flag is set to 1, proceeding with validations...
+10-10-2024 11:32:05:1976 : NOTICE: Inserting new record...1
+10-10-2024 11:32:05:2133 : NOTICE: Inserting new record...
+10-10-2024 11:32:05:2133 : NOTICE: Insert successful, RequestId: 64
+10-10-2024 11:32:29:6767 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+10-10-2024 11:32:29:6787 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+10-10-2024 11:54:34:8537 : Login Successful. Username Maximus. SessionID : nwfklkb1hkp10lacgkyzcgjd
+10-10-2024 11:55:59:4541 : Login Successful. Username Maximus. SessionID : wmlx0exsdq5sagt5250zelna
+10-10-2024 12:19:22:8933 : Login Successful. Username Maximus. SessionID : qnicx0k1wcahb1040leggzri
+10-10-2024 12:22:15:4233 : Login Successful. Username Maximus. SessionID : 4hdmzncsnq1ffx5lmfhq5pea
+10-10-2024 12:27:05:3527 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+10-10-2024 12:28:16:0791 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+10-10-2024 12:28:16:0801 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+10-10-2024 12:28:28:6033 : Login Successful. Username Maximus. SessionID : u5rycyp4k1qhz1vbhkn5gyjh
+10-10-2024 12:30:49:8144 : Login Successful. Username Maximus. SessionID : ijijpn5kvpojn3k0pdoqfcun
+10-10-2024 12:31:26:4636 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Invalid mode specified.
+10-10-2024 12:33:42:5299 : Login Successful. Username Maximus. SessionID : tibjafsywlwvbvfnozed0tt4
+10-10-2024 12:51:36:7802 : Class : BCEntity.cs 
+Function : SetInsertUpdateBCMasterDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 12:56:58:9329 : Class : BCEntity.cs 
+Function : SetInsertUpdateBCMasterDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 12:57:14:0931 : Login Successful. Username Maximus. SessionID : yvnk5brifxbjcnjmk5jkf1if
+10-10-2024 12:58:44:0222 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+23505: duplicate key value violates unique constraint "tbl_switch_routing_pkey"
+10-10-2024 13:05:17:9557 : Class : BCEntity.cs 
+Function : SetInsertUpdateBCMasterDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 13:07:14:5754 : Login Successful. Username Maximus. SessionID : 3n1jv4ztgqgtq5wbguf2oath
+10-10-2024 13:09:36:5541 : Class : BCEntity.cs 
+Function : SetInsertUpdateBCMasterDetails() 
+Exception Occurred
+42883: function sp_insertorupdatebcmaterdetails(Flag => integer, CreatedBy => text, BcReqId => text, ClientId => text, Salt => text, Salt1 => text, Salt2 => unknown, Salt3 => unknown, Salt4 => unknown, Password => text) does not exist
+10-10-2024 13:11:17:4993 : Login Successful. Username Maximus. SessionID : jknolkia3lmstcnuop505ju1
+10-10-2024 15:06:28:1059 : Login Successful. Username Maximus. SessionID : s2nn1kvdm5fvvhun1owqhqh1
+10-10-2024 16:40:41:3027 : Login Successful. Username Maximus. SessionID : lcoem5n4w5ik5rjk3cy2cj1t
+10-10-2024 16:44:26:1671 : Login Successful. Username Maximus. SessionID : puouhapktaz1zdmb4cudvzyl
+10-10-2024 16:51:12:1773 : Login Successful. Username Maximus. SessionID : seb5lqhecy1cknb3qka2yczg
+10-10-2024 16:54:51:9907 : Login Successful. Username Maximus. SessionID : rdov0rypqskq2jlqytwspjez
+10-10-2024 17:06:18:9645 : Login Successful. Username Maximus. SessionID : e2quwmxazxx5x3bojlbyy5aj
+10-10-2024 17:07:34:3969 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 17:08:36:4589 : Login Successful. Username Maximus. SessionID : mc2gan3nd5gxavqr3gwqrhjm
+10-10-2024 17:12:18:8329 : Login Successful. Username Maximus. SessionID : fokifszneatrloetrf2fa0sl
+10-10-2024 17:16:55:2203 : Login Successful. Username Maximus. SessionID : ztjxbmq0hzshg1u5tjrwcntn
+10-10-2024 17:20:28:9584 : Login Successful. Username Maximus. SessionID : keyqgdmhr2igj5sbhibfdlbe
+10-10-2024 17:22:36:2993 : Login Successful. Username Maximus. SessionID : h3t3numeidpdoegbxrct1dg0
+10-10-2024 17:25:04:4787 : Login Successful. Username Maximus. SessionID : jxcgp5rga01egdsqkgrsi0cz
+10-10-2024 18:09:38:2564 : Login Successful. Username Maximus. SessionID : vlkinee4u3303gc23dyrl41j
+10-10-2024 18:16:45:5713 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+42703: column "p_bccode" does not exist
+10-10-2024 18:20:24:2570 : Login Successful. Username Maximus. SessionID : mttn1i2chczzeoewilqiai41
+10-10-2024 18:23:44:5047 : Login Successful. Username Maximus. SessionID : se11vuv3h3u02ikc3nmzyrfw
+10-10-2024 18:25:46:6586 : Login Successful. Username Maximus. SessionID : czlko1jvjtlk1bj4n3agoael
+10-10-2024 18:29:27:0426 : Login Successful. Username Maximus. SessionID : ut4njhz51kivvk4epratnaah
+10-10-2024 18:33:19:7713 : Login Successful. Username Maximus. SessionID : rjbwbt25njwxn2dpix4kmplh
+10-10-2024 18:40:42:1184 : Login Successful. Username Maximus. SessionID : ejhmxaueq0ifq0fsahqoleff
+10-10-2024 18:43:52:1063 : Login Successful. Username Maximus. SessionID : wj4bfuerxedawcd441loas2v
+10-10-2024 18:46:28:6307 : Login Successful. Username Maximus. SessionID : qmshzhyfgn4mog2q23quljtj
+10-10-2024 18:47:02:5200 : Page : AppSecurity.cs 
+Function : RandomStringGenerator() 
+Exception Occured
+Index was outside the bounds of the array.
+10-10-2024 18:51:20:3636 : Login Successful. Username Maximus. SessionID : wjzr1tzpqxfnuiwxddzkqjvh
+10-10-2024 18:54:31:3534 : Login Successful. Username Maximus. SessionID : lfp2ptsxodjsqkg2invrdjuo
+10-10-2024 18:56:22:9480 : Login Successful. Username Maximus. SessionID : t22owalfjrdxv15ksevsw31y
+10-10-2024 19:04:26:3371 : Login Successful. Username Maximus. SessionID : yc1sdvs2zn55dicycaobykl5
+10-10-2024 19:09:11:4593 : Login Successful. Username Maximus. SessionID : th0asjsbauf4nc00k1251ene
+10-10-2024 19:11:52:9796 : Login Successful. Username Maximus. SessionID : cpipbqtosfcqlupvp1vyx3e3
+10-10-2024 19:15:43:1003 : Login Successful. Username Maximus. SessionID : lvyvkk2dunm4slm1jf3uh4xv
+10-10-2024 19:17:15:8804 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+10-10-2024 19:20:08:4477 : Login Successful. Username Maximus. SessionID : hojmyp5hxixuqpbyupfyqjqi
+10-10-2024 19:20:49:8100 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+Parameter 'p_CHStatus' must have its value set
+10-10-2024 19:22:07:4233 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+10-10-2024 19:22:24:0902 : Login Successful. Username Maximus. SessionID : roy4sf3azt5wvg50nt4x2npj
+10-10-2024 19:22:49:7337 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+10-10-2024 19:23:59:1477 : Login Successful. Username Maximus. SessionID : rbazhyp0skq3nzsklzi34e1v
+10-10-2024 19:24:48:6255 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+42804: column "atstatus" is of type integer but expression is of type character varying
+10-10-2024 19:36:50:8426 : Login Successful. Username Maximus. SessionID : 0naha5dgy5xzoqv2wmnbox5j
+10-10-2024 19:42:32:4975 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: relation "tblstatemaster" does not exist
+10-10-2024 19:42:32:7043 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:42:32:8013 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:43:47:8639 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column "p_contactnumber" does not exist
+10-10-2024 19:43:47:9597 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:43:48:0536 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:50:18:5395 : Login Successful. Username Maximus. SessionID : bron1a2snahmsseqxcipcf24
+10-10-2024 19:50:28:5402 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column f.bcname does not exist
+10-10-2024 19:51:19:3147 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:51:19:4144 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:51:25:1373 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.contactno does not exist
+10-10-2024 19:52:16:4010 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:52:16:4933 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:52:22:8835 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.contactno does not exist
+10-10-2024 19:52:47:3873 : Login Successful. Username Maximus. SessionID : w2zgguvikg15wyuoln1voso4
+10-10-2024 19:54:58:0121 : Login Successful. Username Maximus. SessionID : 1ybtuhw4ivmwg5fpqbgkp1sb
+10-10-2024 19:55:09:2611 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column bm.emailid does not exist
+10-10-2024 19:58:18:5021 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 19:58:18:5949 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:02:09:1556 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42703: column b.MasterId does not exist
+10-10-2024 20:02:09:2524 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:02:09:3423 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:02:15:6298 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: relation "temp" does not exist
+10-10-2024 20:02:39:4114 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:02:39:5080 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:02:46:7673 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42883: operator does not exist: boolean = integer
+10-10-2024 20:03:31:1828 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:03:31:2776 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:04:42:1971 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:04:42:3007 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:04:42:3945 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:09:09:6127 : Login Successful. Username Maximus. SessionID : uayswr23qawmxz5wu13zbasd
+10-10-2024 20:09:15:8175 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:09:16:0137 : Class : BCEntity.cs 
+Function : BindBCddl() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:09:16:1125 : Class : BCEntity.cs 
+Function : BindExport() 
+Exception Occured
+Keyword not supported: 'port'.
+10-10-2024 20:10:32:4595 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:10:35:8013 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:10:43:1973 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:12:12:9640 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:12:48:0055 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isdocuploaded" is ambiguous
+10-10-2024 20:13:40:3940 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42702: column reference "isverified" is ambiguous
+10-10-2024 20:14:24:1013 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: missing FROM-clause entry for table "bt"

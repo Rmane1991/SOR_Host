@@ -108,7 +108,7 @@ namespace SOR.Pages.Admin
             {
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
-                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgUserAccessManagement.aspx", "9");
+                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgUserAccessManagement.aspx", "5");
                     if (!HasPagePermission)
                     {
                         try
@@ -124,7 +124,7 @@ namespace SOR.Pages.Admin
                     {
                         if (!IsPostBack && HasPagePermission)
                         {
-                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "9");
+                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "5");
                             BindDropdownClientDetails();
                             fillRoleDetailsGrid();
                         }
@@ -783,6 +783,7 @@ namespace SOR.Pages.Admin
                 _UserManagement._UserName = Session["Username"].ToString();
                 _UserManagement._ID = lblID.Text.ToString();
                 _UserManagement._RoleId = Session["UserRoleID"].ToString();
+                _UserManagement.Reason = txtResone.Text.ToString();
                 _gvUserAccessControl = _UserManagement.UserAccessManagementDeleteRole();
 
                 if (_gvUserAccessControl != null && _gvUserAccessControl.Tables.Count > 0 && Convert.ToString(_gvUserAccessControl.Tables[0].Rows[0][0]) == "Done")

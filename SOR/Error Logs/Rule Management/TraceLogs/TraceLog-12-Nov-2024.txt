@@ -1,0 +1,2 @@
+Time : 12-Nov-2024 19:17 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : 42601: argument name "p_switchid" used more than once
+Time : 12-Nov-2024 19:18 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : 42601: argument name "p_switchid" used more than once

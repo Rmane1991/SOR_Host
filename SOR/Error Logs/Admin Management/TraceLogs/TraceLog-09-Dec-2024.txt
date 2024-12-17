@@ -1,0 +1,8 @@
+Time : 09-Dec-2024 11:06 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenumaster_pkey"
+Time : 09-Dec-2024 11:12 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenumaster_pkey"
+Time : 09-Dec-2024 11:21 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblsubmenumaster_pkey"
+Time : 09-Dec-2024 11:24 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblsubmenumaster_pkey"
+Time : 09-Dec-2024 11:50 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 09-Dec-2024 14:18 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 09-Dec-2024 14:25 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 09-Dec-2024 14:40 Message : pgUserAccessManagement: btnSaveResone_ServerClick: Exception: Parameter 'p_Reason' must have its value set

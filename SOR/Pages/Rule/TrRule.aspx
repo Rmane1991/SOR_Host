@@ -65,12 +65,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- jQuery UI CSS (optional, for default styling) -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- jQuery UI Touch Punch -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <%--mi sorting--%>
 
 
     <script type="text/javascript">
         function handleActionClick(groupId) {
-            debugger;
             // Perform an AJAX call or redirect with the groupId
             alert('Group ID: ' + groupId);
 
@@ -82,7 +83,6 @@
     </script>
     <script>
         $(document).ready(function () {
-            debugger;
             $('.clsslider').change(function () {
                 var isChecked = $(this).is(':checked');
                 var hdnGroupId = $(this).closest('.list-group-item').find('input[type="hidden"]').val();
@@ -101,6 +101,7 @@
                         //alert(data.StatusMessage);
                         showSuccess(data.StatusMessage)
                         $('.clsslider').prop('disabled', false);
+                        window.location.replace(window.location.href);
                     },
                     error: function (error) {
                         alert('An error occurred: ' + error.responseText);
@@ -113,11 +114,11 @@
     </script>
     <script>
         $(document).ready(function () {
-            debugger;
             $('.clssliderRule').change(function () {
                 var isChecked = $(this).is(':checked');
                 //var hdnRuleId = $(this).closest('.list-group-item').find('input[type="hidden"]').val();
-                var hdnRuleId = $(this).closest('.list-group-item').find('input[id$="hdRuleId"]').val();
+                //var hdnRuleId = $(this).closest('.list-group-item').find('input[id$="hdRuleId"]').val();
+                var hdnRuleId = $(this).closest('.list-group-item-container').find('input[id="hdRuleId"]').val();
 
                 $(this).prop('disabled', true);
 
@@ -132,6 +133,7 @@
                         //alert(data.StatusMessage);
                         showSuccess(data.StatusMessage)
                         $('.clssliderRule').prop('disabled', false);
+                        //window.location.replace(window.location.href);
                     },
                     error: function (error) {
                         alert('An error occurred: ' + error.responseText);
@@ -368,9 +370,76 @@
             background: #f0f0f0;
             border: 1px dashed #ccc;
         }
+        /* Dropdown start */
+        .dropdown-custom {
+            width: 100%; /* Ensure it takes full width */
+            height: 32px;
+            padding: 10px; /* Add some padding */
+            border: 1px solid #d3d3d3; /* Light grey border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #fff; /* Background color */
+            font-size: 11px; /* Font size */
+            color: #333; /* Text color */
+            appearance: none; /* Remove default styling */
+            background-image: url('data:image/png;base64,...'); /* Custom dropdown icon */
+            background-repeat: no-repeat;
+            background-position: right 10px center; /* Position the icon */
+            background-size: 12px; /* Size of the icon */
+        }
+
+            .dropdown-custom:focus {
+                outline: none; /* Remove outline on focus */
+                border-color: #a9a9a9; /* Slightly darker grey on focus */
+                box-shadow: 0 0 5px rgba(169, 169, 169, .5); /* Grey box shadow on focus */
+            }
+
+            .dropdown-custom option {
+                padding: 10px; /* Add padding for options */
+                color: #333; /* Text color for options */
+            }
+
+
+
+        /* Dropdown End */
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /*#toggleButton {
+            cursor: pointer; 
+            background-color: #f0f0f0; 
+            border: none; 
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }*/
+
+        #toggleButton {
+            cursor: pointer;
+            background-color: #0d6efd;
+            border: none;
+            padding: 10px;
+            border-radius: 14px;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            #toggleButton:hover {
+                background-color: #e0e0e0; /* Darken on hover */
+            }
+
+        #buttonContainer {
+            margin-left: 10px; /* Spacing from toggle button */
+            display: none; /* Hide initially */
+        }
+    </style>
+
+
     <%--for garph & details Container div used in repeater --%>
     <%--Sorting groups & Txn Rule milind|19Sep2024--%>
+
+
     <script>
         //jQuery.noConflict();
         //jQuery(function ($) {
@@ -425,7 +494,7 @@
                         success: function (response) {
                             //console.log('Order saved successfully:', response);
                             alert(response.d);
-                            window.location.reload();
+
                         },
                         error: function (xhr, status, error) {
                             //console.error('Error saving order:', xhr.responseText);
@@ -436,11 +505,71 @@
             }).disableSelection();
         });
     </script>
+    <style>
+        .col-md-1 {
+            flex: 0 0 auto;
+            width: 6.333333%;
+        }
+
+        .col-md-11 {
+            flex: 0 0 auto;
+            width: 6.333333%;
+        }
+
+        .col-md-111 {
+            flex: 0 0 auto;
+            width: 5.333333%;
+        }
+        .col-md-1111 {
+            flex: 0 0 auto;
+            width: 10.0%;
+        }
+        .col-md-11111 {
+            flex: 0 0 auto;
+            width: 4.333333%;
+        }
+        .col-md-22 {
+            flex: 0 0 auto;
+            width: 4.333333%;
+        }
+        .col-md-23 {
+            flex: 0 0 auto;
+            width: 5.3%;
+        }
+        .col-md-24 {
+            flex: 0 0 auto;
+            width: 16.9%;
+        }
+        .col-md-25 {
+            flex: 0 0 auto;
+            width: 4.9%;
+        }
+</style>
+    <style>
+    .list-view-pf-additional-info {
+        display: flex; /* Use flexbox to align items in a row */
+        gap: 60px; /* Add a gap between each item */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .list-view-pf-additional-info-item {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Optional: add some margin to the items if needed */
+    .list-view-pf-additional-info-item img {
+        margin-right: 5px; /* Adds space between the icon and text */
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
+    <div class="breadHeader">
+        <h5 class="page-title" style="font-size: larger">Rule Configuration</h5>
+    </div>
     <%--<asp:HiddenField ID="hdnPriority1" runat="server" />--%>
     <%--<asp:HiddenField ID="hdnPriority2" runat="server" />--%>
-    <div class="row">
+    <%--<div class="row">
         <div class="col-md-2">
         </div>
         <div class="col-md-2">
@@ -455,9 +584,29 @@
         <div class="col-md-2">
             <asp:Button ID="btnAddRule" runat="server" CssClass="btn btn-primary" Text="Add Rule" OnClick="btnAddRule_Click" Style="margin: 19px; margin-left: 60px;" />
         </div>
+    </div>--%>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <!-- Flex container for alignment -->
+            <%--<button id="toggleButton" class="btn btn-secondary" style="margin: 19px;">
+                <i class="fas fa-chevron-right"></i>
+            </button>--%>
+            <%--<div id="buttonContainer" style="display: none; margin-left: 10px;">--%>
+                <!-- Initially hidden -->
+                <asp:Button ID="btnAddGroup" runat="server" CssClass="btn btn-primary" Text="Add Group" OnClick="btnAddGroup_Click" />
+                &nbsp;&nbsp;
+            <asp:Button ID="btnAddRule" runat="server" CssClass="btn btn-primary" Text="Add Rule" OnClick="btnAddRule_Click" />
+            <%--</div>--%>
+        </div>
+        
     </div>
-
-
+    &nbsp;&nbsp;
     <!-- Modal Group -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -528,7 +677,7 @@
                     <div class="row mb-3">
                         <label for="groupName" class="col-md-2 col-form-label">Group Name</label>
                         <div class="col-md-8">
-                            <asp:DropDownList ID="ddlGroupName" runat="server" Width="100%" CssClass="maximus-select w-100">
+                            <asp:DropDownList ID="ddlGroupName" runat="server" Width="100%" CssClass="dropdown-custom">
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -617,7 +766,8 @@
                     <div class="row mb-3">
                         <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
                         <div class="col-md-8">
-                            <asp:DropDownList ID="ddlChannel" runat="server" CssClass="maximus-select w-100" Width="100%">
+                            <asp:DropDownList ID="ddlChannel" runat="server" CssClass="dropdown-custom" Width="100%">
+                                <asp:ListItem Text="--Select--" Value="" />
                                 <asp:ListItem Text="AEPS" Value="1" />
                                 <asp:ListItem Text="BBPS" Value="2" />
                                 <asp:ListItem Text="DMT" Value="3" />
@@ -687,11 +837,11 @@
                     <div class="row mb-3">
                         <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
                         <div class="col-md-8">
-                            <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="maximus-select w-100" Width="100%">
-                                <asp:ListItem Text="--Select--" Value="" />
+                            <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="dropdown-custom" Width="100%">
+                                <%--<asp:ListItem Text="--Select--" Value="" />
                                 <asp:ListItem Text="Maximus" Value="1" />
                                 <asp:ListItem Text="Sarvatra" Value="2" />
-                                <asp:ListItem Text="PayRakam" Value="3" />
+                                <asp:ListItem Text="PayRakam" Value="3" />--%>
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -724,6 +874,7 @@
                                 </div>
                             </div>
                         </div>
+                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" />
                     </div>
                 </div>
                 <!-- Footer -->
@@ -737,8 +888,24 @@
     <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
 
     <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
-
+        <asp:PlaceHolder ID="headerPlaceholder" runat="server"></asp:PlaceHolder>
         <asp:Repeater ID="rptrGroup" runat="server" OnItemCommand="rptrGroup_ItemCommand" OnItemDataBound="rptrGroup_ItemDataBound">
+            <HeaderTemplate>
+                <div class="row" style="width: 103%; background-color: #fbd2ce; height: 30px; font-size: medium; align-items: center; font-weight: bold;">
+                <%--<div class="row">--%>
+                    <div class="col-md-25"></div>
+                    <div class="col-md-1111">Name</div>
+                    <div class="col-md-3">Description</div>
+                    <div class="col-md-11"></div>
+                    <div class="col-md-111">Count</div>
+                     <div class="col-md-22"></div>
+                    <div class="col-md-11111">Priority</div>
+                    <div class="col-md-23"></div>
+                    <div class="col-md-1">Status</div>
+                    <div class="col-md-24"></div>
+                    <div class="col-md-1111">Action</div>
+                </div>
+            </HeaderTemplate>
             <ItemTemplate>
                 <div class="sortable-item" data-id='<%# Eval("id") %>'>
                     <div class="mainGroup" data-id='<%# Eval("id") %>'>
@@ -808,11 +975,13 @@
                                                     <strong><%# Eval("rule_count") %></strong>
 
                                                 </div>
+                                                
                                                 <div class="list-view-pf-additional-info-item">
                                                     <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
                                                     <strong><%# Eval("priority") %></strong>
 
                                                 </div>
+                                                
                                                 <div class="list-view-pf-additional-info-item">
                                                     <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
                                                     <strong><%# Eval("isactive") %></strong>
@@ -837,13 +1006,14 @@
                                                         </div>--%>
                                                         <div class="col-md-12 row" style="box-shadow: 0px 3px 5px 0px gray; margin: 0px 0px 0px 0px;">
                                                             <%-- <div class="col-md-1"></div>--%>
-                                                            <div class="col-md-9">
+                                                            <div class="col-md-12">
                                                                 <div class="list-group-item-header_Next">
                                                                     <div class="list-view-pf-actions">
                                                                         <label class="switchh">
                                                                             <input type="checkbox" runat="server" id="chkSliderRule" class="clssliderRule">
                                                                             <span class="sliderr"></span>
                                                                         </label>
+                                                                        <input type="hidden" id="hdRuleId" value='<%# Eval("rule_id") %>' />
                                                                         <span class="slider round"></span>
                                                                         <div class="dropdown pull-right dropdown-kebab-pf">
                                                                             <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -874,7 +1044,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="list-view-pf-additional-info">
-                                                                                <input type="hidden" id="hdRuleId" value='<%# Eval("rule_id") %>' />
+                                                                                <%--<input type="hidden" id="hdRuleId" value='<%# Eval("rule_id") %>' />--%>
                                                                                 <div class="list-view-pf-additional-info-item">
                                                                                     <%--<span class="pficon pficon-cluster"></span>--%>
                                                                                     <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
@@ -897,73 +1067,52 @@
                                                                                 <canvas id="myChart_<%# Eval("rule_id") %>"></canvas>
                                                                             </div>
                                                                             <script>
-                                                                                //milind|21Sep2024
-                                                                                var Success = <%# Eval("success_count") %>;  <%--document.getElementById('<%= hdSucessTxn.ClientID %>');--%>//30;
-                                                                                var Failure = <%# Eval("failure_count") %>;  <%--document.getElementById('<%= hdFailureTxn.ClientID %>');--%>//20;
-                                                                                var TechnicalFailure = <%# Eval("technical_failure_count") %>;<%--document.getElementById('<%= hdTechnicalFailureTxn.ClientID %>');--%>//10;
+                                                                                // milind | 21Sep2024
+                                                                                var Success = <%# Eval("success_count") %>;
+                                                                                var Failure = <%# Eval("failure_count") %>;
+                                                                                var TechnicalFailure = <%# Eval("technical_failure_count") %>;
                                                                                 var TotalFailures = Failure + TechnicalFailure;
                                                                                 var OverallTotal = Success + TotalFailures;
 
                                                                                 var ruleId = '<%# Eval("rule_id") %>';
                                                                                 var ctx = document.getElementById('myChart_' + ruleId).getContext('2d');
-                                                                                //console.log(ctx);
-                                                                                //console.log(Success);
-                                                                                //console.log(Failure);
-                                                                                //console.log(TechnicalFailure);
-                                                                                //console.log(TotalFailures);
-                                                                                //console.log(OverallTotal);
+                                                                                var allZero = Success === 0 && Failure === 0 && TechnicalFailure === 0 && TotalFailures === 0 && OverallTotal === 0;
+                                                                                var chartData = allZero ? [1] : [Success, Failure, TechnicalFailure, TotalFailures, OverallTotal];
 
-                                                                                //var data = {
-                                                                                //    labels: ['Success', 'Failures', 'Technical Failures', 'Total Failures', 'Overall Total'],
-                                                                                //    datasets: [{
-                                                                                //        data: [Success, Failure, TechnicalFailure, TotalFailures, OverallTotal],
-                                                                                //        backgroundColor: [
-                                                                                //            'rgba(76, 175, 80, 0.7)',    // Success (Green)
-                                                                                //            'rgba(255, 99, 132, 0.7)',   // Failure (Red)
-                                                                                //            'rgba(255, 165, 0, 0.7)',    // Technical Failure (Orange)
-                                                                                //            'rgba(192, 192, 192, 0.7)',  // Total Failures (Gray)
-                                                                                //            'rgba(0, 123, 255, 0.7)'     // Overall Total (Blue)
-                                                                                //        ],
-                                                                                //        borderColor: '#fff',
-                                                                                //        borderWidth: 1,
-                                                                                //        hoverOffset: 20
-                                                                                //    }]
-                                                                                //};
+                                                                                var backgroundColor = allZero ? ['rgba(173, 216, 230, 0.7)'] : [
+                                                                                    'rgba(76, 175, 80, 0.7)',    // Success (Green)
+                                                                                    'rgba(255, 99, 132, 0.7)',   // Failure (Red)
+                                                                                    'rgba(255, 165, 0, 0.7)',    // Technical Failure (Orange)
+                                                                                    'rgba(192, 192, 192, 0.7)',  // Total Failures (Gray)
+                                                                                    'rgba(0, 123, 255, 0.7)'     // Overall Total (Blue)
+                                                                                ];
 
+                                                                                var borderColor = allZero ? ['rgba(173, 216, 230,1.05)'] : [
+                                                                                    'rgba(76, 175, 80, 1)',      // Solid Green
+                                                                                    'rgba(255, 99, 132, 1)',     // Solid Red
+                                                                                    'rgba(255, 165, 0, 1)',      // Solid Orange
+                                                                                    'rgba(192, 192, 192, 1)',    // Solid Gray
+                                                                                    'rgba(0, 123, 255, 1)'       // Solid Blue
+                                                                                ];
 
                                                                                 var data = {
-                                                                                    labels: ['Success', 'Failures', 'Technical Failures', 'Total Failures', 'Overall Total'],
+                                                                                    labels: allZero ? ['No Data'] : ['Success', 'Failures', 'Technical Failures', 'Total Failures', 'Overall Total'],
                                                                                     datasets: [{
-                                                                                        data: [Success, Failure, TechnicalFailure, TotalFailures, OverallTotal],
-                                                                                        backgroundColor: [
-                                                                                            'rgba(76, 175, 80, 0.7)',    // Success (Green)
-                                                                                            'rgba(255, 99, 132, 0.7)',   // Failure (Red)
-                                                                                            'rgba(255, 165, 0, 0.7)',    // Technical Failure (Orange)
-                                                                                            'rgba(192, 192, 192, 0.7)',  // Total Failures (Gray)
-                                                                                            'rgba(0, 123, 255, 0.7)'     // Overall Total (Blue)
-                                                                                        ],
-                                                                                        borderColor: [
-                                                                                            'rgba(76, 175, 80, 1)',      // Solid Green
-                                                                                            'rgba(255, 99, 132, 1)',     // Solid Red
-                                                                                            'rgba(255, 165, 0, 1)',      // Solid Orange
-                                                                                            'rgba(192, 192, 192, 1)',    // Solid Gray
-                                                                                            'rgba(0, 123, 255, 1)'       // Solid Blue
-                                                                                        ],
-                                                                                        borderWidth: 1,                  // Increased border width
-                                                                                        hoverOffset: 15,                 // Slightly reduced hover offset for better visualization
-                                                                                        tension: 0.4,                    // Smooth curves for line graphs
-
-                                                                                        // Additional properties
-                                                                                        pointRadius: 5,                 // Size of the data points
-                                                                                        pointHoverRadius: 7,            // Size of the points when hovered over
-                                                                                        fill: true,                     // Fill under the line
-                                                                                        lineTension: 0.2,               // Tension of the line (0 for straight lines)
-                                                                                        rotation: 45,                   // Rotate labels for better readability (if applicable)
-                                                                                        showLine: true,                 // Show lines connecting the points
-                                                                                        responsive: true,               // Make the chart responsive
-                                                                                        maintainAspectRatio: false,     // Maintain aspect ratio when resizing
-                                                                                        clip: true                      // Clip any overflowing parts
-
+                                                                                        data: chartData,
+                                                                                        backgroundColor: backgroundColor,
+                                                                                        borderColor: borderColor,
+                                                                                        borderWidth: 1,
+                                                                                        hoverOffset: 15,
+                                                                                        tension: 0.4,
+                                                                                        pointRadius: 5,
+                                                                                        pointHoverRadius: 7,
+                                                                                        fill: true,
+                                                                                        lineTension: 0.2,
+                                                                                        rotation: 45,
+                                                                                        showLine: true,
+                                                                                        responsive: true,
+                                                                                        maintainAspectRatio: false,
+                                                                                        clip: true
                                                                                     }]
                                                                                 };
 
@@ -983,7 +1132,7 @@
                                                                                         },
                                                                                         title: {
                                                                                             display: true,
-                                                                                            text: 'Transactions Details',
+                                                                                            text: allZero ? 'No Data Available for Rule' : 'Rule Transactions Details',
                                                                                             font: {
                                                                                                 size: 20,
                                                                                                 weight: 'bold'
@@ -1020,6 +1169,25 @@
                                                                                                 weight: 'bold',
                                                                                                 size: '20'
                                                                                             }
+                                                                                        },
+
+                                                                                        afterDraw: function (chart) {
+                                                                                            var ctx = chart.ctx;
+                                                                                            var width = chart.width;
+                                                                                            var height = chart.height;
+                                                                                            var centerX = width / 2;
+                                                                                            var centerY = height / 2;
+                                                                                            ctx.save();
+
+                                                                                            var centerText = allZero ? 'No Data Available' : OverallTotal;
+                                                                                            var fontSize = allZero ? "16px Arial" : "30px Arial";
+
+                                                                                            ctx.font = fontSize;
+                                                                                            ctx.fillStyle = '#333';
+                                                                                            ctx.textAlign = 'center';
+                                                                                            ctx.textBaseline = 'middle';
+                                                                                            ctx.fillText(centerText, centerX, centerY);
+                                                                                            ctx.restore();
                                                                                         }
                                                                                     },
                                                                                     cutout: '50%',
@@ -1540,9 +1708,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });--%>
 
 
-    </script>
+</script>
     <script>
-        debugger;
         // Close the dropdown when clicking outside
         document.addEventListener('click', function (event) {
             document.querySelectorAll('.multi-select-container').forEach(container => {
@@ -1585,21 +1752,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Check for special condition to disable other checkboxes
             const checkboxes = document.querySelectorAll(`#${dropdownId} input[type="checkbox"]`);
-            debugger;
+
             // Check if the hidden field value includes '1'
-            if (hiddenField.value.includes('1')) {
-                debugger;
-                disableOtherCheckboxes(dropdownId, '1'); // Disable all except checkbox with value '1'
-            } else {
-                const anyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked && checkbox.value !== '1');
-                debugger;
-                if (anyChecked) {
-                    disableCheckbox(dropdownId, '1');  // Disable checkbox with value '1'
-                } else {
-                    enableCheckbox(dropdownId, '1'); // Enable checkbox with value '1' if none are checked
-                }
-                enableOtherCheckboxes(dropdownId); // Enable all other checkboxes
-            }
+            //if (hiddenField.value.includes('1')) {
+
+            //    disableOtherCheckboxes(dropdownId, '1'); // Disable all except checkbox with value '1'
+            //} else {
+            //    const anyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked && checkbox.value !== '1');
+
+            //    if (anyChecked) {
+            //        disableCheckbox(dropdownId, '1');  // Disable checkbox with value '1'
+            //    } else {
+            //        enableCheckbox(dropdownId, '1'); // Enable checkbox with value '1' if none are checked
+            //    }
+            //    enableOtherCheckboxes(dropdownId); // Enable all other checkboxes
+            //}
 
             if (selectedValues.length === 0) {
                 selectedItemsContainer.innerHTML = '<span class="placeholderr">Select options...</span>';
@@ -1626,21 +1793,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Functions for enabling and disabling checkboxes
         function disableOtherCheckboxes(dropdownId, keepValue) {
-            debugger;
+
             document.querySelectorAll(`#${dropdownId} input[type="checkbox"]`).forEach(checkbox => {
                 checkbox.disabled = (checkbox.value !== keepValue); // Disable all except the checkbox with keepValue
             });
         }
 
         function disableCheckbox(dropdownId, valueToDisable) {
-            debugger;
+
             const checkbox = document.querySelector(`#${dropdownId} input[type="checkbox"][value="${valueToDisable}"]`);
             if (checkbox) {
                 checkbox.disabled = true; // Disable the checkbox with the specific value
             }
         }
         function disableSingleCheckboxes(dropdownId, keepValue) {
-            debugger;
+
             document.querySelectorAll(`#${dropdownId} input[type="checkbox"]`).forEach(checkbox => {
                 checkbox.disabled = (checkbox.value == keepValue); // Disable all except the checkbox with keepValue
             });
@@ -1669,12 +1836,12 @@ document.addEventListener('DOMContentLoaded', function () {
             document.addEventListener('change', function (event) {
                 if (event.target.matches('#dropdownItems input[type="checkbox"]')) {
                     updateSelectedItems('dropdownContent', 'selectedItems', '<%= hfSelectedValues.ClientID %>');
-        } else if (event.target.matches('#secondDropdownItems input[type="checkbox"]')) {
-            updateSelectedItems('secondDropdownContent', 'selectedSecondItems', '<%= hfSelectedSecondValues.ClientID %>');
-        } else if (event.target.matches('#TDropdownItems input[type="checkbox"]')) {
-            updateSelectedItems('TDropdownContent', 'selectedTItems', '<%= hdnTxnType.ClientID %>');
-        }
-    });
+                } else if (event.target.matches('#secondDropdownItems input[type="checkbox"]')) {
+                    updateSelectedItems('secondDropdownContent', 'selectedSecondItems', '<%= hfSelectedSecondValues.ClientID %>');
+                } else if (event.target.matches('#TDropdownItems input[type="checkbox"]')) {
+                    updateSelectedItems('TDropdownContent', 'selectedTItems', '<%= hdnTxnType.ClientID %>');
+                }
+            });
         });
 
     </script>
@@ -1702,4 +1869,35 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     </script>
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent form submission
+            var buttonContainer = document.getElementById("buttonContainer");
+            var icon = this.querySelector("i");
+
+            if (buttonContainer.style.display === "none" || buttonContainer.style.display === "") {
+                buttonContainer.style.display = "flex"; // Show the buttons in a row
+                icon.classList.remove("fa-chevron-right"); // Remove right arrow
+                icon.classList.add("fa-chevron-left"); // Add left arrow
+            } else {
+                buttonContainer.style.display = "none"; // Hide the buttons
+                icon.classList.remove("fa-chevron-left"); // Remove left arrow
+                icon.classList.add("fa-chevron-right"); // Add right arrow
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        function validatePercentage() {
+            var percentage = document.getElementById('<%= txtPercentage.ClientID %>').value;
+
+            // Check if the percentage is greater than 100
+            if (parseInt(percentage) > 100) {
+                alert("The percentage cannot be greater than 100.");
+                // Optionally, you can clear the value or reset it to a valid value
+                document.getElementById('<%= txtPercentage.ClientID %>').value = '';
+            }
+        }
+    </script>
+
 </asp:Content>

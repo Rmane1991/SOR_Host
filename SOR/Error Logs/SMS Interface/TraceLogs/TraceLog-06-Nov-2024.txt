@@ -1,0 +1,42 @@
+Time : 06-Nov-2024 14:20 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:20 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS Preparation. => HttpGetRequest()
+Time : 06-Nov-2024 14:20 Message : Page : EmailSMSAlertscs.cs 
+Function : HttpGetRequest() => Send SMS Process Started. : 
+Time : 06-Nov-2024 14:20 Message : Page : EmailSMSAlertscs.cs 
+Function : HttpGetRequest() => URL : http://100.112.5.78:8181/publisher/http6listener/dynamic?dcode=Maximus&subuid=BCPortal&pwd=8W2h3PM/Lnyok5ftkSPclQ==&msgtype=S&from=SBMIND&to=8954621456&intflag=2&OTPFlag=1&ctype=1&tempname=SR24659_BCPOTP&var1=405171&var2=
+Time : 06-Nov-2024 14:20 Message : Page : EmailSMSAlertscs.cs 
+Function : HttpGetRequest() => Exception : Unable to connect to the remote server
+Time : 06-Nov-2024 14:23 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:23 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:32 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:32 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:35 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:35 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:42 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:42 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:44 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:44 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:49 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:49 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:51 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:51 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+Time : 06-Nov-2024 14:54 Message : Page : Login.cs 
+Function : SendOTP() => Login Details forwarded for SMS/Email Preparation. Contact No : 8954621456Email : admin456@gmail.com
+Time : 06-Nov-2024 14:54 Message : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS

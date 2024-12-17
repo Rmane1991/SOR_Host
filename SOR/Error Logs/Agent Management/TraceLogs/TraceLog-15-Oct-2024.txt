@@ -1,0 +1,181 @@
+Time : 15-Oct-2024 11:20 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : AgentRegistrationDAL: BindBC: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:20 Message : AgentRegistration: FillGrid(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 11:50 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:51 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:53 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:54 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:58 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42703: column m.reqid does not exist
+Time : 15-Oct-2024 12:05 Message : BCEntity: GetBCRequestList: UserName:  Exception: 42703: column m.isactive does not exist
+Time : 15-Oct-2024 12:13 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : AgentRegistrationDAL: BindBC: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:13 Message : AgentRegistration: FillGrid(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:23 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Oct-2024 12:23 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 15-Oct-2024 12:24 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistration: FillGrid(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetFileDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgLvl1: BindFileId: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: BindBC: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgLvl3: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetCountryStateCity: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistration: BindDropdownCountryState(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:25 Message : AgentRegistration: FillGrid(): Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 12:26 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Oct-2024 12:52 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column b.bcreqid does not exist
+Time : 15-Oct-2024 12:53 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column b.bcreqid does not exist
+Time : 15-Oct-2024 12:54 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column b.bcstatus does not exist
+Time : 15-Oct-2024 12:54 Message : BCEntity: BCStatusReportGrid: UserName:  Exception: 42703: column b.bcstatus does not exist
+Time : 15-Oct-2024 14:53 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:53 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:56 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:56 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:56 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:56 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:56 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:56 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:57 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:58 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:58 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:58 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 14:58 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_RequestStatusId' must have its value set
+Time : 15-Oct-2024 15:01 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_ContactNo' must have its value set
+Time : 15-Oct-2024 15:01 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_ContactNo' must have its value set
+Time : 15-Oct-2024 15:11 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_ContactNo' must have its value set
+Time : 15-Oct-2024 15:11 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_ContactNo' must have its value set
+Time : 15-Oct-2024 15:12 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: Parameter 'p_ContactNo' must have its value set
+Time : 15-Oct-2024 15:12 Message : AgentRegistration: FillGrid(): Exception: Parameter 'p_ContactNo' must have its value set
+Time : 15-Oct-2024 15:51 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 42703: column "p_agentcode" does not exist
+Time : 15-Oct-2024 15:51 Message : AgentRegistration: FillGrid(): Exception: 42703: column "p_agentcode" does not exist
+Time : 15-Oct-2024 16:48 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 16:48 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 16:50 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 16:53 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 16:53 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 16:54 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:04 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:04 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:05 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:10 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:10 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:11 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:12 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:12 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:13 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg:  RequestId: 0
+Time : 15-Oct-2024 17:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:13 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg:  RequestId: 0
+Time : 15-Oct-2024 17:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:14 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:14 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:18 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:18 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:19 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 17:22 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:22 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 17:23 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:04 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 18:04 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 18:05 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:18 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, text, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 15-Oct-2024 18:18 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:22 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, text, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 15-Oct-2024 18:27 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:30 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, text, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 15-Oct-2024 18:30 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:35 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, text, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 15-Oct-2024 18:35 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:45 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, text, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 15-Oct-2024 18:45 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 18:57 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 18:57 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 18:58 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:02 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, text, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 15-Oct-2024 19:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:03 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42804: column "activitytype" is of type integer but expression is of type character varying RequestId: 0
+Time : 15-Oct-2024 19:03 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:04 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 1
+Time : 15-Oct-2024 19:06 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:06 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:07 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:07 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 2
+Time : 15-Oct-2024 19:12 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:12 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 3
+Time : 15-Oct-2024 19:20 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:20 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:21 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:21 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 4
+Time : 15-Oct-2024 19:22 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:22 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 4
+Time : 15-Oct-2024 19:27 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:27 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:28 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:28 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 5
+Time : 15-Oct-2024 19:34 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:34 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:35 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:35 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 6
+Time : 15-Oct-2024 19:38 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:38 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 19:39 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:39 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 7
+Time : 15-Oct-2024 19:39 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 7
+Time : 15-Oct-2024 19:39 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4854P RequestId: 7
+Time : 15-Oct-2024 19:40 Message : AgentRegistration: btnCloseReceipt_Click: Successful - Summary Close. UserName: 
+Time : 15-Oct-2024 19:40 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 19:40 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 7
+Time : 15-Oct-2024 19:41 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 7
+Time : 15-Oct-2024 19:50 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 15-Oct-2024 19:51 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 42701: column "shopdistrict" specified more than once
+Time : 15-Oct-2024 19:52 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 42703: column "agentreqid" does not exist
+Time : 15-Oct-2024 20:01 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4854P RequestId: 7
+Time : 15-Oct-2024 20:03 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 20:03 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 20:04 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 20:04 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 8
+Time : 15-Oct-2024 20:04 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 8
+Time : 15-Oct-2024 20:12 Message : AgentRegistrationDAL: GetAgentRequestList: UserName: Maximus Exception: 42883: function sp_agentrequest_registration_get(p_RequestTypeId => unknown, p_BucketId => unknown, p_RequestStatusId => unknown, p_AgentCode => unknown, p_PanNo => unknown, p_AadharNo => unknown, p_GSTNo => unknown, p_PassportNo => unknown, p_ContactNo => unknown, p_PersonalEmailID => unknown, p_Prestatus => unknown, p_Makerstatus => unknown, p_Checkstatus => unknown, p_Authstatus => unknown, p_username => text, p_RequestId => integer, p_Flag => integer) does not exist
+Time : 15-Oct-2024 20:12 Message : AgentRegistration: FillGrid(): Exception: 42883: function sp_agentrequest_registration_get(p_RequestTypeId => unknown, p_BucketId => unknown, p_RequestStatusId => unknown, p_AgentCode => unknown, p_PanNo => unknown, p_AadharNo => unknown, p_GSTNo => unknown, p_PassportNo => unknown, p_ContactNo => unknown, p_PersonalEmailID => unknown, p_Prestatus => unknown, p_Makerstatus => unknown, p_Checkstatus => unknown, p_Authstatus => unknown, p_username => text, p_RequestId => integer, p_Flag => integer) does not exist
+Time : 15-Oct-2024 20:12 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 20:12 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 15-Oct-2024 20:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 15-Oct-2024 20:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 9
+Time : 15-Oct-2024 20:13 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 9

@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SOR.Pages.BC
-{
-
-
-    public partial class BCStatus
-    {
-
+namespace SOR.Pages.BC {
+    
+    
+    public partial class BCStatus {
+        
         /// <summary>
         /// hdFromDate control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdFromDate;
-
+        
         /// <summary>
         /// hdToDate control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdToDate;
-
+        
         /// <summary>
         /// upPanel control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel upPanel;
-
+        
         /// <summary>
         /// upContentBodyUpdateProgress control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdateProgress upContentBodyUpdateProgress;
-
+        
         /// <summary>
         /// upContentBody control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upContentBody;
-
+        
         /// <summary>
         /// hidAccIFC control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hidAccIFC;
-
+        
         /// <summary>
         /// hidAccNo control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hidAccNo;
-
+        
         /// <summary>
         /// HdnDMT control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField HdnDMT;
-
+        
         /// <summary>
         /// HdnAEPS control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField HdnAEPS;
-
+        
         /// <summary>
         /// HdnBBPS control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField HdnBBPS;
-
+        
         /// <summary>
         /// HdnMATM control.
         /// </summary>
@@ -112,7 +110,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField HdnMATM;
-
+        
         /// <summary>
         /// DIVFilter control.
         /// </summary>
@@ -121,7 +119,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DIVFilter;
-
+        
         /// <summary>
         /// RegButtons control.
         /// </summary>
@@ -130,7 +128,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel RegButtons;
-
+        
         /// <summary>
         /// ddlStatusType control.
         /// </summary>
@@ -139,7 +137,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStatusType;
-
+        
         /// <summary>
         /// ddlClient control.
         /// </summary>
@@ -148,7 +146,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlClient;
-
+        
         /// <summary>
         /// ddlOperationType control.
         /// </summary>
@@ -157,7 +155,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlOperationType;
-
+        
         /// <summary>
         /// ddlVerification control.
         /// </summary>
@@ -166,7 +164,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlVerification;
-
+        
         /// <summary>
         /// ddlBCType control.
         /// </summary>
@@ -175,7 +173,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlBCType;
-
+        
         /// <summary>
         /// ddlStatus control.
         /// </summary>
@@ -184,7 +182,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
-
+        
         /// <summary>
         /// ddlAgent control.
         /// </summary>
@@ -193,25 +191,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAgent;
-
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnSearch;
-
-        /// <summary>
-        /// btnClear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnClear;
-
+        
         /// <summary>
         /// ddlExport control.
         /// </summary>
@@ -220,25 +200,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlExport;
-
-        /// <summary>
-        /// BtnCsv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnCsv;
-
-        /// <summary>
-        /// BtnXls control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnXls;
-
+        
         /// <summary>
         /// btnExport control.
         /// </summary>
@@ -247,7 +209,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExport;
-
+        
         /// <summary>
         /// lblRecordCount control.
         /// </summary>
@@ -256,7 +218,43 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRecordCount;
-
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSearch;
+        
+        /// <summary>
+        /// btnClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnClear;
+        
+        /// <summary>
+        /// BtnCsv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BtnCsv;
+        
+        /// <summary>
+        /// BtnXls control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BtnXls;
+        
         /// <summary>
         /// panelGrid control.
         /// </summary>
@@ -265,7 +263,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelGrid;
-
+        
         /// <summary>
         /// gvTransactions control.
         /// </summary>
@@ -274,7 +272,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvTransactions;
-
+        
         /// <summary>
         /// btnhidresetDelete control.
         /// </summary>
@@ -283,7 +281,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnhidresetDelete;
-
+        
         /// <summary>
         /// Panel_Declincard control.
         /// </summary>
@@ -292,7 +290,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel_Declincard;
-
+        
         /// <summary>
         /// lblModalHeaderName control.
         /// </summary>
@@ -301,7 +299,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblModalHeaderName;
-
+        
         /// <summary>
         /// lblconfirm control.
         /// </summary>
@@ -310,7 +308,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblconfirm;
-
+        
         /// <summary>
         /// TxtRemarks control.
         /// </summary>
@@ -319,7 +317,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtRemarks;
-
+        
         /// <summary>
         /// RequiredFieldValidator2 control.
         /// </summary>
@@ -328,7 +326,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-
+        
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -337,7 +335,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-
+        
         /// <summary>
         /// DIVDocument control.
         /// </summary>
@@ -346,7 +344,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DIVDocument;
-
+        
         /// <summary>
         /// lblApplicationID control.
         /// </summary>
@@ -355,7 +353,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblApplicationID;
-
+        
         /// <summary>
         /// txtClientName control.
         /// </summary>
@@ -364,7 +362,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtClientName;
-
+        
         /// <summary>
         /// txtAadharNo control.
         /// </summary>
@@ -373,7 +371,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAadharNo;
-
+        
         /// <summary>
         /// txtContactNo control.
         /// </summary>
@@ -382,7 +380,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContactNo;
-
+        
         /// <summary>
         /// lblCompanyName control.
         /// </summary>
@@ -391,7 +389,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCompanyName;
-
+        
         /// <summary>
         /// DIVRegister control.
         /// </summary>
@@ -400,7 +398,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DIVRegister;
-
+        
         /// <summary>
         /// Div_Chk control.
         /// </summary>
@@ -409,7 +407,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div_Chk;
-
+        
         /// <summary>
         /// lblServicesOffer control.
         /// </summary>
@@ -418,7 +416,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblServicesOffer;
-
+        
         /// <summary>
         /// chkAEPS control.
         /// </summary>
@@ -427,7 +425,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkAEPS;
-
+        
         /// <summary>
         /// lblchkAEPS control.
         /// </summary>
@@ -436,7 +434,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblchkAEPS;
-
+        
         /// <summary>
         /// chkMATM control.
         /// </summary>
@@ -445,7 +443,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkMATM;
-
+        
         /// <summary>
         /// lblchkMATM control.
         /// </summary>
@@ -454,7 +452,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblchkMATM;
-
+        
         /// <summary>
         /// imgMyImge control.
         /// </summary>
@@ -463,7 +461,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgMyImge;
-
+        
         /// <summary>
         /// flgUplodMyImage control.
         /// </summary>
@@ -472,7 +470,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload flgUplodMyImage;
-
+        
         /// <summary>
         /// lblMessage control.
         /// </summary>
@@ -481,7 +479,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
-
+        
         /// <summary>
         /// RequiredFieldValidator0 control.
         /// </summary>
@@ -490,7 +488,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator0;
-
+        
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -499,7 +497,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-
+        
         /// <summary>
         /// hd_txtFirstName control.
         /// </summary>
@@ -508,7 +506,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtFirstName;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender10 control.
         /// </summary>
@@ -517,7 +515,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender10;
-
+        
         /// <summary>
         /// txtMiddleName control.
         /// </summary>
@@ -526,7 +524,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMiddleName;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender1 control.
         /// </summary>
@@ -535,7 +533,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender1;
-
+        
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -544,7 +542,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
+        
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -553,7 +551,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender2 control.
         /// </summary>
@@ -562,7 +560,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender2;
-
+        
         /// <summary>
         /// RequiredFieldlValidator2 control.
         /// </summary>
@@ -571,7 +569,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldlValidator2;
-
+        
         /// <summary>
         /// txtFatherName control.
         /// </summary>
@@ -580,7 +578,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFatherName;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender3 control.
         /// </summary>
@@ -589,7 +587,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender3;
-
+        
         /// <summary>
         /// ddlGender control.
         /// </summary>
@@ -598,7 +596,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlGender;
-
+        
         /// <summary>
         /// dvfield_PANNo control.
         /// </summary>
@@ -607,7 +605,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvfield_PANNo;
-
+        
         /// <summary>
         /// RequiredFieldValidator13 control.
         /// </summary>
@@ -616,7 +614,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator13;
-
+        
         /// <summary>
         /// txtPANNo control.
         /// </summary>
@@ -625,7 +623,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPANNo;
-
+        
         /// <summary>
         /// hd_txtPANNo control.
         /// </summary>
@@ -634,7 +632,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtPANNo;
-
+        
         /// <summary>
         /// RegularExpressionValidator4 control.
         /// </summary>
@@ -643,7 +641,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender6 control.
         /// </summary>
@@ -652,7 +650,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender6;
-
+        
         /// <summary>
         /// RequiredFieldValidator7 control.
         /// </summary>
@@ -661,7 +659,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
-
+        
         /// <summary>
         /// txtGSTNo control.
         /// </summary>
@@ -670,7 +668,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGSTNo;
-
+        
         /// <summary>
         /// hd_txtGSTNo control.
         /// </summary>
@@ -679,7 +677,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtGSTNo;
-
+        
         /// <summary>
         /// TextBox1 control.
         /// </summary>
@@ -688,7 +686,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
+        
         /// <summary>
         /// hd_txtaadharno control.
         /// </summary>
@@ -697,7 +695,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtaadharno;
-
+        
         /// <summary>
         /// RequiredFieldValidator41 control.
         /// </summary>
@@ -706,7 +704,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator41;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender34 control.
         /// </summary>
@@ -715,7 +713,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender34;
-
+        
         /// <summary>
         /// ddlCategory control.
         /// </summary>
@@ -724,7 +722,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
-
+        
         /// <summary>
         /// DDlOrg control.
         /// </summary>
@@ -733,7 +731,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DDlOrg;
-
+        
         /// <summary>
         /// RequiredFieldValidator36 control.
         /// </summary>
@@ -742,7 +740,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator36;
-
+        
         /// <summary>
         /// txtAccountNumber control.
         /// </summary>
@@ -751,7 +749,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAccountNumber;
-
+        
         /// <summary>
         /// hd_txtAccountNumber control.
         /// </summary>
@@ -760,7 +758,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtAccountNumber;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender22 control.
         /// </summary>
@@ -769,7 +767,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender22;
-
+        
         /// <summary>
         /// RequiredFieldValidator35 control.
         /// </summary>
@@ -778,7 +776,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator35;
-
+        
         /// <summary>
         /// txtIFsccode control.
         /// </summary>
@@ -787,7 +785,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIFsccode;
-
+        
         /// <summary>
         /// hd_txtIFsccode control.
         /// </summary>
@@ -796,7 +794,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtIFsccode;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender23 control.
         /// </summary>
@@ -805,7 +803,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender23;
-
+        
         /// <summary>
         /// RequiredFieldValidator4 control.
         /// </summary>
@@ -814,7 +812,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-
+        
         /// <summary>
         /// txtRegisteredAddress control.
         /// </summary>
@@ -823,7 +821,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRegisteredAddress;
-
+        
         /// <summary>
         /// hd_txtRegisteredAddress control.
         /// </summary>
@@ -832,7 +830,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtRegisteredAddress;
-
+        
         /// <summary>
         /// RequiredFieldValidator15 control.
         /// </summary>
@@ -841,7 +839,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator15;
-
+        
         /// <summary>
         /// ddlCountry control.
         /// </summary>
@@ -850,7 +848,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCountry;
-
+        
         /// <summary>
         /// hd_ddlCountry control.
         /// </summary>
@@ -859,7 +857,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_ddlCountry;
-
+        
         /// <summary>
         /// ddlState control.
         /// </summary>
@@ -868,7 +866,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlState;
-
+        
         /// <summary>
         /// hd_ddlState control.
         /// </summary>
@@ -877,7 +875,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_ddlState;
-
+        
         /// <summary>
         /// RequiredFieldValidator16 control.
         /// </summary>
@@ -886,7 +884,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator16;
-
+        
         /// <summary>
         /// txtDistrict control.
         /// </summary>
@@ -895,7 +893,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDistrict;
-
+        
         /// <summary>
         /// hd_txtDistrict control.
         /// </summary>
@@ -904,7 +902,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtDistrict;
-
+        
         /// <summary>
         /// RequiredFieldValidator14 control.
         /// </summary>
@@ -913,7 +911,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator14;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender8 control.
         /// </summary>
@@ -922,7 +920,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender8;
-
+        
         /// <summary>
         /// ddlCity control.
         /// </summary>
@@ -931,7 +929,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCity;
-
+        
         /// <summary>
         /// hd_ddlCity control.
         /// </summary>
@@ -940,7 +938,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_ddlCity;
-
+        
         /// <summary>
         /// RequiredFieldValidator17 control.
         /// </summary>
@@ -949,7 +947,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator17;
-
+        
         /// <summary>
         /// txtPinCode control.
         /// </summary>
@@ -958,7 +956,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPinCode;
-
+        
         /// <summary>
         /// hd_txtPinCode control.
         /// </summary>
@@ -967,7 +965,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtPinCode;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender28 control.
         /// </summary>
@@ -976,7 +974,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender28;
-
+        
         /// <summary>
         /// RequiredFieldValidator5 control.
         /// </summary>
@@ -985,7 +983,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-
+        
         /// <summary>
         /// txtEmailID control.
         /// </summary>
@@ -994,7 +992,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmailID;
-
+        
         /// <summary>
         /// RequiredFieldValidator12 control.
         /// </summary>
@@ -1003,7 +1001,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator12;
-
+        
         /// <summary>
         /// validateEmail control.
         /// </summary>
@@ -1012,7 +1010,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator validateEmail;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender7 control.
         /// </summary>
@@ -1021,7 +1019,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender7;
-
+        
         /// <summary>
         /// TextBox2 control.
         /// </summary>
@@ -1030,7 +1028,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
-
+        
         /// <summary>
         /// hd_txtContactNo control.
         /// </summary>
@@ -1039,7 +1037,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtContactNo;
-
+        
         /// <summary>
         /// RequiredFieldValidator10 control.
         /// </summary>
@@ -1048,7 +1046,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
-
+        
         /// <summary>
         /// RegularExpressionValidator2 control.
         /// </summary>
@@ -1057,7 +1055,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender11 control.
         /// </summary>
@@ -1066,7 +1064,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender11;
-
+        
         /// <summary>
         /// txtLandlineNo control.
         /// </summary>
@@ -1075,7 +1073,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLandlineNo;
-
+        
         /// <summary>
         /// hd_txtLandlineNo control.
         /// </summary>
@@ -1084,7 +1082,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtLandlineNo;
-
+        
         /// <summary>
         /// RequiredFieldValidator9 control.
         /// </summary>
@@ -1093,7 +1091,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender12 control.
         /// </summary>
@@ -1102,7 +1100,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender12;
-
+        
         /// <summary>
         /// txtAlterNateNo control.
         /// </summary>
@@ -1111,7 +1109,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAlterNateNo;
-
+        
         /// <summary>
         /// hd_txtAlterNateNo control.
         /// </summary>
@@ -1120,7 +1118,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hd_txtAlterNateNo;
-
+        
         /// <summary>
         /// RegularExpressionValidator3 control.
         /// </summary>
@@ -1129,7 +1127,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
-
+        
         /// <summary>
         /// FilteredTextBoxExtender20 control.
         /// </summary>
@@ -1138,7 +1136,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilteredTextBoxExtender20;
-
+        
         /// <summary>
         /// mpeProgress control.
         /// </summary>

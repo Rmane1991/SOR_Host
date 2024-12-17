@@ -1,0 +1,8 @@
+Time : 07-Nov-2024 15:38 Message : SwitchConfig: rptSwitchDetails_ItemCommand() | Username :MaximusException : Object reference not set to an instance of an object.
+Time : 07-Nov-2024 15:50 Message : SwitchConfig: rptSwitchDetails_ItemCommand() | Username :MaximusException : Object reference not set to an instance of an object.
+Time : 07-Nov-2024 16:52 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Nov-2024 16:54 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Nov-2024 18:10 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Nov-2024 18:40 Message : TrRule: EditGroup() | DB_StatusCode : UPD96 | ResponseCode : 91 | ResponseMessage : Unable to process
+Time : 07-Nov-2024 19:00 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Nov-2024 19:01 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

@@ -1,0 +1,41 @@
+23-10-2024 10:30:32:1328 : Login Successful. Username Maximus. SessionID : c1bw1xzejid2hxkrnqy0acxo
+23-10-2024 10:45:39:4219 : Login Successful. Username Maximus. SessionID : sqe2fk32bq2xkzs0bsro34ku
+23-10-2024 10:58:09:4075 : Login Successful. Username Maximus. SessionID : xo41cm0gslbnuyjjyfitk3kh
+23-10-2024 11:17:42:8163 : Login Successful. Username Maximus. SessionID : zxjl5nlui0pclrzwcfdaphbn
+23-10-2024 12:09:39:3579 : Login Successful. Username Maximus. SessionID : tx54wfzf5aduqrf4crphty3s
+23-10-2024 12:19:16:6811 : Login Successful. Username Maximus. SessionID : umuvnoy2234px2x0pqnmzr00
+23-10-2024 12:29:59:0868 : Login Successful. Username Maximus. SessionID : 2bv1hcxduy4fv5mh2pbvreiz
+23-10-2024 12:34:07:5666 : Login Successful. Username Maximus. SessionID : 2imyoyxgdemrk1nh4yadg04i
+23-10-2024 12:40:09:5642 : Login Successful. Username Maximus. SessionID : s34xp2iysqh5p0zpl0vbka21
+23-10-2024 12:59:35:8242 : Login Successful. Username Maximus. SessionID : h3bs0zixgp01seqdhrrolw0d
+23-10-2024 13:01:23:2077 : Login Successful. Username Maximus. SessionID : gbg4c3og50b41aknrfu0yz5p
+23-10-2024 13:07:40:2113 : Login Successful. Username Maximus. SessionID : mv1g0zsgdvqshngqcldzfrcq
+23-10-2024 14:12:31:8798 : Login Successful. Username Maximus. SessionID : takhotz3jsrx2evqlb2f5rrt
+23-10-2024 14:19:56:8671 : Login Successful. Username Maximus. SessionID : j2gxmnrjczwokmi3hpjtyok5
+23-10-2024 14:22:24:0100 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+23-10-2024 14:22:24:0110 : NOTICE: Flag is set to 1, proceeding with validations...
+23-10-2024 14:22:24:0120 : NOTICE: Inserting new record...1
+23-10-2024 14:22:24:0120 : NOTICE: Inserting new record...
+23-10-2024 14:22:24:0130 : NOTICE: Insert successful, RequestId: 86
+23-10-2024 14:22:38:5861 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+23-10-2024 14:22:38:5871 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+23-10-2024 14:37:35:5906 : Login Successful. Username Maximus. SessionID : gbvwxgoqzt5hasndbdgeptoo
+23-10-2024 14:38:25:0759 : Login Successful. Username Maximus. SessionID : 504ybl5yjbip5on45te4rrj0
+23-10-2024 14:39:59:7429 : Login Successful. Username Maximus. SessionID : x2trdk4le0a4fzpygoulkm5a
+23-10-2024 14:44:46:0245 : Login Successful. Username Maximus. SessionID : 4lg5ojqgpojxh4qju25sld1t
+23-10-2024 14:57:29:6747 : Login Successful. Username Maximus. SessionID : iincplrcxpb5crxdja0athnn
+23-10-2024 15:01:00:8660 : Login Successful. Username Maximus. SessionID : 4yn0jk0zrphv2y5nljqr0jfk
+23-10-2024 15:03:26:7976 : Login Successful. Username Maximus. SessionID : rip3ttmha2szrdkym3pnzwkw
+23-10-2024 16:18:47:0356 : Login Successful. Username Maximus. SessionID : krt54p0ldhhx5vw3j2nupi2p
+23-10-2024 17:13:44:4669 : Login Successful. Username Maximus. SessionID : qq5ii40ujwolpec5yabijwqa
+23-10-2024 18:08:27:8251 : Login Successful. Username Maximus. SessionID : lbqqdsgmx3s0w4ds4g2im1u4
+23-10-2024 18:16:15:7045 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+23-10-2024 18:17:53:0907 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+23-10-2024 18:21:09:3394 : Login Successful. Username Maximus. SessionID : cxa40klrvrbgsu45d4wybjkv
+23-10-2024 18:33:02:9982 : Login Successful. Username Maximus. SessionID : alav33151x2v2ucmktprzsnk
+23-10-2024 18:35:26:7819 : Login Successful. Username Maximus. SessionID : c51s1ftryxb5i355zyfkdn30
+23-10-2024 18:41:44:9462 : Login Successful. Username Maximus. SessionID : z10eush21y453neh4ed3kd5b
+23-10-2024 18:43:52:9927 : Login Successful. Username Maximus. SessionID : 2jjkjtl52fk4kgykzgfgtdfc
+23-10-2024 18:46:10:5503 : Login Successful. Username Maximus. SessionID : vsikezrxueht3q2nsz5lxu1q
+23-10-2024 18:50:18:8947 : Login Successful. Username Maximus. SessionID : fceiskcypaxv2ysbffa3wfqb
+23-10-2024 18:52:28:5787 : Login Successful. Username Maximus. SessionID : qjrxq3yzrln3pfsu0xfodkkb

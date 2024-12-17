@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------
+Time : 26-Nov-2024 12:25
+Source - : mscorlib
+StackTrace -  :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Web.HttpResponse.TransmitFile(String filename, Int64 offset, Int64 length)
+   at System.Web.HttpResponse.TransmitFile(String filename)
+   at SOR.Pages.Patch.Versioning.DownloadPatch(String patchPath) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 805
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 766
+Message - : Access to the path 'D:\Data\Aakash\SOR\SOR\SOR\Patch\Patches\26112024115930' is denied.
+----------------------------------------------------------------------------
+Time : 26-Nov-2024 12:43
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.DownloadPatch(String patchPath) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 822
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 765
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 26-Nov-2024 12:45
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.DownloadPatch(String patchPath) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 822
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 765
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 26-Nov-2024 12:46
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.DownloadPatch(String patchPath) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 822
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 765
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 26-Nov-2024 12:59
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SOR.Pages.Patch.Versioning.EditPatch(String patchPath) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 724
+   at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 736
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 26-Nov-2024 12:59
+Source - : SOR
+StackTrace -  :    at SOR.Pages.Patch.Versioning.gvVersioning_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Patch\Versioning.aspx.cs:line 743
+Message - : Thread was being aborted.

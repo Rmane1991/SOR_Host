@@ -1,0 +1,45 @@
+Time : 18-Oct-2024 11:47
+Source - : System.Xml
+StackTrace -  :    at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o, XmlSerializerNamespaces namespaces)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o)
+   at AppLogger.ErrorLog.XmlSerialser[T](T Tobj) in D:\D Data\Aakash\SOR\SOR\AppLogger\ErrorLog.cs:line 919
+   at SOR.Pages.Admin.pgCreateUser.btnSave_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Admin\pgCreateUser.aspx.cs:line 370
+Message - : There was an error generating the XML document.
+
+Time : 18-Oct-2024 11:52
+Source - : System.Xml
+StackTrace -  :    at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o, XmlSerializerNamespaces namespaces)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o)
+   at AppLogger.ErrorLog.XmlSerialser[T](T Tobj) in D:\D Data\Aakash\SOR\SOR\AppLogger\ErrorLog.cs:line 919
+   at SOR.Pages.Admin.pgCreateUser.btnSave_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Admin\pgCreateUser.aspx.cs:line 370
+Message - : There was an error generating the XML document.
+
+Time : 18-Oct-2024 11:57
+Source - : System.Xml
+StackTrace -  :    at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o, XmlSerializerNamespaces namespaces)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o)
+   at AppLogger.ErrorLog.XmlSerialser[T](T Tobj) in D:\D Data\Aakash\SOR\SOR\AppLogger\ErrorLog.cs:line 919
+   at SOR.Pages.Admin.pgCreateUser.btnSave_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Admin\pgCreateUser.aspx.cs:line 370
+Message - : There was an error generating the XML document.
+
+Time : 18-Oct-2024 12:01
+Source - : System.Xml
+StackTrace -  :    at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o, XmlSerializerNamespaces namespaces)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o)
+   at AppLogger.ErrorLog.XmlSerialser[T](T Tobj) in D:\D Data\Aakash\SOR\SOR\AppLogger\ErrorLog.cs:line 919
+   at SOR.Pages.Admin.pgCreateUser.btnSave_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Admin\pgCreateUser.aspx.cs:line 370
+Message - : There was an error generating the XML document.
+
+Time : 18-Oct-2024 12:08
+Source - : System.Xml
+StackTrace -  :    at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o, XmlSerializerNamespaces namespaces)
+   at System.Xml.Serialization.XmlSerializer.Serialize(TextWriter textWriter, Object o)
+   at AppLogger.ErrorLog.XmlSerialser[T](T Tobj) in D:\D Data\Aakash\SOR\SOR\AppLogger\ErrorLog.cs:line 919
+   at SOR.Pages.Admin.pgCreateUser.btnSave_Click(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Admin\pgCreateUser.aspx.cs:line 370
+Message - : There was an error generating the XML document.
+

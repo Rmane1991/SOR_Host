@@ -1,0 +1,164 @@
+06-11-2024 10:54:20:0762 : Login Successful. Username Maximus. SessionID : 1gflk11j4d2oycvf31orvt4v
+06-11-2024 11:06:15:8555 : Login Successful. Username Maximus. SessionID : bgdp4ag1lwctagtfhahqhb4w
+06-11-2024 11:25:02:7955 : Login Successful. Username Maximus. SessionID : vn0sy5deteg3r1toe02zkymj
+06-11-2024 12:36:05:8703 : Login Successful. Username Maximus. SessionID : 2h1w4pf31ippl5bssyimdlvn
+06-11-2024 12:45:26:4654 : Login Unsuccessful. Invalid Credentials. Username : Admin321
+06-11-2024 12:45:39:2514 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : Maxius
+06-11-2024 12:45:47:1005 : Login Successful. Username Maximus. SessionID : g0cte5d33jyb35ptyklqkscf
+06-11-2024 12:45:48:0643 : Login Successful. Username Maximus. SessionID : g0cte5d33jyb35ptyklqkscf
+06-11-2024 12:47:42:0969 : Create User Request Failed With fillFranchise. 
+06-11-2024 12:48:05:8731 : Request Received From Create User. Username : Maximus
+06-11-2024 12:50:01:8700 : Create User Request Successful. Username : Maximus User Name : Admin12345
+06-11-2024 12:51:23:3901 : Login Unsuccessful. Invalid Credentials. Username : Admin12345
+06-11-2024 12:51:29:9844 : Login Successful. Username Maximus. SessionID : lic1rncq3wvartsip3nerf2j
+06-11-2024 12:51:55:1875 : Create User Request Failed With fillFranchise. 
+06-11-2024 12:52:28:1590 : Request Received From Create User. Username : Maximus
+06-11-2024 12:54:06:2194 : Create User Request Successful. Username : Maximus User Name : Admin121
+06-11-2024 12:55:19:4242 : Login Unsuccessful. Invalid Credentials. Username : Admin121
+06-11-2024 12:55:29:6541 : Login Successful. Username Maximus. SessionID : 1lom3q2gmqyqroo1d2i3uq2u
+06-11-2024 12:56:12:4781 : Create User Request Failed With fillFranchise. 
+06-11-2024 12:56:46:1065 : Request Received From Create User. Username : Maximus
+06-11-2024 12:57:49:2937 : Create User Request Successful. Username : Maximus User Name : Admin11
+06-11-2024 12:59:32:5075 : Login Unsuccessful. Invalid Credentials. Username : Admin11
+06-11-2024 12:59:39:4151 : Login Successful. Username Maximus. SessionID : 3alh2haq0vkjehc4drels5pz
+06-11-2024 13:00:05:7026 : Create User Request Failed With fillFranchise. 
+06-11-2024 13:00:33:2656 : Request Received From Create User. Username : Maximus
+06-11-2024 14:17:24:8909 : Create User Request Successful. Username : Maximus User Name : Admin55
+06-11-2024 14:17:42:6390 : Login Successful. Username Maximus. SessionID : jcagfphct4jomlnfzjm51ggm
+06-11-2024 14:17:42:7677 : Login Successful. Username Maximus. SessionID : 12ak25dg3d3l5grgaxqzjtqs
+06-11-2024 14:18:51:8412 : Create User Request Failed With fillFranchise. 
+06-11-2024 14:19:12:6842 : Request Received From Create User. Username : Maximus
+06-11-2024 14:19:13:4073 : Create User Request Successful. Username : Maximus User Name : Admin456
+06-11-2024 14:20:14:0825 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:20:14:0885 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:20:14:1096 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:20:14:1196 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106142014412
+06-11-2024 14:20:35:3889 : SendOTP Request Failed For Change Password(FristLogin/Expiry/Reset). Username : Admin456 Exception : Object reference not set to an instance of an object.
+06-11-2024 14:20:57:0907 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:20:57:0927 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:20:57:1017 : OTP Is InValid For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:23:03:1462 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:23:03:1502 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:23:03:1771 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:23:03:1881 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106142303650
+06-11-2024 14:23:03:1911 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:23:24:1730 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:23:24:1750 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:23:24:1780 : OTP Is InValid For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:23:55:4350 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : 
+06-11-2024 14:23:58:1318 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username :  OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:30:45:4546 : OTP Is InValid For Change Password (FristLogin/Expiry/Reset). Username :  OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:30:54:1081 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : 
+06-11-2024 14:30:54:3465 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username :  OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:31:21:7355 : OTP Is InValid For Change Password (FristLogin/Expiry/Reset). Username :  OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:31:31:5750 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : 
+06-11-2024 14:31:32:0028 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username :  OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:32:24:5323 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:32:24:5353 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:32:24:5563 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:32:25:7491 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106143224534
+06-11-2024 14:32:25:7521 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:32:53:5131 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:32:57:3956 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:33:30:5783 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:33:48:6442 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:34:32:4894 : Class : LoginEntity.cs 
+Function : SetChangePassword() 
+Exception Occured
+Keyword not supported: 'port'.
+06-11-2024 14:34:32:5083 : Change Password (Frist Login/Expiry) Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Admin456
+06-11-2024 14:35:04:1860 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:35:04:1880 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:35:04:2020 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:35:04:8820 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106143504514
+06-11-2024 14:35:04:8840 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:37:49:2996 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:37:50:8296 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:38:03:8213 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:42:17:7920 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:42:17:7960 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:42:17:8249 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:42:18:6447 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106144217227
+06-11-2024 14:42:18:6467 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:42:37:6024 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:42:37:6133 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:42:41:3250 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:43:58:8015 : Login Successful. Username Maximus. SessionID : 4k1usvvftp53cxupqvxyrt3z
+06-11-2024 14:44:13:4957 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:44:13:4987 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:44:13:5156 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:44:14:1539 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106144413529
+06-11-2024 14:44:14:1569 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:44:32:4602 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:44:32:4622 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:44:33:0277 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:44:33:5563 : Change Password (Frist Login/Expiry) Request Failed (Login Page). Exception : Column 'Type' does not belong to table Table. Username : Admin456
+06-11-2024 14:45:05:6466 : Login Unsuccessful. Invalid Credentials. Username : Admin456
+06-11-2024 14:45:17:6242 : Login Unsuccessful. Invalid Credentials. Username : Admin456
+06-11-2024 14:45:53:3201 : Login Successful. Username Admin456. SessionID : noap1qml5bsqe5zo0hox4qsz
+06-11-2024 14:46:20:7575 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:46:25:4944 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : Admin456
+06-11-2024 14:46:38:9746 : Login Unsuccessful. Invalid Credentials. Username : Admin456
+06-11-2024 14:47:38:1710 : Login Unsuccessful. Invalid Credentials. Username : Admin456
+06-11-2024 14:48:02:4636 : Login Successful. Username Admin456. SessionID : noap1qml5bsqe5zo0hox4qsz
+06-11-2024 14:49:10:0470 : Login Successful. Username Admin456. SessionID : noap1qml5bsqe5zo0hox4qsz
+06-11-2024 14:49:29:6066 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:49:31:4825 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:49:31:4945 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:49:32:1528 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106144931432
+06-11-2024 14:49:32:1588 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:49:51:4182 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:49:51:4202 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:49:52:4115 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:50:41:1394 : Change Password (Frist Login/Expiry) Request Failed (Login Page). Exception : Column 'Type' does not belong to table Table. Username : Admin456
+06-11-2024 14:51:05:4480 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:51:05:4500 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:51:05:4700 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:51:06:3716 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106145105240
+06-11-2024 14:51:06:3746 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:51:33:7919 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:51:37:6750 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:51:38:4520 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:54:22:6348 : Login successful. First Time Login, Promt To User To Change Default Password. Username : Admin456
+06-11-2024 14:54:22:6377 : SendOTP Request Received For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:54:22:6647 : SendOTP OTP Generated For Change Password(FristLogin/Expiry/Reset) Username : Admin456
+06-11-2024 14:54:23:4685 : SendOTP OTP Inserted In Database For Change Password(FristLogin/Expiry/Reset). Status : Success Username : Admin456 RRN : 241106145422986
+06-11-2024 14:54:23:4715 : Page : Login.cs 
+Function : SendOTP() => OTP has been sent to Registered Email/Mobile Number. EmailResp : APP-MAXIMUS
+06-11-2024 14:54:50:1248 : Change Password (FristLogin/Expiry/Reset) Request (Login Page) Received. Username : Admin456
+06-11-2024 14:54:50:1289 : OTP Validation Started For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:54:50:9636 : OTP Validation Successful For Change Password (FristLogin/Expiry/Reset). Username : Admin456 OTP : 7CeKOJASh7J3GhNzlSA4TUPksHj3iv/nAt7xCHdMziQ=
+06-11-2024 14:55:04:4655 : Change Password (Frist Login/Expiry) Request Successful (Login Page). Username : Admin456
+06-11-2024 14:55:55:0969 : Login Successful. Username Admin456. SessionID : ktz5z1kfj2dwqqknr3ucb5iq
+06-11-2024 14:56:51:8699 : Login Successful. Username Maximus. SessionID : ktz5z1kfj2dwqqknr3ucb5iq
+06-11-2024 15:24:23:9252 : Login Successful. Username Maximus. SessionID : w2qe0fdiwm2obdfpkexqcljy
+06-11-2024 15:43:05:5323 : Login Successful. Username Admin456. SessionID : ek2m5irnaupco3l1jn13xhh1
+06-11-2024 15:43:28:5591 : Login Successful. Username Admin456. SessionID : ek2m5irnaupco3l1jn13xhh1
+06-11-2024 15:44:22:6663 : Login Successful. Username Maximus. SessionID : veckh5xrfo2eknvs0flzbyhf
+06-11-2024 15:44:41:4813 : Login Unsuccessful. Invalid Credentials. Username : Admin456
+06-11-2024 15:44:48:3001 : Login Successful. Username Admin456. SessionID : xm23wpc03h25lyizxfxdrhzw
+06-11-2024 15:45:17:5237 : Login Successful. Username Admin456. SessionID : xm23wpc03h25lyizxfxdrhzw
+06-11-2024 15:51:49:4356 : Login Successful. Username Admin456. SessionID : xm23wpc03h25lyizxfxdrhzw
+06-11-2024 15:52:24:0876 : Login Successful. Username Maximus. SessionID : 2nlju4nwaufnsmpvpntjj0cg
+06-11-2024 15:56:32:2955 : Login Successful. Username Maximus. SessionID : nwf35mdorbedvr4ivod2dxwh
+06-11-2024 16:02:42:1522 : Login Successful. Username Maximus. SessionID : bx4if0hp4nrq4v54ehkbdfxb
+06-11-2024 16:08:22:3424 : Login Successful. Username Maximus. SessionID : k5jgx1uiqj4h0fagljnbjxuk
+06-11-2024 16:11:15:3180 : Login Successful. Username Maximus. SessionID : z35c0vuwrux0ytabps5tgnsk
+06-11-2024 16:18:15:6263 : Login Successful. Username Maximus. SessionID : spqcm3045zu154fw0mswkmqc
+06-11-2024 16:20:59:5253 : Login Successful. Username Maximus. SessionID : xxyu21v0dcptbf1dktcttpja
+06-11-2024 16:31:30:8581 : Login Successful. Username Maximus. SessionID : ks3xe0xfenntrv1pmpzzus0b
+06-11-2024 16:34:14:3571 : Login Successful. Username Maximus. SessionID : l0ytwbat5phl2dvoudzxa155
+06-11-2024 16:48:44:4684 : Login Successful. Username Maximus. SessionID : jka1t0w2owtiacji5ctcsz0b
+06-11-2024 17:06:37:8806 : Login Successful. Username Maximus. SessionID : bqpysmfv5pz1dlvc1h40eid2
+06-11-2024 18:02:29:9661 : Login Successful. Username Maximus. SessionID : vy3pvyl2xgwdotaltyltjh24
+06-11-2024 18:06:00:5709 : Login Successful. Username Maximus. SessionID : 5ja3xi3aodos21dh3sy2xhuo
+06-11-2024 18:22:10:4337 : Login Successful. Username Maximus. SessionID : un1v11qgkzxmwf4zizpmund5
+06-11-2024 18:25:12:8998 : Login Successful. Username Maximus. SessionID : qawmssr3trl3asgmwpwgohv0
+06-11-2024 19:14:43:0517 : Login Successful. Username Maximus. SessionID : qib40cnzxwke2memdtkh2jlh

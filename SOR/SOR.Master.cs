@@ -210,12 +210,112 @@ namespace SOR
                     }
                     strTags += @"</ul> </div> </div> </div>";
                     Literal1.Text = strTags.ToString();
+                    //Literal2.Text = strTags.ToString();
                 }
+
             }
             catch (Exception Ex)
             {
             }
         }
+        //private void AutoLoadMenus2()
+        //{
+        //    try
+        //    {
+        //        string strTags = string.Empty;
+        //        _LoginEntity.RoleID = Convert.ToInt32(Session["UserRoleID"]);
+        //        _LoginEntity.CurrentPage = this.Page.Request.FilePath;
+        //        _LoginEntity.ParentRoleID = Convert.ToInt32(Session["ParentRoleID"]);
+        //        _LoginEntity.UserName = Convert.ToString(Session["Username"]);
+        //        _dsAutoLoad = _LoginEntity.GetMenuListData();
+        //        string _oldMenu = string.Empty;
+        //        bool _isSubMenu = false;
+
+        //        if (_dsAutoLoad != null && _dsAutoLoad.Tables.Count > 0 && _dsAutoLoad.Tables[0].Rows.Count > 0)
+        //        {
+        //            foreach (DataRow drMenus in _dsAutoLoad.Tables[0].Rows)
+        //            {
+        //                string iconClass = string.IsNullOrEmpty(Convert.ToString(drMenus[8])) ? "fa fa-home" : Convert.ToString(drMenus[8]);
+
+        //                // Closing submenu when switching to a new main menu
+        //                if (!_oldMenu.Equals(Convert.ToString(drMenus[1])) && _isSubMenu)
+        //                {
+        //                    strTags += @"</ul> </div> </div> </div>";
+        //                    _isSubMenu = false;
+        //                }
+
+        //                // New main menu (no submenus)
+        //                if (!_oldMenu.Equals(Convert.ToString(drMenus[1])) && string.IsNullOrEmpty(Convert.ToString(drMenus[3])))
+        //                {
+        //                    strTags += $@"
+        //                <li>
+        //                    <a title=""{Convert.ToString(drMenus[1])}"" href=""{Convert.ToString(drMenus[2])}"" id=""lbtn{Convert.ToString(drMenus[7])}"">
+        //                        <i class=""{iconClass}""></i> {Convert.ToString(drMenus[1])}
+        //                    </a>
+        //                </li>
+        //            ";
+        //                    _oldMenu = string.Empty;
+        //                    _isSubMenu = false;
+        //                }
+        //                else
+        //                {
+        //                    // Appending submenu items
+        //                    if (_oldMenu.Equals(Convert.ToString(drMenus[1])))
+        //                    {
+        //                        strTags += $@"
+        //                    <li class=""sub-menu-list"" id=""submm{Convert.ToString(drMenus[6])}"">
+        //                        <a href=""{Convert.ToString(drMenus[4])}"">
+        //                            <div class=""d-flex align-items-center"">
+        //                                <span class=""{iconClass}""></span> <!-- Dynamic icon -->
+        //                                <span class=""list-line-text""> {Convert.ToString(drMenus[3])}</span>
+        //                            </div>
+        //                        </a>
+        //                    </li>
+        //                ";
+        //                    }
+        //                    else
+        //                    {
+        //                        // Starting a new accordion section for a menu
+        //                        strTags += $@"
+        //                    <div class=""accordion-item"">
+        //                        <h2 class=""accordion-header"" id=""heading{Convert.ToString(drMenus[0])}"">
+        //                            <button class=""accordion-button collapsed"" id=""BtnSubb{Convert.ToString(drMenus[0])}"" 
+        //                                    type=""button"" data-bs-toggle=""collapse"" 
+        //                                    data-bs-target=""#subPagess{Convert.ToString(drMenus[0])}"" 
+        //                                    aria-expanded=""true"" aria-controls=""subPagess{Convert.ToString(drMenus[0])}"">
+        //                                <div class=""sidebar-headings"">
+        //                                    <span class=""{iconClass}""></span> <!-- Dynamic icon -->
+        //                                    <h5 class=""sidebar-headings""> {Convert.ToString(drMenus[1])}</h5>
+        //                                </div>
+        //                            </button>
+        //                        </h2>
+        //                        <div id=""subPagess{Convert.ToString(drMenus[0])}"" class=""accordion-collapse collapse"" 
+        //                             aria-labelledby=""heading{Convert.ToString(drMenus[0])}"" data-bs-parent=""#accordionExample"">
+        //                            <div class=""accordion-body"">
+        //                                <ul class=""sub-menu"">
+        //                ";
+
+        //                        _isSubMenu = true;
+        //                    }
+        //                }
+
+        //                _oldMenu = Convert.ToString(drMenus[1]);
+        //            }
+
+        //            // Closing the last opened submenu
+        //            strTags += @"</ul> </div> </div> </div>";
+
+        //            // Output the result to the Literal control
+        //            Literal2.Text = strTags.ToString();
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        // Handle any exceptions
+        //        // Log or display an error message as needed
+        //    }
+        //}
+
         #endregion
     }
 }
