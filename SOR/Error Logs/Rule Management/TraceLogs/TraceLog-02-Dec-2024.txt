@@ -1,0 +1,12 @@
+Time : 02-Dec-2024 11:00 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 11:03 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 11:15 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 11:15 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 11:25 Message : Versioning: btnSave_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 02-Dec-2024 12:23 Message : Versioning: btnSave_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 02-Dec-2024 12:51 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 12:51 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 12:57 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 12:57 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 02-Dec-2024 12:58 Message : Versioning: btnSave_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 02-Dec-2024 14:49 Message : AlertGroupMaster: btnTemplateMaster_Click() | Username :MaximusException : Thread was being aborted.

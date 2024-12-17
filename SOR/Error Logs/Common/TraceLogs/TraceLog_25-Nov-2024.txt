@@ -1,0 +1,91 @@
+25-11-2024 11:08:10:1248 : Login Successful. Username Maximus. SessionID : kq1zt4cd1j3eqi4jjrb2znna
+25-11-2024 11:09:31:2882 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+42703: column "p_status" does not exist
+25-11-2024 11:24:42:7211 : Login Successful. Username Maximus. SessionID : 3i5x50hottg5nvknk3pf3z35
+25-11-2024 11:24:58:5351 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+42703: column "p_status" does not exist
+25-11-2024 11:25:56:4920 : Login Successful. Username Maximus. SessionID : h5qnqj4lvzymhepqytgpo0pz
+25-11-2024 11:32:12:1165 : Login Successful. Username Maximus. SessionID : zcfwkqzmguwbgantzrv3zj2m
+25-11-2024 11:36:28:5579 : Login Successful. Username Maximus. SessionID : rljndguygfkb1nth2xhiupy4
+25-11-2024 12:03:14:3375 : Login Successful. Username Maximus. SessionID : 00gkinenmihud0ytgsu2tjso
+25-11-2024 12:33:10:3098 : Login Successful. Username Maximus. SessionID : yynw4dgvju4hguxkd0yzjjb4
+25-11-2024 12:40:07:2719 : Login Successful. Username Maximus. SessionID : buuqxxfcj4wnhjed2dk5mz0h
+25-11-2024 12:41:51:6507 : Login Successful. Username Maximus. SessionID : j34l5xfboq4ciuopsp04ciwu
+25-11-2024 12:50:09:9216 : Login Successful. Username Maximus. SessionID : wfog3zllg2gjkrpqoupgpog3
+25-11-2024 12:51:42:8413 : Login Successful. Username Maximus. SessionID : ro1203xzb0xvsiq1jbcasp2s
+25-11-2024 12:52:48:8647 : Login Successful. Username Maximus. SessionID : ii5de1zl1zfb5dc1si5tfefu
+25-11-2024 12:55:35:0458 : Login Successful. Username Maximus. SessionID : nrqm2cuqhtnxil40rxcepa0w
+25-11-2024 13:06:01:0671 : Login Successful. Username Maximus. SessionID : rls0ohdidyusd2lsdroiwz10
+25-11-2024 13:10:14:7767 : Login Successful. Username Maximus. SessionID : tbj4xwhbbttop5ius3cedtb1
+25-11-2024 13:13:12:2337 : Login Successful. Username Maximus. SessionID : fn5ljefvp1b1bx1eozpovqha
+25-11-2024 13:14:27:9940 : Login Successful. Username Maximus. SessionID : ktz1v2xetmxspvcwfjaa3wkr
+25-11-2024 14:25:20:2011 : Login Successful. Username Maximus. SessionID : t2k5zexdiiwvi3qfhwslzhow
+25-11-2024 14:28:07:5506 : Login Successful. Username Maximus. SessionID : ehz5nxpwrpcurqrsauig4mmz
+25-11-2024 14:29:09:7245 : Login Successful. Username Maximus. SessionID : xh32xouiwbigkth0fjciue1p
+25-11-2024 14:30:41:6267 : Login Successful. Username Maximus. SessionID : mlxdz0soref2mbgxegkg5eyy
+25-11-2024 14:30:48:4388 : Login Successful. Username Maximus. SessionID : mlxdz0soref2mbgxegkg5eyy
+25-11-2024 14:31:22:6418 : Login Successful. Username Maximus. SessionID : gzfycj0r5rphtln4axlm3spb
+25-11-2024 14:36:24:5400 : Login Successful. Username Maximus. SessionID : r1tb3tjw4x2j1yfb5gaj33t4
+25-11-2024 14:40:28:0993 : Login Successful. Username Maximus. SessionID : eyxxwdn4bhzpjye3auualow1
+25-11-2024 14:43:22:1833 : Login Successful. Username Maximus. SessionID : bvzipmhnmjs15cmysqsj0nch
+25-11-2024 14:43:22:5543 : Login Successful. Username Maximus. SessionID : bvzipmhnmjs15cmysqsj0nch
+25-11-2024 14:45:34:9461 : Login Successful. Username Maximus. SessionID : tiy4e1zdodtgcgjumhpqrgci
+25-11-2024 14:49:39:6118 : Login Successful. Username Maximus. SessionID : iu54hdyvwbwm1cjplulaftqw
+25-11-2024 14:51:45:3233 : Login Successful. Username Maximus. SessionID : eu1ltrxezdb4rvov0ekrumvh
+25-11-2024 14:55:23:1237 : Login Successful. Username Maximus. SessionID : ykjrw012rromwpq2nppvdwy4
+25-11-2024 14:58:05:0580 : Login Successful. Username Maximus. SessionID : jftgpcwjalk5nvancg11vjfl
+25-11-2024 15:00:16:0973 : Login Successful. Username Maximus. SessionID : u2gg2vigo0upun145dic3bb2
+25-11-2024 15:07:46:2302 : Login Successful. Username Maximus. SessionID : v5hldcb4p3b5hlypis5sic4u
+25-11-2024 15:09:05:5283 : Login Successful. Username Maximus. SessionID : gd0kbsah0prfh40f2jjqm1ou
+25-11-2024 15:09:12:2104 : Login Successful. Username Maximus. SessionID : gd0kbsah0prfh40f2jjqm1ou
+25-11-2024 15:11:31:6740 : Login Successful. Username Maximus. SessionID : 3bymismrjhwvxjdgls3c5lki
+25-11-2024 15:13:51:4153 : Login Successful. Username Maximus. SessionID : zldc3uhntjh0nrzpikubc25o
+25-11-2024 15:28:32:7756 : Login Successful. Username Maximus. SessionID : vihyuqhwnlou1lp3d0yfk5ii
+25-11-2024 15:39:04:9466 : Login Successful. Username Maximus. SessionID : tplm3m2eyts2mocvblidy3bn
+25-11-2024 15:41:25:6150 : Login Successful. Username Maximus. SessionID : fcf5ktnnjs0eoq1olt2x2vo3
+25-11-2024 15:43:12:4807 : Login Successful. Username Maximus. SessionID : xginvprnzlbhrvsuw3rp3yzq
+25-11-2024 15:44:17:0098 : Login Successful. Username Maximus. SessionID : xxlqbxdzfme2bulb3unm2nos
+25-11-2024 15:46:10:6500 : Login Successful. Username Maximus. SessionID : k4xxvsb4j0e0wigokr0w3dv2
+25-11-2024 15:48:58:2000 : Login Successful. Username Maximus. SessionID : uguxbac0du2wkfaryhjmzmv1
+25-11-2024 15:51:54:8813 : Login Successful. Username Maximus. SessionID : e52oxtngm3dnsrxan1y4nntn
+25-11-2024 15:54:24:8281 : Login Successful. Username Maximus. SessionID : 3mbmlzt4id12adga2weljlq2
+25-11-2024 15:57:37:8995 : Login Successful. Username Maximus. SessionID : jdzpf2jaav4zz5vyswriuaxt
+25-11-2024 16:05:52:6632 : Login Successful. Username Maximus. SessionID : x0k0stbq5chsqbgndj0hd41a
+25-11-2024 16:08:44:7820 : Login Successful. Username Maximus. SessionID : t01jvchgieu3ohkyhicffs2c
+25-11-2024 16:11:37:0504 : Login Successful. Username Maximus. SessionID : 21yfxvncwhjmaix5uud4zavd
+25-11-2024 16:14:08:6344 : Login Successful. Username Maximus. SessionID : muiwo5yazin0zyahi25yvfuc
+25-11-2024 16:22:35:6108 : Login Successful. Username Maximus. SessionID : fmzpkv2as4akdfg4k4040pdt
+25-11-2024 16:24:16:4883 : Login Successful. Username Maximus. SessionID : zmcc3ituwkrzhlth30ku5v5h
+25-11-2024 16:40:27:5181 : Login Successful. Username Maximus. SessionID : 1jzkjeegwizqjgk3bqyvpzqa
+25-11-2024 16:44:37:1093 : Login Successful. Username Maximus. SessionID : 1mi1nhpor5lznpsyqk2ijmhn
+25-11-2024 16:47:13:3118 : Login Successful. Username Maximus. SessionID : vpakfihicoh54fhqd4z4nfez
+25-11-2024 16:52:11:4333 : Login Successful. Username Maximus. SessionID : evxbikxqgq0kxzwlrpbagajv
+25-11-2024 16:55:38:7542 : Login Successful. Username Maximus. SessionID : jy2pwet12sldfkuhr0rl32rn
+25-11-2024 16:58:47:9711 : Login Successful. Username Maximus. SessionID : wtnllzuh0iiirhq5msfn3e50
+25-11-2024 17:00:28:1773 : Login Successful. Username Maximus. SessionID : tjf3skey4fql5vwosmj5n5tr
+25-11-2024 17:02:25:0195 : Login Successful. Username Maximus. SessionID : 3lqwnueulyl5hyt2uy0gmqjr
+25-11-2024 17:04:03:9538 : Login Successful. Username Maximus. SessionID : 52ocnugpxfexdwqlfvzd2u3g
+25-11-2024 17:07:25:7226 : Login Successful. Username Maximus. SessionID : cmivozuvm2h2zvqmn1gnvhjy
+25-11-2024 17:50:46:1588 : Login Successful. Username Maximus. SessionID : eiu0hqy41b02v3mvitavpr3o
+25-11-2024 17:52:48:8316 : Login Successful. Username Maximus. SessionID : 21ccqunqshlsgpcffmgbl5gv
+25-11-2024 17:56:20:1394 : Login Successful. Username Maximus. SessionID : c00bvik5hgykz3vmyrqjhqnt
+25-11-2024 17:58:41:6634 : Login Successful. Username Maximus. SessionID : tr2t04kjv00c5xjmveqycfkq
+25-11-2024 18:01:12:7655 : Login Successful. Username Maximus. SessionID : dnvdunvhx3ojaoqd2itjgyo3
+25-11-2024 18:07:44:7738 : Login Successful. Username Maximus. SessionID : 5r0uko0je34ioptsq5kcola0
+25-11-2024 18:09:59:1589 : Login Successful. Username Maximus. SessionID : 51mkad23psqqxyixwkwaaygt
+25-11-2024 18:12:10:0164 : Login Successful. Username Maximus. SessionID : h1pcrik11ciddggbyo1ipzmv
+25-11-2024 18:39:46:4729 : Login Successful. Username Maximus. SessionID : x4xyxg50p1piaxuxjhttkh4b
+25-11-2024 18:40:41:8575 : Login Successful. Username Maximus. SessionID : x4xyxg50p1piaxuxjhttkh4b
+25-11-2024 18:53:22:0237 : Login Successful. Username Maximus. SessionID : ex3l4mtyd0ceynutwcik5c2q
+25-11-2024 18:55:43:6350 : Login Successful. Username Maximus. SessionID : fdxxmed3tk0raayzhmugqwu1
+25-11-2024 19:05:16:4825 : Login Successful. Username Maximus. SessionID : nbe5cjyffqbabclkg5jxygyd
+25-11-2024 19:08:09:0233 : Login Successful. Username Maximus. SessionID : nojnirmzm55d2k2pzlctkm0i
+25-11-2024 19:13:04:5300 : Login Successful. Username Maximus. SessionID : aa0amzzeeau34opbuqblahc1
+25-11-2024 19:14:43:7761 : Login Successful. Username Maximus. SessionID : 5dvot0s2d44i04l3bfvnacis
+25-11-2024 19:18:32:1160 : Login Successful. Username Maximus. SessionID : 3a1duz0ckayxpup53psnodnm
+25-11-2024 19:22:06:8732 : Login Successful. Username Maximus. SessionID : 0u42yz5obfbrjhgyzfrgpwq3
+25-11-2024 19:30:22:4729 : Login Successful. Username Maximus. SessionID : ayxrqvxxjgabgk55hn3cf3yz

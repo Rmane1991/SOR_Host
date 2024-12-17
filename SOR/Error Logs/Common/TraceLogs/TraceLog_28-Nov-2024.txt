@@ -1,0 +1,67 @@
+28-11-2024 11:01:34:9755 : Login Successful. Username Maximus. SessionID : su1b2rsx42byea15qxuihdwj
+28-11-2024 11:03:06:1364 : Login Successful. Username Maximus. SessionID : z5tctqyey1eefuikqwkfxm05
+28-11-2024 11:20:09:9341 : Login Successful. Username Maximus. SessionID : x5zqlnpjdzaa3n0tgnzgojso
+28-11-2024 11:37:31:7765 : Login Successful. Username Maximus. SessionID : gz4enpd1nibvsl4fuikt2iec
+28-11-2024 12:58:37:7168 : Login Successful. Username Maximus. SessionID : m0vcw1xvmddx1ovuxklxnphz
+28-11-2024 12:59:52:0692 : Login Successful. Username AdminMGMT. SessionID : wja3zpjitn052gy41yjrmu50
+28-11-2024 13:02:03:0962 : Login Successful. Username Maximus. SessionID : kxkutpc3pfvf25elpcg5qduh
+28-11-2024 13:02:30:4184 : Login Unsuccessful. Invalid Credentials. Username : AdminMGMT
+28-11-2024 13:02:37:5843 : Login Unsuccessful. Invalid Credentials. Username : AdminMGMT
+28-11-2024 13:02:47:8103 : Login Successful. Username AdminMGMT. SessionID : i5aqjskhs2thybekd3gquuej
+28-11-2024 14:13:39:6111 : Login Successful. Username Maximus. SessionID : cpmbh01b5vrv2brrceh1ddit
+28-11-2024 14:17:47:7263 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+28-11-2024 14:17:47:7273 : NOTICE: Flag is set to 1, proceeding with validations...
+28-11-2024 14:17:47:7283 : NOTICE: Inserting new record...1
+28-11-2024 14:17:47:7383 : NOTICE: Inserting new record...
+28-11-2024 14:17:47:7543 : NOTICE: Insert successful, RequestId: 24
+28-11-2024 14:18:05:1209 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+28-11-2024 14:18:05:1219 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+28-11-2024 14:37:30:3088 : Login Successful. Username Maximus. SessionID : dkmrabbc1uxp5b0e3lincjvp
+28-11-2024 14:41:38:8712 : Login Successful. Username Maximus. SessionID : zezkkd4eh4z4wzl0jawoywbl
+28-11-2024 14:43:48:0994 : Login Successful. Username Maximus. SessionID : sfh1sajhubkzgtfvbv053clv
+28-11-2024 15:40:08:8406 : Login Successful. Username Maximus. SessionID : tqkbahxawmew0zpbnhkqz312
+28-11-2024 15:43:52:6633 : Login Successful. Username Maximus. SessionID : tuks5zbmrpzoyoyxxxhzb34i
+28-11-2024 15:46:07:0252 : Login Successful. Username Maximus. SessionID : fmp44ktczsri2p1mbhlbfav4
+28-11-2024 15:47:02:3869 : Class: RuleEntity.cs 
+Function: InsertOrUpdatePatchDetails() 
+Exception Occurred
+42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+28-11-2024 15:47:35:2179 : Class: RuleEntity.cs 
+Function: InsertOrUpdatePatchDetails() 
+Exception Occurred
+42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+28-11-2024 15:59:14:2726 : Login Successful. Username Maximus. SessionID : nxwnozpupidgwn5wmkupqbjj
+28-11-2024 16:02:05:8152 : Login Successful. Username Maximus. SessionID : i1rsomz5e3blofykifw0ih1x
+28-11-2024 16:29:24:7280 : Login Successful. Username Maximus. SessionID : c21m4wkamuwhahdd1mc4lqqc
+28-11-2024 16:29:46:9593 : Class: RuleEntity.cs 
+Function: InsertOrUpdatePatchDetails() 
+Exception Occurred
+42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+28-11-2024 16:32:25:6139 : Login Successful. Username Maximus. SessionID : yk4h3w3r0mujgzzc0ywecc5c
+28-11-2024 16:32:40:9579 : Class: RuleEntity.cs 
+Function: InsertOrUpdatePatchDetails() 
+Exception Occurred
+42883: function public.insert_apipatch_details(unknown, unknown, unknown, unknown, unknown, integer) does not exist
+28-11-2024 16:34:23:8130 : Login Successful. Username Maximus. SessionID : e31oiu3e4045yv21pv3frusm
+28-11-2024 16:47:43:3448 : Login Successful. Username Maximus. SessionID : 32ooeplckop0l0iece5maqyt
+28-11-2024 16:50:10:5409 : Login Successful. Username Maximus. SessionID : gsm3vaieyqb3pn2dxkw2ywfy
+28-11-2024 16:54:49:1346 : Login Successful. Username Maximus. SessionID : r44j1unhzgeiqfdehabgaxck
+28-11-2024 17:00:29:2774 : Login Successful. Username Maximus. SessionID : cq3c1zno2dljggkd1wz1gxnq
+28-11-2024 17:05:06:0965 : Login Successful. Username Maximus. SessionID : cgm4kpl5ziekuznjcxhrzwba
+28-11-2024 17:07:32:8466 : Login Successful. Username Maximus. SessionID : 4nj03nj5b0tbukw2j0bgp5jx
+28-11-2024 17:09:50:4848 : Login Successful. Username Maximus. SessionID : 4b2zwrnzztu1diiwum34pn4i
+28-11-2024 17:47:36:8411 : Login Successful. Username Maximus. SessionID : oosknv5khzkwesm3n3cfsac4
+28-11-2024 17:50:06:3885 : Login Successful. Username Maximus. SessionID : g5wquqmneyhkhfwghrq220y0
+28-11-2024 17:53:56:7045 : Login Successful. Username Maximus. SessionID : yse1nccx3xm5ajpozl1assg2
+28-11-2024 17:58:33:4575 : Login Successful. Username Maximus. SessionID : uwqoizk40ybmwkovjs4xsnuq
+28-11-2024 18:03:06:3833 : Login Successful. Username Maximus. SessionID : v01qzhtcqpe0oe0p3j1r5pvd
+28-11-2024 18:08:25:2717 : Login Successful. Username Maximus. SessionID : pscn0aquuhdpsecfxaorfcw4
+28-11-2024 18:11:16:2388 : Login Successful. Username Maximus. SessionID : xpwlofi4lac1n0zyt5yj2wav
+28-11-2024 18:11:51:3678 : Login Successful. Username Maximus. SessionID : 5egjpc2z0ppuwnqkvgkjmhgn
+28-11-2024 18:16:04:8673 : Login Successful. Username Maximus. SessionID : kt4q0k1ks3bt431xqdjwszrc
+28-11-2024 18:17:31:4992 : Login Successful. Username Maximus. SessionID : xebuh5vqdi4yszw5sko4kkhk
+28-11-2024 18:30:17:5105 : Login Successful. Username Maximus. SessionID : yjdps21xozfph1odqpgqig4o
+28-11-2024 18:41:59:3492 : Login Successful. Username Maximus. SessionID : zidooxhgan2ycpckethzn5qx
+28-11-2024 18:45:37:2278 : Login Successful. Username Maximus. SessionID : fsl4s21q1em3n2rqnedzxxmk
+28-11-2024 18:49:11:3672 : Login Successful. Username Maximus. SessionID : jbgatn3yvdqsqcgzahrcplhq
+28-11-2024 18:51:34:0543 : Login Successful. Username Maximus. SessionID : kuztk00frf0xociaj0uopgaz

@@ -1,0 +1,58 @@
+Time : 13-Nov-2024 14:08 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 14:17 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 3
+Time : 13-Nov-2024 14:56 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 14:56 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 4
+Time : 13-Nov-2024 14:57 Message : AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 13-Nov-2024 14:58 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 13-Nov-2024 14:58 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8978P RequestId: 4
+Time : 13-Nov-2024 15:10 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8978P RequestId: 4
+Time : 13-Nov-2024 15:11 Message : Class : AgentRegistration.cs 
+Function : downloadPass_Click() 
+Exception Occured
+There is no row at position 0.
+Time : 13-Nov-2024 15:12 Message : Class : AgentRegistration.cs 
+Function : downloadPass_Click() 
+Exception Occured
+There is no row at position 0.
+Time : 13-Nov-2024 15:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 15:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 5
+Time : 13-Nov-2024 15:15 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 5
+Time : 13-Nov-2024 15:15 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9846M RequestId: 5
+Time : 13-Nov-2024 18:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 6
+Time : 13-Nov-2024 18:02 Message : AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 13-Nov-2024 18:03 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 6
+Time : 13-Nov-2024 18:04 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8745P RequestId: 6
+Time : 13-Nov-2024 18:06 Message : Initiated Agent Registration Upload Sample File Download Request.
+Time : 13-Nov-2024 18:06 Message : Error AgentRegistration Sample File Download.
+Time : 13-Nov-2024 18:21 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:21 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 7
+Time : 13-Nov-2024 18:22 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 7
+Time : 13-Nov-2024 18:22 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD6561P RequestId: 7
+Time : 13-Nov-2024 18:37 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:37 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, unknown, integer, integer, integer, integer, integer, text) does not exist RequestId: 0
+Time : 13-Nov-2024 18:37 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:43 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:43 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 8
+Time : 13-Nov-2024 18:43 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:49 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 8
+Time : 13-Nov-2024 18:49 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:49 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 8
+Time : 13-Nov-2024 18:50 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:54 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 10
+Time : 13-Nov-2024 18:54 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 18:54 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 11
+Time : 13-Nov-2024 18:55 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 19:00 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 19:01 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 13
+Time : 13-Nov-2024 19:03 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 19:10 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 19:10 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 19
+Time : 13-Nov-2024 19:12 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 19:14 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 21
+Time : 13-Nov-2024 19:14 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 13-Nov-2024 19:14 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 23
+Time : 13-Nov-2024 19:14 Message : AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName:  Status: -1 StatusMsg: Parameter 'p_aggCode' must have its value set RequestId: 0
+Time : 13-Nov-2024 19:15 Message : AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName:  Status: -1 StatusMsg: Parameter 'p_aggCode' must have its value set RequestId: 0
+Time : 13-Nov-2024 19:15 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 23
+Time : 13-Nov-2024 19:15 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9896P RequestId: 23

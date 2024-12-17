@@ -1,0 +1,120 @@
+03-12-2024 10:36:15:0509 : Login Successful. Username Maximus. SessionID : zq5grcbyifrxx23u5y3auir5
+03-12-2024 10:41:27:3719 : Login Successful. Username Maximus. SessionID : kwebbrji5yusmpgejj0lvkuw
+03-12-2024 10:44:09:9621 : Login Successful. Username Maximus. SessionID : vlg0mgr4jjl0p4dlpglnsfdn
+03-12-2024 10:44:47:4800 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.insert_or_update_batch(p_username => text, p_switchid => integer, p_flag => integer, p_dt => jsonb) does not exist
+03-12-2024 10:45:51:7858 : Login Successful. Username Maximus. SessionID : dobqp1tbyb4nk2ykeraj0mue
+03-12-2024 11:32:33:2866 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42601: query has no destination for result data
+03-12-2024 11:32:53:3812 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42601: query has no destination for result data
+03-12-2024 11:47:54:9352 : Login Successful. Username Maximus. SessionID : v2oajfejos0vuplpdljhh0y1
+03-12-2024 12:51:28:4257 : Login Successful. Username Maximus. SessionID : gslizu3ntdshtsvljaep5il1
+03-12-2024 12:56:55:5283 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 12:56:55:5293 : NOTICE: Flag is set to 1, proceeding with validations...
+03-12-2024 12:56:55:5303 : NOTICE: Inserting new record...1
+03-12-2024 12:56:55:5313 : NOTICE: Inserting new record...
+03-12-2024 12:56:55:5543 : NOTICE: Insert successful, RequestId: 26
+03-12-2024 12:57:25:3829 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+03-12-2024 12:57:25:3839 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 12:57:43:5425 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 12:57:43:5435 : NOTICE: Flag is set to 1, proceeding with validations...
+03-12-2024 12:57:43:5435 : NOTICE: Inserting new record...1
+03-12-2024 12:57:43:5444 : NOTICE: Updating existing record with ID: 26
+03-12-2024 12:57:43:5684 : NOTICE: Update successful for RequestId: 26
+03-12-2024 12:58:00:1252 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+03-12-2024 12:58:00:1252 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 12:58:13:1335 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 12:58:13:1345 : NOTICE: Flag is set to 1, proceeding with validations...
+03-12-2024 12:58:13:1354 : NOTICE: Inserting new record...1
+03-12-2024 12:58:13:1364 : NOTICE: Updating existing record with ID: 26
+03-12-2024 12:58:13:1584 : NOTICE: Update successful for RequestId: 26
+03-12-2024 12:58:29:1443 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+03-12-2024 12:58:29:1453 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 12:59:47:5182 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 12:59:47:5202 : NOTICE: Flag is set to 1, proceeding with validations...
+03-12-2024 12:59:47:5232 : NOTICE: Inserting new record...1
+03-12-2024 12:59:47:5252 : NOTICE: Updating existing record with ID: 26
+03-12-2024 12:59:47:5537 : NOTICE: Update successful for RequestId: 26
+03-12-2024 13:00:08:5016 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+03-12-2024 13:00:08:5026 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 13:02:53:4942 : Login Successful. Username Maximus. SessionID : 5fbky2uud0ajslrsg4m1imez
+03-12-2024 13:03:33:3728 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 13:03:33:3738 : NOTICE: Flag is set to 1, proceeding with validations...
+03-12-2024 13:03:33:3748 : NOTICE: Inserting new record...1
+03-12-2024 13:03:33:3748 : NOTICE: Inserting new record...
+03-12-2024 13:03:33:4017 : NOTICE: Insert successful, RequestId: 27
+03-12-2024 13:03:49:7036 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+03-12-2024 13:03:49:7046 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 13:11:36:6293 : Login Successful. Username Maximus. SessionID : buc5nmudoa2abyvyciy4lih4
+03-12-2024 14:39:43:7429 : Login Successful. Username Maximus. SessionID : cbtzgl45m5dvcypn4txg40i1
+03-12-2024 14:40:50:7116 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:40:50:7116 : NOTICE: Flag is set to 1, proceeding with validations...
+03-12-2024 14:40:50:7126 : NOTICE: Inserting new record...1
+03-12-2024 14:40:50:7136 : NOTICE: Inserting new record...
+03-12-2024 14:40:50:7365 : NOTICE: Insert successful, RequestId: 28
+03-12-2024 14:41:12:3056 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+03-12-2024 14:41:12:3066 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:41:55:3278 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:41:55:3288 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:41:55:3298 : NOTICE: Reediting/Declining insert for Request ID: 28
+03-12-2024 14:41:58:9776 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:41:58:9786 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:43:45:1360 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:43:45:1369 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:43:45:1379 : NOTICE: Reediting/Declining update for Request ID: 29
+03-12-2024 14:43:47:2473 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:43:47:2483 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:44:21:6082 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:44:21:6092 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:44:21:6102 : NOTICE: Reediting/Declining insert for Request ID: 24
+03-12-2024 14:44:23:3894 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+03-12-2024 14:44:23:3914 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+03-12-2024 14:44:40:6479 : Class : BCEntity.cs 
+Function : ChangeBCStatusReEdit() 
+Exception Occured
+Keyword not supported: 'port'.
+03-12-2024 14:45:12:8476 : Class : BCEntity.cs 
+Function : ChangeBCStatusReEdit() 
+Exception Occured
+Keyword not supported: 'port'.
+03-12-2024 14:49:49:1339 : Login Successful. Username Maximus. SessionID : jg3wr3ealuxl1jbck5sbautt
+03-12-2024 15:00:01:7549 : Login Successful. Username Maximus. SessionID : kdlr0ld0mnym4tcvmdmu1z5w
+03-12-2024 15:04:18:2494 : Login Successful. Username Maximus. SessionID : j1wmioqnzsoflpmkbekt11zd
+03-12-2024 15:08:35:7280 : Login Successful. Username Maximus. SessionID : m3kqtzqwhlfugsuhspfvi2vt
+03-12-2024 15:13:58:0784 : Login Successful. Username Maximus. SessionID : 3e042sy3f2duyl3kwwbvqjz5
+03-12-2024 15:21:48:2168 : Login Successful. Username Maximus. SessionID : r1xvi31j20uhgjy4bkgeript
+03-12-2024 15:22:57:1383 : Login Successful. Username Maximus. SessionID : yosddygg3pbmz4p14culujpt
+03-12-2024 15:38:08:7364 : Login Successful. Username Maximus. SessionID : ut4a4m4ifgrrcbn5mw3lpxqq
+03-12-2024 15:40:04:9234 : Login Successful. Username Maximus. SessionID : iy25bfb2uprm5xcjs5lr51bn
+03-12-2024 15:40:22:2364 : Class: YourClassName 
+Function: GetBankConfiguration() 
+Exception Occurred
+42P01: missing FROM-clause entry for table "ar"
+03-12-2024 15:47:36:1995 : Login Successful. Username Maximus. SessionID : j1gjcqvp2xog5lhv1lagju0f
+03-12-2024 15:50:28:5187 : Login Successful. Username Maximus. SessionID : d332qt4igqbvc1yontjlwjbv
+03-12-2024 15:53:54:7836 : Login Successful. Username Maximus. SessionID : guukgr5irw2wqzf2tekbe20i
+03-12-2024 15:56:54:4138 : Login Successful. Username Maximus. SessionID : z5mc2lniqkbkrqvvxcpkqxpl
+03-12-2024 15:59:53:6672 : Login Successful. Username Maximus. SessionID : czr23trq12vrrallkw2nbitk
+03-12-2024 16:00:26:7331 : Class : BCEntity.cs 
+Function : ChangeBCStatusReEdit() 
+Exception Occured
+42883: function sp_reeditbcdetails(Mastereqid => text) does not exist
+03-12-2024 16:03:29:1423 : Login Successful. Username Maximus. SessionID : 4slwwdeciamvijhwchme2dzc
+03-12-2024 16:28:51:7128 : Login Successful. Username Maximus. SessionID : efx1xveuefv5cto3zoa30wsq
+03-12-2024 16:48:08:4013 : Login Successful. Username Maximus. SessionID : nark1lxopm4z1rpuoobcwkcd
+03-12-2024 16:49:24:1254 : Login Successful. Username Maximus. SessionID : 3bjv3zdkx4anopabktkjhv1l
+03-12-2024 17:01:28:4160 : Class : BCEntity.cs 
+Function : ChangeBCStatusReEdit() 
+Exception Occured
+42703: column "a" of relation "bcmaster" does not exist
+03-12-2024 18:21:08:3947 : Login Successful. Username Maximus. SessionID : n52dryokyajotbl30ys04t2i
+03-12-2024 18:33:17:7940 : Login Successful. Username Maximus. SessionID : agd5mgeo1kxbrwep2t50smc5
+03-12-2024 18:58:35:3588 : Login Successful. Username Maximus. SessionID : xandglhubmqpmgxtf455yqh4
+03-12-2024 19:08:04:3835 : Login Successful. Username Maximus. SessionID : rbpk52hfubieljybk1rjcu33

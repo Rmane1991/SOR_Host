@@ -1,0 +1,96 @@
+17-10-2024 10:17:08:6653 : Login Successful. Username Maximus. SessionID : 1waolwvlhoqovbl0mcz1jre3
+17-10-2024 10:18:38:2804 : Error executing command: Object cannot be cast from DBNull to other types.
+17-10-2024 10:40:17:4751 : Login Successful. Username Maximus. SessionID : y2wo1zsiyjb5nwlrzdw25kjh
+17-10-2024 10:50:09:9976 : Login Successful. Username Maximus. SessionID : nubyqtn32rxoxksnd2fimohi
+17-10-2024 10:52:16:7538 : Error executing command: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'.
+17-10-2024 11:14:12:3150 : Login Successful. Username Maximus. SessionID : yrh2wpyoufn10ytyktkkmlyo
+17-10-2024 11:15:45:9820 : Error executing command: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'.
+17-10-2024 11:15:51:1158 : Error executing command: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'.
+17-10-2024 11:15:58:7050 : Error executing command: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'.
+17-10-2024 11:16:11:6782 : Error executing command: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'.
+17-10-2024 11:16:48:2014 : Login Successful. Username Maximus. SessionID : eoqbyn4przyxq3g23i34kngy
+17-10-2024 11:38:18:4959 : Login Successful. Username Maximus. SessionID : ueqd1jgs10pzcjs1a003dtfk
+17-10-2024 11:46:34:1985 : Login Successful. Username Maximus. SessionID : owncu2w23f2zgg1ofybfu1bi
+17-10-2024 11:47:32:2159 : Login Successful. Username Maximus. SessionID : ghqxibbxzni5u4vftg1dpx1o
+17-10-2024 11:52:09:7690 : Login Successful. Username Maximus. SessionID : 333nsmawp0qhbqenr1d2homw
+17-10-2024 12:11:59:7456 : Error executing command: 42804: column "masterid" is of type integer but expression is of type character varying
+17-10-2024 12:19:26:4611 : Login Successful. Username Maximus. SessionID : z0ogo0bp1ukeubziv4insh5k
+17-10-2024 12:20:35:7379 : Login Successful. Username Maximus. SessionID : nvyjvzeucbo15unzevjc2pkm
+17-10-2024 12:22:01:0591 : Login Successful. Username Maximus. SessionID : k4vgmav41pboahujefxcuhyp
+17-10-2024 12:24:08:0920 : Login Successful. Username Maximus. SessionID : dyqhdhiaifldxlrc5mzt5j5g
+17-10-2024 12:54:57:1194 : Login Successful. Username Maximus. SessionID : krtsapmggtfjz1b2whler4so
+17-10-2024 13:07:16:7343 : Login Successful. Username Maximus. SessionID : tibce3c0ykmsc0wmpy5hv5lz
+17-10-2024 13:11:14:0027 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+Parameter 'p_username' must have its value set
+17-10-2024 13:11:14:0037 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+Parameter 'p_username' must have its value set
+17-10-2024 13:11:23:5123 : Login Successful. Username Maximus. SessionID : yds25bzunkirhbdr2nkzcgw4
+17-10-2024 13:14:34:8558 : Login Successful. Username Maximus. SessionID : t1gtmjagnw4rqnnwboaffsyi
+17-10-2024 13:27:22:5776 : Login Successful. Username Maximus. SessionID : 0c1utla4ummfuumrs2lm01tz
+17-10-2024 13:27:55:3009 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42725: function public.fn_insert_or_edit_rule(p_username => text, p_groupid => integer, p_rulename => text, p_ruledescription => text, p_aggregator => text, p_txntype => text, p_switch => integer, p_iin => text, p_channel => integer, p_percentage => integer, p_count => integer, p_flag => integer) is not unique
+17-10-2024 13:29:09:9196 : Login Successful. Username Maximus. SessionID : pi23h1ue3xhbtpltiou3etsv
+17-10-2024 13:37:06:1691 : Login Successful. Username Maximus. SessionID : dwm1rg5nleckj1zcjishjrio
+17-10-2024 13:41:38:7089 : Login Successful. Username Maximus. SessionID : qtp12ddpluejp2zw3x2iw3is
+17-10-2024 13:46:49:9339 : Login Successful. Username Maximus. SessionID : 0vxpujxj3r3k33z20ee0l5g1
+17-10-2024 14:13:48:6586 : Login Successful. Username Maximus. SessionID : rs1w35d52amoswom45qcecqr
+17-10-2024 14:21:47:1115 : Login Successful. Username Maximus. SessionID : 3rlkipwruoqtwlcumf11chzm
+17-10-2024 14:34:03:7949 : Login Successful. Username Maximus. SessionID : 25iizonjwedvv5iloaqlfgii
+17-10-2024 14:42:42:9979 : Login Successful. Username Maximus. SessionID : dzal1hf4udcoojcn1faefycd
+17-10-2024 14:56:28:9532 : Login Successful. Username Maximus. SessionID : ziciidh1p1e4caht3mmwsoua
+17-10-2024 14:58:12:9423 : Login Successful. Username Maximus. SessionID : t2zz43e1jlsznjvpjdccrmno
+17-10-2024 15:02:53:3298 : Login Successful. Username Maximus. SessionID : j4xxbhgteq3btzcqmiybe2m0
+17-10-2024 15:12:26:4976 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+Parameter 'p_username' must have its value set
+17-10-2024 15:12:26:5404 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+Parameter 'p_username' must have its value set Npgsql    at Npgsql.NpgsqlParameter.ResolveHandler(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlParameter.Bind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ValidateParameters(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at BussinessAccessLayer.RuleEntity.GetRule() in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\RuleEntity.cs:line 94
+17-10-2024 15:13:04:3934 : Login Successful. Username Maximus. SessionID : mkuqsqqr0jfvk50m3lukm45v
+17-10-2024 15:17:10:8189 : Login Successful. Username Maximus. SessionID : t5kakpbnn15ubishdariltwm
+17-10-2024 15:21:59:2748 : Login Successful. Username Maximus. SessionID : hktlej2wignh5xxv2psnzsnv
+17-10-2024 15:26:55:7597 : Login Successful. Username Maximus. SessionID : cmyjosj1bcufcenceajl1sjk
+17-10-2024 16:21:46:5137 : Login Successful. Username Maximus. SessionID : oprchoyxnyittgib40lxkj0h
+17-10-2024 16:44:42:3252 : Login Successful. Username Maximus. SessionID : b3oarznofvzlh1nxgywbgdrm
+17-10-2024 17:03:34:5238 : Login Successful. Username Maximus. SessionID : lub3od2ly1cbddsthuugqzgz
+17-10-2024 17:07:21:1008 : Login Successful. Username Maximus. SessionID : u3mgtzmfrruxtivo5vzwr4id
+17-10-2024 17:15:44:0431 : Login Successful. Username Maximus. SessionID : l21wvxmdm14jl1mjcazxun5o
+17-10-2024 17:47:10:5216 : Login Successful. Username Maximus. SessionID : whc0hks1khoqoiagqn4jnpzt
+17-10-2024 17:57:09:0083 : Login Successful. Username Maximus. SessionID : 4pzo3m4p5ngxpz0m4vzqtjs2
+17-10-2024 18:03:19:8304 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+Could not load file or assembly 'Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+17-10-2024 18:07:59:3240 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+Could not load file or assembly 'Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+17-10-2024 18:08:14:3043 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+Could not load file or assembly 'Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+17-10-2024 18:14:53:9651 : Login Successful. Username Maximus. SessionID : xjqemks2kl1s1sls4rojhk53
+17-10-2024 18:20:34:4761 : Login Successful. Username Maximus. SessionID : t3g3vgxb0id4mlvwntolck1k
+17-10-2024 18:33:48:5605 : Login Successful. Username Maximus. SessionID : cfapens5p2lh4nk3dua2cdts
+17-10-2024 18:38:40:5855 : Login Successful. Username Maximus. SessionID : doamu3fwy21m5kqwoerl5z1u

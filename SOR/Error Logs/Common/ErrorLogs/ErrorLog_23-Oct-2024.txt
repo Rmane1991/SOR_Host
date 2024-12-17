@@ -1,0 +1,7 @@
+Time : 23-Oct-2024 18:14
+Source - : System.Web
+StackTrace -  :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at SOR.Pages.BC.AggRegistration.GetDetailsBack(String val) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Aggregator\AggRegistration.aspx.cs:line 1644
+Message - : 'ddlState' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+

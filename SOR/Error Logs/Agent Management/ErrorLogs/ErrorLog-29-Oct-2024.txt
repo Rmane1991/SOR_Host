@@ -1,0 +1,6 @@
+----------------------------------------------------------------------------
+Time : 29-Oct-2024 15:57
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.EmailSMSAlertscs.HttpGetRequestEmail() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\EmailSMSAlertscs.cs:line 229
+   at SOR.Pages.Agent.AgentRegistration.btnBulkUpload_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2520
+Message - : Object reference not set to an instance of an object.

@@ -1,0 +1,13 @@
+19-10-2024 15:23:45:3591 : Login Successful. Username Maximus. SessionID : uyvc25srxzoiuepf5o4fqodk
+19-10-2024 16:12:46:0714 : Login Successful. Username Maximus. SessionID : 3e5jk2s3wqcszu30kvnswfty
+19-10-2024 16:39:08:1593 : Login Successful. Username Maximus. SessionID : ywvcxtfelff5rrwjti5ymuyp
+19-10-2024 17:55:24:9645 : Login Request Failed (Login Page). Exception : 42883: operator does not exist: bit = boolean Username : Maximus
+19-10-2024 17:58:45:3149 : Login Successful. Username Maximus. SessionID : of00uvxoizdzn5z3w3llvzr1
+19-10-2024 17:58:45:7302 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+19-10-2024 17:58:45:7840 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean

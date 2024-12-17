@@ -1,0 +1,12 @@
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean
+Time : 19-Oct-2024 16:13 Message : pgUserAccessManagement: gdvEditMenu_RowDataBound: Exception: 42883: operator does not exist: bit = boolean

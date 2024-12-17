@@ -1,0 +1,32 @@
+29-11-2024 11:56:52:0345 : Login Successful. Username Maximus. SessionID : tji3u2qnpmtc04uuyrm5zikl
+29-11-2024 11:57:16:2473 : Class: RuleEntity.cs 
+Function: ValidateRule() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+29-11-2024 11:58:00:1557 : Class: RuleEntity.cs 
+Function: ValidateRule() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+29-11-2024 12:39:32:8647 : Login Successful. Username Maximus. SessionID : zl3mtuny3p54vggksvhtnhyo
+29-11-2024 12:52:41:8761 : Login Successful. Username Maximus. SessionID : nqhj4dsrg1nolzlyvf2bcbg0
+29-11-2024 12:55:39:5691 : Login Successful. Username Maximus. SessionID : t0tupoemsmj2100wgpxffyu4
+29-11-2024 13:01:13:0396 : Login Successful. Username Maximus. SessionID : h2zvachgwqcvcjhpvkddokas
+29-11-2024 14:42:39:0439 : Login Successful. Username Maximus. SessionID : hwybrrzmo1fkobmmaiangtgv
+29-11-2024 14:48:04:6962 : Login Successful. Username Maximus. SessionID : 4fcolrdgizv1b4oe0pabr2t5
+29-11-2024 14:58:04:5048 : Login Successful. Username Maximus. SessionID : rorrnzm1gurxqy53lpxauczo
+29-11-2024 15:00:33:5581 : Login Successful. Username Maximus. SessionID : fmia2w3rr0pm413c3byzuvoq
+29-11-2024 15:06:59:5703 : Login Successful. Username Maximus. SessionID : sgfpxr2oyheatjpcyk1fjba2
+29-11-2024 17:01:46:9304 : Login Successful. Username Maximus. SessionID : fbgf0jl3haf0dm4dsof4d4nd
+29-11-2024 17:10:57:8387 : Login Successful. Username Maximus. SessionID : stym2l2hqz1m5iu1nxxadulg
+29-11-2024 18:08:08:6661 : Login Successful. Username Maximus. SessionID : kkgkihopbn11uouykcml54b2
+29-11-2024 18:10:10:9975 : Login Successful. Username Maximus. SessionID : 1xvrdensafraftgnpceiq3qg
+29-11-2024 18:34:02:6873 : Login Successful. Username Maximus. SessionID : cxoi51farfgm5r0fzoo5dncp
+29-11-2024 18:48:12:7538 : Login Successful. Username Maximus. SessionID : rkf54utgsmani4f2vsxv2dtv
+29-11-2024 18:50:43:3052 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+42702: column reference "status" is ambiguous
+29-11-2024 18:50:51:5161 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+42702: column reference "status" is ambiguous

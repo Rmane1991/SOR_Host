@@ -1,0 +1,10 @@
+Time : 24-Oct-2024 13:04 Message : TrRule: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 24-Oct-2024 13:04 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 24-Oct-2024 13:06 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 24-Oct-2024 13:06 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 24-Oct-2024 14:45 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : 96 | ResponseCode :  | ResponseMessage : 
+Time : 24-Oct-2024 14:47 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : 96 | ResponseCode :  | ResponseMessage : 
+Time : 24-Oct-2024 14:48 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 24-Oct-2024 14:48 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 24-Oct-2024 14:48 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 24-Oct-2024 15:15 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

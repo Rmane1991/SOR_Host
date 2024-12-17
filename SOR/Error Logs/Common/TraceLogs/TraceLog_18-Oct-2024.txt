@@ -1,0 +1,94 @@
+18-10-2024 10:33:29:9618 : Login Successful. Username Maximus. SessionID : k2iqe0duie5wkx4fjavtkqpp
+18-10-2024 10:35:16:3415 : Login Successful. Username Maximus. SessionID : odddvfbcslwpsu5zmv30lqxc
+18-10-2024 10:52:33:8388 : Login Successful. Username Maximus. SessionID : 14qzbf1euvypv4txmz4i12x3
+18-10-2024 10:53:05:7253 : Create User Request Failed With fillFranchise. 
+18-10-2024 10:57:18:4611 : Login Successful. Username Maximus. SessionID : nu4q1pikfuojeib0dfx5wfx0
+18-10-2024 10:58:21:4742 : Create User Request Failed With fillFranchise. 
+18-10-2024 11:42:36:1871 : Login Successful. Username Maximus. SessionID : mp212n1eia0ov2uu2stegjlp
+18-10-2024 11:45:33:8966 : Request Received From Create User. Username : Maximus
+18-10-2024 11:47:11:6552 : Request Received From Create User. UserName : Admin11 Password : JLAMEN8Z7povhpORfPfXf+mkVe/2kgOKFsCfcIseYvg= Email : xyz@gmail.com Mobile : 8954621300 RoleId : 2 UserRoleGroup : 2 UserName : Maximus RandomStringForSalt : 24181110012m@# RandomStringForSalt : 24181110012m@# ClientID : BC000001 UserId : 0
+18-10-2024 11:52:45:5209 : Request Received From Create User. Username : Maximus
+18-10-2024 11:52:53:5743 : Request Received From Create User. UserName : Admin11 Password : 9FsWcxW0dztQgqTG8buD9fQ9/lW+8H1A/zVT9GaAIDQ= Email : xyz@gmail.com Mobile : 8954621300 RoleId : 2 UserRoleGroup : 1 UserName : Maximus RandomStringForSalt : 24181110487L&* RandomStringForSalt : 24181110487L&* ClientID : BC000001 UserId : 0
+18-10-2024 11:55:23:6389 : Login Successful. Username Maximus. SessionID : egsmssbjffy3sod1otffqxuf
+18-10-2024 11:57:00:6528 : Request Received From Create User. Username : Maximus
+18-10-2024 11:57:17:4274 : Request Received From Create User. UserName : Admin11 Password : 8T2eVjZ+wktxAxDA6ereEJm4DWkqAI36Cdk8mNcNotI= Email : xyz@gmail.com Mobile : 8954621300 RoleId : 2 UserRoleGroup : 1 UserName : Maximus RandomStringForSalt : 24181110041Z!@ RandomStringForSalt : 24181110041Z!@ ClientID : BC000001 UserId : 0
+18-10-2024 12:01:53:4238 : Request Received From Create User. Username : Maximus
+18-10-2024 12:01:53:4688 : Request Received From Create User. UserName : Admin11 Password : eGmOhvzNYTom3dWw8sYd6o76+kPBrFD/mp3AjSpT+wA= Email : xyz@gmail.com Mobile : 8954621300 RoleId : 2 UserRoleGroup : 1 UserName : Maximus RandomStringForSalt : 24181210531l!@ RandomStringForSalt : 24181210531l!@ ClientID : BC000001 UserId : 0
+18-10-2024 12:07:28:4569 : Login Successful. Username Maximus. SessionID : 0g5yqh0n41j5gx2dc1j3hjba
+18-10-2024 12:08:21:6776 : Request Received From Create User. Username : Maximus
+18-10-2024 12:08:28:4736 : Request Received From Create User. UserName : Auser11 Password : 84TIv7M1N2utY/xQKP/MxKUzP+9w1jIVhFCJQXG7OWk= Email : xyz@gmail.com Mobile : 8954621300 RoleId : 2 UserRoleGroup : 1 UserName : Maximus RandomStringForSalt : 24181210263n#$ RandomStringForSalt : 24181210263n#$ ClientID : BC000001 UserId : 0
+18-10-2024 12:12:15:1556 : Create User Request Successful. Username : Maximus User Name : Auser11
+18-10-2024 12:18:27:2380 : Login Successful. Username Maximus. SessionID : r2cr25az5unfxhy1yqwydlih
+18-10-2024 12:19:27:2444 : Request Received From Create User. Username : Maximus
+18-10-2024 12:19:29:6910 : Create User Request Successful. Username : Maximus User Name : Auser12
+18-10-2024 12:20:57:4787 : Login Successful. Username Maximus. SessionID : ippd0uqq3itj1xjwbqdjxmjl
+18-10-2024 12:21:26:2976 : Create User Request Failed With fillFranchise. 
+18-10-2024 12:21:49:4438 : Request Received From Create User. Username : Maximus
+18-10-2024 12:21:58:6957 : Create User Request Successful. Username : Maximus User Name : Auser121
+18-10-2024 12:29:05:6411 : Login Successful. Username Maximus. SessionID : wj3ih5kn3eevizrsqslrjrjq
+18-10-2024 12:37:00:1412 : Login Successful. Username Maximus. SessionID : 3o5kjbzhpeqj0fslloua5ipg
+18-10-2024 12:41:23:5192 : Login Successful. Username Maximus. SessionID : brd4ssiuzfp4eobx3sq24vrt
+18-10-2024 12:52:13:6152 : Login Successful. Username Maximus. SessionID : qdsb1pe0hh032o5mgkcljatr
+18-10-2024 13:12:17:4457 : Login Successful. Username Maximus. SessionID : qrigg0fs0tsxp3yvh2kjq2bz
+18-10-2024 14:20:26:8902 : Login Successful. Username Maximus. SessionID : nkbayxsu21s0zezx1fhr2q4f
+18-10-2024 14:34:31:8162 : Login Successful. Username Maximus. SessionID : ry50zdv2d1ig2rxrsibpinbc
+18-10-2024 14:35:31:7558 : Login Successful. Username Maximus. SessionID : l2xvcuvp3k4v22mv0it0wamj
+18-10-2024 14:41:39:4892 : Login Successful. Username Maximus. SessionID : afnx5nqfe2chmccunfouuxft
+18-10-2024 14:51:09:6840 : Login Successful. Username Maximus. SessionID : nlfaojjtkzkatq2ztokpejiy
+18-10-2024 14:52:42:8185 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+18-10-2024 14:52:42:8195 : Login Successful. Username Maximus. SessionID : v2sohz0zzv5h3qhgvsmzubtd
+18-10-2024 14:52:46:5712 : Login Successful. Username Maximus. SessionID : xmgcj0vuwn0mh3y1wguqypql
+18-10-2024 14:58:20:9736 : Login Successful. Username Maximus. SessionID : 0zhoupluhc5h0mkwxph3jnnz
+18-10-2024 15:08:25:1579 : Login Successful. Username Maximus. SessionID : pah1tp0boa4vy22iunas4izi
+18-10-2024 15:20:58:1814 : Login Successful. Username Maximus. SessionID : h35el0fr5kj4wgf0hvitgjj0
+18-10-2024 15:42:23:9257 : Login Successful. Username Maximus. SessionID : ksqihmzvkbcr1rdyitimgrth
+18-10-2024 15:48:43:3695 : Login Successful. Username Maximus. SessionID : pqbhexd1rw1m4y2log1s2uji
+18-10-2024 15:52:57:2881 : Login Successful. Username Maximus. SessionID : euowd0nh3aewdnlhlunfvrjl
+18-10-2024 16:20:29:3727 : Login Successful. Username Maximus. SessionID : fmphzakqj40xjtblyycdpxkm
+18-10-2024 16:31:08:6048 : Login Successful. Username Maximus. SessionID : xxrqolgtahiqn3xlbque1qcz
+18-10-2024 16:39:16:9077 : Login Successful. Username Maximus. SessionID : xwbcu2z23turjzqyqe00tvdw
+18-10-2024 16:45:20:3315 : Login Successful. Username Maximus. SessionID : crre5fyllp3dyolx1jqtgt5g
+18-10-2024 17:00:55:8003 : Login Successful. Username Maximus. SessionID : zgx23jevkgwsrnk1bnwrotul
+18-10-2024 17:08:35:9554 : Login Successful. Username Maximus. SessionID : enak3q515vk5y14y1ezwb1tk
+18-10-2024 17:20:27:2657 : Login Successful. Username Maximus. SessionID : i0lmxbmoufxt4p32q1rvlmqw
+18-10-2024 18:06:53:8259 : Login Successful. Username Maximus. SessionID : syebz0krdyrewo1bbwqxyzsc
+18-10-2024 18:23:53:0271 : Login Successful. Username Maximus. SessionID : drquu3kxmibrm1iwc1or2tch
+18-10-2024 18:26:40:2294 : Login Successful. Username Maximus. SessionID : dxcvk1ovf1xlhjcou3emsp2e
+18-10-2024 18:28:36:7010 : Login Successful. Username Maximus. SessionID : wv20pksa0xdo4tulrgr2zvbq
+18-10-2024 18:37:14:0555 : Login Successful. Username Maximus. SessionID : bxgkrxrcsxuqj5y45amdx0i4
+18-10-2024 18:45:06:8150 : Login Successful. Username Maximus. SessionID : vnupaauu5co1sh4pqdla2dcq
+18-10-2024 18:50:21:2204 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 18:50:21:2712 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 18:51:04:8730 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 18:51:04:9149 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 19:05:38:7412 : Login Successful. Username Maximus. SessionID : wdojt3p2kfftjxm1ynzairuq
+18-10-2024 19:05:39:1426 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 19:05:39:1999 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 19:06:28:0626 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 19:06:28:1064 : Class : LoginEntity.cs 
+Function : GetMenuListData() 
+Exception Occurred
+42883: operator does not exist: bit = boolean
+18-10-2024 19:17:46:3350 : Login Successful. Username Maximus. SessionID : frhz3puor5ypflof3jbvfoaz
+18-10-2024 20:14:39:9947 : Login Successful. Username Maximus. SessionID : 0mvs3ajwkzbhehthuqw0vzk2

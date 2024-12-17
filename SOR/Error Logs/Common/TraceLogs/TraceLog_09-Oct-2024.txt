@@ -135,3 +135,140 @@ Exception Occurred
 Function : btnView_Click() 
 Exception Occured
 42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_Flag => integer) does not exist
+09-10-2024 16:21:59:9058 : Login Successful. Username Maximus. SessionID : 4y5j05fuxgt1c5yg4b5ctxlp
+09-10-2024 16:49:13:5079 : Login Successful. Username Maximus. SessionID : xigjj4qn5xrgk3e0zmzxlcf1
+09-10-2024 16:51:27:5519 : Login Successful. Username Maximus. SessionID : mgkkqqtsmw4ysmwiahkhw3ji
+09-10-2024 16:54:43:2633 : Login Successful. Username Maximus. SessionID : sdjbgatnmwi4azhr0qfh32tx
+09-10-2024 16:58:29:8518 : Login Successful. Username Maximus. SessionID : w3lt32y45bs2s1vjeuqgfrnk
+09-10-2024 17:01:33:4602 : Login Successful. Username Maximus. SessionID : 2ouklglpkg450vnn00yh1dam
+09-10-2024 17:02:05:4875 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42883: function public.spbcrequestvalidationgetvalidate(p_BCReqId => text, p_flag => integer) does not exist
+09-10-2024 17:02:43:2878 : Login Successful. Username Maximus. SessionID : enuog5ux1qefb55zv13wcuiu
+09-10-2024 17:03:24:3497 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42703: column "pflag" does not exist
+09-10-2024 17:03:24:3796 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42703: column "pflag" does not exist
+09-10-2024 17:04:50:9147 : Login Successful. Username Maximus. SessionID : hds4equj45ubkv5jo1uspor3
+09-10-2024 17:05:42:2068 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42703: column "pflag" does not exist
+09-10-2024 17:05:42:2357 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42703: column "pflag" does not exist
+09-10-2024 17:06:22:5249 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42703: column "pbcreqid" does not exist
+09-10-2024 17:06:22:5458 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42703: column "pbcreqid" does not exist
+09-10-2024 17:07:02:8477 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+42883: operator does not exist: integer = character varying
+09-10-2024 17:07:02:8766 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+09-10-2024 17:11:45:1675 : Class : BCEntity.cs 
+Function : GetOnboradingbcDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 17:23:32:7737 : Login Successful. Username Maximus. SessionID : 4nls1kpooyknxmohoyx44ctj
+09-10-2024 17:23:56:6419 : Class : BCEntity.cs 
+Function : GetOnboradingbcDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 17:24:30:4274 : Class : BCEntity.cs 
+Function : GetOnboradingbcDetails() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 17:26:01:7702 : Login Successful. Username Maximus. SessionID : u1bpkgiqyem5st4ud0rjup1d
+09-10-2024 17:28:33:2673 : Login Successful. Username Maximus. SessionID : jr5hclo0m014gxrmpet1qx5s
+09-10-2024 17:31:28:8669 : Login Successful. Username Maximus. SessionID : afxsf1jeoxyhsyi0okw5uqo0
+09-10-2024 17:40:33:2442 : Login Successful. Username Maximus. SessionID : ghrnvg2kn3qzbwnhkcf0dtrj
+09-10-2024 17:44:34:4540 : Login Successful. Username Maximus. SessionID : 05trmqvjfzc4xazzq4lwk0ke
+09-10-2024 17:53:14:1695 : Login Successful. Username Maximus. SessionID : ptyg1n5kydlvqseeuminyhvj
+09-10-2024 17:53:35:9620 : Login Successful. Username Maximus. SessionID : p4cxkdygelbalbzjgordddej
+09-10-2024 17:54:16:2636 : Login Successful. Username Maximus. SessionID : mrdwce2duo5lg3v1m31q1iiz
+09-10-2024 18:06:57:4203 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:06:57:4213 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:08:06:1282 : Postgres Error: 42703: column "bcreqid" does not exist
+09-10-2024 18:08:25:4428 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:08:25:4438 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:13:34:0348 : Postgres Error: 42703: column "firstname" does not exist
+09-10-2024 18:13:56:6968 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:13:56:6978 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:14:22:2777 : Postgres Error: 42804: column "isremoved" is of type integer but expression is of type boolean
+09-10-2024 18:14:33:0676 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:14:33:0686 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:14:34:4962 : Class : AgentRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 18:14:55:0955 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:14:55:0965 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:17:55:8900 : Login Successful. Username Maximus. SessionID : bdozyssaf5snkxy443rwtk3d
+09-10-2024 18:18:13:5150 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:18:13:5160 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:18:13:6546 : Class : AgentRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Keyword not supported: 'port'.
+09-10-2024 18:18:27:2320 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:18:27:2330 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:19:26:7281 : Login Successful. Username Maximus. SessionID : n33ob3wkix4mwksalzpgfc35
+09-10-2024 18:19:52:6190 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 18:19:52:6199 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 18:19:52:8418 : Class : BCEntity.cs 
+Function : GetBCDocuments() 
+Exception Occurred
+Parameter 'p_mode' must have its value set
+09-10-2024 19:32:23:6018 : Login Successful. Username Maximus. SessionID : n25srjsxj3xj030a3flwynxu
+09-10-2024 19:32:56:5866 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:32:56:5876 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:36:45:4949 : Login Successful. Username Maximus. SessionID : s5kxmihtc3ve00ssiuqwflpg
+09-10-2024 19:37:15:8133 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:37:15:8143 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:38:54:1119 : Login Successful. Username Maximus. SessionID : ghx2r2nyml0hqzygpbipap0i
+09-10-2024 19:39:17:2279 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:39:17:2299 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:41:12:7397 : Class : AgentRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+42703: column "p_bcreqid" does not exist
+09-10-2024 19:41:21:6332 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:41:21:6342 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:42:55:1917 : Login Successful. Username Maximus. SessionID : rb2jvkwdhx44cmkrpsw0ymdz
+09-10-2024 19:43:24:1957 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:43:24:1967 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:43:58:6626 : Class : AgentRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+42809: public.sp_get_bc_documents(p_bcreqid => text) is a procedure
+09-10-2024 19:44:09:6869 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:44:09:6879 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:45:39:3893 : Login Successful. Username Maximus. SessionID : xvrnhq3zgao2blfgkkwyw0t3
+09-10-2024 19:46:20:8523 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:46:20:8523 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:47:57:0860 : Login Successful. Username Maximus. SessionID : l4s1kyuwka2rluingiyaorpc
+09-10-2024 19:48:19:0685 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:48:19:0695 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:49:49:6470 : Login Successful. Username Maximus. SessionID : fgzgp34pzfyg00vnit02v4dp
+09-10-2024 19:50:31:3213 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:50:31:3223 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 19:50:51:8028 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 19:50:51:8038 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 20:03:37:5013 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 20:03:37:5023 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+09-10-2024 20:03:52:3912 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+09-10-2024 20:03:52:3922 : NOTICE: Flag is not set to 1, skipping insert/update logic.

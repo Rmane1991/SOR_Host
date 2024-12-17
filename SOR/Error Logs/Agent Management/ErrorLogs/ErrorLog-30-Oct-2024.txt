@@ -1,0 +1,94 @@
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 12:49
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 12:49
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 12:51
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 15:42
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 15:45
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.EmailSMSAlertscs.HttpGetRequestEmail() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\EmailSMSAlertscs.cs:line 229
+   at SOR.Pages.Agent.AgentRegistration.btnBulkUpload_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2518
+Message - : Object reference not set to an instance of an object.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 15:49
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 15:58
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 18:27
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2261
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 19:08
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnsample_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2198
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 30-Oct-2024 19:08
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnZipsample_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 1108
+Message - : Thread was being aborted.

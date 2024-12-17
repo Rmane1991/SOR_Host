@@ -1,0 +1,15 @@
+Time : 28-Nov-2024 13:03 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 8 Fullname: Test User: AdminMGMT ReceiverEmailID: r@t.com ContactNo: 8275370066 Remarks: Approve.
+Time : 28-Nov-2024 13:03 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 8 Fullname: Test User: AdminMGMT ReceiverEmailID: r@t.com ContactNo: 8275370066 Remarks: Approve.ActivityType: 0
+Time : 28-Nov-2024 13:03 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 28-Nov-2024 14:17 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 24
+Time : 28-Nov-2024 14:18 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 24
+Time : 28-Nov-2024 14:18 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: BCTest User: Maximus ReceiverEmailID: xy88@gmail.com ContactNo: 8954621318 Remarks: Approve.
+Time : 28-Nov-2024 14:18 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 24 Fullname: BCTest User: Maximus ReceiverEmailID: xy88@gmail.com ContactNo: 8954621318 Remarks: Approve.ActivityType: 0
+Time : 28-Nov-2024 14:18 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 28-Nov-2024 14:18 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 9
+Time : 28-Nov-2024 14:18 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 9
+Time : 28-Nov-2024 14:32 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 10
+Time : 28-Nov-2024 14:33 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 10
+Time : 28-Nov-2024 14:33 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 10 Fullname: AggTest User: Maximus ReceiverEmailID: xy959@gmail.com ContactNo: 8954621395 Remarks: Approve.
+Time : 28-Nov-2024 14:33 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 10 Fullname: AggTest User: Maximus ReceiverEmailID: xy959@gmail.com ContactNo: 8954621395 Remarks: Approve.ActivityType: 0
+Time : 28-Nov-2024 14:33 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.

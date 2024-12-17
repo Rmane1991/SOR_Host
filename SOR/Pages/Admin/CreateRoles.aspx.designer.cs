@@ -67,15 +67,6 @@ namespace SOR.Pages.Admin {
         protected global::System.Web.UI.WebControls.Panel pnlAddPages;
         
         /// <summary>
-        /// ddlRoleID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRoleID;
-        
-        /// <summary>
         /// lbtnAddRole control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace SOR.Pages.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton lbtnAddRole;
+        
+        /// <summary>
+        /// lblRecordsCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRecordsCount;
         
         /// <summary>
         /// BtnCsv control.
@@ -101,15 +101,6 @@ namespace SOR.Pages.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton BtnXls;
-        
-        /// <summary>
-        /// lblRecordsCount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecordsCount;
         
         /// <summary>
         /// panelGrid control.

@@ -1,0 +1,87 @@
+Time : 15-Oct-2024 11:50 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:51 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:53 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:54 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column h.bcreqid does not exist
+Time : 15-Oct-2024 11:58 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column m.reqid does not exist
+Time : 15-Oct-2024 12:05 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column m.isactive does not exist
+Time : 15-Oct-2024 12:06 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Oct-2024 12:07 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Oct-2024 12:11 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BCName' was not found on the selected data source.
+Time : 15-Oct-2024 12:27 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column bt.bcreqid does not exist
+Time : 15-Oct-2024 12:31 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = bit
+Time : 15-Oct-2024 12:36 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+42883: operator does not exist: boolean = bit
+Time : 15-Oct-2024 12:38 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BC Code'.
+Time : 15-Oct-2024 12:40 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BC ID'.
+Time : 15-Oct-2024 12:41 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xydvdz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 15-Oct-2024 12:43 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Object reference not set to an instance of an object.
+Time : 15-Oct-2024 12:43 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xydvdz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 15-Oct-2024 12:43 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42703: column "bcreqid" does not exist
+Time : 15-Oct-2024 12:46 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xydvdz@gmail.com ContactNo: 7985461232 Remarks: gfbf
+Time : 15-Oct-2024 12:52 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Decline Flag: 6 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xydvdz@gmail.com ContactNo: 7985461232 Remarks: gfbf
+Time : 15-Oct-2024 12:52 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 15-Oct-2024 12:52 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42703: column b.bcreqid does not exist
+Time : 15-Oct-2024 12:55 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42703: column b.bcstatus does not exist
+Time : 15-Oct-2024 12:56 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ReqId'.
+Time : 15-Oct-2024 12:59 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BCReqId'.
+Time : 15-Oct-2024 13:01 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 15-Oct-2024 13:01 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 15-Oct-2024 13:01 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 2 Fullname: BCNam   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 15-Oct-2024 13:01 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Oct-2024 13:01 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 2 Fullname: BCNam   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.ActivityType: 0
+Time : 15-Oct-2024 13:02 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 2 Fullname: BCNam   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 15-Oct-2024 13:57 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Oct-2024 13:57 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 2 Fullname: BCNam   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.ActivityType: 0
+Time : 15-Oct-2024 14:05 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 15-Oct-2024 14:06 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 3
+Time : 15-Oct-2024 14:06 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 3
+Time : 15-Oct-2024 14:06 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyzHNGHN@gmail.com ContactNo: 7985461200 Remarks: Approve.
+Time : 15-Oct-2024 14:06 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyzHNGHN@gmail.com ContactNo: 7985461200 Remarks: Approve.ActivityType: 0
+Time : 15-Oct-2024 14:06 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.

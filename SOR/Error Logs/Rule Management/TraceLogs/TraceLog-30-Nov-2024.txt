@@ -1,0 +1,15 @@
+Time : 30-Nov-2024 11:59 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 12:00 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 12:43 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 15:59 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:05 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:05 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:06 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:07 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:09 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:09 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:20 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:20 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 30-Nov-2024 16:35 Message : Versioning: btnSave_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 30-Nov-2024 16:43 Message : Versioning: btnSave_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 30-Nov-2024 16:46 Message : Versioning: btnSave_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

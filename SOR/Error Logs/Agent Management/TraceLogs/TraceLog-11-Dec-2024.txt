@@ -1,0 +1,113 @@
+Time : 11-Dec-2024 11:28 Message : AgentRegistrationDAL: GetBC: UserName:  Exception: 42702: column reference "id" is ambiguous
+Time : 11-Dec-2024 11:28 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42702: column reference "id" is ambiguous
+Time : 11-Dec-2024 11:45 Message : AgentRegistrationDAL: GetBC: UserName:  Exception: 42702: column reference "id" is ambiguous
+Time : 11-Dec-2024 11:45 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42702: column reference "id" is ambiguous
+Time : 11-Dec-2024 12:55 Message : AEPSTransactions: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 11-Dec-2024 12:55 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 12:55 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 11-Dec-2024 12:57 Message : AEPSTransactions: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 11-Dec-2024 12:57 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 12:57 Message : AEPSTransactions: btnexport_ServerClick | CSV : Exception: Thread was being aborted.
+Time : 11-Dec-2024 12:57 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 12:58 Message : Page : AEPS Transaction Report - Request Received For Export Report. Start-Time : 12:58:09
+Time : 11-Dec-2024 12:58 Message : Page : TxnExport - Request Received For Date Range Handler. FromDate : 2024-12-01 ToDate : 2024-12-11
+Time : 11-Dec-2024 12:58 Message : Page : TxnExport - Request Received For Split Data Table. Per Sheet Record Range : 1000000 Total Records : 47 Start-Time : 12:58:17 End-Time : 12:58:17
+Time : 11-Dec-2024 12:58 Message : Page : AEPS Transaction Report - Request Received For Export Report. Start-Time : 12:58:42
+Time : 11-Dec-2024 12:58 Message : Page : TxnExport - Request Received For Date Range Handler. FromDate : 2024-12-01 ToDate : 2024-12-11
+Time : 11-Dec-2024 12:58 Message : Page : TxnExport - Request Received For Split Data Table. Per Sheet Record Range : 1000000 Total Records : 47 Start-Time : 12:58:43 End-Time : 12:58:43
+Time : 11-Dec-2024 12:58 Message : AEPSTransactions: btnexport_ServerClick | ZIP : Exception: Thread was being aborted.
+Time : 11-Dec-2024 12:58 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 15:41 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 11-Dec-2024 15:41 Message : AllTransactions: fillGrid: Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 11-Dec-2024 15:42 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 11-Dec-2024 15:42 Message : AllTransactions: fillGrid: Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 11-Dec-2024 15:44 Message : AllTransactions: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 11-Dec-2024 15:44 Message : Page : AllTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 15:44 Message : AllTransactions: btnexport_ServerClick | CSV : Exception: Thread was being aborted.
+Time : 11-Dec-2024 15:44 Message : Page : AllTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 15:44 Message : Page : All Transaction Report - Request Received For Export Report. Start-Time : 15:44:27
+Time : 11-Dec-2024 15:44 Message : Page : AllTxnExport - Request Received For Date Range Handler. FromDate : 2024-12-01 ToDate : 2024-12-11
+Time : 11-Dec-2024 15:44 Message : Page : AllTxnExport - Request Received For Split Data Table. Per Sheet Record Range : 1000000 Total Records : 47 Start-Time : 15:44:28 End-Time : 15:44:28
+Time : 11-Dec-2024 15:44 Message : AllTransactions: btnexport_ServerClick | ZIP : Exception: Thread was being aborted.
+Time : 11-Dec-2024 15:44 Message : Page : AllTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 17:58 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 17:58 Message : RGSReport: FillGrid: Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 17:58 Message : Page : RGSReport.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 11-Dec-2024 18:01 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:01 Message : RGSReport: FillGrid: Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:01 Message : Page : RGSReport.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 11-Dec-2024 18:04 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:04 Message : RGSReport: FillGrid: Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:04 Message : Page : RGSReport.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 11-Dec-2024 18:06 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:06 Message : RGSReport: FillGrid: Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:06 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42P01: relation "temp_table" does not exist
+Time : 11-Dec-2024 18:08 Message : RGSReport: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 11-Dec-2024 18:08 Message : Page : RGSReport.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 18:08 Message : RGSReport: btnexport_ServerClick | CSV : Exception: Thread was being aborted.
+Time : 11-Dec-2024 18:08 Message : Page : RGSReport.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 18:08 Message : Page : Rule Wise Transaction Report - Request Received For Export Report. Start-Time : 18:08:56
+Time : 11-Dec-2024 18:08 Message : Page : RGSReport - Request Received For Date Range Handler. FromDate : 2024-12-01 ToDate : 2024-12-11
+Time : 11-Dec-2024 18:08 Message : Page : RGSReport - Request Received For Split Data Table. Per Sheet Record Range : 1000000 Total Records : 4 Start-Time : 18:08:56 End-Time : 18:08:56
+Time : 11-Dec-2024 18:08 Message : RGSReport: btnexport_ServerClick | ZIP : Exception: Thread was being aborted.
+Time : 11-Dec-2024 18:08 Message : Page : RGSReport.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 18:48 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "p_channeltype" does not exist
+Time : 11-Dec-2024 18:48 Message : BCWiseTxn: FillGrid: Exception: 42703: column "p_channeltype" does not exist
+Time : 11-Dec-2024 19:03 Message : BCWiseTxn: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 11-Dec-2024 19:03 Message : Page : BCWiseTxn.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 19:03 Message : BCWiseTxn: btnexport_ServerClick | CSV : Exception: Thread was being aborted.
+Time : 11-Dec-2024 19:03 Message : Page : BCWiseTxn.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 11-Dec-2024 19:03 Message : Page : Rule Wise Transaction Report - Request Received For Export Report. Start-Time : 19:03:55
+Time : 11-Dec-2024 19:03 Message : Page : BCWiseTxn - Request Received For Date Range Handler. FromDate : 2024-12-01 ToDate : 2024-12-11
+Time : 11-Dec-2024 19:03 Message : Page : BCWiseTxn - Request Received For Split Data Table. Per Sheet Record Range : 1000000 Total Records : 2 Start-Time : 19:03:55 End-Time : 19:03:55
+Time : 11-Dec-2024 19:03 Message : BCWiseTxn: btnexport_ServerClick | ZIP : Exception: Thread was being aborted.
+Time : 11-Dec-2024 19:03 Message : Page : BCWiseTxn.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.

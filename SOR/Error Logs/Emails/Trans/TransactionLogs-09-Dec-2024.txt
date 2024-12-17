@@ -1,0 +1,11 @@
+----------------------------------------------------------------------------
+Time : 09-Dec-2024 15:01
+Message : Page : pgManageUserAccount.cs 
+Function : Terminate() =>  Terminate Users  Details forwarded for Email Preparation. => PrepareEmailFormat()
+----------------------------------------------------------------------------
+Time : 09-Dec-2024 15:01
+Message : EMAIL Format Preperation Request Failed. Exception : Keyword not supported: 'port'.
+----------------------------------------------------------------------------
+Time : 09-Dec-2024 15:01
+Message : Page : pgManageUserAccount.cs 
+Function : Terminate() =>   Terminate Users  Details forwarded for SMS Preparation. => PrepareSMSFormat()

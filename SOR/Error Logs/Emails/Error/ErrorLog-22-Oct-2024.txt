@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------
+Time : 22-Oct-2024 17:01
+Message : Class: ClientRegistrationEntity.cs 
+Function: GetCountryStateCityD() 
+Exception Occurred
+42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+----------------------------------------------------------------------------
+Time : 22-Oct-2024 17:01
+Message : Class: ClientRegistrationEntity.cs 
+Function: GetCountryStateCityD() 
+Exception Occurred
+42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+----------------------------------------------------------------------------
+Time : 22-Oct-2024 17:04
+Message : Class: ClientRegistrationEntity.cs 
+Function: GetCountryStateCityD() 
+Exception Occurred
+42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+----------------------------------------------------------------------------
+Time : 22-Oct-2024 17:32
+Message : Class: ClientRegistrationEntity.cs 
+Function: GetCountryStateCityD() 
+Exception Occurred
+42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+----------------------------------------------------------------------------
+Time : 22-Oct-2024 17:33
+Message : Class: ClientRegistrationEntity.cs 
+Function: GetCountryStateCityD() 
+Exception Occurred
+42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist

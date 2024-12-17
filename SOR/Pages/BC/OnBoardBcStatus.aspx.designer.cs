@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SOR.Pages.BC
-{
-
-
-    public partial class OnBoardBcStatus
-    {
-
+namespace SOR.Pages.BC {
+    
+    
+    public partial class OnBoardBcStatus {
+        
         /// <summary>
         /// upPanel control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel upPanel;
-
+        
         /// <summary>
         /// upContentBodyUpdateProgress control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdateProgress upContentBodyUpdateProgress;
-
+        
         /// <summary>
         /// upContentBody control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upContentBody;
-
+        
         /// <summary>
         /// ddlClientCode control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlClientCode;
-
+        
         /// <summary>
         /// ddlBCCode control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlBCCode;
-
+        
         /// <summary>
         /// ddlState control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlState;
-
+        
         /// <summary>
         /// ddlCity control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCity;
-
+        
         /// <summary>
         /// txtCitySeatch control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCitySeatch;
-
+        
         /// <summary>
         /// ddlActiontype control.
         /// </summary>
@@ -94,25 +92,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlActiontype;
-
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
-
-        /// <summary>
-        /// btnClear_Click control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear_Click;
-
+        
         /// <summary>
         /// ddlExport control.
         /// </summary>
@@ -121,25 +101,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlExport;
-
-        /// <summary>
-        /// BtnCsv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnCsv;
-
-        /// <summary>
-        /// BtnXls control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnXls;
-
+        
         /// <summary>
         /// btnexport control.
         /// </summary>
@@ -148,7 +110,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnexport;
-
+        
         /// <summary>
         /// lblRecordsTotal control.
         /// </summary>
@@ -157,7 +119,43 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRecordsTotal;
-
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
+        
+        /// <summary>
+        /// btnClear_Click control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClear_Click;
+        
+        /// <summary>
+        /// BtnCsv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BtnCsv;
+        
+        /// <summary>
+        /// BtnXls control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BtnXls;
+        
         /// <summary>
         /// panelButtonGroup control.
         /// </summary>
@@ -166,7 +164,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelButtonGroup;
-
+        
         /// <summary>
         /// btnActivate control.
         /// </summary>
@@ -175,7 +173,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnActivate;
-
+        
         /// <summary>
         /// btnDeactivate control.
         /// </summary>
@@ -184,7 +182,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDeactivate;
-
+        
         /// <summary>
         /// btnTerminate control.
         /// </summary>
@@ -193,7 +191,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnTerminate;
-
+        
         /// <summary>
         /// panelGrid control.
         /// </summary>
@@ -202,7 +200,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelGrid;
-
+        
         /// <summary>
         /// gvBlockBC control.
         /// </summary>
@@ -211,7 +209,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvBlockBC;
-
+        
         /// <summary>
         /// btnhidresetDelete control.
         /// </summary>
@@ -220,7 +218,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnhidresetDelete;
-
+        
         /// <summary>
         /// ModalPopupExtender_Declincard control.
         /// </summary>
@@ -229,7 +227,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.ModalPopupExtender ModalPopupExtender_Declincard;
-
+        
         /// <summary>
         /// Panel_Declincard control.
         /// </summary>
@@ -238,7 +236,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel_Declincard;
-
+        
         /// <summary>
         /// lblModalHeaderName control.
         /// </summary>
@@ -247,7 +245,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblModalHeaderName;
-
+        
         /// <summary>
         /// lblconfirm control.
         /// </summary>
@@ -256,7 +254,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblconfirm;
-
+        
         /// <summary>
         /// TxtRemarks control.
         /// </summary>
@@ -265,7 +263,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtRemarks;
-
+        
         /// <summary>
         /// RequiredFieldValidator0 control.
         /// </summary>
@@ -274,7 +272,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator0;
-
+        
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -283,7 +281,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-
+        
         /// <summary>
         /// btnSaveAction control.
         /// </summary>
@@ -292,7 +290,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSaveAction;
-
+        
         /// <summary>
         /// btnCancelAction control.
         /// </summary>
@@ -301,7 +299,7 @@ namespace SOR.Pages.BC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnCancelAction;
-
+        
         /// <summary>
         /// mpeProgress control.
         /// </summary>

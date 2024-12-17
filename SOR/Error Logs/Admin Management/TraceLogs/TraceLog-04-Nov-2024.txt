@@ -1,0 +1,2 @@
+Time : 04-Nov-2024 16:51 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: Parameter 'p_username' must have its value set
+Time : 04-Nov-2024 16:57 Message : pgUserAccessManagement: BindDropdownClientDetails: Exception: 42804: structure of query does not match function result type

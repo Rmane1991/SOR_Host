@@ -1,0 +1,25 @@
+Time : 12-Dec-2024 11:55 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: Parameter 'p_pincode' must have its value set
+Time : 12-Dec-2024 11:55 Message : RestrictedReport: FillGrid: Exception: Parameter 'p_pincode' must have its value set
+Time : 12-Dec-2024 11:56 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: Parameter 'p_pincode' must have its value set
+Time : 12-Dec-2024 11:56 Message : RestrictedReport: FillGrid: Exception: Parameter 'p_pincode' must have its value set
+Time : 12-Dec-2024 11:58 Message : Initiated Ticket Upload Sample File Download Request.
+Time : 12-Dec-2024 11:58 Message : Error RestrictedName Sample File Download.
+Time : 12-Dec-2024 12:04 Message : RestrictedReport: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 12-Dec-2024 12:04 Message : Page : RestrictedReport.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 12-Dec-2024 12:04 Message : RestrictedReport: btnexport_ServerClick | CSV : Exception: Thread was being aborted.
+Time : 12-Dec-2024 12:04 Message : Page : RestrictedReport.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 12-Dec-2024 12:04 Message : Page : Restricted Report - Request Received For Export Report. Start-Time : 12:04:15
+Time : 12-Dec-2024 12:04 Message : Page : RestrictedReport - Request Received For Date Range Handler. FromDate : 2024-01-01 ToDate : 2024-12-12
+Time : 12-Dec-2024 12:04 Message : Page : RestrictedReport - Request Received For Split Data Table. Per Sheet Record Range : 1000000 Total Records : 2 Start-Time : 12:04:16 End-Time : 12:04:16
+Time : 12-Dec-2024 12:04 Message : RestrictedReport: btnexport_ServerClick | ZIP : Exception: Thread was being aborted.
+Time : 12-Dec-2024 12:04 Message : Page : RestrictedReport.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 12-Dec-2024 18:19 Message : DashBoard: LoadTransactionCounts(): Exception: 42804: structure of query does not match function result type

@@ -1,0 +1,4 @@
+Time : 16-Dec-2024 18:31 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 16-Dec-2024 18:32 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 16-Dec-2024 18:52 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 16-Dec-2024 18:52 Message : TrRule: btnUpdManual_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

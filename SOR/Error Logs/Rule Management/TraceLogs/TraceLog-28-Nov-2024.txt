@@ -1,0 +1,12 @@
+Time : 28-Nov-2024 11:06 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 11:09 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 11:38 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 11:38 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 15:44 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 15:44 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 18:53 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 28-Nov-2024 18:55 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 28-Nov-2024 18:57 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 28-Nov-2024 19:01 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 28-Nov-2024 19:05 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 28-Nov-2024 19:06 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

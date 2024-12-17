@@ -1,0 +1,14 @@
+Time : 09-Oct-2024 17:24
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at BussinessAccessLayer.BCEntity.GetOnboradingbcDetails() in D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\BCEntity.cs:line 536
+   at SOR.Pages.BC.ReprocessBCDetails.GetDetails(String BCReqId) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\BC\ReprocessBCDetails.aspx.cs:line 121
+Message - : Keyword not supported: 'port'.
+

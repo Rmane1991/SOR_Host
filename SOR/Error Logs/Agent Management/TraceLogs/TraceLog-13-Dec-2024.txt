@@ -1,0 +1,20 @@
+Time : 13-Dec-2024 12:47 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 13-Dec-2024 15:31 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 13-Dec-2024 15:33 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 13-Dec-2024 15:34 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 13-Dec-2024 15:36 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged() | Please select action type for export.
+Time : 13-Dec-2024 15:46 Message : AEPSTransactions: btnexport_ServerClick | CSV : Exception: Thread was being aborted.
+Time : 13-Dec-2024 15:46 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.
+Time : 13-Dec-2024 15:46 Message : AEPSTransactions: btnexport_ServerClick | Excel : Exception: Thread was being aborted.
+Time : 13-Dec-2024 15:46 Message : Page : AEPSTransactions.cs 
+Function : ddlAction_SelectedIndexChanged()
+Exception Occured
+Thread was being aborted.

@@ -1,0 +1,20 @@
+Time : 22-Oct-2024 10:54 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: 22P02: malformed record literal: "(1"
+Time : 22-Oct-2024 10:56 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: 22P02: malformed record literal: "(1"
+Time : 22-Oct-2024 11:46 Message : UserManagement: BindDropdowns() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:46 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:57 Message : UserManagement: BindDropdowns() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:57 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:20 Message : UserManagement: BindDropdowns() : UserName: Maximus Exception: Cannot find table 2.
+Time : 22-Oct-2024 12:20 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:22 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:29 Message : UserManagement: FillGridUserPageManagement(): UserName: Maximus Exception: 42883: operator does not exist: integer = character varying
+Time : 22-Oct-2024 14:51 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 42883: procedure sp_insertupdatemenupermissions(unknown, unknown, unknown, text, unknown, text, unknown, unknown, unknown, boolean, text, integer, unknown) does not exist
+Time : 22-Oct-2024 15:12 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenumaster_pkey"
+Time : 22-Oct-2024 15:48 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 22-Oct-2024 15:49 Message : UserManagement: InsertUpdatePagePermissions() : UserName:  Exception: 23502: null value in column "createdby" of relation "tblroledetails" violates not-null constraint
+Time : 22-Oct-2024 17:01 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+Time : 22-Oct-2024 17:01 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+Time : 22-Oct-2024 17:32 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+Time : 22-Oct-2024 17:33 Message : AgentRegistration: BindDropdownCountryState(): Exception: 42883: procedure sp_getstatecity(integer, character varying, character varying, character varying, character varying, character varying) does not exist
+Time : 22-Oct-2024 17:48 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 22-Oct-2024 17:48 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: Contact No Already Registered RequestId: 0

@@ -1,0 +1,169 @@
+24-10-2024 10:49:46:0827 : Login Successful. Username Maximus. SessionID : q0fukenwr1m1ovomiz0pdy0k
+24-10-2024 11:08:47:1295 : Login Successful. Username Maximus. SessionID : wiftbq11sodv4vh3p5ckglu5
+24-10-2024 11:14:28:6604 : Login Successful. Username Maximus. SessionID : 2wwrtsk13h11bmo1utczgogq
+24-10-2024 11:37:07:0024 : Login Successful. Username Maximus. SessionID : 04yj2y2ku23xoudsny1ozfoq
+24-10-2024 12:06:23:9288 : Login Successful. Username Maximus. SessionID : eym3swtelf5s0ixehk5gfwlo
+24-10-2024 12:10:34:4621 : Login Successful. Username Maximus. SessionID : 2mumjhgneaxh1er0ow0v5yly
+24-10-2024 12:15:19:3856 : Login Successful. Username Maximus. SessionID : tx5tcikcnd4fgsmcx441jszj
+24-10-2024 12:58:28:3112 : Login Successful. Username Maximus. SessionID : gvghljzxmxryc1cajjtpsgzp
+24-10-2024 13:03:56:5162 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+42702: column reference "isdelete" is ambiguous
+24-10-2024 13:04:24:1888 : Class : RuleEntity.cs 
+Function : BindRule() 
+Exception Occurred
+Parameter 'p_username' must have its value set Npgsql    at Npgsql.NpgsqlParameter.ResolveHandler(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlParameter.Bind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ValidateParameters(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at BussinessAccessLayer.RuleEntity.GetRule() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\RuleEntity.cs:line 94
+24-10-2024 13:09:25:3828 : Login Successful. Username Maximus. SessionID : 3lgostnsd2ethkm5ocwaofk1
+24-10-2024 14:33:09:9435 : Login Successful. Username Maximus. SessionID : 4rnstmr2q1rf3qkorxukbelq
+24-10-2024 14:34:31:3033 : Class: RuleEntity.cs 
+Function: UpdateStatus() 
+Exception Occurred
+42703: column "ruleid" does not exist
+24-10-2024 14:36:03:8133 : Login Successful. Username Maximus. SessionID : 5vanfnizui4wbnsu5bekogao
+24-10-2024 14:47:19:4739 : Login Successful. Username Maximus. SessionID : 0zqg5spskchnqesczo0dkysk
+24-10-2024 15:06:06:4551 : Login Successful. Username Maximus. SessionID : vsbq2xo0cvoqkgacesjpc3qg
+24-10-2024 15:07:36:1512 : Login Successful. Username Maximus. SessionID : rgwmqszercxyvyihoa1d0rad
+24-10-2024 15:09:48:8724 : Login Successful. Username Maximus. SessionID : jyd2as1e4eemybvskiumhsen
+24-10-2024 15:25:32:1154 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: missing FROM-clause entry for table "c"
+24-10-2024 15:25:33:5565 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: missing FROM-clause entry for table "c"
+24-10-2024 16:14:45:4080 : Login Successful. Username Maximus. SessionID : haf5jskn1doivhmsu0xtx5yj
+24-10-2024 16:51:15:7910 : Login Successful. Username Maximus. SessionID : k21s0ucpgfupvhvv2blv1nnk
+24-10-2024 17:04:27:3017 : Login Successful. Username Maximus. SessionID : dmq25pb5ylowwt3h5ydggurh
+24-10-2024 17:04:33:7118 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:04:33:7168 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:06:35:4776 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:06:35:4806 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:07:43:1295 : Login Successful. Username Maximus. SessionID : 4h23pgpnnutcaysc5qcnofb4
+24-10-2024 17:08:01:7673 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:08:01:7723 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:08:01:8299 : Class: LoginEntity.cs 
+Function: UserIsExistForForgotPassword() 
+Exception Occurred: 42809: proc_user_is_exist_or_not_forgot_password(p_username => text, p_flag => text) is a procedure
+24-10-2024 17:08:01:8887 : Change Password For Forgot Password Request (OTP) Failed. Exception : 42809: proc_user_is_exist_or_not_forgot_password(p_username => text, p_flag => text) is a procedure Username : Maximus
+24-10-2024 17:08:03:4588 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:08:03:4598 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:08:03:4770 : Class: LoginEntity.cs 
+Function: UserIsExistForForgotPassword() 
+Exception Occurred: 42809: proc_user_is_exist_or_not_forgot_password(p_username => text, p_flag => text) is a procedure
+24-10-2024 17:08:03:5039 : Change Password For Forgot Password Request (OTP) Failed. Exception : 42809: proc_user_is_exist_or_not_forgot_password(p_username => text, p_flag => text) is a procedure Username : Maximus
+24-10-2024 17:08:18:4646 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:08:21:4042 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:08:48:5691 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:08:51:3644 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:09:25:0429 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:09:30:2017 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:09:53:6808 : Login Successful. Username Maximus. SessionID : 4odg44jfgtwatwmtbogf4vsp
+24-10-2024 17:09:59:7701 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:10:01:8693 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:13:46:0126 : Class: LoginEntity.cs 
+Function: UserIsExistForForgotPassword() 
+Exception Occurred: 42883: operator does not exist: bit = integer
+24-10-2024 17:13:52:7432 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:14:04:1949 : Class: LoginEntity.cs 
+Function: UserIsExistForForgotPassword() 
+Exception Occurred: 42703: column "mobilenumber" does not exist
+24-10-2024 17:14:20:6170 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:19:20:5756 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:19:22:9555 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:19:50:6360 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:19:52:8191 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:19:58:7502 : Class: LoginEntity.cs 
+Function: GetUserDetails() 
+Exception Occurred: Parameter 'p_status' referenced in SQL but is an out-only parameter
+24-10-2024 17:20:38:9605 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 17:20:55:8570 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 17:21:58:2939 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:03:00:6167 : Login Successful. Username Maximus. SessionID : pox14gjswd3rz3xun20ze15d
+24-10-2024 18:03:09:7196 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:03:12:5623 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:03:30:9604 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:05:15:3371 : Login Successful. Username Maximus. SessionID : b254g5ecy5bmojf0p5bb2e21
+24-10-2024 18:05:26:8474 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:05:29:0787 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:05:33:8816 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:05:36:9114 : Class : LoginEntity.cs 
+Function : InsertOTPIntoTable() 
+Exception Occurred
+MobileNo cannot be null.
+Parameter name: MobileNo
+24-10-2024 18:07:29:8215 : Login Successful. Username Maximus. SessionID : gaajivhctclh0jzjfqx25cg5
+24-10-2024 18:07:38:1977 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:07:40:9753 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:07:40:9869 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:09:00:9651 : Login Successful. Username Maximus. SessionID : kvgqvipkzownbzhstjpowlmv
+24-10-2024 18:09:06:7695 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:09:11:7181 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:09:17:6663 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:14:26:1576 : Login Successful. Username Maximus. SessionID : iiau31ynsmzesqajfl0t0nuh
+24-10-2024 18:14:34:5607 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:14:37:9876 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:14:42:2312 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:31:32:3300 : Login Successful. Username Maximus. SessionID : ljkniclap5kvpz1z0s1ktiqn
+24-10-2024 18:31:40:6034 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:31:43:4377 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:31:49:6327 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:34:13:5966 : Login Successful. Username Maximus. SessionID : eb3c2pkc5554tmeha4k52bzf
+24-10-2024 18:34:20:1360 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:34:24:2794 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:34:29:3784 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:34:48:6994 : Class: LoginEntity.cs 
+Function: InsertOTPIntoTable() 
+Exception Occurred
+42703: column "p_status" does not exist
+24-10-2024 18:34:48:7309 : Change Password For Forgot Password Request (OTP) Failed. Exception : 42703: column "p_status" does not exist Username : Maximus
+24-10-2024 18:34:50:8350 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:34:51:6999 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:34:51:7140 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:37:26:3569 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:37:27:4669 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:37:28:5979 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:37:58:3027 : Class: LoginEntity.cs 
+Function: InsertOTPIntoTable() 
+Exception Occurred: 42703: column "p_status" does not exist
+24-10-2024 18:37:58:3705 : Change Password For Forgot Password Request (OTP) Failed. Exception : 42703: column "p_status" does not exist Username : Maximus
+24-10-2024 18:38:00:2844 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:38:01:4054 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:38:01:4154 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:39:38:6328 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:39:41:7382 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:39:48:2033 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:42:13:1216 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:42:16:1144 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:42:17:6682 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:43:55:1643 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:43:56:5506 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:43:57:6616 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:47:07:8021 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:47:11:7444 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:47:12:9213 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 18:49:13:1617 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 18:49:15:8807 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 18:49:17:0763 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 19:00:29:7010 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+24-10-2024 19:00:34:1529 : Change Password For Forgot Password Request Received. Username : Maximus
+24-10-2024 19:08:17:9463 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+24-10-2024 19:14:31:0759 : Class: LoginEntity.cs 
+Function: InsertOTPIntoTable() 
+Exception Occurred: Connection already open
+24-10-2024 19:14:51:5088 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241024190818787
+24-10-2024 19:16:08:6974 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241024190818787

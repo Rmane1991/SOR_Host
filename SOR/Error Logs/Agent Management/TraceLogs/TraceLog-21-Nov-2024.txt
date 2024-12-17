@@ -1,0 +1,11 @@
+Time : 21-Nov-2024 12:46 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42703: column "p_clientid" does not exist
+Time : 21-Nov-2024 12:46 Message : Page : AgentRegistration.cs 
+Function : SetInheritedSerivcesFromParent
+Exception Occured
+42703: column "p_clientid" does not exist
+Time : 21-Nov-2024 13:03 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42804: structure of query does not match function result type
+Time : 21-Nov-2024 13:04 Message : AgentRegistrationDAL: GetBC: UserName: Maximus Exception: 42804: structure of query does not match function result type
+Time : 21-Nov-2024 13:04 Message : Page : AgentRegistration.cs 
+Function : FillBc()
+Exception Occured
+42804: structure of query does not match function result type

@@ -1,0 +1,80 @@
+Time : 17-Oct-2024 10:52 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'. RequestId: 0
+Time : 17-Oct-2024 10:53 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 2 StatusMsg: Failed RequestId: 0
+Time : 17-Oct-2024 11:00 Message : AgentRegistrationDAL: ChangeAgentOnboardStatus: UserName:  Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 11:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:15 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'. RequestId: 0
+Time : 17-Oct-2024 11:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:15 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'. RequestId: 0
+Time : 17-Oct-2024 11:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:15 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'. RequestId: 0
+Time : 17-Oct-2024 11:16 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:16 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: Unable to cast object of type 'Npgsql.NpgsqlParameter' to type 'System.IConvertible'. RequestId: 0
+Time : 17-Oct-2024 11:17 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:17 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: No operation performed due to flag value. RequestId: 25
+Time : 17-Oct-2024 11:18 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:18 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: No operation performed due to flag value. RequestId: 26
+Time : 17-Oct-2024 11:18 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:20 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 28
+Time : 17-Oct-2024 11:20 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:20 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 29
+Time : 17-Oct-2024 11:21 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 29
+Time : 17-Oct-2024 11:21 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5641P RequestId: 29
+Time : 17-Oct-2024 11:27 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Oct-2024 11:27 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 30
+Time : 17-Oct-2024 11:27 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 30
+Time : 17-Oct-2024 11:27 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5625P RequestId: 30
+Time : 17-Oct-2024 11:28 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 30
+Time : 17-Oct-2024 11:28 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 30 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 17-Oct-2024 11:28 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: There is no row at position 0.
+Time : 17-Oct-2024 11:29 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 30
+Time : 17-Oct-2024 11:29 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 30 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 17-Oct-2024 11:39 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 30
+Time : 17-Oct-2024 11:39 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 30 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 17-Oct-2024 11:40 Message : AgentRegistrationDAL: AgentStatusReportGrid: UserName: Maximus Exception: 42809: sp_insertorupdateagentmaterdetails(integer, text, text, text, text, text, unknown, unknown, unknown, text) is a procedure
+Time : 17-Oct-2024 11:40 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42809: sp_insertorupdateagentmaterdetails(integer, text, text, text, text, text, unknown, unknown, unknown, text) is a procedure
+Time : 17-Oct-2024 11:40 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 30
+Time : 17-Oct-2024 11:40 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 30 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 17-Oct-2024 11:40 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 30 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 17-Oct-2024 11:40 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: Cannot find table 0.
+Time : 17-Oct-2024 11:41 Message : EditRegitsration: GetDetails: Exception: Cannot find table 1.
+Time : 17-Oct-2024 11:46 Message : EditRegitsration: GetDetails: Exception: Cannot find table 1.
+Time : 17-Oct-2024 11:46 Message : EditRegistrationDetails: FillBc: Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 11:46 Message : EditRegitsration: GetDetails: Exception: Cannot find table 1.
+Time : 17-Oct-2024 11:46 Message : EditRegitsration: GetDetails: Exception: Cannot find table 1.
+Time : 17-Oct-2024 12:11 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg: 42804: column "masterid" is of type integer but expression is of type character varying RequestId: 0
+Time : 17-Oct-2024 12:12 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 31
+Time : 17-Oct-2024 12:12 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:12 Message : EditRegistrationDetails: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: Column 'agReqId' does not belong to table Table. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:12 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: No operation performed due to flag value. RequestId: 0
+Time : 17-Oct-2024 12:16 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 31
+Time : 17-Oct-2024 12:16 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:19 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:19 Message : EditRegitsration: downloadPass_Click: Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 12:19 Message : EditRegitsration: downloadPass_Click: Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 12:19 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 31
+Time : 17-Oct-2024 12:19 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:19 Message : EditRegistrationDetails: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: Column 'agReqId' does not belong to table Table. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:21 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 31
+Time : 17-Oct-2024 12:21 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5625P RequestId: 31
+Time : 17-Oct-2024 12:21 Message : EditRegitsration: downloadPass_Click: Exception: Column 'Status' does not belong to table StatusMessages.
+Time : 17-Oct-2024 12:21 Message : EditRegitsration: downloadPass_Click: Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 12:21 Message : EditRegitsration: downloadPass_Click: Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 12:22 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 31
+Time : 17-Oct-2024 12:22 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 31 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 17-Oct-2024 13:47 Message : TrRule: BindRules(): Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 14:22 Message : TrRule: BindRules(): Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 14:22 Message : TrRule: BindRules(): Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 14:34 Message : UserManagement: BindClientReport() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 14:59 Message : UserManagement: BindRoles_CreateUser() : UserName: Maximus Exception: 42804: structure of query does not match function result type
+Time : 17-Oct-2024 15:00 Message : TrRule: BindRules(): Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 15:00 Message : TrRule: BindRules(): Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 15:02 Message : TrRule: BindRules(): Exception: Object reference not set to an instance of an object.
+Time : 17-Oct-2024 15:12 Message : TrRule: BindRules(): Exception: Parameter 'p_username' must have its value set
+Time : 17-Oct-2024 16:21 Message : UserManagement: BindRoles_CreateUser() : UserName: Maximus Exception: 42804: structure of query does not match function result type
+Time : 17-Oct-2024 16:44 Message : UserManagement: BindRoles_CreateUser() : UserName: Maximus Exception: 42804: structure of query does not match function result type
+Time : 17-Oct-2024 16:44 Message : UserManagement: BindUserBasedRole() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 17:58 Message : UserManagement: BindRoles_CreateUser() : UserName: Maximus Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 17-Oct-2024 18:02 Message : UserManagement: BindUserBasedRole() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 18:34 Message : UserManagement: BindUserBasedRole() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 18:38 Message : UserManagement: BindUserBasedRole() : UserName:  Exception: Keyword not supported: 'port'.

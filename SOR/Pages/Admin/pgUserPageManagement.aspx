@@ -6,7 +6,7 @@
     <head>
         <link href="../../css/toggleButton.css" rel="stylesheet" />
         <%--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>--%>
-         <script src="../../js/jquery-3.5.1.js"></script>
+        <script src="../../js/jquery-3.5.1.js"></script>
         <script language="javascript" type="text/javascript">
 
             function SetTab() {
@@ -224,12 +224,12 @@
                         <li class="nav-item">
                             <button class="nav-link" id="Map-tab" data-bs-toggle="tab" data-bs-target="#MapPages" type="button" role="tab" aria-controls="Map-tab-pane" aria-selected="false" tabindex="-1">Map Pages</button>
                         </li>
-                        <li class="nav-item">
+                        <%--<li class="nav-item">
                             <button class="nav-link" id="Edit-tab" data-bs-toggle="tab" data-bs-target="#EditPages" type="button" role="tab" aria-controls="Edit-tab-pane" aria-selected="false" tabindex="-1">Edit Pages</button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" id="Swap-tab" data-bs-toggle="tab" data-bs-target="#SwapPages" type="button" role="tab" aria-controls="Swap-tab-pane" aria-selected="false" tabindex="-1">Swap Pages</button>
-                        </li>
+                        </li>--%>
                     </ul>
 
                     <div class="tab-content">
@@ -302,19 +302,18 @@
                                                         <asp:Button ID="btnReset" runat="server" Text="Reset" CssClass="themeBtn resetBtn themeCancelBtn me-0" OnClick="btnReset_Click" data-bs-toggle="modal"
                                                             data-bs-target="#SearchFilterModal" />
                                                         <div class="col-md-2">
-                                                            <div class="col">
-                                                                <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
-                                                                    ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
-                                                                <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
-                                                                    ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
-                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="form-group">
-                                                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                                                <center><strong><asp:Label ID="lblRecordCount" runat="server" Text=""></asp:Label></strong></center>
-                                                            </div>
+                                                    <div class="row d-flex justify-content-center align-items-center">
+                                                        <div class="col-auto text-center">
+                                                            <strong>
+                                                                <asp:Label ID="lblRecordCount" runat="server" Text=""></asp:Label></strong>
+                                                        </div>
+                                                        <div class="d-flex justify-content-end">
+                                                            <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                                ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
+                                                            <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                                ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -339,7 +338,7 @@
                                 <div class="table-box" id="divAddPages" runat="server">
                                     <div class="tableBorderBox" style="padding: 10px 10px;">
                                         <asp:GridView ID="gvPages" runat="server"
-                                            AutoGenerateColumns="false"
+                                            AutoGenerateColumns="true"
                                             GridLines="None"
                                             AllowPaging="true"
                                             CssClass="GridView"
@@ -358,7 +357,7 @@
                                                     </ItemTemplate>
                                                     <ItemStyle HorizontalAlign="Center" />
                                                 </asp:TemplateField>
-                                                <asp:BoundField DataField="Role ID" HeaderText="Role ID" />
+                                                <%--<asp:BoundField DataField="Role ID" HeaderText="Role ID" />
                                                 <asp:BoundField DataField="Role Name" HeaderText="Role Name" />
                                                 <asp:BoundField DataField="Menu ID" HeaderText="Menu ID" />
                                                 <asp:BoundField DataField="Menu" HeaderText="Menu" />
@@ -370,7 +369,7 @@
                                                 <asp:BoundField DataField="Created By" HeaderText="Created By" />
                                                 <asp:BoundField DataField="Created On" HeaderText="Created On" />
                                                 <asp:BoundField DataField="Last Modified By" HeaderText="Last Modified By" />
-                                                <asp:BoundField DataField="Last Modified On" HeaderText="Last Modified On" />
+                                                <asp:BoundField DataField="Last Modified On" HeaderText="Last Modified On" />--%>
                                             </Columns>
                                         </asp:GridView>
 
@@ -538,7 +537,7 @@
                                                     <div class="col">
                                                         <label class="selectInputLabel" for="selectInputLabel">Menu:</label>
                                                         <div class="selectInputBox">
-                                                            <asp:DropDownList ID="ddlMenuMapping" runat="server" CssClass="maximus-select w-100">
+                                                            <asp:DropDownList ID="ddlMenuMapping" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlMenuMapping_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </div>
                                                     </div>

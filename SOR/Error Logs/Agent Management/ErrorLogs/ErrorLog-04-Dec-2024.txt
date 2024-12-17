@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------
+Time : 04-Dec-2024 15:00
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnZipsample_ServerClick(Object sender, EventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 1109
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 04-Dec-2024 15:00
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnsample_ServerClick(Object sender, EventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2381
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 04-Dec-2024 15:05
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.clsCustomeRegularExpressions.CustomeRegExpValidation(Validators _Validators, String _InputValue) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\clsCustomeRegularExpressions.cs:line 53
+   at SOR.Pages.Agent.AgentRegistration.ValidateFileData[T](T TObj, String& _StatusCode, String& _StatusDesc, Int32& MsgId) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 3136
+Message - : Object reference not set to an instance of an object.

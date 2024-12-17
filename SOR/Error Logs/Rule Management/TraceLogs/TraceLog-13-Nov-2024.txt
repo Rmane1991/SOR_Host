@@ -1,0 +1,14 @@
+Time : 13-Nov-2024 11:37 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : Object reference not set to an instance of an object.
+Time : 13-Nov-2024 11:37 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : Object reference not set to an instance of an object.
+Time : 13-Nov-2024 11:47 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : 42601: argument name "p_switchid" used more than once
+Time : 13-Nov-2024 11:57 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : 42601: argument name "p_switchid" used more than once
+Time : 13-Nov-2024 12:06 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : 42601: argument name "p_switchid" used more than once
+Time : 13-Nov-2024 12:10 Message : BatchConfiguration: btnSubmit_ServerClick() | Username :MaximusException : 42601: argument name "p_switchid" used more than once
+Time : 13-Nov-2024 12:10 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:10 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:17 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:19 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:22 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:36 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:42 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 13-Nov-2024 12:42 Message : BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

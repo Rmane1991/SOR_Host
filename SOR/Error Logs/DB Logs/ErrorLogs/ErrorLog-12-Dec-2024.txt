@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------
+Time : 12-Dec-2024 11:55
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlParameter.ResolveHandler(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlParameter.Bind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ValidateParameters(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.TransactionReportDAL.GetRestrictedDetails() in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\TransactionReportDAL.cs:line 656
+Message - : Parameter 'p_pincode' must have its value set
+----------------------------------------------------------------------------
+Time : 12-Dec-2024 11:56
+Source - : Npgsql
+StackTrace -  :    at Npgsql.NpgsqlParameter.ResolveHandler(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlParameter.Bind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ValidateParameters(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.<ExecuteReaderAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.<ExecuteNonQuery>d__87.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at BussinessAccessLayer.TransactionReportDAL.GetRestrictedDetails() in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\TransactionReportDAL.cs:line 656
+Message - : Parameter 'p_pincode' must have its value set
+----------------------------------------------------------------------------
+Time : 12-Dec-2024 18:05
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString, SqlCredential credential)
+   at System.Data.SqlClient.SqlConnection..ctor(String connectionString)
+   at BussinessAccessLayer.LoginEntity.updateAttemptFailed(String[] _Params) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\LoginEntity.cs:line 748
+Message - : Keyword not supported: 'port'.

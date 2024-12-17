@@ -1,0 +1,25 @@
+Time : 26-Nov-2024 11:59 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 11:59 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 11:59 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 11:59 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 11:59 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\26112024115930\ReleaseNote.pdf
+Time : 26-Nov-2024 11:59 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\26112024115930\ReleaseNote.pdf
+Time : 26-Nov-2024 11:59 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 26-Nov-2024 11:59 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 26-Nov-2024 12:05 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 12:05 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 12:05 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 12:05 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 26-Nov-2024 12:05 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\26112024120502\ReleaseNote.pdf
+Time : 26-Nov-2024 12:05 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\26112024120502\ReleaseNote.pdf
+Time : 26-Nov-2024 12:05 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 26-Nov-2024 12:05 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 26-Nov-2024 12:25 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Access to the path 'D:\Data\Aakash\SOR\SOR\SOR\Patch\Patches\26112024115930' is denied.
+Time : 26-Nov-2024 12:43 Message : Error zipping or downloading: Thread was being aborted.
+Time : 26-Nov-2024 12:43 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 26-Nov-2024 12:45 Message : Error zipping or downloading: Thread was being aborted.
+Time : 26-Nov-2024 12:45 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 26-Nov-2024 12:46 Message : Error zipping or downloading: Thread was being aborted.
+Time : 26-Nov-2024 12:46 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.
+Time : 26-Nov-2024 12:59 Message : Versioning: gvVersioning_RowCommand(): Exception: Thread was being aborted.
+Time : 26-Nov-2024 12:59 Message : Versioning : Error At gvVersioning_RowCommand(). Username : Maximus Exception : Thread was being aborted.

@@ -1,0 +1,7 @@
+Time : 17-Oct-2024 14:34 Message : pgCreateUser: BindDropdownClientDetails(): Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 14:59 Message : pgCreateUser: BindDropdownRoles(): Exception: 42804: structure of query does not match function result type
+Time : 17-Oct-2024 16:21 Message : pgCreateUser: BindDropdownRoles(): Exception: 42804: structure of query does not match function result type
+Time : 17-Oct-2024 16:44 Message : pgCreateUser: BindDropdownRoles(): Exception: 42804: structure of query does not match function result type
+Time : 17-Oct-2024 16:44 Message : pgCreateUser: ddlRole_SelectedIndexChanged: Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 18:02 Message : pgCreateUser: ddlRole_SelectedIndexChanged: Exception: Keyword not supported: 'port'.
+Time : 17-Oct-2024 18:34 Message : pgCreateUser: ddlRole_SelectedIndexChanged: Exception: Keyword not supported: 'port'.

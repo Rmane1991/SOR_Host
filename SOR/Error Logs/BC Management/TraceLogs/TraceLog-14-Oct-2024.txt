@@ -1,0 +1,262 @@
+Time : 14-Oct-2024 11:21 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 11:22 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:00 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:01 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:06 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:10 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:11 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:13 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:14 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:15 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:15 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:17 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:20 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:23 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:25 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 14-Oct-2024 12:25 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 66
+Time : 14-Oct-2024 12:26 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 66
+Time : 14-Oct-2024 12:26 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 64 Fullname: AirPay User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9784650000 Remarks: Approve.
+Time : 14-Oct-2024 12:26 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 64 Fullname: AirPay User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9784650000 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 12:26 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 14-Oct-2024 12:26 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:31 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:31 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:32 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:33 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:36 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:38 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:39 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 12:49 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Request Status'.
+Time : 14-Oct-2024 14:37 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 14-Oct-2024 14:40 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 14-Oct-2024 14:40 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 14-Oct-2024 14:41 Message : Class : BCRegistration.cs 
+Function : ImageButton2_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 14-Oct-2024 14:52 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 3
+Time : 14-Oct-2024 14:53 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 3
+Time : 14-Oct-2024 14:53 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+The path is not of a legal form.
+Time : 14-Oct-2024 14:55 Message : Class : BCRegistration.cs 
+Function : DeleteFile() 
+Exception Occured
+42883: procedure sp_insertorupdateaggtrackerdetails(unknown, integer, text, text, unknown) does not exist
+Time : 14-Oct-2024 16:08 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 66 Fullname: AirPay User: Maximus ReceiverEmailID: cdsc@gmail.com ContactNo: 9787465132 Remarks: Approve.
+Time : 14-Oct-2024 16:08 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 16:08 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 66 Fullname: AirPay User: Maximus ReceiverEmailID: cdsc@gmail.com ContactNo: 9787465132 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 16:09 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 66 Fullname: AirPay User: Maximus ReceiverEmailID: cdsc@gmail.com ContactNo: 9787465132 Remarks: Approve.
+Time : 14-Oct-2024 16:09 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 16:09 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 66 Fullname: AirPay User: Maximus ReceiverEmailID: cdsc@gmail.com ContactNo: 9787465132 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 16:09 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 66 Fullname: AirPay User: Maximus ReceiverEmailID: cdsc@gmail.com ContactNo: 9787465132 Remarks: Approve.
+Time : 14-Oct-2024 16:24 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:24 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Keyword not supported: 'port'.
+Time : 14-Oct-2024 16:24 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 14-Oct-2024 16:26 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 16:26 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 16:27 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:31 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:31 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42883: function public.sp_reeditaggdetails(p_NewBcReqId => text) does not exist
+Time : 14-Oct-2024 16:31 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:31 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42883: function public.sp_reeditaggdetails(p_NewBcReqId => text) does not exist
+Time : 14-Oct-2024 16:31 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:34 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:41 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:41 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Oct-2024 16:41 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:41 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Oct-2024 16:42 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:48 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42883: operator does not exist: integer = character varying
+Time : 14-Oct-2024 16:48 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:52 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: 42804: structure of query does not match function result type
+Time : 14-Oct-2024 16:52 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 16:53 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Object reference not set to an instance of an object.
+Time : 14-Oct-2024 16:55 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 17:00 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Object reference not set to an instance of an object.
+Time : 14-Oct-2024 17:00 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 17:00 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Decline Flag: 6 AgentCode: 1 Fullname: scdsc   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8795132050 Remarks: Approve.
+Time : 14-Oct-2024 17:00 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 14-Oct-2024 17:01 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 14-Oct-2024 17:01 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 17:01 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 17:01 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 14-Oct-2024 17:01 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 17:01 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 17:02 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 14-Oct-2024 17:02 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 17:02 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 3 Fullname: BCName User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 17:05 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BC Code' was not found on the selected data source.
+Time : 14-Oct-2024 17:08 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BC Code' was not found on the selected data source.
+Time : 14-Oct-2024 17:12 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Client ID' was not found on the selected data source.
+Time : 14-Oct-2024 17:41 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 17:41 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 17:43 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 17:57 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 17:59 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 18:07 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 18:15 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 18:16 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42P01: missing FROM-clause entry for table "bm"
+Time : 14-Oct-2024 18:17 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42P01: missing FROM-clause entry for table "bm"
+Time : 14-Oct-2024 18:22 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 14-Oct-2024 18:23 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 14-Oct-2024 18:23 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+The path is not of a legal form.
+Time : 14-Oct-2024 18:23 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: CMGPD User: Maximus ReceiverEmailID: dvch@gmail.com ContactNo: 8794563400 Remarks: Approve.
+Time : 14-Oct-2024 18:23 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: CMGPD User: Maximus ReceiverEmailID: dvch@gmail.com ContactNo: 8794563400 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 18:23 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 14-Oct-2024 18:23 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 18:23 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 18:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 5
+Time : 14-Oct-2024 18:28 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 5
+Time : 14-Oct-2024 18:28 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+The path is not of a legal form.
+Time : 14-Oct-2024 18:29 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 5 Fullname: FVDZFV User: Maximus ReceiverEmailID: xdsc@gmail.com ContactNo: 9785460000 Remarks: Approve.
+Time : 14-Oct-2024 18:29 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 5 Fullname: FVDZFV User: Maximus ReceiverEmailID: xdsc@gmail.com ContactNo: 9785460000 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 18:29 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 14-Oct-2024 18:29 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 5 Fullname: FVDZFV User: Maximus ReceiverEmailID: xdsc@gmail.com ContactNo: 9785460000 Remarks: Approve.
+Time : 14-Oct-2024 18:32 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 14-Oct-2024 18:32 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 5 Fullname: FVDZFV User: Maximus ReceiverEmailID: xdsc@gmail.com ContactNo: 9785460000 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 18:32 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 14-Oct-2024 18:34 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 6
+Time : 14-Oct-2024 18:34 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 6
+Time : 14-Oct-2024 18:34 Message : Class : BCRegistration.cs 
+Function : Bindreceipt() 
+Exception Occured
+The path is not of a legal form.
+Time : 14-Oct-2024 18:35 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 6 Fullname: aIRpAY User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 14-Oct-2024 18:35 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 6 Fullname: aIRpAY User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.ActivityType: 0
+Time : 14-Oct-2024 18:35 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 14-Oct-2024 19:19 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 9 Fullname: BC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 14-Oct-2024 19:19 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Object reference not set to an instance of an object.
+Time : 14-Oct-2024 19:20 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 9 Fullname: BC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 7985461232 Remarks: Approve.
+Time : 14-Oct-2024 19:24 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Object reference not set to an instance of an object.

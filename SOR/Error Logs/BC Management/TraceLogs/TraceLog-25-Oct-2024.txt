@@ -1,0 +1,13 @@
+Time : 25-Oct-2024 11:10 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 100
+Time : 25-Oct-2024 11:10 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 100
+Time : 25-Oct-2024 11:11 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 100 Fullname: NEWBC User: Maximus ReceiverEmailID: fvdfvxyz@gmail.com ContactNo: 8954621381 Remarks: Approve.
+Time : 25-Oct-2024 11:11 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 100 Fullname: NEWBC User: Maximus ReceiverEmailID: fvdfvxyz@gmail.com ContactNo: 8954621381 Remarks: Approve.ActivityType: 0
+Time : 25-Oct-2024 11:11 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 25-Oct-2024 11:37 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42702: column reference "bcreqid" is ambiguous
+Time : 25-Oct-2024 11:37 Message : Page : BC Status.cs 
+Function : fillGrid() 
+Exception Occured
+42702: column reference "bcreqid" is ambiguous

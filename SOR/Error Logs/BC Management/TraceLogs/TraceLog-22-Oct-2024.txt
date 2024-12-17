@@ -1,0 +1,4 @@
+Time : 22-Oct-2024 16:10 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 22-Oct-2024 16:12 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 10 StatusMsg: PanCard Already Registered RequestId: 0
+Time : 22-Oct-2024 16:12 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 10 StatusMsg: PanCard Already Registered RequestId: 0
+Time : 22-Oct-2024 17:01 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 10 StatusMsg: PanCard Already Registered RequestId: 0

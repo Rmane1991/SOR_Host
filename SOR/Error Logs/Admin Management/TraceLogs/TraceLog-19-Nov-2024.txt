@@ -1,0 +1,2 @@
+Time : 19-Nov-2024 16:08 Message : pgUserAccessManagement: btnEditRole_ServerClick: Exception: 23505: duplicate key value violates unique constraint "tblroledetails_pkey"
+Time : 19-Nov-2024 16:09 Message : pgUserAccessManagement: btnEditRole_ServerClick: Exception: 23505: duplicate key value violates unique constraint "tblroledetails_pkey"

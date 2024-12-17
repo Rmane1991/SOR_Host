@@ -1,0 +1,74 @@
+Time : 18-Oct-2024 10:41 Message : UserManagement: BindUserBasedRole() : UserName:  Exception: 42883: procedure sp_bindrolegroups_createuser(unknown, unknown, integer, text, unknown) does not exist
+Time : 18-Oct-2024 11:45 Message : UserManagement: CheckIsUserExist() : UserName: Admin11 Exception: 42883: operator does not exist: bit = integer
+Time : 18-Oct-2024 11:51 Message : UserManagement: CreateUser() : UserName: Maximus Exception: 42883: function proc_createuser(p_username => text, p_password => text, p_email => text, p_rollid => text, p_UserRoleGroup => text, p_createdBy => text, p_Salt => text, p_Salt1 => text, p_Salt2 => unknown, p_Salt3 => unknown, p_Salt4 => unknown, p_ClientId => text, p_UserId => text, p_Mobile => text) does not exist
+Time : 18-Oct-2024 11:57 Message : UserManagement: CreateUser() : UserName: Maximus Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 18-Oct-2024 12:01 Message : UserManagement: CreateUser() : UserName: Maximus Exception: 22P02: invalid input syntax for type integer: "Maximus"
+Time : 18-Oct-2024 12:29 Message : UserManagement: FillGridCreateRoles() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 12:29 Message : CreateRoles: BindDropdownRolesFilter(): Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 12:29 Message : UserManagement: FillGridCreateRoles() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 12:29 Message : CreateRoles: fillRoleDetailsGrid(): Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 12:39 Message : UserManagement: FillGridCreateRoles() : UserName:  Exception: 42883: procedure proc_roledetailscreate(integer, unknown, text, text, unknown) does not exist
+Time : 18-Oct-2024 12:39 Message : CreateRoles: BindDropdownRolesFilter(): Exception: 42883: procedure proc_roledetailscreate(integer, unknown, text, text, unknown) does not exist
+Time : 18-Oct-2024 13:00 Message : UserManagement: InsertUpdateRoleDetails() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 13:00 Message : CreateRoles: btnSaveAction_Click: Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 14:37 Message : UserManagement: UserAccessManagementDeleteRole() : UserName: Maximus Exception: 42804: column "bitisremoved" is of type integer but expression is of type bit
+Time : 18-Oct-2024 14:37 Message : CreateRoles: btnSaveAction_Click: Exception: 42804: column "bitisremoved" is of type integer but expression is of type bit
+Time : 18-Oct-2024 14:41 Message : TransactionTrend: Page_Load(): Exception: Object reference not set to an instance of an object.
+Time : 18-Oct-2024 14:44 Message : CreateRoles: btnSaveAction_Click: Exception: Cannot find column 1.
+Time : 18-Oct-2024 15:01 Message : UserManagement: InsertNewRole() : UserName: Maximus Exception: 23505: duplicate key value violates unique constraint "tblrolelist_pkey"
+Time : 18-Oct-2024 15:01 Message : CreateRoles: lbtnNewRole_ServerClick: Exception: 23505: duplicate key value violates unique constraint "tblrolelist_pkey"
+Time : 18-Oct-2024 15:11 Message : CreateRoles: BtnXls_Click: Exception: Thread was being aborted.
+Time : 18-Oct-2024 15:11 Message : UserManagement: BindRolesAndRoleGroup() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:11 Message : UserManagement: BindDropdownUsers() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:11 Message : UserManagement: FillGridUserAccounts() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : UserManagement: FillGridUserAccessManagement() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : UserManagement: BindDropdowns() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : UserManagement: BindRolesAndRoleGroup() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : UserManagement: BindDropdownUsers() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 15:12 Message : UserManagement: FillGridUserAccounts() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 17:01 Message : UserManagement: ManageUserAccountsAction() : UserName: Maximus Exception: Parameter 'p_Status' referenced in SQL but is an out-only parameter
+Time : 18-Oct-2024 18:16 Message : UserManagement: ManageUserAccountsAction() : UserName: Maximus Exception: 42804: column "isremoved" is of type bit but expression is of type integer
+Time : 18-Oct-2024 18:16 Message : UserManagement: ManageUserAccountsAction() : UserName: Maximus Exception: 42804: column "isremoved" is of type bit but expression is of type integer
+Time : 18-Oct-2024 18:19 Message : UserManagement: FillGridUserAccessManagement() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : UserManagement: BindDropdowns() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:19 Message : UserManagement: FillGridUserAccessManagement() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:24 Message : UserManagement: FillGridUserAccessManagement() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:31 Message : UserManagement: FillGridUserAccessManagementModalPopupMenu() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:37 Message : UserManagement: FillGridUserAccessManagementModalPopupMenu() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:38 Message : UserManagement: FillGridUserAccessManagementModalPopupMenu() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:42 Message : UserManagement: FillGridUserAccessManagementModalPopupMenu() : UserName: Maximus Exception: 42883: procedure sp_selecteditmenu(text, text, integer, text) does not exist
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:49 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:50 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 18:51 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:11 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:13 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 18-Oct-2024 19:14 Message : UserManagement: FillGridUserAccessManagementMenu() : UserName: Maximus Exception: Keyword not supported: 'port'.

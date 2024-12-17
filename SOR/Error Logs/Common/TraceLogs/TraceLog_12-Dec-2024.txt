@@ -1,0 +1,59 @@
+12-12-2024 10:53:05:9871 : Login Successful. Username Maximus. SessionID : wynxshsel2cqpqz2jsyramxk
+12-12-2024 11:55:14:8362 : Login Successful. Username Maximus. SessionID : cbeqvl13ojjvsyjiu0ivhkyd
+12-12-2024 11:57:38:5744 : Login Successful. Username Maximus. SessionID : rapb0j04bsswin5heakc5d5q
+12-12-2024 11:58:17:3175 : Class: YourClassName 
+Function: NegativeAgentDetails() 
+Exception Occurred
+42725: procedure sp_negativeagent_report(text, text, text) is not unique
+12-12-2024 12:37:43:4052 : Login Successful. Username Maximus. SessionID : 4t2woy5estc2m41sv24uq450
+12-12-2024 12:44:04:3350 : Login Successful. Username Maximus. SessionID : 3yjj01ffm24wqzaghv3wm5fc
+12-12-2024 12:47:51:5017 : Login Successful. Username Maximus. SessionID : bv1twjjeivwx4rdkatehm31b
+12-12-2024 12:49:32:2468 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+12-12-2024 12:49:39:3927 : Login Successful. Username Maximus. SessionID : 12olwmkpzc0trypi0gzybssb
+12-12-2024 13:06:16:8191 : Login Successful. Username Maximus. SessionID : g2gx0ssfujaqjtqqniwsxmbf
+12-12-2024 14:12:43:4523 : Login Successful. Username Maximus. SessionID : hto2thlg2pmwlerv2nlw1yrz
+12-12-2024 14:47:58:6478 : Login Successful. Username Maximus. SessionID : kwujvrhrrfdid4osn1ldmkoz
+12-12-2024 14:49:59:5968 : Login Successful. Username Maximus. SessionID : xh5dxikeotakgr55qb0diw1k
+12-12-2024 14:50:36:7656 : Login Successful. Username Maximus. SessionID : o15jxtjpqofafdv0jdcvw1eq
+12-12-2024 14:54:42:9957 : Login Successful. Username Maximus. SessionID : ze1rtl3wyfeklk5yi5z0pggi
+12-12-2024 15:00:09:5766 : Login Successful. Username Maximus. SessionID : 5xci3ti5bo5xnpss3pa1p25m
+12-12-2024 15:00:56:8276 : Login Successful. Username Maximus. SessionID : jdc2tv3yc1jgwu0prmiagugn
+12-12-2024 15:03:17:1177 : Login Successful. Username Maximus. SessionID : p3fvtpdmnbwq4cgm1uszjhgc
+12-12-2024 15:04:59:0783 : Login Successful. Username Maximus. SessionID : vhwpdk5uh34o2tojmpywwlde
+12-12-2024 15:21:54:0365 : Login Successful. Username Maximus. SessionID : 3kiwx2qen01bnodx4yjhgwrn
+12-12-2024 15:40:38:4344 : Login Successful. Username Maximus. SessionID : n51fgcthc4m12sjljbrq2snm
+12-12-2024 15:43:12:0618 : Login Successful. Username Maximus. SessionID : iifaxxqlgmkxtmvru5ig52bx
+12-12-2024 15:56:56:6576 : Login Successful. Username Maximus. SessionID : 3hxu4jh2p3mx3vymbxx2y3s5
+12-12-2024 16:00:03:9494 : Login Successful. Username Maximus. SessionID : 4kbdfz3zzb2uugkkafpjkivd
+12-12-2024 16:01:23:1731 : Login Successful. Username Maximus. SessionID : oyc2dz2j2af5lkwc13xr4v5k
+12-12-2024 16:16:41:9121 : Login Successful. Username Maximus. SessionID : xxuy4flifxhwhlvtcmt05xsi
+12-12-2024 16:20:52:6301 : Login Successful. Username Maximus. SessionID : zwi3llk0qmmw1rzxeprdsj3e
+12-12-2024 16:24:51:6013 : Login Successful. Username Maximus. SessionID : tf4hgnomqbua0ug4yhcxngpk
+12-12-2024 16:29:36:6689 : Login Successful. Username Maximus. SessionID : gmf3llx52ha1wnsypvo1di2l
+12-12-2024 16:31:11:0861 : Login Successful. Username Maximus. SessionID : cc4505ciecnuqx50rbxt1qln
+12-12-2024 16:35:20:3338 : Login Successful. Username Maximus. SessionID : mwag0nfhrr5ebaj3try02r2j
+12-12-2024 16:37:54:1922 : Login Successful. Username Maximus. SessionID : u31w3kg0a3w14l3bab5dnysu
+12-12-2024 16:39:36:0747 : Login Successful. Username Maximus. SessionID : qjjttjpy55zqgazzm4z4q53i
+12-12-2024 16:41:11:6089 : Login Successful. Username Maximus. SessionID : 2di4vhjoa5zuryo030x1qg5z
+12-12-2024 16:43:06:6150 : Login Successful. Username Maximus. SessionID : c33zknne1qlgaehgeoq00j3y
+12-12-2024 16:44:34:4414 : Login Successful. Username Maximus. SessionID : 1gfie5rml0ibhlxebuls5xif
+12-12-2024 16:48:08:4563 : Login Successful. Username Maximus. SessionID : srg52xceofpmfomqacvisdgc
+12-12-2024 16:52:58:8245 : Login Successful. Username Maximus. SessionID : j0mv25l1m2obv4oorolhe4gn
+12-12-2024 17:05:23:7583 : Login Successful. Username Maximus. SessionID : 42a12y1lxx52kk4rtcw2i4tv
+12-12-2024 17:19:14:8481 : Login Successful. Username Maximus. SessionID : uemaf5val4redejrosjzdk3g
+12-12-2024 18:04:37:2665 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+12-12-2024 18:04:46:2131 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+12-12-2024 18:05:10:5845 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+12-12-2024 18:05:18:4733 : Login Unsuccessful. Username Maximus. Reached maximum attempts, Account has been locked
+12-12-2024 18:05:18:6140 : Class : LoginEntity.cs 
+Function : updateAttemptFailed() 
+Exception Occured
+Keyword not supported: 'port'.
+12-12-2024 18:05:18:6449 : Login Request Failed (Login Page). Exception : Keyword not supported: 'port'. Username : Maximus
+12-12-2024 18:06:24:6916 : Login Successful. Username Maximus. SessionID : jqvkftyaqyprieoxhozgb05f
+12-12-2024 18:19:01:2850 : Login Successful. Username Maximus. SessionID : p13mbydjkg3fd4snbgijxlan
+12-12-2024 18:35:47:7698 : Login Successful. Username Maximus. SessionID : 3y4fqnotqzhfoolyzr0tdzr1
+12-12-2024 19:02:33:9045 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+12-12-2024 19:02:42:5787 : Login Successful. Username Maximus. SessionID : kjnnhmzeqehoxnssk3a3itkt
+12-12-2024 19:20:53:4082 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+12-12-2024 19:20:58:9756 : Login Successful. Username Maximus. SessionID : ef5icvh0sc3yg3d2jjyxuxsz

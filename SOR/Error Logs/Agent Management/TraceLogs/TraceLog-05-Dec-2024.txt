@@ -1,0 +1,96 @@
+Time : 05-Dec-2024 11:01 Message : DashBoard: LoadTransactionCounts(): Exception: 42803: column "bc.bcname" must appear in the GROUP BY clause or be used in an aggregate function
+Time : 05-Dec-2024 11:40 Message : DashBoard: LoadTransactionCounts(): Exception: 42703: column c.aggregator_code does not exist
+Time : 05-Dec-2024 11:43 Message : DashBoard: LoadTransactionCounts(): Exception: 42703: column c.aggregator_code does not exist
+Time : 05-Dec-2024 11:44 Message : DashBoard: LoadTransactionCounts(): Exception: 42703: column agg.aggregator_code does not exist
+Time : 05-Dec-2024 11:45 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42703: column a.aggcode does not exist
+Time : 05-Dec-2024 11:46 Message : DashBoard: LoadTransactionCounts(): Exception: 42703: column agg.aggregator_code does not exist
+Time : 05-Dec-2024 11:51 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 05-Dec-2024 11:51 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 46
+Time : 05-Dec-2024 11:56 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 05-Dec-2024 11:56 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 47
+Time : 05-Dec-2024 11:56 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 47
+Time : 05-Dec-2024 11:56 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7887P RequestId: 47
+Time : 05-Dec-2024 12:30 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 47
+Time : 05-Dec-2024 12:30 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 47 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 12:30 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 47 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.ActivityType: 0
+Time : 05-Dec-2024 12:44 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 05-Dec-2024 12:44 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7887P RequestId: 48
+Time : 05-Dec-2024 12:47 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 12:47 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 12:47 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 12:47 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 12:47 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 12:47 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 12:47 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 12:47 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 12:47 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 12:47 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 12:47 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 12:47 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 12:53 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 12:53 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 13:01 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 13:01 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 13:01 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 13:01 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42883: function sp_reedit_aggregator_details(AgReqid => text, UserName => text) does not exist
+Time : 05-Dec-2024 13:01 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 13:14 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 13:14 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 13:17 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 13:18 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 13:20 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 13:20 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 14:23 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 14:23 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 14:31 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 14:31 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 14:33 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 14:33 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 14:36 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 48
+Time : 05-Dec-2024 14:36 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 14:36 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: A B C User: Maximus ReceiverEmailID: xyz9789656@gmail.com ContactNo: 8954621787 Remarks: Approve.ActivityType: 4
+Time : 05-Dec-2024 14:55 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg: 42703: column "agentname" of relation "agentrequest" does not exist RequestId: 0
+Time : 05-Dec-2024 14:56 Message : EditRegistationDetails: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: -1 StatusMsg: 42703: column "agentname" of relation "agentrequest" does not exist RequestId: 0
+Time : 05-Dec-2024 14:58 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 05-Dec-2024 14:58 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 14:58 Message : EditRegistrationDetails: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: 39000: Wrong key or corrupt data UserName:  PanNo: CMGPD7887P RequestId: 48
+Time : 05-Dec-2024 15:00 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 05-Dec-2024 15:00 Message : AgentRegistrationDAL: GetAgentRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:00 Message : EditRegistrationDetails: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: 39000: Wrong key or corrupt data UserName:  PanNo: CMGPD7887P RequestId: 48
+Time : 05-Dec-2024 15:00 Message : AgentRegistrationDAL: GetAgentDetailForRegistration: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:13 Message : AgentRegistrationDAL: GetAgentDetailForRegistration: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:13 Message : EditRegitsration: GetDetails: Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 05-Dec-2024 15:15 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 49
+Time : 05-Dec-2024 15:15 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 49
+Time : 05-Dec-2024 15:15 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7854P RequestId: 49
+Time : 05-Dec-2024 15:15 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:15 Message : AgLvl3: FillGrid: Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:20 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:20 Message : AgLvl3: FillGrid: Exception: 39000: Wrong key or corrupt data
+Time : 05-Dec-2024 15:20 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 49
+Time : 05-Dec-2024 15:20 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 49 Fullname: A B C User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 15:20 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 49 Fullname: A B C User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621787 Remarks: Approve.ActivityType: 0
+Time : 05-Dec-2024 15:20 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 50
+Time : 05-Dec-2024 15:20 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7854P RequestId: 50
+Time : 05-Dec-2024 15:23 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 05-Dec-2024 15:23 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 51
+Time : 05-Dec-2024 15:23 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 51
+Time : 05-Dec-2024 15:23 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7854P RequestId: 51
+Time : 05-Dec-2024 15:24 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 51
+Time : 05-Dec-2024 15:24 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 51 Fullname: A B C User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 15:24 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 51 Fullname: A B C User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621787 Remarks: Approve.ActivityType: 0
+Time : 05-Dec-2024 15:24 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 52
+Time : 05-Dec-2024 15:24 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7854P RequestId: 52
+Time : 05-Dec-2024 15:25 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 52
+Time : 05-Dec-2024 15:25 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: A B C User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621787 Remarks: Approve.
+Time : 05-Dec-2024 15:25 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: A B C User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621787 Remarks: Approve.ActivityType: 4
+Time : 05-Dec-2024 15:28 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 05-Dec-2024 15:28 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 53
+Time : 05-Dec-2024 15:28 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 53
+Time : 05-Dec-2024 15:28 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7855P RequestId: 53
+Time : 05-Dec-2024 15:30 Message : EditRegitsration: GetDetails: Exception: Column 'BusinessEmailID' does not belong to table AgentData.
+Time : 05-Dec-2024 15:30 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 05-Dec-2024 15:30 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 54
+Time : 05-Dec-2024 15:31 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 54
+Time : 05-Dec-2024 15:34 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7855P RequestId: 54

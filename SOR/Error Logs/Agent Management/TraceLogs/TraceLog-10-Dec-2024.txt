@@ -1,0 +1,34 @@
+Time : 10-Dec-2024 11:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 10-Dec-2024 11:02 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 55
+Time : 10-Dec-2024 11:02 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 55
+Time : 10-Dec-2024 11:02 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4514P RequestId: 55
+Time : 10-Dec-2024 11:03 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 55
+Time : 10-Dec-2024 11:03 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 55 Fullname: Aa Bb Cc User: Maximus ReceiverEmailID: xyz5234@gmail.com ContactNo: 9832654635 Remarks: Approve.
+Time : 10-Dec-2024 11:03 Message : AgentVerification: SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 55 Fullname: Aa Bb Cc User: Maximus ReceiverEmailID: xyz5234@gmail.com ContactNo: 9832654635 Remarks: Approve.ActivityType: 0
+Time : 10-Dec-2024 11:09 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 57
+Time : 10-Dec-2024 11:09 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4514P RequestId: 57
+Time : 10-Dec-2024 11:10 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 10-Dec-2024 11:10 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 58
+Time : 10-Dec-2024 11:11 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 58
+Time : 10-Dec-2024 11:11 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4517P RequestId: 58
+Time : 10-Dec-2024 11:12 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 58
+Time : 10-Dec-2024 11:12 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 58 Fullname: Aaa Bbb Ccc User: Maximus ReceiverEmailID: xyz984152@gmail.com ContactNo: 9678465143 Remarks: Approve.
+Time : 10-Dec-2024 11:13 Message : AgentVerification: SingleSave: Successful - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 58 Fullname: Aaa Bbb Ccc User: Maximus ReceiverEmailID: xyz984152@gmail.com ContactNo: 9678465143 Remarks: Approve.
+Time : 10-Dec-2024 11:18 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 59
+Time : 10-Dec-2024 11:18 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4517P RequestId: 59
+Time : 10-Dec-2024 11:18 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 59
+Time : 10-Dec-2024 11:18 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 59 Fullname: Aaa Bbb Ccc User: Maximus ReceiverEmailID: xyz984152@gmail.com ContactNo: 9678465143 Remarks: Approve.
+Time : 10-Dec-2024 11:18 Message : AgentVerification: SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 59 Fullname: Aaa Bbb Ccc User: Maximus ReceiverEmailID: xyz984152@gmail.com ContactNo: 9678465143 Remarks: Approve.ActivityType: 0
+Time : 10-Dec-2024 18:13 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column r.rule_name does not exist
+Time : 10-Dec-2024 18:13 Message : RGSReport: FillGrid: Exception: 42703: column r.rule_name does not exist
+Time : 10-Dec-2024 18:17 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "Group_Name" does not exist
+Time : 10-Dec-2024 18:17 Message : RGSReport: FillGrid: Exception: 42703: column "Group_Name" does not exist
+Time : 10-Dec-2024 18:21 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "Group_Name" does not exist
+Time : 10-Dec-2024 18:21 Message : RGSReport: FillGrid: Exception: 42703: column "Group_Name" does not exist
+Time : 10-Dec-2024 18:29 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 22001: value too long for type character varying(50)
+Time : 10-Dec-2024 18:29 Message : AllTransactions: fillGrid: Exception: 22001: value too long for type character varying(50)
+Time : 10-Dec-2024 18:33 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42601: syntax error at or near "T"
+Time : 10-Dec-2024 18:33 Message : AEPSTransactions: FillGrid: Exception: 42601: syntax error at or near "T"
+Time : 10-Dec-2024 18:33 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42601: syntax error at or near "T"
+Time : 10-Dec-2024 18:33 Message : AEPSTransactions: FillGrid: Exception: 42601: syntax error at or near "T"
+Time : 10-Dec-2024 18:33 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42601: syntax error at or near "T"

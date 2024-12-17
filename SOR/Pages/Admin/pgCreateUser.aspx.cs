@@ -21,6 +21,7 @@ namespace SOR.Pages.Admin
         public AppSecurity _AppSecurity = new AppSecurity();
         UserManagement _UserManagement = new UserManagement();
         public ClientRegistrationEntity clientMngnt = new ClientRegistrationEntity();
+        AgentRegistrationDAL _AgentRegistrationDAL = new AgentRegistrationDAL();
         #endregion
 
         #region Page Load
@@ -31,7 +32,7 @@ namespace SOR.Pages.Admin
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     //bool HasPagePermission = true;
-                        bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgCreateUser.aspx", "8");
+                        bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "pgCreateUser.aspx", "2");
                         if (!HasPagePermission)
                         {
                             try
@@ -45,7 +46,7 @@ namespace SOR.Pages.Admin
                         }
                         else
                         {
-                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "8");
+                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "2");
                         if (!Page.IsPostBack && HasPagePermission)
                         {
                             ddlRole.Items.Insert(0, (new ListItem("--Select--", "0")));
@@ -54,7 +55,7 @@ namespace SOR.Pages.Admin
 
                             txtUserName.Attributes.Add("autocomplete", "off");
                             txtPassword.Attributes.Add("autocomplete", "off");
-                            BindDropdownClientDetails();
+                            FillBc();
                             //BindDropdownRoles();
                             hidIsAllowToValidateText.Value = "1";
                         }
@@ -121,64 +122,64 @@ namespace SOR.Pages.Admin
             }
         }
 
-        private void BindDropdownClientDetails()
-        {
-            DataSet _dsClient = new DataSet();
-            try
-            {
-                _UserManagement.UserName = Session["Username"].ToString();
-                _UserManagement.ClientID = ddlClient.SelectedValue != "0" ? (ddlClient.SelectedValue) : null;
-                _dsClient = _UserManagement.BindClientReport();
-                if (_dsClient != null && _dsClient.Tables.Count > 0)
-                {
-                    if (_dsClient.Tables.Count > 0 && _dsClient.Tables[0].Rows.Count > 0)
-                    {
-                        if (_dsClient.Tables[0].Rows.Count == 1)
-                        {
-                            ddlClient.Items.Clear();
-                            ddlClient.DataSource = _dsClient.Tables[0].Copy();
-                            ddlClient.DataTextField = "ClientName";
-                            ddlClient.DataValueField = "ClientID";
-                            ddlClient.DataBind();
-                            if (Session["ParentRoleID"] != null && Session["ParentRoleID"].ToString() == "1")
-                            {
-                                ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select --", "0"));
-                            }
-                            BindDropdownRoles();
-                        }
-                        else
-                        {
-                            ddlClient.Items.Clear();
-                            ddlClient.DataSource = _dsClient.Tables[0].Copy();
-                            ddlClient.DataTextField = "ClientName";
-                            ddlClient.DataValueField = "ClientID";
-                            ddlClient.DataBind();
-                            ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select --", "0"));
-                        }
-                    }
-                    else
-                    {
-                        ddlClient.Items.Clear();
-                        ddlClient.DataSource = null;
-                        ddlClient.DataBind();
-                        ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("No Data Found", "0"));
-                    }
-                }
-                else
-                {
-                    ddlClient.Items.Clear();
-                    ddlClient.DataSource = null;
-                    ddlClient.DataBind();
-                    ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("No Data Found", "0"));
-                }
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.AdminManagementTrace("pgCreateUser: BindDropdownClientDetails(): Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
-                return;
-            }
-        }
+        //private void BindDropdownClientDetails()
+        //{
+        //    DataSet _dsClient = new DataSet();
+        //    try
+        //    {
+        //        _UserManagement.UserName = Session["Username"].ToString();
+        //        _UserManagement.ClientID = ddlClient.SelectedValue != "0" ? (ddlClient.SelectedValue) : null;
+        //        _dsClient = _UserManagement.BindClientReport();
+        //        if (_dsClient != null && _dsClient.Tables.Count > 0)
+        //        {
+        //            if (_dsClient.Tables.Count > 0 && _dsClient.Tables[0].Rows.Count > 0)
+        //            {
+        //                if (_dsClient.Tables[0].Rows.Count == 1)
+        //                {
+        //                    ddlClient.Items.Clear();
+        //                    ddlClient.DataSource = _dsClient.Tables[0].Copy();
+        //                    ddlClient.DataTextField = "ClientName";
+        //                    ddlClient.DataValueField = "ClientID";
+        //                    ddlClient.DataBind();
+        //                    if (Session["ParentRoleID"] != null && Session["ParentRoleID"].ToString() == "1")
+        //                    {
+        //                        ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select --", "0"));
+        //                    }
+        //                    BindDropdownRoles();
+        //                }
+        //                else
+        //                {
+        //                    ddlClient.Items.Clear();
+        //                    ddlClient.DataSource = _dsClient.Tables[0].Copy();
+        //                    ddlClient.DataTextField = "ClientName";
+        //                    ddlClient.DataValueField = "ClientID";
+        //                    ddlClient.DataBind();
+        //                    ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Select --", "0"));
+        //                }
+        //            }
+        //            else
+        //            {
+        //                ddlClient.Items.Clear();
+        //                ddlClient.DataSource = null;
+        //                ddlClient.DataBind();
+        //                ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("No Data Found", "0"));
+        //            }
+        //        }
+        //        else
+        //        {
+        //            ddlClient.Items.Clear();
+        //            ddlClient.DataSource = null;
+        //            ddlClient.DataBind();
+        //            ddlClient.Items.Insert(0, new System.Web.UI.WebControls.ListItem("No Data Found", "0"));
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.AdminManagementTrace("pgCreateUser: BindDropdownClientDetails(): Exception: " + Ex.Message);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
+        //        return;
+        //    }
+        //}
 
         private void fillClient()
         {
@@ -365,14 +366,14 @@ namespace SOR.Pages.Admin
                                 _UserManagement._RandomStringForSalt = _RandomStringForSalt;
                                 _UserManagement._ClientID = ddlClient.SelectedValue == "1" ? "Maximus" : ddlClient.SelectedValue.ToString();
                                 _UserManagement._UserId = ddlUsers.SelectedValue.ToString();
-                                try {
-                                    ErrorLog.CommonTrace("Request Received From Create User." + Environment.NewLine + ErrorLog.XmlSerialser(_UserManagement));
-                                }
-                                catch (Exception Ex)
-                                {
-                                    ErrorLog.CommonError(Ex);
-                                    ErrorLog.CommonTrace("Request Received From Create User. UserName : " +_UserManagement._UserName  + " Password : " + _UserManagement._Password  +" Email : " + _UserManagement.Email +" Mobile : " + _UserManagement._Mobile +" RoleId : " + _UserManagement._RoleId +" UserRoleGroup : " + _UserManagement.UserRoleGroup+" UserName : " + _UserManagement.UserName +" RandomStringForSalt : " + _UserManagement.__RandomStringForSalt +" RandomStringForSalt : " + _UserManagement._RandomStringForSalt +" ClientID : " + _UserManagement._ClientID +" UserId : " + _UserManagement._UserId);
-                                }
+                                //try {
+                                //    ErrorLog.CommonTrace("Request Received From Create User." + Environment.NewLine + ErrorLog.XmlSerialser(_UserManagement));
+                                //}
+                                //catch (Exception Ex)
+                                //{
+                                //    ErrorLog.CommonError(Ex);
+                                //    ErrorLog.CommonTrace("Request Received From Create User. UserName : " +_UserManagement._UserName  + " Password : " + _UserManagement._Password  +" Email : " + _UserManagement.Email +" Mobile : " + _UserManagement._Mobile +" RoleId : " + _UserManagement._RoleId +" UserRoleGroup : " + _UserManagement.UserRoleGroup+" UserName : " + _UserManagement.UserName +" RandomStringForSalt : " + _UserManagement.__RandomStringForSalt +" RandomStringForSalt : " + _UserManagement._RandomStringForSalt +" ClientID : " + _UserManagement._ClientID +" UserId : " + _UserManagement._UserId);
+                                //}
                                 DataSet ds = _UserManagement.CreateUser();
                                 if (ds != null && ds.Tables[0].Rows[0]["Flag"].ToString() == "Inserted")
                                 {
@@ -382,37 +383,37 @@ namespace SOR.Pages.Admin
                                     _auditParams[2] = "User " + txtUserName.Text + " Created Successfully";
                                     _UserManagement.StoreLoginActivities(_auditParams);
                                     ClearContoles();
-                                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('User created successfully.','Create User');</script>", false);
+                                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('User created successfully', 'Create User');", true);
                                 }
                                 else
                                 {
                                     ErrorLog.CommonTrace("Create User Request Failed With Unknown Error Occured In Database. Username : " + Session["Username"].ToString() + " User Name : " + txtUserName.Text);
-                                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again.','Create User');</script>", false);
+                                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again.','Create User');", true);
                                 }
                             }
                             else
                             {
                                 ErrorLog.CommonTrace("Create User Request Failed With Record with the same Username or EmailID or MobileNo. is already exist. Username : " + Session["Username"].ToString() + " User Name : " + txtUserName.Text);
-                                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Record with the same Username or EmailID or MobileNo. is already exist.','Create User');</script>", false);
+                                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Record with the same Username or EmailID or MobileNo. is already exist.','Create User');", true);
                             }
                         }
                         else
                         {
                             ErrorLog.CommonTrace("Create User Request Failed With Please enter the correct email id. Username : " + Session["Username"].ToString() + " Email : "+ txtEmail.Text);
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Please enter the correct email id.','Create User');</script>", false);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter the correct email id.','Create Userr');", true);
                         }
                     }
                     else
                     {
                         ErrorLog.CommonTrace("Create User Request Failed With All Fields Are Mandatory. Username : " + Session["Username"].ToString());
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('All fields are mandatory.','Create User');</script>", false);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('All fields are mandatory.','Create User');", true);
                     }
                 }
             }
             catch (Exception Ex)
             {
                 ErrorLog.AdminManagementTrace("pgCreateUser: btnSave_Click(): Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }
@@ -426,7 +427,7 @@ namespace SOR.Pages.Admin
             catch (Exception Ex)
             {
                 ErrorLog.AdminManagementTrace("pgCreateUser: btnClear_Click(): Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }
@@ -467,7 +468,7 @@ namespace SOR.Pages.Admin
             catch (Exception Ex)
             {
                 ErrorLog.AdminManagementTrace("pgCreateUser: ClearContoles(): Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }
@@ -554,7 +555,7 @@ namespace SOR.Pages.Admin
             catch (Exception Ex)
             {
                 ErrorLog.AdminManagementTrace("pgCreateUser: ddlRole_SelectedIndexChanged: Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }
@@ -572,7 +573,55 @@ namespace SOR.Pages.Admin
             catch (Exception Ex)
             {
                 ErrorLog.AdminManagementTrace("pgCreateUser: ddlClient_SelectedIndexChanged: Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>alert('Something went wrong. Try again', 'Warning');</script>", false);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                return;
+            }
+        }
+        #endregion
+
+        #region Bind Client
+        public void FillBc()
+        {
+            try
+            {
+                ddlClient.Items.Clear();
+                ddlClient.DataSource = null;
+                ddlClient.DataBind();
+                string UserName = Session["Username"].ToString();
+                int IsRemoved = 0;
+                int IsActive = 1;
+                int IsdocUploaded = 1;
+                int VerificationStatus = 1;
+                DataTable dsbc = _AgentRegistrationDAL.GetBC(UserName, VerificationStatus, IsActive, IsRemoved, null, IsdocUploaded);
+                if (dsbc != null && dsbc.Rows.Count > 0 && dsbc.Rows.Count > 0)
+                {
+                    if (dsbc.Rows.Count == 1)
+                    {
+                        ddlClient.DataSource = dsbc;
+                        ddlClient.DataValueField = "BCCode";
+                        ddlClient.DataTextField = "BCName";
+                        ddlClient.DataBind();
+                    }
+                    else
+                    {
+                        ddlClient.DataSource = dsbc;
+                        ddlClient.DataValueField = "BCCode";
+                        ddlClient.DataTextField = "BCName";
+                        ddlClient.DataBind();
+                        ddlClient.Items.Insert(0, new ListItem("-- Select --", "0"));
+                    }
+                }
+                else
+                {
+                    ddlClient.DataSource = null;
+                    ddlClient.DataBind();
+                    ddlClient.Items.Insert(0, new ListItem("No Data Found", "0"));
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : FillBc()\nException Occured\n" + ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Agent Registration');", true);
                 return;
             }
         }

@@ -1,0 +1,28 @@
+Time : 06-Dec-2024 11:22 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Bucket'.
+Time : 06-Dec-2024 11:22 Message : Page : BCRegistration.cs 
+Function : btndownload_Click
+Exception Occured
+Thread was being aborted.
+Time : 06-Dec-2024 11:24 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Bucket'.
+Time : 06-Dec-2024 11:24 Message : Page : BCRegistration.cs 
+Function : btndownload_Click
+Exception Occured
+Thread was being aborted.
+Time : 06-Dec-2024 11:25 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Bucket'.
+Time : 06-Dec-2024 11:25 Message : Page : BCRegistration.cs 
+Function : btndownload_Click
+Exception Occured
+Thread was being aborted.
+Time : 06-Dec-2024 11:26 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 37 Fullname: Vakrangi User: Maximus ReceiverEmailID: xyz12@gmail.com ContactNo: 8954621312 Remarks: Approve.
+Time : 06-Dec-2024 11:26 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 37 Fullname: Vakrangi User: Maximus ReceiverEmailID: xyz12@gmail.com ContactNo: 8954621312 Remarks: Approve.ActivityType: 4
+Time : 06-Dec-2024 11:26 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Cannot find table 0.
+Time : 06-Dec-2024 11:27 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 30 Fullname: BCTest User: Maximus ReceiverEmailID: xy88@gmail.com ContactNo: 8954621318 Remarks: Approve.

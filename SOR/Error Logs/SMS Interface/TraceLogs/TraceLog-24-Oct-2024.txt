@@ -1,0 +1,12 @@
+Time : 24-Oct-2024 17:08 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Exception : 42809: proc_user_is_exist_or_not_forgot_password(p_username => text, p_flag => text) is a procedure
+Time : 24-Oct-2024 17:08 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Exception : 42809: proc_user_is_exist_or_not_forgot_password(p_username => text, p_flag => text) is a procedure
+Time : 24-Oct-2024 18:34 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Exception : 42703: column "p_status" does not exist
+Time : 24-Oct-2024 18:37 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Exception : 42703: column "p_status" does not exist
+Time : 24-Oct-2024 19:14 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in
+Time : 24-Oct-2024 19:16 Message : Page : Login.cs 
+Function : ProcessForgotPassword() => Login Details forwarded for SMS/Email Preparation. Contact No : 9920248455Email : aakash.tomar@maximusinfoware.in

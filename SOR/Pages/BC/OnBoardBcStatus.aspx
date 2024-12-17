@@ -251,8 +251,8 @@
                                     <div class="selectInputBox">
                                         <asp:DropDownList runat="server" ID="ddlActiontype" CssClass="maximus-select w-100">
                                             <asp:ListItem Text="--All--" Value="0"></asp:ListItem>
-                                            <asp:ListItem Text="Active" Value="1"></asp:ListItem>
-                                            <asp:ListItem Text="De-Active" Value="2"></asp:ListItem>
+                                            <asp:ListItem Text="Activated" Value="1"></asp:ListItem>
+                                            <asp:ListItem Text="Deactivated" Value="2"></asp:ListItem>
                                             <asp:ListItem Text="Terminated" Value="3"></asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
@@ -262,10 +262,6 @@
 
                             <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
 
-                                <asp:Button ID="btnSearch" runat="server" Text="Search" OnClientClick="return CheckValidations();"
-                                    OnClick="btnSearch_Click" TabIndex="5" CssClass="themeBtn themeApplyBtn" BackColor="#003087" />
-                                <asp:Button ID="btnClear_Click" runat="server" Text="Clear"
-                                    TabIndex="5" CssClass="themeBtn resetBtn themeCancelBtn me-0" OnClick="btnClear_Click_Click" />
                                 <div class="col-md-2" runat="server" visible="false">
                                     <div class="selectInputBox">
                                         <asp:DropDownList runat="server" ID="ddlExport" CssClass="maximus-select w-100" AutoPostBack="true">
@@ -274,20 +270,29 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
+                                <button type="button" id="btnexport" runat="server" class="themeBtn themeApplyBtn" data-bs-toggle="modal" autopostback="true" onserverclick="btnexport_ServerClick" style="display: none">
+                                </button>
+                            </div>
 
-                                <div class="col">
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-auto text-center">
+                                    <strong>
+                                        <asp:Label ID="lblRecordsTotal" runat="server" Text=""></asp:Label>
+                                    </strong>
+                                </div>
+                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
+                                    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClientClick="return CheckValidations();"
+                                        OnClick="btnSearch_Click" TabIndex="5" CssClass="themeBtn themeApplyBtn" BackColor="#003087" />
+                                    <asp:Button ID="btnClear_Click" runat="server" Text="Clear"
+                                        TabIndex="5" CssClass="themeBtn resetBtn themeCancelBtn me-0" OnClick="btnClear_Click_Click" />
+                                </div>
+                                <div class="d-flex justify-content-end">
                                     <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
                                         ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
 
                                     <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
                                         ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
                                 </div>
-
-                                <button type="button" id="btnexport" runat="server" class="themeBtn themeApplyBtn" data-bs-toggle="modal" autopostback="true" onserverclick="btnexport_ServerClick" style="display: none">
-                                </button>
-                            </div>
-                            <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
-                                <center><strong><asp:Label ID="lblRecordsTotal" runat="server" Text=""></asp:Label></strong></center>
                             </div>
 
                         </div>
@@ -330,7 +335,7 @@
                             BorderColor="White"
                             OnRowCommand="gvBlockBC_RowCommand"
                             OnRowDataBound="gvBlockBC_RowDataBound"
-                            DataKeyNames="BCId,BcStatus"
+                            DataKeyNames="BC ID,BcStatus"
                             PagerStyle-Font-Size="Smaller"
                             Font-Size="12px"
                             PagerSettings-Mode="NumericFirstLast"
@@ -340,30 +345,30 @@
                             <HeaderStyle HorizontalAlign="Center" Wrap="false" />
                             <RowStyle Wrap="false" />
                             <Columns>
-                                <asp:TemplateField >
-                                   
-                                    <HeaderTemplate >
+                                <asp:TemplateField>
+
+                                    <HeaderTemplate>
                                         <table>
                                             <tr>
-                                                <td style="background: #fbd2ce; color: black; display:none; border: none;">
+                                                <td style="background: #fbd2ce; color: black; display: none; border: none;">
                                                     <label>All </label>
                                                 </td>
                                                 <td style="background: #fbd2ce; color: #FFF; border: none;">
-                                                    <asp:CheckBox ID="CheckBoxAll" runat="server" AutoPostBack="true" visible="false" OnCheckedChanged="CheckBoxAll_CheckedChanged" /></td>
+                                                    <asp:CheckBox ID="CheckBoxAll" runat="server" AutoPostBack="true" Visible="false" OnCheckedChanged="CheckBoxAll_CheckedChanged" /></td>
                                             </tr>
                                         </table>
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <asp:CheckBox ID="chBoxSelectRow" runat="server" AutoPostBack="true" OnCheckedChanged="chBoxSelectRow_CheckedChanged" />
                                     </ItemTemplate>
-                                     
+
                                 </asp:TemplateField>
 
                                 <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Action" HeaderStyle-CssClass="text-center">
                                     <ItemTemplate>
                                         <asp:UpdatePanel ID="UpButtons" runat="server">
                                             <ContentTemplate>
-                                                <asp:ImageButton ID="lbtnEdit" runat="server" CommandArgument='<%# Eval("BCId") %>' runnat="server"
+                                                <asp:ImageButton ID="lbtnEdit" runat="server" CommandArgument='<%# Eval("BC ID") %>' runnat="server"
                                                     CommandName="EditDetails" ToolTip="Edit role" Width="16" Height="16" ImageUrl="~/Images/Edit-01-512.png" />
                                             </ContentTemplate>
                                         </asp:UpdatePanel>
@@ -371,21 +376,20 @@
                                     <HeaderStyle CssClass="text-center" />
                                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                                 </asp:TemplateField>
-                                <asp:BoundField DataField="BC Code" HeaderText="BC Code" />
-                                <asp:BoundField DataField="Client ID" HeaderText="Client ID" />
-                                <asp:BoundField DataField="Client Name" HeaderText="Client Name" />
-                                <asp:BoundField DataField="BCId" HeaderText="BC ID" />
-                                <asp:BoundField DataField="BC Name" HeaderText="BC Name" />
-                                <asp:BoundField DataField="BcStatus" HeaderText="Action Type" />
-                                <asp:BoundField DataField="Contact No." HeaderText="Contact No." />
+                                <asp:BoundField DataField="BC Code" HeaderText="Code" />
+                                <%--<asp:BoundField DataField="Client ID" HeaderText="Client ID" />
+                                <asp:BoundField DataField="Client Name" HeaderText="Client Name" />--%>
+                                <asp:BoundField DataField="BC ID" HeaderText="BC ID" Visible="false" />
+                                <asp:BoundField DataField="BC Name" HeaderText="Name" />
+                                <%--<asp:BoundField DataField="BcStatus" HeaderText="Action Type" />--%>
+                                <asp:BoundField DataField="Contact No" HeaderText="Mobile No" />
                                 <asp:BoundField DataField="Email" HeaderText="Email" />
                                 <asp:BoundField DataField="State" HeaderText="State" />
                                 <asp:BoundField DataField="District" HeaderText="District" />
                                 <asp:BoundField DataField="City" HeaderText="City" />
                                 <asp:BoundField DataField="Pincode" HeaderText="Pincode" />
-                                <asp:BoundField DataField="Created By" HeaderText="Created By" />
-                                <asp:BoundField DataField="CreatedOn" HeaderText="Created On" />
-                                <asp:BoundField DataField="Mobile No" HeaderText="Mobile No" />
+                                <asp:BoundField DataField="Created By" HeaderText="Onboarded By" />
+                                <asp:BoundField DataField="Created On" HeaderText="Onboarded On" />
                                 <asp:BoundField DataField="Onboarding Status" HeaderText="Onboarding Status" />
                             </Columns>
                         </asp:GridView>

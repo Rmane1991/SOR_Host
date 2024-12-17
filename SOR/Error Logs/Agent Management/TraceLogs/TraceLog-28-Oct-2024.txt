@@ -1,0 +1,170 @@
+Time : 28-Oct-2024 12:22 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:22 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 12:22 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 12:22 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:22 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:22 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:22 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24122218.FileID:
+Time : 28-Oct-2024 12:31 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:31 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 12:31 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 12:31 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:31 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:31 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:31 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24123155.FileID:
+Time : 28-Oct-2024 12:33 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:33 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 12:33 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 12:34 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:34 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:34 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:34 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24123401.FileID:
+Time : 28-Oct-2024 12:42 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:42 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 12:42 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 12:42 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 12:42 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:42 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 12:42 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24124243.FileID:
+Time : 28-Oct-2024 13:04 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 13:04 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 13:04 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 13:04 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 13:04 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 13:04 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 13:04 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130420.FileID:
+Time : 28-Oct-2024 13:07 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 13:07 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 13:07 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 13:07 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 13:07 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 13:07 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 13:07 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130732.FileID:
+Time : 28-Oct-2024 13:07 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130732.FileID:.
+Time : 28-Oct-2024 13:07 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130732
+Time : 28-Oct-2024 13:07 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130732
+Time : 28-Oct-2024 13:07 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130732.FileExtension : .xls.
+Time : 28-Oct-2024 13:07 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 13:09 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 13:09 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 13:09 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 13:09 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 13:09 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 13:09 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 13:09 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130952.FileID:
+Time : 28-Oct-2024 13:10 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130952.FileID:.
+Time : 28-Oct-2024 13:10 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130952
+Time : 28-Oct-2024 13:10 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130952
+Time : 28-Oct-2024 13:10 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24130952.FileExtension : .xls.
+Time : 28-Oct-2024 13:10 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 14:47 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 14:47 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 14:47 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 14:57 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 14:57 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 14:57 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 14:57 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 14:57 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 14:57 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 14:57 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24145745.FileID:
+Time : 28-Oct-2024 14:57 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24145745.FileID:.
+Time : 28-Oct-2024 14:57 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24145745
+Time : 28-Oct-2024 14:57 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24145745
+Time : 28-Oct-2024 14:57 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24145745.FileExtension : .xls.
+Time : 28-Oct-2024 14:58 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 15:00 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 15:00 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 15:00 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 15:00 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 15:00 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 15:00 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 15:00 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150028.FileID:
+Time : 28-Oct-2024 15:00 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150028.FileID:.
+Time : 28-Oct-2024 15:00 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150028
+Time : 28-Oct-2024 15:00 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150028
+Time : 28-Oct-2024 15:00 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150028.FileExtension : .xls.
+Time : 28-Oct-2024 15:00 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 15:02 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 15:02 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 15:02 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 15:02 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 15:02 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 15:02 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 15:02 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150206.FileID:
+Time : 28-Oct-2024 15:02 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150206.FileID:.
+Time : 28-Oct-2024 15:02 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150206
+Time : 28-Oct-2024 15:02 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150206
+Time : 28-Oct-2024 15:02 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24150206.FileExtension : .xls.
+Time : 28-Oct-2024 15:02 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 15:03 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 17.
+Time : 28-Oct-2024 15:03 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 17.
+Time : 28-Oct-2024 16:56 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 16:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 16:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 16:56 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 16:56 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 16:56 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 16:56 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24165646.FileID:
+Time : 28-Oct-2024 16:56 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24165646.FileID:.
+Time : 28-Oct-2024 16:56 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24165646
+Time : 28-Oct-2024 16:56 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24165646
+Time : 28-Oct-2024 16:56 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24165646.FileExtension : .xls.
+Time : 28-Oct-2024 16:56 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 17:06 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 17:06 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 17:06 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 17:06 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 17:06 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 17:06 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 17:06 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24170617.FileID:
+Time : 28-Oct-2024 17:06 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24170617.FileID:.
+Time : 28-Oct-2024 17:06 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24170617
+Time : 28-Oct-2024 17:06 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24170617
+Time : 28-Oct-2024 17:06 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24170617.FileExtension : .xls.
+Time : 28-Oct-2024 17:06 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 17:09 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 19.
+Time : 28-Oct-2024 17:09 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 19.
+Time : 28-Oct-2024 18:08 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 18:08 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 18:08 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 18:08 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 18:08 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 18:08 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 18:08 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24180838.FileID:
+Time : 28-Oct-2024 18:08 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24180838.FileID:.
+Time : 28-Oct-2024 18:08 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24180838
+Time : 28-Oct-2024 18:08 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24180838
+Time : 28-Oct-2024 18:08 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24180838.FileExtension : .xls.
+Time : 28-Oct-2024 18:08 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 18:08 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 20.
+Time : 28-Oct-2024 18:08 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 20.
+Time : 28-Oct-2024 18:14 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 18:14 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 18:14 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 18:14 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 18:14 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 18:14 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 18:14 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24181410.FileID:
+Time : 28-Oct-2024 18:14 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24181410.FileID:.
+Time : 28-Oct-2024 18:14 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24181410
+Time : 28-Oct-2024 18:14 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24181410
+Time : 28-Oct-2024 18:14 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24181410.FileExtension : .xls.
+Time : 28-Oct-2024 18:14 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 18:14 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 21.
+Time : 28-Oct-2024 18:14 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 21.
+Time : 28-Oct-2024 18:22 Message : Failed Insert File Data For Agent Registration. Username : Maximus. FileID : 21.
+Time : 28-Oct-2024 18:22 Message : Failed To Insert File Data In Database For Agent Registration. FileType : AgentRegistration.xls Description :
+Time : 28-Oct-2024 18:22 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 28-Oct-2024 18:22 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 28-Oct-2024 18:22 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 28-Oct-2024 18:22 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 28-Oct-2024 18:22 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 18:22 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 28-Oct-2024 18:22 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24182241.FileID:
+Time : 28-Oct-2024 18:22 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24182241.FileID:.
+Time : 28-Oct-2024 18:22 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24182241
+Time : 28-Oct-2024 18:22 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24182241
+Time : 28-Oct-2024 18:22 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_28Oct24182241.FileExtension : .xls.
+Time : 28-Oct-2024 18:22 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 28-Oct-2024 18:22 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 22.
+Time : 28-Oct-2024 18:22 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 22.

@@ -1,0 +1,38 @@
+30-11-2024 11:57:01:7985 : Login Successful. Username Maximus. SessionID : ojaol0moi1ewzvdttzhdvz0k
+30-11-2024 12:01:38:5738 : Login Successful. Username Maximus. SessionID : gefht4gsizxtj2il3l2ow3e0
+30-11-2024 12:07:36:9529 : Login Successful. Username Maximus. SessionID : takll5kouahprhwwejlqbpoa
+30-11-2024 12:12:24:0920 : Login Successful. Username Maximus. SessionID : wzicyujdiwjwfa5brknfjcwp
+30-11-2024 12:15:43:0875 : Login Successful. Username Maximus. SessionID : tfjby0jke3kolklnomha1mpx
+30-11-2024 12:19:46:5295 : Login Successful. Username Maximus. SessionID : 1ykexcmcuey4o303iznpguya
+30-11-2024 12:23:02:4556 : Login Successful. Username Maximus. SessionID : yxeiylnhglis4gdb20ayuhaa
+30-11-2024 12:29:19:5634 : Login Successful. Username Maximus. SessionID : m50ldyqsqp40atcwr5tvof0p
+30-11-2024 12:30:20:7099 : Login Successful. Username Maximus. SessionID : vjugyaox4p3s3p52vbqdqtec
+30-11-2024 12:33:10:9231 : Login Successful. Username Maximus. SessionID : oincqt4arudwnqftzdyrvpxd
+30-11-2024 12:36:13:0960 : Login Successful. Username Maximus. SessionID : fo4jvvxsotozy5dhbutdt1gu
+30-11-2024 12:42:31:8589 : Login Successful. Username Maximus. SessionID : zq5rnwh3zmegam452rjuqabw
+30-11-2024 12:51:26:6506 : Login Successful. Username Maximus. SessionID : w00hkjeztql1ilqt4lo4v3ve
+30-11-2024 14:26:38:4339 : Login Successful. Username Maximus. SessionID : coeskxlzvcwycjl5hgkghzoz
+30-11-2024 14:41:30:0295 : Login Successful. Username Maximus. SessionID : ipgubxloxvzlrvyw3iujb4kp
+30-11-2024 14:47:54:3684 : Login Successful. Username Maximus. SessionID : lnanqklerg01askehnr5gk0f
+30-11-2024 15:59:06:2117 : Login Successful. Username Maximus. SessionID : wzdevh1hyjrvbpxponndxmdc
+30-11-2024 16:19:49:3818 : Login Successful. Username Maximus. SessionID : yef2aswqmaxjfm0mrngrcdab
+30-11-2024 16:23:45:2870 : Login Successful. Username Maximus. SessionID : 1xdpvo3kt3ovefnluuxtr0fb
+30-11-2024 16:26:26:5864 : Login Successful. Username Maximus. SessionID : 12p233jxgau5p3zexeuukji4
+30-11-2024 16:30:28:1813 : Login Successful. Username Maximus. SessionID : gq2cdtto4rl1lnm4tflbk10l
+30-11-2024 16:33:01:0283 : Login Successful. Username Maximus. SessionID : a3scbeeqx3howkczxy3epjx0
+30-11-2024 18:17:26:5055 : Login Successful. Username Maximus. SessionID : hw0boqrmybnwtqjxdklu5slv
+30-11-2024 18:31:48:6215 : Login Successful. Username Maximus. SessionID : o3ghtxb1jkhbw25uvte2ouxi
+30-11-2024 18:33:24:6238 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+22P02: invalid input syntax for type boolean: "Prod Pending"
+30-11-2024 18:35:06:8621 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+22P02: invalid input syntax for type boolean: "Prod Pending"
+30-11-2024 18:35:43:6536 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+22P02: invalid input syntax for type boolean: "Prod Pending"
+30-11-2024 18:39:11:4068 : Login Successful. Username Maximus. SessionID : wmyifzixfzezdyjyegm12cm0
+30-11-2024 18:59:47:7226 : Login Successful. Username Maximus. SessionID : cqnbmij2o325saxebcvw3hxg

@@ -1,0 +1,15 @@
+Time : 29-Nov-2024 11:57 Message : TrRule: btnCreateRule_Click() | Username :MaximusException : 42883: operator does not exist: integer = character varying
+Time : 29-Nov-2024 12:40 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 12:40 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 12:45 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 29-Nov-2024 12:48 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 29-Nov-2024 12:53 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 12:54 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 12:56 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 14:43 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 29-Nov-2024 14:45 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 29-Nov-2024 14:54 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 29-Nov-2024 14:58 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 18:14 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 18:15 Message : Versioning: btnSubmitDetails_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 29-Nov-2024 18:15 Message : Versioning: btnSave_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

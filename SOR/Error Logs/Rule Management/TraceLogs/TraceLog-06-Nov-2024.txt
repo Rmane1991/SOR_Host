@@ -1,0 +1,1 @@
+Time : 06-Nov-2024 16:09 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful

@@ -210,22 +210,22 @@
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="ValCreateUser" ControlToValidate="ddlRole" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please select Role."></asp:RequiredFieldValidator>
                             </div>
 
-                            <div class="col-md-4">
-                                <label for="exampleInputEmail1">User:<span class="err">*</span></label>
+                            <div class="col-md-4" style="display:none">
+                                <label for="exampleInputEmail1">User:</label>
                                 <asp:DropDownList ID="ddlUsers" Width="100%" runat="server" CssClass="maximus-select w-100" AutoPostBack="true"></asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="ValCreateUser" ControlToValidate="ddlUsers" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please select User."></asp:RequiredFieldValidator>
+                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="ValCreateUser" ControlToValidate="ddlUsers" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please select User."></asp:RequiredFieldValidator>--%>
                             </div>
-
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
                             <div class="col-md-4">
                                 <label for="exampleInputEmail1">Role Group:<span class="err">*</span></label>
                                 <asp:DropDownList ID="ddlUserRoleGroup" Width="100%" runat="server" CssClass="maximus-select w-100" AutoPostBack="false"></asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ValidationGroup="ValCreateUser" ControlToValidate="ddlUserRoleGroup" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please select Role Group."></asp:RequiredFieldValidator>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            
                             <div class="col-md-4">
                                 <label for="exampleInputEmail1">Password:<span class="err">*</span></label>
                                 <asp:TextBox ID="txtPassword" Width="100%" runat="server" TextMode="Password" CssClass="input-text form-control" placeholder="Password" MaxLength="16" autocomplete="false" AutoPostBack="false" onpaste="return false"></asp:TextBox>

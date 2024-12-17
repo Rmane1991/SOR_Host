@@ -1,0 +1,91 @@
+25-10-2024 10:42:38:5297 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 10:42:38:5336 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 10:42:39:7204 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 10:42:39:7374 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025104239882
+25-10-2024 10:43:21:3695 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 10:43:36:4665 : OTP Is InValid. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 10:44:12:1589 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 10:44:12:1599 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 10:44:12:1739 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 10:44:12:1808 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025104412124
+25-10-2024 10:44:23:6038 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:01:12:9714 : OTP Validation Successful. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:03:43:7307 : Change Password (Forgot Password) Request (Login Page) Received. Username : Maximus
+25-10-2024 11:06:28:1796 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 11:06:28:1836 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 11:06:30:0795 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 11:06:30:0945 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025110630236
+25-10-2024 11:06:37:0514 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:06:37:0624 : OTP Validation Successful. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:06:58:9835 : Change Password (Forgot Password) Request (Login Page) Received. Username : Maximus
+25-10-2024 11:09:34:1124 : Class : LoginEntity.cs 
+Function : SetChangePasswordForForget() 
+Exception Occurred
+Parameter 'p_OldPassword' must have its value set
+25-10-2024 11:09:34:1533 : Change Password (Forgot Password) Request Failed (Login Page). Exception : Parameter 'p_OldPassword' must have its value set Username : Maximus
+25-10-2024 11:09:40:2204 : Login Successful. Username Maximus. SessionID : qeyvv1xqmuoixdg1zkumdpjv
+25-10-2024 11:10:36:2119 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+25-10-2024 11:10:36:2129 : NOTICE: Flag is set to 1, proceeding with validations...
+25-10-2024 11:10:36:2139 : NOTICE: Inserting new record...1
+25-10-2024 11:10:36:2149 : NOTICE: Inserting new record...
+25-10-2024 11:10:36:2149 : NOTICE: Insert successful, RequestId: 100
+25-10-2024 11:10:52:9644 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+25-10-2024 11:10:52:9654 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+25-10-2024 11:13:22:9400 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 11:13:22:9430 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 11:13:24:5486 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 11:13:24:5646 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025111324746
+25-10-2024 11:13:30:9857 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:13:30:9997 : OTP Validation Successful. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:13:46:2308 : Change Password (Forgot Password) Request (Login Page) Received. Username : Maximus
+25-10-2024 11:15:51:8228 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 11:15:51:8278 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 11:15:53:0216 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 11:15:53:0356 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025111553145
+25-10-2024 11:16:01:7174 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:16:04:1449 : OTP Validation Successful. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:16:48:0168 : Change Password (Forgot Password) Request (Login Page) Received. Username : Maximus
+25-10-2024 11:19:17:5662 : Change Password (Forgot Password) Request Successful (Login Page). Username : Maximus
+25-10-2024 11:19:36:6489 : Login Successful. Username Maximus. SessionID : fs3r2t1z34drskwqabn3ocue
+25-10-2024 11:19:46:7626 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 11:19:46:7636 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 11:19:46:7786 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 11:19:46:7836 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025111946960
+25-10-2024 11:19:52:0998 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:19:52:1098 : OTP Validation Successful. Change Password For Forgot Password Request. Username : Maximus OTP : 123456
+25-10-2024 11:20:11:7694 : Change Password (Forgot Password) Request (Login Page) Received. Username : Maximus
+25-10-2024 11:20:14:7211 : Change Password (Forgot Password) Request Successful (Login Page). Username : Maximus
+25-10-2024 11:20:18:7681 : Login Successful. Username Maximus. SessionID : bwqhms0hof4pwzqq4l41g2uz
+25-10-2024 11:20:26:7431 : Change Password For Forgot Password Request (OTP) Initiated. Username : Maximus
+25-10-2024 11:20:26:7441 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 11:20:26:7601 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 11:20:26:7651 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025112026652
+25-10-2024 11:20:35:1110 : OTP Validate Request Received. Change Password For Forgot Password Request. Username : Maximus OTP : 12345
+25-10-2024 11:20:45:4982 : OTP Is InValid. Change Password For Forgot Password Request. Username : Maximus OTP : 12345
+25-10-2024 11:22:13:8941 : Change Password For Forgot Password Request (Resend OTP) Initiated. Username : Maximus
+25-10-2024 11:22:15:8022 : Change Password For Forgot Password Request Received. Username : Maximus
+25-10-2024 11:22:22:4610 : OTP Generated For Change Password For Forgot Password. OTP : 123456 Username : Maximus
+25-10-2024 11:22:22:4699 : Success OTP Insertion In Database For Change Password For Forgot Password. Status : Success OTP : 123456 Username : Maximus RRN : 241025112222808
+25-10-2024 11:35:21:6964 : Login Successful. Username Maximus. SessionID : s5vhznm4intibj5hw1gxwzb5
+25-10-2024 12:11:49:0340 : Login Successful. Username Maximus. SessionID : ylkpzkxjovoqm0mblvcq4zue
+25-10-2024 12:13:11:1557 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+22023: cannot call jsonb_to_recordset on a non-array
+25-10-2024 14:18:12:3120 : Login Successful. Username Maximus. SessionID : 2a4qfuvszc1ufjmoldw1a4id
+25-10-2024 14:20:57:3152 : Error executing command: 42703: column "emailid" does not exist
+25-10-2024 14:52:26:5953 : Login Successful. Username Maximus. SessionID : bkfawee1dif34xm50o4krtwv
+25-10-2024 15:00:10:7377 : Login Successful. Username Maximus. SessionID : nzvkmxrozi3vn2u52qqmbdxt
+25-10-2024 16:16:38:9077 : Login Successful. Username Maximus. SessionID : texltqt0mu322uobz1s55lci
+25-10-2024 16:22:10:7082 : Login Successful. Username Maximus. SessionID : gtrkkl21cs0cbtal1fx13hnd
+25-10-2024 16:27:00:8199 : Login Successful. Username Maximus. SessionID : upgbckgmqcsuscpbaiwldce0
+25-10-2024 16:28:18:8061 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+22023: cannot call jsonb_to_recordset on a non-array
+25-10-2024 16:34:09:6766 : Login Successful. Username Maximus. SessionID : qbiqt0apiylg0o35fq01u4in
+25-10-2024 16:36:05:6462 : Login Successful. Username Maximus. SessionID : citscijojkpvqkpzapdnoern
+25-10-2024 16:39:04:7655 : Login Successful. Username Maximus. SessionID : 1tvdami2m1yp133hgpsp34ps
+25-10-2024 16:57:13:9436 : Login Successful. Username Maximus. SessionID : 4w1wnd2zk2zdcfyqaj5st1et
+25-10-2024 16:59:28:5188 : Login Successful. Username Maximus. SessionID : w0dhqljyylu2wibsxxqozrpq
+25-10-2024 17:07:47:6665 : Login Successful. Username Maximus. SessionID : vrzx0mqlzucrnxrzvt4oghhh

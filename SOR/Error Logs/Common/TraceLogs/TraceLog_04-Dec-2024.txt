@@ -1,0 +1,49 @@
+04-12-2024 11:06:50:2866 : Login Successful. Username Maximus. SessionID : ecg5jvkczc2jyzcyjj4if3bl
+04-12-2024 11:08:30:7934 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+04-12-2024 11:08:30:7954 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+04-12-2024 11:08:30:7963 : NOTICE: Reediting/Declining insert for Request ID: 32
+04-12-2024 11:08:32:8223 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+04-12-2024 11:08:32:8233 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+04-12-2024 11:11:29:1765 : Login Successful. Username Maximus. SessionID : xwgopbol5b2teltw031gg2wv
+04-12-2024 11:13:35:3038 : Login Successful. Username Maximus. SessionID : ppccidbvtqlyp4bbmv2bu5qz
+04-12-2024 11:17:46:4857 : Login Successful. Username Maximus. SessionID : pqxh0lmklstddu1g3i3mfmji
+04-12-2024 11:51:13:5546 : Login Successful. Username Maximus. SessionID : ahdjpzu3qvq5gv2mukt1x05w
+04-12-2024 11:51:33:5402 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: relation "temp_results" does not exist
+04-12-2024 11:51:38:0378 : Class : BCEntity.cs 
+Function : GetBCDetailsToProcessOnboarding() 
+Exception Occurred
+42P01: relation "temp_results" does not exist
+04-12-2024 11:54:14:6854 : Login Successful. Username Maximus. SessionID : a5kne0zjsjpo1ydprmjuxgr3
+04-12-2024 11:58:22:4294 : Login Successful. Username Maximus. SessionID : rzbpng2sltmazxvkkzjifxkl
+04-12-2024 12:01:01:9561 : Login Successful. Username Maximus. SessionID : 05sg4brcacoriircgshkr53t
+04-12-2024 12:36:35:3514 : Login Successful. Username Maximus. SessionID : q4pmfnh1evdp02le2tglrdw3
+04-12-2024 12:46:38:8886 : Login Successful. Username Maximus. SessionID : c04xbnu0soha0q1ywffcgpaa
+04-12-2024 12:50:59:5694 : Login Successful. Username Maximus. SessionID : kar5n3jb3u4j5qh5o5eoflnq
+04-12-2024 12:56:44:0533 : Class : BCEntity.cs 
+Function : ChangeBCStatus() 
+Exception Occurred
+Parameter 'p_CHStatus' must have its value set
+04-12-2024 12:59:17:1563 : Login Successful. Username Maximus. SessionID : e1og2m1dzakxaq1sdntxhv0l
+04-12-2024 14:12:18:1094 : Login Successful. Username Maximus. SessionID : lj5ix3kuiklomqu124i50dkm
+04-12-2024 14:32:14:8213 : Login Successful. Username Maximus. SessionID : bij3sddaxwv4xz0jl5cntp4j
+04-12-2024 14:38:32:1215 : Login Successful. Username Maximus. SessionID : dphvnr125n3zi3lglzid15le
+04-12-2024 14:59:29:3032 : Login Successful. Username Maximus. SessionID : txajw0gr5t0ss4b3tbm02qcb
+04-12-2024 15:04:52:3460 : Login Successful. Username Maximus. SessionID : t4q4to4az31nbwffi1d1hrc1
+04-12-2024 15:07:20:9705 : Login Successful. Username Maximus. SessionID : ioeqi21ltrk03bbi5xib1o5s
+04-12-2024 15:09:13:5161 : Login Successful. Username Maximus. SessionID : w2clhmmibwkktsbv10nco1dr
+04-12-2024 15:10:55:9515 : Login Successful. Username Maximus. SessionID : kcxknnva25qs0t32jlihtqfi
+04-12-2024 16:45:54:8588 : Login Successful. Username Maximus. SessionID : y3wxzm2tcsv3mjc1fi5prmpb
+04-12-2024 17:45:52:4114 : Login Successful. Username Maximus. SessionID : nlkachvh4lgyfd2mf2crtzzi
+04-12-2024 18:03:51:2092 : Login Successful. Username Maximus. SessionID : ejeafo0xfkjglh1m2xhc3zbn
+04-12-2024 18:18:35:0877 : Login Successful. Username Maximus. SessionID : obnsolzi3wkx2ozlrslpn5jx
+04-12-2024 18:26:29:8144 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42703: column "rule_priority" does not exist
+04-12-2024 18:48:46:5192 : Login Successful. Username Maximus. SessionID : qc2lzfijer4oik2kh2upgryd
+04-12-2024 19:06:17:5180 : Login Successful. Username Maximus. SessionID : zuh5il4m4pzm1nlst2f1fzur
+04-12-2024 19:15:34:2422 : Login Successful. Username Maximus. SessionID : pkbri5ejg1ak0oy5odzis1tp
+04-12-2024 19:17:21:7774 : Login Successful. Username Maximus. SessionID : l4v0behc2vqadml0rusn42v1

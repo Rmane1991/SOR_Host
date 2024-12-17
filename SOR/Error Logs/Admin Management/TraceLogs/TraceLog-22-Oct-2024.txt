@@ -1,0 +1,20 @@
+Time : 22-Oct-2024 10:54 Message : pgUserAccessManagement: btnEditRole_ServerClick: Exception: 22P02: malformed record literal: "(1"
+Time : 22-Oct-2024 10:56 Message : pgUserAccessManagement: btnEditRole_ServerClick: Exception: 22P02: malformed record literal: "(1"
+Time : 22-Oct-2024 11:43 Message : pgUserAccessManagement: BtnXls_Click: Exception: Thread was being aborted.
+Time : 22-Oct-2024 11:46 Message : pgUserPageManagement: BindDropdowns: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:46 Message : pgUserPageManagement: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:46 Message : pgUserPageManagement: Page_Load: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:57 Message : pgUserPageManagement: BindDropdowns: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:57 Message : pgUserPageManagement: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 11:57 Message : pgUserPageManagement: Page_Load: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:20 Message : pgUserPageManagement: BindDropdowns: Exception: Cannot find table 2.
+Time : 22-Oct-2024 12:20 Message : pgUserPageManagement: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:20 Message : pgUserPageManagement: Page_Load: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:22 Message : pgUserPageManagement: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 12:22 Message : pgUserPageManagement: Page_Load: Exception: Keyword not supported: 'port'.
+Time : 22-Oct-2024 14:26 Message : pgUserPageManagement: FillGrid: Exception: A field or property with the name 'Role ID' was not found on the selected data source.
+Time : 22-Oct-2024 14:26 Message : pgUserPageManagement: Page_Load: Exception: A field or property with the name 'Role ID' was not found on the selected data source.
+Time : 22-Oct-2024 14:27 Message : pgUserPageManagement: BtnXls_Click: Exception: Thread was being aborted.
+Time : 22-Oct-2024 15:12 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenumaster_pkey"
+Time : 22-Oct-2024 15:48 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23505: duplicate key value violates unique constraint "tblmenusmapped_pkey"
+Time : 22-Oct-2024 15:49 Message : pgUserPageManagement: InsertUpdatePagePermissions: Exception: 23502: null value in column "createdby" of relation "tblroledetails" violates not-null constraint

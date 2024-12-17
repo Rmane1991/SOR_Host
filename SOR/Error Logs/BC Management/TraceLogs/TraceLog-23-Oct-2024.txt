@@ -1,0 +1,55 @@
+Time : 23-Oct-2024 14:22 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 86
+Time : 23-Oct-2024 14:22 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 86
+Time : 23-Oct-2024 18:12 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 10
+Time : 23-Oct-2024 18:14 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 11
+Time : 23-Oct-2024 18:16 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 23-Oct-2024 18:22 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 12
+Time : 23-Oct-2024 18:23 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 12
+Time : 23-Oct-2024 18:23 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 12 Fullname: fvdfb User: Maximus ReceiverEmailID: xVFVDCDCDFyz@gmail.com ContactNo: 8954621870 Remarks: Approve.
+Time : 23-Oct-2024 18:23 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 12 Fullname: fvdfb User: Maximus ReceiverEmailID: xVFVDCDCDFyz@gmail.com ContactNo: 8954621870 Remarks: Approve.ActivityType: 0
+Time : 23-Oct-2024 18:23 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 23-Oct-2024 18:29 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 13
+Time : 23-Oct-2024 18:30 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 13
+Time : 23-Oct-2024 18:30 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 13 Fullname: TestAgg User: Maximus ReceiverEmailID: xffgbyz@gmail.com ContactNo: 8954621884 Remarks: Approve.
+Time : 23-Oct-2024 18:30 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 13 Fullname: TestAgg User: Maximus ReceiverEmailID: xffgbyz@gmail.com ContactNo: 8954621884 Remarks: Approve.ActivityType: 0
+Time : 23-Oct-2024 18:30 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 23-Oct-2024 18:30 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BC Code' was not found on the selected data source.
+Time : 23-Oct-2024 18:35 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BC Code' was not found on the selected data source.
+Time : 23-Oct-2024 18:35 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BC Code' was not found on the selected data source.
+Time : 23-Oct-2024 18:37 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BC Code' was not found on the selected data source.
+Time : 23-Oct-2024 18:39 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BCId'.
+Time : 23-Oct-2024 18:40 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BCId'.
+Time : 23-Oct-2024 18:43 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BCId'.
+Time : 23-Oct-2024 18:48 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'BCId' was not found on the selected data source.
+Time : 23-Oct-2024 18:49 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'CreatedOn' was not found on the selected data source.
+Time : 23-Oct-2024 18:52 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Status' was not found on the selected data source.

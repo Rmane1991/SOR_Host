@@ -1,0 +1,9 @@
+----------------------------------------------------------------------------
+Time : 12-Dec-2024 11:58
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Upload.RestrictedName.btnsample_Click(Object sender, EventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Upload\RestrictedName.aspx.cs:line 643
+Message - : Thread was being aborted.

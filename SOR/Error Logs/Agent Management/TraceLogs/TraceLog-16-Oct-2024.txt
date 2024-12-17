@@ -1,0 +1,337 @@
+Time : 16-Oct-2024 11:17 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 11:18 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:18 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:19 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 11:19 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 10
+Time : 16-Oct-2024 11:19 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 10
+Time : 16-Oct-2024 11:20 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4564P RequestId: 10
+Time : 16-Oct-2024 11:20 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: Column 'agReqId' does not belong to table Table. UserName:  PanNo: CMGPD4564P RequestId: 10
+Time : 16-Oct-2024 11:21 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4564P RequestId: 10
+Time : 16-Oct-2024 11:21 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 11:22 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:22 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:23 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 11:23 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 11
+Time : 16-Oct-2024 11:23 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 11
+Time : 16-Oct-2024 11:23 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9877P RequestId: 11
+Time : 16-Oct-2024 11:23 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: Column 'agReqId' does not belong to table Table. UserName:  PanNo: CMGPD9877P RequestId: 11
+Time : 16-Oct-2024 11:24 Message : AgentRegistration: btnCloseReceipt_Click: Successful - Summary Close. UserName: 
+Time : 16-Oct-2024 11:24 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 11:24 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 11
+Time : 16-Oct-2024 11:24 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 11
+Time : 16-Oct-2024 11:24 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9877P RequestId: 11
+Time : 16-Oct-2024 11:25 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 11:25 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:25 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:26 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 11:26 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 12
+Time : 16-Oct-2024 11:27 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 12
+Time : 16-Oct-2024 11:27 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9874P RequestId: 12
+Time : 16-Oct-2024 11:43 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 11:44 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:44 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:44 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 11:45 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 13
+Time : 16-Oct-2024 11:45 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 13
+Time : 16-Oct-2024 11:45 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7846P RequestId: 13
+Time : 16-Oct-2024 11:46 Message : Class : AgentRegistration.cs 
+Function : btnViewDownload_Click() 
+Exception Occured
+Thread was being aborted.
+Time : 16-Oct-2024 11:46 Message : Class : AgentRegistration.cs 
+Function : btnViewDownloadDoc_Click1() 
+Exception Occured
+Thread was being aborted.
+Time : 16-Oct-2024 11:59 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 11:59 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 11:59 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:00 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 12:00 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 14
+Time : 16-Oct-2024 12:01 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 14
+Time : 16-Oct-2024 12:01 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9856P RequestId: 14
+Time : 16-Oct-2024 12:02 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:03 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:03 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:04 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 12:04 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 15
+Time : 16-Oct-2024 12:05 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 15
+Time : 16-Oct-2024 12:05 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4564P RequestId: 15
+Time : 16-Oct-2024 12:12 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:12 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:12 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 12:13 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 16
+Time : 16-Oct-2024 12:13 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 16
+Time : 16-Oct-2024 12:13 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8975P RequestId: 16
+Time : 16-Oct-2024 12:18 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:18 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:18 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:19 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 12:19 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 17
+Time : 16-Oct-2024 12:20 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 17
+Time : 16-Oct-2024 12:20 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8798P RequestId: 17
+Time : 16-Oct-2024 12:25 Message : Class : AgentRegistration.cs 
+Function : downloadPass_Click() 
+Exception Occured
+There is no row at position 0.
+Time : 16-Oct-2024 12:25 Message : Class : AgentRegistration.cs 
+Function : downloadPass_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 16-Oct-2024 12:25 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:25 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:25 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:26 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 12:26 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 18
+Time : 16-Oct-2024 12:26 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 18
+Time : 16-Oct-2024 12:26 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8764P RequestId: 18
+Time : 16-Oct-2024 12:27 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:28 Message : AgentRegistrationDAL: ValidatePanDetails: UserName:  Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:28 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:28 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 12:28 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 19
+Time : 16-Oct-2024 12:29 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 19
+Time : 16-Oct-2024 12:29 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8746P RequestId: 19
+Time : 16-Oct-2024 12:33 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:36 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:38 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:42 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:43 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:47 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:50 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:52 Message : AgentRegistrationDAL: GetFileDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:52 Message : AgLvl1: BindFileId: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:52 Message : AgentRegistrationDAL: BindBC: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:52 Message : AgLvl3: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 12:54 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 12:54 Message : AgentRegistration: FillGrid(): Exception: No data returned from the stored procedure.
+Time : 16-Oct-2024 13:07 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:07 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:07 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:07 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:07 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:07 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:08 Message : AgentRegistrationDAL: GetFileDetails: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:08 Message : AgLvl1: BindFileId: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:08 Message : AgentRegistrationDAL: BindBC: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 13:08 Message : AgLvl3: FillGrid: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 15:05 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42883: operator does not exist: character varying = integer
+Time : 16-Oct-2024 15:05 Message : AgLvl3: FillGrid: Exception: 42883: operator does not exist: character varying = integer
+Time : 16-Oct-2024 15:12 Message : AgLvl3: FillGrid: Exception: DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Agent ID'.
+Time : 16-Oct-2024 15:14 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.ifsc_code does not exist
+Time : 16-Oct-2024 15:14 Message : AgLvl3: btnView_Click: Exception: 42703: column a.ifsc_code does not exist
+Time : 16-Oct-2024 15:14 Message : AgentRegistrationDAL: GetAgentDocuments: Exception: 42703: column a.ifsc_code does not exist
+Time : 16-Oct-2024 15:14 Message : AgLvl3: btnView_Click: Exception: 42703: column a.ifsc_code does not exist
+Time : 16-Oct-2024 15:20 Message : AgLvl3: btnViewDownload_Click: Exception: Thread was being aborted.
+Time : 16-Oct-2024 15:22 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 15:22 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 15:41 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 15:41 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:02 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:02 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: gfbf
+Time : 16-Oct-2024 16:02 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 16-Oct-2024 16:02 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 16-Oct-2024 16:02 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: gfbf
+Time : 16-Oct-2024 16:08 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:08 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:08 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 16-Oct-2024 16:08 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 16-Oct-2024 16:08 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:08 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:10 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:10 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:12 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:12 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:14 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:14 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:38 Message : AgentRegistrationDAL: SetInsertUpdateAgentMasterDetails: UserName: Maximus Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 16-Oct-2024 16:38 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: 42P01: relation "temp_statusmessages" does not exist
+Time : 16-Oct-2024 16:38 Message : AgLvl3: btnSubmitDetails_Click: Exception: Object reference not set to an instance of an object.
+Time : 16-Oct-2024 16:38 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:38 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:40 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: Column 'Status' does not belong to table StatusMessages.
+Time : 16-Oct-2024 16:40 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:40 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: v
+Time : 16-Oct-2024 16:47 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: Column 'agentcode' does not belong to table StatusMessages.
+Time : 16-Oct-2024 16:47 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:47 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:51 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 18
+Time : 16-Oct-2024 16:51 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAg   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:58 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 18
+Time : 16-Oct-2024 16:58 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAg   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 16:58 Message : AgLvl3: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 16-Oct-2024 16:58 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAg   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 16-Oct-2024 16:58 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 16:58 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 17:06 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 17
+Time : 16-Oct-2024 17:06 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.
+Time : 16-Oct-2024 17:17 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 17 Fullname: Test   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: Approve.ActivityType: 0
+Time : 16-Oct-2024 17:17 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: Cannot find table 0.
+Time : 16-Oct-2024 17:18 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 16-Oct-2024 17:18 Message : OBAgStatus: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 16-Oct-2024 17:18 Message : AgentRegistrationDAL: ChangeAgentOnboardStatus: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 17:18 Message : FrmAgentStatus: fillGrid: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 17:18 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 16-Oct-2024 17:18 Message : OBAgStatus: FillGrid: Exception: 42P01: relation "temp_agentrequests" does not exist
+Time : 16-Oct-2024 17:27 Message : AgentRegistrationDAL: GetAgentDetailsToProcessOnboaring: UserName: Maximus Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 16-Oct-2024 17:27 Message : OBAgStatus: FillGrid: Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 16-Oct-2024 18:09 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:09 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:09 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:09 Message : AgLvl3: BindDropdownsAgent: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:09 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:09 Message : AgLvl3: BindDropdownsAgent: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:10 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:14 Message : AgLvl1: CommonSave:  Request :  Received. Username :  RequestId : 18
+Time : 16-Oct-2024 18:14 Message : AgLvl3: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAg   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: nghb
+Time : 16-Oct-2024 18:14 Message : AgLvl3: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 18 Fullname: TestAg   User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 8954621300 Remarks: nghbActivityType: 0
+Time : 16-Oct-2024 18:14 Message : AgLvl3: SingleSave: Failed - Maker Verification. Exception: Cannot find table 0.
+Time : 16-Oct-2024 18:24 Message : AgLvl3: Commonsave:CheckAll(): Successful - Authorizer Verification. StatusFlag: Approve Flag: 5 AgentrequestID: 19 User: System.Security.Principal.WindowsPrincipalActivityType: 0
+Time : 16-Oct-2024 18:26 Message : AgentRegistrationDAL: BindAgentVerifyddl: UserName: Maximus Exception: 42809: sp_bindagentverification(p_clientid => text, p_bccode => unknown, p_isremoved => text, p_username => text, p_checkstatus => text, p_authstatus => text, p_makerstatus => unknown, p_flag => integer) is a procedure
+Time : 16-Oct-2024 18:26 Message : AgLvl3: BindDropdownsAgent: Exception: 42809: sp_bindagentverification(p_clientid => text, p_bccode => unknown, p_isremoved => text, p_username => text, p_checkstatus => text, p_authstatus => text, p_makerstatus => unknown, p_flag => integer) is a procedure
+Time : 16-Oct-2024 18:30 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:30 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:31 Message : AgentRegistrationDAL: ChangeAgentOnboardStatus: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:31 Message : FrmAgentStatus: fillGrid: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:35 Message : AgentRegistrationDAL: ChangeAgentOnboardStatus: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 18:35 Message : FrmAgentStatus: fillGrid: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:05 Message : AgentRegistrationDAL: ChangeAgentOnboardStatus: UserName: Maximus Exception: 42703: column "p_verificationlevel" does not exist
+Time : 16-Oct-2024 19:05 Message : FrmAgentStatus: fillGrid: Exception: 42703: column "p_verificationlevel" does not exist
+Time : 16-Oct-2024 19:15 Message : FrmAgentStatus: BtnXls_Click: Exception: Thread was being aborted.
+Time : 16-Oct-2024 19:15 Message : FrmAgentStatus: BtnCsv_Click: Exception: Thread was being aborted.
+Time : 16-Oct-2024 19:19 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:19 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:21 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:21 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:21 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:21 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:21 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:21 Message : OBAgStatus: gvBlockAG_RowCommand: Exception: Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:24 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 16-Oct-2024 19:24 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 20
+Time : 16-Oct-2024 19:24 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 20
+Time : 16-Oct-2024 19:24 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD8954P RequestId: 20
+Time : 16-Oct-2024 19:25 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:25 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:26 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:26 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:26 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:26 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:26 Message : Class : AgentRegistrationDAL.cs 
+Function : EditValidate() 
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:26 Message : Page : AgentRegistration.cs 
+Function : ValidateReEditRequest
+Exception Occured
+Keyword not supported: 'port'.
+Time : 16-Oct-2024 19:48 Message : EditRegitsration: GetDetails: Exception: Cannot find table 1.
+Time : 16-Oct-2024 19:52 Message : AgentRegistrationDAL: GetAgentDetailForRegistration: UserName:  Exception: 42701: column "bccode" specified more than once
+Time : 16-Oct-2024 19:52 Message : EditRegitsration: GetDetails: Exception: 42701: column "bccode" specified more than once
+Time : 16-Oct-2024 19:52 Message : AgentRegistrationDAL: GetAgentDetailForRegistration: UserName:  Exception: 42701: column "bccode" specified more than once

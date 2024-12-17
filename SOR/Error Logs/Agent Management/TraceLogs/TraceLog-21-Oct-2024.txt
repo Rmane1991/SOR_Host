@@ -1,0 +1,12 @@
+Time : 21-Oct-2024 13:09 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 21-Oct-2024 13:23 Message : UserManagement: BindDropdowns() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 21-Oct-2024 13:23 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 21-Oct-2024 14:47 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: 42883: procedure sp_updatetblroledetails(text[], text, text, text, text, integer, unknown, text) does not exist
+Time : 21-Oct-2024 17:53 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 21-Oct-2024 17:53 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: An open data reader exists for this command.
+Time : 21-Oct-2024 17:59 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: 42883: procedure sp_updatetblroledetails(text, text, text, text, text, integer, unknown, text) does not exist
+Time : 21-Oct-2024 18:50 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: Specified cast is not valid.
+Time : 21-Oct-2024 19:04 Message : UserManagement: BindDropdowns() : UserName:  Exception: Keyword not supported: 'port'.
+Time : 21-Oct-2024 19:04 Message : UserManagement: FillGridUserPageManagement(): UserName:  Exception: Keyword not supported: 'port'.
+Time : 21-Oct-2024 19:05 Message : UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: Maximus Exception: Specified cast is not valid.

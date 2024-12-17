@@ -1,0 +1,112 @@
+27-11-2024 11:39:41:2950 : Login Successful. Username Maximus. SessionID : 3vjoln2n0e2ou3l3hyvlcv1h
+27-11-2024 11:44:35:2486 : Login Successful. Username Maximus. SessionID : dmu1x23czf0ymjp1wjqxnomh
+27-11-2024 11:50:21:4302 : Login Successful. Username Maximus. SessionID : 4kpl25s41e33wo3bhdstjdxx
+27-11-2024 12:06:46:6103 : Login Successful. Username Maximus. SessionID : uj4nz1rtrlvzeqlszeclhh1p
+27-11-2024 12:09:21:2913 : Login Successful. Username Maximus. SessionID : ft25jm3l0rxkhoa0r20eum2g
+27-11-2024 12:40:06:5704 : Login Successful. Username Maximus. SessionID : roavyzfmji5yvotdpud1iyj2
+27-11-2024 12:48:47:6523 : Login Successful. Username Maximus. SessionID : owk4jaspbycukry0swvwp0nd
+27-11-2024 12:56:08:7704 : Login Successful. Username Maximus. SessionID : bri01efqg5ozv0bkmq4bhypi
+27-11-2024 13:01:10:8539 : Login Successful. Username Maximus. SessionID : tpnly5z50wxzcrjqqxoodqsl
+27-11-2024 13:03:21:8989 : Login Successful. Username Maximus. SessionID : 4ltawf2zyranw01jar152pfu
+27-11-2024 14:01:49:7097 : Login Successful. Username Maximus. SessionID : yyjbmfcvaowbr3aawb3jsjtl
+27-11-2024 14:08:59:5951 : Login Successful. Username Maximus. SessionID : s4cpwttivtbei1fodes2rlhm
+27-11-2024 14:25:14:9791 : Login Successful. Username Maximus. SessionID : uomyauois1squhypnw3iwhzr
+27-11-2024 14:38:47:7643 : Login Successful. Username Maximus. SessionID : vlmc3zahbwndex5kz2i3ii1q
+27-11-2024 14:42:56:7662 : Login Successful. Username Maximus. SessionID : cw3dowwakjqythj1u4y0nkky
+27-11-2024 14:48:14:3994 : Login Successful. Username Maximus. SessionID : 5ib20m4gf5zdbo5krlhgyiq0
+27-11-2024 15:14:06:7639 : Login Successful. Username Maximus. SessionID : 2qf0rox0yzwb043imgftvpxp
+27-11-2024 15:31:44:2739 : Login Successful. Username Maximus. SessionID : k2tzhctcoush4u2dz3afjojg
+27-11-2024 15:35:17:9562 : Login Successful. Username Maximus. SessionID : wrbek5ek5eelqjbn05e3h45w
+27-11-2024 15:57:42:1218 : Login Successful. Username Maximus. SessionID : odqzgaxqixttjngpdsgaxrpc
+27-11-2024 16:07:09:6322 : Login Successful. Username Maximus. SessionID : a3hrovbwiji11ogzw025f4gv
+27-11-2024 16:20:20:2988 : Login Successful. Username Maximus. SessionID : 0esvgc3gpbm4huarykbgbe3i
+27-11-2024 16:21:24:7086 : Login Successful. Username Maximus. SessionID : zc4yj3ijofbgpx0dr3yukjep
+27-11-2024 16:26:19:5529 : Login Successful. Username Maximus. SessionID : t4lcvwwxx1hk1zzvm3wuhaf0
+27-11-2024 16:27:32:2939 : Login Successful. Username Maximus. SessionID : 3kcnourhae5tdxzhtgifxm5g
+27-11-2024 16:32:14:3357 : Login Successful. Username Maximus. SessionID : zg5blfivu2zmdcc4qucneeod
+27-11-2024 16:53:30:6630 : Login Successful. Username Maximus. SessionID : qhlq4a11toezn1ha4bpbnc5w
+27-11-2024 17:53:54:3312 : Login Successful. Username Maximus. SessionID : btqcjits1hwsdspycchzlcxn
+27-11-2024 17:56:13:9949 : Login Successful. Username Maximus. SessionID : oc4c4ssmolv3uanfdwy5zdoa
+27-11-2024 17:58:09:6151 : Login Successful. Username Maximus. SessionID : fvt42jd2rovh3t0cdyfzlxoq
+27-11-2024 17:59:22:3218 : Login Successful. Username Maximus. SessionID : 00q1kakbgwfetk1slv0tsmwe
+27-11-2024 18:06:17:6914 : Login Successful. Username Maximus. SessionID : t4afpdcgticucutbjjagonfa
+27-11-2024 18:19:55:9421 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:19:55:9431 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:19:55:9441 : NOTICE: Inserting new record...1
+27-11-2024 18:19:55:9441 : NOTICE: Inserting new record...
+27-11-2024 18:19:55:9690 : NOTICE: Insert successful, RequestId: 17
+27-11-2024 18:20:09:9985 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:20:09:9995 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:21:30:9671 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:21:30:9681 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:21:30:9691 : NOTICE: Inserting new record...1
+27-11-2024 18:21:30:9691 : NOTICE: Updating existing record with ID: 17
+27-11-2024 18:21:30:9881 : NOTICE: Update successful for RequestId: 17
+27-11-2024 18:21:49:7393 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:21:49:7403 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:22:39:8350 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:22:39:8360 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:22:39:8370 : NOTICE: Inserting new record...1
+27-11-2024 18:22:39:8380 : NOTICE: Inserting new record...
+27-11-2024 18:22:39:8599 : NOTICE: Insert successful, RequestId: 18
+27-11-2024 18:22:55:0892 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:22:55:0902 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:24:24:7554 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:24:24:7564 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:24:24:7584 : NOTICE: Inserting new record...1
+27-11-2024 18:24:24:7594 : NOTICE: Inserting new record...
+27-11-2024 18:24:24:7873 : NOTICE: Insert successful, RequestId: 19
+27-11-2024 18:24:47:8616 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:24:47:8636 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:25:46:4994 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:25:46:5004 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:25:46:5004 : NOTICE: Inserting new record...1
+27-11-2024 18:25:46:5014 : NOTICE: Updating existing record with ID: 19
+27-11-2024 18:25:46:5234 : NOTICE: Update successful for RequestId: 19
+27-11-2024 18:26:01:6043 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:26:01:6053 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:27:13:3044 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:27:13:3054 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:27:13:3054 : NOTICE: Inserting new record...1
+27-11-2024 18:27:13:3064 : NOTICE: Inserting new record...
+27-11-2024 18:27:13:3333 : NOTICE: Insert successful, RequestId: 20
+27-11-2024 18:27:28:6800 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:27:28:6810 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:28:15:4959 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:28:15:4970 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:28:15:4979 : NOTICE: Inserting new record...1
+27-11-2024 18:28:15:4989 : NOTICE: Inserting new record...
+27-11-2024 18:28:15:5209 : NOTICE: Insert successful, RequestId: 21
+27-11-2024 18:28:29:4249 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:28:29:4269 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:29:29:8293 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:29:29:8303 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:29:29:8333 : NOTICE: Inserting new record...1
+27-11-2024 18:29:29:8343 : NOTICE: Inserting new record...
+27-11-2024 18:29:29:8582 : NOTICE: Insert successful, RequestId: 22
+27-11-2024 18:29:53:5388 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:29:53:5388 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:30:55:0678 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+27-11-2024 18:30:55:0687 : NOTICE: Flag is set to 1, proceeding with validations...
+27-11-2024 18:30:55:0687 : NOTICE: Inserting new record...1
+27-11-2024 18:30:55:0697 : NOTICE: Inserting new record...
+27-11-2024 18:30:55:0957 : NOTICE: Insert successful, RequestId: 23
+27-11-2024 18:31:15:1643 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+27-11-2024 18:31:15:1653 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+27-11-2024 18:43:26:0450 : Login Successful. Username Maximus. SessionID : 3ib41kmi4ve4aldhwyzuvzkw
+27-11-2024 18:44:37:3063 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+22007: invalid input syntax for type timestamp: "NA"
+27-11-2024 18:44:40:5880 : Class: YourClassName 
+Function: ExportRestrictedPIN() 
+Exception Occurred
+22007: invalid input syntax for type timestamp: "NA"
+27-11-2024 19:07:42:1917 : Login Successful. Username Maximus. SessionID : tnlqpwxhggutfaetipwy5msy
+27-11-2024 19:17:58:7068 : Login Successful. Username Maximus. SessionID : rwr0tqs0er4fg1aypuqehveh
+27-11-2024 19:35:20:5658 : Login Successful. Username Maximus. SessionID : xs5fpqpkvgoyc1ljlvgtjcg5
+27-11-2024 19:39:21:3854 : Login Successful. Username Maximus. SessionID : jr0lsulq2xguxdsbtgux1mah
+27-11-2024 19:41:24:2159 : Login Successful. Username Maximus. SessionID : zzylt2gabrzgekylvkngssgg
+27-11-2024 19:41:27:8362 : Login Successful. Username Maximus. SessionID : zzylt2gabrzgekylvkngssgg
+27-11-2024 19:43:11:2374 : Login Successful. Username Maximus. SessionID : nxeurgagwt1pg52h0qrnryno
+27-11-2024 19:47:42:8434 : Login Successful. Username Maximus. SessionID : g5jzocrdb5eaoicg0tw053yh

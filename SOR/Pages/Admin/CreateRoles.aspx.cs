@@ -104,30 +104,26 @@ namespace SOR.Pages.Admin
             {
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
-                    //    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "CreateRoles.aspx", "182");
-                    //    if (!HasPagePermission)
-                    //    {
-                    //        try
-                    //        {
-                    //            Response.Redirect(ConfigurationManager.AppSettings["RedirectTo404"].ToString(), false);
-                    //            HttpContext.Current.ApplicationInstance.CompleteRequest();
-                    //        }
-                    //        catch (ThreadAbortException)
-                    //        {
-                    //        }
-                    //    }
-                    //    else
-                    //    {
-                    //        UserPermissions.RegisterStartupScriptForNavigationListActive("16", "182");
-                    if (!IsPostBack) //&& HasPagePermission
+                    bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "CreateRoles.aspx", "3");
+                    if (!HasPagePermission)
                     {
-                        
-                            //BindDropdownsRoles();
-                            BindDropdownRolesFilter();
-                            //BindDropdownClientDetails();
-                            fillRoleDetailsGrid();
+                        try
+                        {
+                            Response.Redirect(ConfigurationManager.AppSettings["RedirectTo404"].ToString(), false);
+                            HttpContext.Current.ApplicationInstance.CompleteRequest();
                         }
-                    //}
+                        catch (ThreadAbortException)
+                        {
+                        }
+                    }
+                    else
+                    {
+                        if (!IsPostBack && HasPagePermission)
+                        {
+                            fillRoleDetailsGrid();
+                            UserPermissions.RegisterStartupScriptForNavigationListActive("2", "3");
+                        }
+                    }
                 }
                 else
                 {
@@ -144,9 +140,9 @@ namespace SOR.Pages.Admin
             catch (ThreadAbortException)
             {
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("CreateRoles: Page_Load: Exception: " + ex.Message);
+                ErrorLog.TransactionReportTrace("CreateRoles: Page_Load: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -204,33 +200,33 @@ namespace SOR.Pages.Admin
         //    }
         //}
 
-        private void BindDropdownRolesFilter()
-        {
-            try
-            {
-                _UserManagement.Flag = (int)EnumCollection.EnumBindingType.BindGrid;
-                _UserManagement._UserName = Session["Username"].ToString();
-                _UserManagement._ID = null;
-                _UserManagement._RoleId = Session["UserRoleID"].ToString();
-                DataSet _gvUserAccessControl = _UserManagement.FillGridCreateRoles();
+        //private void BindDropdownRolesFilter()
+        //{
+        //    try
+        //    {
+        //        _UserManagement.Flag = (int)EnumCollection.EnumBindingType.BindGrid;
+        //        _UserManagement._UserName = Session["Username"].ToString();
+        //        _UserManagement._ID = null;
+        //        _UserManagement._RoleId = Session["UserRoleID"].ToString();
+        //        DataSet _gvUserAccessControl = _UserManagement.FillGridCreateRoles();
 
-                if (_gvUserAccessControl.Tables[0].Rows.Count > 0)
-                {
-                    ddlRoleID.Items.Clear();
-                    ddlRoleID.DataSource = _gvUserAccessControl.Tables[0];
-                    ddlRoleID.DataTextField = "RoleName";
-                    ddlRoleID.DataValueField = "RoleId";
-                    ddlRoleID.DataBind();
-                    ddlRoleID.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Role --", "0"));
-                }
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.AgentManagementTrace("CreateRoles: BindDropdownRolesFilter(): Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
-                return;
-            }
-        }
+        //        if (_gvUserAccessControl.Tables[0].Rows.Count > 0)
+        //        {
+        //            ddlRoleID.Items.Clear();
+        //            ddlRoleID.DataSource = _gvUserAccessControl.Tables[0];
+        //            ddlRoleID.DataTextField = "RoleName";
+        //            ddlRoleID.DataValueField = "RoleId";
+        //            ddlRoleID.DataBind();
+        //            ddlRoleID.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- Role --", "0"));
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.AgentManagementTrace("CreateRoles: BindDropdownRolesFilter(): Exception: " + Ex.Message);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+        //        return;
+        //    }
+        //}
 
         //private void BindDropdownClientDetails()
         //{
@@ -511,7 +507,7 @@ namespace SOR.Pages.Admin
                         txtRole.Text = "";
                         fillRoleDetailsGrid();
                         //BindDropdownsRoles();
-                        BindDropdownRolesFilter();
+                        //BindDropdownRolesFilter();
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('" + txtRole.Text + " Record updated successfully.', 'Edit Role Details');", true);
                     }
                     else
@@ -530,14 +526,14 @@ namespace SOR.Pages.Admin
                         _UserManagement.Reason = txtResone.Text.Trim();
                         DataSet _gvUserAccessControl = _UserManagement.UserAccessManagementDeleteRole();
 
-                        if (_gvUserAccessControl != null && _gvUserAccessControl.Tables.Count > 0 && Convert.ToString(_gvUserAccessControl.Tables[0].Rows[0][1]) == "Done")
+                        if (_gvUserAccessControl != null && _gvUserAccessControl.Tables.Count > 0 && Convert.ToString(_gvUserAccessControl.Tables[0].Rows[0][0]) == "Done")
                         {
                             txtRole.Text = "";
                             txtResone.Text = "";
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Role deleted successfully.', 'Create Role');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Role deleted successfully.', 'Create Role');", true);
                             fillRoleDetailsGrid();
                             //BindDropdownsRoles();
-                            BindDropdownRolesFilter();
+                            //BindDropdownRolesFilter();
                         }
                         else
                         {
@@ -627,7 +623,7 @@ namespace SOR.Pages.Admin
                         txtRolename.Text = string.Empty;
                         //BindDropdownsRoles();
                         fillRoleDetailsGrid();
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('" + txtRolename.Text + " Role added successfully.', 'Edit Role Details');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + txtRolename.Text + " Role added successfully.', 'Edit Role Details');", true);
                     }
                     else
                     {
@@ -963,30 +959,30 @@ namespace SOR.Pages.Admin
         {
             try
             {
-                if (ddlRoleID.SelectedValue != "0")
-                {
-                    _UserManagement._RoleId = ddlRoleID.SelectedValue.ToString();
-                    _UserManagement.Flag = 1;
-                    DataSet _dsgvEditSubMenu = _UserManagement.FillGridAddRole();
+                //if (ddlRoleID.SelectedValue != "0")
+                //{
+                //    _UserManagement._RoleId = ddlRoleID.SelectedValue.ToString();
+                //    _UserManagement.Flag = 1;
+                //    DataSet _dsgvEditSubMenu = _UserManagement.FillGridAddRole();
 
-                    if (_dsgvEditSubMenu != null && _dsgvEditSubMenu.Tables.Count > 0)
-                    {
-                        gvRoleDetails.DataSource = _dsgvEditSubMenu.Tables[1];
-                        gvRoleDetails.DataBind();
-                        gvRoleDetails.Visible = true;
-                        lblRecordsCount.Text = "Total " + Convert.ToString(_dsgvEditSubMenu.Tables[1].Rows.Count) + " Record(s) Found.";
-                    }
-                    else
-                    {
-                        gvRoleDetails.Visible = false;
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No records found.', 'Create Roles');", true);
-                    }
-                    return;
-                }
-                else
-                {
+                //    if (_dsgvEditSubMenu != null && _dsgvEditSubMenu.Tables.Count > 0)
+                //    {
+                //        gvRoleDetails.DataSource = _dsgvEditSubMenu.Tables[1];
+                //        gvRoleDetails.DataBind();
+                //        gvRoleDetails.Visible = true;
+                //        lblRecordsCount.Text = "Total " + Convert.ToString(_dsgvEditSubMenu.Tables[1].Rows.Count) + " Record(s) Found.";
+                //    }
+                //    else
+                //    {
+                //        gvRoleDetails.Visible = false;
+                //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No records found.', 'Create Roles');", true);
+                //    }
+                //    return;
+                //}
+                //else
+                //{
                     fillRoleDetailsGrid();
-                }
+                //}
 
             }
             catch (Exception Ex)
@@ -1146,22 +1142,22 @@ namespace SOR.Pages.Admin
             {
                 string message = string.Empty;
                 DataSet _gvUserAccessControl = new DataSet();
-                if (ddlRoleID.SelectedValue != "0")
-                {
-                    _UserManagement._RoleId = ddlRoleID.SelectedValue.ToString();
-                    _UserManagement.Flag = 4;
-                    _gvUserAccessControl = _UserManagement.FillGridAddRole();
-                    if (_gvUserAccessControl != null)
-                    {
-                        if (_gvUserAccessControl.Tables[0].Rows.Count > 0)
-                        {
-                            exportFormat.ExportInCSV(Session["Username"].ToString(), "Payrakam", "Create Roles Report", _gvUserAccessControl);
-                        }
-                    }
+                //if (ddlRoleID.SelectedValue != "0")
+                //{
+                //    _UserManagement._RoleId = ddlRoleID.SelectedValue.ToString();
+                //    _UserManagement.Flag = 4;
+                //    _gvUserAccessControl = _UserManagement.FillGridAddRole();
+                //    if (_gvUserAccessControl != null)
+                //    {
+                //        if (_gvUserAccessControl.Tables[0].Rows.Count > 0)
+                //        {
+                //            exportFormat.ExportInCSV(Session["Username"].ToString(), "Payrakam", "Create Roles Report", _gvUserAccessControl);
+                //        }
+                //    }
 
-                }
-                else
-                {
+                //}
+                //else
+                //{
                     _UserManagement.Flag = (int)EnumCollection.EnumBindingType.BindGrid;
                     _UserManagement._UserName = Session["Username"].ToString();
                     _UserManagement._ID = null;
@@ -1175,7 +1171,7 @@ namespace SOR.Pages.Admin
                             exportFormat.ExportInCSV(Session["Username"].ToString(), "Payrakam", "Create Roles Report", _gvUserAccessControl);
                         }
                     }
-                }
+                //}
             }
             catch (Exception Ex)
             {
@@ -1192,22 +1188,22 @@ namespace SOR.Pages.Admin
             try
             {
                  DataSet _gvUserAccessControl = new DataSet();
-                 if (ddlRoleID.SelectedValue != "0")
-                 {
-                     _UserManagement._RoleId = ddlRoleID.SelectedValue.ToString();
-                     _UserManagement.Flag = 4;
-                     _gvUserAccessControl = _UserManagement.FillGridAddRole();
-                     if (_gvUserAccessControl != null)
-                     {
-                         if (_gvUserAccessControl.Tables.Count > 0)
-                         {
-                             exportFormat.ExporttoExcel(Session["Username"].ToString(), "Payrakam", "Create Roles Report", _gvUserAccessControl);
-                         }
-                     }
+                 //if (ddlRoleID.SelectedValue != "0")
+                 //{
+                 //    _UserManagement._RoleId = ddlRoleID.SelectedValue.ToString();
+                 //    _UserManagement.Flag = 4;
+                 //    _gvUserAccessControl = _UserManagement.FillGridAddRole();
+                 //    if (_gvUserAccessControl != null)
+                 //    {
+                 //        if (_gvUserAccessControl.Tables.Count > 0)
+                 //        {
+                 //            exportFormat.ExporttoExcel(Session["Username"].ToString(), "Payrakam", "Create Roles Report", _gvUserAccessControl);
+                 //        }
+                 //    }
 
-                 }
-                 else
-                 {
+                 //}
+                 //else
+                 //{
                      _UserManagement.Flag = (int)EnumCollection.EnumBindingType.BindGrid;
                      _UserManagement._UserName = Session["Username"].ToString();
                      _UserManagement._ID = null;
@@ -1220,7 +1216,7 @@ namespace SOR.Pages.Admin
                              exportFormat.ExporttoExcel(Session["Username"].ToString(), "Payrakam", "Create Roles Report", _gvUserAccessControl);
                          }
                      }
-                 }
+                 //}
             }
             catch (Exception Ex)
             {

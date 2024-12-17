@@ -1,0 +1,6 @@
+Time : 11-Nov-2024 14:34 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 11-Nov-2024 14:34 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 11-Nov-2024 14:36 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 11-Nov-2024 14:36 Message : TrRule: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 11-Nov-2024 14:36 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 11-Nov-2024 14:36 Message : TrRule: ToggleRuleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful

@@ -1,0 +1,80 @@
+Time : 17-Dec-2024 11:04 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 11:28 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 11:41 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 11:46 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 11:50 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 11:51 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 11:58 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Dec-2024 11:58 Message : AgentRegistration: btnSubmitDetails_Click: Failed - Agent Registration Request Dump In DB. UserName:  Status: 0 StatusMsg: Personal Email ID Already Registered RequestId: 0
+Time : 17-Dec-2024 11:59 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Dec-2024 11:59 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 62
+Time : 17-Dec-2024 11:59 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 62
+Time : 17-Dec-2024 11:59 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9895P RequestId: 62
+Time : 17-Dec-2024 12:00 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 62
+Time : 17-Dec-2024 12:00 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 62 Fullname: TestAgent   User: Maximus ReceiverEmailID: dsfvfdv12387@gmail.com ContactNo: 9874562132 Remarks: Decline
+Time : 17-Dec-2024 12:00 Message : AgentVerification: SingleSave: Successful - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 62 Fullname: TestAgent   User: Maximus ReceiverEmailID: dsfvfdv12387@gmail.com ContactNo: 9874562132 Remarks: Decline
+Time : 17-Dec-2024 12:01 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Dec-2024 12:01 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 63
+Time : 17-Dec-2024 12:02 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 63
+Time : 17-Dec-2024 12:02 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9875P RequestId: 63
+Time : 17-Dec-2024 12:09 Message : DashBoard: LoadTransactionCounts(): Exception: 42883: function get_top5_switch_data(unknown) does not exist
+Time : 17-Dec-2024 12:12 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 63
+Time : 17-Dec-2024 12:12 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 63 Fullname: Test   User: Maximus ReceiverEmailID: dsfvfdv985412@gmail.com ContactNo: 8954132513 Remarks: Approve
+Time : 17-Dec-2024 12:12 Message : AgentVerification: SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 63 Fullname: Test   User: Maximus ReceiverEmailID: dsfvfdv985412@gmail.com ContactNo: 8954132513 Remarks: ApproveActivityType: 0
+Time : 17-Dec-2024 12:15 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 64
+Time : 17-Dec-2024 12:15 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9875P RequestId: 64
+Time : 17-Dec-2024 12:16 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 64
+Time : 17-Dec-2024 12:16 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 64 Fullname: Test   User: Maximus ReceiverEmailID: dsfvfdv985412@gmail.com ContactNo: 8954132513 Remarks: D
+Time : 17-Dec-2024 12:16 Message : AgentVerification: SingleSave: Successful - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 64 Fullname: Test   User: Maximus ReceiverEmailID: dsfvfdv985412@gmail.com ContactNo: 8954132513 Remarks: D
+Time : 17-Dec-2024 12:17 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 64
+Time : 17-Dec-2024 12:17 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9875P RequestId: 64
+Time : 17-Dec-2024 12:17 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 64
+Time : 17-Dec-2024 12:17 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD9875P RequestId: 64
+Time : 17-Dec-2024 12:18 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 65
+Time : 17-Dec-2024 12:18 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD1234P RequestId: 65
+Time : 17-Dec-2024 12:18 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 65
+Time : 17-Dec-2024 12:18 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 65 Fullname: TestOne   User: Maximus ReceiverEmailID: dsfvfdv123@gmail.com ContactNo: 9875413125 Remarks: F
+Time : 17-Dec-2024 12:18 Message : AgentVerification: SingleSave: Successful - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 65 Fullname: TestOne   User: Maximus ReceiverEmailID: dsfvfdv123@gmail.com ContactNo: 9875413125 Remarks: F
+Time : 17-Dec-2024 12:20 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 66
+Time : 17-Dec-2024 12:20 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4517P RequestId: 66
+Time : 17-Dec-2024 12:21 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 66
+Time : 17-Dec-2024 12:21 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 66 Fullname: Aaa Bbb Ccc User: Maximus ReceiverEmailID: xyz984152@gmail.com ContactNo: 9678465143 Remarks: d
+Time : 17-Dec-2024 12:21 Message : AgentVerification: SingleSave: Successful - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 66 Fullname: Aaa Bbb Ccc User: Maximus ReceiverEmailID: xyz984152@gmail.com ContactNo: 9678465143 Remarks: d
+Time : 17-Dec-2024 12:38 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 57
+Time : 17-Dec-2024 12:38 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD4514P RequestId: 57
+Time : 17-Dec-2024 12:39 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 52
+Time : 17-Dec-2024 12:39 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD7854P RequestId: 52
+Time : 17-Dec-2024 12:39 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 65
+Time : 17-Dec-2024 12:39 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD1234P RequestId: 65
+Time : 17-Dec-2024 12:40 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 17-Dec-2024 12:40 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 67
+Time : 17-Dec-2024 12:41 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 67
+Time : 17-Dec-2024 12:41 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD3256P RequestId: 67
+Time : 17-Dec-2024 12:41 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 67
+Time : 17-Dec-2024 12:41 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 67 Fullname: DCFDS   User: Maximus ReceiverEmailID: dsfvfdv985854120@gmail.com ContactNo: 9854132132 Remarks: A
+Time : 17-Dec-2024 12:41 Message : AgentVerification: SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 67 Fullname: DCFDS   User: Maximus ReceiverEmailID: dsfvfdv985854120@gmail.com ContactNo: 9854132132 Remarks: AActivityType: 0
+Time : 17-Dec-2024 12:41 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 68
+Time : 17-Dec-2024 12:41 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD3256P RequestId: 68
+Time : 17-Dec-2024 12:43 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 68
+Time : 17-Dec-2024 12:43 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 68 Fullname: DCFDS   User: Maximus ReceiverEmailID: dsfvfdv985854120@gmail.com ContactNo: 9854132132 Remarks: D
+Time : 17-Dec-2024 12:43 Message : AgentRegistrationDAL: ChangeAgentStatus: UserName: Maximus Exception: 23502: null value in column "masterid" of relation "agentreqhandlerhistory" violates not-null constraint
+Time : 17-Dec-2024 12:43 Message : AgentVerification: SingleSave: Failed - Maker Verification. Exception: 23502: null value in column "masterid" of relation "agentreqhandlerhistory" violates not-null constraint
+Time : 17-Dec-2024 12:44 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 68
+Time : 17-Dec-2024 12:44 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 68 Fullname: DCFDS   User: Maximus ReceiverEmailID: dsfvfdv985854120@gmail.com ContactNo: 9854132132 Remarks: D
+Time : 17-Dec-2024 12:44 Message : AgentRegistrationDAL: ChangeAgentStatus: UserName: Maximus Exception: 23502: null value in column "masterid" of relation "agentreqhandlerhistory" violates not-null constraint
+Time : 17-Dec-2024 12:44 Message : AgentVerification: SingleSave: Failed - Maker Verification. Exception: 23502: null value in column "masterid" of relation "agentreqhandlerhistory" violates not-null constraint
+Time : 17-Dec-2024 12:44 Message : AgentVerification: CommonSave:  Request :  Received. Username :  RequestId : 68
+Time : 17-Dec-2024 12:44 Message : AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 68 Fullname: DCFDS   User: Maximus ReceiverEmailID: dsfvfdv985854120@gmail.com ContactNo: 9854132132 Remarks: D
+Time : 17-Dec-2024 12:48 Message : AgentVerification: SingleSave: Successful - Maker Verification.  StatusFlag: Decline Flag: 6 AgentCode: 68 Fullname: DCFDS   User: Maximus ReceiverEmailID: dsfvfdv985854120@gmail.com ContactNo: 9854132132 Remarks: D
+Time : 17-Dec-2024 13:06 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "AG Code" does not exist
+Time : 17-Dec-2024 13:06 Message : AEPSTransactions: FillGrid(): Exception: 42703: column "AG Code" does not exist
+Time : 17-Dec-2024 13:06 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:06 Message : AEPSTransactions: FillGrid(): Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:06 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:06 Message : AEPSTransactions: FillGrid(): Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:06 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:06 Message : AEPSTransactions: FillGrid(): Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:11 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:11 Message : AllTransactions: fillGrid: Exception: 42703: column "Aadhar No" does not exist
+Time : 17-Dec-2024 13:12 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 42703: column "channel" does not exist
+Time : 17-Dec-2024 13:12 Message : AllTransactions: fillGrid: Exception: 42703: column "channel" does not exist

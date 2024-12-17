@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 using AppLogger;
 using System.Configuration;
 using MaxiSwitch.EncryptionDecryption;
+using Npgsql;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace BussinessAccessLayer
 {
@@ -59,44 +62,54 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    // Create a command to call the stored procedure
+                    using (var cmd = new NpgsqlCommand("CALL SP_GetPagePermissions(@p_ID, @p_RoleId, @p_MenuID, @p_MenuName, @p_MenuLink, @p_SubMenuID, @p_SubMenName, @p_SubMenuLink, @p_bitIsRemove, @p_UserName, @p_Flag, @p_ClientId)", sqlConn))
                     {
-                        SqlParameter[] _Params =
-                        {
-                             new SqlParameter("@ID", _ID),
-                             new SqlParameter("@RoleId", _RoleId),
-                             new SqlParameter("@MenuID", _MenuID),
-                             new SqlParameter("@MenuName", _MenuName),
-                             new SqlParameter("@MenuLink", _MenuLink),
-                             new SqlParameter("@SubMenuID", _SubMenuID),
-                             new SqlParameter("@SubMenName",_SubMenuName),
-                             new SqlParameter("@SubMenuLink",_SubMenuLink),
-                             new SqlParameter("@bitIsRemove",_Access),
-                             new SqlParameter("@UserName",_UserName),
-                             new SqlParameter("@Flag", (int)EnumCollection.EnumBindingType.BindGrid),
-                             new SqlParameter("@ClientId",_ClientID)
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_GetPagePermissions";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet ds = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(ds);
-                        cmd.Dispose();
-                        return ds;
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_ID", (object)_ID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_RoleId", (object)_RoleId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuID", (object)_MenuID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuName", (object)_MenuName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuLink", (object)_MenuLink ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_SubMenuID", (object)_SubMenuID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_SubMenName", (object)_SubMenuName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_SubMenuLink", (object)_SubMenuLink ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bitIsRemove", (object)_Access ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserName", (object)_UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", (int)EnumCollection.EnumBindingType.BindGrid);
+                        cmd.Parameters.AddWithValue("p_ClientId", (object)_ClientID ?? DBNull.Value);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
                     }
+
+                    // Now, select from the temporary table
+                    DataSet ds = new DataSet();
+
+                    // Select results from the temporary table
+                    using (var selectCmd = new NpgsqlCommand("SELECT * FROM temp_page_permissions", sqlConn))
+                    {
+                        using (var dataAdapter = new NpgsqlDataAdapter(selectCmd))
+                        {
+                            dataAdapter.Fill(ds);
+                        }
+                    }
+
+                    return ds;
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: FillGridUserPageManagement(): UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: FillGridUserPageManagement(): UserName: " + _UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
 
         public DataSet FillGridAddRole()
         {
@@ -135,27 +148,34 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        NpgsqlParameter[] _Params =
                         {
-                           new SqlParameter("@RoleID",_RoleId),
-                           new SqlParameter("@Userid",_UserID),
-                           new SqlParameter("@Status", Status),
-                           new SqlParameter("@UserName",UserName),
-                           new SqlParameter("@Flag",Flag),
-                           new SqlParameter("@ClientId",_ClientID)
+                            new NpgsqlParameter("p_RoleID", _RoleId ?? (object)DBNull.Value),
+                            new NpgsqlParameter("p_UserID", _UserID ?? (object)DBNull.Value),
+                            new NpgsqlParameter("p_UserName", UserName ?? (object)DBNull.Value),
+                            new NpgsqlParameter("p_Status", Status ?? (object)DBNull.Value),
+                            new NpgsqlParameter("p_Flag", Flag),
+                            new NpgsqlParameter("p_ClientId", _ClientID ?? (object)DBNull.Value)
                         };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_GetManageUsers";
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "CALL SP_GetManageUsers(:p_RoleID, :p_UserID, :p_UserName, :p_Status, :p_Flag, :p_ClientId)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = "SELECT * FROM temp_manage_users";
+                        cmd.CommandType = CommandType.Text;
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -168,37 +188,70 @@ namespace BussinessAccessLayer
             }
         }
 
+
+
         public DataSet FillGridUserAccessManagement()
         {
+            //try
+            //{
+            //    using (SqlCommand cmd = new SqlCommand())
+            //    {
+            //        using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+            //        {
+            //            SqlParameter[] _Params =
+            //            {
+            //              new SqlParameter("@ID", _ID),
+            //              new SqlParameter("@RoleName", _RoleId),
+            //              new SqlParameter("@User",_UserName),
+            //              new SqlParameter("@Flag", Flag),
+            //            };
+            //            cmd.Connection = sqlConn;
+            //            cmd.CommandText = "Proc_RoleDetails";
+            //            cmd.CommandType = CommandType.StoredProcedure;
+            //            cmd.Parameters.AddRange(_Params);
+            //            DataSet dataSet = new DataSet();
+            //            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+            //            dataAdapter.Fill(dataSet);
+            //            cmd.Dispose();
+            //            return dataSet;
+            //        }
+            //    }
+            //}
+            //catch (Exception Ex)
+            //{
+            //    ErrorLog.AgentManagementTrace("UserManagement: FillGridUserAccessManagement() : UserName: " + UserName + " Exception: " + Ex.Message);
+            //    ErrorLog.DBError(Ex);
+            //    throw;
+            //}
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                          new SqlParameter("@ID", _ID),
-                          new SqlParameter("@RoleName", _RoleId),
-                          new SqlParameter("@User",_UserName),
-                          new SqlParameter("@Flag", Flag),
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_RoleDetails";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+                        cmd.CommandText = "CALL Proc_RoleDetails(@p_Flag, @p_ID, @p_RoleName, @p_User, @p_Reason)";
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+                        cmd.Parameters.AddWithValue("p_ID", (object)_ID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_RoleName", (object)_RoleId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_User", (object)_UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Reason", (object)Reason ?? DBNull.Value);
+                        sqlConn.Open();
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = "SELECT * FROM temp_role_details"; // Query the temp table
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: FillGridUserAccessManagement() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: UserAccessManagementDeleteRole() : UserName: " + _UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
@@ -207,25 +260,32 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                             new SqlParameter("@ID", _ID),
-                             new SqlParameter("@RoleName", _RoleId),
-                             new SqlParameter("@User",_UserName),
-                             new SqlParameter("@Flag", Flag),
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_RoleDetailsCreate";
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        NpgsqlParameter[] _Params =
+                        {
+                            new NpgsqlParameter("p_ID", (object)_ID ?? DBNull.Value),
+                            new NpgsqlParameter("p_RoleName", (object)_RoleId ?? DBNull.Value),
+                            new NpgsqlParameter("p_User", (object)_UserName ?? DBNull.Value),
+                            new NpgsqlParameter("p_Flag", (object)Flag ?? DBNull.Value)
+                        };
+                        cmd.CommandText = "CALL Proc_RoleDetailsCreate(:p_ID, :p_RoleName, :p_User, :p_Flag)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = "SELECT * FROM temp_role_details";
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
                         return dataSet;
                     }
                 }
@@ -238,27 +298,37 @@ namespace BussinessAccessLayer
             }
         }
 
+
         public DataSet FillGridUserAccessManagementForAddRoleValidateRole()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                            new SqlParameter("@Role", _Role)
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_ValidateRoleId";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+
+                        // Prepare parameters for the procedure
+                        cmd.CommandText = "CALL Proc_ValidateRoleId(:p_Role)";
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("p_Role", (object)_Role ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Call the procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_role_validation"; // Query the temp table
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
+                        return dataSet; // Return the dataset with results
                     }
                 }
             }
@@ -269,6 +339,7 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
+
 
         public DataSet FillGridUserAccessManagementForAddRoleInsertRole()
         {
@@ -305,77 +376,102 @@ namespace BussinessAccessLayer
             }
         }
 
-        
+
 
         public DataSet UserAccessManagementDeleteRole()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                              new SqlParameter("@ID", _ID),
-                              new SqlParameter("@RoleName", _RoleId),
-                              new SqlParameter("@User",_UserName),
-                              new SqlParameter("@Flag", Flag),
-                              new SqlParameter("@Reason",Reason)
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_RoleDetails";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+
+                        // Use CALL statement to execute the stored procedure
+                        cmd.CommandText = "CALL Proc_RoleDetails(@p_Flag, @p_ID, @p_RoleName, @p_User, @p_Reason)";
+
+                        // Define the parameters
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+                        cmd.Parameters.AddWithValue("p_ID", _ID);
+                        cmd.Parameters.AddWithValue("p_RoleName", _RoleId);
+                        cmd.Parameters.AddWithValue("p_User", _UserName);
+                        cmd.Parameters.AddWithValue("p_Reason", Reason);
+
+                        // Open connection
+                        sqlConn.Open();
+
+                        // Execute the stored procedure
+                        cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = "SELECT * FROM temp_messages"; // Query the temp table
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+                        // Now select from the temporary table
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: UserAccessManagementDeleteRole() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: UserAccessManagementDeleteRole() : UserName: " + _UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
 
         public DataSet FillGridUserAccessManagementModalPopupMenu()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                            new SqlParameter("@RoleID", _RoleId),
-                                            new SqlParameter("@UserName",_UserName),
-                                            new SqlParameter("@Flag", Flag),
-                                            new SqlParameter("@ClientID",_ClientID)
+                            new NpgsqlParameter("p_RoleID", (object)_RoleId ?? DBNull.Value),
+                            new NpgsqlParameter("p_UserName", (object)_UserName ?? DBNull.Value),
+                            new NpgsqlParameter("p_Flag", (object)Flag ?? DBNull.Value),
+                            new NpgsqlParameter("p_ClientID", (object)_ClientID ?? DBNull.Value)
                         };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_SelectEditMenu";
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "CALL SP_SelectEditMenu(:p_RoleID, :p_UserName, :p_Flag, :p_ClientID)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_MenuResults"; // Replace with your actual temp table name
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: FillGridUserAccessManagementModalPopupMenu() : UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("UserManagement: FillGridUserAccessManagementModalPopupMenu() : UserName: " + _UserName + " Exception: " + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
+
         }
 
         public DataSet FillMenuSubmenuGrid()
@@ -418,26 +514,42 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                            new SqlParameter("@RoleID", _RoleId),
-                                            new SqlParameter("@UserName", _UserName),
-                                            new SqlParameter("@Flag", Flag),
-                                            new SqlParameter("@ParentRoleId", _ParentID),
-                                            new SqlParameter("@ClientID", _ClientID)
-                        };
+                    new NpgsqlParameter("p_RoleID", (object)_RoleId ?? DBNull.Value),
+                    new NpgsqlParameter("p_UserName", (object)_UserName ?? DBNull.Value),
+                    new NpgsqlParameter("p_Flag", (object)Flag ?? DBNull.Value),
+                    new NpgsqlParameter("p_ParentRoleId", (object)_ParentID ?? DBNull.Value),
+                    new NpgsqlParameter("p_ClientID", (object)_ClientID ?? DBNull.Value)
+                };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindRoleGroups_CreateUser";
-                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_BindRoleGroups_CreateUser(:p_RoleID, :p_UserName, :p_Flag, :p_ParentRoleId, :p_ClientID)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_RoleGroups"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -449,31 +561,42 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
-        
+
+
         public DataSet FillGridUserAccessManagementModalPopupSubMenu()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@RoleID", _RoleId),
-                                            new SqlParameter("@MenuId",_MenuID),
-                                            new SqlParameter("@ParentRoleID",_ParentID),
-                                            new SqlParameter("@ClientID",_ClientID)
-                        };
+                        // Prepare the call statement with all parameters
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_SelectEditSubMenu";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        cmd.CommandText = "CALL SP_SelectEditSubMenu(:p_RoleID, :p_MenuId, :p_ParentRoleID, :p_ClientID)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_RoleID", _RoleId);
+                        cmd.Parameters.AddWithValue("p_MenuId", _MenuID);
+                        cmd.Parameters.AddWithValue("p_ParentRoleID", _ParentID);
+                        cmd.Parameters.AddWithValue("p_ClientID", (object)_ClientID ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // This executes the procedure
+
+                        // Now, we need to select from the temporary table
+                        using (var selectCmd = new NpgsqlCommand("SELECT * FROM temp_SubMenuResults", sqlConn))
+                        {
+                            DataSet dataSet = new DataSet();
+                            using (var dataAdapter = new NpgsqlDataAdapter(selectCmd))
+                            {
+                                dataAdapter.Fill(dataSet); // Fill the dataset with results from the temp table
+                            }
+                            return dataSet; // Return the populated dataset
+                        }
                     }
                 }
             }
@@ -485,29 +608,39 @@ namespace BussinessAccessLayer
             }
         }
 
+
         // Edit Role - Sub Menu Fill Grid By Menu ID.
         public DataSet FillGridUserAccessManagementMenu()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        NpgsqlParameter[] _Params =
                         {
-                                            new SqlParameter("@RoleID", _RoleId),
-                                            new SqlParameter("@MenuId",_MenuID),
-                                            new SqlParameter("@ClientID",_ClientID)
+                            new NpgsqlParameter("p_RoleID", (object)_RoleId ?? DBNull.Value),
+                            new NpgsqlParameter("p_MenuId", (object)_MenuID ?? DBNull.Value),
+                            new NpgsqlParameter("p_ClientID", (object)_ClientID ?? DBNull.Value)
                         };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_SelectSubMenu";
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "CALL SP_SelectSubMenu(:p_RoleID, :p_MenuId, :p_ClientID)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = "SELECT * FROM temp_SubMenu";
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -520,44 +653,110 @@ namespace BussinessAccessLayer
             }
         }
 
+
+        //public DataSet UserAccessManagementUpdateTblRoleDetails()
+        //{
+        //    try
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand())
+        //        {
+        //            using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+        //            {
+        //                SqlParameter[] _Params =
+        //                {
+        //                                    new SqlParameter("@DataTable", dataTable),
+        //                                    new SqlParameter("@RoleId", _RoleId),
+        //                                    new SqlParameter("@ID", _ID),
+        //                                    new SqlParameter("@RoleName", _Role),
+        //                                    new SqlParameter("@User", UserName),
+        //                                    new SqlParameter("@Flag", Flag),
+        //                                    new SqlParameter("@UserRoleId",_UserID),
+        //                                    new SqlParameter("@ClientId",_ClientID)
+        //                };
+        //                cmd.Connection = sqlConn;
+        //                cmd.CommandText = "SP_UpdateTblRoleDetails";
+        //                cmd.CommandType = CommandType.StoredProcedure;
+        //                cmd.Parameters.AddRange(_Params);
+        //                DataSet dataSet = new DataSet();
+        //                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+        //                dataAdapter.Fill(dataSet);
+        //                cmd.Dispose();
+        //                return dataSet;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.AgentManagementTrace("UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: " + UserName + " Exception: " + Ex.Message);
+        //        ErrorLog.DBError(Ex);
+        //        throw;
+        //    }
+        //}
         public DataSet UserAccessManagementUpdateTblRoleDetails()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                // Convert DataTable to JSON
+                string jsonData = DataTableToJson(dataTable);
+
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@DataTable", dataTable),
-                                            new SqlParameter("@RoleId", _RoleId),
-                                            new SqlParameter("@ID", _ID),
-                                            new SqlParameter("@RoleName", _Role),
-                                            new SqlParameter("@User", UserName),
-                                            new SqlParameter("@Flag", Flag),
-                                            new SqlParameter("@UserRoleId",_UserID),
-                                            new SqlParameter("@ClientId",_ClientID)
-                        };
+                        // Setting up the command for the stored procedure
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_UpdateTblRoleDetails";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+
+                        // Prepare the CALL statement
+                        cmd.CommandText = "CALL public.sp_updatetblroledetails(:p_datatable, :p_roleid, :p_id, :p_rolename, :p_user, :p_flag, :p_userroleid, :p_clientid)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Adding parameters
+                        cmd.Parameters.AddWithValue("p_datatable", NpgsqlTypes.NpgsqlDbType.Jsonb, jsonData);
+                        cmd.Parameters.AddWithValue("p_roleid", (object)_RoleId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_id", (object)_ID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_rolename", (object)_Role ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_user", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_flag", (object)Flag ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_userroleid", (object)_UserID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_clientid", (object)_ClientID ?? DBNull.Value);
+
+                        // Execute the CALL statement
+                        cmd.ExecuteNonQuery();
+
+                        // Now select from the temporary table
+                        cmd.CommandText = "SELECT * FROM TempResults";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Fill the DataSet
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
+                // Log the error
+                ErrorLog.AgentManagementTrace($"UserManagement: UserAccessManagementUpdateTblRoleDetails() : UserName: {UserName} Exception: {ex.Message}");
+                ErrorLog.DBError(ex);
+                throw; // Rethrow the exception
             }
         }
+
+
+
+        private string DataTableToJson(DataTable table)
+        {
+            // Use Newtonsoft.Json or any preferred method to convert DataTable to JSON
+            return JsonConvert.SerializeObject(table);
+        }
+
 
         public DataSet InsertUpdateRoleDetails()
         {
@@ -600,39 +799,80 @@ namespace BussinessAccessLayer
 
         public DataSet InsertNewRole()
         {
+            //try
+            //{
+            //    using (SqlCommand cmd = new SqlCommand())
+            //    {
+            //        using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+            //        {
+            //            SqlParameter[] _Params =
+            //            {
+            //                                new SqlParameter("@RoleName", _Role),
+            //                                new SqlParameter("@RoleId", _RoleId),
+            //                                new SqlParameter("@User", UserName),
+            //                                new SqlParameter("@Flag",Flag)
+            //            };
+            //            cmd.Connection = sqlConn;
+            //            cmd.CommandText = "SP_UpdateTblRoleDetails";
+            //            cmd.CommandType = CommandType.StoredProcedure;
+            //            cmd.Parameters.AddRange(_Params);
+            //            DataSet dataSet = new DataSet();
+            //            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+            //            dataAdapter.Fill(dataSet);
+            //            cmd.Dispose();
+            //            return dataSet;
+            //        }
+            //    }
+            //}
+            //catch (Exception Ex)
+            //{
+            //    ErrorLog.AgentManagementTrace("UserManagement: InsertUpdateRoleDetails() : UserName: " + UserName + " Exception: " + Ex.Message);
+            //    ErrorLog.DBError(Ex);
+            //    throw;
+            //}
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    // Create a command to call the stored procedure
+                    using (var cmd = new NpgsqlCommand("CALL Proc_UpdateTblRoleDetails(@p_DataTable, @p_RoleId, @p_ID, @p_RoleName, @p_User, @p_Flag, @p_UserRoleId, @p_ClientId)", sqlConn))
                     {
-                        SqlParameter[] _Params =
+                        // Convert the list to an array of NpgsqlTypes.Composite
+                        cmd.Parameters.AddWithValue("p_DataTable", DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_RoleId", _RoleId);
+                        cmd.Parameters.AddWithValue("p_ID", 0); // Use appropriate value for p_ID
+                        cmd.Parameters.AddWithValue("p_RoleName", _Role);
+                        cmd.Parameters.AddWithValue("p_User", UserName);
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+                        cmd.Parameters.AddWithValue("p_UserRoleId", DBNull.Value); // Use appropriate value if needed
+                        cmd.Parameters.AddWithValue("p_ClientId", DBNull.Value); // Use appropriate value if needed
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Now, select from the temporary table
+                    using (var selectCmd = new NpgsqlCommand("SELECT * FROM temp_messages", sqlConn))
+                    {
+                        var dataSet = new DataSet();
+                        using (var dataAdapter = new NpgsqlDataAdapter(selectCmd))
                         {
-                                            new SqlParameter("@RoleName", _Role),
-                                            new SqlParameter("@RoleId", _RoleId),
-                                            new SqlParameter("@User", UserName),
-                                            new SqlParameter("@Flag",Flag)
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_UpdateTblRoleDetails";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                            dataAdapter.Fill(dataSet);
+                        }
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: InsertUpdateRoleDetails() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: InsertNewRole() : UserName: " + UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
-        
+
         #endregion
 
         #region Fill Dropdowns
@@ -640,31 +880,108 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+
+                    // Create a command to call the stored procedure
+                    using (var cmd = new NpgsqlCommand("CALL SP_BindMenuSubMenu(@p_UserName, @p_Flag)", sqlConn))
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@UserName",_UserName),
-                                            new SqlParameter("@Flag", Flag),
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindMenuSubMenu";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_UserName", (object)_UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", (object)Flag ?? DBNull.Value);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
                     }
+
+                    // Now, select from the temporary tables
+                    DataSet dataSet = new DataSet();
+
+                    // Select menu results
+                    using (var menuCmd = new NpgsqlCommand("SELECT * FROM temp_menu_results", sqlConn))
+                    {
+                        using (var menuAdapter = new NpgsqlDataAdapter(menuCmd))
+                        {
+                            menuAdapter.Fill(dataSet, "MenuResults");
+                        }
+                    }
+
+                    // Select submenu results
+                    using (var submenuCmd = new NpgsqlCommand("SELECT * FROM temp_submenu_results", sqlConn))
+                    {
+                        using (var submenuAdapter = new NpgsqlDataAdapter(submenuCmd))
+                        {
+                            submenuAdapter.Fill(dataSet, "SubmenuResults");
+                        }
+                    }
+
+                    // Select role results
+                    using (var roleCmd = new NpgsqlCommand("SELECT * FROM temp_role_results", sqlConn))
+                    {
+                        using (var roleAdapter = new NpgsqlDataAdapter(roleCmd))
+                        {
+                            roleAdapter.Fill(dataSet, "RoleResults");
+                        }
+                    }
+
+                    // Select specific role results
+                    using (var specificRoleCmd = new NpgsqlCommand("SELECT * FROM temp_role_specific_results", sqlConn))
+                    {
+                        using (var specificRoleAdapter = new NpgsqlDataAdapter(specificRoleCmd))
+                        {
+                            specificRoleAdapter.Fill(dataSet, "SpecificRoleResults");
+                        }
+                    }
+
+                    return dataSet;
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: BindDropdowns() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: BindDropdowns() : UserName: " + _UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
+                throw;
+            }
+        }
+
+        public DataSet BindSubMenu()
+        {
+            try
+            {
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
+                {
+                    sqlConn.Open();
+
+                    // Create a command to call the stored procedure
+                    using (var cmd = new NpgsqlCommand("CALL sp_bindsubmenu(@p_UserName, @p_menuid, @p_Flag)", sqlConn))
+                    {
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_UserName", (object)_UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_menuid", (object)_MenuID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", (object)Flag ?? DBNull.Value);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    DataSet dataSet = new DataSet();
+
+                    using (var submenuCmd = new NpgsqlCommand("SELECT * FROM temp_submenu_results", sqlConn))
+                    {
+                        using (var submenuAdapter = new NpgsqlDataAdapter(submenuCmd))
+                        {
+                            submenuAdapter.Fill(dataSet, "SubmenuResults");
+                        }
+                    }
+
+                    return dataSet;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.AgentManagementTrace("UserManagement: BindDropdowns() : UserName: " + _UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
@@ -673,96 +990,118 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@RoleID",_RoleId),
-                                            new SqlParameter("@Userid",_UserID),
-                                            new SqlParameter("@Status", Status),
-                                            new SqlParameter("@UserName",UserName),
-                                            new SqlParameter("@Flag",Flag),
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "BindUsers";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        cmd.CommandText = "CALL SP_BindUsers(:p_RoleID, :p_UserID, :p_UserName, :p_Status, :p_Flag)";
+                        cmd.Parameters.AddWithValue("p_RoleID", _RoleId ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserID", _UserID ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserName", UserName ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Status", Status ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+
+                        sqlConn.Open();
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery();
+
+                        // Now, select from the temporary table
+                        using (var selectCmd = new NpgsqlCommand("SELECT * FROM temp_users", sqlConn))
+                        {
+                            var dataSet = new DataSet();
+
+                            using (var dataAdapter = new NpgsqlDataAdapter(selectCmd))
+                            {
+                                dataAdapter.Fill(dataSet);
+                            }
+
+                            return dataSet;
+                        }
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: BindDropdownUsers() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: BindDropdownUsers() : UserName: " + UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
 
         public DataSet BindRolesAndRoleGroup()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+                    using (var cmd = new NpgsqlCommand("CALL SP_BindDropdownRoles(:p_UserName, :p_RoleID, :p_Flag)", sqlConn))
                     {
-                        SqlParameter[] _Params =
+                        cmd.Parameters.AddWithValue("p_UserName", UserName);
+                        cmd.Parameters.AddWithValue("p_RoleID", _RoleId);
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+                        cmd.ExecuteNonQuery();
+                    }
+                    using (var selectCmd = new NpgsqlCommand("SELECT * FROM temp_role_list; SELECT * FROM temp_role_group;", sqlConn))
+                    {
+                        var dataSet = new DataSet();
+                        using (var dataAdapter = new NpgsqlDataAdapter(selectCmd))
                         {
-                                            new SqlParameter("@RoleID",_RoleId),
-                                            new SqlParameter("@UserName",UserName),
-                                            new SqlParameter("@Flag",Flag),
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindDropdownRoles";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                            dataAdapter.Fill(dataSet);
+                        }
                         return dataSet;
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: BindRolesAndRoleGroup() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: BindRolesAndRoleGroup() : UserName: " + UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
+
 
         public DataSet BindRoles_CreateUser()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@RoleID",_RoleId),
-                                            new SqlParameter("@UserName",UserName),
-                                            new SqlParameter("@Flag",Flag),
-                                            new SqlParameter("@ParentRoleId", _ParentID),
-                                            new SqlParameter("@ClientID",_ClientID),
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindRoles_CreateUser";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_BindRoles_CreateUser(:p_RoleID, :p_UserName, :p_Flag, :p_ParentRoleId, :p_ClientID)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Parameters with 'p_' prefix
+                        cmd.Parameters.AddWithValue("p_RoleID", (object)_RoleId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserName", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", (object)Flag ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ParentRoleId", (object)_ParentID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ClientID", (object)_ClientID ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_roles"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -775,6 +1114,8 @@ namespace BussinessAccessLayer
             }
         }
 
+
+
         #endregion
 
         #region Insert Update Page Permissions
@@ -782,80 +1123,106 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@ID", _ID),
-                                            new SqlParameter("@RoleId", _RoleId),
-                                            new SqlParameter("@MenuID", _MenuID),
-                                            new SqlParameter("@MenuName", _MenuName),
-                                            new SqlParameter("@MenuLink", _MenuLink),
-                                            new SqlParameter("@MenuIcon",MenuIcon),
-                                            new SqlParameter("@SubMenuID", _SubMenuID),
-                                            new SqlParameter("@SubMenName",_SubMenuName),
-                                            new SqlParameter("@SubMenuLink",_SubMenuLink),
-                                            new SqlParameter("@bitIsRemove",_bitIsRemove),
-                                            new SqlParameter("@UserName",_UserName),
-                                            new SqlParameter("@Flag", (int)_EnumMenuType),
-                                            new SqlParameter("@ClientID",_ClientID)
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_InsertUpdateMenuPermissions";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+
+                        // Call the stored procedure with parameters in the correct order
+                        cmd.CommandText = "CALL SP_InsertUpdateMenuPermissions(:p_ID, :p_RoleId, :p_MenuID, :p_MenuName, :p_MenuLink, :p_SubMenuID, :p_SubMenName, :p_SubMenuLink, :p_bitIsRemove, :p_UserName, :p_Flag, :p_ClientID, :p_MenuIcon)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Parameters with 'p_' prefix in the order of the function definition
+                        cmd.Parameters.AddWithValue("p_ID", (object)_ID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_RoleId", (object)_RoleId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuID", (object)_MenuID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuName", (object)_MenuName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuLink", (object)_MenuLink ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_SubMenuID", (object)_SubMenuID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_SubMenName", (object)_SubMenuName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_SubMenuLink", (object)_SubMenuLink ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_bitIsRemove", (object)_bitIsRemove ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserName", (object)_UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", (int)_EnumMenuType);
+                        cmd.Parameters.AddWithValue("p_ClientID", (object)_ClientID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_MenuIcon", (object)MenuIcon ?? DBNull.Value); // MenuIcon added at the end
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_row_count"; // Adjust as needed for your temp table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
+                        return dataSet; // Return the dataset with results
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: InsertUpdatePagePermissions() : UserName: " + UserName + " Exception: " + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.AgentManagementTrace("UserManagement: InsertUpdatePagePermissions() : UserName: " + _UserName + " Exception: " + ex.Message);
+                ErrorLog.DBError(ex);
                 throw;
             }
         }
+
+
 
         public DataSet CreateUser()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                            new SqlParameter("@username",_UserName),
-                                            new SqlParameter("@password",_Password),
-                                            new SqlParameter("@email",Email),
-                                            new SqlParameter("@rollid",_RoleId),
-                                            new SqlParameter("@UserRoleGroup",UserRoleGroup),
-                                            new SqlParameter("@createdBy",UserName),
-                                            new SqlParameter("@Salt",_RandomStringForSalt),
-                                            new SqlParameter("@Salt1",_RandomStringForSalt),
-                                            new SqlParameter("@Salt2",""),
-                                            new SqlParameter("@Salt3",""),
-                                            new SqlParameter("@Salt4",""),
-                                            new SqlParameter("@ClientId",_ClientID),
-                                            new SqlParameter("@UserId",_UserId),
-                                            new SqlParameter("@Mobile",_Mobile)
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_CreateUser";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+
+                        // Call the procedure to create a user
+                        cmd.CommandText = "CALL Proc_CreateUser(:p_username, :p_password, :p_email, :p_rollid, :p_UserRoleGroup, :p_createdBy, :p_UserId, :p_Salt, :p_Salt1, :p_Salt2, :p_Salt3, :p_Salt4, :p_ClientId, :p_Mobile)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Parameters with 'p_' prefix
+                        cmd.Parameters.AddWithValue("p_username", (object)_UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_password", (object)_Password ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_email", (object)Email ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_rollid", (object)_RoleId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserRoleGroup", (object)UserRoleGroup ?? DBNull.Value); // Added UserRoleGroup
+                        cmd.Parameters.AddWithValue("p_createdBy", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserId", (object)_UserId ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Salt", (object)_RandomStringForSalt ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Salt1", (object)_RandomStringForSalt ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Salt2", DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Salt3", DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Salt4", DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ClientId", (object)_ClientID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Mobile", (object)_Mobile ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_notices"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
+                        return dataSet; // Return the dataset with messages
                     }
                 }
             }
@@ -912,97 +1279,148 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                            new SqlParameter("@UserName",_UserName),
-                        };
+                    new NpgsqlParameter("p_UserName", (object)_UserName ?? DBNull.Value)
+                };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_CheckIsUserExist";
-                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_CheckIsUserExist(:p_UserName)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_UserExist"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: CheckIsUserExist() : UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("UserManagement: CheckIsUserExist() : UserName: " + _UserName + " Exception: " + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
 
         public DataSet CheckIsEmailExist()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                            new SqlParameter("@UserEmailID", _Email),
-                        };
+                    new NpgsqlParameter("p_UserEmailID", (object)_Email ?? DBNull.Value)
+                };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_CheckIsEmailExist";
-                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_CheckIsEmailExist(:p_UserEmailID)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_EmailExist"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: CheckIsEmailExist() : UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("UserManagement: CheckIsEmailExist() : UserEmail: " + _Email + " Exception: " + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
 
+
         public DataSet CheckIsMobileExist()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                            new SqlParameter("@mobileNo",_Mobile),
-                        };
+                    new NpgsqlParameter("p_mobileNo", (object)_Mobile ?? DBNull.Value)
+                };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_CheckIsMobileExist";
-                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_CheckIsMobileExist(:p_mobileNo)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_MobileExist"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: CheckIsMobileExist() : UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("UserManagement: CheckIsMobileExist() : MobileNo: " + _Mobile + " Exception: " + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
         #endregion
 
         #region Get Pages By ID
@@ -1076,82 +1494,95 @@ namespace BussinessAccessLayer
             }
         }
         #endregion
-    
+
         #region Manage User Accounts Action
         public void ManageUserAccountsAction(out string _Status)
         {
             _Status = string.Empty;
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                                  new SqlParameter("@UserID", _UserID),
-                                  new SqlParameter("@ActionType", _ActionTypeID),
-                                  new SqlParameter("@Reason", Reason),
-                                  new SqlParameter("@Password", _Password),
-                                  new SqlParameter("@Salt", null),
-                                  new SqlParameter("@UserName", UserName),
-                                  new SqlParameter("@Flag", Flag),
-                                  new SqlParameter("@Status", SqlDbType.VarChar, 100) { Direction = ParameterDirection.Output },
-                                  new SqlParameter("@UserType", UserType)
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_ManageUserAccounts";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        sqlConn.Open();
+                        cmd.CommandText = "CALL SP_ManageUserAccounts(null, :p_UserID, :p_ActionType, :p_Reason, :p_Password, :p_Salt, :p_UserName, :p_Flag, :p_UserType)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Output parameter
+                        var statusParam = new NpgsqlParameter("p_Status", NpgsqlTypes.NpgsqlDbType.Varchar)
+                        {
+                            Direction = ParameterDirection.Output,
+                            Size = 100
+                        };
+                        cmd.Parameters.Add(statusParam);
+                        // Define parameters in the correct order
+                        cmd.Parameters.AddWithValue("p_UserID", (object)_UserID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ActionType", (object)_ActionTypeID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Reason", (object)Reason ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Password", (object)_Password ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Salt", DBNull.Value); // If you need to pass null
+                        cmd.Parameters.AddWithValue("p_UserName", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Flag", Flag);
+                        cmd.Parameters.AddWithValue("p_UserType", (object)UserType ?? DBNull.Value);
+
+                        // Execute the procedure
                         cmd.ExecuteNonQuery();
-                        _Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        sqlConn.Close();
-                        cmd.Dispose();
+
+                        // Retrieve the output value
+                        _Status = statusParam.Value?.ToString() ?? string.Empty;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: ManageUserAccountsAction() : UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace($"UserManagement: ManageUserAccountsAction() : UserName: {UserName} Exception: {Ex.Message}");
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
+
         #endregion
 
         //Switch Audit Trails pgManageUserAccount
         #region insertTblAuditTrail
         public void insertTblAuditTrail(string[] _Params)
         {
-
             try
             {
-                SqlParameter[] _sqlParameter = {
-                                                 new SqlParameter("@Username",_Params[0]),
-                                                 new SqlParameter("@AuditAction",_Params[1]),
-                                                 new SqlParameter("@AuditDesc",_Params[2]),
-                                                 new SqlParameter("@Branch",_Params[3]),
-                                               };
-                SqlConnection con = new SqlConnection(ConnectionString);
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Proc_InsertSwitchAuditTrail";
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Connection = con;
-                if (cmd.Connection.State == ConnectionState.Open)
-                    cmd.Connection.Close();
-                cmd.Connection.Open();
-                cmd.Parameters.AddRange(_sqlParameter);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                //updateRecords("Proc_InsertSwitchAuditTrail", _sqlParameter);
+                using (var con = new NpgsqlConnection(ConnectionString))
+                {
+                    con.Open(); // Ensure the connection is opened
+
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = con;
+
+                        // Use CALL statement to execute the procedure
+                        cmd.CommandText = "CALL Proc_InsertSwitchAuditTrail(:p_Username, :p_AuditAction, :p_AuditDesc, :p_Branch)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_Username", (object)_Params[0] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_AuditAction", (object)_Params[1] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_AuditDesc", (object)_Params[2] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Branch", (object)_Params[3] ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery();
+                    }
+                }
             }
             catch (Exception Ex)
             {
                 ErrorLog.DBError(Ex);
             }
         }
+
+
         #endregion
 
         // Store Login Activities  pgCreateUser
@@ -1160,37 +1591,36 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _sqlParameter =
-                        {
-                                                 new SqlParameter("@UserName",_Params[0]),
-                                                 new SqlParameter("@Action",_Params[1]),
-                                                 new SqlParameter("@Description",_Params[2])
-                        };
-                        SqlConnection con = new SqlConnection(ConnectionString);
-                        con.Open();
-                        cmd.CommandText = "InsertAuditLoginActivities";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Connection = con;
-                        if (cmd.Connection.State == ConnectionState.Open)
-                        cmd.Connection.Close();
-                        cmd.Connection.Open();
-                        cmd.Parameters.AddRange(_sqlParameter);
-                        cmd.ExecuteNonQuery();
-                        con.Close();
+                        cmd.Connection = sqlConn;
+
+                        // Call the PostgreSQL procedure
+                        cmd.CommandText = "CALL InsertAuditLoginActivities(:p_UserName, :p_Action, :p_Description)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Adding parameters
+                        cmd.Parameters.AddWithValue("p_UserName", (object)_Params[0] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Action", (object)_Params[1] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Description", (object)_Params[2] ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Execute the command
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("UserManagement: GetPagesByRoleID() : UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("UserManagement: StoreLoginActivities() : UserName: " + UserName + " Exception: " + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
         #endregion
 
         #region Bind Clients Dropdown
@@ -1198,26 +1628,42 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                                 new SqlParameter("@ClientID",ClientID),
-                                                 new SqlParameter("@BCID",BCID),
-                                                 new SqlParameter("@AgentID", AgentID),
-                                                 new SqlParameter("@UserName",UserName),
-                                                 new SqlParameter("@Flag", Flag)
-                        };
+                    new NpgsqlParameter("p_ClientID", (object)ClientID ?? DBNull.Value),
+                    new NpgsqlParameter("p_BCID", (object)BCID ?? DBNull.Value),
+                    new NpgsqlParameter("p_AgentID", (object)AgentID ?? DBNull.Value),
+                    new NpgsqlParameter("p_UserName", (object)UserName ?? DBNull.Value),
+                    new NpgsqlParameter("p_Flag", (object)Flag ?? DBNull.Value)
+                };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindClient_Reports";
-                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_BindClient_Reports(:p_ClientID, :p_BCID, :p_AgentID, :p_UserName, :p_Flag)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_ClientReports"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -1229,6 +1675,7 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
+
         #endregion
 
         #region Bind Franchises Dropdown
@@ -1236,26 +1683,42 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open(); // Ensure the connection is opened
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
+                        // Create the parameters array
+                        NpgsqlParameter[] _Params =
                         {
-                                                 new SqlParameter("@ClientID",ClientID),
-                                                 new SqlParameter("@BCcode",BCID),
-                                                 new SqlParameter("@AgentID", AgentID),
-                                                 new SqlParameter("@UserName",UserName),
-                                                 new SqlParameter("@Flag", Flag)
-                        };
+                    new NpgsqlParameter("p_ClientID", (object)ClientID ?? DBNull.Value),
+                    new NpgsqlParameter("p_BCcode", (object)BCID ?? DBNull.Value),
+                    new NpgsqlParameter("p_AgentID", (object)AgentID ?? DBNull.Value),
+                    new NpgsqlParameter("p_UserName", (object)UserName ?? DBNull.Value),
+                    new NpgsqlParameter("p_Flag", (object)Flag ?? DBNull.Value)
+                };
+
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_BindBC_Report";
-                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Call the procedure to create the temporary table
+                        cmd.CommandText = "CALL SP_BindBC_Report(:p_ClientID, :p_BCcode, :p_AgentID, :p_UserName, :p_Flag)";
+                        cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Use ExecuteNonQuery since we're just calling a procedure
+
+                        // Now select from the temporary table to get the results
+                        cmd.CommandText = "SELECT * FROM temp_BC_Report"; // Select from the temporary table
+                        cmd.CommandType = CommandType.Text;
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+                        using (NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -1267,6 +1730,15 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
+
         #endregion
     }
+    public class MenuSubMenuAccess
+    {
+        public string MenuId { get; set; }
+        public string SubMenuId { get; set; }
+        public string Accessibility { get; set; }
+        public string IsMenuAccessed { get; set; }
+    }
+
 }

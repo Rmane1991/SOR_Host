@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------
+Time : 28-Oct-2024 11:22
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.BCEntity.GetBCDocuments() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\BCEntity.cs:line 1197
+Message - : Invalid mode specified.
+----------------------------------------------------------------------------
+Time : 28-Oct-2024 11:23
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.BCEntity.GetBCDocuments() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\BCEntity.cs:line 1197
+Message - : Invalid mode specified.
+----------------------------------------------------------------------------
+Time : 28-Oct-2024 11:25
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.BCEntity.GetBCDocuments() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\BCEntity.cs:line 1197
+Message - : Invalid mode specified.
+----------------------------------------------------------------------------
+Time : 28-Oct-2024 11:27
+Source - : BussinessAccessLayer
+StackTrace -  :    at BussinessAccessLayer.BCEntity.GetBCDocuments() in D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\BCEntity.cs:line 1197
+Message - : Invalid mode specified.

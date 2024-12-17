@@ -1,0 +1,16 @@
+Time : 24-Oct-2024 11:34 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Status' was not found on the selected data source.
+Time : 24-Oct-2024 11:36 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Status' was not found on the selected data source.
+Time : 24-Oct-2024 15:25 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42P01: missing FROM-clause entry for table "c"
+Time : 24-Oct-2024 15:25 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42P01: missing FROM-clause entry for table "c"

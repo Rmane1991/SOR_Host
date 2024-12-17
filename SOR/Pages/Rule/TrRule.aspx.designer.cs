@@ -229,6 +229,15 @@ namespace SOR.Pages.Rule {
         protected global::System.Web.UI.WebControls.TextBox txtCount;
         
         /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
+        
+        /// <summary>
         /// btnCreateRule control.
         /// </summary>
         /// <remarks>
@@ -254,6 +263,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnShowModalR;
+        
+        /// <summary>
+        /// headerPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder headerPlaceholder;
         
         /// <summary>
         /// rptrGroup control.

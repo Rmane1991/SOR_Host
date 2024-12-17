@@ -232,37 +232,45 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlCommand cmd = new NpgsqlCommand())
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                     {
-                        SqlParameter[] _Params =
-                        {
-                            new SqlParameter("@BCAgentId", BCAgentID),
-                            new SqlParameter("@ConfirmPassword", ConfirmPassword),
-                            new SqlParameter("@OldPassword", oldPassword),
-                            new SqlParameter("@UserID", UsersID),
-                            new SqlParameter("@CreatedBy", CreatedBy)
-                        };
+                        sqlConn.Open();
+
+                        // Prepare the call statement
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "PROC_UpdateChangePassword";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+                        cmd.CommandText = "CALL public.PROC_UpdateChangePassword(:p_BCAgentId, :p_ConfirmPassword, :p_CreatedBy, :p_UserID, :p_OldPassword)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Define parameters
+                        cmd.Parameters.AddWithValue("p_BCAgentId", (object)BCAgentID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_ConfirmPassword", (object)ConfirmPassword ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_OldPassword", (object)oldPassword ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserID", UsersID);
+                        cmd.Parameters.AddWithValue("p_CreatedBy", (object)CreatedBy ?? DBNull.Value);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+
+                        // Now retrieve the messages from the temporary table
+                        cmd.CommandText = "SELECT message FROM temp_messages"; // Select from the temp table
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                        NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd);
                         dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+
+                        return dataSet; // Return the dataset containing messages
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : SetChangePassword() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : SetChangePassword() \nException Occurred\n" + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
         #endregion
 
         #region GetLoginAttemptCount
@@ -421,122 +429,162 @@ namespace BussinessAccessLayer
         #region UserIsExistForForgotPassword
         public string UserIsExistForForgotPassword()
         {
-            string _Status = null;
+            string status = null;
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+                    using (var cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                             new SqlParameter("@USERNAME",UserName),
-                             new SqlParameter("@Flag",Flag),
-                             new SqlParameter("@STATUS", SqlDbType.VarChar, 100) { Direction = ParameterDirection.Output }
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_UserIsExistOrNot_ForgotPassword";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        _Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        cmd.Dispose();
-                        return _Status;
+
+                        // Prepare the call statement with all parameters
+                        cmd.CommandText = "CALL proc_user_is_exist_or_not_forgot_password(@p_username, @p_flag, null)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Ensure p_username is a string and p_flag is an integer
+                        cmd.Parameters.AddWithValue("p_username", UserName ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_flag", Flag); // Ensure Flag is an int
+
+                        // Output parameter for status
+                        var statusParam = new NpgsqlParameter("p_status", NpgsqlTypes.NpgsqlDbType.Varchar, 100)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(statusParam);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+
+                        // Get the output value
+                        status = Convert.ToString(statusParam.Value);
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : UserIsExistForForgotPassword() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.CommonTrace($"Class: LoginEntity.cs \nFunction: UserIsExistForForgotPassword() \nException Occurred: {ex.Message}");
+                ErrorLog.DBError(ex);
                 throw;
             }
+            return status;
         }
+
+
+
         #endregion
 
         #region Insert OTP into Table
         public string InsertOTPIntoTable()
         {
-            string _Status = null;
+            string _status = null;
+
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    // Open the connection
+                    sqlConn.Open();
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
                     {
-                        SqlParameter[] _Params =
-                        {
-                             new SqlParameter("@USERID",UserName),
-                             new SqlParameter("@MobileNumber", MobileNo),
-                             new SqlParameter("@DEVICEID",DeviceID ),
-                             new SqlParameter("@REFRENCENUMBER", RRN),
-                             new SqlParameter("@OTP", OTP),
-                             new SqlParameter("@RoleId", RoleID),
-                             new SqlParameter("@OTPTYPE", OTPType),
-                             new SqlParameter("@MailID", MailID),
-                             new SqlParameter("@Flag",Flag),
-                             new SqlParameter("@Status", SqlDbType.VarChar, 200) { Direction = ParameterDirection.Output }
-                        };
+                        // Prepare the command
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_InsertUpdateOTPForgetPassword";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        _Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        cmd.Dispose();
-                        return _Status;
+                        cmd.CommandText = "CALL SP_InsertUpdateOTPForgetPassword(NULL, @p_userid, @p_mobilenumber, @p_deviceid, @p_referencenumber, @p_otp, @p_roleid, @p_otp_type, @p_mailid, @p_flag, @p_browserid)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Add parameters in the order defined in the stored procedure
+                        var statusParam = new NpgsqlParameter("p_status", NpgsqlTypes.NpgsqlDbType.Varchar, 100)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        cmd.Parameters.Add(statusParam);
+                        cmd.Parameters.AddWithValue("p_userid", (object)UserName ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_mobilenumber", (object)MobileNo ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_deviceid", (object)DeviceID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_referencenumber", (object)RRN ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_otp", (object)OTP ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_roleid", (object)RoleID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_otp_type", (object)OTPType ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_mailid", (object)MailID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_flag", Flag);
+                        cmd.Parameters.AddWithValue("p_browserid", (object)null ?? DBNull.Value);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+
+                        // Retrieve the output status
+                        _status = Convert.ToString(statusParam.Value);
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : InsertOTPIntoTable() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
+                // Log the error details
+                ErrorLog.CommonTrace($"Class: LoginEntity.cs \nFunction: InsertOTPIntoTable() \nException Occurred: {ex.Message}");
+                ErrorLog.DBError(ex);
+                throw; // Rethrow the exception for further handling
             }
+
+
+            return _status;
         }
+
+
         #endregion
 
         #region GetUserDetails
         public DataSet GetUserDetails()
         {
-            string _Status = null;
+            DataSet dataSet = new DataSet();
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    sqlConn.Open();
+                    using (var cmd = new NpgsqlCommand("CALL proc_user_is_exist_or_not_forgot_password(@p_username, @p_flag, null)", sqlConn))
                     {
-                        SqlParameter[] _Params =
+                        cmd.CommandType = CommandType.Text;
+
+                        // Ensure p_username is a string and p_flag is a string
+                        cmd.Parameters.AddWithValue("p_username", UserName ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_flag", Flag); // Ensure Flag is a string
+
+                        // Output parameter for status
+                        var statusParam = new NpgsqlParameter("p_status", NpgsqlTypes.NpgsqlDbType.Varchar, 100)
                         {
-                           new SqlParameter("@USERNAME",UserName),
-                           new SqlParameter("@Flag",Flag),
-                           new SqlParameter("@STATUS", SqlDbType.VarChar, 100) { Direction = ParameterDirection.Output }
+                            Direction = ParameterDirection.Output
                         };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "Proc_UserIsExistOrNot_ForgotPassword";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        _Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        cmd.Dispose();
-                        return dataSet;
+                        cmd.Parameters.Add(statusParam);
+
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
+
+                        // Check status for flag = 3 and retrieve data if applicable
+                        if (Flag == "3")
+                        {
+                            // Now retrieve data from the temporary table
+                            using (var dataAdapter = new NpgsqlDataAdapter("SELECT * FROM temp_user_details", sqlConn))
+                            {
+                                dataAdapter.Fill(dataSet);
+                            }
+                        }
+
+                        // Get the output value
+                        string status = Convert.ToString(statusParam.Value);
                     }
                 }
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : GetUserDetails() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
+                ErrorLog.CommonTrace($"Class: LoginEntity.cs \nFunction: GetUserDetails() \nException Occurred: {ex.Message}");
+                ErrorLog.DBError(ex);
                 throw;
             }
+            return dataSet;
         }
+
         #endregion
 
         #region Change Forgot Password Window
@@ -544,36 +592,38 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlCommand cmd = new NpgsqlCommand())
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                     {
-                        SqlParameter[] _Params =
-                        {
-                            new SqlParameter("@ConfirmPassword", ConfirmPassword),
-                            new SqlParameter("@OldPassword", oldPassword),
-                            new SqlParameter("@UserID", UsersID),
-                            new SqlParameter("@CreatedBy", CreatedBy)
-                        };
+                        // Prepare the SQL command to call the function
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "PROC_UpdateChangePasswordForForget";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+                        cmd.CommandText = "SELECT PROC_UpdateChangePasswordForForget(@p_ConfirmPassword, @p_OldPassword, @p_UserID, @p_CreatedBy)";
+                        cmd.CommandType = CommandType.Text;
+
+                        // Add parameters and handle potential null values
+                        cmd.Parameters.AddWithValue("p_ConfirmPassword", (object)ConfirmPassword ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_OldPassword", (object)oldPassword ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_UserID", UsersID);
+                        cmd.Parameters.AddWithValue("p_CreatedBy", (object)CreatedBy ?? DBNull.Value);
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                        NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd);
                         dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+
                         return dataSet;
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : SetChangePasswordForForget() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : SetChangePasswordForForget() \nException Occurred\n" + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }
         }
+
+
         #endregion
 
         #region getMenuList
@@ -714,7 +764,6 @@ namespace BussinessAccessLayer
                     }
                 }
             }
-
             catch (Exception Ex)
             {
                 ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : updateAttemptFailed() \nException Occured\n" + Ex.Message);

@@ -1,0 +1,43 @@
+Time : 23-Oct-2024 10:32 Message : TransactionReportDAL: BindBCddl: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 23-Oct-2024 10:32 Message : AEPSTransactions: BindBc: Exception: Keyword not supported: 'port'.
+Time : 23-Oct-2024 10:54 Message : TransactionReportDAL: BindBCddl: UserName: Maximus Exception: Keyword not supported: 'port'.
+Time : 23-Oct-2024 10:54 Message : MATMTransactions: BindBc: Exception: Keyword not supported: 'port'.
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: Parameter 'p_AgentCode' must have its value set
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: Parameter 'p_AgentCode' must have its value set
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:00 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:01 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:01 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:01 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:01 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:01 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:01 Message : AEPSTransactions: FillGrid: Exception: 42883: procedure txnreport_aeps(text, text, integer, unknown, unknown, unknown, integer, unknown, text, text, integer) does not exist
+Time : 23-Oct-2024 13:04 Message : AEPSTransactions: FillGrid: Exception: Cannot find table 1.
+Time : 23-Oct-2024 13:04 Message : AEPSTransactions: FillGrid: Exception: Input string was not in a correct format.
+Time : 23-Oct-2024 13:05 Message : AEPSTransactions: FillGrid: Exception: Object cannot be cast from DBNull to other types.
+Time : 23-Oct-2024 13:06 Message : AEPSTransactions: FillGrid: Exception: Object cannot be cast from DBNull to other types.
+Time : 23-Oct-2024 15:07 Message : Error retrieving counts_table: 42P01: relation "counts_table" does not exist
+Time : 23-Oct-2024 15:07 Message : AEPSTransactions: FillGrid: Exception: Cannot find table 1.
+Time : 23-Oct-2024 16:40 Message : AllTransactions: LoadTransactionSummary: Exception: Column 'Total' does not belong to table CountsTable.
+Time : 23-Oct-2024 16:40 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 23-Oct-2024 16:40 Message : AllTransactions: fillGrid: Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 23-Oct-2024 16:40 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 23-Oct-2024 16:40 Message : AllTransactions: fillGrid: Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 23-Oct-2024 16:41 Message : AllTransactions: LoadTransactionSummary: Exception: Column 'Total' does not belong to table CountsTable.
+Time : 23-Oct-2024 17:14 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 23-Oct-2024 17:14 Message : AllTransactions: fillGrid: Exception: 0A000: cross-database references are not implemented: "sbm_payrakam_txn.dbo.transactions"
+Time : 23-Oct-2024 17:14 Message : TransactionReportDAL: GetTransactions_All: UserName: Maximus Exception: 42703: column "p_pagesize" does not exist

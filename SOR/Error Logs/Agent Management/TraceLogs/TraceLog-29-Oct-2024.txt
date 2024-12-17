@@ -1,0 +1,45 @@
+Time : 29-Oct-2024 15:39 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 29-Oct-2024 15:39 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 29-Oct-2024 15:39 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 29-Oct-2024 15:39 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 29-Oct-2024 15:39 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 29-Oct-2024 15:39 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 29-Oct-2024 15:39 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24153952.FileID:
+Time : 29-Oct-2024 15:39 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24153952.FileID:.
+Time : 29-Oct-2024 15:39 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24153952
+Time : 29-Oct-2024 15:39 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24153952
+Time : 29-Oct-2024 15:39 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24153952.FileExtension : .xls.
+Time : 29-Oct-2024 15:39 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 29-Oct-2024 15:39 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 23.
+Time : 29-Oct-2024 15:39 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 23.
+Time : 29-Oct-2024 15:56 Message : Successful Insert File Data For Agent Registration. Username : Maximus. FileID : 23.
+Time : 29-Oct-2024 15:56 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 29-Oct-2024 15:56 Message : Successful Validate File Format For Agent Registration . FileType : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Initiated Save File Request. File Type : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Successful Save File Request. File Type : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 29-Oct-2024 15:56 Message : Successful Validate File Format For Agent Registration . FileType : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Initiated Save File Request. File Type : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:56 Message : Successful Save File Request. File Type : AgentBulkDocuments.zip
+Time : 29-Oct-2024 15:57 Message : Successful File Process For Agent Registration. FileType : AgentRegistration.xls Total Record Processed : 1 Successful : 1 Unsuccessful : 0
+Time : 29-Oct-2024 15:57 Message : Page : AgentRegistration.cs 
+Function : Registration() => Reistration Details forwarded for Email Preparation. => HttpGetRequestEmail()
+Time : 29-Oct-2024 15:57 Message : AgentRegistration : Error At btnBulkUpload_ServerClick(). Username : Maximus Exception : Object reference not set to an instance of an object.
+Time : 29-Oct-2024 15:57 Message : Received For Agent Restriction Bulk Upload Request. FileType : AgentRegistration.xls
+Time : 29-Oct-2024 15:57 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .xls.
+Time : 29-Oct-2024 15:57 Message : Initiated Validate File Format For Agent Regirstration Upload. FileType : .zip.
+Time : 29-Oct-2024 15:57 Message : Successful Validate File Format For Agent Registration . FileType : AgentRegistration.xls
+Time : 29-Oct-2024 15:57 Message : Initiated Save File Request. File Type : AgentRegistration.xls
+Time : 29-Oct-2024 15:57 Message : Successful Save File Request. File Type : AgentRegistration.xls
+Time : 29-Oct-2024 15:57 Message : Initiated File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24155736.FileID:
+Time : 29-Oct-2024 15:57 Message : Completed File Import  Request. Username : Maximus. FilePath: D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24155736.FileID:.
+Time : 29-Oct-2024 15:57 Message : Initiated Process File For Agent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24155736
+Time : 29-Oct-2024 15:57 Message : Successful Process File ForAgent Registration. FileType : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24155736
+Time : 29-Oct-2024 15:57 Message : Successful Process File Request For Bulk Ticket Creation. Username : . FilePath : D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\TempFiles\Agent Manual KYC Bulk Import\AgentRegistration.xls_29Oct24155736.FileExtension : .xls.
+Time : 29-Oct-2024 15:57 Message : Initiated Validate File Data For Agent Regirstration Request
+Time : 29-Oct-2024 15:57 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 24.
+Time : 29-Oct-2024 15:57 Message : Initiated Insert File Data For Agent Registration. FileType : Excel. FileID : 24.
+Time : 29-Oct-2024 15:57 Message : Failed Insert File Data For Agent Registration. Username : Maximus. FileID : 24.
+Time : 29-Oct-2024 15:57 Message : Failed To Insert File Data In Database For Agent Registration. FileType : AgentRegistration.xls Description :Total Records Processed: 1<br>Invalid Records: 1<br>Duplicate Records: 0<br>Inserted Records: 0

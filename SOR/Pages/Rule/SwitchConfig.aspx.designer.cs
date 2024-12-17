@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SOR.Pages.Rule
-{
-
-
-    public partial class SwitchConfig
-    {
-
+namespace SOR.Pages.Rule {
+    
+    
+    public partial class SwitchConfig {
+        
         /// <summary>
         /// hdnSwitchId control.
         /// </summary>
@@ -22,7 +20,16 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnSwitchId;
-
+        
+        /// <summary>
+        /// btnManual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnManual;
+        
         /// <summary>
         /// btnAddSwitch control.
         /// </summary>
@@ -31,7 +38,43 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddSwitch;
-
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// rptManual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptManual;
+        
+        /// <summary>
+        /// btnClsManual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClsManual;
+        
+        /// <summary>
+        /// hdnshowmanual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnshowmanual;
+        
         /// <summary>
         /// lblErrorMessage control.
         /// </summary>
@@ -40,7 +83,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblErrorMessage;
-
+        
         /// <summary>
         /// rptSwitchDetails control.
         /// </summary>
@@ -49,7 +92,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptSwitchDetails;
-
+        
         /// <summary>
         /// txtSwitchName control.
         /// </summary>
@@ -58,7 +101,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSwitchName;
-
+        
         /// <summary>
         /// txtSwitchDescription control.
         /// </summary>
@@ -67,16 +110,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSwitchDescription;
-
-        /// <summary>
-        /// pnlPercentage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlPercentage;
-
+        
         /// <summary>
         /// txtSwitchPercentage control.
         /// </summary>
@@ -85,25 +119,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSwitchPercentage;
-
-        /// <summary>
-        /// pnlCount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlCount;
-
-        /// <summary>
-        /// txtCount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCount;
-
+        
         /// <summary>
         /// divAEPS control.
         /// </summary>
@@ -112,7 +128,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAEPS;
-
+        
         /// <summary>
         /// divDMT control.
         /// </summary>
@@ -121,7 +137,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDMT;
-
+        
         /// <summary>
         /// divMATM control.
         /// </summary>
@@ -130,7 +146,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMATM;
-
+        
         /// <summary>
         /// ddlSwitch1 control.
         /// </summary>
@@ -139,7 +155,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSwitch1;
-
+        
         /// <summary>
         /// txtswitch1 control.
         /// </summary>
@@ -148,7 +164,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch1;
-
+        
         /// <summary>
         /// ddlSwitch2 control.
         /// </summary>
@@ -157,7 +173,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSwitch2;
-
+        
         /// <summary>
         /// txtswitch2 control.
         /// </summary>
@@ -166,7 +182,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch2;
-
+        
         /// <summary>
         /// ddlSwitch3 control.
         /// </summary>
@@ -175,7 +191,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSwitch3;
-
+        
         /// <summary>
         /// txtswitch3 control.
         /// </summary>
@@ -184,7 +200,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch3;
-
+        
         /// <summary>
         /// ddlSwitch4 control.
         /// </summary>
@@ -193,7 +209,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSwitch4;
-
+        
         /// <summary>
         /// txtswitch4 control.
         /// </summary>
@@ -202,7 +218,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch4;
-
+        
         /// <summary>
         /// ddlSwitch5 control.
         /// </summary>
@@ -211,7 +227,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSwitch5;
-
+        
         /// <summary>
         /// txtswitch5 control.
         /// </summary>
@@ -220,7 +236,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch5;
-
+        
         /// <summary>
         /// ddlSwitch6 control.
         /// </summary>
@@ -229,7 +245,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSwitch6;
-
+        
         /// <summary>
         /// txtswitch6 control.
         /// </summary>
@@ -238,7 +254,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch6;
-
+        
         /// <summary>
         /// btnCreSwitch control.
         /// </summary>
@@ -247,7 +263,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreSwitch;
-
+        
         /// <summary>
         /// btnCloseSwitch control.
         /// </summary>
@@ -256,7 +272,7 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCloseSwitch;
-
+        
         /// <summary>
         /// hdnShowModal control.
         /// </summary>
@@ -265,7 +281,79 @@ namespace SOR.Pages.Rule
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnShowModal;
-
+        
+        /// <summary>
+        /// lblDeleteMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDeleteMessage;
+        
+        /// <summary>
+        /// rptSwitchDetailsDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptSwitchDetailsDelete;
+        
+        /// <summary>
+        /// TextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        
+        /// <summary>
+        /// TextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        
+        /// <summary>
+        /// TextBox3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
+        /// btnCloseDel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCloseDel;
+        
+        /// <summary>
+        /// HdnShowDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField HdnShowDelete;
+        
         /// <summary>
         /// rptrSwitch control.
         /// </summary>

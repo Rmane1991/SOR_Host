@@ -1,0 +1,63 @@
+18-11-2024 10:49:15:5673 : Login Successful. Username Maximus. SessionID : m4zllptvvxaopanfjd2nemme
+18-11-2024 11:05:28:5241 : Login Successful. Username Maximus. SessionID : au0twy3emn0laomddtge1ems
+18-11-2024 11:14:48:8164 : Login Successful. Username Maximus. SessionID : xyhcuogcdlcxv4v35bad0pz2
+18-11-2024 11:21:24:5619 : Login Successful. Username Maximus. SessionID : vefran2ojpdfvqa1epoa3puh
+18-11-2024 11:45:52:8410 : Login Successful. Username Maximus. SessionID : gmmxj4k2y34gzsvvrnaptio0
+18-11-2024 12:03:36:1371 : Login Successful. Username Maximus. SessionID : g5kmpfuajqzmo5h4geuhk0h3
+18-11-2024 12:08:29:7871 : Login Successful. Username Maximus. SessionID : f22e4zttuzs25blb20olyyx1
+18-11-2024 12:10:51:2143 : Login Successful. Username Maximus. SessionID : qbi5dp1mtdcy3it0ovjar0j4
+18-11-2024 12:11:49:3118 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: function public.sp_getbankconfiguration(p_username => text, p_fromdate => text, p_todate => text, p_acquirerid => text, p_orgid => text, p_bin => text, p_auacode => text, p_subcode => text, p_bankcode => text, p_flag => integer) does not exist
+18-11-2024 12:14:40:9324 : Login Successful. Username Maximus. SessionID : 01ku1trq4m1304nqw4qfnws1
+18-11-2024 12:15:17:0100 : Class: RuleEntity.cs 
+Function: InsertGroupRule() 
+Exception Occurred
+42883: function public.sp_getbankconfiguration(p_username => text, p_fromdate => unknown, p_todate => unknown, p_acquirerid => text, p_orgid => text, p_bin => text, p_auacode => text, p_subcode => text, p_bankcode => text, p_flag => integer) does not exist
+18-11-2024 12:37:22:5988 : Login Successful. Username Maximus. SessionID : 5klcvh11xl3woeraajbc2pqr
+18-11-2024 12:41:56:0513 : Login Successful. Username Maximus. SessionID : j2bpwko5su4prc1o2sp1rprg
+18-11-2024 12:49:02:4429 : Login Successful. Username Maximus. SessionID : xs1exosjdc0hrug51qcvjtux
+18-11-2024 12:49:02:5685 : Login Successful. Username Maximus. SessionID : xs1exosjdc0hrug51qcvjtux
+18-11-2024 12:53:05:1034 : Login Successful. Username Maximus. SessionID : 5pcr4llyn5nlmj4aqav3r243
+18-11-2024 12:56:03:0968 : Login Successful. Username Maximus. SessionID : ekmxjxmijvq2lm0ahlefdxln
+18-11-2024 13:01:34:0643 : Login Successful. Username Maximus. SessionID : rkbr1rqokl4lmqouy34f1ttk
+18-11-2024 14:33:49:8510 : Login Successful. Username Maximus. SessionID : 0h4cz450zcrrwypz1eay2fwh
+18-11-2024 15:07:46:9866 : Login Successful. Username Maximus. SessionID : b5tl3ztcn1coqpl2kbeyxfqi
+18-11-2024 15:10:04:2372 : Login Successful. Username Maximus. SessionID : x0imrfci1bmp55lem3rluik2
+18-11-2024 16:59:12:2693 : Login Successful. Username Maximus. SessionID : i5xuqax3ehqcph4jgj2qs5j4
+18-11-2024 18:14:19:9796 : Login Successful. Username Maximus. SessionID : 0gndsd4fcfdkfhb3spgs1ebq
+18-11-2024 18:15:04:3524 : Class: YourClassName 
+Function: GetBankConfiguration() 
+Exception Occurred
+42883: procedure public.sp_getbankconfigurationchecker(text, text, text, text, integer) does not exist
+18-11-2024 18:15:53:7792 : Login Successful. Username Maximus. SessionID : mvqt15chkkvoxzxamam5fbri
+18-11-2024 18:20:16:6718 : Class: YourClassName 
+Function: GetBankConfiguration() 
+Exception Occurred
+42703: column "a" of relation "aepsbanktransactiondetail" does not exist
+18-11-2024 18:28:03:6593 : Login Successful. Username Maximus. SessionID : bubkblf300hif1m3mwihween
+18-11-2024 18:30:50:3380 : Login Successful. Username Maximus. SessionID : zv1wuvqgvdjd0njb02ka21dg
+18-11-2024 18:59:37:2339 : Login Successful. Username Maximus. SessionID : aqo4a2zfrrxvuwzu1vob2soh
+18-11-2024 19:01:02:8729 : Login Successful. Username Maximus. SessionID : 42mpnkgkw0tjsrm4rzdhersd
+18-11-2024 19:02:53:4804 : Login Successful. Username Maximus. SessionID : 4lbgxfwm52qazbn21ogey0zk
+18-11-2024 19:03:28:3001 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+18-11-2024 19:03:28:3011 : NOTICE: Flag is set to 1, proceeding with validations...
+18-11-2024 19:03:28:3021 : NOTICE: Inserting new record...1
+18-11-2024 19:03:28:3031 : NOTICE: Inserting new record...
+18-11-2024 19:03:28:3171 : NOTICE: Insert successful, RequestId: 10
+18-11-2024 19:03:43:2173 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+18-11-2024 19:03:43:2182 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+18-11-2024 19:04:28:5910 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+18-11-2024 19:04:28:5920 : NOTICE: Flag is set to 1, proceeding with validations...
+18-11-2024 19:04:28:5940 : NOTICE: Inserting new record...1
+18-11-2024 19:04:28:5950 : NOTICE: Inserting new record...
+18-11-2024 19:04:28:6080 : NOTICE: Insert successful, RequestId: 11
+18-11-2024 19:04:41:5796 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+18-11-2024 19:04:41:5806 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+18-11-2024 19:07:15:4144 : Class: YourClassName 
+Function: GetBankConfiguration() 
+Exception Occurred
+42703: column b.auacode does not exist
+18-11-2024 19:11:08:4059 : Login Successful. Username Maximus. SessionID : 2xst25r0p4lmue4wwtjpx1ca
+18-11-2024 19:13:16:8778 : Login Successful. Username Maximus. SessionID : hml2hqp203pkf2cjl1yfm1wl

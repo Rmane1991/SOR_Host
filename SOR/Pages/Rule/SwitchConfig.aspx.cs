@@ -27,6 +27,7 @@ namespace SOR.Pages.Rule
         RuleEntity _RuleEntity = new RuleEntity();
         DataTable dt = new DataTable();
         private DataTable dtSwitchValues;
+        DataTable updatesTable = new DataTable();
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,9 +52,11 @@ namespace SOR.Pages.Rule
                         if (!IsPostBack && HasPagePermission)
                         {
                             Session["Username"] = "Maximus";
+                            txtSwitchName.Enabled = true;
                             BindSwitch();
                             BindDropdown();
                             InitializeDataTable();
+                            BindManualDisableSwitch();
                             UserPermissions.RegisterStartupScriptForNavigationListActive("3", "8");
                         }
                     }
@@ -95,6 +98,27 @@ namespace SOR.Pages.Rule
 
                 rptSwitchDetails.DataSource = dt;
                 rptSwitchDetails.DataBind();
+
+                rptSwitchDetailsDelete.DataSource = dt;
+                rptSwitchDetailsDelete.DataBind();
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.DashboardTrace("SwitchConfig : BindSwitch(): Exception: " + Ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                return;
+            }
+        }
+        private void BindManualDisableSwitch()
+        {
+            try
+            {
+                _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
+                DataSet dt = _RuleEntity.GetManualDisableSwitch();
+
+                rptManual.DataSource = dt;
+                rptManual.DataBind();
             }
             catch (Exception Ex)
             {
@@ -142,7 +166,7 @@ namespace SOR.Pages.Rule
                     string.IsNullOrEmpty(ddlSwitch5.SelectedValue) &&
                     string.IsNullOrEmpty(ddlSwitch6.SelectedValue))
                 {
-                    
+
                 }
                 else
 
@@ -151,10 +175,10 @@ namespace SOR.Pages.Rule
                     {
                         return;
                     }
-                    if (!ValidateSwitchValues())
-                    {
-                        return;
-                    }
+                    //if (!ValidateSwitchValues())
+                    //{
+                    //    return;
+                    //}
                     if (!ValidateSwitchInputs())
                     {
                         return;
@@ -169,6 +193,14 @@ namespace SOR.Pages.Rule
                 resultTable.Columns.Add("Value", typeof(string));
                 resultTable.Columns.Add("TabValue", typeof(string));
                 #endregion
+                //if (string.IsNullOrEmpty(txtCount.Text))
+                //{
+                    if (string.IsNullOrEmpty(txtSwitchPercentage.Text))
+                    {
+                        ShowWarning("Please Enter Switch Percentage. Try again", "Warning");
+                        return;
+                    }
+                //}
 
                 #region % Validation
                 decimal totalPercentage = 0;
@@ -202,7 +234,7 @@ namespace SOR.Pages.Rule
                 // Proceed with rule creation if total percentage is valid
                 lblErrorMessage.Visible = false;
 
-                DataTable updatesTable = CreateUpdatesDataTable();
+                updatesTable = CreateUpdatesDataTable();
 
                 // Iterate through the Repeater items
                 foreach (RepeaterItem item in rptSwitchDetails.Items)
@@ -221,6 +253,8 @@ namespace SOR.Pages.Rule
                     }
                 }
                 #endregion
+                //}
+
 
                 if (string.IsNullOrEmpty(txtSwitchName.Text))
                 {
@@ -232,68 +266,10 @@ namespace SOR.Pages.Rule
                     ShowWarning("Please Enter Switch Description. Try again", "Warning");
                     return;
                 }
-                else if (string.IsNullOrEmpty(txtSwitchPercentage.Text))
-                {
-                    ShowWarning("Please Enter Switch Percentage. Try again", "Warning");
-                    return;
-                }
                 else
                 {
                     if (Session["SwitchPercentage"] != null)
                     {
-                        //string[] columnNames = { "switchname", "txntype" }; // Adjust as necessary
-                        //List<string> selectedIdList = new List<string>();
-
-                        //foreach (var column in columnNames)
-                        //{
-                        //    string[] selectedIds = Request.Form.GetValues("chk" + column);
-
-                        //    if (selectedIds != null && selectedIds.Length > 0)
-                        //    {
-                        //        // Process the selected IDs
-                        //        foreach (var id in selectedIds)
-                        //        {
-                        //            selectedIdList.Add(id); // Store or process the ID as needed
-                        //        }
-                        //    }
-                        //}
-                        //if (selectedIdList.Count > 0)
-                        //{
-                        //    _RuleEntity.FailoverSwitchId = string.Join(",", selectedIdList.Where(id => columnNames[0] == "switchname"));
-                        //    _RuleEntity.TxnType = string.Join(",", selectedIdList.Where(id => columnNames[1] == "txntype"));
-                        //}
-                        // Initialize the entity
-
-                        //string[] columnNames = { "switchname", "txntype" }; // Adjust as necessary
-                        //List<string> failoverSwitchIds = new List<string>();
-                        //List<string> txnTypes = new List<string>();
-
-                        //foreach (var column in columnNames)
-                        //{
-                        //    string[] selectedIds = Request.Form.GetValues("chk" + column);
-                        //    if (selectedIds != null && selectedIds.Length > 0)
-                        //    {
-                        //        foreach (var id in selectedIds)
-                        //        {
-                        //            if (column == "switchname")
-                        //            {
-                        //                failoverSwitchIds.Add(id); // Store switchname IDs
-                        //            }
-                        //            else if (column == "txntype")
-                        //            {
-                        //                txnTypes.Add(id); // Store txntype IDs
-                        //            }
-                        //        }
-                        //    }
-                        //}
-                        //if (failoverSwitchIds.Count > 0)
-                        //{
-                        //    _RuleEntity.FailoverSwitchId = string.Join(",", failoverSwitchIds); // Join IDs for FailoverSwitchId
-                        //}
-                        //if (txnTypes.Count > 0)
-                        //{
-                        //    _RuleEntity.TxnType = string.Join(",", txnTypes); // Join IDs for TxnType
-                        //}
 
                         foreach (string key in Request.Form.Keys)
                         {
@@ -319,19 +295,33 @@ namespace SOR.Pages.Rule
                                 }
                             }
                         }
-
+                        if (resultTable.Rows.Count == 0)
+                        {
+                            ShowWarning("Please Enter Txn Type Url. Try again", "Warning");
+                            return;
+                        }
                         _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                         _RuleEntity.SwitchName = !string.IsNullOrEmpty(txtSwitchName.Text) ? txtSwitchName.Text.Trim() : null;
                         _RuleEntity.SwitchDescription = !string.IsNullOrEmpty(txtSwitchDescription.Text) ? txtSwitchDescription.Text.Trim() : null;
-                        _RuleEntity.SwitchId = Convert.ToInt32(hdnSwitchId.Value) != 0 ? Convert.ToInt32(hdnSwitchId.Value) : 0;
+                        if(!string.IsNullOrEmpty(hdnSwitchId.Value))
+                        {
+                            _RuleEntity.SwitchId = Convert.ToInt32(hdnSwitchId.Value) != 0 ? Convert.ToInt32(hdnSwitchId.Value) : 0;
+                        }
+                        else
+                        {
+
+                        }
                         _RuleEntity.percentage = int.TryParse(txtSwitchPercentage.Text.Trim(), out int percentage) ? percentage : 0;
-                        _RuleEntity.Count = int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
+                        _RuleEntity.Count = 0;// int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
                         //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
                         _RuleEntity.dt = updatesTable;
                         _RuleEntity.dt2 = resultTable;
                         _RuleEntity.dt3 = dtSwitchValues;
                         _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Edit;
 
+                        //string validateCode = _RuleEntity.ValidateSwitch();
+                        //if(validateCode=="00")
+                        //{
                         string statusCode = _RuleEntity.InsertOrUpdateSwitch();
                         if (statusCode == "UPD00")
                         {
@@ -349,11 +339,16 @@ namespace SOR.Pages.Rule
                         };
                         ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
-
+                        //}
+                        //else
+                        //{
+                        //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already Exists. Try again', 'Warning');", true);
+                        //    return;
+                        //}
                     }
                     else
                     {
-                        
+                        txtSwitchName.Enabled = true;
 
                         // Loop through all input fields to get the values
                         foreach (string key in Request.Form.Keys)
@@ -374,19 +369,23 @@ namespace SOR.Pages.Rule
                                     newRow["Value"] = value;
                                     newRow["TabValue"] = tab;
 
-                                    if(!string.IsNullOrEmpty(value))
+                                    if (!string.IsNullOrEmpty(value))
                                     {
                                         resultTable.Rows.Add(newRow);
                                     }
                                 }
                             }
                         }
-                        
+                        if (resultTable.Rows.Count == 0)
+                        {
+                            ShowWarning("Please Enter Txn Type Url. Try again", "Warning");
+                            return;
+                        }
                         _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                         _RuleEntity.SwitchName = !string.IsNullOrEmpty(txtSwitchName.Text) ? txtSwitchName.Text.Trim() : null;
                         _RuleEntity.SwitchDescription = !string.IsNullOrEmpty(txtSwitchDescription.Text) ? txtSwitchDescription.Text.Trim() : null;
                         _RuleEntity.percentage = int.TryParse(txtSwitchPercentage.Text.Trim(), out int percentage) ? percentage : 0;
-                        _RuleEntity.Count = int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
+                        _RuleEntity.Count = 0;// int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
                         //_RuleEntity.FailoverSwitchId = !string.IsNullOrEmpty(hfSelectedValues.Value) ? hfSelectedValues.Value.Trim() : null;
                         //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
                         _RuleEntity.dt = updatesTable;
@@ -395,25 +394,32 @@ namespace SOR.Pages.Rule
                         //_RuleEntity.Switchurl = !string.IsNullOrEmpty(txturl.Text) ? txturl.Text.Trim() : null;
                         //_RuleEntity.TxnType = !string.IsNullOrEmpty(hfSelectedSecondValues.Value) ? hfSelectedSecondValues.Value.Trim() : null;
                         _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Insert;
-
-                        string statusCode = _RuleEntity.InsertOrUpdateSwitch();
-                        if (statusCode == "INS00")
+                        string validateCode = _RuleEntity.ValidateSwitch();
+                        if (validateCode == "00")
                         {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                            string statusCode = _RuleEntity.InsertOrUpdateSwitch();
+                            if (statusCode == "INS00")
+                            {
+                                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                            }
+                            else
+                            {
+                                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                            }
+                            var response = new
+                            {
+                                StatusMessage = _CommonEntity.ResponseMessage
+                            };
+                            ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                         }
                         else
                         {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already Exists. Try again', 'Warning');", true);
+                            return;
                         }
-                        var response = new
-                        {
-                            StatusMessage = _CommonEntity.ResponseMessage
-                        };
-                        ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
-
                     }
                 }
                 hdnShowModal.Value = "false";
@@ -457,34 +463,47 @@ namespace SOR.Pages.Rule
             _RuleEntityy.SwitchId = Convert.ToInt32(Id);
             _RuleEntityy.Flag = (int)EnumCollection.EnumRuleType.Update;
 
-            string statusCode = _RuleEntityy.UpdateSwitchStatus();
+            string validateCode = _RuleEntityy.ValidateFailoverSwitch();
+            if (validateCode == "00")
+            {
+                string statusCode = _RuleEntityy.UpdateSwitchStatus();
 
-            if (statusCode == "UPD00")
-            {
-                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.Update, (int)EnumCollection.TransactionSource.Others);
-                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-            }
-            else if (statusCode == "UPD96")
-            {
-                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.UpdateFail, (int)EnumCollection.TransactionSource.Others);
-                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-            }
-            else if (statusCode == "FLG96")
-            {
-                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.FlagNotExist, (int)EnumCollection.TransactionSource.Others);
-                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                if (statusCode == "UPD00")
+                {
+                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.Update, (int)EnumCollection.TransactionSource.Others);
+                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                }
+                else if (statusCode == "UPD96")
+                {
+                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.UpdateFail, (int)EnumCollection.TransactionSource.Others);
+                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                }
+                else if (statusCode == "FLG96")
+                {
+                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.FlagNotExist, (int)EnumCollection.TransactionSource.Others);
+                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                }
+                else
+                {
+                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.Fail, (int)EnumCollection.TransactionSource.Others);
+                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                }
+                var response = new
+                {
+                    StatusMessage = _CommonEntity.ResponseMessage
+                };
+                ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                return new JavaScriptSerializer().Serialize(response);
             }
             else
             {
-                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(ConstResponseCodes.Fail, (int)EnumCollection.TransactionSource.Others);
-                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                var response = new
+                {
+                    StatusMessage = "This Switch Already Use In The Failover Switch"
+                };
+                ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : " + validateCode);
+                return new JavaScriptSerializer().Serialize(response);
             }
-            var response = new
-            {
-                StatusMessage = _CommonEntity.ResponseMessage
-            };
-            ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-            return new JavaScriptSerializer().Serialize(response);
         }
 
         protected void rptrSwitch_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -528,8 +547,21 @@ namespace SOR.Pages.Rule
 
         protected void rptrSwitch_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
+            ddlSwitch1.ClearSelection();
+            ddlSwitch2.ClearSelection();
+            ddlSwitch3.ClearSelection();
+            ddlSwitch4.ClearSelection();
+            ddlSwitch5.ClearSelection();
+            ddlSwitch6.ClearSelection();
+            txtswitch1.Text = string.Empty;
+            txtswitch2.Text = string.Empty;
+            txtswitch3.Text = string.Empty;
+            txtswitch4.Text = string.Empty;
+            txtswitch5.Text = string.Empty;
+            txtswitch6.Text = string.Empty;
             if (e.CommandName == "Edit")
             {
+                txtSwitchName.Enabled = false;
                 int itemId = Convert.ToInt32(e.CommandArgument);
                 _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
                 _RuleEntity.SwitchId = Convert.ToInt32(itemId);
@@ -537,99 +569,173 @@ namespace SOR.Pages.Rule
                 RemoveRowById(hdnSwitchId.Value);
                 _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Export;
                 DataSet ds = _RuleEntity.GetSwitch();
-                
+
                 if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     DataRow row1 = ds.Tables[0].Rows[0];
                     txtSwitchName.Text = row1["switchname"].ToString();
+                    Session["SwitchName"] = txtSwitchName.Text;
                     txtSwitchDescription.Text = row1["description"].ToString();
-                    txtSwitchPercentage.Text = row1["percentage"].ToString();
-                    Session["SwitchPercentage"] = txtSwitchPercentage.Text;
-                }
-                    BindFailoverData(ds.Tables[1]);
-
-                    _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
-                    DataTable dt2 = new DataTable();
-                    var tables = _RuleEntity.GetDropDownValues();
-
-                    #region TxnType
-                    DataTable txnTable = tables["temp_bindtxntype"];
-                    var tableBodyAEPS = new System.Text.StringBuilder();
-                    var tableBodyDMT = new System.Text.StringBuilder();
-                    var tableBodyMATM = new System.Text.StringBuilder();
-
-                    foreach (DataRow rows in txnTable.Rows)
+                    BindEditDropdown();
+                    if (row1["percentage"] != DBNull.Value && Convert.ToDecimal(row1["percentage"]) != 0 && !string.IsNullOrEmpty(row1["percentage"].ToString()))
                     {
-                        string type = rows["txntype"].ToString();
-                        string id = rows["id"].ToString(); // Get the ID from the data row
-                        string tabType = ds.Tables[2].AsEnumerable()
-                                           .FirstOrDefault(r => r["transaction_type"].ToString() == id)?["channel"].ToString(); // Get the channel/tab type
+                        //txtCount.Text = string.Empty;
+                        txtSwitchPercentage.Text = row1["percentage"].ToString();
+                        Session["SwitchPercentage"] = txtSwitchPercentage.Text;
+                    }
+                    else
+                    {
+                        //txtCount.Visible = true;
+                        txtSwitchPercentage.Text = string.Empty;
+                        //txtCount.Text = row1["maxcount"].ToString();
+                        //Session["SwitchPercentage"] = txtCount.Text;
+                        Session["SwitchPercentage"] = txtSwitchPercentage.Text;
+                        string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
+                        ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
+                    }
+                }
+                BindFailoverData(ds.Tables[1]);
 
-                        // Find the corresponding edit value for the current ID
-                        string editValue = string.Empty;
-                        DataRow editRow = ds.Tables[2].AsEnumerable()
-                                            .FirstOrDefault(r => r["transaction_type"].ToString() == id);
+                _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                DataTable dt2 = new DataTable();
+                var tables = _RuleEntity.GetDropDownValues();
 
-                        if (editRow != null)
-                        {
-                            editValue = editRow["switch_address"].ToString(); // Retrieve the value to fill
-                        }
+                #region TxnType
+                DataTable txnTable = tables["temp_bindtxntype"];
+                var tableBodyAEPS = new System.Text.StringBuilder();
+                var tableBodyDMT = new System.Text.StringBuilder();
+                var tableBodyMATM = new System.Text.StringBuilder();
 
-                        // Build the row for the current tab
-                        string rowHtml = $"<tr><td>{type}</td>" +
-                                         $"<td><input type='text' name='input_{tabType}_{id}' placeholder='Enter value for {type}' class='form-control' value='{editValue}' /></td></tr>";
+                foreach (DataRow rows in txnTable.Rows)
+                {
+                    string type = rows["txntype_id"].ToString();
+                    string id = rows["id"].ToString(); // Get the ID from the data row
+                    string tabType = ds.Tables[2].AsEnumerable()
+                                       .FirstOrDefault(r => r["transaction_type"].ToString() == id)?["channel"].ToString(); // Get the channel/tab type
 
-                        // Append to the corresponding tab's StringBuilder
-                        if (tabType == "AEPS")
-                        {
-                            tableBodyAEPS.Append(rowHtml);
-                        }
-                        else if (tabType == "DMT")
-                        {
-                            tableBodyDMT.Append(rowHtml);
-                        }
-                        else if (tabType == "MATM")
-                        {
-                            tableBodyMATM.Append(rowHtml);
-                        }
+                    // Find the corresponding edit value for the current ID
+                    string editValue = string.Empty;
+                    DataRow editRow = ds.Tables[2].AsEnumerable()
+                                        .FirstOrDefault(r => r["transaction_type"].ToString() == id);
+
+                    if (editRow != null)
+                    {
+                        editValue = editRow["switch_address"].ToString(); // Retrieve the value to fill
                     }
 
-                    // Set the inner HTML for each tab
-                    divAEPS.InnerHtml = tableBodyAEPS.ToString();
-                    divDMT.InnerHtml = tableBodyDMT.ToString();
-                    divMATM.InnerHtml = tableBodyMATM.ToString();
-                    #endregion
-                
-                
+                    // Build the row for the current tab
+                    string rowHtml = $"<tr><td>{type}</td>" +
+                                     $"<td><input type='text' name='input_{tabType}_{id}' placeholder='Enter value for {type}' class='form-control' value='{editValue}' /></td></tr>";
+
+                    // Append to the corresponding tab's StringBuilder
+                    if (tabType == "AEPS")
+                    {
+                        tableBodyAEPS.Append(rowHtml);
+                    }
+                    else if (tabType == "DMT")
+                    {
+                        tableBodyDMT.Append(rowHtml);
+                    }
+                    else if (tabType == "MATM")
+                    {
+                        tableBodyMATM.Append(rowHtml);
+                    }
+                }
+
+                // Set the inner HTML for each tab
+                divAEPS.InnerHtml = tableBodyAEPS.ToString();
+                divDMT.InnerHtml = tableBodyDMT.ToString();
+                divMATM.InnerHtml = tableBodyMATM.ToString();
+                #endregion
+
+
                 hdnShowModal.Value = "true";
             }
             else if (e.CommandName == "Delete")
             {
                 int itemId = Convert.ToInt32(e.CommandArgument);
-                _RuleEntityy.IsDelete = 1;
-                _RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
-                _RuleEntityy.SwitchId = Convert.ToInt32(itemId);
-                _RuleEntityy.Flag = (int)EnumCollection.EnumRuleType.Delete;
+                _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
+                _RuleEntity.SwitchId = Convert.ToInt32(itemId);
 
-                string statusCode = _RuleEntityy.UpdateSwitchStatus();
-
-                if (statusCode == "DEL00")
+                _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Update;
+                string validateCode = _RuleEntity.ValidateFailoverSwitch();
+                if (validateCode == "00")
                 {
-                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    hdnSwitchId.Value = Convert.ToString(_RuleEntity.SwitchId);
+                    RemoveRowById(hdnSwitchId.Value);
+
+                    _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Export;
+                    DataSet ds = _RuleEntity.GetSwitch();
+
+                    if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                    {
+                        DataRow row1 = ds.Tables[0].Rows[0];
+                        TextBox1.Text = row1["switchname"].ToString();
+                        Session["SwitchName"] = TextBox1.Text;
+                        TextBox2.Text = row1["description"].ToString();
+                        //BindEditDropdown();
+                        if (row1["percentage"] != DBNull.Value && Convert.ToDecimal(row1["percentage"]) != 0 && !string.IsNullOrEmpty(row1["percentage"].ToString()))
+                        {
+                            //TextBox4.Text = string.Empty;
+                            TextBox3.Text = row1["percentage"].ToString();
+                            Session["SwitchPercentage"] = TextBox3.Text;
+                        }
+                        else
+                        {
+                            //txtCount.Visible = true;
+                            TextBox3.Text = string.Empty;
+                            //txtCount.Text = row1["maxcount"].ToString();
+                            Session["SwitchPercentage"] = TextBox3.Text;
+                            string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
+                            ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
+                        }
+                    }
+                    //BindFailoverData(ds.Tables[1]);
+
+                    //_RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                    //DataTable dt2 = new DataTable();
+                    //var tables = _RuleEntity.GetDropDownValues();
+                    hdnShowModal.Value = "false";
+                    HdnShowDelete.Value = "true";
+                    //int itemId = Convert.ToInt32(e.CommandArgument);
+                    //_RuleEntityy.IsDelete = 1;
+                    //_RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
+                    //_RuleEntityy.SwitchId = Convert.ToInt32(itemId);
+                    //_RuleEntityy.Flag = (int)EnumCollection.EnumRuleType.Delete;
+                    //string validateCode = _RuleEntityy.ValidateSwitchConifg();
+                    //if (validateCode == "00")
+                    //{
+                    //    string statusCode = _RuleEntityy.UpdateSwitchStatus();
+
+                    //    if (statusCode == "DEL00")
+                    //    {
+                    //        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                    //        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    //    }
+                    //    else
+                    //    {
+                    //        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                    //        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    //    }
+                    //    var response = new
+                    //    {
+                    //        StatusMessage = _CommonEntity.ResponseMessage
+                    //    };
+                    //    ErrorLog.RuleTrace("SwitchConfig: Delete() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                    //    BindSwitch();
+                    //}
+                    //else
+                    //{
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already In Use Rule Configuration. Unable To Delete', 'Warning');", true);
+                    //    return;
+                    //}
                 }
                 else
                 {
-                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('This Switch Already Use In The Failover Switch', 'Warning');", true);
+                    return;
                 }
-                var response = new
-                {
-                    StatusMessage = _CommonEntity.ResponseMessage
-                };
-                ErrorLog.RuleTrace("SwitchConfig: Delete() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
-                BindSwitch();
             }
         }
         private void BindDropdown()
@@ -728,7 +834,157 @@ namespace SOR.Pages.Rule
                         var tableBodyMATM = new System.Text.StringBuilder();
                         foreach (DataRow row in bindtxntype.Rows)
                         {
-                            string type = row["txntype"].ToString();
+                            string type = row["txntype_id"].ToString();
+                            string id = row["id"].ToString(); // Get the ID from the data row
+
+                            //tableBody.Append("<tr>");
+                            //tableBody.Append($"<td>{type}</td>");
+                            //tableBody.Append($"<td><input type='text' name='input_{id}' placeholder='Enter value for {type}' class='form-control' /></td>");
+                            //tableBody.Append("</tr>");
+
+                            string tabPrefix = "AEPS"; // Change accordingly based on the tab
+
+                            tableBody.Append("<tr>");
+                            tableBody.Append($"<td>{type}</td>");
+                            tableBody.Append($"<td><input type='text' name='input_{tabPrefix}_{id}' placeholder='Enter value for {type}' class='form-control' /></td>");
+                            tableBody.Append("</tr>");
+
+                            string tabPrefixD = "DMT"; // Change accordingly based on the tab
+
+                            tableBodyDMT.Append("<tr>");
+                            tableBodyDMT.Append($"<td>{type}</td>");
+                            tableBodyDMT.Append($"<td><input type='text' name='input_{tabPrefixD}_{id}' placeholder='Enter value for {type}' class='form-control' /></td>");
+                            tableBodyDMT.Append("</tr>");
+
+                            string tabPrefixM = "MATM"; // Change accordingly based on the tab
+
+                            tableBodyMATM.Append("<tr>");
+                            tableBodyMATM.Append($"<td>{type}</td>");
+                            tableBodyMATM.Append($"<td><input type='text' name='input_{tabPrefixM}_{id}' placeholder='Enter value for {type}' class='form-control' /></td>");
+                            tableBodyMATM.Append("</tr>");
+                        }
+
+                        divAEPS.InnerHtml = tableBody.ToString();
+                        divDMT.InnerHtml = tableBodyDMT.ToString();
+                        divMATM.InnerHtml = tableBodyMATM.ToString();
+                    }
+                    else
+                    {
+                        //ddlTxnType.Items.Clear();
+                        //ddlTxnType.DataSource = null;
+                        //ddlTxnType.DataBind();
+                        //ddlTxnType.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-- All --", "0"));
+                    }
+                }
+            }
+        }
+        private void BindEditDropdown()
+        {
+            _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+            DataTable dt = new DataTable();
+            var tables = _RuleEntity.GetDropDownValues();
+
+            if (tables != null)
+            {
+                // Bind Group Name DropDown
+                if (tables.ContainsKey("temp_bindswitch"))
+                {
+                    DataTable bindGroupTable = tables["temp_bindswitch"];
+
+                    if (bindGroupTable.Rows.Count > 0)
+                    {
+                        string someValueToRemove = Session["SwitchName"].ToString(); // Change this to your target value
+                        foreach (DataRow row in bindGroupTable.Rows.Cast<DataRow>().ToList())
+                        {
+                            if (row["switchname"].ToString() == someValueToRemove)
+                            {
+                                bindGroupTable.Rows.Remove(row);
+                                break; // Exit the loop once the row is removed
+                            }
+                        }
+
+                        ddlSwitch1.Items.Clear();
+                        ddlSwitch1.DataSource = bindGroupTable;
+                        ddlSwitch1.DataTextField = "switchname";
+                        ddlSwitch1.DataValueField = "id";
+                        ddlSwitch1.DataBind();
+                        ddlSwitch1.Items.Insert(0, new ListItem("--Select--", ""));
+
+                        ddlSwitch2.Items.Clear();
+                        ddlSwitch2.DataSource = bindGroupTable;
+                        ddlSwitch2.DataTextField = "switchname";
+                        ddlSwitch2.DataValueField = "id";
+                        ddlSwitch2.DataBind();
+                        ddlSwitch2.Items.Insert(0, new ListItem("--Select--", ""));
+
+                        ddlSwitch3.Items.Clear();
+                        ddlSwitch3.DataSource = bindGroupTable;
+                        ddlSwitch3.DataTextField = "switchname";
+                        ddlSwitch3.DataValueField = "id";
+                        ddlSwitch3.DataBind();
+                        ddlSwitch3.Items.Insert(0, new ListItem("--Select--", ""));
+
+                        ddlSwitch4.Items.Clear();
+                        ddlSwitch4.DataSource = bindGroupTable;
+                        ddlSwitch4.DataTextField = "switchname";
+                        ddlSwitch4.DataValueField = "id";
+                        ddlSwitch4.DataBind();
+                        ddlSwitch4.Items.Insert(0, new ListItem("--Select--", ""));
+
+                        ddlSwitch5.Items.Clear();
+                        ddlSwitch5.DataSource = bindGroupTable;
+                        ddlSwitch5.DataTextField = "switchname";
+                        ddlSwitch5.DataValueField = "id";
+                        ddlSwitch5.DataBind();
+                        ddlSwitch5.Items.Insert(0, new ListItem("--Select--", ""));
+
+                        ddlSwitch6.Items.Clear();
+                        ddlSwitch6.DataSource = bindGroupTable;
+                        ddlSwitch6.DataTextField = "switchname";
+                        ddlSwitch6.DataValueField = "id";
+                        ddlSwitch6.DataBind();
+                        ddlSwitch6.Items.Insert(0, new ListItem("--Select--", ""));
+                    }
+                    else
+                    {
+                        ddlSwitch1.Items.Clear();
+                        ddlSwitch1.DataSource = null;
+                        ddlSwitch1.DataBind();
+
+                        ddlSwitch2.Items.Clear();
+                        ddlSwitch2.DataSource = null;
+                        ddlSwitch2.DataBind();
+
+                        ddlSwitch3.Items.Clear();
+                        ddlSwitch3.DataSource = null;
+                        ddlSwitch3.DataBind();
+
+                        ddlSwitch4.Items.Clear();
+                        ddlSwitch4.DataSource = null;
+                        ddlSwitch4.DataBind();
+
+                        ddlSwitch5.Items.Clear();
+                        ddlSwitch5.DataSource = null;
+                        ddlSwitch5.DataBind();
+
+                        ddlSwitch6.Items.Clear();
+                        ddlSwitch6.DataSource = null;
+                        ddlSwitch6.DataBind();
+                    }
+                }
+                // Bind Aggregator DropDown
+                if (tables.ContainsKey("temp_bindtxntype"))
+                {
+                    bindtxntype = tables["temp_bindtxntype"];
+
+                    if (bindtxntype.Rows.Count > 0)
+                    {
+                        var tableBody = new System.Text.StringBuilder();
+                        var tableBodyDMT = new System.Text.StringBuilder();
+                        var tableBodyMATM = new System.Text.StringBuilder();
+                        foreach (DataRow row in bindtxntype.Rows)
+                        {
+                            string type = row["txntype_id"].ToString();
                             string id = row["id"].ToString(); // Get the ID from the data row
 
                             //tableBody.Append("<tr>");
@@ -815,35 +1071,35 @@ namespace SOR.Pages.Rule
             dt.Columns.Add("percentage", typeof(int));
             return dt;
         }
-        
-        private bool ValidateSwitchValues()
-        {
-            // Get values from the text boxes
-            int switch1 = GetSwitchValue(txtswitch1);
-            int switch2 = GetSwitchValue(txtswitch2);
-            int switch3 = GetSwitchValue(txtswitch3);
-            int switch4 = GetSwitchValue(txtswitch4);
-            int switch5 = GetSwitchValue(txtswitch5);
-            int switch6 = GetSwitchValue(txtswitch6);
 
-            // Calculate the sum
-            int total = switch1 + switch2 + switch3 + switch4 + switch5 + switch6;
+        //private bool ValidateSwitchValues()
+        //{
+        //    // Get values from the text boxes
+        //    int switch1 = GetSwitchValue(txtswitch1);
+        //    int switch2 = GetSwitchValue(txtswitch2);
+        //    int switch3 = GetSwitchValue(txtswitch3);
+        //    int switch4 = GetSwitchValue(txtswitch4);
+        //    int switch5 = GetSwitchValue(txtswitch5);
+        //    int switch6 = GetSwitchValue(txtswitch6);
 
-            // Check if total is exactly 100
-            if (total < 100)
-            {
-                ShowWarning("The total must not be less than 100.");
-                return false; // Indicate validation failure
-            }
+        //    // Calculate the sum
+        //    int total = switch1 + switch2 + switch3 + switch4 + switch5 + switch6;
 
-            if (total > 100)
-            {
-                ShowWarning("The total must not be greater than 100.");
-                return false; // Indicate validation failure
-            }
+        //    // Check if total is exactly 100
+        //    if (total < 100)
+        //    {
+        //        ShowWarning("The total must not be less than 100.");
+        //        return false; // Indicate validation failure
+        //    }
 
-            return true; // Indicate successful validation
-        }
+        //    if (total > 100)
+        //    {
+        //        ShowWarning("The total must not be greater than 100.");
+        //        return false; // Indicate validation failure
+        //    }
+
+        //    return true; // Indicate successful validation
+        //}
         private int GetSwitchValue(TextBox textBox)
         {
             // Use .Text to get the value of the text box
@@ -889,30 +1145,30 @@ namespace SOR.Pages.Rule
             //    }
             //}
             foreach (var ddl in dropdowns)
-{
-    // Skip if ddl is null
-    if (ddl == null)
-    {
-        continue; // Skip this iteration
-    }
+            {
+                // Skip if ddl is null
+                if (ddl == null)
+                {
+                    continue; // Skip this iteration
+                }
 
-    // Skip if SelectedItem is null or its Text is null or empty
-    if (ddl.SelectedItem == null || string.IsNullOrEmpty(ddl.SelectedItem.Text))
-    {
-        continue; // Skip this iteration
-    }
+                // Skip if SelectedItem is null or its Text is null or empty
+                if (ddl.SelectedItem == null || string.IsNullOrEmpty(ddl.SelectedItem.Text))
+                {
+                    continue; // Skip this iteration
+                }
 
-    // Now it's safe to access SelectedItem.Text
-    string selectedValue = ddl.SelectedItem.Text;
+                // Now it's safe to access SelectedItem.Text
+                string selectedValue = ddl.SelectedItem.Text;
 
-    // Check if the selected value is valid and add to the HashSet
-    if (selectedValue != "--Select--" && !selectedValues.Add(selectedValue))
-    {
-        // Duplicate found, trigger warning
-        ShowWarning($"Duplicate value found in the failover switch: {selectedValue}. Please try again.", "Warning");
-        return false; // Return false indicating a duplicate was found
-    }
-}
+                // Check if the selected value is valid and add to the HashSet
+                if (selectedValue != "--Select--" && !selectedValues.Add(selectedValue))
+                {
+                    // Duplicate found, trigger warning
+                    ShowWarning($"Duplicate value found in the failover switch: {selectedValue}. Please try again.", "Warning");
+                    return false; // Return false indicating a duplicate was found
+                }
+            }
 
 
 
@@ -946,7 +1202,7 @@ namespace SOR.Pages.Rule
                         }
                     }
                 }
-                
+
                 if (!string.IsNullOrEmpty(textBox.Text))
                 {
                     // Check if the corresponding dropdown is not selected
@@ -956,7 +1212,7 @@ namespace SOR.Pages.Rule
                         return false; // Validation failed
                     }
                 }
-                
+
             }
             return true; // Validation passed
         }
@@ -966,6 +1222,43 @@ namespace SOR.Pages.Rule
             dtSwitchValues.Columns.Add("SwitchId", typeof(string));
             dtSwitchValues.Columns.Add("SwitchValue", typeof(string));
         }
+        //    private void PopulateAndAddSwitchValues()
+        //    {
+        //        // Ensure dtSwitchValues is initialized
+        //        if (dtSwitchValues == null)
+        //        {
+        //            InitializeDataTable();
+        //        }
+
+        //        // Clear previous values in the DataTable
+        //        dtSwitchValues.Clear();
+
+        //        // Create an array of dropdowns and corresponding textboxes
+        //        var switchPairs = new[]
+        //        {
+        //    new { Dropdown = ddlSwitch1, Textbox = txtswitch1 },
+        //    new { Dropdown = ddlSwitch2, Textbox = txtswitch2 },
+        //    new { Dropdown = ddlSwitch3, Textbox = txtswitch3 },
+        //    new { Dropdown = ddlSwitch4, Textbox = txtswitch4 },
+        //    new { Dropdown = ddlSwitch5, Textbox = txtswitch5 },
+        //    new { Dropdown = ddlSwitch6, Textbox = txtswitch6 }
+        //};
+
+        //        // Loop through each pair and add values to the DataTable
+        //        foreach (var pair in switchPairs)
+        //        {
+        //            if (pair.Dropdown.SelectedIndex > 0 && !string.IsNullOrEmpty(pair.Textbox.Text))
+        //            {
+        //                // Create a new DataRow
+        //                DataRow row = dtSwitchValues.NewRow();
+        //                row["SwitchId"] = pair.Dropdown.SelectedValue; // Use the selected value of the dropdown
+        //                row["SwitchValue"] = pair.Textbox.Text; // Use the text box value
+
+        //                // Add the DataRow to the DataTable
+        //                dtSwitchValues.Rows.Add(row);
+        //            }
+        //        }
+        //    }
         private void PopulateAndAddSwitchValues()
         {
             // Ensure dtSwitchValues is initialized
@@ -988,21 +1281,60 @@ namespace SOR.Pages.Rule
         new { Dropdown = ddlSwitch6, Textbox = txtswitch6 }
     };
 
-            // Loop through each pair and add values to the DataTable
+            // Variable to keep track of the sum of all textbox values
+            double totalSwitchValue = 0;
+
+            // First, add the values to the DataTable and calculate the total
             foreach (var pair in switchPairs)
             {
                 if (pair.Dropdown.SelectedIndex > 0 && !string.IsNullOrEmpty(pair.Textbox.Text))
                 {
-                    // Create a new DataRow
-                    DataRow row = dtSwitchValues.NewRow();
-                    row["SwitchId"] = pair.Dropdown.SelectedValue; // Use the selected value of the dropdown
-                    row["SwitchValue"] = pair.Textbox.Text; // Use the text box value
+                    // Parse the value of the Textbox to a double (assuming they are numeric)
+                    if (double.TryParse(pair.Textbox.Text, out double switchValue))
+                    {
+                        // Create a new DataRow
+                        DataRow row = dtSwitchValues.NewRow();
+                        row["SwitchId"] = pair.Dropdown.SelectedValue; // Use the selected value of the dropdown
+                        row["SwitchValue"] = switchValue.ToString(); // Store the value as a string in the DataTable
 
-                    // Add the DataRow to the DataTable
-                    dtSwitchValues.Rows.Add(row);
+                        // Add the DataRow to the DataTable
+                        dtSwitchValues.Rows.Add(row);
+
+                        // Add the switch value to the total
+                        totalSwitchValue += switchValue;
+                    }
+                    else
+                    {
+                        ShowWarning("One of the switch values is not a valid number.", "Warning");
+                        return; // Stop if the input is invalid
+                    }
                 }
             }
+
+            // Now compare the totalSwitchValue with the txtPercentage value
+            if (double.TryParse(txtSwitchPercentage.Text, out double percentageValue))
+            {
+                // Check if the total of switch values equals the percentage value
+                if (totalSwitchValue == percentageValue)
+                {
+                    // If the sum matches the percentage value, proceed
+                    //MessageBox.Show("The total of switch values is correct.", "Success");
+                }
+                else
+                {
+                    // If the sum does not match, show a warning
+                    ShowWarning($"The total of switch values does not match the specified percentage value ({percentageValue}).", "Warning");
+                    return;
+                }
+            }
+            else
+            {
+                ShowWarning("The percentage value is not a valid number.", "Warning");
+            }
         }
+
+
+
 
         protected void ddlSwitch1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1145,39 +1477,52 @@ namespace SOR.Pages.Rule
                 {
                     ddlSwitch1.SelectedValue = row["failoverswitchid"].ToString();
                     txtswitch1.Text = row["failover_percentage"].ToString();
+                    ddlSwitch1.Enabled = true;  // Enable Switch 1
+                    txtswitch1.Enabled = true;  // Enable TextBox 1
                 }
                 // Switch 2
                 else if (i == 1)
                 {
                     ddlSwitch2.SelectedValue = row["failoverswitchid"].ToString();
                     txtswitch2.Text = row["failover_percentage"].ToString();
+                    ddlSwitch2.Enabled = true;  // Enable Switch 2
+                    txtswitch2.Enabled = true;  // Enable TextBox 2
                 }
                 // Switch 3
                 else if (i == 2)
                 {
                     ddlSwitch3.SelectedValue = row["failoverswitchid"].ToString();
                     txtswitch3.Text = row["failover_percentage"].ToString();
+                    ddlSwitch3.Enabled = true;  // Enable Switch 3
+                    txtswitch3.Enabled = true;  // Enable TextBox 3
                 }
                 // Switch 4
                 else if (i == 3)
                 {
                     ddlSwitch4.SelectedValue = row["failoverswitchid"].ToString();
                     txtswitch4.Text = row["failover_percentage"].ToString();
+                    ddlSwitch4.Enabled = true;  // Enable Switch 4
+                    txtswitch4.Enabled = true;  // Enable TextBox 4
                 }
                 // Switch 5
                 else if (i == 4)
                 {
                     ddlSwitch5.SelectedValue = row["failoverswitchid"].ToString();
                     txtswitch5.Text = row["failover_percentage"].ToString();
+                    ddlSwitch5.Enabled = true;  // Enable Switch 5
+                    txtswitch5.Enabled = true;  // Enable TextBox 5
                 }
                 // Switch 6
                 else if (i == 5)
                 {
                     ddlSwitch6.SelectedValue = row["failoverswitchid"].ToString();
                     txtswitch6.Text = row["failover_percentage"].ToString();
+                    ddlSwitch6.Enabled = true;  // Enable Switch 6
+                    txtswitch6.Enabled = true;  // Enable TextBox 6
                 }
             }
         }
+
         public void RemoveRowById(string id)
         {
             // Use a flag to track if a row was removed
@@ -1193,6 +1538,7 @@ namespace SOR.Pages.Rule
                 DataRow row = dt.Tables[0].Rows[i];
                 if (row["id"].ToString() == id) // Compare with the ID value
                 {
+
                     dt.Tables[0].Rows.Remove(row);
                     rowRemoved = true; // Mark that a row was removed
                     break; // Exit after removing the first matching row
@@ -1200,9 +1546,237 @@ namespace SOR.Pages.Rule
             }
             rptSwitchDetails.DataSource = dt;
             rptSwitchDetails.DataBind();
+
+            rptSwitchDetailsDelete.DataSource = dt;
+            rptSwitchDetailsDelete.DataBind();
             if (!rowRemoved)
                 // Handle the case where no matching row was found, if needed
                 Console.WriteLine($"No row found with ID: {id}");
+        }
+
+        protected void btnManual_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                hdnshowmanual.Value = "true";
+                BindManualDisableSwitch();
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.RuleTrace("SwitchConfig: btnManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+            }
+        }
+
+        //protected void btnUpdManual_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+        //        _RuleEntity.SwitchId = Convert.ToInt32(Session["id"].ToString()) != 0 ? Convert.ToInt32(Session["id"].ToString()) : 0;
+        //        //_RuleEntity.BatchhName = !string.IsNullOrEmpty(txtBatchName.Text) ? txtBatchName.Text.Trim() : null;
+        //        //_RuleEntity.percentage = Convert.ToInt32(txtBatchPercentage.Text) != 0 ? Convert.ToInt32(txtBatchPercentage.Text) : 0;
+        //        //_RuleEntity.Count = Convert.ToInt32(txtBatchCount.Text) != 0 ? Convert.ToInt32(txtBatchCount.Text) : 0;
+        //        _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
+
+        //        string statusCode = _RuleEntity.InsertOrUpdateBatch();
+        //        if (statusCode == "INS00")
+        //        {
+        //            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+        //            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+        //            hdnshowmanual.Value = "false";
+        //            //txtBatchName.Text = string.Empty;
+        //            //txtBatchName.Text = string.Empty;
+        //            //txtBatchName.Text = string.Empty;
+        //            Session["id"] = null;
+        //        }
+        //        else
+        //        {
+        //            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+        //            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+        //        }
+        //        var response = new
+        //        {
+        //            StatusMessage = _CommonEntity.ResponseMessage
+        //        };
+        //        ErrorLog.RuleTrace("TrRule: btnUpdManual_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.RuleTrace("SwitchConfig: btnUpdManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+        //    }
+        //}
+
+        protected void btnClsManual_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                hdnshowmanual.Value = "false";
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+            }
+        }
+
+        protected void rptManual_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            try
+            {
+                if (e.CommandName == "Update")
+                {
+                    string id = e.CommandArgument.ToString();
+                    _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                    _RuleEntity.SwitchId = Convert.ToInt32(id);
+                    _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
+
+                    string statusCode = _RuleEntity.getmenualswitch();
+                    if (statusCode == "INS00")
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                        hdnshowmanual.Value = "false";
+                    }
+                    else
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    }
+                    var response = new
+                    {
+                        StatusMessage = _CommonEntity.ResponseMessage
+                    };
+                    ErrorLog.RuleTrace("TrRule: btnUpdManual_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                }
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.RuleTrace("SwitchConfig: rptManual_ItemCommand() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                #region % Validation
+
+                // Validate that TextBox3 (percentage) is 0
+                decimal switchPercentage;
+                if (decimal.TryParse(TextBox3.Text, out switchPercentage) && switchPercentage != 0)
+                {
+                    lblDeleteMessage.Text = "Percentage in TextBox should be 0.";
+                    lblDeleteMessage.Visible = true;
+                    return;
+                }
+
+                // Initialize the total percentage accumulator
+                decimal totalPercentage = 0;
+
+                // Validate the percentages in the Repeater
+                foreach (RepeaterItem item in rptSwitchDetailsDelete.Items)
+                {
+                    TextBox txtPercentage = (TextBox)item.FindControl("txtPercentage");
+
+                    if (txtPercentage != null && decimal.TryParse(txtPercentage.Text, out decimal percentage))
+                    {
+                        // Check for negative percentages
+                        if (percentage < 0)
+                        {
+                            lblDeleteMessage.Text = "Percentage cannot be negative.";
+                            lblDeleteMessage.Visible = true;
+                            return;
+                        }
+
+                        totalPercentage += percentage; // Accumulate the total percentage
+                    }
+                    else
+                    {
+                        // Handle invalid percentage input
+                        lblDeleteMessage.Text = "Invalid percentage value.";
+                        lblDeleteMessage.Visible = true;
+                        return;
+                    }
+                }
+
+                // Validate the total percentage must be exactly 100
+                if (totalPercentage != 100)
+                {
+                    lblDeleteMessage.Text = "The total percentage of all items must be exactly 100%.";
+                    lblDeleteMessage.Visible = true;
+                    return;
+                }
+
+                // If validation passes, proceed with processing (e.g., database update)
+                lblDeleteMessage.Visible = false;  // Hide the error message if validation passes
+
+                #endregion
+
+                // Create a DataTable for updates
+                updatesTable = CreateUpdatesDataTable();
+
+                // Iterate through the Repeater items and add data to the DataTable
+                foreach (RepeaterItem item in rptSwitchDetailsDelete.Items)
+                {
+                    // Find controls within the Repeater item
+                    var lblID = (Label)item.FindControl("lblID");
+                    var txtPercentage = (TextBox)item.FindControl("txtPercentage");
+
+                    // Proceed only if the controls are found
+                    if (lblID != null && txtPercentage != null)
+                    {
+                        int id = Convert.ToInt32(lblID.Text);  // Get the ID from the Label
+                        decimal percentage = Convert.ToDecimal(txtPercentage.Text);  // Get the percentage from the TextBox
+
+                        // Add the values as a new row to the DataTable
+                        updatesTable.Rows.Add(id, percentage);
+                    }
+                }
+
+                // Assign the DataTable to the _RuleEntity entity (or whatever processing you need to do)
+                _RuleEntity.dt = updatesTable;
+                _RuleEntity.SwitchId = Convert.ToInt32(hdnSwitchId.Value) != 0 ? Convert.ToInt32(hdnSwitchId.Value) : 0;
+                _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Delete;
+
+                string statusCode = _RuleEntity.InsertOrUpdateSwitch();
+                if (statusCode == "DEL00")
+                {
+                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                }
+                else
+                {
+                    _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                    _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                }
+                var response = new
+                {
+                    StatusMessage = _CommonEntity.ResponseMessage
+                };
+                ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                HdnShowDelete.Value = "false";
+            }
+            catch (Exception Ex)
+            {
+                lblDeleteMessage.Text = $"An error occurred: {Ex.Message}";
+                lblDeleteMessage.Visible = true;
+                HdnShowDelete.Value = "false";
+                ErrorLog.RuleTrace("SwitchConfig: btnDelete_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+            }
+        }
+
+        protected void btnCloseDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HdnShowDelete.Value = "false";
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+            }
         }
     }
 }

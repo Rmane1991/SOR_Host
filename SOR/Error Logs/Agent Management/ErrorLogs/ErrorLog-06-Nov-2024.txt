@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+Time : 06-Nov-2024 12:36
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnsample_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2198
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 06-Nov-2024 12:36
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnZipsample_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 1108
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 06-Nov-2024 12:36
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnsample_ServerClick(Object sender, EventArgs e) in D:\D Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2198
+Message - : Thread was being aborted.

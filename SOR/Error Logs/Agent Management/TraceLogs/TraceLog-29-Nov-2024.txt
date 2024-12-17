@@ -1,0 +1,54 @@
+Time : 29-Nov-2024 12:40 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:40 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:40 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:40 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:40 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024124008\ReleaseNote.pdf
+Time : 29-Nov-2024 12:40 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024124008\ReleaseNote.pdf
+Time : 29-Nov-2024 12:40 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 29-Nov-2024 12:40 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 29-Nov-2024 12:40 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 29-Nov-2024 12:45 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 29-Nov-2024 12:48 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 29-Nov-2024 12:53 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:53 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:53 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:53 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:53 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024125317\ReleaseNote.pdf
+Time : 29-Nov-2024 12:53 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024125317\ReleaseNote.pdf
+Time : 29-Nov-2024 12:53 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 29-Nov-2024 12:53 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 29-Nov-2024 12:54 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 29-Nov-2024 12:56 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:56 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:56 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:56 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 12:56 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024125608\ReleaseNote.pdf
+Time : 29-Nov-2024 12:56 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024125608\ReleaseNote.pdf
+Time : 29-Nov-2024 12:56 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 29-Nov-2024 12:56 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 29-Nov-2024 14:43 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 29-Nov-2024 14:45 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 29-Nov-2024 14:54 Message : Versioning: btnSubmitRemarks_Click(): Going For Insert
+Time : 29-Nov-2024 14:58 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 29-Nov-2024 18:14 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:14 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:14 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:14 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:14 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024181451\ReleaseNote.pdf
+Time : 29-Nov-2024 18:14 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024181451\ReleaseNote.pdf
+Time : 29-Nov-2024 18:14 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 29-Nov-2024 18:14 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 29-Nov-2024 18:15 Message : Versioning: btnSubmitDetails_Click(): Going For Insert
+Time : 29-Nov-2024 18:15 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:15 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:15 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:15 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 29-Nov-2024 18:15 Message : Release note uploaded: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024181554\ReleaseNote.pdf
+Time : 29-Nov-2024 18:15 Message : Successfully uploaded release note to: D:\Data\Aakash\SOR\SOR\SOR\Patch\ReleaseNotes\29112024181554\ReleaseNote.pdf
+Time : 29-Nov-2024 18:15 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 29-Nov-2024 18:15 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 29-Nov-2024 18:46 Message : Versioning: FillGrid(): Exception: A field or property with the name 'prodstatus' was not found on the selected data source.
+Time : 29-Nov-2024 18:46 Message : Versioning: FillGrid(): Exception: A field or property with the name 'prodstatus' was not found on the selected data source.
+Time : 29-Nov-2024 18:46 Message : Versioning: FillGrid(): Exception: A field or property with the name 'prodstatus' was not found on the selected data source.
+Time : 29-Nov-2024 18:48 Message : Versioning: FillGrid(): Exception: A field or property with the name 'prodstatus' was not found on the selected data source.
+Time : 29-Nov-2024 18:50 Message : Versioning: FillGrid(): Exception: A field or property with the name 'prodstatus' was not found on the selected data source.

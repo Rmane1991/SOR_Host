@@ -1,0 +1,133 @@
+Time : 15-Nov-2024 12:54 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 16 StatusMsg: Personal Email ID Already Registered RequestId: 0
+Time : 15-Nov-2024 12:55 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Nov-2024 12:56 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 1
+Time : 15-Nov-2024 13:02 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 10 StatusMsg: PanCard Already Registered RequestId: 0
+Time : 15-Nov-2024 13:03 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 15-Nov-2024 13:03 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 2
+Time : 15-Nov-2024 14:50 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 14:50 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:09 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:09 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:14 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:14 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:14 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 3
+Time : 15-Nov-2024 15:15 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 3
+Time : 15-Nov-2024 15:15 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:25 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 15-Nov-2024 15:25 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 15-Nov-2024 15:25 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 4
+Time : 15-Nov-2024 16:02 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:02 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:06 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Contact No'.
+Time : 15-Nov-2024 16:20 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:21 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:28 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:28 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:29 Message : Class : BCVerificationLevelTwo.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Nov-2024 16:36 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 16:37 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 17:32 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 17:32 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Nov-2024 17:32 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 17:33 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 17:33 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 15-Nov-2024 17:33 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 17:38 Message : Verification Level 2-BC: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.
+Time : 15-Nov-2024 17:38 Message : Verification Level 2-BC: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 4 Fullname: \xc30d0407030266b0bc67c2131ee969d23801d218a490f87b929ef9985f91dfe96ce864ca081e12b608cd14e22a97313dba0c85950968919b07eaa8f6f4fa8edaa19308f720bea8c00f User: Maximus ReceiverEmailID: xyz3@gmail.com ContactNo: 8954621289 Remarks: Approve.ActivityType: 0
+Time : 15-Nov-2024 17:38 Message : Verification Level 2-BC: SingleSave: Failed - Authorizer Verification. Exception: Cannot find table 0.
+Time : 15-Nov-2024 17:38 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column bm.pincode does not exist
+Time : 15-Nov-2024 17:41 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column bm.pincode does not exist
+Time : 15-Nov-2024 17:41 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+42804: structure of query does not match function result type
+Time : 15-Nov-2024 17:42 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column bm.pincode does not exist
+Time : 15-Nov-2024 17:45 Message : Class : OnBoardBcStatus 
+Function : BindDropdownsFranchise() 
+Exception Occured
+42804: structure of query does not match function result type
+Time : 15-Nov-2024 17:45 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column bm.pincode does not exist
+Time : 15-Nov-2024 17:45 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+42703: column bm.pincode does not exist
+Time : 15-Nov-2024 17:52 Message : Class : OnBoardBcStatus.cs 
+Function : FillGrid() 
+Exception Occured
+Value cannot be null.
+Parameter name: propName

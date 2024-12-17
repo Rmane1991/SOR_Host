@@ -1,0 +1,59 @@
+Time : 22-Nov-2024 16:31 Message : btnsample_Click() | Initiated Release Note Sample File Download Request.
+Time : 22-Nov-2024 16:31 Message : Error RestrictedPIN Sample File Download.
+Time : 22-Nov-2024 16:39 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 16:39 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 16:39 Message : Release note uploaded: D:\UploadedPatches\22112024163901\ReleaseNote.docx
+Time : 22-Nov-2024 16:49 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 16:49 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 16:49 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 16:49 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 16:49 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024164931\ReleaseNote.docx
+Time : 22-Nov-2024 16:49 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024164931\ReleaseNote.docx
+Time : 22-Nov-2024 18:12 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:12 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:12 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:12 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:12 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024181232\ReleaseNote.docx
+Time : 22-Nov-2024 18:12 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024181232\ReleaseNote.docx
+Time : 22-Nov-2024 18:12 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 22-Nov-2024 18:13 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 22-Nov-2024 18:17 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:17 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:17 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:17 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:17 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 22-Nov-2024 18:17 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024181723\ReleaseNote.docx
+Time : 22-Nov-2024 18:17 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 22-Nov-2024 18:17 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 22-Nov-2024 18:28 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:28 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:28 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:28 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:28 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024182848\ReleaseNote.docx
+Time : 22-Nov-2024 18:28 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024182848\ReleaseNote.docx
+Time : 22-Nov-2024 18:28 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 22-Nov-2024 18:28 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 22-Nov-2024 18:34 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:34 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:34 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:34 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:34 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024183422\ReleaseNote.docx
+Time : 22-Nov-2024 18:34 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024183422\ReleaseNote.docx
+Time : 22-Nov-2024 18:34 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 22-Nov-2024 18:34 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 22-Nov-2024 18:38 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:38 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:38 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:38 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:38 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024183839\ReleaseNote.docx
+Time : 22-Nov-2024 18:38 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024183839\ReleaseNote.docx
+Time : 22-Nov-2024 18:38 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 22-Nov-2024 18:38 Message : Versioning: btnSave_Click(): Going For Insert
+Time : 22-Nov-2024 18:40 Message : DLL File: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:40 Message : Match found for DLL: BussinessAccessLayer.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:40 Message : DLL File: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:40 Message : Match found for DLL: SOR.dll - Version: 1.0.0.0
+Time : 22-Nov-2024 18:40 Message : Release note uploaded: D:\UploadedPatches\ReleaseNotes\22112024184031\ReleaseNote.docx
+Time : 22-Nov-2024 18:40 Message : Successfully uploaded release note to: D:\UploadedPatches\ReleaseNotes\22112024184031\ReleaseNote.docx
+Time : 22-Nov-2024 18:40 Message : Versioning: btnSave_Click(): Set Propertise...
+Time : 22-Nov-2024 18:40 Message : Versioning: btnSave_Click(): Going For Insert

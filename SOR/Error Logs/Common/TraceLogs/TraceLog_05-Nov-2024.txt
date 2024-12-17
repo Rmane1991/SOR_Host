@@ -1,0 +1,138 @@
+05-11-2024 10:26:39:3218 : Login Successful. Username Maximus. SessionID : xd3ol4oq2lttbyjgg252evh5
+05-11-2024 10:28:42:8220 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 10:28:42:8230 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 10:28:42:8230 : NOTICE: Inserting new record...1
+05-11-2024 10:28:42:8240 : NOTICE: Inserting new record...
+05-11-2024 10:28:42:8260 : NOTICE: Insert successful, RequestId: 126
+05-11-2024 10:28:46:7262 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 10:28:46:7282 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 10:28:46:7292 : NOTICE: Inserting new record...1
+05-11-2024 10:28:46:7292 : NOTICE: Updating existing record with ID: 126
+05-11-2024 10:28:46:7990 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+05-11-2024 10:30:22:6158 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 10:30:22:6158 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 10:30:22:6158 : NOTICE: Inserting new record...1
+05-11-2024 10:30:22:6158 : NOTICE: Updating existing record with ID: 126
+05-11-2024 10:30:22:6314 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+05-11-2024 10:31:38:5818 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 10:31:38:5818 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 10:31:38:5818 : NOTICE: Inserting new record...1
+05-11-2024 10:31:38:5818 : NOTICE: Updating existing record with ID: 126
+05-11-2024 10:33:02:0458 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+05-11-2024 10:33:27:2304 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 10:33:27:2314 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 10:33:27:2324 : NOTICE: Inserting new record...1
+05-11-2024 10:33:27:2334 : NOTICE: Updating existing record with ID: 126
+05-11-2024 10:33:30:9738 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+05-11-2024 10:33:51:8249 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 10:33:51:8249 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 10:33:51:8249 : NOTICE: Inserting new record...1
+05-11-2024 10:33:51:8249 : NOTICE: Updating existing record with ID: 126
+05-11-2024 10:34:01:3440 : Postgres Error: 22P02: invalid input syntax for type integer: "t"
+05-11-2024 11:28:59:7440 : Login Successful. Username Maximus. SessionID : hsziu22srav4vai1os1jstrj
+05-11-2024 11:33:22:2535 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 11:33:22:2605 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 11:33:22:2625 : NOTICE: Inserting new record...1
+05-11-2024 11:33:22:2625 : NOTICE: Inserting new record...
+05-11-2024 11:33:22:2635 : NOTICE: Insert successful, RequestId: 128
+05-11-2024 11:33:26:1139 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 11:33:26:1149 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 11:33:26:1169 : NOTICE: Inserting new record...1
+05-11-2024 11:33:26:1179 : NOTICE: Updating existing record with ID: 128
+05-11-2024 11:33:26:1219 : NOTICE: Update successful for RequestId: 128
+05-11-2024 11:33:48:0643 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+05-11-2024 11:33:48:0643 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+05-11-2024 11:33:52:2561 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+05-11-2024 11:33:52:2571 : NOTICE: Flag is set to 1, proceeding with validations...
+05-11-2024 11:33:52:2581 : NOTICE: Inserting new record...1
+05-11-2024 11:33:52:2591 : NOTICE: Updating existing record with ID: 128
+05-11-2024 11:33:52:2601 : NOTICE: Update successful for RequestId: 128
+05-11-2024 11:34:15:9859 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+05-11-2024 11:34:15:9869 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+05-11-2024 12:00:50:6463 : Login Successful. Username Maximus. SessionID : qgdiq2xtiq3yt1mlybge2gvk
+05-11-2024 12:01:21:5958 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+05-11-2024 12:08:08:8407 : Login Successful. Username Maximus. SessionID : hswh4lthq4jengt1apxl1mpz
+05-11-2024 12:12:34:5442 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+05-11-2024 12:12:34:7157 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+05-11-2024 12:14:08:7337 : Login Successful. Username Maximus. SessionID : 1gcswtjyz1wqbevcoyu4bhz3
+05-11-2024 12:19:01:0925 : Login Successful. Username Maximus. SessionID : 1w3p1t4awx21ixdxvi1gp2mg
+05-11-2024 12:19:41:0914 : Class : BCEntity.cs 
+Function : DeleteBcDetails() 
+Exception Occurred
+Parameter 'p_Status' referenced in SQL but is an out-only parameter
+05-11-2024 12:19:41:1093 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Parameter 'p_Status' referenced in SQL but is an out-only parameter
+05-11-2024 12:21:50:2812 : Login Successful. Username Maximus. SessionID : czzpqpvm3ajmxpsuy1hskvtj
+05-11-2024 12:22:46:3945 : Class : BCEntity.cs 
+Function : DeleteBcDetails() 
+Exception Occurred
+Parameter 'p_Status' referenced in SQL but is an out-only parameter
+05-11-2024 12:22:46:4284 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+Parameter 'p_Status' referenced in SQL but is an out-only parameter
+05-11-2024 12:23:40:6505 : Class : BCEntity.cs 
+Function : DeleteBcDetails() 
+Exception Occurred
+42883: procedure bcrequest_delete(integer, unknown) does not exist
+05-11-2024 12:23:40:6665 : Class : AgentRegistration.cs 
+Function : btnView_Click() 
+Exception Occured
+42883: procedure bcrequest_delete(integer, unknown) does not exist
+05-11-2024 12:24:26:1577 : Login Successful. Username Maximus. SessionID : qdzlbiblpizcocl1gpudtqil
+05-11-2024 12:36:59:2415 : Login Successful. Username Maximus. SessionID : 1vq5shpseecgd1m2shjsf0zb
+05-11-2024 12:38:51:1984 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42883: function public.validate_group(p_name => text) does not exist
+05-11-2024 12:41:38:4034 : Login Successful. Username Maximus. SessionID : eozlg2u3thupg4hxpl2q0qpo
+05-11-2024 12:50:49:7372 : Login Successful. Username Maximus. SessionID : 0chgkxywvgbm3o1rkh5dwzae
+05-11-2024 13:04:43:5960 : Login Successful. Username Maximus. SessionID : bvbtd4bjgs2jeivnl5ahnvsr
+05-11-2024 14:12:06:1185 : Login Successful. Username Maximus. SessionID : 0to5obwswn12flixteo3qe00
+05-11-2024 14:15:30:5743 : Login Successful. Username Maximus. SessionID : mani1xyv30ufo21bw5zpckmr
+05-11-2024 14:22:48:8966 : Login Successful. Username Maximus. SessionID : gg4gpu0jkkr5trd4dh2nofna
+05-11-2024 14:26:12:9765 : Login Successful. Username Maximus. SessionID : whchzlcrc5ifhdsaau5ve4q3
+05-11-2024 14:56:06:6383 : Login Successful. Username Maximus. SessionID : rkcxjoknmhfh3dna4bfjxpir
+05-11-2024 15:26:47:0255 : Login Successful. Username Maximus. SessionID : xfhzkq3q3e53pfkxyaffke2u
+05-11-2024 15:49:39:7724 : Login Successful. Username Maximus. SessionID : pmgon0pthsttcburvj5dec2d
+05-11-2024 15:51:23:9384 : Login Successful. Username Maximus. SessionID : g5xw4jhd4hvr0h2pczxvlutd
+05-11-2024 15:53:46:6882 : Login Successful. Username Maximus. SessionID : n2hvutskbzj5mewuatqd4ujc
+05-11-2024 16:00:14:4307 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+05-11-2024 16:26:33:0650 : Login Successful. Username Maximus. SessionID : k1tnhc4flvsfszje15a2h4w4
+05-11-2024 16:41:48:0572 : Login Successful. Username Maximus. SessionID : wvfqcruf3cqgz01aexhmcazu
+05-11-2024 16:43:10:9087 : Login Successful. Username Maximus. SessionID : hwtkr14qrehen4w5wal2wmjm
+05-11-2024 16:49:48:3979 : Login Successful. Username Maximus. SessionID : jsfssnqhu3qjq1o53cbcdcc4
+05-11-2024 16:52:21:2562 : Login Successful. Username Maximus. SessionID : aaezimxqomvjl35dxrz1zrok
+05-11-2024 16:59:10:5147 : Login Successful. Username Maximus. SessionID : rhy3z4ndd4su5tcuzmcapyvp
+05-11-2024 17:14:39:6335 : Login Successful. Username Maximus. SessionID : ce2zlmyiyn3zyuvudtdjdfir
+05-11-2024 17:45:02:1716 : Login Successful. Username Maximus. SessionID : e1vji1m3dend2k0amghgquqs
+05-11-2024 17:49:26:7632 : Login Successful. Username Maximus. SessionID : yhfimahpcmcffwyklcj5vlm1
+05-11-2024 17:51:29:8407 : Login Successful. Username Maximus. SessionID : pb43k4g3g4sb1ljzpucxrlj2
+05-11-2024 18:00:40:5756 : Login Successful. Username Maximus. SessionID : r1wvcgcqs3ifyvyvjqztq0nq
+05-11-2024 18:08:38:6850 : Login Successful. Username Maximus. SessionID : dfad3l2wphb0gplr2w55mxqj
+05-11-2024 18:13:59:9444 : Login Successful. Username Maximus. SessionID : vpnhiqbzwsnazfmzjb4iutdz
+05-11-2024 18:19:13:7596 : Login Successful. Username Maximus. SessionID : lo54jcwoouyyxyy5usj4nulv
+05-11-2024 18:22:42:9736 : Login Successful. Username Maximus. SessionID : t2fghitnvmje4jyyvv2wolwk
+05-11-2024 18:28:11:2629 : Login Successful. Username Maximus. SessionID : 51nshogyvrf1lyhey35c4lwl
+05-11-2024 18:30:43:9437 : Login Successful. Username Maximus. SessionID : e1odl5e4i32fj5hjxd0h2a41
+05-11-2024 18:34:39:3896 : Login Successful. Username Maximus. SessionID : vnjpz0rfxj3fs3tjnf2vbtgz
+05-11-2024 18:55:27:0624 : Login Successful. Username Maximus. SessionID : holigq0eomgdccmg5hyoid25
+05-11-2024 18:59:44:9671 : Login Successful. Username Maximus. SessionID : 5kf04ztm3k0umqtgb0r1pxqb
+05-11-2024 19:03:51:9821 : Login Successful. Username Maximus. SessionID : zpughf3mqoyi33szalefh4ty
+05-11-2024 19:05:11:9483 : Login Successful. Username Maximus. SessionID : gtbojtealkptzobapvsyarlf
+05-11-2024 19:07:38:6298 : Login Successful. Username Maximus. SessionID : kyv3paa4boczo51f12yld0pe

@@ -1,0 +1,44 @@
+13-11-2024 10:56:28:7104 : Login Successful. Username Maximus. SessionID : y2t3o1zch2kxcsb4sbyp2n3y
+13-11-2024 11:19:34:8687 : Login Successful. Username Maximus. SessionID : ntxtbu5lucehryhs5nap5tjp
+13-11-2024 11:20:01:6378 : Login Successful. Username Maximus. SessionID : 5aotgykla2yiiekzhu1ithea
+13-11-2024 11:25:23:6933 : Login Successful. Username Maximus. SessionID : h1bv4b0pcfpihoehyknnyjt4
+13-11-2024 11:36:22:6092 : Login Successful. Username Maximus. SessionID : pa3tvchzprmorrw1jxj22lv5
+13-11-2024 11:44:00:1469 : Login Successful. Username Maximus. SessionID : 1jwfp0qeuewlc4ljjzwwprg5
+13-11-2024 11:46:26:4600 : Login Successful. Username Maximus. SessionID : n1w4r5amw5qf1xok4pldyzuf
+13-11-2024 11:47:29:5962 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42601: argument name "p_switchid" used more than once
+13-11-2024 11:49:16:7953 : Login Successful. Username Maximus. SessionID : 0my4le1mhgt4y2ft4y2vzmhv
+13-11-2024 11:53:42:2601 : Login Successful. Username Maximus. SessionID : ik13z13lpbyao1n5tmxer5ef
+13-11-2024 11:57:08:7693 : Login Successful. Username Maximus. SessionID : odqb3frl2mxewpr2vedzgbzf
+13-11-2024 11:57:56:3643 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42601: argument name "p_switchid" used more than once
+13-11-2024 12:02:32:9140 : Login Successful. Username Maximus. SessionID : hfo54meejg1yltw00u24bhof
+13-11-2024 12:06:11:8005 : Login Successful. Username Maximus. SessionID : 1twbzdmn3ssfxmhrpxqvqj3v
+13-11-2024 12:06:59:1650 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42601: argument name "p_switchid" used more than once
+13-11-2024 12:10:22:3165 : Class: RuleEntity.cs 
+Function: InsertOrUpdateSwitch() 
+Exception Occurred
+42601: argument name "p_switchid" used more than once
+13-11-2024 12:20:46:2265 : Login Successful. Username Maximus. SessionID : mjmajep5pu3pxrth0kepowmu
+13-11-2024 12:36:22:2577 : Login Successful. Username Maximus. SessionID : drk4cds4xk5tjro4brpm2ynj
+13-11-2024 14:07:20:3995 : Login Successful. Username Maximus. SessionID : mnb5kx11b1fdtnfysh2xnwvx
+13-11-2024 14:39:46:1826 : Login Successful. Username Maximus. SessionID : paqgykay2huhrnmtl5kjona3
+13-11-2024 15:13:57:1593 : Login Successful. Username Maximus. SessionID : g2othl2ghdvo31grvalxpoiy
+13-11-2024 18:01:12:5734 : Login Successful. Username Maximus. SessionID : y1q55fhyikdcpq0ja0fxs4pf
+13-11-2024 18:10:31:3561 : Login Successful. Username Maximus. SessionID : evijzkhc5zxcotlnt4kgxska
+13-11-2024 18:12:56:0922 : Login Successful. Username Maximus. SessionID : q0hepygynyzwifpmklqp0cqj
+13-11-2024 18:36:26:7673 : Login Successful. Username Maximus. SessionID : v3rb1qlpp0wksiggvnxhqbun
+13-11-2024 18:37:24:5273 : Error executing command: 42883: procedure public.sp_agentrequest_registration_insert(unknown, unknown, unknown, text, text, unknown, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, unknown, text, text, unknown, text, text, text, text, text, text, integer, integer, integer, integer, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, integer, unknown, unknown, text, text, text, unknown, integer, integer, integer, integer, integer, text) does not exist
+13-11-2024 18:42:15:7211 : Login Successful. Username Maximus. SessionID : zekrvvyeuuv1m05lprbv5eb1
+13-11-2024 18:59:11:9066 : Login Successful. Username Maximus. SessionID : dyn5ad3l1wumechgxg34fz1k
+13-11-2024 19:09:29:9606 : Login Successful. Username Maximus. SessionID : nfmstxa20vjonkpw1q4uqbtl
+13-11-2024 19:12:21:9506 : Login Successful. Username Maximus. SessionID : 5vhghicbmnyd3suffgvem15m
+13-11-2024 19:14:56:5193 : Error executing command: Parameter 'p_aggCode' must have its value set
+13-11-2024 19:15:36:6733 : Error executing command: Parameter 'p_aggCode' must have its value set

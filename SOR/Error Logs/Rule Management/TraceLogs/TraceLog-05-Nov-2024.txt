@@ -1,0 +1,10 @@
+Time : 05-Nov-2024 15:28 Message : SwitchConfig: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 05-Nov-2024 15:57 Message : SwitchConfig: Delete() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 05-Nov-2024 16:00 Message : TrRule: btnCreGroup_Click() | Username :MaximusException : Cannot access a disposed object.
+Object name: 'NpgsqlConnection'.
+Time : 05-Nov-2024 16:00 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 05-Nov-2024 16:02 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 05-Nov-2024 18:23 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 05-Nov-2024 18:39 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 05-Nov-2024 18:43 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 05-Nov-2024 18:48 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
