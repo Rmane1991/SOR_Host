@@ -187,6 +187,8 @@
         }
     </style>
     <style>
+       
+
         /*.accordion-button.collapsed .sidebar-icons {
             display: block; 
             font-size: 20px;
@@ -353,96 +355,9 @@
                 <!-- sidebar closed -->
                 <div class="sidebar-closed">
                     <div class="accordion" id="accordionExample">
+                        <!-- Dynamic content for the closed sidebar -->
                         <asp:Literal ID="Literal2" runat="server"></asp:Literal>
-
-<%--                        <asp:Literal ID="Literal2" runat="server"></asp:Literal>--%>
                     </div>
-                    <%-- <ul>
-                        <!-- List Item with body -->
-                        <li>
-                            <a class="closedSidebarBtn icon-dashboard" data-bs-toggle="popover" data-bs-placement="right"
-                                data-bs-content-id="dashboard" tabindex="0" role="button" data-bs-trigger="focus"></a>
-                            <div id="dashboard" class="d-none">
-                                
-                                    <ul class="sub-menu">
-                                                <!-- sub-menu-list -->
-                                                <li class="sub-menu-list" id="CED1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/BCRegistration.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Registration</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <!-- sub-menu-list -->
-                                                <li class="sub-menu-list" id="MED1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/BCVerificationLevelOne.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Verification Level 1</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/BCVerificationLevelTwo.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Verification Level 2</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/ActiveBcReport.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Active BC</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/DeactiveBcReport.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Deactive BC</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/DeclinedBCReport.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Decline BC</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/TerminatedBCReport.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Terminate BC</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                 <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/EditBCDetails.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">Edit BC Details</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu-list" id="ES1">
-                                                    <a href="<%= Page.ResolveUrl("~/Pages/BC/FrmBcStatus.aspx") %>">
-                                                        <div class="d-flex align-items-center">
-                                                            <span class="icon-list-line"></span>
-                                                            <span class="list-line-text">BC Status</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                            </div>
-                        </li>
-                    </ul>--%>
                 </div>
                 <!-- slider -->
                 <button id="slider-btn" class="slider-btn icon-slider-arrow rotate" onclick="return false;">
@@ -849,6 +764,14 @@
 //        }
 //    });
 //}
+            document.getElementById('sidebarToggle').addEventListener('click', function() {
+    var sidebar = document.querySelector('.sidebar');
+    var mainContainer = document.querySelector('.main-container');
+    sidebar.classList.toggle('sidebar-open');
+    sidebar.classList.toggle('sidebar-closed');
+    mainContainer.classList.toggle('sidebar-open');
+    mainContainer.classList.toggle('sidebar-closed');
+});
 
 
         </script>
