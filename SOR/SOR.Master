@@ -17,6 +17,7 @@
     <link href="./css/select2.min.css" rel="stylesheet" />
     <link href="./css/bootstrap-datepicker.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/icons.css">
+
     <!-- OWN CSS -->
     <link href="./css/Thumbnil.css" rel="stylesheet">
 
@@ -27,6 +28,8 @@
     <link rel="stylesheet" href="./css/ticket-center.css">
     <link rel="stylesheet" href="./assets/vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+    <!-- Include Bootstrap CSS -->
+
     <style>
         div.dataTables_wrapper {
             width: 100%;
@@ -187,8 +190,6 @@
         }
     </style>
     <style>
-       
-
         /*.accordion-button.collapsed .sidebar-icons {
             display: block; 
             font-size: 20px;
@@ -205,7 +206,71 @@
         .accordion-button:not(.collapsed) h5 {
             display: block;
         }*/
+        /* Initially hide the menu name */
+        .menu-name {
+            display: none;
+            padding-left: 10px;
+        }
+
+        /* Show the menu name when hovering over the menu item */
+        .menu-toggle:hover .menu-name,
+        .sub-menu-list:hover .menu-name {
+            display: inline-block;
+            color: #000; /* You can change the color as needed */
+            font-weight: bold; /* Optional, to emphasize the menu name */
+        }
+
+        /* Optional: Add a transition for a smooth effect */
+        .menu-name {
+            transition: opacity 0.3s ease;
+        }
+
+        /* Remove the downward arrow after the menu icon */
+        .menu-toggle::after {
+            content: none; /* Removes the arrow if it's added via ::after */
+        }
+
+        /* Optionally, hide the arrow icon (e.g., chevron or arrow) if it's added using Font Awesome */
+        .menu-toggle .fa-chevron-down,
+        .menu-toggle .fa-arrow-down {
+            display: none;
+        }
+
+        /* Show the menu name on hover */
+        .menu-toggle:hover .menu-name,
+        .sub-menu-list:hover .menu-name {
+            display: inline-block;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Ensure the menu name remains visible above the card content */
+        .menu-name {
+            position: relative; /* Required for z-index to work */
+            z-index: 1051; /* Ensure it is above the card content */
+            visibility: visible;
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden; /* Allow text overflow if needed */
+            text-overflow: ellipsis; /* Show ellipsis for long text */
+        }
+
+        /* Adjust for the card body area - ensure it doesn’t interfere with the menu */
+
+
+        /* Ensure the sidebar remains visible and does not overlap menu names */
+        .sidebar {
+            position: fixed;
+            z-index: 1050; /* Ensure sidebar stays below the menu name */
+            /*width: 250px;*/
+            /*background-color: #2c3e50;*/
+            /*color: white;*/
+            /*padding: 10px;*/
+            /*height: 100%;*/ /* Ensure sidebar spans full height */
+        }
     </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <%--<script type="text/javascript">
@@ -332,37 +397,53 @@
                         </div>
                     </div>
                     <!-- slider -->
-                    <button id="slider-btn2" class="slider-btn icon-slider-arrow rotate" class="btn-close" data-bs-dismiss="offcanvas">
-                    </button>
+                    <%--<button id="slider-btn2" class="slider-btn icon-slider-arrow" class="btn-close" data-bs-dismiss="offcanvas">
+                    </button>--%>
                 </div>
+
+                <div class="offcanvas offcanvas-start d-flex d-lg-none" tabindex="-1" id="offcanvasNavbar2"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-body">
+                        <!--  -->
+                        <div class="sidebar-closed">
+                            <!-- accordion -->
+                            <div class="accordion" id="accordionExample4">
+                                <!-- accordion Item with body -->
+                                <asp:Literal ID="accordionExamplesd2" runat="server"></asp:Literal>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider -->
+                    <%--<button id="slider-btn4" class="slider-btn icon-slider-arrow" class="btn-close" data-bs-dismiss="offcanvas">
+                    </button>--%>
+                </div>
+
             </div>
         </nav>
         <div class="main-container">
             <!-- sidebar -->
-            <div class="sidebar">
+            <div class="sidebar" id="sidebar">
                 <!-- sidebar open -->
-                <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
                 <div class="sidebar-open" style="overflow: auto; max-height: 600px">
-                    <!-- accordion -->
                     <div class="accordion" id="accordionExample">
-                        <!-- accordion Item with body -->
                         <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                     </div>
-
-
                 </div>
-                <%--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+
                 <!-- sidebar closed -->
                 <div class="sidebar-closed">
-                    <div class="accordion" id="accordionExample">
-                        <!-- Dynamic content for the closed sidebar -->
+                    <div class="accordion" id="accordionExample4">
                         <asp:Literal ID="Literal2" runat="server"></asp:Literal>
                     </div>
                 </div>
+
                 <!-- slider -->
-                <button id="slider-btn" class="slider-btn icon-slider-arrow rotate" onclick="return false;">
+                <button id="slider-btn" class="slider-btn icon-slider-arrow">
                 </button>
             </div>
+
+
             <div class="main-window" style="margin-bottom: 250px;">
                 <div>
                     <asp:ContentPlaceHolder ID="CPHMasterMain" runat="server">
@@ -750,29 +831,89 @@
             }
         </script>--%>
         <script>
-            // You can add an event listener to change the visibility when the sidebar collapses or expands
-// Example JavaScript for toggling icons when sidebar is closed
-//function toggleSidebarIcon(isClosed) {
-//    var iconElements = document.querySelectorAll('.accordion-button .sidebar-headings span');
-//    iconElements.forEach(function(icon) {
-//        if (isClosed) {
-//            icon.classList.remove('fa-chevron-down');  // Replace with the collapsed state icon
-//            icon.classList.add('fa-chevron-up');       // Replace with the expanded state icon
-//        } else {
-//            icon.classList.remove('fa-chevron-up');    // Revert icon when expanded
-//            icon.classList.add('fa-chevron-down');     // Revert to default expanded icon
-//        }
-//    });
-//}
-            document.getElementById('sidebarToggle').addEventListener('click', function() {
-    var sidebar = document.querySelector('.sidebar');
-    var mainContainer = document.querySelector('.main-container');
-    sidebar.classList.toggle('sidebar-open');
-    sidebar.classList.toggle('sidebar-closed');
-    mainContainer.classList.toggle('sidebar-open');
-    mainContainer.classList.toggle('sidebar-closed');
-});
 
+            document.getElementById('sidebarToggle').addEventListener('click', function () {
+                var sidebar = document.querySelector('.sidebar');
+                var mainContainer = document.querySelector('.main-container');
+                sidebar.classList.toggle('sidebar-open');
+                sidebar.classList.toggle('sidebar-closed');
+                mainContainer.classList.toggle('sidebar-open');
+                mainContainer.classList.toggle('sidebar-closed');
+            });
+
+
+        </script>
+
+        <%--<script>
+            // Check the stored sidebar state on page load
+            document.addEventListener('DOMContentLoaded', function () {
+                const sidebar = document.getElementById('sidebar');
+                const sliderButton = document.getElementById('slider-btn');
+
+                // Check if a state exists in localStorage
+                const sidebarState = localStorage.getItem('sidebarState');
+
+                // Apply the saved state, defaulting to 'open' if nothing is saved
+                if (sidebarState === 'closed') {
+                    sidebar.classList.add('closed');
+                    sidebar.classList.remove('open');
+                } else {
+                    sidebar.classList.add('open');
+                    sidebar.classList.remove('closed');
+                }
+
+                // Toggle the sidebar state when the slider button is clicked
+                sliderButton.addEventListener('click', function () {
+                    if (sidebar.classList.contains('open')) {
+                        sidebar.classList.remove('open');
+                        sidebar.classList.add('closed');
+                        localStorage.setItem('sidebarState', 'closed');
+                    } else {
+                        sidebar.classList.remove('closed');
+                        sidebar.classList.add('open');
+                        localStorage.setItem('sidebarState', 'open');
+                    }
+                });
+            });
+
+        </script>--%>
+        <script>
+            // Check the stored sidebar state on page load
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('sidebar');
+    const sliderButton = document.getElementById('slider-btn');
+
+    // Check if a state exists in localStorage
+    const sidebarState = localStorage.getItem('sidebarState');
+
+    // Apply the saved state, defaulting to 'open' if nothing is saved
+    if (sidebarState === 'closed') {
+        sidebar.classList.add('closed');
+        sidebar.classList.remove('open');
+        sliderButton.classList.remove('rotate'); // Remove rotation when sidebar is closed
+    } else {
+        sidebar.classList.add('open');
+        sidebar.classList.remove('closed');
+        sliderButton.classList.add('rotate'); // Add rotation when sidebar is open
+    }
+
+    // Toggle the sidebar state when the slider button is clicked
+    sliderButton.addEventListener('click', function () {
+        if (sidebar.classList.contains('open')) {
+            // Sidebar is open, so close it
+            sidebar.classList.remove('open');
+            sidebar.classList.add('closed');
+            sliderButton.classList.remove('rotate'); // Remove rotation when closing
+            localStorage.setItem('sidebarState', 'closed'); // Save the state as 'closed'
+        } else {
+            // Sidebar is closed, so open it
+            sidebar.classList.remove('closed');
+            sidebar.classList.add('open');
+            sliderButton.classList.add('rotate'); // Add rotation when opening
+            localStorage.setItem('sidebarState', 'open'); // Save the state as 'open'
+        }
+    });
+});
 
         </script>
     </form>

@@ -1,0 +1,1 @@
+Time : 18-Dec-2024 11:57 Message : UserManagement: InsertUpdatePagePermissions() : UserName: Maximus Exception: 42804: column "isdefaultpage" is of type integer but expression is of type boolean
