@@ -690,8 +690,10 @@ button {
 }
 
 .sidebar.closed {
-    width: 50px;
-    padding: 16px 5px 5px;
+    width: 58px;
+    padding: 0px 0px 0px;
+    font-size: large;
+    /*padding: 16px 5px 5px;*/
 }
 
     .sidebar.closed ~ .main-window {
@@ -848,7 +850,7 @@ button {
 
 
 .sidebar-icons::before {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 

@@ -49,17 +49,17 @@
 
     <%-- *Hide left bar menu defult*--%>
     <script>
-        $(document).ready(function () {
-            $('#slider-btn').addClass('rotate');
-            $('.sidebar').addClass('closed');
-        });
-        $('#slider-btn').click(function () {
-            alert("eventtt");
-            $(this).removeClass('rotate');
-            $('.sidebar').removeClass('closed');
-            $(this).toggleClass('rotate');
-            $('.sidebar').toggleClass('closed');
-        });
+        //$(document).ready(function () {
+        //    $('#slider-btn').addClass('rotate');
+        //    $('.sidebar').addClass('closed');
+        //});
+        //$('#slider-btn').click(function () {
+        //    alert("eventtt");
+        //    $(this).removeClass('rotate');
+        //    $('.sidebar').removeClass('closed');
+        //    $(this).toggleClass('rotate');
+        //    $('.sidebar').toggleClass('closed');
+        //});
     </script>
     <%-- *Hide left bar menu defult*--%>
 </asp:Content>

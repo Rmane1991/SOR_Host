@@ -176,7 +176,7 @@
 .icon-rule-management:before {
     content: "\e91a";
     color: var(--color-primary-default);
-    font-size: 18px;
+    font-size: 25px;
 }
 
 
@@ -223,8 +223,9 @@
 }
 
 .icon-restricted:before {
-    content: "\e917";
+    content: "\e918";
     color: var(--color-primary-default);
+    font-size: 25px;
 }
 /*.icon-rule-status:before {
     content: "\f0cb";
