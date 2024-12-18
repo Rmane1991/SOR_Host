@@ -880,6 +880,7 @@
     <Content Include="css\DropDown.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\icons-old.css" />
     <Content Include="css\icons.css" />
     <Content Include="css\jquery.dataTables.min.css" />
     <Content Include="css\new-ticket.css" />
@@ -913,6 +914,7 @@
     <Content Include="DashStyles\extras.1.1.0.min.css" />
     <Content Include="DashStyles\shards-dashboards.1.1.0.css" />
     <Content Include="DashStyles\shards-dashboards.1.1.0.min.css" />
+    <Content Include="ic2\icomoon.svg" />
     <Content Include="icons\icomoon.svg" />
     <Content Include="images\1Resetpassword.png" />
     <Content Include="images\2Unblockuser.png" />
@@ -1127,6 +1129,9 @@
     <Content Include="ExportedExcelFiles\RestrictedName.xls" />
     <Content Include="ExportedExcelFiles\RestrictedPIN.xls" />
     <Content Include="ExportedExcelFiles\ReleaseNote.docx" />
+    <Content Include="ic2\icomoon.eot" />
+    <Content Include="ic2\icomoon.ttf" />
+    <Content Include="ic2\icomoon.woff" />
     <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

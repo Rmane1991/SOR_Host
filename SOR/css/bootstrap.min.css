@@ -4728,7 +4728,7 @@ textarea.form-control-lg {
     }
 
 .accordion-button::after {
-    flex-shrink: 0;
+    flex-shrink: -1;
     width: var(--bs-accordion-btn-icon-width);
     height: var(--bs-accordion-btn-icon-width);
     margin-left: auto;

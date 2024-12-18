@@ -144,6 +144,7 @@
             });
         });
     </script>
+
     <style>
         /*priority*/
         .priority-label {
