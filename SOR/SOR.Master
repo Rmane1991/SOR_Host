@@ -878,39 +878,32 @@
 
         </script>--%>
         <script>
-            // Check the stored sidebar state on page load
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
     const sliderButton = document.getElementById('slider-btn');
 
-    // Check if a state exists in localStorage
     const sidebarState = localStorage.getItem('sidebarState');
 
-    // Apply the saved state, defaulting to 'open' if nothing is saved
     if (sidebarState === 'closed') {
         sidebar.classList.add('closed');
         sidebar.classList.remove('open');
-        sliderButton.classList.remove('rotate'); // Remove rotation when sidebar is closed
+        sliderButton.classList.remove('rotate');
     } else {
         sidebar.classList.add('open');
         sidebar.classList.remove('closed');
-        sliderButton.classList.add('rotate'); // Add rotation when sidebar is open
+        sliderButton.classList.add('rotate');
     }
-
-    // Toggle the sidebar state when the slider button is clicked
     sliderButton.addEventListener('click', function () {
         if (sidebar.classList.contains('open')) {
-            // Sidebar is open, so close it
             sidebar.classList.remove('open');
             sidebar.classList.add('closed');
-            sliderButton.classList.remove('rotate'); // Remove rotation when closing
-            localStorage.setItem('sidebarState', 'closed'); // Save the state as 'closed'
+            sliderButton.classList.remove('rotate');
+            localStorage.setItem('sidebarState', 'closed');
         } else {
-            // Sidebar is closed, so open it
             sidebar.classList.remove('closed');
             sidebar.classList.add('open');
-            sliderButton.classList.add('rotate'); // Add rotation when opening
-            localStorage.setItem('sidebarState', 'open'); // Save the state as 'open'
+            sliderButton.classList.add('rotate');
+            localStorage.setItem('sidebarState', 'open');
         }
     });
 });
