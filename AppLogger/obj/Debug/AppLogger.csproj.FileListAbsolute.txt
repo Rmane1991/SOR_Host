@@ -1,0 +1,232 @@
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\obj\Debug\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\AppLogger\obj\Debug\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\obj\Debug\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Debug\AppLogger.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Debug\AppLogger.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\AppLogger\bin\Debug\AppLogger.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\AppLogger\bin\Debug\AppLogger.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\AppLogger\obj\Debug\AppLogger.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\AppLogger\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\AppLogger\obj\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\sbm\New folder\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\sbm\New folder\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll.CodeAnalysisLog.xml
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll.lastcodeanalysissucceeded
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aakash\SBM\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll
+D:\Aakash\SBM\PayRakamSBM\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aakash\SBM\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Aakash\SBM\PayRakamSBM\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aakash\SBM\PayRakamSBM\AppLogger\obj\Debug\AppLogger.dll
+D:\Aakash\SBM\PayRakamSBM\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aakash\SBM\Proxima\AppLogger\bin\Debug\AppLogger.dll
+D:\Aakash\SBM\Proxima\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aakash\SBM\Proxima\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Aakash\SBM\Proxima\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aakash\SBM\Proxima\AppLogger\obj\Debug\AppLogger.dll
+D:\Aakash\SBM\Proxima\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aakash\SOR\SOR\AppLogger\bin\Debug\AppLogger.dll
+D:\Aakash\SOR\SOR\AppLogger\bin\Debug\AppLogger.pdb
+D:\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.dll
+D:\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.pdb
+D:\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.AssemblyReference.cache
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\bin\Debug\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\bin\Debug\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\bin\Debug\Newtonsoft.Json.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\bin\Debug\Newtonsoft.Json.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\obj\Debug\AppLogger.csproj.CopyComplete
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\obj\Debug\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\AppLogger\obj\Debug\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR\AppLogger\bin\Debug\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR\AppLogger\bin\Debug\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR\AppLogger\bin\Debug\Newtonsoft.Json.dll
+D:\D Data\Aakash\SOR\SOR\AppLogger\bin\Debug\Newtonsoft.Json.xml
+D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CopyComplete
+D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.pdb

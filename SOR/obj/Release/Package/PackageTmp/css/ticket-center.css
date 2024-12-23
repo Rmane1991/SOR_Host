@@ -1,0 +1,448 @@
+/* -------------------------------------- Import Style css -------------------------------------- */
+
+@import "./style.css";
+
+/* ticket Center  Css  */
+
+.ticket-center-alert {
+    background-color: var(--alert-bg);
+    border: 1px solid var(--alert-border);
+    border-radius: 8px;
+    font-size: var(--font-m-size12);
+    color: #000;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.ticket-center-alert strong {
+    font-weight: 600;
+}
+
+.ticket-center-alert .btn-close {
+    padding: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 6px;
+    font-size: var(--font-m-size12);
+}
+
+.ticket-center-alert .btn-close:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.ticket-center-alert .btn-close:active {
+    border: none;
+    box-shadow: none;
+}
+
+/* SearchBox */
+
+.searchbox {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-light-blue);
+    border: 1px solid var(--color-border-default);
+    border-radius: 8px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+    /* overflow: hidden; */
+    transition: all 0.3s ease-in-out;
+}
+
+.SearchHeader {
+    width: 100%;
+    height: 48px;
+    padding: 17px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.15s ease-in-out;
+}
+
+.seachHeaderBtns {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.searchHeader-heading {
+    font-size: var(--font-m-size14);
+    font-weight: 600;
+    color: var(--color-black);
+    line-height: 1;
+}
+
+.search-hr {
+    opacity: 1;
+    color: var(--color-border-default);
+    margin: 0;
+}
+
+/* grid css */
+
+.selectInput-grid20 .col {
+    width: 20%;
+    max-width: 20%;
+}
+
+.select-grid-gap {
+    padding: 0 6px;
+}
+
+.select-grid-gap.row>* {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 12px;
+}
+
+.selectGrid-m-y {
+    /* margin-top: 8px; */
+    margin-bottom: 12px;
+}
+
+/* --grid css */
+
+
+/* summary Css */
+
+.summary-accordion .accordion-item {
+    border-radius: 8px;
+    background-color: var(--color-light-blue);
+    border: 1px solid var(--color-border-default);
+}
+
+.summary-accordion .accordion-header {
+    padding: 12px;
+}
+
+.show-hide-btn {
+    width: 88px;
+    height: 24px;
+    border: 1px solid var(--color-primary-default);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.show-hide-btn p {
+
+    color: var(--color-primary-default) !important;
+    font-size: var(--font-m-size10);
+    font-weight: 500;
+}
+
+
+.summary-accordion .accordion-body {
+    padding: 0 12px;
+}
+
+.summary-accordion .summary-subheading {
+    font-size: var(--font-m-size10);
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+/* Summary */
+.summaryRed {
+    color: #c54031 !important;
+}
+
+.summaryBlue {
+    color: #00b6ef !important;
+}
+
+.summaryYellow {
+    color: #e4b830 !important;
+}
+
+.summaryRow {
+    width: 100%;
+    display: flex;
+}
+
+.summaryRow .summaryTableBox:first-child {
+    width: 272px;
+}
+
+.summaryRow .summaryTableBox:nth-child(2) {
+    width: 537px;
+    margin-left: 6px;
+}
+
+.summaryRow .summaryTableBox:last-child {
+    width: 495px;
+    margin-left: 6px;
+}
+
+.summaryTableBox {
+    background-color: var(--border-box-bg);
+    border: 1px solid var(--color-border-default);
+    border-radius: 8px;
+    padding: 12px 0 12px 9px;
+    margin-bottom: 12px;
+}
+
+.summaryTableBox .table {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.summaryContentLeft thead th,
+.summaryContentLeft tbody td,
+.summaryContentCenter thead th,
+.summaryContentCenter tbody td {
+    font-weight: 400;
+    font-size: var(--font-m-size08);
+    color: var(--color-black);
+    padding: 0;
+    width: 25%;
+    text-align: center;
+}
+
+.summaryContentLeft tbody td,
+.summaryContentCenter tbody td {
+    font-weight: 600;
+    font-size: var(--font-m-size10);
+    padding-top: 4px;
+}
+
+.summaryContentCenter thead th,
+.summaryContentCenter tbody td {
+    width: auto;
+}
+
+
+/* summary Css */
+
+
+
+/* alfilter logic */
+
+.searchbox .col-all-filter {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.searchbox.hide-some-filters .col-all-filter {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    max-height: 0%;
+    padding: 0;
+    margin: 0;
+}
+
+.searchbox .show .hide-all-filters {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.searchbox.hide .hide-all-filters {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    max-height: 0%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.searchbox-btns {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+
+
+/* rset btn */
+
+.resetBtn:hover {
+    background-color: var(--border-box-bg);
+    border: 1px solid #003087;
+    border: 1px solid var(--color-primary-default);
+}
+
+
+/* modals */
+
+.filtermodalText-1 {
+    font-size: var(--font-m-size14);
+    color: var(--color-black);
+    margin-top: 8px;
+    text-align: center;
+    width: 65%;
+}
+
+.filterModalImg {
+    width: 56px;
+    height: auto;
+}
+
+.filtersmodal .modal-body {
+    padding: 24px 0 30px;
+}
+
+.editTableModal .modal-body {
+    background-color: var(--color-background-default);
+    padding: 18px 30px 30px;
+}
+
+.editTableModal .modal-body textarea {
+    background-color: var(--border-box-bg);
+    border: 1px solid var(--color-border-default);
+    color: var(--color-black);
+    font-size: var(--font-m-size12);
+    height: 80px;
+    letter-spacing: .02em;
+    padding: 8px 0 0 12px;
+}
+
+.editTableModal .modal-body textarea::placeholder {
+    font-size: var(--font-m-size12);
+}
+
+.editTableBtns {
+    margin-top: 18px;
+}
+
+
+.icon-Plus{
+    cursor: pointer;
+}
+
+
+/* media */
+
+
+
+@media (max-width: 768px) {
+
+    .selectInput-grid20 .col {
+        width: 25%;
+        max-width: 25%;
+    }
+
+    .summaryRow {
+        flex-direction: column;
+    }
+
+    .summaryRow .summaryTableBox:first-child,
+    .summaryRow .summaryTableBox:nth-child(2),
+    .summaryRow .summaryTableBox:last-child {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    ::-webkit-scrollbar:vertical {
+        display: none;
+    }
+
+    .table-box-top .addToWorkList,
+    .table-box-top .ticketAddBtn,
+    .table-box-top .ticketAddBtnOutline {
+        display: none;
+    }
+
+    .ticketCentreTableHeader .ticketCenterTableHeadTop .has-search .form-control {
+        width: 100%;
+    }
+
+    .ticketCentreTableHeader .ticketCenterTableHeadTop .has-search {
+        width: 100%;
+        margin-right: 3px;
+    }
+
+    .ticketCentreTableHeadBottom {
+        display: flex !important;
+    }
+
+    .ticketCentreTableHeader .ticketCentreTableHeadBottom .addToWorkList {
+        width: 100% !important;
+    }
+
+
+    .TicketCentreTableHeadBottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 6px 0;
+    }
+
+    .addToWorkList {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .has-search .form-control {
+        width: 100% !important;
+    }
+    
+    .TicketCentreTableHeadBottom {
+        display: flex !important;
+    }
+
+    .ticketCentreTableHeader .ticketCenterTableHeadTop .has-search {
+        margin-right: 3px;
+        width: 100%;
+    }
+}
+
+
+@media(max-width:576px) {
+    .selectInput-grid20 .col {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .has-search {
+        position: relative;
+        margin-right: 3px;
+    }
+}
+
+@media (max-width: 426px) {
+    .has-search .form-control {
+        width: 84px;
+        margin-left: 3px;
+        padding-left: 24px;
+    }
+
+    .iconButtonBox {
+        margin-left: 3px !important;
+    }
+}
+
+
+
+@media(max-width:425px) {
+    .searchbox-btns button {
+        width: 100%;
+    }
+}

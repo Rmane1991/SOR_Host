@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger\bin\Debug\AppLogger.dll">
+   <Modules>
+    <Module Name="applogger.dll">
+     <Namespaces>
+      <Namespace Name="AppLogger">
+       <Types>
+        <Type Name="ErrorLog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AdminManagementError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1575">Object 'tw' can be disposed more than once in method 'ErrorLog.AdminManagementError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1575</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AdminManagementTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1550">Object 'tw' can be disposed more than once in method 'ErrorLog.AdminManagementTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1550</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AgentManagementError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1094">Object 'tw' can be disposed more than once in method 'ErrorLog.AgentManagementError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1094</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AgentManagementTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1069">Object 'tw' can be disposed more than once in method 'ErrorLog.AgentManagementTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1069</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BCManagementError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1288">Object 'tw' can be disposed more than once in method 'ErrorLog.BCManagementError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1288</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BCManagementTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1263">Object 'tw' can be disposed more than once in method 'ErrorLog.BCManagementTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1263</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BillerError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="998">Object 'tw' can be disposed more than once in method 'ErrorLog.BillerError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 998</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BillerTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="974">Object 'tw' can be disposed more than once in method 'ErrorLog.BillerTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 974</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommissionConfigError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1386">Object 'tw' can be disposed more than once in method 'ErrorLog.CommissionConfigError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1386</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommissionConfigTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1361">Object 'tw' can be disposed more than once in method 'ErrorLog.CommissionConfigTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1361</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommissionError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1480">Object 'tw' can be disposed more than once in method 'ErrorLog.CommissionError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1480</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommissionTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1456">Object 'tw' can be disposed more than once in method 'ErrorLog.CommissionTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1456</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommonError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="81">Object 'tw' can be disposed more than once in method 'ErrorLog.CommonError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 81</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommonTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="35">Object 'tw' can be disposed more than once in method 'ErrorLog.CommonTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 35</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CommonTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="57">Object 'tw' can be disposed more than once in method 'ErrorLog.CommonTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 57</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateAEPS_JSONFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="517">'ErrorLog.CreateAEPS_JSONFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateBBPS_XMLFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="441">'ErrorLog.CreateBBPS_XMLFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateCommissionFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="593">'ErrorLog.CreateCommissionFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateDeviceEKYC_XMLFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="839">'ErrorLog.CreateDeviceEKYC_XMLFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateDMT_XMLFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="367">'ErrorLog.CreateDMT_XMLFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateEKYC_XMLFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="727">'ErrorLog.CreateEKYC_XMLFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="346">'ErrorLog.CreateFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateOTP_XMLFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="386">'ErrorLog.CreateOTP_XMLFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateRecharge_XMLFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="479">'ErrorLog.CreateRecharge_XMLFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateVirtualAccount_JSONFile()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="555">'ErrorLog.CreateVirtualAccount_JSONFile()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DashboardError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1674">Object 'tw' can be disposed more than once in method 'ErrorLog.DashboardError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1674</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DashboardTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1649">Object 'tw' can be disposed more than once in method 'ErrorLog.DashboardTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1649</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DBError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="129">Object 'tw' can be disposed more than once in method 'ErrorLog.DBError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 129</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DBTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="104">Object 'tw' can be disposed more than once in method 'ErrorLog.DBTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 104</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeviceEKYCError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="821">Object 'tw' can be disposed more than once in method 'ErrorLog.DeviceEKYCError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 821</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EKYCError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="770">Object 'tw' can be disposed more than once in method 'ErrorLog.EKYCError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 770</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LimitError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1192">Object 'tw' can be disposed more than once in method 'ErrorLog.LimitError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1192</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LimitTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1165">Object 'tw' can be disposed more than once in method 'ErrorLog.LimitTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1165</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ProfileError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1527">Object 'tw' can be disposed more than once in method 'ErrorLog.ProfileError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1527</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ProfileTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1503">Object 'tw' can be disposed more than once in method 'ErrorLog.ProfileTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1503</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReportError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1142">Object 'tw' can be disposed more than once in method 'ErrorLog.ReportError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1142</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReportTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1117">Object 'tw' can be disposed more than once in method 'ErrorLog.ReportTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1117</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SMSError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="226">Object 'tw' can be disposed more than once in method 'ErrorLog.SMSError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 226</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SMSTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="201">Object 'tw' can be disposed more than once in method 'ErrorLog.SMSTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 201</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TerminalLogsError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1315">Object 'tw' can be disposed more than once in method 'ErrorLog.TerminalLogsError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1315</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TerminalLogsTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1338">Object 'tw' can be disposed more than once in method 'ErrorLog.TerminalLogsTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1338</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TransactionReportError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1240">Object 'tw' can be disposed more than once in method 'ErrorLog.TransactionReportError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1240</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TransactionReportTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1215">Object 'tw' can be disposed more than once in method 'ErrorLog.TransactionReportTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1215</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TransSettlmentError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="659">Object 'tw' can be disposed more than once in method 'ErrorLog.TransSettlmentError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 659</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TransSettlmentTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="634">Object 'tw' can be disposed more than once in method 'ErrorLog.TransSettlmentTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 634</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UploadError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1625">Object 'tw' can be disposed more than once in method 'ErrorLog.UploadError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1625</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UploadTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1600">Object 'tw' can be disposed more than once in method 'ErrorLog.UploadTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1600</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WalletTransferError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1046">Object 'tw' can be disposed more than once in method 'ErrorLog.WalletTransferError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1046</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WalletTransferTrace(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1021">Object 'tw' can be disposed more than once in method 'ErrorLog.WalletTransferTrace(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1021</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeAEPSLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="534">'ErrorLog.writeAEPSLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeAgentEKYCLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="744">'ErrorLog.writeAgentEKYCLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeAgentVA_Logs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="572">'ErrorLog.writeAgentVA_Logs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeBBPSLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="458">'ErrorLog.writeBBPSLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeCommission_Logs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="610">'ErrorLog.writeCommission_Logs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeDeviceEKYCLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="855">'ErrorLog.writeDeviceEKYCLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeDMTLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="403">'ErrorLog.writeDMTLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogAlertError(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="906">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogAlertError(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 906</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogAlertTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="882">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogAlertTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 882</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogBBPSComlaintsError(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="276">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogBBPSComlaintsError(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 276</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogBBPSComlaintsTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="252">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogBBPSComlaintsTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 252</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogDeviceEKYCTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="796">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogDeviceEKYCTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 796</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogEmail(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="155">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogEmail(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 155</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogEmailError(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="178">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogEmailError(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 178</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogOtherComlaintsTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="302">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogOtherComlaintsTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 302</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogOthersComlaintsError(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="326">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogOthersComlaintsError(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 326</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogRefilTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="682">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogRefilTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 682</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeLogRefilTransError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="707">Object 'tw' can be disposed more than once in method 'ErrorLog.writeLogRefilTransError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 707</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeOTPLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="420">'ErrorLog.writeOTPLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#writeRechargeLogs(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="496">'ErrorLog.writeRechargeLogs(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ZOMError(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1433">Object 'tw' can be disposed more than once in method 'ErrorLog.ZOMError(Exception)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1433</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ZOMTrans(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2023-03-17 14:36:52Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\AppLogger" File="ErrorLog.cs" Line="1409">Object 'tw' can be disposed more than once in method 'ErrorLog.ZOMTrans(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1409</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1674</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

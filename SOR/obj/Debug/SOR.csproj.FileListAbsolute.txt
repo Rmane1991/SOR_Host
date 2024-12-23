@@ -1,0 +1,775 @@
+D:\Aakash\SOR\SOR\SOR\bin\SOR.dll.config
+D:\Aakash\SOR\SOR\SOR\bin\SOR.dll
+D:\Aakash\SOR\SOR\SOR\bin\SOR.pdb
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\csc.exe
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\csc.exe.config
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\csc.rsp
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\csi.exe
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\csi.exe.config
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\csi.rsp
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.AppContext.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Collections.Immutable.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Console.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Compression.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.FileSystem.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Pipes.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Reflection.Metadata.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.AccessControl.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Claims.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.ValueTuple.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XPath.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.exe
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.exe.config
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.rsp
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\VBCSCompiler.exe
+D:\Aakash\SOR\SOR\SOR\bin\roslyn\VBCSCompiler.exe.config
+D:\Aakash\SOR\SOR\SOR\bin\AppLogger.dll
+D:\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Aakash\SOR\SOR\SOR\bin\ClosedXML.dll
+D:\Aakash\SOR\SOR\SOR\bin\AppLogger.pdb
+D:\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.pdb
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.CoreCompileInputs.cache
+D:\Aakash\SOR\SOR\SOR\obj\Debug\SOR.dll
+D:\Aakash\SOR\SOR\SOR\obj\Debug\SOR.pdb
+D:\Aakash\SOR\SOR\SOR\bin\itextsharp.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Win32.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\netstandard.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.AppContext.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Collections.Concurrent.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Collections.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Collections.NonGeneric.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Collections.Specialized.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.EventBasedAsync.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.TypeConverter.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Console.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Data.Common.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Contracts.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Debug.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.FileVersionInfo.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Process.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.StackTrace.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.TextWriterTraceListener.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Tools.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.TraceSource.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Tracing.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Drawing.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Dynamic.Runtime.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Globalization.Calendars.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Globalization.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Globalization.Extensions.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.Compression.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.Compression.ZipFile.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.DriveInfo.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.Watcher.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.IsolatedStorage.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.MemoryMappedFiles.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.Pipes.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.IO.UnmanagedMemoryStream.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Linq.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Linq.Expressions.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Linq.Parallel.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Linq.Queryable.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.Http.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.NameResolution.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.NetworkInformation.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.Ping.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.Requests.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.Security.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.Sockets.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.WebHeaderCollection.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.WebSockets.Client.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Net.WebSockets.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.ObjectModel.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Reflection.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Reflection.Extensions.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Reflection.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Resources.Reader.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Resources.ResourceManager.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Resources.Writer.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.VisualC.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Extensions.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Handles.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.InteropServices.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Numerics.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Formatters.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Json.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Xml.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Claims.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Algorithms.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Csp.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Encoding.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Primitives.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.Principal.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Security.SecureString.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.Extensions.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.RegularExpressions.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Overlapped.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Parallel.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Thread.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.ThreadPool.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Timer.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.ValueTuple.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Xml.ReaderWriter.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Xml.XDocument.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Xml.XmlDocument.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Xml.XmlSerializer.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Xml.XPath.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Xml.XPath.XDocument.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.HashCode.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Aakash\SOR\SOR\SOR\bin\Npgsql.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Buffers.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Collections.Immutable.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Memory.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Numerics.Vectors.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.Encodings.Web.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.Json.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Channels.dll
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Extensions.dll
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.HashCode.xml
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Aakash\SOR\SOR\SOR\bin\Npgsql.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Buffers.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Collections.Immutable.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Memory.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Numerics.Vectors.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.Encodings.Web.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Text.Json.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Channels.xml
+D:\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Extensions.xml
+D:\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.dll.config
+D:\Aakash\SOR\SOR\SOR\bin\System.ValueTuple.xml
+D:\Aakash\SOR\SOR\SOR\bin\Newtonsoft.Json.dll
+D:\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.AssemblyReference.cache
+D:\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.Up2Date
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\SOR.dll.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\SOR.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\SOR.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\csc.exe
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\csc.exe.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\csc.rsp
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\csi.exe
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\csi.exe.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\csi.rsp
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.Managed.Core.targets
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.AppContext.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Collections.Immutable.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Console.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.IO.Compression.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.IO.FileSystem.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.IO.Pipes.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Reflection.Metadata.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.AccessControl.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.Claims.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Security.Principal.Windows.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.ValueTuple.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Xml.XmlDocument.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Xml.XPath.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\vbc.exe
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\vbc.exe.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\vbc.rsp
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\VBCSCompiler.exe
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\roslyn\VBCSCompiler.exe.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Win32.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\netstandard.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.AppContext.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Collections.Concurrent.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Collections.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Collections.NonGeneric.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Collections.Specialized.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ComponentModel.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ComponentModel.EventBasedAsync.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ComponentModel.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ComponentModel.TypeConverter.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Console.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Data.Common.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.Contracts.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.Debug.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.FileVersionInfo.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.Process.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.StackTrace.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.TextWriterTraceListener.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.Tools.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.TraceSource.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.Tracing.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Drawing.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Dynamic.Runtime.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Globalization.Calendars.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Globalization.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Globalization.Extensions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.Compression.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.Compression.ZipFile.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.FileSystem.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.FileSystem.DriveInfo.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.FileSystem.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.FileSystem.Watcher.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.IsolatedStorage.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.MemoryMappedFiles.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.Pipes.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.IO.UnmanagedMemoryStream.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Linq.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Linq.Expressions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Linq.Parallel.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Linq.Queryable.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.Http.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.NameResolution.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.NetworkInformation.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.Ping.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.Requests.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.Security.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.Sockets.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.WebHeaderCollection.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.WebSockets.Client.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Net.WebSockets.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ObjectModel.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Reflection.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Reflection.Extensions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Reflection.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Resources.Reader.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Resources.ResourceManager.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Resources.Writer.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.CompilerServices.VisualC.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Extensions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Handles.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.InteropServices.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Numerics.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Serialization.Formatters.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Serialization.Json.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Serialization.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.Serialization.Xml.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Claims.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Cryptography.Algorithms.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Cryptography.Csp.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Cryptography.Encoding.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Cryptography.Primitives.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Cryptography.X509Certificates.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.Principal.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Security.SecureString.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.Encoding.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.Encoding.Extensions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.RegularExpressions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Overlapped.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Tasks.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Tasks.Parallel.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Thread.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.ThreadPool.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Timer.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Xml.ReaderWriter.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Xml.XDocument.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Xml.XmlDocument.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Xml.XmlSerializer.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Xml.XPath.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Xml.XPath.XDocument.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\BussinessAccessLayer.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Bcl.HashCode.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Newtonsoft.Json.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Npgsql.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Buffers.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Collections.Immutable.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Memory.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Numerics.Vectors.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.Encodings.Web.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.Json.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Channels.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Tasks.Extensions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ValueTuple.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\itextsharp.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\BussinessAccessLayer.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\BussinessAccessLayer.dll.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Bcl.HashCode.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Newtonsoft.Json.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Npgsql.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Buffers.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Collections.Immutable.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Memory.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Numerics.Vectors.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.Encodings.Web.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Text.Json.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Channels.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.Threading.Tasks.Extensions.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\System.ValueTuple.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\obj\Debug\SOR.csprojAssemblyReference.cache
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\obj\Debug\SOR.csproj.CoreCompileInputs.cache
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\obj\Debug\SOR.csproj.CopyComplete
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\obj\Debug\SOR.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\SOR\obj\Debug\SOR.pdb
+D:\D Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csprojAssemblyReference.cache
+D:\D Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.CoreCompileInputs.cache
+D:\D Data\Aakash\SOR\SOR\SOR\bin\SOR.dll.config
+D:\D Data\Aakash\SOR\SOR\SOR\bin\SOR.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\SOR.pdb
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\csc.exe
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\csc.exe.config
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\csc.rsp
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\csi.exe
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\csi.exe.config
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\csi.rsp
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.Managed.Core.targets
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.AppContext.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Collections.Immutable.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Console.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Compression.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.FileSystem.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Pipes.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Reflection.Metadata.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.AccessControl.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Claims.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Principal.Windows.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.ValueTuple.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XmlDocument.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XPath.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.exe
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.exe.config
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.rsp
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\VBCSCompiler.exe
+D:\D Data\Aakash\SOR\SOR\SOR\bin\roslyn\VBCSCompiler.exe.config
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Win32.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\netstandard.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.AppContext.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Concurrent.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Collections.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Collections.NonGeneric.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Specialized.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.EventBasedAsync.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.TypeConverter.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Console.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Data.Common.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Contracts.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Debug.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.FileVersionInfo.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Process.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.StackTrace.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.TextWriterTraceListener.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Tools.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.TraceSource.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Tracing.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Drawing.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Dynamic.Runtime.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Globalization.Calendars.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Globalization.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Globalization.Extensions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.Compression.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.Compression.ZipFile.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.DriveInfo.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.Watcher.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.IsolatedStorage.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.MemoryMappedFiles.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.Pipes.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.IO.UnmanagedMemoryStream.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Linq.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Linq.Expressions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Linq.Parallel.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Linq.Queryable.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.Http.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.NameResolution.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.NetworkInformation.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.Ping.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.Requests.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.Security.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.Sockets.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.WebHeaderCollection.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.WebSockets.Client.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Net.WebSockets.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ObjectModel.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Reflection.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Reflection.Extensions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Reflection.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Resources.Reader.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Resources.ResourceManager.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Resources.Writer.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.VisualC.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Extensions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Handles.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.InteropServices.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Numerics.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Formatters.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Json.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Xml.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Claims.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Algorithms.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Csp.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Encoding.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Primitives.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.X509Certificates.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.Principal.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Security.SecureString.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.Extensions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.RegularExpressions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Overlapped.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Parallel.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Thread.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.ThreadPool.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Timer.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Xml.ReaderWriter.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XDocument.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XmlDocument.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XmlSerializer.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XPath.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XPath.XDocument.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.HashCode.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Newtonsoft.Json.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Npgsql.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Buffers.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Immutable.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Memory.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Numerics.Vectors.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encodings.Web.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.Json.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Channels.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Extensions.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ValueTuple.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\itextsharp.dll
+D:\D Data\Aakash\SOR\SOR\SOR\bin\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.pdb
+D:\D Data\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.dll.config
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.HashCode.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Newtonsoft.Json.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Npgsql.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Buffers.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Immutable.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Memory.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Numerics.Vectors.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encodings.Web.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Text.Json.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Channels.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Extensions.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\System.ValueTuple.xml
+D:\D Data\Aakash\SOR\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\D Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.CopyComplete
+D:\D Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.dll
+D:\D Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.pdb
+D:\Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.CoreCompileInputs.cache
+D:\Data\Aakash\SOR\SOR\SOR\bin\SOR.dll.config
+D:\Data\Aakash\SOR\SOR\SOR\bin\SOR.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\SOR.pdb
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\csc.exe
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\csc.exe.config
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\csc.rsp
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\csi.exe
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\csi.exe.config
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\csi.rsp
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.AppContext.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Collections.Immutable.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Console.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Compression.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.FileSystem.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.IO.Pipes.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Reflection.Metadata.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.AccessControl.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Claims.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.ValueTuple.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XPath.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.exe
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.exe.config
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\vbc.rsp
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\VBCSCompiler.exe
+D:\Data\Aakash\SOR\SOR\SOR\bin\roslyn\VBCSCompiler.exe.config
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Win32.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\netstandard.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.AppContext.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Concurrent.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Collections.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Collections.NonGeneric.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Specialized.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.EventBasedAsync.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ComponentModel.TypeConverter.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Console.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Data.Common.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Contracts.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Debug.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.FileVersionInfo.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Process.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.StackTrace.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.TextWriterTraceListener.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Tools.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.TraceSource.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.Tracing.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Drawing.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Dynamic.Runtime.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Globalization.Calendars.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Globalization.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Globalization.Extensions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.Compression.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.Compression.ZipFile.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.DriveInfo.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.FileSystem.Watcher.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.IsolatedStorage.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.MemoryMappedFiles.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.Pipes.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.IO.UnmanagedMemoryStream.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Linq.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Linq.Expressions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Linq.Parallel.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Linq.Queryable.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.Http.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.NameResolution.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.NetworkInformation.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.Ping.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.Requests.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.Security.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.Sockets.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.WebHeaderCollection.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.WebSockets.Client.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Net.WebSockets.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ObjectModel.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Reflection.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Reflection.Extensions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Reflection.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Resources.Reader.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Resources.ResourceManager.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Resources.Writer.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.VisualC.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Extensions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Handles.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.InteropServices.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Numerics.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Formatters.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Json.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.Serialization.Xml.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Claims.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Algorithms.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Csp.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Encoding.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.Primitives.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.Principal.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Security.SecureString.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.Extensions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.RegularExpressions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Overlapped.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Parallel.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Thread.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.ThreadPool.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Timer.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Xml.ReaderWriter.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XDocument.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XmlDocument.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XmlSerializer.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XPath.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Xml.XPath.XDocument.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\AngleSharp.Css.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\AngleSharp.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\AppLogger.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\HtmlSanitizer.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\ICSharpCode.SharpZipLib.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.HashCode.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Newtonsoft.Json.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\Npgsql.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Buffers.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Immutable.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Memory.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Numerics.Vectors.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.CodePages.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encodings.Web.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Json.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Channels.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Extensions.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ValueTuple.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\itextsharp.dll
+D:\Data\Aakash\SOR\SOR\SOR\bin\AngleSharp.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\AngleSharp.Css.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\AppLogger.pdb
+D:\Data\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.pdb
+D:\Data\Aakash\SOR\SOR\SOR\bin\BussinessAccessLayer.dll.config
+D:\Data\Aakash\SOR\SOR\SOR\bin\HtmlSanitizer.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\ICSharpCode.SharpZipLib.pdb
+D:\Data\Aakash\SOR\SOR\SOR\bin\ICSharpCode.SharpZipLib.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Bcl.HashCode.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Newtonsoft.Json.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Npgsql.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Buffers.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Collections.Immutable.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Memory.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Numerics.Vectors.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encoding.CodePages.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Encodings.Web.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Text.Json.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Channels.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.Threading.Tasks.Extensions.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\System.ValueTuple.xml
+D:\Data\Aakash\SOR\SOR\SOR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csprojAssemblyReference.cache
+D:\Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.csproj.CopyComplete
+D:\Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.dll
+D:\Data\Aakash\SOR\SOR\SOR\obj\Debug\SOR.pdb

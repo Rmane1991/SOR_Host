@@ -1880,7 +1880,7 @@ $(document).ready(function () {
             {
                 updatesTable = CreateUpdatesDataTable();
 
-                if (rptSwitchDetailsDelete != null)
+                if (ViewState["Delete_dt"] == null)
                 {
                     #region % Validation
 

@@ -1,0 +1,60 @@
+.switchh input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Container for the switch */
+.switchh {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Slider styling */
+.sliderr {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Slider round element */
+/*.sliderr:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s;
+    left: 4px;
+    bottom: 4px;
+}*/
+    /* Slider round element */
+    .sliderr:before {
+        content: "";
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: white;
+        transition: .4s;
+        left: 4px;
+        bottom: 3px;
+    }
+
+/* Checked state: slider color and position */
+input:checked + .sliderr {
+    background-color: #0d6efd;
+}
+
+input:checked + .sliderr:before {
+    transform: translateX(18px);
+}

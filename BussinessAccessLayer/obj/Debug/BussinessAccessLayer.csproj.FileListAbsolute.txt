@@ -1,0 +1,1556 @@
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\CommonClasses.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\itextsharp.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\itextsharp.pdfa.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\itextsharp.xmlworker.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\CommonClasses.pdb
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\PayRakam\Build\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\September\PayRakam_Sept_25\PayRakam\Build\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_01\PayRakam\Build\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_01\PayRakam\Build\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_01\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_01\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_01\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_02\PayRakam\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\AppLogger.dll
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+\\192.168.1.167\Shared Folder\Vishnu\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\AppLogger.dll
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+E:\Payrakam\PayRakmVishnu\PayRakam_Oct_03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Rohini\PayRakam_Oct_19\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_19\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\AppLogger.dll
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+\\192.168.1.167\Shared Folder\Vishnu\Latest Patch_26_Oct_2020\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\payrakam Current\Payrakam Latest(15-09-2020)\Vishnu\26-10-2020_working\PayRakam_Oct_20_Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\PayRakam_Oct_26_QA_Patch\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\SVN Working\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\AppLogger.dll
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+E:\Payrakam\PayRakmVishnu\Latest_31_Oct\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\October\SVN Working\Working Backup - Copy\Latest_31_Oct\Working\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_03_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_09_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_10_Nov_TEST_Patch\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_13_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_17_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_17_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_20_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_22_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\VAPT Patches\Code\BTI_PayRakam_22_Nov_VAPT\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_24_Nov\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transist\Shalan\BTI_PayRakam_25_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\November\BTI_PayRakam_29_Nov\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_03_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_04_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_08_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_18_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_19_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_19_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+\\192.168.1.167\Shared Folder\LatestSolution\December\BTI_PayRakam_22_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+E:\Payrakam\LatesSolution\BTI_PayRakam_23_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\December\BTI_PayRakam_26_Dec\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_3_Jan\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 January\BTI_PayRakam_8_Jan_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 Feb\BTI_PayRakam_1_Feb_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 MARCH\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_1_March_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\New folder\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_10_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_15_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_17_April_Vers2.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 April\Prod\BTI_PayRakam_29_April_Vers2.0_Mantra\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_03_May_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_08_May_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\Production\BTI_PayRakam_19_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 May\BTI_PayRakam_28_May_Vers3.0_Main_Latest_Prod\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_03_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_14_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_18_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_23_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 June\Production\BTI_PayRakam_June_28_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_01_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_06_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_PayRakam_July_14_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 July\Production\BTI_Payrakham_July_29_2021\BTI_PayRakam_July_27_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_05_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMInterface.dll
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\BTI mATM\WEB\2021 August\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMInterface.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.01\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_04_Ver3.00.09\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_12_Ver3.00.12\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transit\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transit\PayRakam Latest(02062022)\latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transit\PayRakam Latest(02062022)\latest\aarti\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\EncryptionDecryption.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Icommon.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\KEK.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakam\Latest\PayRakam_Mar_12_Ver3.00.17\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\AppLogger.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+C:\Users\akash.gaikar\Downloads\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\PayRakam (2)\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam (2)\BussinessAccessLayer\bin\Debug\ClosedXML.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakamSBM_29-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\131220222 LAtest SBM Payrakam\afternoon\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\sbm\New folder\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\14122022 Latest SBM Payrakm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\latest solutionsbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+C:\Users\ankita.sutar\Downloads\omkar\17122022 latest sbm payrakam\15122022 Payrakam sbm\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\New_PayRakamSBM_30-11-22\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Transit\Sbm_Payrakam_new\Aarti\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\PayRakum New\19122022 SBM_PAYRAKAM\19122022_19.55\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\19122022\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\Admin\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+C:\Users\dhokane.sachin\Downloads\PayRakamSBM (31122022)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\PayRKMENTITY.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aarti\Projects\Transit\PayRakam SBM_ 28-11-2022\PayRakam SBM 05012023\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\SBM Payrakam\20122022\26122022\PayRakam SBM Merge\Latest_02012023\05012023\Cleaned_Solution\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aakash\SBM\PayRakamSBM (22032023)\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aakash\SBM\PayRakamSBM\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aakash\SBM\Proxima\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll.config
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Memory.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.dll
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.pdb
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Memory.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.xml
+D:\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.AssemblyReference.cache
+D:\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\Bussines.28E92536.Up2Date
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll.config
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\Npgsql.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Memory.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\Npgsql.pdb
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\Npgsql.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Memory.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.xml
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\D Data\Aakash\SOR\SOR_19102024\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll.config
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Memory.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.pdb
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Memory.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.xml
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\D Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll.config
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\AppLogger.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Memory.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.pdb
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\Npgsql.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Buffers.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Memory.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\bin\Debug\System.ValueTuple.xml
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
+D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
