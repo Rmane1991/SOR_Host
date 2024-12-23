@@ -1,0 +1,218 @@
+/* -------------------------------------- Import Style css -------------------------------------- */
+
+@import "./style.css";
+
+/* ticket Center  Css  */
+
+.ticket-center-alert {
+  background-color: var(--alert-bg);
+  border: 1px solid var(--alert-border);
+  border-radius: 8px;
+  font-size: var(--font-m-size12);
+  color: #000;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.ticket-center-alert strong {
+  font-weight: 600;
+}
+
+.ticket-center-alert .btn-close {
+  padding: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 6px;
+  font-size: var(--font-m-size12);
+}
+
+.ticket-center-alert .btn-close:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.ticket-center-alert .btn-close:active {
+  border: none;
+  box-shadow: none;
+}
+
+/* -------------------------------------- Aging Queue Css -------------------------------------- */
+
+.oneGreyBox {
+  width: 42px;
+  height: 27px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: var(--font-m-size12);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000 !important ;
+  margin: 0 auto;
+}
+
+.greyBoxTwo {
+  background-color: #e6e6e6;
+}
+
+.greyBoxThree {
+  background-color: #e0e0e0;
+}
+
+.greyBoxFour {
+  background-color: #d6d6d6;
+}
+
+.greyBoxFive {
+  background-color: #d0d0d0;
+}
+
+.greyBoxSix {
+  background-color: #c9c9c9;
+}
+
+.greyBoxSeven {
+  background-color: #e1ecff;
+}
+
+.greyBoxEight {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+    #e1ecff;
+}
+
+.greyBoxNine {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    #e1ecff;
+}
+
+.greyBoxTen {
+  background-color: #c54031;
+  color: #fff !important;
+}
+
+.greyBoxEleven {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    #e1ecff;
+}
+
+.atmDownTableBox .table {
+  width: 100%;
+}
+
+.atmDownTableBox .table thead th {
+  border: 1px solid var(--color-table-border);
+}
+
+.atmDownTableBox .table tbody tr:last-child {
+  border-bottom: 1px solid var(--color-table-border);
+}
+
+.borderBottomRightRadius {
+  border-bottom-right-radius: inherit !important;
+}
+
+.borderTopRightRadius {
+  border-top-right-radius: inherit !important;
+}
+
+.borderTopLeftRadius {
+  border-top-left-radius: inherit !important;
+}
+
+.borderBottomLeftRadius {
+  border-bottom-left-radius: inherit !important;
+}
+
+.atmDownHead {
+  background-color: var(--sidebar-color);
+  height: 40px;
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: var(--font-m-size16);
+  letter-spacing: -0.02em;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+
+
+
+
+.atm-downHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.atm-searchBox {
+  display: flex;
+}
+
+.atmDown-dateBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.atmDown-dateBox>div {
+  width: 120px;
+}
+
+
+
+@media (max-width: 768px) {
+  .queueWiseTableResponsive {
+    width: 1000px !important;
+  }
+}
+
+
+@media(max-width:425px) {
+  .atm-searchBox .has-search .form-control {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .atm-downHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    gap: 6px;
+  }
+}
+
+
+@media(max-width: 375px) {
+  .atm-downHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
+  .atm-searchBox {
+    display: block;
+    width: 100%;
+  }
+
+  .atm-searchBox .has-search .form-control {
+    width: 100%;
+    margin-top: 6px;
+    margin-left: 0px;
+  }
+
+  .atmDown-dateBox>div {
+    width: 100%;
+  }
+
+}

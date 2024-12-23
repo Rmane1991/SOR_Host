@@ -1,0 +1,99 @@
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Aug_09_Vers3.0\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\2021 Sept\BTI_PayRakam_Sept_30_Vers3.0\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_03_Vers3.0\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 OCT\BTI_PayRakam_OCT_22_Vers3.0\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.02\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.03\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.04\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.05\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 NOV\BTI_PayRakam_Nov_01_Ver3.00.06\AppLogger\obj\Release\AppLogger.csprojResolveAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_14_Ver3.00.06\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_24_Ver3.00.07\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2021 DEC\BTI_PayRakam_Dec_28_Ver3.00.08_AEPS\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_22_Ver3.00.14\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 JAN\PayRakam_Jan_28_Ver3.00.15\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.16\AppLogger\obj\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\bin\Release\AppLogger.pdb
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Release\AppLogger.dll
+D:\PayRakam\Web Portal\2022 MAR\PayRakam_Mar_12_Ver3.00.17\AppLogger\obj\Release\AppLogger.pdb
+D:\sbm\New folder\PayRakamSBM\AppLogger\bin\Release\AppLogger.dll
+D:\sbm\New folder\PayRakamSBM\AppLogger\bin\Release\AppLogger.pdb
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Release\AppLogger.dll
+D:\sbm\New folder\PayRakamSBM\AppLogger\obj\Release\AppLogger.pdb
+D:\Aakash\SOR\SOR\AppLogger\bin\Release\AppLogger.dll
+D:\Aakash\SOR\SOR\AppLogger\bin\Release\AppLogger.pdb
+D:\Aakash\SOR\SOR\AppLogger\obj\Release\AppLogger.csprojAssemblyReference.cache
+D:\Aakash\SOR\SOR\AppLogger\obj\Release\AppLogger.csproj.CoreCompileInputs.cache
+D:\Aakash\SOR\SOR\AppLogger\obj\Release\AppLogger.dll
+D:\Aakash\SOR\SOR\AppLogger\obj\Release\AppLogger.pdb
