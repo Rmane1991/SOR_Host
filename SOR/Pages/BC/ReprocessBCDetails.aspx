@@ -925,7 +925,10 @@
                                                             <asp:Label ID="lblServicesOffer" runat="server" Text="Services Offer "></asp:Label><span class="err">*</span><br />
 
                                                             <asp:CheckBox ID="chkAEPS" runat="server" Style="font-weight: 500" />
-                                                            <asp:Label ID="lblchkAEPS" runat="server">AEPS &emsp;</asp:Label>
+                                                            <asp:Label ID="lblchkAEPS" runat="server">AePS &emsp;</asp:Label>
+
+                                                            <asp:CheckBox ID="chkdmt" runat="server" />
+                                                            <asp:Label ID="lblchkdmt" runat="server">DMT &emsp;</asp:Label>
 
                                                             <asp:CheckBox ID="chkMATM" runat="server" />
                                                             <asp:Label ID="lblchkMATM" runat="server">Micro ATM &emsp;</asp:Label>
@@ -1679,7 +1682,7 @@
                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
                                         <%--<button type="button" id="downloadPass" runat="server" visible="true" OnClick="" class="btn btn-success">Submit</button>--%>
                                         <asp:Button runat="server" ID="downloadPass" CssClass="themeBtn themeApplyBtn" OnClick="ProcessBCData_Click"  ToolTip="Submit" Text="Submit" OnClientClick="Confirm3();"></asp:Button>
-                                        <asp:Button runat="server" ID="btnCloseReceipt" CssClass="themeBtn resetBtn themeCancelBtn me-0r" OnClick="btnCloseReceipt_Click"  ToolTip="Close" Text="Back"></asp:Button>
+                                        <asp:Button runat="server" ID="btnCloseReceipt" CssClass="themeBtn resetBtn themeCancelBtn me-0r" OnClick="btnCloseReceipt_Click"  ToolTip="Close" Text="Back" style="margin-top:-8px;"></asp:Button>
                                     </div>
 
 

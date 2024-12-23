@@ -1,0 +1,170 @@
+20-12-2024 10:49:40:7205 : Login Successful. Username Maximus. SessionID : qxtu35ipngu2lnqy2yea1bws
+20-12-2024 10:50:27:0359 : Login Successful. Username Maximus. SessionID : 0yjnvyoagkwelslm53d5pyiy
+20-12-2024 11:17:12:0238 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 11:17:12:0248 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 11:17:12:0847 : NOTICE: Inserting new record...1
+20-12-2024 11:17:12:0857 : NOTICE: Inserting new record...
+20-12-2024 11:17:12:1186 : NOTICE: Insert successful, RequestId: 40
+20-12-2024 11:17:48:3080 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 11:17:48:3090 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 11:17:48:3698 : NOTICE: Inserting new record...1
+20-12-2024 11:17:48:3718 : NOTICE: Updating existing record with ID: 40
+20-12-2024 11:17:48:4057 : NOTICE: Update successful for RequestId: 40
+20-12-2024 11:19:17:6229 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+20-12-2024 11:19:17:6249 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 11:20:19:7734 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 11:20:19:7744 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 11:20:19:8313 : NOTICE: Inserting new record...1
+20-12-2024 11:20:19:8322 : NOTICE: Updating existing record with ID: 40
+20-12-2024 11:20:19:8572 : NOTICE: Update successful for RequestId: 40
+20-12-2024 11:23:23:3756 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 11:23:23:3766 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 11:23:23:4384 : NOTICE: Inserting new record...1
+20-12-2024 11:23:23:4394 : NOTICE: Updating existing record with ID: 40
+20-12-2024 11:23:23:4763 : NOTICE: Update successful for RequestId: 40
+20-12-2024 11:24:44:5560 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 11:24:44:5570 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 11:24:44:6128 : NOTICE: Inserting new record...1
+20-12-2024 11:24:44:6138 : NOTICE: Inserting new record...
+20-12-2024 11:24:44:6358 : NOTICE: Insert successful, RequestId: 41
+20-12-2024 11:24:58:8244 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+20-12-2024 11:24:58:8274 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 11:53:14:1010 : Login Successful. Username Maximus. SessionID : hpcaibny1ue5wa2ognz30mri
+20-12-2024 12:12:55:6409 : Login Successful. Username Maximus. SessionID : u4m31fvt4f5r4yojsgea33wm
+20-12-2024 12:14:24:2120 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:14:24:2130 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:14:27:9919 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:14:27:9929 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:14:28:0388 : Class: BCEntity.cs 
+Function: GetReceiptData() 
+Exception Occurred
+39000: Wrong key or corrupt data
+20-12-2024 12:14:28:0787 : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+39000: Wrong key or corrupt data
+20-12-2024 12:14:31:7391 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+20-12-2024 12:14:35:6709 : Class : BCEntity.cs 
+Function : GetOnboardingBcDetails() 
+Exception Occurred
+39000: Wrong key or corrupt data
+20-12-2024 12:19:12:6082 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:19:12:6092 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:19:18:0286 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:19:18:0306 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:19:39:7937 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:19:39:7947 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:22:54:1119 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:22:54:1129 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:22:54:1708 : NOTICE: Inserting new record...1
+20-12-2024 12:22:54:1728 : NOTICE: Inserting new record...
+20-12-2024 12:22:54:1997 : NOTICE: Insert successful, RequestId: 42
+20-12-2024 12:23:12:2117 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:23:12:2126 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:23:12:2665 : NOTICE: Inserting new record...1
+20-12-2024 12:23:12:2675 : NOTICE: Updating existing record with ID: 42
+20-12-2024 12:23:12:2904 : NOTICE: Update successful for RequestId: 42
+20-12-2024 12:24:23:5004 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:24:23:5014 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:24:23:5572 : NOTICE: Inserting new record...1
+20-12-2024 12:24:23:5602 : NOTICE: Inserting new record...
+20-12-2024 12:24:23:5801 : NOTICE: Insert successful, RequestId: 43
+20-12-2024 12:24:40:2856 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+20-12-2024 12:24:40:2866 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:24:53:4906 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:24:53:4916 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:24:53:5524 : NOTICE: Inserting new record...1
+20-12-2024 12:24:53:5534 : NOTICE: Updating existing record with ID: 43
+20-12-2024 12:24:53:5853 : NOTICE: Update successful for RequestId: 43
+20-12-2024 12:27:06:2723 : Login Successful. Username Maximus. SessionID : slbe3zxd252w1gterx0jh5l1
+20-12-2024 12:28:16:5356 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:28:16:5366 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:28:16:5964 : NOTICE: Inserting new record...1
+20-12-2024 12:28:16:5974 : NOTICE: Inserting new record...
+20-12-2024 12:28:16:6233 : NOTICE: Insert successful, RequestId: 44
+20-12-2024 12:28:29:0198 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+20-12-2024 12:28:29:0208 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:28:57:4018 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:28:57:4018 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:28:57:4566 : NOTICE: Inserting new record...1
+20-12-2024 12:28:57:4576 : NOTICE: Updating existing record with ID: 44
+20-12-2024 12:28:57:4846 : NOTICE: Update successful for RequestId: 44
+20-12-2024 12:30:00:8395 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+20-12-2024 12:30:00:8395 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+20-12-2024 12:32:49:2189 : Login Successful. Username Maximus. SessionID : ca0r2bxtvdt0ctjs1w31h15s
+20-12-2024 12:33:44:9071 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:33:44:9081 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:33:44:9660 : NOTICE: Inserting new record...1
+20-12-2024 12:33:44:9670 : NOTICE: Inserting new record...
+20-12-2024 12:33:44:9909 : NOTICE: Insert successful, RequestId: 45
+20-12-2024 12:36:26:7434 : Login Successful. Username Maximus. SessionID : grkkolg2u3tf100tisflh0bm
+20-12-2024 12:37:07:3815 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:37:07:3825 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:37:07:4393 : NOTICE: Inserting new record...1
+20-12-2024 12:37:07:4403 : NOTICE: Inserting new record...
+20-12-2024 12:37:07:4662 : NOTICE: Insert successful, RequestId: 46
+20-12-2024 12:38:31:8747 : Login Successful. Username Maximus. SessionID : gmhlghxwo2bchijdtuxscqwt
+20-12-2024 12:40:57:0733 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+20-12-2024 12:40:57:0743 : NOTICE: Flag is set to 1, proceeding with validations...
+20-12-2024 12:40:57:1362 : NOTICE: Inserting new record...1
+20-12-2024 12:40:57:1372 : NOTICE: Inserting new record...
+20-12-2024 12:40:57:1711 : NOTICE: Insert successful, RequestId: 47
+20-12-2024 12:49:50:6969 : Login Successful. Username Maximus. SessionID : 12xv2txgpoxelz31itkgj31s
+20-12-2024 12:49:50:6979 : Login Successful. Username Maximus. SessionID : cfhbyks12b0svn4yho0q1xw4
+20-12-2024 12:57:36:3216 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "8954621300" is out of range for type integer
+20-12-2024 13:00:41:8352 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "8954621300" is out of range for type integer
+20-12-2024 14:14:20:4001 : Login Successful. Username Maximus. SessionID : x4s5i2wol12ew0dzhaknfl2q
+20-12-2024 14:20:14:5966 : Login Successful. Username Maximus. SessionID : aa3pc0aqlb5f3rlko0zi4uey
+20-12-2024 14:22:21:0719 : Login Successful. Username Maximus. SessionID : ax5h54cvhrobvynhtzr04fu1
+20-12-2024 14:24:57:7258 : Login Successful. Username Maximus. SessionID : wyz4q5lbfpstavrpwjbyecpq
+20-12-2024 14:33:15:0204 : Login Successful. Username Maximus. SessionID : e2ysept40ysfb4raf5ixeyrg
+20-12-2024 14:36:40:5306 : Login Successful. Username Maximus. SessionID : jdyaqt3ouadpt1ae3bqpzpoo
+20-12-2024 14:41:58:0503 : Login Successful. Username Maximus. SessionID : dmfesdrilhwto32fedxszpg3
+20-12-2024 14:43:27:9061 : Login Successful. Username Maximus. SessionID : 4r2qbtrfrctxplhnh14umeor
+20-12-2024 14:46:01:5079 : Login Successful. Username Maximus. SessionID : xb5tsndnecnosk5jdtcgsde1
+20-12-2024 14:49:52:7983 : Login Successful. Username Maximus. SessionID : z5ibp2eltn3aeocohitq5p1d
+20-12-2024 15:55:27:9840 : Login Successful. Username Maximus. SessionID : atce22rias5bpjbbwtc4usps
+20-12-2024 16:03:48:4114 : Login Successful. Username Maximus. SessionID : pfkcpu3bpskewy2t0idqt1fi
+20-12-2024 16:23:46:6781 : Login Successful. Username Maximus. SessionID : elt4p0jekfi32zwgrghgwns4
+20-12-2024 16:25:55:1186 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "8954621300" is out of range for type integer
+20-12-2024 16:32:12:5903 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22P02: invalid input syntax for type integer: "BC000002"
+20-12-2024 16:51:35:1001 : Login Successful. Username Maximus. SessionID : 1k1rzcclb5tmtcvh0xdjj2tq
+20-12-2024 17:52:02:7007 : Login Successful. Username Maximus. SessionID : d0c5xafnjyyn5eet20pbjyrp
+20-12-2024 17:57:16:7982 : Class : BCEntity.cs 
+Function : ChangeBcOnBoardStatus() 
+Exception Occured
+Keyword not supported: 'port'.
+20-12-2024 18:08:51:5638 : Login Successful. Username Maximus. SessionID : ehbyxhm0wfoi3a5munb3dexp
+20-12-2024 18:32:11:6703 : Login Successful. Username Maximus. SessionID : c2mfvrltcj2bleayy1s4klbl
+20-12-2024 18:33:02:1093 : Class : BCEntity.cs 
+Function : ChangeBcOnBoardStatus() 
+Exception Occured
+42883: procedure sp_updatebconboardprocesshandler(text, integer, text, integer, text, text, text, text, text) does not exist
+20-12-2024 18:33:54:1228 : Login Successful. Username Maximus. SessionID : kayhjogntez2ot3j4oormftp
+20-12-2024 19:12:21:4222 : Class : BCEntity.cs 
+Function : ChangeBcOnBoardStatus() 
+Exception Occured
+42883: operator does not exist: integer = character varying
+20-12-2024 19:12:36:2999 : Login Successful. Username Maximus. SessionID : d4mhei3axupitfu5bcsqdsie
+20-12-2024 19:14:16:3330 : Class : BCEntity.cs 
+Function : ActiveDeactiveBC() 
+Exception Occured
+Keyword not supported: 'port'.
+20-12-2024 19:28:17:5947 : Login Successful. Username Maximus. SessionID : kd1ixwqc4ehxsh0g0tmzzbgb
+20-12-2024 19:34:29:8278 : Login Successful. Username Maximus. SessionID : dbqmwov2kvxncmxydotmasqx
+20-12-2024 19:35:26:9696 : Login Successful. Username Maximus. SessionID : e5aypqzpyxj5kcsdordufeag

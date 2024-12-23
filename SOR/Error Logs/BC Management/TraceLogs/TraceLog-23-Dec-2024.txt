@@ -1,0 +1,5 @@
+Time : 23-Dec-2024 11:19 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: Approve
+Time : 23-Dec-2024 11:19 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Keyword not supported: 'port'.
+Time : 23-Dec-2024 11:21 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: Approve
+Time : 23-Dec-2024 11:21 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Keyword not supported: 'port'.
+Time : 23-Dec-2024 11:21 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: Approve

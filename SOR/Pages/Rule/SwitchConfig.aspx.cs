@@ -93,14 +93,27 @@ namespace SOR.Pages.Rule
                 _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
                 DataSet dt = _RuleEntity.GetSwitch();
 
-                rptrSwitch.DataSource = dt;
-                rptrSwitch.DataBind();
+                if (dt != null && dt.Tables.Count > 0 && dt.Tables[0].Rows.Count > 0)
+                {
+                    rptrSwitch.DataSource = dt;
+                    rptrSwitch.DataBind();
 
-                rptSwitchDetails.DataSource = dt;
-                rptSwitchDetails.DataBind();
+                    rptSwitchDetails.DataSource = dt;
+                    rptSwitchDetails.DataBind();
 
-                rptSwitchDetailsDelete.DataSource = dt;
-                rptSwitchDetailsDelete.DataBind();
+                    rptSwitchDetailsDelete.DataSource = dt;
+                    rptSwitchDetailsDelete.DataBind();
+
+                    rptrSwitch.Visible = true;
+                    rptSwitchDetails.Visible = true;
+                    rptSwitchDetailsDelete.Visible = true;
+                }
+                else
+                {
+                    rptrSwitch.Visible = false;
+                    rptSwitchDetails.Visible = false;
+                    rptSwitchDetailsDelete.Visible = false;
+                }
             }
             catch (Exception Ex)
             {
@@ -131,6 +144,7 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                Session["SwitchPercentage"] = null;
                 hdnShowModal.Value = "true";
                 BindSwitch();
                 BindDropdown();
@@ -159,6 +173,38 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                if (string.IsNullOrEmpty(txtSwitchName.Text))
+                {
+                    ShowWarning("Please Enter Switch Name. Try again", "Warning");
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtSwitchDescription.Text))
+                {
+                    ShowWarning("Please Enter Switch Description. Try again", "Warning");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtSwitchPercentage.Text) && string.IsNullOrEmpty(txtCount.Text))
+                {
+                    ShowWarning("Please Enter Switch Percentage Or Switch Count. Try again", "Warning");
+                    return;
+                }
+
+
+
+                if (!CheckForDuplicateValues())
+                {
+                    return;
+                }
+                //if (!ValidateSwitchValues())
+                //{
+                //    return;
+                //}
+                if (!ValidateSwitchInputs())
+                {
+                    return;
+                }
+
                 if (string.IsNullOrEmpty(ddlSwitch1.SelectedValue) &&
                     string.IsNullOrEmpty(ddlSwitch2.SelectedValue) &&
                     string.IsNullOrEmpty(ddlSwitch3.SelectedValue) &&
@@ -166,26 +212,21 @@ namespace SOR.Pages.Rule
                     string.IsNullOrEmpty(ddlSwitch5.SelectedValue) &&
                     string.IsNullOrEmpty(ddlSwitch6.SelectedValue))
                 {
-
+                    if (dtSwitchValues == null)
+                    {
+                        InitializeDataTable();
+                    }
+                    //ShowWarning("Please Enter Failover Switch Percentage. Try again", "Warning");
+                    //return;
                 }
                 else
-
                 {
-                    if (!CheckForDuplicateValues())
+                    if (!PopulateAndAddSwitchValues())
                     {
                         return;
                     }
-                    //if (!ValidateSwitchValues())
-                    //{
-                    //    return;
-                    //}
-                    if (!ValidateSwitchInputs())
-                    {
-                        return;
-                    }
-
-                    PopulateAndAddSwitchValues();
                 }
+
 
                 #region DT
                 DataTable resultTable = new DataTable();
@@ -193,137 +234,194 @@ namespace SOR.Pages.Rule
                 resultTable.Columns.Add("Value", typeof(string));
                 resultTable.Columns.Add("TabValue", typeof(string));
                 #endregion
-                //if (string.IsNullOrEmpty(txtCount.Text))
-                //{
-                    if (string.IsNullOrEmpty(txtSwitchPercentage.Text))
+
+                if (string.IsNullOrEmpty(txtCount.Text))
+                {
+                    #region % Validation
+                    decimal totalPercentage = 0;
+
+                    // Iterate through the Repeater items to sum up percentages
+                    foreach (RepeaterItem item in rptSwitchDetails.Items)
                     {
-                        ShowWarning("Please Enter Switch Percentage. Try again", "Warning");
+                        TextBox txtPercentage = (TextBox)item.FindControl("txtPercentage");
+
+                        if (decimal.TryParse(txtPercentage.Text, out decimal percentage))
+                        {
+                            totalPercentage += percentage;
+                        }
+                    }
+
+                    // Add the percentage from txtSwitchPercentage (outside the Repeater)
+                    if (decimal.TryParse(txtSwitchPercentage.Text, out decimal switchPercentage))
+                    {
+                        totalPercentage += switchPercentage;
+                    }
+
+                    // Check if the total percentage exceeds 100
+                    if (totalPercentage > 100 || totalPercentage < 100)
+                    {
+                        // Show an error message or handle the validation failure
+                        lblErrorMessage.Text = "Total percentage cannot exceed or less 100%.";
+                        lblErrorMessage.Visible = true;
                         return;
                     }
-                //}
 
-                #region % Validation
-                decimal totalPercentage = 0;
+                    // Proceed with rule creation if total percentage is valid
+                    lblErrorMessage.Visible = false;
 
-                // Iterate through the Repeater items to sum up percentages
-                foreach (RepeaterItem item in rptSwitchDetails.Items)
-                {
-                    TextBox txtPercentage = (TextBox)item.FindControl("txtPercentage");
+                    updatesTable = CreateUpdatesDataTable();
 
-                    if (decimal.TryParse(txtPercentage.Text, out decimal percentage))
+                    // Iterate through the Repeater items
+                    foreach (RepeaterItem item in rptSwitchDetails.Items)
                     {
-                        totalPercentage += percentage;
-                    }
-                }
+                        // Find controls
+                        var lblID = (Label)item.FindControl("lblID");
+                        var txtPercentage = (TextBox)item.FindControl("txtPercentage");
 
-                // Add the percentage from txtSwitchPercentage (outside the Repeater)
-                if (decimal.TryParse(txtSwitchPercentage.Text, out decimal switchPercentage))
-                {
-                    totalPercentage += switchPercentage;
-                }
-
-                // Check if the total percentage exceeds 100
-                if (totalPercentage > 100 || totalPercentage < 100)
-                {
-                    // Show an error message or handle the validation failure
-                    lblErrorMessage.Text = "Total percentage cannot exceed or less 100%.";
-                    lblErrorMessage.Visible = true;
-                    return;
-                }
-
-                // Proceed with rule creation if total percentage is valid
-                lblErrorMessage.Visible = false;
-
-                updatesTable = CreateUpdatesDataTable();
-
-                // Iterate through the Repeater items
-                foreach (RepeaterItem item in rptSwitchDetails.Items)
-                {
-                    // Find controls
-                    var lblID = (Label)item.FindControl("lblID");
-                    var txtPercentage = (TextBox)item.FindControl("txtPercentage");
-
-                    if (lblID != null && txtPercentage != null)
-                    {
-                        int id = Convert.ToInt32(lblID.Text);
-                        decimal percentage = Convert.ToDecimal(txtPercentage.Text);
-
-                        // Add a new row to the DataTable
-                        updatesTable.Rows.Add(id, percentage);
-                    }
-                }
-                #endregion
-                //}
-
-
-                if (string.IsNullOrEmpty(txtSwitchName.Text))
-                {
-                    ShowWarning("Please Enter Switch Name. Try again", "Warning");
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtSwitchDescription.Text))
-                {
-                    ShowWarning("Please Enter Switch Description. Try again", "Warning");
-                    return;
-                }
-                else
-                {
-                    if (Session["SwitchPercentage"] != null)
-                    {
-
-                        foreach (string key in Request.Form.Keys)
+                        if (lblID != null && txtPercentage != null)
                         {
-                            if (key.StartsWith("input_"))
-                            {
-                                // Extract the tab and ID from the name
-                                string[] parts = key.Split('_');
-                                if (parts.Length == 3) // Expecting input_{Tab}_{ID}
-                                {
-                                    string tab = parts[1]; // Tab name (AEPS, DMT, MATM)
-                                    string id = parts[2]; // Extract the ID
-                                    string value = Request.Form[key]; // Get the value from the input
+                            int id = Convert.ToInt32(lblID.Text);
+                            decimal percentage = Convert.ToDecimal(txtPercentage.Text);
 
-                                    // Add a new row to the DataTable
-                                    DataRow newRow = resultTable.NewRow();
-                                    newRow["ID"] = $"{id}"; // Combine tab and ID if necessary
-                                    newRow["Value"] = value;
-                                    newRow["TabValue"] = tab;
-                                    if (!string.IsNullOrEmpty(value))
-                                    {
-                                        resultTable.Rows.Add(newRow);
-                                    }
+                            // Add a new row to the DataTable
+                            updatesTable.Rows.Add(id, percentage);
+                        }
+                    }
+                    #endregion
+                }
+
+
+                if (Session["SwitchPercentage"] != null)
+                {
+
+                    foreach (string key in Request.Form.Keys)
+                    {
+                        if (key.StartsWith("input_"))
+                        {
+                            // Extract the tab and ID from the name
+                            string[] parts = key.Split('_');
+                            if (parts.Length == 3) // Expecting input_{Tab}_{ID}
+                            {
+                                string tab = parts[1]; // Tab name (AEPS, DMT, MATM)
+                                string id = parts[2]; // Extract the ID
+                                string value = Request.Form[key]; // Get the value from the input
+
+                                // Add a new row to the DataTable
+                                DataRow newRow = resultTable.NewRow();
+                                newRow["ID"] = $"{id}"; // Combine tab and ID if necessary
+                                newRow["Value"] = value;
+                                newRow["TabValue"] = tab;
+                                if (!string.IsNullOrEmpty(value))
+                                {
+                                    resultTable.Rows.Add(newRow);
                                 }
                             }
                         }
-                        if (resultTable.Rows.Count == 0)
-                        {
-                            ShowWarning("Please Enter Txn Type Url. Try again", "Warning");
-                            return;
-                        }
-                        _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
-                        _RuleEntity.SwitchName = !string.IsNullOrEmpty(txtSwitchName.Text) ? txtSwitchName.Text.Trim() : null;
-                        _RuleEntity.SwitchDescription = !string.IsNullOrEmpty(txtSwitchDescription.Text) ? txtSwitchDescription.Text.Trim() : null;
-                        if(!string.IsNullOrEmpty(hdnSwitchId.Value))
-                        {
-                            _RuleEntity.SwitchId = Convert.ToInt32(hdnSwitchId.Value) != 0 ? Convert.ToInt32(hdnSwitchId.Value) : 0;
-                        }
-                        else
-                        {
+                    }
+                    if (resultTable.Rows.Count == 0)
+                    {
+                        ShowWarning("Please Enter Txn Type Url. Try again", "Warning");
+                        return;
+                    }
+                    _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                    _RuleEntity.SwitchName = !string.IsNullOrEmpty(txtSwitchName.Text) ? txtSwitchName.Text.Trim() : null;
+                    _RuleEntity.SwitchDescription = !string.IsNullOrEmpty(txtSwitchDescription.Text) ? txtSwitchDescription.Text.Trim() : null;
+                    if (!string.IsNullOrEmpty(hdnSwitchId.Value))
+                    {
+                        _RuleEntity.SwitchId = Convert.ToInt32(hdnSwitchId.Value) != 0 ? Convert.ToInt32(hdnSwitchId.Value) : 0;
+                    }
+                    else
+                    {
 
-                        }
-                        _RuleEntity.percentage = int.TryParse(txtSwitchPercentage.Text.Trim(), out int percentage) ? percentage : 0;
-                        _RuleEntity.Count = 0;// int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
-                        //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
-                        _RuleEntity.dt = updatesTable;
-                        _RuleEntity.dt2 = resultTable;
-                        _RuleEntity.dt3 = dtSwitchValues;
-                        _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Edit;
+                    }
+                    _RuleEntity.percentage = int.TryParse(txtSwitchPercentage.Text.Trim(), out int percentage) ? percentage : 0;
+                    _RuleEntity.Count = int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
+                    //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
+                    _RuleEntity.dt = updatesTable;
+                    _RuleEntity.dt2 = resultTable;
+                    _RuleEntity.dt3 = dtSwitchValues;
+                    _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Edit;
 
-                        //string validateCode = _RuleEntity.ValidateSwitch();
-                        //if(validateCode=="00")
-                        //{
+                    //string validateCode = _RuleEntity.ValidateSwitch();
+                    //if(validateCode=="00")
+                    //{
+                    string statusCode = _RuleEntity.InsertOrUpdateSwitch();
+                    if (statusCode == "UPD00")
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    }
+                    else
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    }
+                    var response = new
+                    {
+                        StatusMessage = _CommonEntity.ResponseMessage
+                    };
+                    ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                    //}
+                    //else
+                    //{
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already Exists. Try again', 'Warning');", true);
+                    //    return;
+                    //}
+                }
+                else
+                {
+                    txtSwitchName.Enabled = true;
+
+                    // Loop through all input fields to get the values
+                    foreach (string key in Request.Form.Keys)
+                    {
+                        if (key.StartsWith("input_"))
+                        {
+                            // Extract the tab and ID from the name
+                            string[] parts = key.Split('_');
+                            if (parts.Length == 3) // Expecting input_{Tab}_{ID}
+                            {
+                                string tab = parts[1]; // Tab name (AEPS, DMT, MATM)
+                                string id = parts[2]; // Extract the ID
+                                string value = Request.Form[key]; // Get the value from the input
+
+                                // Add a new row to the DataTable
+                                DataRow newRow = resultTable.NewRow();
+                                newRow["ID"] = $"{id}"; // Combine tab and ID if necessary
+                                newRow["Value"] = value;
+                                newRow["TabValue"] = tab;
+
+                                if (!string.IsNullOrEmpty(value))
+                                {
+                                    resultTable.Rows.Add(newRow);
+                                }
+                            }
+                        }
+                    }
+                    if (resultTable.Rows.Count == 0)
+                    {
+                        ShowWarning("Please Enter Txn Type Url. Try again", "Warning");
+                        return;
+                    }
+                    _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                    _RuleEntity.SwitchName = !string.IsNullOrEmpty(txtSwitchName.Text) ? txtSwitchName.Text.Trim() : null;
+                    _RuleEntity.SwitchDescription = !string.IsNullOrEmpty(txtSwitchDescription.Text) ? txtSwitchDescription.Text.Trim() : null;
+                    _RuleEntity.percentage = int.TryParse(txtSwitchPercentage.Text.Trim(), out int percentage) ? percentage : 0;
+                    _RuleEntity.Count = int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
+                    //_RuleEntity.FailoverSwitchId = !string.IsNullOrEmpty(hfSelectedValues.Value) ? hfSelectedValues.Value.Trim() : null;
+                    //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
+                    _RuleEntity.dt = updatesTable;
+                    _RuleEntity.dt2 = resultTable;
+                    _RuleEntity.dt3 = dtSwitchValues;
+                    //_RuleEntity.Switchurl = !string.IsNullOrEmpty(txturl.Text) ? txturl.Text.Trim() : null;
+                    //_RuleEntity.TxnType = !string.IsNullOrEmpty(hfSelectedSecondValues.Value) ? hfSelectedSecondValues.Value.Trim() : null;
+                    _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Insert;
+                    string validateCode = _RuleEntity.ValidateSwitch();
+                    if (validateCode == "00")
+                    {
                         string statusCode = _RuleEntity.InsertOrUpdateSwitch();
-                        if (statusCode == "UPD00")
+                        if (statusCode == "INS00")
                         {
                             _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
                             _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
@@ -337,91 +435,16 @@ namespace SOR.Pages.Rule
                         {
                             StatusMessage = _CommonEntity.ResponseMessage
                         };
-                        ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                        ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
-                        //}
-                        //else
-                        //{
-                        //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already Exists. Try again', 'Warning');", true);
-                        //    return;
-                        //}
                     }
                     else
                     {
-                        txtSwitchName.Enabled = true;
-
-                        // Loop through all input fields to get the values
-                        foreach (string key in Request.Form.Keys)
-                        {
-                            if (key.StartsWith("input_"))
-                            {
-                                // Extract the tab and ID from the name
-                                string[] parts = key.Split('_');
-                                if (parts.Length == 3) // Expecting input_{Tab}_{ID}
-                                {
-                                    string tab = parts[1]; // Tab name (AEPS, DMT, MATM)
-                                    string id = parts[2]; // Extract the ID
-                                    string value = Request.Form[key]; // Get the value from the input
-
-                                    // Add a new row to the DataTable
-                                    DataRow newRow = resultTable.NewRow();
-                                    newRow["ID"] = $"{id}"; // Combine tab and ID if necessary
-                                    newRow["Value"] = value;
-                                    newRow["TabValue"] = tab;
-
-                                    if (!string.IsNullOrEmpty(value))
-                                    {
-                                        resultTable.Rows.Add(newRow);
-                                    }
-                                }
-                            }
-                        }
-                        if (resultTable.Rows.Count == 0)
-                        {
-                            ShowWarning("Please Enter Txn Type Url. Try again", "Warning");
-                            return;
-                        }
-                        _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
-                        _RuleEntity.SwitchName = !string.IsNullOrEmpty(txtSwitchName.Text) ? txtSwitchName.Text.Trim() : null;
-                        _RuleEntity.SwitchDescription = !string.IsNullOrEmpty(txtSwitchDescription.Text) ? txtSwitchDescription.Text.Trim() : null;
-                        _RuleEntity.percentage = int.TryParse(txtSwitchPercentage.Text.Trim(), out int percentage) ? percentage : 0;
-                        _RuleEntity.Count = 0;// int.TryParse(txtCount.Text.Trim(), out int count) ? count : 0;
-                        //_RuleEntity.FailoverSwitchId = !string.IsNullOrEmpty(hfSelectedValues.Value) ? hfSelectedValues.Value.Trim() : null;
-                        //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
-                        _RuleEntity.dt = updatesTable;
-                        _RuleEntity.dt2 = resultTable;
-                        _RuleEntity.dt3 = dtSwitchValues;
-                        //_RuleEntity.Switchurl = !string.IsNullOrEmpty(txturl.Text) ? txturl.Text.Trim() : null;
-                        //_RuleEntity.TxnType = !string.IsNullOrEmpty(hfSelectedSecondValues.Value) ? hfSelectedSecondValues.Value.Trim() : null;
-                        _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Insert;
-                        string validateCode = _RuleEntity.ValidateSwitch();
-                        if (validateCode == "00")
-                        {
-                            string statusCode = _RuleEntity.InsertOrUpdateSwitch();
-                            if (statusCode == "INS00")
-                            {
-                                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                            }
-                            else
-                            {
-                                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                            }
-                            var response = new
-                            {
-                                StatusMessage = _CommonEntity.ResponseMessage
-                            };
-                            ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
-                        }
-                        else
-                        {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already Exists. Try again', 'Warning');", true);
-                            return;
-                        }
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Switch Name Already Exists. Try again', 'Warning');", true);
+                        return;
                     }
                 }
+
                 hdnShowModal.Value = "false";
                 BindSwitch();
             }
@@ -579,18 +602,75 @@ namespace SOR.Pages.Rule
                     BindEditDropdown();
                     if (row1["percentage"] != DBNull.Value && Convert.ToDecimal(row1["percentage"]) != 0 && !string.IsNullOrEmpty(row1["percentage"].ToString()))
                     {
-                        //txtCount.Text = string.Empty;
+                        txtCount.Text = string.Empty;
                         txtSwitchPercentage.Text = row1["percentage"].ToString();
                         Session["SwitchPercentage"] = txtSwitchPercentage.Text;
                     }
                     else
                     {
-                        //txtCount.Visible = true;
+                        txtCount.Visible = true;
                         txtSwitchPercentage.Text = string.Empty;
-                        //txtCount.Text = row1["maxcount"].ToString();
-                        //Session["SwitchPercentage"] = txtCount.Text;
-                        Session["SwitchPercentage"] = txtSwitchPercentage.Text;
-                        string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
+                        txtCount.Text = row1["maxcount"].ToString();
+                        Session["SwitchPercentage"] = txtCount.Text;
+                        //Session["SwitchPercentage"] = txtSwitchPercentage.Text;
+                        //string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
+                        //ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
+                        string script = @"
+$(document).ready(function () {
+    // Set checkbox to be checked automatically on page load
+    var isChecked = true; // You can also set this dynamically based on your logic
+    
+    // Set the checkbox to checked
+    $('#Switch').prop('checked', isChecked);
+
+    // Trigger the checkbox change event (simulate a click)
+    $('#Switch').change(); // This triggers the change event on the checkbox
+
+    // Disable the checkbox while processing
+    $('#Switch').prop('disabled', true);
+
+    // AJAX call to the server to determine which panel to show and which textbox to clear
+    $.ajax({
+        type: 'POST',
+        url: 'SwitchConfig.aspx/ToggleSwitch',
+        data: JSON.stringify({ IsChecked: isChecked }),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (response) {
+            var result = response.d;
+
+            // Get the client IDs of the panels and textboxes
+            var pnlPercentageID = '<%= pnlPercentage.ClientID %>';
+            var pnlCountID = '<%= pnlCount.ClientID %>';
+            var txtSwitchPercentageID = '<%= txtSwitchPercentage.ClientID %>';
+            var txtCountID = '<%= txtCount.ClientID %>';
+
+            // Check the result and show/hide panels accordingly
+            if (result === 'showCount-clearPercentage') {
+                $('#' + pnlPercentageID).hide();
+                $('#' + pnlCountID).show();
+                $('#' + txtSwitchPercentageID).val(''); // Clear Percentage textbox
+            } else if (result === 'showPercentage-clearCount') {
+                $('#' + pnlCountID).hide();
+                $('#' + pnlPercentageID).show();
+                $('#' + txtCountID).val(''); // Clear Count textbox
+            } else {
+                console.log('Unexpected result:', result);
+            }
+
+            // Enable the checkbox after processing
+            $('#Switch').prop('disabled', false);
+        },
+        error: function (error) {
+            console.error('An error occurred:', error);
+            alert('An error occurred: ' + error.responseText);
+            // Enable the checkbox after an error
+            $('#Switch').prop('disabled', false);
+        }
+    });
+});
+";
+
                         ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
                     }
                 }
@@ -676,15 +756,15 @@ namespace SOR.Pages.Rule
                         //BindEditDropdown();
                         if (row1["percentage"] != DBNull.Value && Convert.ToDecimal(row1["percentage"]) != 0 && !string.IsNullOrEmpty(row1["percentage"].ToString()))
                         {
-                            //TextBox4.Text = string.Empty;
+                            TextBox4.Text = string.Empty;
                             TextBox3.Text = row1["percentage"].ToString();
                             Session["SwitchPercentage"] = TextBox3.Text;
                         }
                         else
                         {
-                            //txtCount.Visible = true;
+                            txtCount.Visible = true;
                             TextBox3.Text = string.Empty;
-                            //txtCount.Text = row1["maxcount"].ToString();
+                            txtCount.Text = row1["maxcount"].ToString();
                             Session["SwitchPercentage"] = TextBox3.Text;
                             string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
                             ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
@@ -731,8 +811,15 @@ namespace SOR.Pages.Rule
                     //    return;
                     //}
                 }
-                else
+                if(validateCode=="98")
                 {
+                    HdnShowDelete.Value = "false";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('This Switch Already Use In The Rule', 'Warning');", true);
+                    return;
+                }
+                if (validateCode == "96")
+                {
+                    HdnShowDelete.Value = "false";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('This Switch Already Use In The Failover Switch', 'Warning');", true);
                     return;
                 }
@@ -1064,6 +1151,19 @@ namespace SOR.Pages.Rule
                 return "showPercentage-clearCount";
             }
         }
+        [WebMethod]
+        public static string ToggleSwitchh(bool IsChecked)
+        {
+            if (IsChecked)
+            {
+                return "showCount-clearPercentage";
+            }
+            else
+            {
+                return "showPercentage-clearCount";
+            }
+        }
+
         private DataTable CreateUpdatesDataTable()
         {
             DataTable dt = new DataTable();
@@ -1259,7 +1359,99 @@ namespace SOR.Pages.Rule
         //            }
         //        }
         //    }
-        private void PopulateAndAddSwitchValues()
+        //    private bool PopulateAndAddSwitchValues()
+        //    {
+        //        // Ensure dtSwitchValues is initialized
+        //        if (dtSwitchValues == null)
+        //        {
+        //            InitializeDataTable();
+        //        }
+
+        //        // Clear previous values in the DataTable
+        //        dtSwitchValues.Clear();
+
+        //        // Create an array of dropdowns and corresponding textboxes
+        //        var switchPairs = new[]
+        //        {
+        //    new { Dropdown = ddlSwitch1, Textbox = txtswitch1 },
+        //    new { Dropdown = ddlSwitch2, Textbox = txtswitch2 },
+        //    new { Dropdown = ddlSwitch3, Textbox = txtswitch3 },
+        //    new { Dropdown = ddlSwitch4, Textbox = txtswitch4 },
+        //    new { Dropdown = ddlSwitch5, Textbox = txtswitch5 },
+        //    new { Dropdown = ddlSwitch6, Textbox = txtswitch6 }
+        //};
+
+        //        // Variable to keep track of the sum of all textbox values
+        //        double totalSwitchValue = 0;
+
+        //        // First, add the values to the DataTable and calculate the total
+        //        foreach (var pair in switchPairs)
+        //        {
+        //            if (pair.Dropdown.SelectedIndex > 0 && !string.IsNullOrEmpty(pair.Textbox.Text))
+        //            {
+        //                // Parse the value of the Textbox to a double (assuming they are numeric)
+        //                if (double.TryParse(pair.Textbox.Text, out double switchValue))
+        //                {
+        //                    // Create a new DataRow
+        //                    DataRow row = dtSwitchValues.NewRow();
+        //                    row["SwitchId"] = pair.Dropdown.SelectedValue; // Use the selected value of the dropdown
+        //                    row["SwitchValue"] = switchValue.ToString(); // Store the value as a string in the DataTable
+
+        //                    // Add the DataRow to the DataTable
+        //                    dtSwitchValues.Rows.Add(row);
+
+        //                    // Add the switch value to the total
+        //                    totalSwitchValue += switchValue;
+        //                }
+        //                else
+        //                {
+        //                    ShowWarning("One of the switch values is not a valid number.", "Warning");
+        //                    return false; // Stop if the input is invalid
+        //                }
+        //            }
+        //        }
+
+        //        // Now compare the totalSwitchValue with the txtPercentage value
+        //        if(string.IsNullOrEmpty(txtCount.Text))
+        //        {
+        //            if (double.TryParse(txtSwitchPercentage.Text, out double percentageValue))
+        //            {
+        //                // Check if the total of switch values equals the percentage value
+        //                if (totalSwitchValue == percentageValue)
+        //                {
+        //                    // If the sum matches the percentage value, proceed
+        //                    //MessageBox.Show("The total of switch values is correct.", "Success");
+        //                }
+        //                else
+        //                {
+        //                    // If the sum does not match, show a warning
+        //                    ShowWarning($"The total of switch values does not match the specified percentage value ({percentageValue}).", "Warning");
+        //                    return false;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                ShowWarning("The percentage value is not a valid number.", "Warning");
+        //                return false;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (totalSwitchValue == 100)
+        //            {
+        //                // If the sum matches the percentage value, proceed
+        //                //MessageBox.Show("The total of switch values is correct.", "Success");
+        //            }
+        //            else
+        //            {
+        //                // If the sum does not match, show a warning
+        //                ShowWarning($"The total of failover switch values = 100).", "Warning");
+        //                return false;
+        //            }
+        //        }
+
+        //    }
+        private bool PopulateAndAddSwitchValues()
         {
             // Ensure dtSwitchValues is initialized
             if (dtSwitchValues == null)
@@ -1287,12 +1479,13 @@ namespace SOR.Pages.Rule
             // First, add the values to the DataTable and calculate the total
             foreach (var pair in switchPairs)
             {
+                // Check if the dropdown has a selected value and the textbox is not empty
                 if (pair.Dropdown.SelectedIndex > 0 && !string.IsNullOrEmpty(pair.Textbox.Text))
                 {
-                    // Parse the value of the Textbox to a double (assuming they are numeric)
+                    // Try parsing the value of the Textbox to a double
                     if (double.TryParse(pair.Textbox.Text, out double switchValue))
                     {
-                        // Create a new DataRow
+                        // Create a new DataRow and set the values
                         DataRow row = dtSwitchValues.NewRow();
                         row["SwitchId"] = pair.Dropdown.SelectedValue; // Use the selected value of the dropdown
                         row["SwitchValue"] = switchValue.ToString(); // Store the value as a string in the DataTable
@@ -1305,33 +1498,56 @@ namespace SOR.Pages.Rule
                     }
                     else
                     {
+                        // Show a warning if one of the switch values is not a valid number and return false
                         ShowWarning("One of the switch values is not a valid number.", "Warning");
-                        return; // Stop if the input is invalid
+                        return false;
                     }
                 }
             }
 
             // Now compare the totalSwitchValue with the txtPercentage value
-            if (double.TryParse(txtSwitchPercentage.Text, out double percentageValue))
+            if (string.IsNullOrEmpty(txtCount.Text))
             {
-                // Check if the total of switch values equals the percentage value
-                if (totalSwitchValue == percentageValue)
+                // If txtCount is empty, validate the percentage value
+                if (double.TryParse(txtSwitchPercentage.Text, out double percentageValue))
                 {
-                    // If the sum matches the percentage value, proceed
-                    //MessageBox.Show("The total of switch values is correct.", "Success");
+                    // Check if the total of switch values equals the percentage value
+                    if (totalSwitchValue == percentageValue)
+                    {
+                        // If the sum matches the percentage value, proceed
+                        return true; // Success
+                    }
+                    else
+                    {
+                        // If the sum does not match, show a warning and return false
+                        ShowWarning($"The total of switch values does not match the specified percentage value ({percentageValue}).", "Warning");
+                        return false;
+                    }
                 }
                 else
                 {
-                    // If the sum does not match, show a warning
-                    ShowWarning($"The total of switch values does not match the specified percentage value ({percentageValue}).", "Warning");
-                    return;
+                    // If the percentage value is not valid, show a warning and return false
+                    ShowWarning("The percentage value is not a valid number.", "Warning");
+                    return false;
                 }
             }
             else
             {
-                ShowWarning("The percentage value is not a valid number.", "Warning");
+                // If txtCount is not empty, check if the total switch value equals 100
+                if (totalSwitchValue == 100)
+                {
+                    // If the sum matches 100, proceed
+                    return true; // Success
+                }
+                else
+                {
+                    // If the sum does not match, show a warning and return false
+                    ShowWarning($"The total of failover switch values should be 100.", "Warning");
+                    return false;
+                }
             }
         }
+
 
 
 
@@ -1660,79 +1876,85 @@ namespace SOR.Pages.Rule
         {
             try
             {
-                #region % Validation
+                updatesTable = CreateUpdatesDataTable();
 
-                // Validate that TextBox3 (percentage) is 0
-                decimal switchPercentage;
-                if (decimal.TryParse(TextBox3.Text, out switchPercentage) && switchPercentage != 0)
+                if (rptSwitchDetailsDelete != null)
                 {
-                    lblDeleteMessage.Text = "Percentage in TextBox should be 0.";
-                    lblDeleteMessage.Visible = true;
-                    return;
-                }
+                    #region % Validation
 
-                // Initialize the total percentage accumulator
-                decimal totalPercentage = 0;
-
-                // Validate the percentages in the Repeater
-                foreach (RepeaterItem item in rptSwitchDetailsDelete.Items)
-                {
-                    TextBox txtPercentage = (TextBox)item.FindControl("txtPercentage");
-
-                    if (txtPercentage != null && decimal.TryParse(txtPercentage.Text, out decimal percentage))
+                    // Validate that TextBox3 (percentage) is 0
+                    decimal switchPercentage;
+                    if (decimal.TryParse(TextBox3.Text, out switchPercentage) && switchPercentage != 0)
                     {
-                        // Check for negative percentages
-                        if (percentage < 0)
-                        {
-                            lblDeleteMessage.Text = "Percentage cannot be negative.";
-                            lblDeleteMessage.Visible = true;
-                            return;
-                        }
-
-                        totalPercentage += percentage; // Accumulate the total percentage
-                    }
-                    else
-                    {
-                        // Handle invalid percentage input
-                        lblDeleteMessage.Text = "Invalid percentage value.";
+                        lblDeleteMessage.Text = "Percentage in TextBox should be 0.";
                         lblDeleteMessage.Visible = true;
                         return;
                     }
-                }
 
-                // Validate the total percentage must be exactly 100
-                if (totalPercentage != 100)
-                {
-                    lblDeleteMessage.Text = "The total percentage of all items must be exactly 100%.";
-                    lblDeleteMessage.Visible = true;
-                    return;
-                }
+                    // Initialize the total percentage accumulator
+                    decimal totalPercentage = 0;
 
-                // If validation passes, proceed with processing (e.g., database update)
-                lblDeleteMessage.Visible = false;  // Hide the error message if validation passes
-
-                #endregion
-
-                // Create a DataTable for updates
-                updatesTable = CreateUpdatesDataTable();
-
-                // Iterate through the Repeater items and add data to the DataTable
-                foreach (RepeaterItem item in rptSwitchDetailsDelete.Items)
-                {
-                    // Find controls within the Repeater item
-                    var lblID = (Label)item.FindControl("lblID");
-                    var txtPercentage = (TextBox)item.FindControl("txtPercentage");
-
-                    // Proceed only if the controls are found
-                    if (lblID != null && txtPercentage != null)
+                    // Validate the percentages in the Repeater
+                    foreach (RepeaterItem item in rptSwitchDetailsDelete.Items)
                     {
-                        int id = Convert.ToInt32(lblID.Text);  // Get the ID from the Label
-                        decimal percentage = Convert.ToDecimal(txtPercentage.Text);  // Get the percentage from the TextBox
+                        TextBox txtPercentage = (TextBox)item.FindControl("txtPercentage");
 
-                        // Add the values as a new row to the DataTable
-                        updatesTable.Rows.Add(id, percentage);
+                        if (txtPercentage != null && decimal.TryParse(txtPercentage.Text, out decimal percentage))
+                        {
+                            // Check for negative percentages
+                            if (percentage < 0)
+                            {
+                                lblDeleteMessage.Text = "Percentage cannot be negative.";
+                                lblDeleteMessage.Visible = true;
+                                return;
+                            }
+
+                            totalPercentage += percentage; // Accumulate the total percentage
+                        }
+                        else
+                        {
+                            // Handle invalid percentage input
+                            lblDeleteMessage.Text = "Invalid percentage value.";
+                            lblDeleteMessage.Visible = true;
+                            return;
+                        }
+                    }
+
+                    // Validate the total percentage must be exactly 100
+                    if (totalPercentage != 100)
+                    {
+                        lblDeleteMessage.Text = "The total percentage of all items must be exactly 100%.";
+                        lblDeleteMessage.Visible = true;
+                        return;
+                    }
+
+                    // If validation passes, proceed with processing (e.g., database update)
+                    lblDeleteMessage.Visible = false;  // Hide the error message if validation passes
+
+                    #endregion
+
+                    // Create a DataTable for updates
+                    
+
+                    // Iterate through the Repeater items and add data to the DataTable
+                    foreach (RepeaterItem item in rptSwitchDetailsDelete.Items)
+                    {
+                        // Find controls within the Repeater item
+                        var lblID = (Label)item.FindControl("lblID");
+                        var txtPercentage = (TextBox)item.FindControl("txtPercentage");
+
+                        // Proceed only if the controls are found
+                        if (lblID != null && txtPercentage != null)
+                        {
+                            int id = Convert.ToInt32(lblID.Text);  // Get the ID from the Label
+                            decimal percentage = Convert.ToDecimal(txtPercentage.Text);  // Get the percentage from the TextBox
+
+                            // Add the values as a new row to the DataTable
+                            updatesTable.Rows.Add(id, percentage);
+                        }
                     }
                 }
+                
 
                 // Assign the DataTable to the _RuleEntity entity (or whatever processing you need to do)
                 _RuleEntity.dt = updatesTable;
@@ -1757,6 +1979,7 @@ namespace SOR.Pages.Rule
                 ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                 HdnShowDelete.Value = "false";
+                BindSwitch();
             }
             catch (Exception Ex)
             {
@@ -1776,6 +1999,32 @@ namespace SOR.Pages.Rule
             catch (Exception Ex)
             {
                 ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+            }
+        }
+
+        protected void btnClearFailover_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (HiddenField1.Value.ToString() == "Yes")
+                {
+                    ddlSwitch1.ClearSelection();
+                    ddlSwitch2.ClearSelection();
+                    ddlSwitch3.ClearSelection();
+                    ddlSwitch4.ClearSelection();
+                    ddlSwitch5.ClearSelection();
+                    ddlSwitch6.ClearSelection();
+                    txtswitch1.Text = string.Empty;
+                    txtswitch2.Text = string.Empty;
+                    txtswitch3.Text = string.Empty;
+                    txtswitch4.Text = string.Empty;
+                    txtswitch5.Text = string.Empty;
+                    txtswitch6.Text = string.Empty;
+                }
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.RuleTrace("SwitchConfig: btnClearFailover_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
             }
         }
     }

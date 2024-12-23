@@ -285,13 +285,9 @@
         var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
 
         var bouData = {
-            // Generate the days labels on the X axis. 
-            //labels: Array.from(new Array(30), function (_, i) {
-            //    return i === 0 ? 1 : i;
-            //}),
-            labels: SummaryTxnDays,
+            labels: SummaryTxnDays,  // Data labels for X-axis
             datasets: [{
-                label: 'Current Month',
+                label: 'Current Data',
                 fill: 'start',
                 data: currentMonthData,
                 backgroundColor: 'rgba(0,123,255,0.1)',
@@ -299,10 +295,12 @@
                 pointBackgroundColor: '#ffffff',
                 pointHoverBackgroundColor: 'rgb(0,123,255)',
                 borderWidth: 1.5,
-                pointRadius: 0,
-                pointHoverRadius: 3
+                pointRadius: 3,  // Make points visible 
+                pointHoverRadius: 5,
+                borderJoinStyle: 'round',
+                lineTension: 0.3,
             }, {
-                label: 'Past Month',
+                label: 'Previous Data',
                 fill: 'start',
                 data: previousMonthData,
                 backgroundColor: 'rgba(255,65,105,0.1)',
@@ -311,9 +309,9 @@
                 pointHoverBackgroundColor: 'rgba(255,65,105,1)',
                 borderDash: [3, 3],
                 borderWidth: 1,
-                pointRadius: 0,
-                pointHoverRadius: 2,
-                pointBorderColor: 'rgba(255,65,105,1)'
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                pointBorderColor: 'rgba(255,65,105,1)',
             }]
         };
 
@@ -325,40 +323,46 @@
             },
             elements: {
                 line: {
-                    // A higher value makes the line look skewed at this ratio.
                     tension: 0.3
                 },
                 point: {
-                    radius: 0
+                    radius: 3  // Ensure points are visible
                 }
             },
             scales: {
                 xAxes: [{
                     gridLines: false,
                     ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 0,
                         callback: function (tick, index) {
-                            // Jump every 7 values on the X axis labels to avoid clutter.
-                            return index % 7 !== 0 ? '' : tick;
+                            var totalLabels = SummaryTxnDays.length;
+                            if (totalLabels <= 4) {
+                                return tick;
+                            }
+                            return index % 7 === 0 ? tick : '';
                         }
                     }
                 }],
                 yAxes: [{
                     ticks: {
                         suggestedMax: 45,
-                        callback: function (tick, index, ticks) {
-                            if (tick === 0) {
+                        callback: function (tick) {
+                            // Check the size of the tick and apply the appropriate suffix
+                            if (tick >= 1e9) {
+                                return (tick / 1e9).toFixed(1) + 'B'; // Billions
+                            } else if (tick >= 1e6) {
+                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                            } else if (tick >= 1e3) {
+                                return (tick / 1e3).toFixed(1) + 'K'; // Thousands
+                            } else {
                                 return tick;
                             }
-                            // Format the amounts using Ks for thousands.
-                            return tick > 999 ? (tick / 1000).toFixed(1) + 'K' : tick;
                         }
                     }
                 }]
             },
-            // Uncomment the next lines in order to disable the animations.
-            // animation: {
-            //   duration: 0
-            // },
             hover: {
                 mode: 'nearest',
                 intersect: false
@@ -377,19 +381,19 @@
             options: bouOptions
         });
 
-        // Hide initially the first and last analytics overview chart points.
+        //Hide initially the first and last analytics overview chart points.
         // They can still be triggered on hover.
-        var aocMeta = BlogOverviewUsers.getDatasetMeta(0);
+        /*var aocMeta = BlogOverviewUsers.getDatasetMeta(0);
         aocMeta.data[0]._model.radius = 0;
-        aocMeta.data[bouData.datasets[0].data.length - 1]._model.radius = 0;
-
-        // Render the chart.
+        aocMeta.data[bouData.datasets[0].data.length - 1]._model.radius = 0;*/
         window.BlogOverviewUsers.render();
+        //End
 
-        // Switch Transactions Overview
+        // Switch Transactions Overview(ChartJs)
         const hasData = SwitchCounts.some(count => count > 0);
         var ubdData = {
             datasets: [{
+                borderWidth: 2,
                 hoverBorderColor: '#ffffff',
                 data: hasData ? SwitchPercent : [1],
                 backgroundColor: hasData ? [
@@ -406,50 +410,37 @@
             responsive: true,
             layout: {
                 padding: {
-                    bottom: 20
+                    bottom: 50
                 }
             },
             plugins: {
                 legend: {
-                    position: 'bottom',
-                    labels: {
-                        padding: 25,
-                        boxWidth: 20,
-                        generateLabels: function (chart) {
-                            const data = chart.data;
-                            return data.labels.map((label, index) => {
-                                const percent = SwitchPercent[index];
-                                return {
-                                    text: `${label}: ${percent}%`,
-                                    fillStyle: data.datasets[0].backgroundColor[index],
-                                    hidden: false,
-                                    index: index
-                                };
-                            });
-                        }
-                    }
+                    display: false
                 },
                 tooltip: {
                     callbacks: {
                         label: function (tooltipItem) {
+                            const label = SwitchName[tooltipItem.index];
                             const percent = SwitchPercent[tooltipItem.index];
-                            return `${percent}%`;
+                            return `${label}: ${percent}%`;
                         }
                     }
+                },
+                outlabels: {
+                    display: true,
+                    text: '%l: %p%',
+                    color: '#000',
+                    font: {
+                        size: 12,
+                        weight: 'bold'
+                    },
+                    lineWidth: 2,
+                    lineColor: '#d3d3d3',
+                    padding: 4,
+                    stretch: 20
                 }
             },
-            cutoutPercentage: 75,
-            tooltips: {
-                enabled: true,
-                mode: 'index',
-                position: 'nearest',
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        const percent = SwitchPercent[tooltipItem.index];
-                        return `${percent}%`;
-                    }
-                }
-            }
+            cutout: '75%'
         };
 
         var ubdCtx = document.getElementsByClassName('blog-users-by-device')[0];
@@ -458,11 +449,64 @@
             data: ubdData,
             options: ubdOptions
         });
-        window.ubdChart.update();
+
+        //SwitchCounts = [10, 20, 30, 40]; // Replace with your counts
+        //SwitchPercent = [25, 50, 15, 10]; // Replace with your percentages
+        //SwitchName = ["Switch A", "Switch B", "Switch C", "Switch D"]; // Replace with labels
+
+        //var hasData = SwitchCounts.some(count => count > 0);
+
+        //// Dynamic data
+        //const chartData = hasData ? SwitchPercent.map((percent, index) => ({
+        //    name: SwitchName[index],
+        //    y: percent,
+        //    color: `rgba(0,123,255,${0.3 + (index * 0.2)})` // Adjusting opacity dynamically
+        //})) : [{ name: "No Data", y: 1, color: 'rgba(144,238,144,0.5)' }];
+
+        //// Highcharts Donut Chart
+        //const chartContainer = document.getElementsByClassName('blog-users-by-device')[0];
+
+        //Highcharts.chart(chartContainer, {
+        //    chart: {
+        //        type: 'pie'
+        //    },
+        //    title: {
+        //        text: hasData ? 'Switch Data Distribution' : 'No Data Available'
+        //    },
+        //    credits: {
+        //        enabled: false // Correct placement to remove the Highcharts watermark
+        //    },
+        //    plotOptions: {
+        //        pie: {
+        //            innerSize: '75%', // Creates the donut shape
+        //            dataLabels: {
+        //                enabled: true,
+        //                format: '<b>{point.name}</b>: {point.y}%' // Label format
+        //            },
+        //            borderWidth: 2,
+        //            borderColor: '#ffffff'
+        //        }
+        //    },
+        //    tooltip: {
+        //        formatter: function () {
+        //            return `<b>${this.point.name}</b>: ${this.point.y}%`;
+        //        }
+        //    },
+        //    series: [{
+        //        name: 'Percentage',
+        //        data: chartData
+        //    }],
+        //    legend: {
+        //        enabled: false // Hide legend
+        //    }
+        //});
+
+
+
         //End
 
 
-        //Bar graph for BC-wise Summary(ApexChart)
+        //Bar graph for BC-wise Summary (ApexChart)
         window.BCWiseSummaryChart = (function () {
             var successCurrent = BCWiseDataTxn.map(t => t.Success);
             var failureCurrent = BCWiseDataTxn.map(t => t.Failure);
@@ -474,15 +518,24 @@
                 chart: {
                     type: 'bar',
                     height: 410,
-                    stacked: true,
+                    stacked: true, // Stacked bars enabled
                     toolbar: {
                         show: true
+                    },
+                    margin: {
+                        left: 80,
+                        right: 20
                     }
                 },
                 plotOptions: {
                     bar: {
                         horizontal: true,
-                        barHeight: '70%'
+                        barHeight: '70%',
+                        distributed: false, // Set this to false to avoid overriding colors
+                        padding: {
+                            left: 10,
+                            right: 10
+                        }
                     }
                 },
                 dataLabels: {
@@ -496,7 +549,7 @@
                         colors: ['#fff']
                     }
                 },
-                colors: ['RGBA(56, 142, 60, 0.8)', 'RGBA(211, 47, 47, 0.8)'],
+                colors: ['#2196f3', '#ff4560'],
                 series: [
                     {
                         name: 'Success',
@@ -531,14 +584,16 @@
                         text: 'Business Correspondence',
                         style: {
                             fontSize: '14px',
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            offsetX: 40 // Increased space from the y-axis
                         }
                     },
                     labels: {
                         style: {
                             fontSize: '14px',
                             colors: ['#555']
-                        }
+                        },
+                        offsetX: 5
                     }
                 },
                 tooltip: {
@@ -558,20 +613,119 @@
                 legend: {
                     position: 'top',
                     horizontalAlign: 'center',
+                    floating: true,
                     labels: {
                         useSeriesColors: false,
                         fontSize: '12px'
+                    }
+                },
+                loading: {
+                    show: true,
+                    text: 'Loading...',
+                    fontSize: '14px',
+                    style: {
+                        background: '#f0f0f0',
+                        color: '#000',
+                        opacity: 0.9
                     }
                 }
             };
 
             var chart = new ApexCharts(document.querySelector("#blog-overview-BCWise"), options);
             chart.render();
+            window.addEventListener('resize', function () {
+                chart.updateOptions({ chart: { height: 410 } });
+            });
+
             return chart;
         })();
-        //ENd Bar graph for BC-wise Summary(ApexChart)
+        // End Bar graph for BC-wise Summary (ApexChart)
 
-        /*Revenue Chart*/
+
+        /*Revenue Chart (ApexChart)*/
+        //window.RevenueComboChart = (function () {
+        //    var revenueData = RevenueDataTxn.map(t => t.TotalRevenue);
+        //    var conversionRateData = RevenueDataTxn.map(t => t.ConversionRate);
+        //    var categories = RevenueDataTxn.map(t => t.PeriodName);
+
+        //    var options = {
+        //        series: [
+        //            {
+        //                name: 'Revenue',
+        //                type: 'bar',
+        //                data: revenueData
+        //            },
+        //            {
+        //                name: 'Conversion Rate',
+        //                type: 'line',
+        //                data: conversionRateData
+        //            }
+        //        ],
+        //        chart: {
+        //            height: 400,
+        //            type: 'line',
+        //            zoom: {
+        //                enabled: false
+        //            }
+        //        },
+        //        dataLabels: {
+        //            enabled: true,
+        //            style: {
+        //                fontSize: '12px',
+        //                fontWeight: 'bold',
+        //                colors: ['#000'] // Color of the labels
+        //            },
+        //            dropShadow: {
+        //                enabled: true,
+        //                top: 2,
+        //                left: 2,
+        //                blur: 4,
+        //                opacity: 0.3
+        //            },
+        //            offsetY: -10
+        //        },
+        //        stroke: {
+        //            width: [0, 3]
+        //        },
+        //        title: {
+        //            text: 'Revenue and Conversion Rate Summary'
+        //        },
+        //        xaxis: {
+        //            categories: categories,
+        //        },
+        //        yaxis: [
+        //            {
+        //                title: {
+        //                    text: 'Revenue (₹)'
+        //                }
+        //            },
+        //            {
+        //                opposite: true,
+        //                title: {
+        //                    text: 'Conversion Rate (%)'
+        //                }
+        //            }
+        //        ],
+        //        tooltip: {
+        //            shared: true,
+        //            intersect: false
+        //        },
+        //        // Optional annotations section entirely
+        //        plotOptions: {
+        //            bar: {
+        //                dataLabels: {
+        //                    position: 'top'
+        //                }
+        //            }
+        //        }
+        //    };
+
+        //    var chart = new ApexCharts(document.querySelector("#overview-RevenueSummary"), options);
+        //    chart.render();
+        //    return chart;
+        //})();
+
+        /*Revenue Chart (ApexChart)*/
         window.RevenueComboChart = (function () {
             var revenueData = RevenueDataTxn.map(t => t.TotalRevenue);
             var conversionRateData = RevenueDataTxn.map(t => t.ConversionRate);
@@ -626,6 +780,19 @@
                     {
                         title: {
                             text: 'Revenue (₹)'
+                        },
+                        labels: {
+                            formatter: function (value) {
+                                if (value >= 1000000000) {
+                                    return (value / 1000000000).toFixed(1) + "B"; // Billions
+                                } else if (value >= 1000000) {
+                                    return (value / 1000000).toFixed(1) + "M"; // Millions
+                                } else if (value >= 1000) {
+                                    return (value / 1000).toFixed(1) + "K"; // Thousands
+                                } else {
+                                    return value; // No suffix for smaller values
+                                }
+                            }
                         }
                     },
                     {
@@ -653,6 +820,8 @@
             chart.render();
             return chart;
         })();
+        /*  End Revenue Chart */
+
         /*  End Revenue Chart */
 
         //google chart new Channel wisess

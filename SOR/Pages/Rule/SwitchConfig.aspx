@@ -133,11 +133,11 @@
         });
     </script>
 
-    <%--<script>
+    <script>
         $(document).ready(function () {
             $('#Switch').change(function () {
                 var isChecked = $(this).is(':checked');
-
+                debugger;
                 // Disable the checkbox while processing
                 $(this).prop('disabled', true);
 
@@ -186,8 +186,62 @@
             });
         });
     </script>
-
     <script>
+        $(document).ready(function () {
+            $('#Switchh').change(function () {
+                var isChecked = $(this).is(':checked');
+
+                // Disable the checkbox while processing
+                //$(this).prop('disabled', true);
+
+                // AJAX call to the server to determine which panel to show and which textbox to clear
+                $.ajax({
+                    type: 'POST',
+                    url: 'SwitchConfig.aspx/ToggleSwitchh',
+                    data: JSON.stringify({ IsChecked: isChecked }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (response) {
+                        var result = response.d;
+
+                        // Get the client IDs of the panels and textboxes
+                        var pnlPercentageID = '<%= Panel1.ClientID %>';
+                        var pnlCountID = '<%= Panel2.ClientID %>';
+                        var txtSwitchPercentageID = '<%= TextBox3.ClientID %>';
+                        var txtCountID = '<%= TextBox4.ClientID %>';
+
+                        // Check the result and show/hide panels accordingly
+                        if (result === "showCount-clearPercentage") {
+                            // Show Count panel, hide Percentage panel, and clear Percentage textbox
+                            $('#' + pnlPercentageID).hide();
+                            $('#' + pnlCountID).show();
+                            $('#' + txtSwitchPercentageID).val(''); // Clear Percentage textbox
+                        } else if (result === "showPercentage-clearCount") {
+                            // Show Percentage panel, hide Count panel, and clear Count textbox
+                            $('#' + pnlCountID).hide();
+                            $('#' + pnlPercentageID).show();
+                            $('#' + txtCountID).val(''); // Clear Count textbox
+                        } else {
+                            console.log("Unexpected result:", result);
+                        }
+
+                        // Re-enable the checkbox after processing
+                        $('#Switch').prop('disabled', false);
+                    },
+                    error: function (error) {
+                        console.error('An error occurred:', error);
+                        alert('An error occurred: ' + error.responseText);
+
+                        // Re-enable the checkbox after an error
+                        $('#Switch').prop('disabled', false);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <%--<script>
         function callToggleSwitch(isChecked) {
             $.ajax({
                 type: 'POST',
@@ -424,7 +478,11 @@
 
         .col-md-11111 {
             flex: 0 0 auto;
-            width: 4.333333%;
+            width: 9.333333%;
+        }
+        .col-md-11112 {
+            flex: 0 0 auto;
+            width: 8.333333%;
         }
 
         .col-md-22 {
@@ -439,7 +497,7 @@
 
         .col-md-24 {
             flex: 0 0 auto;
-            width: 26.0%;
+            width: 16.0%;
         }
 
         .col-md-25 {
@@ -469,9 +527,28 @@
             left: -70px; /* Moves the content 25px to the left */
         }
     </style>
+    <script type="text/javascript">
+        function Confirm() {
+            let confirm_value = document.createElement("INPUT");
+            confirm_value.type = "hidden";
+            confirm_value.name = "confirm_value";
+            if (confirm("Are You Sure You Want To Clear All Failover details Data?")) {
+                debugger;
+                document.getElementById("<%= HiddenField1.ClientID %>").value = "Yes";
+            }
+            else {
+                document.getElementById("<%= HiddenField1.ClientID %>").value = "No";
+            }
+
+            //document.forms[0].appendChild(confirm_value);
+        }
+    </script>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
     <asp:HiddenField ID="hdnSwitchId" runat="server" Value="false" />
+    <asp:HiddenField ID="HiddenField1" runat="server" />
     <div class="breadHeader">
         <h5 class="page-title" style="font-size: larger">Switch Configuration</h5>
     </div>
@@ -632,11 +709,11 @@
                                         <label for="SwitchDescription" class="col-form-label">Description</label>
                                         <asp:TextBox ID="txtSwitchDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Description"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
+                                    <%--<div class="form-group">
                                         <label for="txtSwitchPercentage" class="col-form-label">Percentage %</label>
                                         <asp:TextBox ID="txtSwitchPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
-                                    </div>
-                                    <%--<div class="row mb-3">
+                                    </div>--%>
+                                    <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group row">
                                                 <label class="col-md-4 col-form-label">Switch Count</label>
@@ -648,29 +725,29 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>--%>
+                                    </div>
 
                                     <!-- Panels for Percentage and Count -->
-                                    <%--<div class="row mb-3">
+                                    <div class="row mb-3">
 
-                                        <div class="form-group row">--%>
+                                        <div class="form-group row">
                                             <!-- Panel for Percentage -->
-                                            <%--<asp:Panel ID="pnlPercentage" runat="server">
+                                            <asp:Panel ID="pnlPercentage" runat="server">
                                                 <label for="txtSwitchPercentage" class="col-md-5 col-form-label">Percentage %</label>
                                                 <div class="col-md-5">
                                                     <asp:TextBox ID="txtSwitchPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
                                                 </div>
-                                            </asp:Panel>--%>
+                                            </asp:Panel>
                                             <!-- Panel for Count -->
-                                            <%--<asp:Panel ID="pnlCount" runat="server" CssClass="toggle-field">
+                                            <asp:Panel ID="pnlCount" runat="server" CssClass="toggle-field">
                                                 <label for="txtCount" class="col-md-5 col-form-label">Count</label>
                                                 <div class="col-md-5">
                                                     <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
                                                 </div>
-                                            </asp:Panel>--%>
-                                        <%--</div>
+                                            </asp:Panel>
+                                        </div>
 
-                                    </div>--%>
+                                    </div>
 
                                 </div>
 
@@ -734,7 +811,19 @@
                         <div class="section-header">
                             <h3>Failoversss Details</h3>
                         </div>
-
+                        <div class="row">
+                            <div class="col text-end">
+                                <asp:Button
+                                    ID="btnClearFailover"
+                                    CssClass="btn btn-secondary"
+                                    runat="server"
+                                    Text="Clear"
+                                    OnClientClick="return Confirm();"
+                                    OnClick="btnClearFailover_Click"
+                                    data-bs-dismiss="modal" />
+                            </div>
+                        </div>
+                        &nbsp;
                         <!-- First Row -->
                         <div class="container">
                             <!-- First Row -->
@@ -866,27 +955,27 @@
                                         <asp:TextBox ID="TextBox2" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Switch Description"></asp:TextBox>
                                     </div>
 
-                                    <div class="form-group">
+                                    <%--<div class="form-group">
                                         <label for="txtSwitchPercentage" class="col-form-label">Percentage %</label>
                                         <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
-                                    </div>
+                                    </div>--%>
 
-                                    <%--<div class="row mb-3">
+                                    <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group row">
                                                 <label class="col-md-4 col-form-label">Switch Count</label>
                                                 <div class="col-md-8">
                                                     <label class="switchh">
-                                                        <input type="checkbox" id="Switch" />
+                                                        <input type="checkbox" id="Switchh" />
                                                         <span class="sliderr"></span>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>--%>
+                                    </div>
 
                                     <!-- Panels for Percentage and Count -->
-                                    <%--<div class="row mb-3">
+                                    <div class="row mb-3">
 
                                         <div class="form-group row">
                                             <asp:Panel ID="Panel1" runat="server">
@@ -903,7 +992,7 @@
                                             </asp:Panel>
                                         </div>
 
-                                    </div>--%>
+                                    </div>
 
                                 </div>
                             </div>
@@ -934,8 +1023,9 @@
                     <div class="col-md-11"></div>
                     <%--<div class="col-md-111"></div>--%>
                     <%--<div class="col-md-22"></div>--%>
-                    <div class="col-md-11111">Priority</div>
-                    <div class="col-md-23"></div>
+                    <div class="col-md-11111">Percentage</div>
+                    <div class="col-md-11112">Count</div>
+                    <%--<div class="col-md-23"></div>--%>
                     <div class="col-md-1">Status</div>
                     <div class="col-md-24"></div>
                     <div class="col-md-1111">Action</div>
@@ -999,6 +1089,12 @@
                                             <%--<span class="pficon pficon-screen"></span>--%>
                                             <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
                                             <strong><%# Eval("percentage") %></strong>
+
+                                        </div>
+                                        <div class="list-view-pf-additional-info-item">
+                                            <%--<span class="pficon pficon-screen"></span>--%>
+                                            <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
+                                            <strong><%# Eval("maxcount") %></strong>
 
                                         </div>
                                         <div class="list-view-pf-additional-info-item">

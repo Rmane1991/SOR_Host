@@ -1,0 +1,115 @@
+Time : 20-Dec-2024 11:17 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 20-Dec-2024 11:17 Message : Class : BCRegistration.cs 
+Function : btnSubmitDetails_Click() 
+Exception Occured
+Object reference not set to an instance of an object.
+Time : 20-Dec-2024 11:17 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 20-Dec-2024 11:19 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 20-Dec-2024 11:20 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 20-Dec-2024 11:23 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 20-Dec-2024 11:24 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 41
+Time : 20-Dec-2024 11:24 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 41
+Time : 20-Dec-2024 11:26 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 33
+Time : 20-Dec-2024 11:27 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 34
+Time : 20-Dec-2024 11:27 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 34
+Time : 20-Dec-2024 12:14 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 20-Dec-2024 12:15 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 20-Dec-2024 12:15 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+39000: Wrong key or corrupt data
+Time : 20-Dec-2024 12:22 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 42
+Time : 20-Dec-2024 12:23 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 42
+Time : 20-Dec-2024 12:24 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 43
+Time : 20-Dec-2024 12:24 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 43
+Time : 20-Dec-2024 12:24 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 43
+Time : 20-Dec-2024 12:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 44
+Time : 20-Dec-2024 12:28 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 44
+Time : 20-Dec-2024 12:28 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 44
+Time : 20-Dec-2024 12:30 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 44
+Time : 20-Dec-2024 12:33 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 45
+Time : 20-Dec-2024 12:34 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 20-Dec-2024 12:35 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 20-Dec-2024 12:36 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 20-Dec-2024 12:37 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 46
+Time : 20-Dec-2024 12:37 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 20-Dec-2024 12:40 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 47
+Time : 20-Dec-2024 12:41 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:52 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:53 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:54 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:55 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 17:56 Message : OnBoardBcStatus: gvBCOnboard_RowDataBound: Exception: Multiple controls with the same ID 'chBoxSelectRow' were found. FindControl requires that controls have unique IDs.
+Time : 20-Dec-2024 19:14 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 54 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: A
+Time : 20-Dec-2024 19:14 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Keyword not supported: 'port'.

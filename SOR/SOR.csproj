@@ -174,6 +174,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdvanceDashScripts\app\AdvnaceDash.1.1.0.js" />
+    <Content Include="AdvanceDashScripts\app\app-blog-new-post.1.1.0.js" />
+    <Content Include="AdvanceDashScripts\app\app-blog-new-post.1.1.0.min.js" />
+    <Content Include="AdvanceDashScripts\app\app-blog-overview.1.1.0.min.js" />
+    <Content Include="AdvanceDashScripts\app\app-components-overview.1.1.0.js" />
+    <Content Include="AdvanceDashScripts\app\app-components-overview.1.1.0.min.js" />
+    <Content Include="AdvanceDashScripts\extras.1.1.0.min.js" />
+    <Content Include="AdvanceDashScripts\shards-dashboards.1.1.0.js" />
+    <Content Include="AdvanceDashScripts\shards-dashboards.1.1.0.min.js" />
     <Content Include="ajax\libs\bootstrap-datetimepicker\4.17.47\js\bootstrap-datetimepicker.min.js" />
     <Content Include="ajax\libs\bootstrap-slider\9.9.0\bootstrap-slider.min.js" />
     <Content Include="ajax\libs\c3\0.4.11\c3.min.js" />
@@ -1043,6 +1052,7 @@
     <Content Include="Pages\BC\ReprocessBCDetails.aspx" />
     <Content Include="Pages\Configuration\BankConfiguration.aspx" />
     <Content Include="Pages\Configuration\BankConfigVeri.aspx" />
+    <Content Include="Pages\Dashboard\AdvanceDashboad.aspx" />
     <Content Include="Pages\Dashboard\DashBoard.aspx" />
     <Content Include="Pages\Dashboard\TransactionTrend.aspx" />
     <Content Include="Pages\Dashboard\TransactionTrend_old.aspx" />
@@ -1132,6 +1142,7 @@
     <Content Include="ic2\icomoon.eot" />
     <Content Include="ic2\icomoon.ttf" />
     <Content Include="ic2\icomoon.woff" />
+    <Content Include="AdvanceDashScripts\shards-dashboards.1.1.0.js.map" />
     <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -1481,6 +1492,13 @@
     </Compile>
     <Compile Include="Pages\Configuration\BankConfigVeri.aspx.designer.cs">
       <DependentUpon>BankConfigVeri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboard\AdvanceDashboad.aspx.cs">
+      <DependentUpon>AdvanceDashboad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dashboard\AdvanceDashboad.aspx.designer.cs">
+      <DependentUpon>AdvanceDashboad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Dashboard\DashBoard.aspx.cs">
       <DependentUpon>DashBoard.aspx</DependentUpon>

@@ -252,6 +252,12 @@
                                         </div>
                                     </div>
                                     <div class="col">
+                                        <label class="selectInputLabel" for="selectInputLabel">Name</label>
+                                        <div class="inputBox w-100">
+                                            <input type="text" id="txtName" runat="server" class="input-text form-control" style="width: 100%" placeholder="Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col">
                                         <label class="selectInputLabel" for="selectInputLabel">Name/PIN</label>
                                         <asp:DropDownList ID="ddlNamePIN" runat="server" CssClass="maximus-select w-100">
                                             <asp:ListItem Text="--Select--" Value="0"></asp:ListItem>

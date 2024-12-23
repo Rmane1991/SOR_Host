@@ -94,9 +94,17 @@ namespace SOR.Pages.Rule
                 _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                 DataTable dt = new DataTable();
                 dt = _RuleEntity.GetGroup();
-                //AddHeaderRow();
-                rptrGroup.DataSource = dt;
-                rptrGroup.DataBind();
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    rptrGroup.DataSource = dt;
+                    rptrGroup.DataBind();
+                    rptrGroup.Visible = true;
+                }
+                else
+                {
+                    rptrGroup.Visible = false;
+                }
             }
             catch (Exception Ex)
             {

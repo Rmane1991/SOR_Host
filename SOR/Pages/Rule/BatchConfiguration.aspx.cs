@@ -88,6 +88,8 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                gvBankConfiguration.DataSource = null;
+                gvBankConfiguration.DataBind();
                 //ddlBCCode.ClearSelection();
                 //ddlClientCode.ClearSelection();
                 //gvLimitStatus.Visible = false;

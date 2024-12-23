@@ -393,15 +393,14 @@ function removeRow(button) {
                                                     <input type="date" runat="server" id="txtTo" class="multiple-dates select-date form-control" style="width: 100%" placeholder="Select Date" onchange="checkToDate()" />
                                                 </div>
                                             </div>
+                                            <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
                                             <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" onserverclick="btnSearch_ServerClick">
                                                 Search</button>
                                             <button type="button" id="btnClear" runat="server" onserverclick="btnClear_ServerClick" class="themeBtn resetBtn themeCancelBtn me-0" data-bs-toggle="modal">
                                                 Clear</button>
                                             <button type="button" id="btnAdd" runat="server" class="themeBtn themeApplyBtn" onserverclick="btnAdd_ServerClick">
                                                 Add New</button>
-                                            <div class="col">
-                                               
-                                            </div>
+                                                </div>
                                         </div>
 
                                         <div class="d-flex justify-content-end">

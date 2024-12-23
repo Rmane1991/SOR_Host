@@ -925,7 +925,10 @@
                                                             <asp:Label ID="lblServicesOffer" runat="server" Text="Services Offer "></asp:Label><span class="err">*</span><br />
 
                                                             <asp:CheckBox ID="chkAEPS" runat="server" Style="font-weight: 500" />
-                                                            <asp:Label ID="lblchkAEPS" runat="server">AEPS &emsp;</asp:Label>
+                                                            <asp:Label ID="lblchkAEPS" runat="server">AePS &emsp;</asp:Label>
+
+                                                            <asp:CheckBox ID="chkdmt" runat="server" />
+                                                            <asp:Label ID="lblchkdmt" runat="server">DMT &emsp;</asp:Label>
 
                                                             <asp:CheckBox ID="chkMATM" runat="server" />
                                                             <asp:Label ID="lblchkMATM" runat="server">Micro ATM &emsp;</asp:Label>

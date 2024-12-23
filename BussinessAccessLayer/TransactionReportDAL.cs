@@ -26,6 +26,7 @@ namespace BussinessAccessLayer
 
         public string RRN { get; set; }
         public string PinCode { get; set; }
+        public string Name { get; set; }
 
         public string PRRN { get; set; }
        
@@ -643,11 +644,12 @@ namespace BussinessAccessLayer
                             new NpgsqlParameter("p_UserName", UserName),
                             new NpgsqlParameter("p_Flag", flag),
                             new NpgsqlParameter("p_pincode", (object)PinCode?? DBNull.Value),
+                            new NpgsqlParameter("p_name", (object)Name?? DBNull.Value),
                             new NpgsqlParameter("p_PageIndex", PageIndex)
                         };
 
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "CALL SP_NegativeAgent_Report(@p_FromDate, @p_ToDate, @p_namepin, @p_UserName, @p_Flag, @p_pincode, @p_PageIndex)";
+                        cmd.CommandText = "CALL SP_NegativeAgent_Report(@p_FromDate, @p_ToDate, @p_namepin, @p_UserName, @p_Flag, @p_pincode, @p_name, @p_PageIndex)";
                         cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddRange(_Params);
                         cmd.CommandTimeout = PageRequestTimeoutInMLS;

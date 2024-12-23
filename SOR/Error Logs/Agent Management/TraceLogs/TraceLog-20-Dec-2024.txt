@@ -1,0 +1,47 @@
+Time : 20-Dec-2024 10:49 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 10:50 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 11:13 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 11:14 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 11:29 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 20-Dec-2024 11:29 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 69
+Time : 20-Dec-2024 11:30 Message : EditRegitsration: GetDetails: Exception: Column 'BusinessEmailID' does not belong to table AgentData.
+Time : 20-Dec-2024 11:33 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration KYC Validation. UserName: 
+Time : 20-Dec-2024 11:33 Message : AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName:  RequestId: 70
+Time : 20-Dec-2024 11:33 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 70
+Time : 20-Dec-2024 11:33 Message : AgentRegistration: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. UserName:  PanNo: CMGPD5465P RequestId: 70
+Time : 20-Dec-2024 11:33 Message : EditRegitsration: GetDetails: Exception: Column 'BusinessEmailID' does not belong to table AgentData.
+Time : 20-Dec-2024 11:33 Message : EditRegitsration: GetDetails: Exception: Column 'BusinessEmailID' does not belong to table AgentData.
+Time : 20-Dec-2024 11:53 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 12:12 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 12:14 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 41
+Time : 20-Dec-2024 12:14 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 20-Dec-2024 12:15 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 20-Dec-2024 12:15 Message : BCEntity: GetBCRequestList: UserName:  Exception: 39000: Wrong key or corrupt data
+Time : 20-Dec-2024 12:19 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 40
+Time : 20-Dec-2024 12:27 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 12:32 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 12:36 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 12:38 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 12:49 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:14 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:20 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:22 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:24 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:33 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:36 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:42 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:43 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:46 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 14:49 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 15:55 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 16:03 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 16:23 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 16:51 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 17:52 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 18:08 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 18:32 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 18:33 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 19:12 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 19:28 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 19:29 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 20-Dec-2024 19:34 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique

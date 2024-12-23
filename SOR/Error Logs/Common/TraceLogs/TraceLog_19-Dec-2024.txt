@@ -1,0 +1,63 @@
+19-12-2024 10:49:16:1094 : Login Successful. Username Maximus. SessionID : dubicu5hqhez5htiyd1q34c2
+19-12-2024 10:54:27:6765 : Login Successful. Username Maximus. SessionID : rwbh3i2srru24q2i5o4zu5e1
+19-12-2024 11:01:58:5431 : Login Successful. Username Maximus. SessionID : hscbdvtqhllttvwdgt2ugnpq
+19-12-2024 11:04:18:9370 : Login Successful. Username Maximus. SessionID : ut1do2oxplaw5xpkurynfryq
+19-12-2024 11:09:43:1664 : Login Successful. Username Maximus. SessionID : wjibuay4v53504jqra0reax0
+19-12-2024 11:18:07:0261 : Login Successful. Username Maximus. SessionID : wlgl0xdlzqieo542sfxc1cre
+19-12-2024 11:30:56:5728 : Login Successful. Username Maximus. SessionID : r4lnuatbfiqnpltvyrw1g3f2
+19-12-2024 11:39:32:0778 : Login Successful. Username Maximus. SessionID : 3gkf0gucirmv0icl3y0j0cqx
+19-12-2024 11:49:06:9917 : Login Successful. Username Maximus. SessionID : 4bgtsbcps30rpzuurivb4xxd
+19-12-2024 11:54:56:7090 : Login Successful. Username Maximus. SessionID : b5ivrcglkhzpxhirbhfwgqpb
+19-12-2024 12:01:03:8554 : Login Successful. Username Maximus. SessionID : jwjcwx5d3fsdawtag1khattg
+19-12-2024 12:02:53:7034 : Login Successful. Username Maximus. SessionID : y4alylhr1t5two5jg0r04ujx
+19-12-2024 12:39:33:6242 : Login Successful. Username Maximus. SessionID : v2ukztvsmpwiz3xdbqqybxpm
+19-12-2024 12:46:52:6323 : Login Successful. Username Maximus. SessionID : r2m2x5juylqalshnru5mtxmz
+19-12-2024 14:06:11:3024 : Login Successful. Username Maximus. SessionID : assbixayj0pqo5y2qbbwvr0y
+19-12-2024 14:23:29:9161 : Login Successful. Username Maximus. SessionID : u214ku5g02fxp1qobtthjvgy
+19-12-2024 14:24:54:5271 : Login Successful. Username Maximus. SessionID : pl3n0eypjeszy5v4zaicja1b
+19-12-2024 14:26:57:0938 : Login Successful. Username Maximus. SessionID : urgsye0cnu2bzfmayuimg542
+19-12-2024 14:29:35:6473 : Login Successful. Username Maximus. SessionID : qb5lh5ehzkldlp3sxnjgn0vu
+19-12-2024 14:42:51:0228 : Login Successful. Username Maximus. SessionID : qcr4tuktkf3ynnctsesn4sud
+19-12-2024 14:45:28:0762 : Login Successful. Username Maximus. SessionID : bmw2his3geb0ctdhrjzlnk5d
+19-12-2024 14:50:14:0897 : Login Successful. Username Maximus. SessionID : oijqj5flar4b11bxqyl5ko1m
+19-12-2024 14:51:30:7492 : Login Successful. Username Maximus. SessionID : 1uf1sqriwmzwbzxgsm0l4ndi
+19-12-2024 14:52:29:7441 : Login Successful. Username Maximus. SessionID : dl2gtvgshhmghtypc0labrxc
+19-12-2024 14:53:36:6119 : Login Request Failed (Login Page). Exception : There is no row at position 0. Username : maximus
+19-12-2024 14:53:43:7898 : Login Successful. Username Maximus. SessionID : vu3iu31ikw0vfg1mfxocsawu
+19-12-2024 14:58:12:6955 : Login Successful. Username Maximus. SessionID : 0eedgci4p40sjls2hqu4kldf
+19-12-2024 15:18:14:7574 : Login Successful. Username Maximus. SessionID : ssdbkgnnas11gh0hkrsjoju3
+19-12-2024 15:25:20:8847 : Login Successful. Username Maximus. SessionID : 13c1qzht2rchbqblxmyjaeee
+19-12-2024 15:43:33:1275 : Login Successful. Username Maximus. SessionID : pqwyp5yej5jmehxkzjztwfyv
+19-12-2024 15:46:22:4043 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+19-12-2024 15:46:22:4053 : NOTICE: Flag is set to 1, proceeding with validations...
+19-12-2024 15:46:22:4612 : NOTICE: Inserting new record...1
+19-12-2024 15:46:22:4612 : NOTICE: Inserting new record...
+19-12-2024 15:46:22:4871 : NOTICE: Insert successful, RequestId: 38
+19-12-2024 15:47:29:8967 : NOTICE: Starting insert/update for ClientId: 0, CreatedBy: Maximus
+19-12-2024 15:47:29:8977 : NOTICE: Flag is not set to 1, skipping insert/update logic.
+19-12-2024 15:47:38:4352 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+19-12-2024 15:47:38:4352 : NOTICE: Flag is set to 1, proceeding with validations...
+19-12-2024 15:47:38:4911 : NOTICE: Inserting new record...1
+19-12-2024 15:47:38:4921 : NOTICE: Updating existing record with ID: 38
+19-12-2024 15:47:38:5140 : NOTICE: Update successful for RequestId: 38
+19-12-2024 15:50:17:6637 : Login Successful. Username Maximus. SessionID : 2ymo5bq3ffvixlrgsx2jwcew
+19-12-2024 15:51:06:8256 : NOTICE: Starting insert/update for ClientId: CL000001, CreatedBy: Maximus
+19-12-2024 15:51:06:8266 : NOTICE: Flag is set to 1, proceeding with validations...
+19-12-2024 15:51:06:8834 : NOTICE: Inserting new record...1
+19-12-2024 15:51:06:8844 : NOTICE: Inserting new record...
+19-12-2024 15:51:06:9143 : NOTICE: Insert successful, RequestId: 39
+19-12-2024 15:59:10:2580 : Login Unsuccessful. Invalid Credentials. Username : Maximus
+19-12-2024 16:02:57:9921 : Login Successful. Username Maximus. SessionID : usidzteyd5qmfj2ucfv3b1l4
+19-12-2024 16:13:54:1041 : Login Successful. Username Maximus. SessionID : s4kq15mioftg21sgu35ujts2
+19-12-2024 16:19:25:5013 : Login Successful. Username Maximus. SessionID : 3axfshrm2s4j3y3pdrmje1i5
+19-12-2024 16:23:25:7770 : Login Successful. Username Maximus. SessionID : lgtp0febuwtv3wfic5y02g1s
+19-12-2024 16:59:02:9421 : Login Successful. Username Maximus. SessionID : 3ipf2n1r0qyo1hmt5qheyubv
+19-12-2024 17:38:08:1613 : Login Successful. Username Maximus. SessionID : wkcxlarbknypyyhvepto02ii
+19-12-2024 18:07:56:6829 : Login Successful. Username Maximus. SessionID : 51zgbtjhux0w44wcadotutsf
+19-12-2024 18:50:07:9439 : Login Successful. Username Maximus. SessionID : pf54bwpbbrgdcnwbqrtifp01
+19-12-2024 19:03:04:4107 : Login Successful. Username Maximus. SessionID : wiakm1c3ptqunux355fwzyei
+19-12-2024 19:10:36:0886 : Login Successful. Username Maximus. SessionID : dbzggdtcgp3aqrd5vl0ycaq5
+19-12-2024 19:11:18:2923 : Login Successful. Username Maximus. SessionID : gprutl41ru3sg3dshdcqakhl
+19-12-2024 19:14:41:2326 : Login Successful. Username Maximus. SessionID : zexasuojbknma1e5gawklp4e
+19-12-2024 19:17:31:9873 : Login Successful. Username Maximus. SessionID : dmtudg1vfiglicraqou2xc4v
+19-12-2024 19:20:08:3857 : Login Successful. Username Maximus. SessionID : ofazfxkwmj0xhxn550cvsayq
