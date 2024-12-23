@@ -230,3 +230,12 @@ D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.
 D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CopyComplete
 D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.dll
 D:\D Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.pdb
+D:\Data\Aakash\SOR\SOR\AppLogger\bin\Debug\AppLogger.dll
+D:\Data\Aakash\SOR\SOR\AppLogger\bin\Debug\AppLogger.pdb
+D:\Data\Aakash\SOR\SOR\AppLogger\bin\Debug\Newtonsoft.Json.dll
+D:\Data\Aakash\SOR\SOR\AppLogger\bin\Debug\Newtonsoft.Json.xml
+D:\Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csprojAssemblyReference.cache
+D:\Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CoreCompileInputs.cache
+D:\Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.csproj.CopyComplete
+D:\Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.dll
+D:\Data\Aakash\SOR\SOR\AppLogger\obj\Debug\AppLogger.pdb
