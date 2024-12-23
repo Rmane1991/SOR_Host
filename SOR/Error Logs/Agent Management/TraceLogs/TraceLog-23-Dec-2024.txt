@@ -8,3 +8,15 @@ Time : 23-Dec-2024 14:05 Message : DashBoard: LoadTransactionCounts(): Exception
 Time : 23-Dec-2024 14:37 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
 Time : 23-Dec-2024 15:14 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
 Time : 23-Dec-2024 15:55 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 16:27 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 16:39 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 16:42 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 16:44 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 16:46 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 16:49 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 17:51 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 18:02 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 18:13 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 18:15 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 18:18 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 23-Dec-2024 18:34 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique

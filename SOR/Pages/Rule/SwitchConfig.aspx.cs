@@ -270,7 +270,6 @@ namespace SOR.Pages.Rule
                     lblErrorMessage.Visible = false;
 
                     updatesTable = CreateUpdatesDataTable();
-
                     // Iterate through the Repeater items
                     foreach (RepeaterItem item in rptSwitchDetails.Items)
                     {
@@ -288,6 +287,32 @@ namespace SOR.Pages.Rule
                         }
                     }
                     #endregion
+                }
+                else
+                {
+                    updatesTable = CreateUpdatesDataTable();
+
+                    decimal totalPercentagee = 0;
+
+                    // Iterate through the Repeater items
+                    foreach (RepeaterItem item in rptSwitchDetails.Items)
+                    {
+                        var lblID = (Label)item.FindControl("lblID");
+                        var txtPercentage = (TextBox)item.FindControl("txtPercentage");
+
+                        if (lblID != null && txtPercentage != null)
+                        {
+                            decimal percentage = Convert.ToDecimal(txtPercentage.Text);
+                            totalPercentagee += percentage;
+                            updatesTable.Rows.Add(Convert.ToInt32(lblID.Text), percentage);
+                        }
+                    }
+
+                    // Adjust last row to make the total percentage 100
+                    if (totalPercentagee != 100 && updatesTable.Rows.Count > 0)
+                    {
+                        updatesTable.Rows[updatesTable.Rows.Count - 1]["Percentage"] = 100 - totalPercentagee + Convert.ToDecimal(updatesTable.Rows[updatesTable.Rows.Count - 1]["Percentage"]);
+                    }
                 }
 
 
@@ -412,8 +437,8 @@ namespace SOR.Pages.Rule
                     //_RuleEntity.FailoverSwitchId = !string.IsNullOrEmpty(hfSelectedValues.Value) ? hfSelectedValues.Value.Trim() : null;
                     //_RuleEntity.Failoverpercentage = int.TryParse(txtPercentageFailover1.Value.Trim(), out int Failoverpercentage) ? Failoverpercentage : 0;
                     _RuleEntity.dt = updatesTable;
-                    _RuleEntity.dt2 = resultTable;
-                    _RuleEntity.dt3 = dtSwitchValues;
+                    _RuleEntity.dt2 = resultTable;//Txn Url
+                    _RuleEntity.dt3 = dtSwitchValues;//Failover Switch
                     //_RuleEntity.Switchurl = !string.IsNullOrEmpty(txturl.Text) ? txturl.Text.Trim() : null;
                     //_RuleEntity.TxnType = !string.IsNullOrEmpty(hfSelectedSecondValues.Value) ? hfSelectedSecondValues.Value.Trim() : null;
                     _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.Insert;
@@ -762,12 +787,70 @@ $(document).ready(function () {
                         }
                         else
                         {
-                            txtCount.Visible = true;
+                            //txtCount.Visible = true;
                             TextBox3.Text = string.Empty;
-                            txtCount.Text = row1["maxcount"].ToString();
-                            Session["SwitchPercentage"] = TextBox3.Text;
-                            string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
-                            ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
+                            TextBox4.Text = row1["maxcount"].ToString();
+                            Session["SwitchPercentage"] = TextBox4.Text;
+
+                            //string script = "setTimeout(function() { $('#Switch').prop('checked', true); callToggleSwitch(true); }, 0);";
+                            //ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
+                            string script = @"
+$(document).ready(function () {
+    // Set checkbox to be checked automatically on page load
+    var isChecked = true; // You can also set this dynamically based on your logic
+    
+    // Set the checkbox to checked
+    $('#Switchh').prop('checked', isChecked);
+
+    // Trigger the checkbox change event (simulate a click)
+    $('#Switchh').change(); // This triggers the change event on the checkbox
+
+    // Disable the checkbox while processing
+    $('#Switchh').prop('disabled', true);
+
+    // AJAX call to the server to determine which panel to show and which textbox to clear
+    $.ajax({
+        type: 'POST',
+        url: 'SwitchConfig.aspx/ToggleSwitchh',
+        data: JSON.stringify({ IsChecked: isChecked }),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (response) {
+            var result = response.d;
+
+            // Get the client IDs of the panels and textboxes
+            var pnlPercentageID = '<%= pnlPercentage.ClientID %>';
+            var pnlCountID = '<%= pnlCount.ClientID %>';
+            var txtSwitchPercentageID = '<%= txtSwitchPercentage.ClientID %>';
+            var txtCountID = '<%= txtCount.ClientID %>';
+
+            // Check the result and show/hide panels accordingly
+            if (result === 'showCount-clearPercentage') {
+                $('#' + pnlPercentageID).hide();
+                $('#' + pnlCountID).show();
+                $('#' + txtSwitchPercentageID).val(''); // Clear Percentage textbox
+            } else if (result === 'showPercentage-clearCount') {
+                $('#' + pnlCountID).hide();
+                $('#' + pnlPercentageID).show();
+                $('#' + txtCountID).val(''); // Clear Count textbox
+            } else {
+                console.log('Unexpected result:', result);
+            }
+
+            // Enable the checkbox after processing
+            $('#Switchh').prop('disabled', false);
+        },
+        error: function (error) {
+            console.error('An error occurred:', error);
+            alert('An error occurred: ' + error.responseText);
+            // Enable the checkbox after an error
+            $('#Switchh').prop('disabled', false);
+        }
+    });
+});
+";
+
+                            ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitchh", script, true);
                         }
                     }
                     //BindFailoverData(ds.Tables[1]);
@@ -1741,36 +1824,54 @@ $(document).ready(function () {
 
         public void RemoveRowById(string id)
         {
-            // Use a flag to track if a row was removed
             bool rowRemoved = false;
 
+            // Retrieve the username and flag (this part remains unchanged)
             _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
             _RuleEntity.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
+
+            // Get the DataSet
             DataSet dt = _RuleEntity.GetSwitch();
 
-            // Loop through the rows in reverse order to avoid issues with changing collection
+            // Remove rows where maxcount is not 0 (same as before)
+            for (int i = dt.Tables[0].Rows.Count - 1; i >= 0; i--)
+            {
+                if (Convert.ToInt32(dt.Tables[0].Rows[i]["maxcount"]) != 0)
+                {
+                    dt.Tables[0].Rows.RemoveAt(i);
+                }
+            }
+
+            // Remove row by matching ID
             for (int i = dt.Tables[0].Rows.Count - 1; i >= 0; i--)
             {
                 DataRow row = dt.Tables[0].Rows[i];
-                if (row["id"].ToString() == id) // Compare with the ID value
+                if (row["id"].ToString() == id) // Compare the row ID with the provided ID
                 {
-
-                    dt.Tables[0].Rows.Remove(row);
-                    rowRemoved = true; // Mark that a row was removed
-                    break; // Exit after removing the first matching row
+                    dt.Tables[0].Rows.RemoveAt(i); // Remove row by index
+                    rowRemoved = true; // Mark as removed
+                    break; // Exit after the first match
                 }
             }
-            
+
+            // Bind the updated DataSet to the Repeater controls
             rptSwitchDetails.DataSource = dt;
             rptSwitchDetails.DataBind();
 
             rptSwitchDetailsDelete.DataSource = dt;
             rptSwitchDetailsDelete.DataBind();
+
+            // Update ViewState with the modified DataSet
             ViewState["Delete_dt"] = dt;
+
+            // Optionally handle when no row is removed
             if (!rowRemoved)
-                // Handle the case where no matching row was found, if needed
+            {
+                // Handle the case where no matching row was found (could log, notify, etc.)
                 Console.WriteLine($"No row found with ID: {id}");
+            }
         }
+
 
         protected void btnManual_Click(object sender, EventArgs e)
         {
