@@ -1760,11 +1760,13 @@ $(document).ready(function () {
                     break; // Exit after removing the first matching row
                 }
             }
+            
             rptSwitchDetails.DataSource = dt;
             rptSwitchDetails.DataBind();
 
             rptSwitchDetailsDelete.DataSource = dt;
             rptSwitchDetailsDelete.DataBind();
+            ViewState["Delete_dt"] = dt;
             if (!rowRemoved)
                 // Handle the case where no matching row was found, if needed
                 Console.WriteLine($"No row found with ID: {id}");
@@ -1954,7 +1956,7 @@ $(document).ready(function () {
                         }
                     }
                 }
-                
+
 
                 // Assign the DataTable to the _RuleEntity entity (or whatever processing you need to do)
                 _RuleEntity.dt = updatesTable;
