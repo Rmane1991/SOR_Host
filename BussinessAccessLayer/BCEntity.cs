@@ -89,6 +89,7 @@ namespace BussinessAccessLayer
         public string Education { get; set; }
         public string Clientcode { get; set; }
         public int? ForMicroATM { get; set; }
+        public int? ForDMT { get; set; }
         public string ModifiedBy { get; set; }
         //public string BCFranchiseID { get; set; }
         public string BCID { get; set; }
@@ -362,7 +363,7 @@ namespace BussinessAccessLayer
                     // Open the connection
                     sqlConn.Open();
 
-                    using (var cmd = new NpgsqlCommand("CALL public.sp_bc_request_registration_insert(NULL,NULL,NULL, @p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype)", sqlConn))
+                    using (var cmd = new NpgsqlCommand("CALL public.sp_bc_request_registration_insert(NULL,NULL,NULL, @p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_dmt, @p_flag, @p_activitytype)", sqlConn))
                     {
                         cmd.CommandType = CommandType.Text;
                         var outputRequestId = new NpgsqlParameter("p_reqid", NpgsqlTypes.NpgsqlDbType.Integer)
@@ -421,6 +422,7 @@ namespace BussinessAccessLayer
                         //cmd.Parameters.AddWithValue("p_matm", ForMicroATM);
                         cmd.Parameters.AddWithValue("p_aeps", ForAEPS.HasValue ? ForAEPS.Value : 0);
                         cmd.Parameters.AddWithValue("p_matm", ForMicroATM.HasValue ? ForMicroATM.Value : 0);
+                        cmd.Parameters.AddWithValue("p_dmt", ForDMT.HasValue ? ForDMT.Value : 0);
                         cmd.Parameters.AddWithValue("p_flag", Flag);
                         cmd.Parameters.AddWithValue("p_activitytype", string.IsNullOrEmpty(Activity) ? "0" : Activity);
 
@@ -1679,37 +1681,94 @@ namespace BussinessAccessLayer
         #endregion
 
         #region Change BcOnBoard Status
+        //public DataSet ChangeBcOnBoardStatus()
+        //{
+
+        //    try
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand())
+        //        {
+        //            using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+        //            {
+        //                SqlParameter[] _Params =
+        //                {
+
+        //                                    new SqlParameter("@Remarks",MakerRemark),
+        //                                    new SqlParameter("@ActivityType",ActivityType),
+        //                                    new SqlParameter("@UserName",UserName),
+        //                                    new SqlParameter("@Flag",Flag),
+        //                                    new SqlParameter("@BCCode",BC_Code),
+        //                                    new SqlParameter("@BCReqId",BCReqId),
+        //                                    new SqlParameter("@Mstatus",Mstatus),
+        //                                    new SqlParameter("@CHStatus",CHstatus),
+        //                                    new SqlParameter("@ATStatus",ATStatus),
+        //                };
+        //                cmd.Connection = sqlConn;
+        //                cmd.CommandText = "SP_UpdateBCOnboardProcessHandler";
+        //                cmd.CommandType = CommandType.StoredProcedure;
+        //                cmd.Parameters.AddRange(_Params);
+        //                DataSet dataSet = new DataSet();
+        //                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+        //                dataAdapter.Fill(dataSet);
+        //                cmd.Dispose();
+        //                return dataSet;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : ChangeBcOnBoardStatus() \nException Occured\n" + Ex.Message);
+        //        ErrorLog.DBError(Ex);
+        //        throw;
+        //    }
+        //}
         public DataSet ChangeBcOnBoardStatus()
         {
-
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (NpgsqlCommand cmd = new NpgsqlCommand())
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))  // Use NpgsqlConnection for PostgreSQL
                     {
-                        SqlParameter[] _Params =
+                        // Define parameters for the stored procedure
+                        NpgsqlParameter[] _Params =
                         {
+                    new NpgsqlParameter("p_BCCode", BC_Code),  // Match with p_BcCode
+                    new NpgsqlParameter("p_BCReqId", BCReqId),  // Match with p_BcReqId
+                    new NpgsqlParameter("p_Remarks", MakerRemark),  // Match with p_Remarks
+                    new NpgsqlParameter("p_UserName", UserName),  // Match with p_UserName
+                    new NpgsqlParameter("p_Flag", Flag),  // Match with p_Flag
+                    new NpgsqlParameter("p_Mstatus", Mstatus),  // Match with p_Mstatus
+                    new NpgsqlParameter("p_ATStatus", ATStatus),  // Match with p_ATStatus
+                    new NpgsqlParameter("p_CHStatus", CHstatus),  // Match with p_CHStatus
+                    new NpgsqlParameter("p_ActivityType", ActivityType),
+                };
 
-                                            new SqlParameter("@Remarks",MakerRemark),
-                                            new SqlParameter("@ActivityType",ActivityType),
-                                            new SqlParameter("@UserName",UserName),
-                                            new SqlParameter("@Flag",Flag),
-                                            new SqlParameter("@BCCode",BC_Code),
-                                            new SqlParameter("@BCReqId",BCReqId),
-                                            new SqlParameter("@Mstatus",Mstatus),
-                                            new SqlParameter("@CHStatus",CHstatus),
-                                            new SqlParameter("@ATStatus",ATStatus),
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_UpdateBCOnboardProcessHandler";
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandType = CommandType.Text;  // Use CommandType.Text for raw SQL commands
+
+                        // Open the connection
+                        sqlConn.Open();
+
+                        // Execute the procedure using a CALL statement
+                        cmd.CommandText = "CALL SP_UpdateBCOnboardProcessHandler(" +
+                                  "@p_BCCode, @p_BCReqId, @p_Remarks, @p_UserName, @p_Flag, " +
+                                  "@p_Mstatus, @p_ATStatus, @p_CHStatus, @p_ActivityType)";
+
+                        // Add parameters to the command
                         cmd.Parameters.AddRange(_Params);
+                        cmd.ExecuteNonQuery();  // Execute the stored procedure
+
+                        // After calling the procedure, select the result from the temporary table or directly fetch the result
+                        cmd.CommandText = "SELECT * FROM temp_row_count";  // Query the temp table for the result
+                        NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd);
+
+                        // Create DataSet to hold the results
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                         dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
-                        return dataSet;
+
+                        sqlConn.Close();
+                        return dataSet;  // Return the result
                     }
                 }
             }
@@ -1720,6 +1779,7 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
+
         #endregion
 
         public DataSet GetCountryStateCity(string UserName, int Mode, int CountryID, int StateID)

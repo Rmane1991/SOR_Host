@@ -376,6 +376,12 @@
                                     <HeaderStyle CssClass="text-center" />
                                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                                 </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:HiddenField ID="hfBCID" runat="server" Value='<%# Eval("BC ID") %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
                                 <asp:BoundField DataField="BC Code" HeaderText="Code" />
                                 <%--<asp:BoundField DataField="Client ID" HeaderText="Client ID" />
                                 <asp:BoundField DataField="Client Name" HeaderText="Client Name" />--%>

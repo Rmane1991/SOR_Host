@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -226,6 +224,18 @@ namespace SOR.Pages.BC
                     {
                         chkAEPS.Checked = false;
                     }
+                    if (ds.Tables[0].Rows[0]["dmt"].ToString() != "" || ds.Tables[0].Rows[0]["dmt"].ToString() != null)
+                    {
+                        //  HdnAEPS.Value = ds.Tables[0].Rows[0]["AEPS"].ToString();
+                    }
+                    if (ds.Tables[0].Rows[0]["dmt"].ToString() == "1")
+                    {
+                        chkdmt.Checked = true;
+                    }
+                    else
+                    {
+                        chkdmt.Checked = false;
+                    }
                     if (ds.Tables[0].Rows[0]["MATM"].ToString() != "" || ds.Tables[0].Rows[0]["MATM"].ToString() != null)
                     {
                         //HdnMATM.Value = ds.Tables[0].Rows[0]["MATM"].ToString();
@@ -278,6 +288,7 @@ namespace SOR.Pages.BC
                     {
                         _salt = _AppSecurity.RandomStringGenerator();
                         _BCEntity.ForAEPS = chkAEPS.Checked == true ? 1 : 0;
+                        _BCEntity.ForDMT = chkdmt.Checked == true ? 1 : 0;
                         _BCEntity.ForMicroATM = chkMATM.Checked == true ? 1 : 0;
                         _BCEntity.FirstName = txtFirstName.Text.Trim();
                         _BCEntity.MiddleName = txtMiddleName.Text.Trim();
@@ -525,7 +536,7 @@ namespace SOR.Pages.BC
 
               
 
-                if (chkAEPS.Checked == false && chkMATM.Checked == false)
+                if (chkAEPS.Checked == false && chkMATM.Checked == false && chkdmt.Checked == false)
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
@@ -783,6 +794,7 @@ namespace SOR.Pages.BC
                 dvfield_PANNo.Visible = true;
                 txtaadharno.Text = null;
                 chkAEPS.Checked = false;
+                chkdmt.Checked = false;
                 chkMATM.Checked = false;
                 ddlclient.SelectedValue = null;
                 ddlCategory.ClearSelection();
@@ -853,7 +865,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-                if (HiddenField1.Value.ToString() == "Yes")
+                if (HiddenField2.Value.ToString() == "Yes")
                 {
                     _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
                     _BCEntity.ClientId = Session["Client"].ToString();

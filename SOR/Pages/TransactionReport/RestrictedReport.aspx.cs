@@ -135,6 +135,7 @@ namespace SOR.Pages.TransactionReport
                 _TransactionReportDAL.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                 _TransactionReportDAL.NamePIN = ddlNamePIN.SelectedValue != "0" ? ddlNamePIN.SelectedValue : null;
                 _TransactionReportDAL.PinCode = !string.IsNullOrEmpty(txtPinCode.Value) ? txtPinCode.Value.Trim() : null;
+                _TransactionReportDAL.Name = !string.IsNullOrEmpty(txtName.Value) ? txtName.Value.Trim() : null;
                 _TransactionReportDAL.PageIndex = gvRestrictedDetails.PageIndex;
             }
             catch (Exception Ex)

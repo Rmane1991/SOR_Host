@@ -1,0 +1,15 @@
+23-12-2024 11:06:43:6611 : Login Request Failed (Login Page). Exception : Exception while connecting Username : Maximus
+23-12-2024 11:17:12:9961 : Login Successful. Username Maximus. SessionID : e3sactsilzmcmvl3eweacj4n
+23-12-2024 11:19:59:0115 : Class : BCEntity.cs 
+Function : ActiveDeactiveBC() 
+Exception Occured
+Keyword not supported: 'port'.
+23-12-2024 11:21:09:2301 : Class : BCEntity.cs 
+Function : ActiveDeactiveBC() 
+Exception Occured
+Keyword not supported: 'port'.
+23-12-2024 11:28:13:5791 : Login Successful. Username Maximus. SessionID : krztt34v0rgriw1x4m1txhns
+23-12-2024 11:57:16:2000 : Login Successful. Username Maximus. SessionID : uc20g1qm0ulicsrh5bx1mpsu
+23-12-2024 12:20:20:0270 : Login Successful. Username Maximus. SessionID : xlzmwgpfqepmnstqljtkut30
+23-12-2024 13:03:15:8341 : Login Successful. Username Maximus. SessionID : wrlbuzbmrxpvap3ybfy3ki1k
+23-12-2024 14:05:07:0943 : Login Successful. Username Maximus. SessionID : rlqeeos045vs2uc5fllxyufy

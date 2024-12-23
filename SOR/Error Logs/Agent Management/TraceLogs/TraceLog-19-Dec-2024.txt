@@ -1,0 +1,17 @@
+Time : 19-Dec-2024 14:50 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:50 Message : RestrictedReport: FillGrid: Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:50 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:50 Message : RestrictedReport: FillGrid: Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:51 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:51 Message : RestrictedReport: FillGrid: Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:51 Message : TransactionReportDAL: GetAEPSTransactionReport: UserName: Maximus Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 14:51 Message : RestrictedReport: FillGrid: Exception: 42883: procedure sp_negativeagent_report(text, text, text, text, text, unknown, integer) does not exist
+Time : 19-Dec-2024 15:22 Message : AllTransactions: fillGrid: Exception: A field or property with the name 'Txn Type' was not found on the selected data source.
+Time : 19-Dec-2024 19:10 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:11 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:14 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:14 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:17 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:18 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:18 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 19-Dec-2024 19:18 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique

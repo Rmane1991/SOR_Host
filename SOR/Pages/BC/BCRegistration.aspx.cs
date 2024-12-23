@@ -338,6 +338,7 @@ namespace SOR.Pages.BC
                     {
                         _BCEntity.ForAEPS = chkAEPS.Checked == true ? 1 : 0;
                         _BCEntity.ForMicroATM = chkMATM.Checked == true ? 1 : 0;
+                        _BCEntity.ForDMT = chkdmt.Checked == true ? 1 : 0;
                         _BCEntity.FirstName = txtFirstName.Text.Trim();
                         _BCEntity.MiddleName = txtMiddleName.Text.Trim();
                         _BCEntity.LastName = txtLastName.Text.Trim();
@@ -630,7 +631,7 @@ namespace SOR.Pages.BC
                     }
                     else _BCEntity.AlternetNo = txtAlterNateNo.Text.Trim().ToString();
 
-                if (chkAEPS.Checked == false && chkMATM.Checked == false)
+                if (chkAEPS.Checked == false && chkMATM.Checked == false && chkdmt.Checked == false)
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
@@ -1112,7 +1113,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-                if (HiddenField1.Value.ToString() == "Yes" && HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value))
+                if (HiddenField2.Value.ToString() == "Yes" && HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value))
                 {
 
                     _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
@@ -1161,8 +1162,8 @@ namespace SOR.Pages.BC
                 else
                 {
                     ErrorLog.BCManagementTrace("BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: " + UserName);
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
-                    return;
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
+                    //return;
                 }
             }
             catch (Exception Ex)
@@ -1743,7 +1744,7 @@ namespace SOR.Pages.BC
                     //    ddlCity.DataBind();
                     //    ddlCity.Items.Insert(0, new ListItem("-- Select --", "0"));
                     //}
-                    txtFirstName.Text = ds.Tables[0].Rows[0]["BCName"].ToString();
+                    txtFirstName.Text = ds.Tables[0].Rows[0]["FirstName"].ToString();
                     //txtMiddleName.Text = ds.Tables[0].Rows[0]["Middle"].ToString();
                     //txtLastName.Text = ds.Tables[0].Rows[0]["LastName"].ToString();
                     if (ds.Tables[0].Rows[0]["Gender"].ToString() != "")

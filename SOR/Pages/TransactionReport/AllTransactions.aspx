@@ -400,7 +400,7 @@
                 </div>
                 </br>
 
-                <asp:Panel ID="pnlTicketSummary" runat="server" Style="overflow: scroll;">
+                <asp:Panel ID="pnlTicketSummary" runat="server" Style="width: 75%; padding: 06px 0px; overflow: auto; margin: 0 auto;">
                     <table class="OuterTable">
                         <tr>
                             <td class="OuterTD">
@@ -484,10 +484,10 @@
                     </table>
                 </asp:Panel>
 
-                <asp:Panel ID="panelGrid" runat="server" Width="100%" HorizontalScroll="false" ScrollBars="None" Style="margin: 5px 10px 0px 0px; padding-right: 0px; overflow: auto">
+                <asp:Panel ID="panelGrid" runat="server" Style="width: 75%; padding: 06px 0px; overflow: auto; margin: 0 auto;">
                     <asp:UpdatePanel runat="server" ID="UpdatePanel1">
                         <ContentTemplate>
-                            <div class="HeaderStyle gv-responsive">
+                            <div class="HeaderStyle gv-responsive" style="width: 100%; overflow-x: auto;">
                                 <asp:GridView ID="gvAllTransactions" runat="server"
                                     HeaderStyle-CssClass="text-center"
                                     CssClass="GridView"
@@ -519,19 +519,7 @@
                                     <PagerStyle CssClass="pagination-ys" />
 
                                     <Columns>
-                                        <%--<asp:BoundField DataField="Channel" HeaderText="Channel" SortExpression="Channel" />
-                                        <asp:BoundField DataField="Txn Type" HeaderText="Txn Type" SortExpression="Txn Type" />
-                                        <asp:BoundField DataField="Txn Flag" HeaderText="Txn Flag" SortExpression="Txn Flag" />
-                                        <asp:BoundField DataField="RRN" HeaderText="RRN" SortExpression="RRN" />
-                                        <asp:BoundField DataField="Txn Date" HeaderText="Txn Date" SortExpression="Txn Date" />
-                                        <asp:BoundField DataField="Txn Amount" HeaderText="Txn Amount" ItemStyle-HorizontalAlign="Right" SortExpression="Txn Amount" />
-                                        <asp:BoundField DataField="Service Charges" HeaderText="Service Charges" ItemStyle-HorizontalAlign="Right" SortExpression="Service Charges" />
-                                        <asp:BoundField DataField="Txn Status" HeaderText="Txn Status" SortExpression="Txn Status" />
-                                        <asp:BoundField DataField="AgentCode" HeaderText="AgentCode" SortExpression="Agent Code" />
-                                        <asp:BoundField DataField="TerminalID" HeaderText="Terminal ID" SortExpression="TerminalID" />
-                                        <asp:BoundField DataField="ResponseCode" HeaderText="Response Code" SortExpression="ResponseCode" />
-                                        <asp:BoundField DataField="AggregatorCode" HeaderText="BCCode" SortExpression="BCCode" />
-                                        <asp:BoundField DataField="Card Number" HeaderText="Card Number" SortExpression="Card Number" />--%>
+                                        
                                     </Columns>
                                 </asp:GridView>
                             </div>

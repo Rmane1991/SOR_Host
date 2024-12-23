@@ -844,71 +844,115 @@
 
         </script>
 
-        <%--<script>
-            // Check the stored sidebar state on page load
-            document.addEventListener('DOMContentLoaded', function () {
-                const sidebar = document.getElementById('sidebar');
-                const sliderButton = document.getElementById('slider-btn');
-
-                // Check if a state exists in localStorage
-                const sidebarState = localStorage.getItem('sidebarState');
-
-                // Apply the saved state, defaulting to 'open' if nothing is saved
-                if (sidebarState === 'closed') {
-                    sidebar.classList.add('closed');
-                    sidebar.classList.remove('open');
-                } else {
-                    sidebar.classList.add('open');
-                    sidebar.classList.remove('closed');
-                }
-
-                // Toggle the sidebar state when the slider button is clicked
-                sliderButton.addEventListener('click', function () {
-                    if (sidebar.classList.contains('open')) {
-                        sidebar.classList.remove('open');
-                        sidebar.classList.add('closed');
-                        localStorage.setItem('sidebarState', 'closed');
-                    } else {
-                        sidebar.classList.remove('closed');
-                        sidebar.classList.add('open');
-                        localStorage.setItem('sidebarState', 'open');
-                    }
-                });
-            });
-
-        </script>--%>
         <script>
-document.addEventListener('DOMContentLoaded', function () {
+            // Check the stored sidebar state on page load
+            //document.addEventListener('DOMContentLoaded', function () {
+            //    const sidebar = document.getElementById('sidebar');
+            //    const sliderButton = document.getElementById('slider-btn');
+
+            //    // Check if a state exists in localStorage
+            //    const sidebarState = localStorage.getItem('sidebarState');
+
+            //    // Apply the saved state, defaulting to 'open' if nothing is saved
+            //    if (sidebarState === 'closed') {
+            //        sidebar.classList.add('closed');
+            //        sidebar.classList.remove('open');
+            //    } else {
+            //        sidebar.classList.add('open');
+            //        sidebar.classList.remove('closed');
+            //    }
+
+            //    // Toggle the sidebar state when the slider button is clicked
+            //    sliderButton.addEventListener('click', function () {
+            //        if (sidebar.classList.contains('open')) {
+            //            sidebar.classList.remove('open');
+            //            sidebar.classList.add('closed');
+            //            localStorage.setItem('sidebarState', 'closed');
+            //        } else {
+            //            sidebar.classList.remove('closed');
+            //            sidebar.classList.add('open');
+            //            localStorage.setItem('sidebarState', 'open');
+            //        }
+            //    });
+            //});
+
+        </script>
+        <script>
+//document.addEventListener('DOMContentLoaded', function () {
+//    const sidebar = document.getElementById('sidebar');
+//    const sliderButton = document.getElementById('slider-btn');
+
+//    const sidebarState = localStorage.getItem('sidebarState');
+
+//    if (sidebarState === 'closed') {
+//        sidebar.classList.add('closed');
+//        sidebar.classList.remove('open');
+//        sliderButton.classList.remove('rotate');
+//    } else {
+//        sidebar.classList.add('open');
+//        sidebar.classList.remove('closed');
+//        sliderButton.classList.add('rotate');
+//    }
+//    sliderButton.addEventListener('click', function () {
+//        if (sidebar.classList.contains('open')) {
+//            sidebar.classList.remove('open');
+//            sidebar.classList.add('closed');
+//            sliderButton.classList.remove('rotate');
+//            localStorage.setItem('sidebarState', 'closed');
+//        } else {
+//            sidebar.classList.remove('closed');
+//            sidebar.classList.add('open');
+//            sliderButton.classList.add('rotate');
+//            localStorage.setItem('sidebarState', 'open');
+//        }
+//    });
+//});
+            document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
     const sliderButton = document.getElementById('slider-btn');
-
-    const sidebarState = localStorage.getItem('sidebarState');
-
-    if (sidebarState === 'closed') {
+    
+    // Check if the current page is DashBoard.aspx
+    const isDashboardPage = window.location.pathname.includes('DashBoard.aspx'); // Check for 'DashBoard.aspx' in the URL
+    
+    // If it's the dashboard page, close the sidebar by default
+    if (isDashboardPage) {
         sidebar.classList.add('closed');
         sidebar.classList.remove('open');
         sliderButton.classList.remove('rotate');
+        localStorage.setItem('sidebarState', 'closed');  // Save state as closed for dashboard
     } else {
-        sidebar.classList.add('open');
-        sidebar.classList.remove('closed');
-        sliderButton.classList.add('rotate');
+        // If it's not the dashboard page, use the saved state from localStorage
+        const sidebarState = localStorage.getItem('sidebarState');
+        if (sidebarState === 'closed') {
+            sidebar.classList.add('closed');
+            sidebar.classList.remove('open');
+            sliderButton.classList.remove('rotate');
+        } else {
+            sidebar.classList.add('open');
+            sidebar.classList.remove('closed');
+            sliderButton.classList.add('rotate');
+        }
     }
+
+    // Toggle the sidebar when the slider button is clicked
     sliderButton.addEventListener('click', function () {
         if (sidebar.classList.contains('open')) {
             sidebar.classList.remove('open');
             sidebar.classList.add('closed');
             sliderButton.classList.remove('rotate');
-            localStorage.setItem('sidebarState', 'closed');
+            localStorage.setItem('sidebarState', 'closed'); // Save state as closed
         } else {
             sidebar.classList.remove('closed');
             sidebar.classList.add('open');
             sliderButton.classList.add('rotate');
-            localStorage.setItem('sidebarState', 'open');
+            localStorage.setItem('sidebarState', 'open'); // Save state as open
         }
     });
 });
 
+
         </script>
+        
     </form>
 </body>
 </html>

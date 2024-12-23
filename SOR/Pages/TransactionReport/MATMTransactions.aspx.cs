@@ -79,73 +79,75 @@ namespace SOR.Pages.TransactionReport
             DataSet _dsTransactionLogs = null;
             try
             {
-                Setpropertise();
-                _TransactionReportDAL.Flag = Convert.ToInt32(_EnumBindingType);
-                _dsTransactionLogs = _TransactionReportDAL.GetMATMTransactionReport();
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found In Search Criteria. Try again', 'Warning');", true);
+
+                //Setpropertise();
+                //_TransactionReportDAL.Flag = Convert.ToInt32(_EnumBindingType);
+                //_dsTransactionLogs = _TransactionReportDAL.GetMATMTransactionReport();
                 
 
-                if (_dsTransactionLogs != null && _dsTransactionLogs.Tables.Count > 0 && _dsTransactionLogs.Tables[0].Rows.Count > 0)
-                {
-                    for (int i = 0; i < _dsTransactionLogs.Tables[0].Rows.Count; i++)
-                    {
-                        try
-                        {
-                            _cardNumber = EncryptDecryptCard.DecryptCardNo(_dsTransactionLogs.Tables[0].Rows[i][10].ToString());
-                        }
-                        catch (Exception Ex)
-                        {
-                            ErrorLog.CommonTrace("Class : MATMTransactions.cs \nFunction : FillGrid() => Reading DataSet => Error While Decrypt Card Number : " + _cardNumber + " \nException Occured\n" + Ex.Message);
-                        }
+                //if (_dsTransactionLogs != null && _dsTransactionLogs.Tables.Count > 0 && _dsTransactionLogs.Tables[0].Rows.Count > 0)
+                //{
+                //    for (int i = 0; i < _dsTransactionLogs.Tables[0].Rows.Count; i++)
+                //    {
+                //        try
+                //        {
+                //            _cardNumber = EncryptDecryptCard.DecryptCardNo(_dsTransactionLogs.Tables[0].Rows[i][10].ToString());
+                //        }
+                //        catch (Exception Ex)
+                //        {
+                //            ErrorLog.CommonTrace("Class : MATMTransactions.cs \nFunction : FillGrid() => Reading DataSet => Error While Decrypt Card Number : " + _cardNumber + " \nException Occured\n" + Ex.Message);
+                //        }
 
-                        if (_cardNumber.Length == 19)
-                        {
-                            _dsTransactionLogs.Tables[0].Rows[i][10] = _cardNumber.Substring(0, 6) + "XXXXXXXXX" + _cardNumber.Substring(_cardNumber.Length - 4, 4);
-                        }
-                        else if (_cardNumber.Length == 16)
-                        {
-                            _dsTransactionLogs.Tables[0].Rows[i][10] = _cardNumber.Substring(0, 6) + "XXXXXX" + _cardNumber.Substring(_cardNumber.Length - 4, 4);
-                        }
-                    }
-                }
+                //        if (_cardNumber.Length == 19)
+                //        {
+                //            _dsTransactionLogs.Tables[0].Rows[i][10] = _cardNumber.Substring(0, 6) + "XXXXXXXXX" + _cardNumber.Substring(_cardNumber.Length - 4, 4);
+                //        }
+                //        else if (_cardNumber.Length == 16)
+                //        {
+                //            _dsTransactionLogs.Tables[0].Rows[i][10] = _cardNumber.Substring(0, 6) + "XXXXXX" + _cardNumber.Substring(_cardNumber.Length - 4, 4);
+                //        }
+                //    }
+                //}
 
-                if (_EnumBindingType == EnumCollection.EnumBindingType.BindGrid)
-                {
-                    if (_dsTransactionLogs != null && _dsTransactionLogs.Tables.Count > 0 && _dsTransactionLogs.Tables[0].Rows.Count > 0)
-                    {
-                        if (sortExpression != null)
-                        {
-                            DataView dv = _dsTransactionLogs.Tables[0].AsDataView();
-                            this.SortDirection = this.SortDirection == "ASC" ? "DESC" : "ASC";
+                //if (_EnumBindingType == EnumCollection.EnumBindingType.BindGrid)
+                //{
+                //    if (_dsTransactionLogs != null && _dsTransactionLogs.Tables.Count > 0 && _dsTransactionLogs.Tables[0].Rows.Count > 0)
+                //    {
+                //        if (sortExpression != null)
+                //        {
+                //            DataView dv = _dsTransactionLogs.Tables[0].AsDataView();
+                //            this.SortDirection = this.SortDirection == "ASC" ? "DESC" : "ASC";
 
-                            dv.Sort = sortExpression + " " + this.SortDirection;
-                            gvMATMTransaction.DataSource = dv;
-                            gvMATMTransaction.DataBind();
-                            gvMATMTransaction.Visible = true;
-                            //BtnXls.Visible = true;
-                            BtnCsv.Visible = true;
-                            lblRecordCount.Text = "Total " + Convert.ToString(_dsTransactionLogs.Tables[0].Rows.Count) + " Record(s) Found.";
-                        }
-                        else
-                        {
-                            gvMATMTransaction.VirtualItemCount = Convert.ToInt32(_dsTransactionLogs.Tables[1].Rows[0][0]);
-                            gvMATMTransaction.DataSource = _dsTransactionLogs.Tables[0];
-                            gvMATMTransaction.DataBind();
-                            gvMATMTransaction.Visible = true;
-                            BtnCsv.Visible = true;
-                            //BtnXls.Visible = true;
-                            lblRecordCount.Text = "Total " + Convert.ToString(_dsTransactionLogs.Tables[1].Rows[0][0]) + " Record(s) Found.";
-                        }
-                    }
+                //            dv.Sort = sortExpression + " " + this.SortDirection;
+                //            gvMATMTransaction.DataSource = dv;
+                //            gvMATMTransaction.DataBind();
+                //            gvMATMTransaction.Visible = true;
+                //            //BtnXls.Visible = true;
+                //            BtnCsv.Visible = true;
+                //            lblRecordCount.Text = "Total " + Convert.ToString(_dsTransactionLogs.Tables[0].Rows.Count) + " Record(s) Found.";
+                //        }
+                //        else
+                //        {
+                //            gvMATMTransaction.VirtualItemCount = Convert.ToInt32(_dsTransactionLogs.Tables[1].Rows[0][0]);
+                //            gvMATMTransaction.DataSource = _dsTransactionLogs.Tables[0];
+                //            gvMATMTransaction.DataBind();
+                //            gvMATMTransaction.Visible = true;
+                //            BtnCsv.Visible = true;
+                //            //BtnXls.Visible = true;
+                //            lblRecordCount.Text = "Total " + Convert.ToString(_dsTransactionLogs.Tables[1].Rows[0][0]) + " Record(s) Found.";
+                //        }
+                //    }
 
-                    else
-                    {
-                        gvMATMTransaction.Visible = false;
-                        BtnCsv.Visible = false;
-                        //BtnXls.Visible = false;
-                        lblRecordCount.Text = "Total 0 Record(s) Found.";
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found In Search Criteria. Try again', 'Warning');", true);
-                    }
-                }
+                //    else
+                //    {
+                //        gvMATMTransaction.Visible = false;
+                //        BtnCsv.Visible = false;
+                //        //BtnXls.Visible = false;
+                //        lblRecordCount.Text = "Total 0 Record(s) Found.";
+                //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found In Search Criteria. Try again', 'Warning');", true);
+                //    }
+                //}
             }
             catch (Exception Ex)
             {

@@ -6,10 +6,19 @@
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="../../DashStyles/shards-dashboards.1.1.0.min.css">
     <link rel="stylesheet" href="../../DashStyles/extras.1.1.0.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!--for Chart.js 4.x -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <!--for ApexChart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!--for Google chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--for High chart -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <!-- Add required JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
@@ -17,6 +26,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
 
 
     <%--**MILIND|18102024--%>
@@ -48,19 +58,18 @@
     </style>
 
     <%-- *Hide left bar menu defult*--%>
-    <script>
-        //$(document).ready(function () {
-        //    $('#slider-btn').addClass('rotate');
-        //    $('.sidebar').addClass('closed');
-        //});
-        //$('#slider-btn').click(function () {
-        //    alert("eventtt");
-        //    $(this).removeClass('rotate');
-        //    $('.sidebar').removeClass('closed');
-        //    $(this).toggleClass('rotate');
-        //    $('.sidebar').toggleClass('closed');
-        //});
-    </script>
+    <%--<script>
+        $(document).ready(function () {
+            $('#slider-btn').addClass('rotate');
+            $('.sidebar').addClass('closed');
+        });
+        $('#slider-btn').click(function () {
+            $(this).removeClass('rotate');
+            $('.sidebar').removeClass('closed');
+            $(this).toggleClass('rotate');
+            $('.sidebar').toggleClass('closed');
+        });
+    </script>--%>
     <%-- *Hide left bar menu defult*--%>
 </asp:Content>
 
@@ -171,7 +180,7 @@
         <div class="row">
             <!-- Transaction Summary Stats -->
             <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
-                <div class="card card-small">
+                <div class="card card-small h-100">
                     <div class="card-header border-bottom">
                         <h6 class="m-0">Transaction Summary</h6>
                     </div>
@@ -179,7 +188,7 @@
                         <div class="row border-bottom py-2 bg-light">
                             <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
                                 <div class="btn-group" data-attribute="TransactionSummary">
-                                    <%-- <button type="button" class="btn btn-white active">Hour</button>
+                                    <%--<button type="button" class="btn btn-white active">Hour</button>
                                     <button type="button" class="btn btn-white">Day</button>--%>
                                     <button type="button" class="btn btn-white active" data-attribute="TransactionSummary" data-text="Week">Week</button>
                                     <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Month">Month</button>
@@ -269,6 +278,7 @@
                     </div>
                     <div class="card-body d-flex py-0">
                         <canvas height="220" class="blog-users-by-device m-auto"></canvas>
+                        <%--<div class="blog-users-by-device m-auto" style="width: 100%; height: 220px;"></div>--%>
                     </div>
                     <div class="card-footer border-top">
                         <div class="row">
@@ -570,7 +580,6 @@
                     //console.log(response.d);
                     const newData = JSON.parse(response.d);
 
-                    // Access the specific datasets from the newData object
                     if (FilterType === "TransactionSummary" || FilterType === "GlobalFilter") {
                         const txnData = newData.TxnSummaryChart;
                         const currentMonthData = txnData.map(item => item.TxnsummaryCurrentMonthCount);
@@ -581,30 +590,63 @@
                         BlogOverviewUsers.data.labels = txnData.map(item => item.Day);
                         BlogOverviewUsers.update();
                     }
+
                     if (FilterType === "BCTransactionSummary" || FilterType === "GlobalFilter") {
                         const bcData = newData.BCSummaryChart;
-                        const Success = bcData.map(item => item.Success);
-                        const Failure = bcData.map(item => item.Failure);
-                        const SuccessRate = bcData.map(item => item.SuccessRate);
-                        const FailureRate = bcData.map(item => item.FailureRate);
+                        const Success = bcData.map(item => parseFloat(item.Success));
+                        const Failure = bcData.map(item => parseFloat(item.Failure));
+                        const SuccessRate = bcData.map(item => parseFloat(item.SuccessRate));
+                        const FailureRate = bcData.map(item => parseFloat(item.FailureRate));
                         const userNames = bcData.map(item => item.bcname);
 
                         if (window.BCWiseSummaryChart) {
+                            window.BCWiseSummaryChart.updateSeries([
+                                { name: 'Success', data: Success },
+                                { name: 'Failure', data: Failure }
+                                /* Uncomment if you want to include SuccessRate and FailureRate
+                                { name: 'SuccessRate', data: SuccessRate },
+                                { name: 'FailureRate', data: FailureRate }
+                                */
+                            ], true);
+
                             window.BCWiseSummaryChart.updateOptions({
                                 xaxis: {
                                     categories: userNames
                                 }
-                            });
+                            }, true);
 
-                            window.BCWiseSummaryChart.updateSeries([
-                                { name: 'Success', data: Success },
-                                { name: 'Failure', data: Failure },
-                                { name: 'SuccessRate', data: SuccessRate },
-                                { name: 'FailureRate', data: FailureRate }
-                            ], true); // 'true' will replace the existing data completely
+                        } else {
+                            alert('Chart is not initialized.');
                         }
                     }
-
+                    if (FilterType === "RevenueSummary" || FilterType === "GlobalFilter") {
+                        // Ensure newData.RevenueChart is not null or undefined
+                        const txnData = newData.RevenueChart;
+                        
+                        if (Array.isArray(txnData) && txnData.length > 0) {
+                            // Map the data for revenue, conversion rate, and periods
+                            const revenueData = txnData.map(item => item.TotalRevenue === 0 ? null : item.TotalRevenue);  
+                            const conversionRateData = txnData.map(item => item.ConversionRate === 0 ? null : item.ConversionRate); 
+                            const categories = txnData.map(item => item.PeriodName);
+                            
+                            if (window.RevenueComboChart) {
+                                window.RevenueComboChart.updateOptions({
+                                    xaxis: {
+                                        categories: categories 
+                                    }
+                                });
+                                
+                                window.RevenueComboChart.updateSeries([
+                                    { name: 'Revenue', data: revenueData },
+                                    { name: 'Conversion Rate', data: conversionRateData }
+                                ], true); 
+                            } else {
+                                alert("RevenueComboChart is not initialized.");
+                            }
+                        } else {
+                            alert("Invalid txnData: Ensure it is an array with data.");
+                        }
+                    }
 
                 },
                 error: function (xhr, status, error) {
@@ -665,19 +707,20 @@
             switchCounts = data.map(item => item.Counts);
             switchNames = data.map(item => item.SwitchName);
             switchPercent = data.map(item => item.Percent);
-
+            const hasData = switchCounts.some(count => count > 0);
             var ubdData = {
                 datasets: [{
+                    borderWidth: 2,
                     hoverBorderColor: '#ffffff',
-                    data: switchCounts,
-                    backgroundColor: [
+                    data: hasData ? switchPercent : [1],
+                    backgroundColor: hasData ? [
                         'rgba(0,123,255,0.9)',
                         'rgba(0,123,255,0.5)',
                         'rgba(0,123,255,0.3)',
                         'rgba(0,123,255,0.7)'
-                    ]
+                    ] : ['rgba(144,238,144,0.5)']
                 }],
-                labels: switchNames
+                labels: hasData ? switchNames : ['No Data']
             };
 
             var ubdOptions = {
@@ -696,9 +739,9 @@
                             generateLabels: function (chart) {
                                 const data = chart.data;
                                 return data.labels.map((label, index) => {
-                                    const percent = switchPercent[index];  // Get percentage
+                                    const percent = switchPercent[index];
                                     return {
-                                        text: `${percent}% ${label}`, // Format: Percentage% Switch Name
+                                        text: `${percent}% ${label}`,
                                         fillStyle: data.datasets[0].backgroundColor[index],
                                         hidden: false,
                                         index: index
@@ -710,21 +753,21 @@
                     tooltip: {
                         callbacks: {
                             label: function (tooltipItem) {
-                                const percent = switchPercent[tooltipItem.index];  // Get percentage for tooltip
-                                return `(${percent}%)`;  // Show percentage in the tooltip in this format
+                                const percent = switchPercent[tooltipItem.index];
+                                return `(${percent}%)`;
                             }
                         }
                     }
                 },
-                cutoutPercentage: 75, // Adjust donut size
+                cutoutPercentage: 65,
                 tooltips: {
                     enabled: true,
                     mode: 'index',
                     position: 'nearest',
                     callbacks: {
                         label: function (tooltipItem, data) {
-                            const percent = switchPercent[tooltipItem.index]; // Get percentage for tooltip
-                            return `(${percent}%)`; // Show percentage in tooltip only
+                            const percent = switchPercent[tooltipItem.index];
+                            return `(${percent}%)`;
                         }
                     }
                 }
@@ -736,7 +779,6 @@
                 window.ubdChart.destroy();
             }
 
-            // Create a new chart
             window.ubdChart = new Chart(ubdCtx, {
                 type: 'doughnut',
                 data: ubdData,
@@ -798,7 +840,6 @@
         //end
 
     </script>
-
 
     <%-- //scripts for modal bind all chart details--%>
     <script>

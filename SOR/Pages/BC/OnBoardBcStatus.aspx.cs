@@ -752,7 +752,7 @@ namespace SOR.Pages.BC
                                     _BCEntity.Clientcode = Convert.ToString(BCDataSet.Rows[i]["Client ID"]);
                                     _BCEntity.BCStatus = Convert.ToString((int)EnumCollection.Onboarding.Approve);
                                     _BCEntity.Mstatus = Convert.ToString((int)EnumCollection.Onboarding.MakerApprove);
-                                    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerPending);
+                                    _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
                                     _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerPending);
                                     _BCEntity.Flag = _Flag;
                                     _BCEntity.MakerRemark = TxtRemarks.Text.Trim();
@@ -798,9 +798,13 @@ namespace SOR.Pages.BC
                                     {
                                         try
                                         {
+                                            
+
                                             _reocrdsProcessed = _reocrdsProcessed + 1;
+                                            HiddenField hfBCID = (HiddenField)row.FindControl("hfBCID");
+                                            string bcId = hfBCID.Value;
                                             _BCEntity.BC_Code = row.Cells[2].Text;
-                                            _BCEntity.BCReqId = row.Cells[5].Text;
+                                            _BCEntity.BCReqId = bcId;
 
                                             _strBCFullName = Convert.ToString(row.Cells[3].Text);
                                             _BCEntity.MakerRemark = TxtRemarks.Text.Trim();
@@ -808,7 +812,7 @@ namespace SOR.Pages.BC
                                             _fileLineNo = (Convert.ToInt32(_fileLineNo) + 1).ToString();
                                             _BCEntity.BCStatus = Convert.ToString((int)EnumCollection.Onboarding.Approve);
                                             _BCEntity.Mstatus = Convert.ToString((int)EnumCollection.Onboarding.MakerApprove);
-                                            _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerPending);
+                                            _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
                                             _BCEntity.ATStatus = Convert.ToString((int)EnumCollection.Onboarding.AuthorizerPending);
                                             _BCEntity.UserName = Session["UserName"].ToString();
                                             if (ValidateReEditRequest())

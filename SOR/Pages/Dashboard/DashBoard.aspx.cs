@@ -12,6 +12,7 @@ using System.Threading;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
+using System.Web.UI.HtmlControls; 
 using System.Web.UI.WebControls;
 
 namespace SOR.Pages.Dashboard
@@ -78,17 +79,17 @@ namespace SOR.Pages.Dashboard
 
             try
             {
-                var transactions = _DashDAL.GetMonthlyTxnDataCount();
+                /* var transactions = _DashDAL.GetMonthlyTxnDataCount();
 
-                var formattedTransactions = transactions.Select(t => new
-                {
-                    Day = t.Day,
-                    CurrentMonthCount = t.CurrentMonthCount,
-                    PreviousMonthCount = t.PreviousMonthCount
-                }).ToList();
+                 var formattedTransactions = transactions.Select(t => new
+                 {
+                     Day = t.Day,
+                     CurrentMonthCount = t.CurrentMonthCount,
+                     PreviousMonthCount = t.PreviousMonthCount
+                 }).ToList();
 
-                var serializedTransactions = JsonConvert.SerializeObject(formattedTransactions);
-                ViewState["Transactions"] = serializedTransactions;
+                 var serializedTransactions = JsonConvert.SerializeObject(formattedTransactions);
+                 ViewState["Transactions"] = serializedTransactions;*/
 
                 var summary = _DashDAL.GetMonthlySummaryCount();
                 var summaryData = summary.Select(t => new
@@ -103,6 +104,20 @@ namespace SOR.Pages.Dashboard
 
                 var txnDetails = _DashDAL.Get_AllData();
 
+                if (txnDetails.Tables.Contains("Txnsummarychart"))
+                {
+                    var txn = txnDetails.Tables["Txnsummarychart"].AsEnumerable().Select(t => new
+                    {
+                        Day = t.Field<string>("time_period"),
+                        CurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousMonthCount = t.Field<int>("previous_count")
+                    }).ToList();
+
+                    var TxnSummary = JsonConvert.SerializeObject(txn);
+                    ViewState["Transactions"] = TxnSummary;
+                }
+
+
                 if (txnDetails.Tables.Contains("Aggregators"))
                 {
                     StringBuilder sb = new StringBuilder();
@@ -113,8 +128,8 @@ namespace SOR.Pages.Dashboard
                         var transactionCount = row["Count"].ToString();
                         var sucessCount = row["successCount"].ToString();
                         var failCount = row["failureCount"].ToString();
-                        var successRate = row["successRate"].ToString();
-                        var failureRate = row["failureRate"].ToString();
+                        decimal successRate = Convert.ToDecimal(row["successRate"]);
+                        decimal failureRate = Convert.ToDecimal(row["failureRate"]);
                         var changePercentage = Convert.ToDecimal(row["ChangePercentage"]);
 
                         decimal avgAmount = Convert.ToDecimal(row["AvgAmount"]);
@@ -138,7 +153,7 @@ namespace SOR.Pages.Dashboard
                         </div>
                         <div class='card-body'>
                         <div class='row'>
-                        <div class='col-md-8'>
+                        <div class='col-md-7'>
                         <div class='d-flex justify-content-between mb-3'>
                         <span><strong>Transactions:</strong> {transactionCount}</span>
                         </div>
@@ -151,9 +166,15 @@ namespace SOR.Pages.Dashboard
                         <div class='d-flex justify-content-between mb-3'>
                         <span><strong>Avg. Amount:</strong> ₹{avgAmount:N2}</span>
                         </div>
+                        <div class='d-flex justify-content-between mb-3'>
+                        <span><strong>Success Rate:</strong> {successRate:N2}%</span>
+                        </div>
+                        <div class='d-flex justify-content-between mb-3'>
+                       <span><strong>Failure Rate:</strong> {failureRate:N2}%</span>
+                        </div>
                         </div>
                         
-                        <div class='col-md-4'>
+                        <div class='col-md-5'>
                         <canvas id='chart_{aggregatorName}_{transactionCount}' class='chart-container' style='display: block; box-sizing: border-box; height: 101px; width: 124px;'></canvas>
                         </div>
                         </div>
@@ -162,6 +183,8 @@ namespace SOR.Pages.Dashboard
                         <div class='d-flex justify-content-between mb-3'>
                         </div>
                         <div class='d-flex justify-content-between mb-3'>
+                        <span><strong></strong></span>
+                        <span><strong></strong></span>
                         </div>
                         <div class='d-flex justify-content-between mb-3'>
                         <span><strong>Change:</strong> {changePercentage:0.##} % (vs. last week)</span>
@@ -184,8 +207,8 @@ namespace SOR.Pages.Dashboard
                              labels: ['Sucess %', 'Failure %'], 
                              datasets: [{{
                                  label: 'Transactions',
-                                 data: [{successRate}, {failureRate}], 
-                                 backgroundColor: ['#4CAF50', '#FFC107'], 
+                                 data: [{successRate:N2}, {failureRate:N2}], 
+                                 backgroundColor: ['#2196f3', '#ff4560'], 
                                  borderWidth: 1
                              }}]
                          }},
@@ -395,25 +418,18 @@ namespace SOR.Pages.Dashboard
             {
                 var OnBoardedData = _DashDAL.GetOnBoardingData();
 
+                var controls = new Dictionary<string, HtmlGenericControl>{
+            { "TRANSACTION", TxnCount },
+            { "BC", bcCount },
+            { "AGGREGATOR", aggregatorCount },
+            { "AGENT", agentCount },
+            { "CUSTOMER", customerCount }};
+
                 foreach (var data in OnBoardedData)
                 {
-                    switch (data.Name)
+                    if (controls.ContainsKey(data.Name))
                     {
-                        case "TRANSACTION":
-                            TxnCount.InnerText = data.Count.ToString("N0");
-                            break;
-                        case "BC":
-                            bcCount.InnerText = data.Count.ToString("N0");
-                            break;
-                        case "AGGREGATOR":
-                            aggregatorCount.InnerText = data.Count.ToString("N0");
-                            break;
-                        case "AGENT":
-                            agentCount.InnerText = data.Count.ToString("N0");
-                            break;
-                        case "CUSTOMER":
-                            customerCount.InnerText = data.Count.ToString("N0");
-                            break;
+                        controls[data.Name].InnerText = FormatCount(data.Count);
                     }
                 }
             }
@@ -422,8 +438,26 @@ namespace SOR.Pages.Dashboard
                 ErrorLog.DashboardTrace("DashBoard: LoadOnBoardCounts(): Exception: " + ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
+        }
 
-
+        private string FormatCount(long count)
+        {
+            try
+            {
+                if (count >= 1_000_000_000) // Billion
+                    return (count / 1_000_000_000.0).ToString("0.0") + "B";
+                else if (count >= 1_000_000) // Million
+                    return (count / 1_000_000.0).ToString("0.0") + "M";
+                else if (count >= 1_000) // Thousand
+                    return (count / 1_000.0).ToString("0.0") + "K";
+                else
+                    return count.ToString();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.DashboardTrace("DashBoard: FormatCount(): Exception: " + ex.Message);
+            }
+            return count.ToString();
         }
         #endregion
 
@@ -477,6 +511,18 @@ namespace SOR.Pages.Dashboard
 
                     result["SwitchChart"] = switchsummary;
                 }
+
+                if (_ds.Tables.Contains("Revenuechart"))
+                {
+                    var RevenueSummary = _ds.Tables["Revenuechart"].AsEnumerable().Select(t => new
+                    {
+                        TotalRevenue = t.Field<decimal>("TotalRevenue") == 0 ? (decimal?)null : t.Field<decimal>("TotalRevenue"),
+                        ConversionRate = t.Field<decimal>("ConversionRt") == 0 ? (decimal?)null : t.Field<decimal>("ConversionRt"),
+                        PeriodName = t.Field<string>("PeriodName")
+                    }).ToList();
+                    result["RevenueChart"] = RevenueSummary;
+                }
+
 
                 return JsonConvert.SerializeObject(result);
             }

@@ -453,7 +453,7 @@ namespace BussinessAccessLayer
             public int Rule { get; set; }
 
         }
-       
+
 
 
         public List<OnBoardedData> GetOnBoardingData()
@@ -471,7 +471,7 @@ namespace BussinessAccessLayer
                         {
                             var data = new OnBoardedData
                             {
-                                Name = reader.GetString(0), 
+                                Name = reader.GetString(0),
                                 Count = reader.GetInt64(1)
                             };
                             dataList.Add(data);
@@ -525,7 +525,7 @@ namespace BussinessAccessLayer
             return transactions;
         }
 
-     
+
 
         public List<TransactionSummary> GetMonthlySummaryCount(string dateFilter = null)
         {
@@ -576,6 +576,15 @@ namespace BussinessAccessLayer
                 {
                     conn.Open();
 
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM get_TransactionSummaryCount()", conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        using (var adapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(ds, "Txnsummarychart");
+                        }
+                    }
+                    
                     using (var cmd = new NpgsqlCommand("SELECT * FROM Get_TopAggregatorData(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -793,6 +802,20 @@ namespace BussinessAccessLayer
                             using (var adapter = new NpgsqlDataAdapter(cmd))
                             {
                                 adapter.Fill(ds, "switchchart");
+                            }
+                        }
+                    }
+                    if (Type == "RevenueSummary" || Type == "GlobalFilter")
+                    {
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.getBankRevenueData(@filtertype, @fromdate, @todate)", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@filtertype", (object)filter ?? "Month");
+                            cmd.Parameters.AddWithValue("@fromdate", ParseDate(fromDate));
+                            cmd.Parameters.AddWithValue("@todate", ParseDate(toDate));
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "Revenuechart");
                             }
                         }
                     }
