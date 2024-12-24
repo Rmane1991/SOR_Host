@@ -1554,3 +1554,30 @@ D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.cspro
 D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
 D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb
 D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll.config
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\BussinessAccessLayer.pdb
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\AppLogger.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\Npgsql.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Buffers.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Memory.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.ValueTuple.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\AppLogger.pdb
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\DocumentFormat.OpenXml.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\Newtonsoft.Json.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\Npgsql.pdb
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\Npgsql.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Buffers.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Memory.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\bin\Debug\System.ValueTuple.xml
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csprojAssemblyReference.cache
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CoreCompileInputs.cache
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.csproj.CopyComplete
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.dll
+E:\SOR Proxima Portal\GIT\SOR_Host\BussinessAccessLayer\obj\Debug\BussinessAccessLayer.pdb

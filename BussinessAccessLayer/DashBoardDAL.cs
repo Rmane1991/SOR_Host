@@ -647,7 +647,7 @@ namespace BussinessAccessLayer
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : Get_AllData() \nException Occured\n" + ex.Message);
                 throw;
             }
 
@@ -738,7 +738,7 @@ namespace BussinessAccessLayer
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : FilterData() \nException Occured\n" + ex.Message);
                 throw;
             }
 
