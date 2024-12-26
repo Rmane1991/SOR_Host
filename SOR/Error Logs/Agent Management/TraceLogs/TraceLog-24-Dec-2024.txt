@@ -1,0 +1,340 @@
+Time : 24-Dec-2024 10:52 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 24-Dec-2024 11:17 Message : DashBoard: LoadTransactionCounts(): Exception: 42725: function public.getbankrevenuedata() is not unique
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 12:44 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 13:07 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 13:07 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 13:07 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 13:07 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 13:08 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 13:08 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 13:08 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 14:17 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 14:45 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 14:45 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 14:45 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 14:45 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 14:46 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 14:46 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 14:46 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 15:40 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 15:41 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 15:41 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 15:41 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 15:41 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 15:41 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 15:41 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 16:44 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 17:42 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 17:42 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 17:42 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 17:42 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 17:42 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 17:42 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 17:43 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 18:07 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 18:10 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 18:10 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 18:10 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 18:11 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 18:11 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 18:11 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 18:11 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 18:20 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 18:21 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 46
+Time : 24-Dec-2024 18:21 Message : AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 47
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 19:12 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 24-Dec-2024 19:15 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+

@@ -721,7 +721,10 @@ namespace SOR.Pages.BC
                         }
                     }
                 }
-                if (Convert.ToInt32(Convert.ToString(_dsVerification.Tables[0].Rows[0][0])) > 0)
+                if (_dsVerification != null &&
+                    _dsVerification.Tables.Count > 0 &&
+                    _dsVerification.Tables[0].Rows.Count > 0 &&
+                    _dsVerification.Tables[0].Rows[0][0] != DBNull.Value)
                 {
                     _successful = _successful + 1;
                 }

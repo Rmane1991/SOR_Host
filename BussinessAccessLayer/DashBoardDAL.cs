@@ -584,17 +584,18 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "Txnsummarychart");
                         }
                     }
-                    
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 1() \nException Occured\n");
                     using (var cmd = new NpgsqlCommand("SELECT * FROM Get_TopAggregatorData(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
+                        cmd.CommandTimeout = 180; // 180 seconds = 3 minutes (adjust this value as needed)
                         cmd.Parameters.AddWithValue("@dateFilter", (object)dateFilter ?? DBNull.Value);
                         using (var adapter = new NpgsqlDataAdapter(cmd))
                         {
                             adapter.Fill(ds, "Aggregators");
                         }
                     }
-
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 2() \nException Occured\n");
                     using (var cmd = new NpgsqlCommand("SELECT * FROM get_SwitchChartDtata(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -604,7 +605,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "SwitchData");
                         }
                     }
-
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 3() \nException Occured\n");
                     using (var cmd = new NpgsqlCommand("SELECT * FROM Get_Top5_Rule_Data(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -614,7 +615,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "RuleData");
                         }
                     }
-
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 4() \nException Occured\n");
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_bctransactionsummarycount()", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -623,7 +624,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "MonthlyBCData");
                         }
                     }
-
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 5() \nException Occured\n");
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_channelwisedatacount()", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -633,7 +634,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "ChannelwiseData");
                         }
                     }
-
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 6() \nException Occured\n");
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.getBankRevenueData()", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -642,12 +643,13 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "BankRevenueData");
                         }
                     }
-
+                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 7() \nException Occured\n");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : Get_AllData() \nException Occured\n" + ex.Message);
+                //Console.WriteLine($"Error: {ex.Message}");
                 throw;
             }
 

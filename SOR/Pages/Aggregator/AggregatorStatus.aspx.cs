@@ -51,6 +51,7 @@ namespace SOR.Pages.Aggregator
                         if (!IsPostBack && HasPagePermission)
                         {
                             fillGrid();
+                            ddlVerification.SelectedValue = "2";
                         }
                     }
                 }
@@ -70,7 +71,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'AggregatorStatus');", true);
                 return;
             }
         }
@@ -108,7 +109,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : fillGrid() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'BC Status');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'AggregatorStatus');", true);
                 return _dsAllAgents;
             }
             return _dsAllAgents;
@@ -190,7 +191,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception EX)
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : setProperties() \nException Occured\n" + EX.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'BC Status');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'AggregatorStatus');", true);
                 return;
             }
         }
@@ -209,7 +210,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : gvTransactions_PageIndexChanging() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'BC Status');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'AggregatorStatus');", true);
                 return;
             }
         }
@@ -294,7 +295,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','AggregatorStatus');", true);
                 return;
             }
         }
@@ -317,7 +318,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : btnReset_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','AggregatorStatus');", true);
                 return;
             }
         }
@@ -341,13 +342,13 @@ namespace SOR.Pages.Aggregator
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Success", "showSuccess('No data found.', 'BC Status Details');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Success", "showSuccess('No data found.', 'Aggregator Status Details');", true);
                 }
             }
             catch (Exception EX)
             {
                 ErrorLog.BCManagementTrace("Page : AggregatorStatus.cs \nFunction : btnExportCSV_Click() \nException Occured\n" + EX.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','AggregatorStatus');", true);
                 return;
             }
         }

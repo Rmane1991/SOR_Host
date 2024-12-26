@@ -180,7 +180,7 @@
         <div class="row">
             <!-- Transaction Summary Stats -->
             <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
-                <div class="card card-small">
+                <div class="card card-small h-100">
                     <div class="card-header border-bottom">
                         <h6 class="m-0">Transaction Summary</h6>
                     </div>

@@ -1,0 +1,56 @@
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 26-Dec-2024 11:02 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 26-Dec-2024 11:03 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+

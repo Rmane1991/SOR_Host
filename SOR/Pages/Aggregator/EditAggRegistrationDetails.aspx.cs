@@ -236,6 +236,18 @@ namespace SOR.Pages.Aggregator
                     {
                         chkMATM.Checked = false;
                     }
+                    if (ds.Tables[0].Rows[0]["dmt"].ToString() != "" || ds.Tables[0].Rows[0]["dmt"].ToString() != null)
+                    {
+                        //HdnMATM.Value = ds.Tables[0].Rows[0]["MATM"].ToString();
+                    }
+                    if (ds.Tables[0].Rows[0]["dmt"].ToString() == "1")
+                    {
+                        chkdmt.Checked = true;
+                    }
+                    else
+                    {
+                        chkdmt.Checked = false;
+                    }
                     DIVDetails.Visible = true;
                 }
                 else
@@ -265,7 +277,7 @@ namespace SOR.Pages.Aggregator
                     int RequestId = 0;
                     Session["PanNo"] = txtPANNo.Text;
                     
-                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Data Submitted Successfully', 'BC Registration');", true);
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Data Submitted Successfully', 'Aggregator Registration');", true);
 
                     txtPANNo.Text = !string.IsNullOrEmpty(hidPan.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidPan.Value)) : txtPANNo.Text;
                     txtaadharno.Text = !string.IsNullOrEmpty(hidAadh.Value) ? AppSecurity.UnMaskString(_AppSecurity.DecryptStringAES(hidAadh.Value)) : txtaadharno.Text;
@@ -277,6 +289,7 @@ namespace SOR.Pages.Aggregator
                         _salt = _AppSecurity.RandomStringGenerator();
                         _BCEntity.ForAEPS = chkAEPS.Checked == true ? 1 : 0;
                         _BCEntity.ForMicroATM = chkMATM.Checked == true ? 1 : 0;
+                        _BCEntity.ForDMT = chkdmt.Checked == true ? 1 : 0;
                         _BCEntity.FirstName = txtFirstName.Text.Trim();
                         _BCEntity.MiddleName = txtMiddleName.Text.Trim();
                         _BCEntity.LastName = txtLastName.Text.Trim();
@@ -364,7 +377,7 @@ namespace SOR.Pages.Aggregator
                             div_Upload.Visible = true;
                             DIVDetails.Visible = false;
                             DivBcDetails.Visible = false;
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Processed for Document Upload', 'BC Registration');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Processed for Document Upload', 'Aggregator Registration');", true);
                             return;
                         }
                         else
@@ -380,7 +393,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception Ex)
             {
                 ErrorLog.CommonTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
         }
@@ -546,7 +559,7 @@ namespace SOR.Pages.Aggregator
                     else _BCEntity.PersonalContact = txtContactNo.Text.Trim();
 
 
-                if (chkAEPS.Checked == false && chkMATM.Checked == false)
+                if (chkAEPS.Checked == false && chkMATM.Checked == false && chkdmt.Checked == false)
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
@@ -558,7 +571,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.CommonTrace("Page : ClientRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Aggregator Registration');", true);
                 return false;
             }
             return true;
@@ -662,7 +675,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : fillClient() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
 
 
             }
@@ -696,7 +709,7 @@ namespace SOR.Pages.Aggregator
         //    {
         //        ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : ddlCountry_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
 
-        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
         //    }
         //}
 
@@ -730,7 +743,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : ddlState_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
             }
         }
 
@@ -898,7 +911,7 @@ namespace SOR.Pages.Aggregator
                         div_Upload.Visible = false;
                         DivBcDetails.Visible = true;
                         DIVDetails.Visible = false;
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Documents Uploaded Successfully', 'BC Registration');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Documents Uploaded Successfully', 'Aggregator Registration');", true);
                     }
                     else
                     {
@@ -912,7 +925,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
         }
@@ -1204,8 +1217,8 @@ namespace SOR.Pages.Aggregator
                     //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
                     //if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
                     //{
-                    //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'BC Registration');", true);
-                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                    //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'Aggregator Registration');", true);
+                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Aggregator Registration');", true);
                     //    div_Upload.Visible = false;
                     //    divOnboardFranchise.Visible = false;
                     //    DivBcDetails.Visible = false;
@@ -1224,7 +1237,7 @@ namespace SOR.Pages.Aggregator
 
                     if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
                     {
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Aggregator Registration');", true);
                         div_Upload.Visible = false;
                         divOnboardFranchise.Visible = false;
                         DivBcDetails.Visible = false;
@@ -1245,7 +1258,7 @@ namespace SOR.Pages.Aggregator
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Confirmation on all above BC Deatils are properly filled', 'BC Registration');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Confirmation on all above BC Deatils are properly filled', 'Aggregator Registration');", true);
                     return;
                 }
             }
@@ -1650,7 +1663,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : ReprocessBCDetails.cs \nFunction : DownloadDocTwo_Click() \nException Occured\n" + Ex.Message);
                 ////_dbAccess.StoreErrorDescription(UserName, "BCRegistration.cs", "ImageButton1_Click()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
         }
@@ -1687,7 +1700,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : ReprocessBCDetails.cs \nFunction : DownloadDocThree_Click() \nException Occured\n" + Ex.Message);
                 ////_dbAccess.StoreErrorDescription(UserName, "BCRegistration.cs", "ImageButton2_Click()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
         }
@@ -1725,7 +1738,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : ReprocessBCDetails.cs \nFunction : DownloadDocOne_Click() \nException Occured\n" + Ex.Message);
                 ////_dbAccess.StoreErrorDescription(UserName, "BCRegistration.cs", "ImageButton2_Click()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
         }

@@ -341,6 +341,7 @@ namespace SOR.Pages.BC
                     {
                         _BCEntity.ForAEPS = chkAEPS.Checked == true ? 1 : 0;
                         _BCEntity.ForMicroATM = chkMATM.Checked == true ? 1 : 0;
+                        _BCEntity.ForDMT = chkdmt.Checked == true ? 1 : 0;
                         _BCEntity.FirstName = txtFirstName.Text.Trim();
                         _BCEntity.MiddleName = txtMiddleName.Text.Trim();
                         _BCEntity.LastName = txtLastName.Text.Trim();
@@ -419,7 +420,7 @@ namespace SOR.Pages.BC
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "Business Correspondents Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Aggregator Registration Details", dt);
                 }
                 else
                 {
@@ -458,7 +459,7 @@ namespace SOR.Pages.BC
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "Aggregator Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Aggregator Registration Details", dt);
                 }
                 {
                     //lblRecordCount.Text = "No Record's Found.";
@@ -634,7 +635,7 @@ namespace SOR.Pages.BC
                     }
                     else _BCEntity.AlternetNo = txtAlterNateNo.Text.Trim().ToString();
 
-                if (chkAEPS.Checked == false && chkMATM.Checked == false)
+                if (chkAEPS.Checked == false && chkMATM.Checked == false && chkdmt.Checked == false)
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
@@ -715,9 +716,7 @@ namespace SOR.Pages.BC
             {
                 ErrorLog.AgentManagementTrace("AggregatorRegistration: BindDropdownCountryState(): Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
-            }
-
-
+            }            
         }
         #endregion
 
