@@ -405,7 +405,8 @@ namespace SOR.Pages.Dashboard
             }
             catch (Exception ex)
             {
-                ErrorLog.DashboardTrace("DashBoard: LoadTransactionCounts(): Exception: " + ex.Message);
+                var lineNumber = new System.Diagnostics.StackTrace(ex, true).GetFrame(0).GetFileLineNumber();
+                ErrorLog.DashboardTrace("DashBoard: LoadTransactionCounts(): Exception: " + ex.Message + " at line: " + lineNumber);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 

@@ -1123,8 +1123,6 @@ namespace BussinessAccessLayer
 
         #endregion
 
-        //////// Verification L1 & L2 //////
-
         #region BindBC Verification
         public DataSet BindBCVerification()
         {
@@ -1270,7 +1268,6 @@ namespace BussinessAccessLayer
             }
         }
         #endregion
-
 
         #region GetAggDocuments
         public DataSet GetAggDocuments()
@@ -1454,19 +1451,17 @@ namespace BussinessAccessLayer
                         cmd.Parameters.AddWithValue("P_Salt4", DBNull.Value);
                         cmd.Parameters.AddWithValue("P_Password", Password);
 
-                        // Execute the function and read results
                         using (var dataAdapter = new NpgsqlDataAdapter(cmd))
                         {
                             DataSet dataSet = new DataSet();
                             dataAdapter.Fill(dataSet);
-                            return dataSet; // Return the filled DataSet
+                            return dataSet;
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Log the error details
                 ErrorLog.CommonTrace($"Class: BCEntity.cs \nFunction: SetInsertUpdateBCMasterDetails() \nException Occurred\n{ex.Message}");
                 ErrorLog.DBError(ex);
                 throw;
@@ -1475,30 +1470,68 @@ namespace BussinessAccessLayer
         #endregion
 
         #region ActiveDeactiveBC
+        //public DataSet ActiveDeactiveBC()
+        //{
+        //    try
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand())
+        //        {
+        //            using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+        //            {
+        //                SqlParameter[] _Params =
+        //                {
+        //                        new SqlParameter("@BCCode",BCCode),
+        //                        new SqlParameter("@BCReqId",BCReqId),
+        //                        new SqlParameter("@ActionType",ActionType),
+        //                        new SqlParameter("@UserName",UserName),
+        //                        new SqlParameter("@ActivityType",ActivityType)
+        //                };
+        //                cmd.Connection = sqlConn;
+        //                cmd.CommandText = "sp_ActiveDeactiveBC";
+        //                cmd.CommandType = CommandType.StoredProcedure;
+        //                cmd.Parameters.AddRange(_Params);
+        //                DataSet dataSet = new DataSet();
+        //                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+        //                dataAdapter.Fill(dataSet);
+        //                cmd.Dispose();
+        //                return dataSet;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : ActiveDeactiveBC() \nException Occured\n" + Ex.Message);
+        //        ErrorLog.DBError(Ex);
+        //        throw;
+        //    }
+        //}
         public DataSet ActiveDeactiveBC()
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                using (var cmd = new NpgsqlCommand())
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    using (var sqlConn = new NpgsqlConnection(ConnectionString))
                     {
-                        SqlParameter[] _Params =
-                        {
-                                new SqlParameter("@BCCode",BCCode),
-                                new SqlParameter("@BCReqId",BCReqId),
-                                new SqlParameter("@ActionType",ActionType),
-                                new SqlParameter("@UserName",UserName),
-                                new SqlParameter("@ActivityType",ActivityType)
-                        };
                         cmd.Connection = sqlConn;
-                        cmd.CommandText = "sp_ActiveDeactiveBC";
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
+                        cmd.CommandText = "SELECT * FROM public.sp_ActiveDeactiveBC(@p_BCCode, @p_Remarks, @p_ActionType, @p_ActivityType, @p_UserName, @p_BCReqId)";
+                        cmd.CommandType = CommandType.Text; // PostgreSQL uses plain SQL for function calls
+
+                        cmd.Parameters.AddWithValue("@p_BCCode", BCCode ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@p_Remarks", null ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@p_ActionType", ActionType);
+                        cmd.Parameters.AddWithValue("@p_UserName", UserName ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@p_ActivityType", ActivityType.ToString());
+                        cmd.Parameters.AddWithValue("@p_BCReqId", BCReqId ?? (object)DBNull.Value);
+
                         DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        cmd.Dispose();
+
+                        // Open the connection and execute the query
+                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
+                        {
+                            dataAdapter.Fill(dataSet);
+                        }
+
                         return dataSet;
                     }
                 }
@@ -1815,8 +1848,7 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
-
-
+        
         #region BCStatusReportGrid
         public DataSet BCStatusReportGrid()
         {
@@ -2173,9 +2205,7 @@ namespace BussinessAccessLayer
                 throw;  // Rethrow to allow further handling if necessary
             }
         }
-
-
-
+        
         #region Aggregator Methods
         public bool Insert_aggregatorRequest(string UserName, out int requestId, out string status, out string statusMsg)
         {
@@ -2199,7 +2229,7 @@ namespace BussinessAccessLayer
                     // Open the connection
                     sqlConn.Open();
 
-                    using (var cmd = new NpgsqlCommand("CALL public.sp_aggregator_request_registration_insert(NULL,NULL,NULL, @p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_flag, @p_activitytype, @p_education)", sqlConn))
+                    using (var cmd = new NpgsqlCommand("CALL public.sp_aggregator_request_registration_insert(NULL,NULL,NULL, @p_clientid, @p_createdby, @p_firstname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_landlineno, @p_alternateno, @p_aadharno, @p_panno, @p_gstno, @p_bcaddress, @p_country, @p_state, @p_city, @p_pincode, @p_district, @p_typeoforg, @p_bccategory, @p_bccode, @p_accountname, @p_accountnumber, @p_ifsccode, @p_bank, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_addressproofdocument, @p_signatureprooftype, @p_signatureproofdocument, @p_bcreqid, @p_masterid, @p_aeps, @p_matm, @p_dmt, @p_flag, @p_activitytype, @p_education)", sqlConn))
                     {
                         cmd.CommandType = CommandType.Text;
                         var outputRequestId = new NpgsqlParameter("p_reqid", NpgsqlTypes.NpgsqlDbType.Integer)
@@ -2258,6 +2288,7 @@ namespace BussinessAccessLayer
                         //cmd.Parameters.AddWithValue("p_matm", ForMicroATM);
                         cmd.Parameters.AddWithValue("p_aeps", ForAEPS.HasValue ? ForAEPS.Value : 0);
                         cmd.Parameters.AddWithValue("p_matm", ForMicroATM.HasValue ? ForMicroATM.Value : 0);
+                        cmd.Parameters.AddWithValue("p_dmt", ForDMT.HasValue ? ForDMT.Value : 0);
                         cmd.Parameters.AddWithValue("p_flag", Flag);
                         cmd.Parameters.AddWithValue("p_activitytype", string.IsNullOrEmpty(Activity) ? "0" : Activity);
                         cmd.Parameters.AddWithValue("p_education", (object)Education ?? DBNull.Value);
@@ -2792,6 +2823,7 @@ namespace BussinessAccessLayer
         #endregion
 
         #endregion
+
         #region InheritServicesFromParent
         public DataSet InheritServicesFromParent()
         {

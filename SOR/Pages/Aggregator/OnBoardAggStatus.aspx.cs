@@ -106,7 +106,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "Page_Load()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive Aggregator');", true);
                 return;
             }
         }
@@ -146,7 +146,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Page : OnBoardAggStatus.cs \nFunction : BindDropdownState()\nException Occured\n" + ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.aspx.cs", "BindDropdownState()", ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive Aggregator');", true);
                 return;
             }
         }
@@ -212,7 +212,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : BindDropdownClients() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "BindDropdownClients()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Deactive Aggregator');", true);
                 return;
             }
         }
@@ -270,7 +270,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus \nFunction : BindDropdownsFranchise() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus", "BindDropdownsFranchise()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Aggregator');", true);
                 return;
             }
         }
@@ -320,7 +320,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "FillGrid()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
             }
             return _dsDeActivate;
         }
@@ -371,7 +371,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "btnSearch_Click()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                 return;
             }
         }
@@ -415,7 +415,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "btnTerminate_ServerClick()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                 return;
             }
         }
@@ -444,7 +444,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : btnClear_Click() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "btnClear_Clicks()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
 
                 return;
             }
@@ -486,7 +486,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : gvBlockFranchise_PageIndexChanging() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "gvBlockFranchise_PageIndexChanging()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),"Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),"Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
 
                 return;
             }
@@ -536,7 +536,7 @@ namespace SOR.Pages.Aggregator
                     ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : btnActivate_ServerClick() \nException Occured\n" + Ex.Message);
                     //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "btnActivate_ServerClick()", Ex);
 
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                     return;
                 }
             }
@@ -654,7 +654,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : gvLimitRequest_RowCommand() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "BCLimitRequest.cs", "gvLimitRequest_RowCommand()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Verified Aggregtor');", true);
                 return;
             }
         }
@@ -685,7 +685,7 @@ namespace SOR.Pages.Aggregator
                 {
                     ModalPopupExtender_Declincard.Show();
 
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter Remarks', 'Deactive BC');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter Remarks', 'Aggregator');", true);
                     return;
                 }
                 else
@@ -861,7 +861,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : btnSaveAction_Click() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "btnSaveAction_Click()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Aggregator');", true);
                 ViewState["ActionType"] = null;
                 ViewState["SelectionType"] = null;
                 return;
@@ -939,7 +939,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "btnCancelAction_Click()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                 ViewState["ActionType"] = null;
                 return;
             }
@@ -999,7 +999,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : chBoxSelectRow_CheckedChanged() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "chBoxSelectRow_CheckedChanged()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                 return;
             }
         }
@@ -1039,7 +1039,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : CheckBoxAll_CheckedChanged() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "CheckBoxAll_CheckedChanged()", Ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                 return;
             }
         }
@@ -1082,7 +1082,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardAggStatus.cs \nFunction : CheckBoxAllOperationOnPageIndex() \nException Occured\n" + Ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardAggStatus.cs", "CheckBoxAllOperationOnPageIndex()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
 
                 return;
                 throw;
@@ -1100,7 +1100,7 @@ namespace SOR.Pages.Aggregator
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "De-Active Business Correspondents Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Onboard Aggregator Details", dt);
                 }
                 else
                 {
@@ -1127,7 +1127,7 @@ namespace SOR.Pages.Aggregator
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "De-Active Business Correspondents Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Onboard Aggregator Details", dt);
                 }
                 {
                     //lblRecordCount.Text = "No Record's Found.";
@@ -1299,7 +1299,7 @@ namespace SOR.Pages.Aggregator
                 ErrorLog.BCManagementTrace("Page : OnBoardAggStatus.cs \nFunction : ddlState_SelectedIndexChanged\nException Occured\n" + ex.Message);
                 //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.aspx.cs", "ddlState_SelectedIndexChanged", ex);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
                 return;
             }
         }
@@ -1315,7 +1315,7 @@ namespace SOR.Pages.Aggregator
         //        ErrorLog.BCManagementTrace("Page : OnBoardAggStatus.cs \nFunction : ddlClientCode_SelectedIndexChanged\nException Occured\n" + ex.Message);
         //        //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.aspx.cs", "ddlClientCode_SelectedIndexChanged", ex);
 
-        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator');", true);
 
         //        return;
         //    }

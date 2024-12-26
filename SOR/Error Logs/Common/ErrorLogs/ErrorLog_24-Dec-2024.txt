@@ -1,0 +1,7 @@
+Time : 24-Dec-2024 12:06
+Source - : System.Data
+StackTrace -  :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at SOR.Pages.BC.EditBCRegistrationDetails.GetDetails(String BCReqId) in D:\Data\Aakash\SOR\SOR\SOR\Pages\BC\EditBCRegistrationDetails.aspx.cs:line 227
+Message - : Column 'dmt' does not belong to table Table.
+

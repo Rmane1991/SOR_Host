@@ -1,0 +1,56 @@
+Time : 24-Dec-2024 11:10 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: Approve
+Time : 24-Dec-2024 11:10 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Keyword not supported: 'port'.
+Time : 24-Dec-2024 11:10 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: A
+Time : 24-Dec-2024 11:10 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Keyword not supported: 'port'.
+Time : 24-Dec-2024 11:11 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: nb
+Time : 24-Dec-2024 11:20 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 52 Fullname: spicemoney User: Maximus ReceiverEmailID: xyz1234@gmail.com ContactNo: 8954621300 Remarks: A
+Time : 24-Dec-2024 12:06 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 64
+Time : 24-Dec-2024 12:06 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 64
+Time : 24-Dec-2024 12:06 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 64 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 12:06 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 64 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: AActivityType: 0
+Time : 24-Dec-2024 12:06 Message : BC-Verification : SingleSave: Failed - Verification. Exception: Cannot find table 0.
+Time : 24-Dec-2024 12:53 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: Approve
+Time : 24-Dec-2024 13:00 Message : BC-Verification : SingleSave: Failed - Verification. Exception: 42883: operator does not exist: integer = character varying
+Time : 24-Dec-2024 13:03 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 14:18 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 14:22 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 14:23 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 14:24 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 14:46 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: A
+Time : 24-Dec-2024 14:47 Message : BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated 
+Time : 24-Dec-2024 14:47 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 68 Fullname: DeactivateBC User: Maximus ReceiverEmailID: xyz@gmail.com ContactNo: 9874586132 Remarks: AActivityType: 2
+Time : 24-Dec-2024 14:48 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 69
+Time : 24-Dec-2024 14:48 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 24-Dec-2024 14:48 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 69
+Time : 24-Dec-2024 14:49 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 69 Fullname: BCTest User: Maximus ReceiverEmailID: dsfvfd145321@gmail.com ContactNo: 8971254632 Remarks: A
+Time : 24-Dec-2024 14:49 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 69 Fullname: BCTest User: Maximus ReceiverEmailID: dsfvfd145321@gmail.com ContactNo: 8971254632 Remarks: AActivityType: 0
+Time : 24-Dec-2024 14:50 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 70 Fullname: BCTest User: Maximus ReceiverEmailID: dsfvfd145321@gmail.com ContactNo: 8971254632 Remarks: A
+Time : 24-Dec-2024 14:50 Message : BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated 
+Time : 24-Dec-2024 14:50 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 70 Fullname: BCTest User: Maximus ReceiverEmailID: dsfvfd145321@gmail.com ContactNo: 8971254632 Remarks: AActivityType: 2
+Time : 24-Dec-2024 14:51 Message : BC-Verification : SingleSave: Failed - Verification. Agent Already Terminated 
+Time : 24-Dec-2024 14:51 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 70 Fullname: BCTest User: Maximus ReceiverEmailID: dsfvfd145321@gmail.com ContactNo: 8971254632 Remarks: AActivityType: 2
+Time : 24-Dec-2024 15:55 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 71
+Time : 24-Dec-2024 15:56 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 71
+Time : 24-Dec-2024 15:56 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 71
+Time : 24-Dec-2024 15:56 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 24-Dec-2024 15:56 Message : BCRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: 
+Time : 24-Dec-2024 15:57 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 71
+Time : 24-Dec-2024 15:57 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 71
+Time : 24-Dec-2024 15:57 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 71
+Time : 24-Dec-2024 16:01 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 71 Fullname: DMTChannel User: Maximus ReceiverEmailID: ds23@gmail.com ContactNo: 9785461231 Remarks: Approve
+Time : 24-Dec-2024 16:01 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 71 Fullname: DMTChannel User: Maximus ReceiverEmailID: ds23@gmail.com ContactNo: 9785461231 Remarks: ApproveActivityType: 0
+Time : 24-Dec-2024 17:44 Message : BCRegistration: btnSubmitDetails_Click: Failed - BC Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 72
+Time : 24-Dec-2024 17:44 Message : BCRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 72
+Time : 24-Dec-2024 17:44 Message : BC-Verification : SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 72 Fullname: DTMBC User: Maximus ReceiverEmailID: d561@gmail.com ContactNo: 8954132513 Remarks: Approve
+Time : 24-Dec-2024 17:44 Message : BC-Verification : SingleSave: Successful - Verification.  StatusFlag: Approve Flag: 5 AgentCode: 72 Fullname: DTMBC User: Maximus ReceiverEmailID: d561@gmail.com ContactNo: 8954132513 Remarks: ApproveActivityType: 0
+Time : 24-Dec-2024 18:08 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: -1 StatusMsg:  RequestId: 0
+Time : 24-Dec-2024 18:12 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 45
+Time : 24-Dec-2024 18:13 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 45
+Time : 24-Dec-2024 18:13 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 45 Fullname: TestDMT User: Maximus ReceiverEmailID: x987@gmail.com ContactNo: 9875614621 Remarks: Approve
+Time : 24-Dec-2024 18:13 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 45 Fullname: TestDMT User: Maximus ReceiverEmailID: x987@gmail.com ContactNo: 9875614621 Remarks: ApproveActivityType: 0
+Time : 24-Dec-2024 18:23 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 47 Fullname: TestDMT User: Maximus ReceiverEmailID: x987@gmail.com ContactNo: 9875614621 Remarks: S
+Time : 24-Dec-2024 18:23 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 47 Fullname: TestDMT User: Maximus ReceiverEmailID: x987@gmail.com ContactNo: 9875614621 Remarks: SActivityType: 4
+Time : 24-Dec-2024 19:16 Message : Page : AggregatorStatus.cs 
+Function : BtnXls_Click
+Exception Occured
+Thread was being aborted.

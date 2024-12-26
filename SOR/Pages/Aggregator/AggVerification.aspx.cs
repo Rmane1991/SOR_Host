@@ -188,7 +188,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : AggVerification.cs \nFunction : BindDropdownClients() \nException Occured\n" + Ex.Message);
                 ////_dbAccess.StoreErrorDescription(UserName, "AggVerification.cs", "BindDropdownClients()", Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Verified Aggregator');", true);
                 return;
             }
         }
@@ -242,7 +242,7 @@ namespace SOR.Pages.Aggregator
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Class : AggVerification.cs \nFunction : BindDropdownsBC() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Verified Aggregator');", true);
 
                 return;
             }
@@ -308,19 +308,19 @@ namespace SOR.Pages.Aggregator
                 {
                     if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Decline.ToString())
                     {
-                        _strAlertMessage_Header = "Decline BC ";
+                        _strAlertMessage_Header = "Decline Aggregator ";
                         _strAlertMessage_Success = "Decline Process ";
                         _strAlertMessage_UnSuccess = "Decline Process ";
-                        _strAlertMessage_Total = "Total Record Processed for Decline BC(s) :  ";
+                        _strAlertMessage_Total = "Total Record Processed for Decline Aggregator(s) :  ";
                         _BCEntity.ATStatus = Convert.ToString((int)(EnumCollection.Onboarding.AuthorizerDecline));
                         _Flag = (int)EnumCollection.EnumDBOperationType.AuthDecline;
                     }
                     else if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Approve.ToString())
                     {
-                        _strAlertMessage_Header = "Approve BC ";
+                        _strAlertMessage_Header = "Approve Aggregator ";
                         _strAlertMessage_Success = "Approve Process ";
                         _strAlertMessage_UnSuccess = "Approve Process ";
-                        _strAlertMessage_Total = "Total Record Processed for Approve BC(s) :  ";
+                        _strAlertMessage_Total = "Total Record Processed for Approve Aggregator(s) :  ";
                         _BCEntity.ATStatus = Convert.ToString((int)(EnumCollection.Onboarding.AuthorizerApprove));
                         _Flag = (int)EnumCollection.EnumDBOperationType.AuthApprove;
                     }
@@ -645,7 +645,7 @@ namespace SOR.Pages.Aggregator
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Aggregator Already Terminated', 'Verification');", true);
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
@@ -669,7 +669,7 @@ namespace SOR.Pages.Aggregator
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Aggregator Already Terminated', 'Verification');", true);
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
@@ -692,7 +692,7 @@ namespace SOR.Pages.Aggregator
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "3")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Aggregator Already Terminated', 'Verification');", true);
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
@@ -713,7 +713,7 @@ namespace SOR.Pages.Aggregator
                         }
                         else if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "03")
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('BC Already Terminated', 'Verification');", true);
+                            ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Aggregator Already Terminated', 'Verification');", true);
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated ");
                             ErrorLog.BCManagementTrace("Aggregator-Verification: SingleSave: Failed - Authorizer Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + _BCReqId + " Fullname: " + _strBCFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks + "ActivityType: " + _ActivityType);
                             return;
@@ -1170,7 +1170,7 @@ namespace SOR.Pages.Aggregator
                 ExportFormat _ExportFormat = new ExportFormat();
                 if (dt.Tables.Count > 0 && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["UserName"]), "PayRakam", "BC Verification Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["UserName"]), "PayRakam", "Aggregator Verification Details", dt);
                 }
                 else
                 {
@@ -1182,7 +1182,7 @@ namespace SOR.Pages.Aggregator
             {
                 ErrorLog.BCManagementTrace("Class : AggVerification.cs \nFunction : btnExportCSV_Click() \nException Occured\n" + Ex.Message);
 
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification BC');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again','Verification Aggregator');", true);
                 return;
             }
         }
@@ -1636,7 +1636,7 @@ namespace SOR.Pages.Aggregator
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "L2 Approval Business Correspondents Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Aggregator Verification", dt);
                 }
                 else
                 {
@@ -1662,7 +1662,7 @@ namespace SOR.Pages.Aggregator
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "L2 Approval Business Correspondents Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Aggregator Verification", dt);
                 }
                 {
                     //lblRecordCount.Text = "No Record's Found.";
