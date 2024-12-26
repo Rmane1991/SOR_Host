@@ -1214,6 +1214,63 @@ $(document).ready(function () {
                     TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
                     txtPercentage.Enabled = false;
                 }
+                string script = @"
+$(document).ready(function () {
+    // Set checkbox to be checked automatically on page load
+    var isChecked = true; // You can also set this dynamically based on your logic
+    
+    // Set the checkbox to checked
+    $('#Switch').prop('checked', isChecked);
+
+    // Trigger the checkbox change event (simulate a click)
+    $('#Switch').change(); // This triggers the change event on the checkbox
+
+    // Disable the checkbox while processing
+    $('#Switch').prop('disabled', true);
+
+    // AJAX call to the server to determine which panel to show and which textbox to clear
+    $.ajax({
+        type: 'POST',
+        url: 'SwitchConfig.aspx/ToggleSwitch',
+        data: JSON.stringify({ IsChecked: isChecked }),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (response) {
+            var result = response.d;
+
+            // Get the client IDs of the panels and textboxes
+            var pnlPercentageID = '<%= pnlPercentage.ClientID %>';
+            var pnlCountID = '<%= pnlCount.ClientID %>';
+            var txtSwitchPercentageID = '<%= txtSwitchPercentage.ClientID %>';
+            var txtCountID = '<%= txtCount.ClientID %>';
+
+            // Check the result and show/hide panels accordingly
+            if (result === 'showCount-clearPercentage') {
+                $('#' + pnlPercentageID).hide();
+                $('#' + pnlCountID).show();
+                $('#' + txtSwitchPercentageID).val(''); // Clear Percentage textbox
+            } else if (result === 'showPercentage-clearCount') {
+                $('#' + pnlCountID).hide();
+                $('#' + pnlPercentageID).show();
+                $('#' + txtCountID).val(''); // Clear Count textbox
+            } else {
+                console.log('Unexpected result:', result);
+            }
+
+            // Enable the checkbox after processing
+            $('#Switch').prop('disabled', false);
+        },
+        error: function (error) {
+            console.error('An error occurred:', error);
+            alert('An error occurred: ' + error.responseText);
+            // Enable the checkbox after an error
+            $('#Switch').prop('disabled', false);
+        }
+    });
+});
+";
+
+                ClientScript.RegisterStartupScript(this.GetType(), "ToggleSwitch", script, true);
             }
             catch (Exception Ex)
             {
