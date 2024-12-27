@@ -1,0 +1,24 @@
+Time : 26-Dec-2024 14:54 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 26-Dec-2024 14:57 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 48
+Time : 26-Dec-2024 14:59 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 46 Fullname: TestDMT User: Maximus ReceiverEmailID: x987@gmail.com ContactNo: 9875614621 Remarks: A
+Time : 26-Dec-2024 15:00 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: DMTAgg User: Maximus ReceiverEmailID: x9878@gmail.com ContactNo: 9875403210 Remarks: App
+Time : 26-Dec-2024 15:02 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 48 Fullname: DMTAgg User: Maximus ReceiverEmailID: x9878@gmail.com ContactNo: 9875403210 Remarks: AppActivityType: 0
+Time : 26-Dec-2024 15:35 Message : Class : OnBoardAggStatus.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'BC ID'.
+Time : 26-Dec-2024 17:42 Message : AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName:  Status: 1 StatusMsg: Success RequestId: 53
+Time : 26-Dec-2024 17:42 Message : AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName:  Status: 1 StatusMsg: Success RequestId: 53
+Time : 26-Dec-2024 17:43 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 53 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: A
+Time : 26-Dec-2024 17:43 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 53 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: AActivityType: 0
+Time : 26-Dec-2024 17:44 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 54 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: Approve-Deactivate
+Time : 26-Dec-2024 17:44 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 54 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: A
+Time : 26-Dec-2024 17:51 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 54 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: Approve
+Time : 26-Dec-2024 17:51 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 26-Dec-2024 17:51 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 54 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: ApproveActivityType: 2
+Time : 26-Dec-2024 17:52 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 55 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: S
+Time : 26-Dec-2024 17:52 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 26-Dec-2024 17:52 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 55 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: SActivityType: 2
+Time : 26-Dec-2024 18:04 Message : Verification Level: SingleSave: Received - Maker Verification.  StatusFlag: Approve Flag: 5 AgentCode: 56 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: A
+Time : 26-Dec-2024 18:04 Message : Aggregator-Verification: SingleSave: Failed - Authorizer Verification. Agent Already Terminated 
+Time : 26-Dec-2024 18:04 Message : Aggregator-Verification: SingleSave: Successful - Authorizer Verification.  StatusFlag: Approve Flag: 5 AgentCode: 56 Fullname: TestAggregator User: Maximus ReceiverEmailID: x999@gmail.com ContactNo: 8974563275 Remarks: AActivityType: 2

@@ -5,3 +5,33 @@
 26-12-2024 12:11:51:1355 : Login Successful. Username Maximus. SessionID : 4ljr5o4aikwpya2p0zx23ymi
 26-12-2024 12:46:02:6070 : Login Successful. Username Maximus. SessionID : obewrqp3cmqfsosxpw14ysp1
 26-12-2024 12:53:49:5829 : Login Successful. Username Maximus. SessionID : u2czrgn1s11gguafh3tqljcq
+26-12-2024 14:20:31:3357 : Login Successful. Username Maximus. SessionID : ezly0my5bpt1lnqygpdzsnrl
+26-12-2024 14:52:55:9662 : Login Successful. Username Maximus. SessionID : bgtedtrph4qn3cvbecoewvg3
+26-12-2024 15:03:44:8082 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "9875403210" is out of range for type integer
+26-12-2024 15:03:53:4026 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "9875403210" is out of range for type integer
+26-12-2024 15:05:11:0174 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "9875403210" is out of range for type integer
+26-12-2024 15:05:20:7989 : Class : BCEntity.cs 
+Function : ValidateEditBcDetails() 
+Exception Occurred
+22003: value "9875403210" is out of range for type integer
+26-12-2024 15:35:07:2264 : Login Successful. Username Maximus. SessionID : ezacu4skm1cq0expu5upeazs
+26-12-2024 15:36:22:3548 : Login Successful. Username Maximus. SessionID : 51x5mki44b4anew14x40nvdz
+26-12-2024 16:06:07:3395 : Login Successful. Username Maximus. SessionID : lyduphh3fiday02rsemq3kxn
+26-12-2024 16:37:35:5830 : Login Successful. Username Maximus. SessionID : qyt5at1hgwryyex42hemtl1b
+26-12-2024 16:45:45:9348 : Login Successful. Username Maximus. SessionID : vgu2mm0ezigjlujzbe2jpequ
+26-12-2024 16:49:15:5546 : Login Successful. Username Maximus. SessionID : bwbudzaiscxza1bn0yf5jngr
+26-12-2024 16:53:39:0465 : Login Successful. Username Maximus. SessionID : db3hhtj3xnz32epzmqr4drqu
+26-12-2024 17:40:54:2921 : Login Successful. Username Maximus. SessionID : sjuv2o4rah0mkks3zfwiqfhl
+26-12-2024 17:50:21:3070 : Login Successful. Username Maximus. SessionID : i04f1tjxo2spsiow4g3umgw3
+26-12-2024 18:28:34:8248 : Login Successful. Username Maximus. SessionID : nvji3dobpm2trshia5q2lmeg
+26-12-2024 18:43:16:1656 : Login Successful. Username Maximus. SessionID : xqjqnnp3bttdtmkd5l2lhi4k
+26-12-2024 18:48:30:7894 : Login Successful. Username Maximus. SessionID : hb3v2mtio0cnfpboadgoomyg

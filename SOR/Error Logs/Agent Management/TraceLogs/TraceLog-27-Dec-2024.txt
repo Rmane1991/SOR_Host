@@ -1,0 +1,29 @@
+Time : 27-Dec-2024 11:23 Message : LoginEntity: TrackUsers: UserName: Maximus Exception: Exception while connecting
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 1() 
+Exception Occured
+
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 2() 
+Exception Occured
+
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 3() 
+Exception Occured
+
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 4() 
+Exception Occured
+
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 5() 
+Exception Occured
+
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 6() 
+Exception Occured
+
+Time : 27-Dec-2024 11:29 Message : DashBoardDAL.cs 
+Function : 7() 
+Exception Occured
+
