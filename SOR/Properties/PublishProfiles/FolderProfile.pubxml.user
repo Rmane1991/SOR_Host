@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\aakash.tomar\Documents\Publish\26122024</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\aakash.tomar\Documents\Publish\24122024</_PublishTargetUrl>
     <History>True|2024-10-01T06:01:03.2787452Z||;True|2024-09-27T16:02:36.4665066+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
@@ -2431,13 +2431,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/23/2024 16:13:25</publishTime>
     </File>
     <File Include="bin/BussinessAccessLayer.dll">
-      <publishTime>12/26/2024 18:09:13</publishTime>
+      <publishTime>12/24/2024 11:24:32</publishTime>
     </File>
     <File Include="bin/BussinessAccessLayer.dll.config">
       <publishTime>10/17/2024 18:19:26</publishTime>
     </File>
     <File Include="bin/BussinessAccessLayer.pdb">
-      <publishTime>12/26/2024 18:09:13</publishTime>
+      <publishTime>12/24/2024 11:24:32</publishTime>
     </File>
     <File Include="bin/ClosedXML.dll">
       <publishTime>05/14/2024 11:06:12</publishTime>
@@ -2635,10 +2635,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/SOR.dll">
-      <publishTime>12/26/2024 18:10:01</publishTime>
+      <publishTime>12/24/2024 11:27:06</publishTime>
     </File>
     <File Include="bin/SOR.pdb">
-      <publishTime>12/26/2024 18:10:01</publishTime>
+      <publishTime>12/24/2024 11:27:06</publishTime>
     </File>
     <File Include="bin/System.AppContext.dll">
       <publishTime>10/02/2024 00:30:39</publishTime>
@@ -3664,7 +3664,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/23/2024 14:17:45</publishTime>
     </File>
     <File Include="Pages/Aggregator/AggregatorStatus.aspx">
-      <publishTime>12/24/2024 19:14:28</publishTime>
+      <publishTime>12/23/2024 14:17:45</publishTime>
     </File>
     <File Include="Pages/Aggregator/AggRegistration.aspx">
       <publishTime>12/23/2024 14:17:45</publishTime>
@@ -3676,13 +3676,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/23/2024 14:17:45</publishTime>
     </File>
     <File Include="Pages/Aggregator/EditAggRegistrationDetails.aspx">
-      <publishTime>12/24/2024 18:23:13</publishTime>
+      <publishTime>12/23/2024 14:17:45</publishTime>
     </File>
     <File Include="Pages/Aggregator/IdFileupload.ashx">
       <publishTime>12/23/2024 14:17:45</publishTime>
     </File>
     <File Include="Pages/Aggregator/OnBoardAggStatus.aspx">
-      <publishTime>12/26/2024 17:58:16</publishTime>
+      <publishTime>12/23/2024 14:17:45</publishTime>
     </File>
     <File Include="Pages/Aggregator/ReprocessAggDetails.aspx">
       <publishTime>12/23/2024 14:17:45</publishTime>
@@ -4237,7 +4237,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/04/2024 13:11:02</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/26/2024 18:10:02</publishTime>
+      <publishTime>12/24/2024 11:27:07</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -1184,7 +1184,7 @@
     <asp:HiddenField ID="AddPage" Value="#Upload" runat="server" />
     <div class="container-fluid">
         <div class="breadHeader">
-            <h5 class="page-title">Agent Registration (Onboarding)</h5>
+            <h5 class="page-title">Agent Registration</h5>
         </div>
         <asp:UpdatePanel runat="server" ID="upContentBody">
             <ContentTemplate>
@@ -1355,7 +1355,7 @@
                                                     <asp:BoundField DataField="AgentReqId" HeaderText="Agent Req. ID" Visible="false" />
                                                     <asp:BoundField DataField="BCCode" HeaderText="BC Code" />
                                                     <asp:BoundField DataField="aggregatorcode" HeaderText="Aggregator Code" />
-                                                    <%--<asp:BoundField DataField="AgentCode" HeaderText="Code" />--%>
+                                                    <asp:BoundField DataField="AgentCode" HeaderText="Code" />
                                                     <asp:BoundField DataField="Name" HeaderText="Name" />
                                                     <asp:BoundField DataField="AgentAddress" HeaderText="Address" />
                                                     <asp:BoundField DataField="PanNo" HeaderText="Pan No" />

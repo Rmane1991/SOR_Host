@@ -2083,10 +2083,10 @@ namespace SOR.Pages.Agent
             {
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
-                DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
+                DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Agent_Registration_Details", dt);
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "Agent Details", dt);
                 }
                 else
                 {
@@ -2107,11 +2107,11 @@ namespace SOR.Pages.Agent
             {
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
-                DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
+                DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Agent_Registration_Details", dt);
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "Agent Details", dt);
                 }
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No data found.', 'Alert');", true);
