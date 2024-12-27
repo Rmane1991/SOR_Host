@@ -1543,44 +1543,6 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
-        public DataSet ActiveDeactiveAggregator()
-        {
-            try
-            {
-                using (var cmd = new NpgsqlCommand())
-                {
-                    using (var sqlConn = new NpgsqlConnection(ConnectionString))
-                    {
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SELECT * FROM public.sp_activedeactiveAggregator(@p_BCCode, @p_Remarks, @p_ActionType, @p_ActivityType, @p_UserName, @p_BCReqId)";
-                        cmd.CommandType = CommandType.Text; // PostgreSQL uses plain SQL for function calls
-
-                        cmd.Parameters.AddWithValue("@p_BCCode", BCCode ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@p_Remarks", null ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@p_ActionType", ActionType);
-                        cmd.Parameters.AddWithValue("@p_UserName", UserName ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@p_ActivityType", ActivityType.ToString());
-                        cmd.Parameters.AddWithValue("@p_BCReqId", BCReqId ?? (object)DBNull.Value);
-
-                        DataSet dataSet = new DataSet();
-
-                        // Open the connection and execute the query
-                        using (var dataAdapter = new NpgsqlDataAdapter(cmd))
-                        {
-                            dataAdapter.Fill(dataSet);
-                        }
-
-                        return dataSet;
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : ActiveDeactiveBC() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
-            }
-        }
         #endregion
 
         #region ChangeBCStatusReEdit
@@ -1850,63 +1812,7 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
-        public DataSet ChangeAggregatorOnBoardStatus()
-        {
-            try
-            {
-                using (NpgsqlCommand cmd = new NpgsqlCommand())
-                {
-                    using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))  // Use NpgsqlConnection for PostgreSQL
-                    {
-                        // Define parameters for the stored procedure
-                        NpgsqlParameter[] _Params =
-                        {
-                    new NpgsqlParameter("p_BCCode", BC_Code),  // Match with p_BcCode
-                    new NpgsqlParameter("p_BCReqId", BCReqId),  // Match with p_BcReqId
-                    new NpgsqlParameter("p_Remarks", MakerRemark),  // Match with p_Remarks
-                    new NpgsqlParameter("p_UserName", UserName),  // Match with p_UserName
-                    new NpgsqlParameter("p_Flag", Flag),  // Match with p_Flag
-                    new NpgsqlParameter("p_Mstatus", Mstatus),  // Match with p_Mstatus
-                    new NpgsqlParameter("p_ATStatus", ATStatus),  // Match with p_ATStatus
-                    new NpgsqlParameter("p_CHStatus", CHstatus),  // Match with p_CHStatus
-                    new NpgsqlParameter("p_ActivityType", ActivityType),
-                };
 
-                        cmd.Connection = sqlConn;
-                        cmd.CommandType = CommandType.Text;  // Use CommandType.Text for raw SQL commands
-
-                        // Open the connection
-                        sqlConn.Open();
-
-                        // Execute the procedure using a CALL statement
-                        cmd.CommandText = "CALL sp_updateAggonboardprocesshandler(" +
-                                  "@p_BCCode, @p_BCReqId, @p_Remarks, @p_UserName, @p_Flag, " +
-                                  "@p_Mstatus, @p_ATStatus, @p_CHStatus, @p_ActivityType)";
-
-                        // Add parameters to the command
-                        cmd.Parameters.AddRange(_Params);
-                        cmd.ExecuteNonQuery();  // Execute the stored procedure
-
-                        // After calling the procedure, select the result from the temporary table or directly fetch the result
-                        cmd.CommandText = "SELECT * FROM temp_row_count";  // Query the temp table for the result
-                        NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(cmd);
-
-                        // Create DataSet to hold the results
-                        DataSet dataSet = new DataSet();
-                        dataAdapter.Fill(dataSet);
-
-                        sqlConn.Close();
-                        return dataSet;  // Return the result
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.CommonTrace("Class : BCEntity.cs \nFunction : ChangeBcOnBoardStatus() \nException Occured\n" + Ex.Message);
-                ErrorLog.DBError(Ex);
-                throw;
-            }
-        }
         #endregion
 
         public DataSet GetCountryStateCity(string UserName, int Mode, int CountryID, int StateID)
@@ -2167,43 +2073,7 @@ namespace BussinessAccessLayer
                 throw;
             }
         }
-        public string ValidateEditAggDetails(out string _Requestid)
-        {
-            string _Status = null;
-            string _StatusMsg = null;
-            _Requestid = string.Empty;
-            try
-            {
-                using (var sqlConn = new NpgsqlConnection(ConnectionString))
-                {
-                    sqlConn.Open();
-                    using (var cmd = new NpgsqlCommand("CALL public.sp_agg_request_validation(null,null,null,@p_BCReqId, @p_flag)", sqlConn))
-                    {
-                        cmd.CommandType = CommandType.Text;
 
-                        cmd.Parameters.Add("p_Status", NpgsqlTypes.NpgsqlDbType.Varchar, 200).Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add("p_RequestId", NpgsqlTypes.NpgsqlDbType.Varchar, 200).Direction = ParameterDirection.Output;
-                        cmd.Parameters.Add("p_StatusMsg", NpgsqlTypes.NpgsqlDbType.Varchar, 200).Direction = ParameterDirection.Output;
-                        cmd.Parameters.AddWithValue("p_BCReqId", (object)BCReqId ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("p_Flag", Flag);
-
-                        cmd.ExecuteNonQuery();
-
-                        _Status = cmd.Parameters["p_Status"].Value?.ToString();
-                        _Requestid = cmd.Parameters["p_RequestId"].Value?.ToString();
-                        _StatusMsg = cmd.Parameters["p_StatusMsg"].Value?.ToString();
-
-                        return _Status;
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.CommonTrace($"Class : BCEntity.cs \nFunction : ValidateEditBcDetails() \nException Occurred\n{Ex.Message}");
-                ErrorLog.DBError(Ex);
-                throw;
-            }
-        }
         #endregion
 
         #region Delete Agent
@@ -2803,7 +2673,7 @@ namespace BussinessAccessLayer
                             cmd.ExecuteNonQuery(); // Execute the procedure
 
                             // Now select from the temp table to get the results
-                            cmd.CommandText = "SELECT * FROM temp_results";
+                            cmd.CommandText = "SELECT * FROM temp_results"; // Change to select from temp table
 
                             // Use NpgsqlDataAdapter to fill the DataSet
                             using (var dataAdapter = new NpgsqlDataAdapter(cmd))

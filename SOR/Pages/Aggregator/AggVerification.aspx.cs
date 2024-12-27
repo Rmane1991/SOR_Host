@@ -409,7 +409,7 @@ namespace SOR.Pages.Aggregator
                                     {
                                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.Activate;
                                         _BCEntity.BCCode = BCCode_;
-                                        _dsActivate = _BCEntity.ActiveDeactiveAggregator();
+                                        _dsActivate = _BCEntity.ActiveDeactiveBC();
                                         if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
                                             _dsVerification = _BCEntity.ChangeAggregatorStatus();
                                     }
@@ -418,7 +418,7 @@ namespace SOR.Pages.Aggregator
                                     {
                                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.Deactivate;
                                         _BCEntity.BCCode = BCCode_;
-                                        _dsActivate = _BCEntity.ActiveDeactiveAggregator();
+                                        _dsActivate = _BCEntity.ActiveDeactiveBC();
                                         if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
                                         {
                                             _dsVerification = _BCEntity.ChangeAggregatorStatus();
@@ -430,7 +430,7 @@ namespace SOR.Pages.Aggregator
                                     {
                                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.OnboardTerminate;
                                         _BCEntity.BCCode = BCCode_;
-                                        _dsActivate = _BCEntity.ActiveDeactiveAggregator();
+                                        _dsActivate = _BCEntity.ActiveDeactiveBC();
                                         if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
                                         {
                                             _dsVerification = _BCEntity.ChangeAggregatorStatus();
@@ -634,7 +634,7 @@ namespace SOR.Pages.Aggregator
                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.Activate;
                         _EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.Active); ///category wise mail
                         _BCEntity.BCCode = _BCCode;
-                        _dsActivate = _BCEntity.ActiveDeactiveAggregator();
+                        _dsActivate = _BCEntity.ActiveDeactiveBC();
                         if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;
@@ -657,7 +657,7 @@ namespace SOR.Pages.Aggregator
                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.Deactivate;
                         _EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.Deactivate); ///category wise mail
                         _BCEntity.BCCode = _BCCode;
-                        _dsActivate = _BCEntity.ActiveDeactiveAggregator();
+                        _dsActivate = _BCEntity.ActiveDeactiveBC();
                         if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;
@@ -681,7 +681,7 @@ namespace SOR.Pages.Aggregator
                         _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.OnboardTerminate;
                         _EmailAlerts.CategoryTypeId = Convert.ToString((int)EnumCollection.EmailConfiguration.Terminated); ///category wise mail
                         _BCEntity.BCCode = _BCCode;
-                        _dsActivate = _BCEntity.ActiveDeactiveAggregator();
+                        _dsActivate = _BCEntity.ActiveDeactiveBC();
                         if (_dsActivate != null && _dsActivate.Tables.Count > 0 && _dsActivate.Tables[0].Rows[0][0].ToString() == "1")
                         {
                             _BCEntity.ActionType = (int)EnumCollection.EnumDBOperationType.AuthApprove;

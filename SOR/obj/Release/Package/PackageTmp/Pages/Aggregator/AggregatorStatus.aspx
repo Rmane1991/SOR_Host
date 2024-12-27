@@ -271,7 +271,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col" style="display: none">
+                                                <div class="col">
                                                     <label class="selectInputLabel" for="selectInputLabel">Verification Level</label>
                                                     <div class="selectInputBox">
                                                         <%-- <asp:DropDownList ID="ddlClientCode" runat="server" CssClass="maximus-select w-100" AutoPostBack="true" OnSelectedIndexChanged="ddlClientCode_SelectedIndexChanged">
