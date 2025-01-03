@@ -69,3 +69,6 @@ Time : 26-Dec-2024 12:50 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 |
 Time : 26-Dec-2024 12:50 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
 Time : 26-Dec-2024 12:51 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
 Time : 26-Dec-2024 12:55 Message : TrRule: EditGroup() | DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 26-Dec-2024 14:21 Message : TrRule: EditGroup() | DB_StatusCode : DEL96 | ResponseCode : DEL96 | ResponseMessage : Delete Failed
+Time : 26-Dec-2024 14:21 Message : TrRule: EditGroup() | DB_StatusCode : DEL96 | ResponseCode : DEL96 | ResponseMessage : Delete Failed
+Time : 26-Dec-2024 14:28 Message : TrRule: EditGroup() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful

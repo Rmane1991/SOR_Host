@@ -110,13 +110,14 @@
             });
         });
 
+
+
         // Transaction Summary Bar Chart
         var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
-
         var bouData = {
             // Generate the days labels on the X axis.
             labels: Array.from(new Array(30), function (_, i) {
-                return i + 1; // 30 days
+                return i + 1;
             }),
 
             datasets: [{
@@ -127,7 +128,7 @@
                 borderWidth: 1.5,
             }, {
                 label: 'Past Month',
-                data: [380, 430, 120, 230, 410, 740, 472, 219, 391, 229, 400, 203, 301, 1380, 291, 620, 700, 300, 630, 402, 320, 380, 289, 410, 300, 530, 630, 720, 780, 1200],
+                data: [380, 430, 120, 230, 410, 740, 472, 219, 391, 229, 400, 203, 301, 380, 291, 620, 700, 300, 630, 402, 320, 380, 289, 410, 300, 530, 630, 720, 780, 1200],
                 backgroundColor: 'rgba(255,65,105,0.5)',
                 borderColor: 'rgba(255,65,105,1)',
                 borderWidth: 1.5,
@@ -146,27 +147,23 @@
                     },
                     ticks: {
                         callback: function (tick, index) {
-                            // Display labels every 7th day
-                            return index % 7 === 0 ? tick : '';
+                            // Jump every 7 values on the X axis labels to avoid clutter.
+                            return index % 7 !== 0 ? '' : tick;
                         }
                     }
                 },
-                yAxes: [{
+                y: {
                     ticks: {
-                        suggestedMax: 1500,
-                        callback: function (tick) {
-                            if (tick >= 1e9) {
-                                return (tick / 1e9).toFixed(1) + 'B'; // Billions
-                            } else if (tick >= 1e6) {
-                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
-                            } else if (tick >= 1e3) {
-                                return (tick / 1e3).toFixed(1) + 'K'; // Thousands
-                            } else {
+                        suggestedMax: 4500, // Increased suggested max for better scaling
+                        callback: function (tick, index, ticks) {
+                            if (tick === 0) {
                                 return tick;
                             }
+                            // Format the amounts using Ks for thousands.
+                            return tick > 999 ? (tick / 1000).toFixed(1) + 'K' : tick;
                         }
                     }
-                }]
+                }
             },
             hover: {
                 mode: 'nearest',
@@ -180,18 +177,18 @@
         };
 
         window.BlogOverviewUsers = new Chart(bouCtx, {
-            type: 'bar',
+            type: 'bar', // Ensure the chart type is set to 'bar' for a bar chart
             data: bouData,
             options: bouOptions
         });
         //End
+
 
         //Rule-Wise Chart 
         function generateDonutChart(canvasId, successPercentage) {
             var ctx = document.getElementById(canvasId).getContext('2d');
             var success = successPercentage;
             var failure = 100 - success;
-
             var chart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
@@ -206,17 +203,10 @@
                     responsive: true,
                     plugins: {
                         legend: {
-                            display: true
+                            display: false
                         },
                         tooltip: {
-                            enabled: true,
-                            callbacks: {
-                                label: function (tooltipItem) {
-                                    var value = tooltipItem.raw;
-                                    var label = tooltipItem.index === 0 ? 'Success' : 'Failure';
-                                    return label + ': ' + value.toFixed(2) + '%'; 
-                                }
-                            }
+                            enabled: false
                         }
                     }
                 }
@@ -264,7 +254,7 @@
                 pointBorderColor: 'rgba(255,65,105,1)'
             }]
         };
-
+        
         var bouOptions = {
             responsive: true,
             legend: {
@@ -367,23 +357,17 @@
                         minRotation: 45,
                     }
                 },
-                yAxes: [{
+                y: {
                     ticks: {
-                        suggestedMax: 45,
-                        callback: function (tick) {
-                            // Check the size of the tick and apply the appropriate suffix
-                            if (tick >= 1e9) {
-                                return (tick / 1e9).toFixed(1) + 'B'; // Billions
-                            } else if (tick >= 1e6) {
-                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
-                            } else if (tick >= 1e3) {
-                                return (tick / 1e3).toFixed(1) + 'K'; // Thousands
-                            } else {
+                        suggestedMax: 4500,
+                        callback: function (tick, index, ticks) {
+                            if (tick === 0) {
                                 return tick;
                             }
+                            return tick > 999 ? (tick / 1000).toFixed(1) + 'K' : tick;
                         }
                     }
-                }]
+                }
             },
             hover: {
                 mode: 'nearest',

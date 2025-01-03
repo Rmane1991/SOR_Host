@@ -100,7 +100,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Transactions</span>
+                                <span class="stats-small__label text-uppercase">Transaction</span>
                                 <h6 id="TxnCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -116,7 +116,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">BCs</span>
+                                <span class="stats-small__label text-uppercase">Business Correspondence</span>
                                 <h6 id="bcCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -132,7 +132,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Aggregators</span>
+                                <span class="stats-small__label text-uppercase">Aggregator</span>
                                 <h6 id="aggregatorCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -148,7 +148,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Agents</span>
+                                <span class="stats-small__label text-uppercase">Agent</span>
                                 <h6 id="agentCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
