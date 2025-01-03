@@ -273,7 +273,16 @@
                                             <%--<asp:ListItem Text="Reversal" Value="3"></asp:ListItem>--%>
                                         </asp:DropDownList>
                                     </div>
+                                    <div class="col">
+                                        <label class="selectInputLabel" for="selectInputLabel">BC</label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator20" ControlToValidate="ddlbcCode" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select BC."></asp:RequiredFieldValidator>
+                                        <div class="selectInputDateBox w-100">
+                                            <asp:DropDownList ID="ddlbcCode" runat="server" CssClass="maximus-select w-100" Width="100%" AutoPostBack="true" OnSelectedIndexChanged="ddlbcCode_SelectedIndexChanged">
+                                                <asp:ListItem Value="0">--Business Correspondents--</asp:ListItem>
+                                            </asp:DropDownList>
 
+                                        </div>
+                                    </div>
 
                                     <div class="col">
                                         <label class="selectInputLabel" for="selectInputLabel">Aggregator</label>
@@ -391,6 +400,7 @@
                     $("#<%=ddlChannelType.ClientID%>").select2();
                     $("#<%=ddlTranType.ClientID%>").select2();
                     $("#<%=ddlTransactionStatus.ClientID%>").select2();
+                    $("#<%=ddlbcCode.ClientID%>").select2();
                     $("#<%=ddlAggregator.ClientID%>").select2();
                     $("#<%=ddlAction.ClientID%>").select2();
                 }

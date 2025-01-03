@@ -85,6 +85,24 @@ namespace SOR.Pages.TransactionReport {
         protected global::System.Web.UI.WebControls.DropDownList ddlTransactionStatus;
         
         /// <summary>
+        /// RequiredFieldValidator20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator20;
+        
+        /// <summary>
+        /// ddlbcCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlbcCode;
+        
+        /// <summary>
         /// ddlAggregator control.
         /// </summary>
         /// <remarks>

@@ -346,6 +346,16 @@
                                             </asp:DropDownList>
                                         </div>
                                         <div class="col">
+                                            <label class="selectInputLabel" for="selectInputLabel">BC</label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator20" ControlToValidate="ddlbcCode" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select BC."></asp:RequiredFieldValidator>
+                                            <div class="selectInputDateBox w-100">
+                                                <asp:DropDownList ID="ddlbcCode" runat="server" CssClass="maximus-select w-100" Width="100%" AutoPostBack="true" OnSelectedIndexChanged="ddlbcCode_SelectedIndexChanged">
+                                                    <asp:ListItem Value="0">--Business Correspondents--</asp:ListItem>
+                                                </asp:DropDownList>
+
+                                            </div>
+                                        </div>
+                                        <div class="col">
                                             <label class="selectInputLabel" for="selectInputLabel">Aggregator</label>
                                             <div class="selectInputBox">
                                                 <asp:DropDownList runat="server" ID="ddlAggregator" CssClass="maximus-select w-100" AutoPostBack="true">
@@ -416,13 +426,13 @@
                                             </tr>
                                             <tr>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnCountTotal" runat="server" Text="0" ForeColor="#ff0000" Width="70px" Font-Bold="true" CommandArgument="Total" CommandName="0"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnCountTotal" runat="server" Text="0" ForeColor="#ff0000" Width="70px" Font-Bold="true" CommandArgument="Total" CommandName="0" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnCountApproved" runat="server" Text="0" ForeColor="#005d7e" Width="70px" Font-Bold="true" CommandArgument="Success" CommandName="0"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnCountApproved" runat="server" Text="0" ForeColor="#005d7e" Width="70px" Font-Bold="true" CommandArgument="Success" CommandName="0" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnCountFailed" runat="server" Text="0" ForeColor="#a2460e" Width="70px" Font-Bold="true" CommandArgument="Failed" CommandName="0"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnCountFailed" runat="server" Text="0" ForeColor="#a2460e" Width="70px" Font-Bold="true" CommandArgument="Failed" CommandName="0" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnCountReversal" runat="server" Text="0" CommandArgument="Timeout" Width="70px" CommandName="0"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnCountReversal" runat="server" Text="0" CommandArgument="Timeout" Width="70px" CommandName="0" Enabled="false"></asp:LinkButton></td>
                                             </tr>
                                         </table>
                                     </fieldset>
@@ -442,13 +452,13 @@
                                             </tr>
                                             <tr>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnAmountTotal" runat="server" Text="0" Width="70px" ForeColor="#ff0000" Font-Bold="true" CommandArgument="Total" CommandName="1"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnAmountTotal" runat="server" Text="0" Width="70px" ForeColor="#ff0000" Font-Bold="true" CommandArgument="Total" CommandName="1" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnAmountApproved" runat="server" Text="0" Width="70px" ForeColor="#005d7e" Font-Bold="true" CommandArgument="Success" CommandName="1"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnAmountApproved" runat="server" Text="0" Width="70px" ForeColor="#005d7e" Font-Bold="true" CommandArgument="Success" CommandName="1" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnAmountFailed" runat="server" Text="0" Width="70px" ForeColor="#a2460e" Font-Bold="true" CommandArgument="Failed" CommandName="1"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnAmountFailed" runat="server" Text="0" Width="70px" ForeColor="#a2460e" Font-Bold="true" CommandArgument="Failed" CommandName="1" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="TxnAmountReversal" runat="server" Text="0" Width="70px" CommandArgument="Timeout" CommandName="1"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="TxnAmountReversal" runat="server" Text="0" Width="70px" CommandArgument="Timeout" CommandName="1" Enabled="false"></asp:LinkButton></td>
                                             </tr>
                                         </table>
                                     </fieldset>
@@ -468,13 +478,13 @@
                                             </tr>
                                             <tr>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="NFinTxnTotal" runat="server" Text="0" Width="70px" ForeColor="#ff0000" Font-Bold="true" CommandArgument="Total" CommandName="4"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="NFinTxnTotal" runat="server" Text="0" Width="70px" ForeColor="#ff0000" Font-Bold="true" CommandArgument="Total" CommandName="4" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="NFinTxnApproved" runat="server" Text="0" Width="70px" ForeColor="#005d7e" Font-Bold="true" CommandArgument="Success" CommandName="4"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="NFinTxnApproved" runat="server" Text="0" Width="70px" ForeColor="#005d7e" Font-Bold="true" CommandArgument="Success" CommandName="4" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="NFinTxnFailed" runat="server" Text="0" Width="70px" ForeColor="#a2460e" Font-Bold="true" CommandArgument="Failed" CommandName="4"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="NFinTxnFailed" runat="server" Text="0" Width="70px" ForeColor="#a2460e" Font-Bold="true" CommandArgument="Failed" CommandName="4" Enabled="false"></asp:LinkButton></td>
                                                 <td align="center">
-                                                    <asp:LinkButton ID="NFinTxnReversal" runat="server" Text="0" Width="70px" Font-Bold="true" CommandArgument="Timeout" CommandName="4"></asp:LinkButton></td>
+                                                    <asp:LinkButton ID="NFinTxnReversal" runat="server" Text="0" Width="70px" Font-Bold="true" CommandArgument="Timeout" CommandName="4" Enabled="false"></asp:LinkButton></td>
                                             </tr>
                                         </table>
                                     </fieldset>
@@ -519,7 +529,6 @@
                                     <PagerStyle CssClass="pagination-ys" />
 
                                     <Columns>
-                                        
                                     </Columns>
                                 </asp:GridView>
                             </div>
@@ -538,6 +547,7 @@
                     $("#<%=ddlChannelType.ClientID%>").select2();
                     $("#<%=ddlTranType.ClientID%>").select2();
                     $("#<%=ddlTransactionStatus.ClientID%>").select2();
+                    $("#<%=ddlbcCode.ClientID%>").select2();
                     $("#<%=ddlAggregator.ClientID%>").select2();
                     $("#<%=ddlAction.ClientID%>").select2();
                 }

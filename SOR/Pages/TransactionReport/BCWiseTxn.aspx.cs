@@ -20,11 +20,14 @@ namespace SOR.Pages.TransactionReport
         TransactionReportDAL _TransactionReportDAL = new TransactionReportDAL();
         AggregatorEntity _AggregatorEntity = new AggregatorEntity();
         RuleEntity _RuleEntity = new RuleEntity();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.TransactionReportTrace("BCWiseTxn | Page_Load | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BCWiseTxn.aspx", "36");
@@ -68,7 +71,7 @@ namespace SOR.Pages.TransactionReport
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("BCWiseTxn: Page_Load: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("BCWiseTxn: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -79,6 +82,7 @@ namespace SOR.Pages.TransactionReport
             DataSet _dsTransactionLogs = null;
             try
             {
+                ErrorLog.TransactionReportTrace("BCWiseTxn | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 Setpropertise();
                 
                 _TransactionReportDAL.flag = Convert.ToString((int)_EnumBindingType);
@@ -115,10 +119,11 @@ namespace SOR.Pages.TransactionReport
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found In Search Criteria. Try again', 'Warning');", true);
                     }
                 }
+                ErrorLog.TransactionReportTrace("BCWiseTxn | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("BCWiseTxn: FillGrid: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("BCWiseTxn: FillGrid: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return _dsTransactionLogs;
@@ -151,6 +156,7 @@ namespace SOR.Pages.TransactionReport
         {
             try
             {
+                ErrorLog.TransactionReportTrace("BCWiseTxn | buttonSearch_Click | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Convert.ToDateTime(txtFromDate.Value) > Convert.ToDateTime(txtToDate.Value))
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('From date should be less than To date. Try again', 'Warning');", true);
@@ -158,12 +164,20 @@ namespace SOR.Pages.TransactionReport
                 }
                 else
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Report-BCWiseTxn";
+                    _auditParams[2] = "btnSearch";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 }
+                ErrorLog.TransactionReportTrace("BCWiseTxn | buttonSearch_Click | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("BCWiseTxn: btnSearch_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("BCWiseTxn: btnSearch_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -174,6 +188,14 @@ namespace SOR.Pages.TransactionReport
         {
             try
             {
+                ErrorLog.TransactionReportTrace("BCWiseTxn | btnClear_ServerClick | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Report-BCWiseTxn";
+                _auditParams[2] = "btnClear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 ddlChannelType.ClearSelection();
@@ -182,10 +204,11 @@ namespace SOR.Pages.TransactionReport
                 gvBCWiseTransaction.DataBind();
                 gvBCWiseTransaction.PageIndex = 0;
                 lblRecordCount.Text = string.Empty;
+                ErrorLog.TransactionReportTrace("BCWiseTxn | btnClear_ServerClick | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("BCWiseTxn: btnClear_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("BCWiseTxn: btnClear_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -372,11 +395,19 @@ namespace SOR.Pages.TransactionReport
                 {
                     try
                     {
+                        ErrorLog.TransactionReportTrace("BCWiseTxn | btnexport_ServerClick | Export-To-Excel | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         ExportFormat _ExportFormat = new ExportFormat();
                         DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
 
                         if (dt != null && dt.Tables[0].Rows.Count > 0)
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Report-BCWiseTxn";
+                            _auditParams[2] = "Export-To-Excel";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "BC Wise Transactions", dt);
                         }
                         {
@@ -394,11 +425,19 @@ namespace SOR.Pages.TransactionReport
                 {
                     try
                     {
+                        ErrorLog.TransactionReportTrace("BCWiseTxn | btnexport_ServerClick | Export-To-CSV | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         ExportFormat _ExportFormat = new ExportFormat();
                         DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
 
                         if (dt != null && dt.Tables[0].Rows.Count > 0)
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Report-BCWiseTxn";
+                            _auditParams[2] = "Export-To-CSV";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BC Wise Transactions", dt);
                         }
                         else
@@ -417,6 +456,14 @@ namespace SOR.Pages.TransactionReport
                 {
                     try
                     {
+                        ErrorLog.TransactionReportTrace("BCWiseTxn | btnexport_ServerClick | Export-To-ZIP | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "Report-BCWiseTxn";
+                        _auditParams[2] = "Export-To-Zip";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         int ReportThreads = Convert.ToInt32(ConfigurationManager.AppSettings["ReportThreads"].ToString());
                         int ReportRecordsPerSheet = Convert.ToInt32(ConfigurationManager.AppSettings["ReportRecordsPerSheet"].ToString());
                         string ReportDownPath = ConfigurationManager.AppSettings["ReportDownPath"].ToString();
