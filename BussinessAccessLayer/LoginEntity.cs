@@ -702,35 +702,32 @@ namespace BussinessAccessLayer
         {
             try
             {
-                using (var cmd = new NpgsqlCommand())
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (var sqlConn = new NpgsqlConnection(ConnectionString))
-                    {
-                        var _sqlParameter = new[]
-                        {
-                            new NpgsqlParameter("p_username", NpgsqlTypes.NpgsqlDbType.Varchar) { Value = _Params[0] },
-                            new NpgsqlParameter("p_action", NpgsqlTypes.NpgsqlDbType.Varchar) { Value = _Params[1] },
-                            new NpgsqlParameter("p_description", NpgsqlTypes.NpgsqlDbType.Text) { Value = _Params[2] }
-                        };
+                    sqlConn.Open(); // Ensure the connection is opened
 
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "InsertAuditLoginActivities";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand())
+                    {
                         cmd.Connection = sqlConn;
 
-                        // Ensure the connection is closed before opening it
-                        if (cmd.Connection.State == System.Data.ConnectionState.Open)
-                            cmd.Connection.Close();
+                        // Call the PostgreSQL procedure
+                        cmd.CommandText = "CALL InsertAuditLoginActivities(:p_UserName, :p_Action, :p_Description, :p_loginkey)";
+                        cmd.CommandType = CommandType.Text;
 
-                        cmd.Connection.Open();
-                        cmd.Parameters.AddRange(_sqlParameter);
-                        cmd.ExecuteNonQuery();
-                        sqlConn.Close();
+                        // Adding parameters
+                        cmd.Parameters.AddWithValue("p_UserName", (object)_Params[0] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Action", (object)_Params[1] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_Description", (object)_Params[2] ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("p_loginkey", (object)_Params[3] ?? DBNull.Value);
+
+                        // Execute the procedure
+                        cmd.ExecuteNonQuery(); // Execute the command
                     }
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : LoginEntity.cs \nFunction : StoreLoginActivities() \nException Occurred\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("UserManagement: StoreLoginActivities() : UserName: " + UserName + " Exception: " + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }

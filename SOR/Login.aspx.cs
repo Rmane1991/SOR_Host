@@ -19,7 +19,7 @@ namespace PayRakamSBM
         AppSecurity _AppSecurity = new AppSecurity();
 
         string _ChangePasswordResponse = string.Empty, _Status = string.Empty, _ChangepasswordResponse = string.Empty;
-        string[] _auditParams = new string[3];
+        string[] _auditParams = new string[4];
         string[] _attemptAction = new string[2];
         string
             _strUserName = string.Empty,
@@ -147,11 +147,7 @@ namespace PayRakamSBM
                                     {
                                         try
                                         {
-                                            #region Login Success
-                                            _auditParams[0] = Convert.ToString(_strUserName);
-                                            _auditParams[1] = "User Login";
-                                            _auditParams[2] = Convert.ToString(_strUserName) + " Login Successfully.";
-                                            _LoginEntity.StoreLoginActivities(_auditParams);
+                                            #region Login Success                                            
                                             ErrorLog.CommonTrace("Login Successful. Username " + _strUserName + ". SessionID : " + HttpContext.Current.Session.SessionID);
                                             Session["UserID"] = _dsValiDateUser.Tables[0].Rows[0]["UserID"].ToString().Trim();
                                             Session["BCAgentID"] = _dsValiDateUser.Tables[0].Rows[0]["UserName"].ToString().Trim();
@@ -198,6 +194,15 @@ namespace PayRakamSBM
                                                 {
                                                     try
                                                     {
+                                                        Random random = new Random();
+                                                        int randomNumber = random.Next(100000, 999999);
+                                                        Session["LoginKey"] = randomNumber;
+                                                        _auditParams[0] = Convert.ToString(_strUserName);
+                                                        _auditParams[1] = "User Login";
+                                                        _auditParams[2] = Convert.ToString(_strUserName) + " Login Successfully.";
+                                                        _auditParams[3] = Session["LoginKey"].ToString();
+                                                        _LoginEntity.StoreLoginActivities(_auditParams);
+                                                        ErrorLog.CommonTrace("Login Successful. Username : " + _strUserName + " | LoginKey : " + Session["LoginKey"].ToString());
                                                         Response.Redirect(Session["HomePage"].ToString(), false);
                                                         HttpContext.Current.ApplicationInstance.CompleteRequest();
                                                     }

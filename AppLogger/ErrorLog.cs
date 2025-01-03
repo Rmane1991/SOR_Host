@@ -1201,7 +1201,7 @@ namespace AppLogger
         {
             lock (FileLocAgentManagementTrace)
             {
-                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Agent Management\\TraceLogs";
+                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Report\\TraceLogs";
                 {
                     if (!Directory.Exists(m_Path))
                     {
@@ -1222,7 +1222,7 @@ namespace AppLogger
         {
             lock (FileLocAgentManagementError)
             {
-                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Agent Management\\ErrorLogs";
+                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Report\\ErrorLogs";
                 {
                     if (!Directory.Exists(m_Path))
                     {

@@ -20,11 +20,14 @@ namespace SOR.Pages.TransactionReport
         TransactionReportDAL _TransactionReportDAL = new TransactionReportDAL();
         AggregatorEntity _AggregatorEntity = new AggregatorEntity();
         AgentRegistrationDAL _AgentRegistrationDAL = new AgentRegistrationDAL();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.TransactionReportTrace("AEPSTransactions | Page_Load | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "AEPSTransactions.aspx", "22");
@@ -45,7 +48,7 @@ namespace SOR.Pages.TransactionReport
                         {
                             txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                             txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
-                            BindAggregator();
+                            FillBc();
                             BindAction();
                             UserPermissions.RegisterStartupScriptForNavigationListActive("7", "22");
                         }
@@ -68,7 +71,7 @@ namespace SOR.Pages.TransactionReport
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("AEPSTransactions: Page_Load: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("AEPSTransactions: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -79,6 +82,7 @@ namespace SOR.Pages.TransactionReport
             DataSet _dsTransactionLogs = null;
             try
             {
+                ErrorLog.TransactionReportTrace("AEPSTransactions | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 Setpropertise();
                 
                 _TransactionReportDAL.flag = Convert.ToString((int)_EnumBindingType);
@@ -115,10 +119,11 @@ namespace SOR.Pages.TransactionReport
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found In Search Criteria. Try again', 'Warning');", true);
                     }
                 }
+                ErrorLog.TransactionReportTrace("AEPSTransactions | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("AEPSTransactions: FillGrid(): Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("AEPSTransactions: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return _dsTransactionLogs;
@@ -156,19 +161,36 @@ namespace SOR.Pages.TransactionReport
         {
             try
             {
+                ErrorLog.TransactionReportTrace("AEPSTransactions | btnSearch_ServerClick | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Convert.ToDateTime(txtFromDate.Value) > Convert.ToDateTime(txtToDate.Value))
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('From date should be less than To date. Try again', 'Warning');", true);
                     return;
                 }
+                if(ddlbcCode.SelectedValue!="0")
+                {
+                    if (ddlAggregator.SelectedValue == "0")
+                    {
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Aggregator. Try again', 'Warning');", true);
+                        return;
+                    }
+                }
                 else
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Report-AEPS";
+                    _auditParams[2] = "btnSearch";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 }
+                ErrorLog.TransactionReportTrace("AEPSTransactions | btnSearch_ServerClick | End. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("AEPSTransactions: btnSearch_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("AEPSTransactions: btnSearch_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -179,9 +201,18 @@ namespace SOR.Pages.TransactionReport
         {
             try
             {
+                ErrorLog.TransactionReportTrace("AEPSTransactions | btnClear_ServerClick | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Report-AEPS";
+                _auditParams[2] = "btnClear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 ddlChannelType.ClearSelection();
+                ddlbcCode.ClearSelection();
                 ddlAggregator.ClearSelection();
                 txtAgentCode.Value = string.Empty;
                 ddlTranType.ClearSelection();
@@ -191,10 +222,11 @@ namespace SOR.Pages.TransactionReport
                 gvAEPSTransaction.DataBind();
                 gvAEPSTransaction.PageIndex = 0;
                 lblRecordCount.Text = string.Empty;
+                ErrorLog.TransactionReportTrace("AEPSTransactions | btnClear_ServerClick | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("AEPSTransactions: btnClear_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("AEPSTransactions: btnClear_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -229,7 +261,7 @@ namespace SOR.Pages.TransactionReport
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("AEPSTransactions: gvAEPSTransaction_PageIndexChanging: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("AEPSTransactions: gvAEPSTransaction_PageIndexChanging: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -244,7 +276,7 @@ namespace SOR.Pages.TransactionReport
             }
             catch (Exception Ex)
             {
-                ErrorLog.TransactionReportTrace("AEPSTransactions: gvAEPSTransaction_Sorting: Exception: " + Ex.Message);
+                ErrorLog.TransactionReportTrace("AEPSTransactions: gvAEPSTransaction_Sorting: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -257,7 +289,111 @@ namespace SOR.Pages.TransactionReport
         #endregion
 
         #region Dropdown
-        public void BindAggregator()
+        //public void BindAggregator()
+        //{
+        //    try
+        //    {
+        //        ddlAggregator.Items.Clear();
+        //        ddlAggregator.DataSource = null;
+        //        ddlAggregator.DataBind();
+        //        string UserName = Session["Username"].ToString();
+        //        int IsRemoved = 0;
+        //        int IsActive = 1;
+        //        int IsdocUploaded = 1;
+        //        int VerificationStatus = 1;
+        //        string ClientID = null;
+        //        DataTable dsbc = _AgentRegistrationDAL.GetAggregator(UserName, VerificationStatus, IsActive, IsRemoved, ClientID, IsdocUploaded);
+        //        if (dsbc != null && dsbc.Rows.Count > 0 && dsbc.Rows.Count > 0)
+        //        {
+        //            if (dsbc.Rows.Count == 1)
+        //            {
+        //                ddlAggregator.DataSource = dsbc;
+        //                ddlAggregator.DataValueField = "aggcode";
+        //                ddlAggregator.DataTextField = "agname";
+        //                ddlAggregator.DataBind();
+        //            }
+        //            else
+        //            {
+        //                ddlAggregator.DataSource = dsbc;
+        //                ddlAggregator.DataValueField = "aggcode";
+        //                ddlAggregator.DataTextField = "agname";
+        //                ddlAggregator.DataBind();
+        //                ddlAggregator.Items.Insert(0, new ListItem("-- Select --", "0"));
+        //            }
+        //        }
+        //        else
+        //        {
+        //            ddlAggregator.DataSource = null;
+        //            ddlAggregator.DataBind();
+        //            ddlAggregator.Items.Insert(0, new ListItem("No Data Found", "0"));
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ErrorLog.AgentManagementTrace("Page : AEPSTransactions.cs \nFunction : BindAggregator()\nException Occured\n" + ex.Message);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'AEPS Transactions');", true);
+        //        return;
+        //    }
+        //}
+        public void FillBc()
+        {
+            try
+            {
+                ddlbcCode.Items.Clear();
+                ddlbcCode.DataSource = null;
+                ddlbcCode.DataBind();
+                string UserName = Session["Username"].ToString();
+                int IsRemoved = 0;
+                int IsActive = 1;
+                int IsdocUploaded = 1;
+                int VerificationStatus = 1;
+                DataTable dsbc = _AgentRegistrationDAL.GetBC(UserName, VerificationStatus, IsActive, IsRemoved, null, IsdocUploaded);
+                if (dsbc != null && dsbc.Rows.Count > 0 && dsbc.Rows.Count > 0)
+                {
+                    if (dsbc.Rows.Count == 1)
+                    {
+                        ddlbcCode.DataSource = dsbc;
+                        ddlbcCode.DataValueField = "BCCode";
+                        ddlbcCode.DataTextField = "BCName";
+                        ddlbcCode.DataBind();
+                    }
+                    else
+                    {
+                        ddlbcCode.DataSource = dsbc;
+                        ddlbcCode.DataValueField = "BCCode";
+                        ddlbcCode.DataTextField = "BCName";
+                        ddlbcCode.DataBind();
+                        ddlbcCode.Items.Insert(0, new ListItem("-- Select --", "0"));
+                    }
+                }
+                else
+                {
+                    ddlbcCode.DataSource = null;
+                    ddlbcCode.DataBind();
+                    ddlbcCode.Items.Insert(0, new ListItem("No Data Found", "0"));
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.AgentManagementTrace("Page : AEPSTransactions.cs \nFunction : FillBc()\nException Occured\n" + ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'AEPS Transactions');", true);
+                return;
+            }
+        }
+        protected void ddlbcCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                FillAggregator();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.AgentManagementTrace("Page : AEPSTransactions.cs \nFunction : ddlbcCode_SelectedIndexChanged()\nException Occured\n" + ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'AEPS Transactions');", true);
+                return;
+            }
+        }
+        public void FillAggregator()
         {
             try
             {
@@ -269,7 +405,7 @@ namespace SOR.Pages.TransactionReport
                 int IsActive = 1;
                 int IsdocUploaded = 1;
                 int VerificationStatus = 1;
-                string ClientID = null;
+                string ClientID = ddlbcCode.SelectedValue.ToString();
                 DataTable dsbc = _AgentRegistrationDAL.GetAggregator(UserName, VerificationStatus, IsActive, IsRemoved, ClientID, IsdocUploaded);
                 if (dsbc != null && dsbc.Rows.Count > 0 && dsbc.Rows.Count > 0)
                 {
@@ -298,7 +434,7 @@ namespace SOR.Pages.TransactionReport
             }
             catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("Page : AEPSTransactions.cs \nFunction : BindAggregator()\nException Occured\n" + ex.Message);
+                ErrorLog.AgentManagementTrace("Page : AEPSTransactions.cs \nFunction : FillAggregator()\nException Occured\n" + ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'AEPS Transactions');", true);
                 return;
             }
@@ -387,11 +523,19 @@ namespace SOR.Pages.TransactionReport
                 {
                     try
                     {
+                        ErrorLog.TransactionReportTrace("AEPSTransactions | btnexport_ServerClick | Export-To-Excel | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         ExportFormat _ExportFormat = new ExportFormat();
                         DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
 
                         if (dt != null && dt.Tables[0].Rows.Count > 0)
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Report-AEPS";
+                            _auditParams[2] = "Export-To-Excel";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "AEPS Transactions", dt);
                         }
                         {
@@ -410,11 +554,20 @@ namespace SOR.Pages.TransactionReport
                 {
                     try
                     {
+                        ErrorLog.TransactionReportTrace("AEPSTransactions | btnexport_ServerClick | Export-To-CSV | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         ExportFormat _ExportFormat = new ExportFormat();
                         DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
 
                         if (dt != null && dt.Tables[0].Rows.Count > 0)
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Report-AEPS";
+                            _auditParams[2] = "Export-To-CSV";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "AEPS Transactions", dt);
                         }
                         else
@@ -436,6 +589,14 @@ namespace SOR.Pages.TransactionReport
                 {
                     try
                     {
+                        ErrorLog.TransactionReportTrace("AEPSTransactions | btnexport_ServerClick | Export-To-ZIP | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "Report-AEPS";
+                        _auditParams[2] = "Export-To-ZIP";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         int ReportThreads = Convert.ToInt32(ConfigurationManager.AppSettings["ReportThreads"].ToString());
                         int ReportRecordsPerSheet = Convert.ToInt32(ConfigurationManager.AppSettings["ReportRecordsPerSheet"].ToString());
                         string ReportDownPath = ConfigurationManager.AppSettings["ReportDownPath"].ToString();
