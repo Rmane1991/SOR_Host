@@ -398,15 +398,15 @@ namespace SOR.Pages.Aggregator
                 }
                 if (_DeclineCardCount > 0)
                 {
-                    lblModalHeaderName.Text = "BC(s) Terminate Reason";
+                    lblModalHeaderName.Text = "Aggregator(s) Terminate Reason";
                     TxtRemarks.Style.Add("Placeholder", "Please enter the reason.");
-                    lblconfirm.Text = "Are you sure want to Terminate BC(s)?";
+                    lblconfirm.Text = "Are you sure want to Terminate Aggregator(s)?";
                     ModalPopupExtender_Declincard.Show();
                 }
                 else
                 {
 
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Terminate BC(s)');", true);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Terminate Aggregator(s)');", true);
                     return;
                 }
             }
@@ -498,7 +498,7 @@ namespace SOR.Pages.Aggregator
         {
             if (ddlActiontype.SelectedValue == "0")
             {
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Action Type.','Activate BC(s)');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Action Type.','Activate Aggregator(s)');", true);
             }
 
             else
@@ -519,15 +519,15 @@ namespace SOR.Pages.Aggregator
                     }
                     if (_DeclineCardCount > 0)
                     {
-                        lblModalHeaderName.Text = "BC(s) Activate Reason";
+                        lblModalHeaderName.Text = "Aggregator(s) Activate Reason";
                         TxtRemarks.Style.Add("Placeholder", "Please enter the reason.");
-                        lblconfirm.Text = "Are you sure want to Activate BC(s)?";
+                        lblconfirm.Text = "Are you sure want to Activate Aggregator(s)?";
                         ModalPopupExtender_Declincard.Show();
                     }
                     else
                     {
 
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Activate BC(s)');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Activate Aggregator(s)');", true);
                         return;
                     }
                 }
@@ -548,7 +548,7 @@ namespace SOR.Pages.Aggregator
         {
             if (ddlActiontype.SelectedValue == "0")
             {
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Action Type.','Activate BC(s)');", true);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Action Type.','Activate Aggregator(s)');", true);
             }
             else
             {
@@ -568,15 +568,15 @@ namespace SOR.Pages.Aggregator
                     }
                     if (_DeclineCardCount > 0)
                     {
-                        lblModalHeaderName.Text = "BC(s) Deactivate Reason";
+                        lblModalHeaderName.Text = "Aggregator(s) Deactivate Reason";
                         TxtRemarks.Style.Add("Placeholder", "Please enter the reason.");
-                        lblconfirm.Text = "Are you sure want to Deactivate BC(s)?";
+                        lblconfirm.Text = "Are you sure want to Deactivate Aggregator(s)?";
                         ModalPopupExtender_Declincard.Show();
                     }
                     else
                     {
 
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Deactivate BC(s)');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Deactivate Aggregator(s)');", true);
                         return;
                     }
                 }
@@ -645,7 +645,7 @@ namespace SOR.Pages.Aggregator
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Bc request already pending for verification.', 'Warning');", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Aggregator request already pending for verification.', 'Warning');", true);
                         return;
                     }
                 }
@@ -664,7 +664,7 @@ namespace SOR.Pages.Aggregator
             bool IsvalidRecord = true;
             string _requestid = string.Empty;
             _BCEntity.Flag = 1;
-            string status = _BCEntity.ValidateEditBcDetails(out _requestid);
+            string status = _BCEntity.ValidateEditAggDetails(out _requestid);
             if (status == "00")
             {
                 IsvalidRecord = true;
@@ -704,7 +704,7 @@ namespace SOR.Pages.Aggregator
                             _strAlertMessage_Header = "Terminate BC ";
                             _strAlertMessage_Success = "Terminate Process ";
                             _strAlertMessage_UnSuccess = "Terminate Process ";
-                            _strAlertMessage_Total = "Total Record Processed for Terminate BC(s) :  ";
+                            _strAlertMessage_Total = "Total Record Processed for Terminate Aggregator(s) :  ";
                             _StatusFlag = (int)EnumCollection.EnumDBOperationType.OnboardTerminate;
                             _BCEntity.ActivityType = (int)EnumCollection.ActivityType.Terminate;
                             _Flag = 1;
@@ -714,7 +714,7 @@ namespace SOR.Pages.Aggregator
                             _strAlertMessage_Header = "Activate BC ";
                             _strAlertMessage_Success = "Activate Process ";
                             _strAlertMessage_UnSuccess = "Activate Process ";
-                            _strAlertMessage_Total = "Total Record Processed for Activate BC(s) :  ";
+                            _strAlertMessage_Total = "Total Record Processed for Activate Aggregator(s) :  ";
                             _StatusFlag = (int)EnumCollection.EnumDBOperationType.Activate;
                             _BCEntity.ActivityType = (int)EnumCollection.ActivityType.Activate;
                             _Flag = 1;
@@ -726,7 +726,7 @@ namespace SOR.Pages.Aggregator
                             _strAlertMessage_Header = "De-Activate BC";
                             _strAlertMessage_Success = "De-Activate BC Process ";
                             _strAlertMessage_UnSuccess = "De-Activate BC Process ";
-                            _strAlertMessage_Total = "Total Record Processed for De-activate BC(s) :  ";
+                            _strAlertMessage_Total = "Total Record Processed for De-activate Aggregator(s) :  ";
                             _StatusFlag = (int)EnumCollection.EnumDBOperationType.Deactivate;
                             _Flag = 1;
                             _BCEntity.ActivityType = (int)EnumCollection.ActivityType.Deactivate;
@@ -771,8 +771,8 @@ namespace SOR.Pages.Aggregator
                                     else
                                     {
                                         _unsuessful = _unsuessful + 1;
-                                        reason = "Bc request already pending for verification.";
-                                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Bc request already pending for verification.', 'Warning');", true);
+                                        reason = "Aggregator request already pending for verification.";
+                                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Aggregator request already pending for verification.', 'Warning');", true);
                                         return;
                                     }
                                 }
@@ -800,8 +800,12 @@ namespace SOR.Pages.Aggregator
                                         try
                                         {
                                             _reocrdsProcessed = _reocrdsProcessed + 1;
+
+                                            HiddenField hfBCID = (HiddenField)row.FindControl("hfBCID");
+                                            string bcId = hfBCID.Value;
+
                                             _BCEntity.BC_Code = row.Cells[2].Text;
-                                            _BCEntity.BCReqId = row.Cells[5].Text;
+                                            _BCEntity.BCReqId = bcId;
 
                                             _strBCFullName = Convert.ToString(row.Cells[3].Text);
                                             _BCEntity.MakerRemark = TxtRemarks.Text.Trim();
@@ -814,7 +818,7 @@ namespace SOR.Pages.Aggregator
                                             _BCEntity.UserName = Session["UserName"].ToString();
                                             if (ValidateReEditRequest())
                                             {
-                                                _dsDeactivateBC = _BCEntity.ChangeBcOnBoardStatus();
+                                                _dsDeactivateBC = _BCEntity.ChangeAggregatorOnBoardStatus();
 
                                                 if (Convert.ToInt32(Convert.ToString(_dsDeactivateBC.Tables[0].Rows[0][0])) > 0)
                                                 {
@@ -827,7 +831,7 @@ namespace SOR.Pages.Aggregator
                                             }
                                             else
                                             {
-                                                reason = "Bc request already pending for verification.";
+                                                reason = "Aggregator request already pending for verification.";
                                                 _unsuessful = _unsuessful + 1;
                                             }
                                         }

@@ -378,6 +378,11 @@
                                     <HeaderStyle CssClass="text-center" />
                                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                                 </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:HiddenField ID="hfBCID" runat="server" Value='<%# Eval("BCId") %>' />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:BoundField DataField="BCId" HeaderText="BCId" Visible="false"/>
                                 <asp:BoundField DataField="BC_Code" HeaderText="Code" />
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
@@ -388,7 +393,8 @@
                                 <asp:BoundField DataField="District" HeaderText="District" />
                                 <asp:BoundField DataField="City" HeaderText="City" />
                                 <asp:BoundField DataField="Pincode" HeaderText="Pincode" />
-                                <asp:BoundField DataField="BcStatus" HeaderText="Status" />
+                                <%--<asp:BoundField DataField="BcStatus" HeaderText="Status" />--%>
+                                <asp:BoundField DataField="Onboarding Status" HeaderText="Onboarding Status" />
                                 <asp:BoundField DataField="Created_By" HeaderText="Onboarded By" />
                                 <asp:BoundField DataField="CreatedOn" HeaderText="Onboarded On" />
  
