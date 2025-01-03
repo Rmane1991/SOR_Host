@@ -1,0 +1,13 @@
+# Ignore Visual Studio temporary files
+.vs/
+
+# Ignore SQLite database and cache files
+.vs/SOR/v15/Server/sqlite3/storage.ide
+.vs/SOR/v15/Server/sqlite3/storage.ide-shm
+.vs/SOR/v15/Server/sqlite3/storage.ide-wal
+
+# Ignore error logs and trace logs
+SOR/Error Logs/Agent Management/TraceLogs/
+SOR/Error Logs/Common/ErrorLogs/
+SOR/Error Logs/Common/TraceLogs/
+SOR/Error Logs/DB Logs/
