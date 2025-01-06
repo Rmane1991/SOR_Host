@@ -175,9 +175,10 @@
             console.warn("No transactions data found.");
         }
 
-        var SummaryTxnDays = transactions.map(t => t.Day);
+        /*var SummaryTxnDays = transactions.map(t => t.Day);
         var currentMonthData = transactions.map(t => t.CurrentMonthCount);
-        var previousMonthData = transactions.map(t => t.PreviousMonthCount);
+        var PreviousTxnDays = transactions.map(t => t.PreviousDay);
+        var previousMonthData = transactions.map(t => t.PreviousMonthCount);*/
 
         var SwitchTotalTxn = SummaryDataTxn.map(t => t.BC);
         var BCTotalTxn = SummaryDataTxn.map(t => t.Switch);
@@ -283,9 +284,13 @@
 
         // Transaction Summary 
         var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
+        var CurrentTxnDays = transactions.map(t => t.Day);
+        var currentMonthData = transactions.map(t => t.CurrentMonthCount);
+        var PreviousTxnDays = transactions.map(t => t.PreviousDay);
+        var previousMonthData = transactions.map(t => t.PreviousMonthCount);
 
         var bouData = {
-            labels: SummaryTxnDays,  // Data labels for X-axis
+            labels: CurrentTxnDays,
             datasets: [{
                 label: 'Current Data',
                 fill: 'start',
@@ -295,7 +300,7 @@
                 pointBackgroundColor: '#ffffff',
                 pointHoverBackgroundColor: 'rgb(0,123,255)',
                 borderWidth: 1.5,
-                pointRadius: 3,  // Make points visible 
+                pointRadius: 3,
                 pointHoverRadius: 5,
                 borderJoinStyle: 'round',
                 lineTension: 0.3,
@@ -315,7 +320,6 @@
             }]
         };
 
-        // Options
         var bouOptions = {
             responsive: true,
             legend: {
@@ -326,7 +330,7 @@
                     tension: 0.3
                 },
                 point: {
-                    radius: 3  // Ensure points are visible
+                    radius: 3
                 }
             },
             scales: {
@@ -337,19 +341,19 @@
                         maxRotation: 45,
                         minRotation: 0,
                         callback: function (tick, index) {
-                            var totalLabels = SummaryTxnDays.length;
-                            if (totalLabels <= 4) {
+                            var totalLabels = CurrentTxnDays.length;
+                            if (totalLabels <= 7) {
                                 return tick;
                             }
                             return index % 7 === 0 ? tick : '';
-                        }
+                        },
+                        padding: 15
                     }
                 }],
                 yAxes: [{
                     ticks: {
                         suggestedMax: 45,
                         callback: function (tick) {
-                            // Check the size of the tick and apply the appropriate suffix
                             if (tick >= 1e9) {
                                 return (tick / 1e9).toFixed(1) + 'B'; // Billions
                             } else if (tick >= 1e6) {
@@ -368,13 +372,43 @@
                 intersect: false
             },
             tooltips: {
-                custom: false,
+                enabled: true,
                 mode: 'nearest',
-                intersect: false
+                intersect: true,
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        var index = tooltipItem[0].index;
+                        var datasetIndex = tooltipItem[0].datasetIndex;
+
+                        if (datasetIndex === 0) {
+                            return `Date: ${transactions[index].Day}`;
+                        } else if (datasetIndex === 1) {
+                            return `Date: ${transactions[index].PreviousDay}`;
+                        }
+                    },
+                    label: function (tooltipItem, data) {
+                        var index = tooltipItem.index;
+                        var datasetIndex = tooltipItem.datasetIndex;
+
+                        var currentValue = (transactions[index] && transactions[index].CurrentMonthCount !== undefined)
+                            ? transactions[index].CurrentMonthCount
+                            : 'No data available';
+                        var previousValue = (transactions[index] && transactions[index].PreviousMonthCount !== undefined)
+                            ? transactions[index].PreviousMonthCount
+                            : 'No data available';
+
+                        if (datasetIndex === 0) {
+                            return `Current Month: ${currentValue}`;
+                        } else if (datasetIndex === 1) {
+                            return `Previous Month: ${previousValue}`;
+                        }
+                    }
+
+                }
             }
+
         };
 
-        // Generate the Analytics Overview chart.
         window.BlogOverviewUsers = new Chart(bouCtx, {
             type: 'LineWithLine',
             data: bouData,

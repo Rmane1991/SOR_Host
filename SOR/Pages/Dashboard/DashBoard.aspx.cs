@@ -110,6 +110,7 @@ namespace SOR.Pages.Dashboard
                     {
                         Day = t.Field<string>("time_period"),
                         CurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousDay = t.Field<string>("previous_time_period"),
                         PreviousMonthCount = t.Field<int>("previous_count")
                     }).ToList();
 
@@ -479,6 +480,7 @@ namespace SOR.Pages.Dashboard
                     {
                         Day = t.Field<string>("time_period"),
                         TxnsummaryCurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousDay = t.Field<string>("previous_time_period"),
                         TxnsummaryPreviousMonthCount = t.Field<int>("previous_count")
                     }).ToList();
 

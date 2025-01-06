@@ -1063,7 +1063,6 @@
                                                                 <div class="list-group-item-container_next container-fluid hidden">
                                                                     <div class="row col-md-12">
                                                                         <div class="col-md-6">
-
                                                                             <div class="chart-container">
                                                                                 <canvas id="myChart_<%# Eval("rule_id") %>"></canvas>
                                                                             </div>
@@ -1205,9 +1204,9 @@
 
                                                                         </div>
                                                                         <div class="col-md-6">
-                                                                            <div class="details-container">
+                                                                            <div class=""> <%--details-container--%>
                                                                                 <h2 class="details-header">Detailed Transaction Overview</h2>
-                                                                                <p class="sub-header">Comprehensive insights into your transaction metrics</p>
+                                                                                <p class="sub-header">Comprehensive Insights into Transaction Metrics</p>
                                                                                 <dl class="dl-horizontal">
                                                                                     <dt>Switch Name</dt>
                                                                                     <dd>Switch-XYZ</dd>
