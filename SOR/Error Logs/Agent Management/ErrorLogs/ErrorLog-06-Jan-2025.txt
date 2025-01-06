@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------
+Time : 06-Jan-2025 17:50
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2608
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 06-Jan-2025 17:53
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2608
+Message - : Thread was being aborted.

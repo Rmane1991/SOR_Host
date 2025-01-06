@@ -350,9 +350,9 @@ namespace SOR.Pages.Agent
                                     }
 
                                     string AgentCode_ = null;
-                                    if (!string.IsNullOrEmpty(Convert.ToString(AgentDataSet.Rows[i]["AgentCode"])))
+                                    if (!string.IsNullOrEmpty(Convert.ToString(AgentDataSet.Rows[i]["Code"])))
                                     {
-                                        AgentCode_ = Convert.ToString(AgentDataSet.Rows[i]["AgentCode"]);
+                                        AgentCode_ = Convert.ToString(AgentDataSet.Rows[i]["Code"]);
                                     }
                                     else
                                     {
@@ -367,7 +367,7 @@ namespace SOR.Pages.Agent
                                     //_AgentEntity.ActivityType = Convert.ToString((int)EnumCollection.ActivityType.Onboard);
                                     _AgentRegistrationDAL.AgentReqId = Convert.ToString(AgentDataSet.Rows[i]["AgentID"]);
                                     _AgentRegistrationDAL.ClientId = Convert.ToString(AgentDataSet.Rows[i]["ClientID"]);
-                                    _AgentRegistrationDAL.PersonalContact = Convert.ToString(AgentDataSet.Rows[i]["MobileNo"]);
+                                    _AgentRegistrationDAL.PersonalContact = Convert.ToString(AgentDataSet.Rows[i]["Mobile No"]);
                                     _AgentRegistrationDAL.BusinessEmail = Convert.ToString(AgentDataSet.Rows[i]["Email"]);
                                    
 
