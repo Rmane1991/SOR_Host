@@ -40,6 +40,9 @@ namespace SOR.Pages.Agent
         public ExportFormat _exportFormat = null;
         DataTable _dtAudit = new DataTable();
 
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
+
         public ExportFormat exportFormat
         {
             get { if (_exportFormat == null) _exportFormat = new ExportFormat(); return _exportFormat; }
@@ -179,6 +182,7 @@ namespace SOR.Pages.Agent
                     TypeTable_BulkAgentRegistrationt.Columns.Add("Aggregatorid");
                     TypeTable_BulkAgentRegistrationt.Columns.Add("AEPS");
                     TypeTable_BulkAgentRegistrationt.Columns.Add("MATM");
+                    TypeTable_BulkAgentRegistrationt.Columns.Add("DMT");
                     TypeTable_BulkAgentRegistrationt.Columns.Add("PanNo");
                     TypeTable_BulkAgentRegistrationt.Columns.Add("FirstName");
                     TypeTable_BulkAgentRegistrationt.Columns.Add("MiddleName");
@@ -246,6 +250,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "AgentRegistration.aspx", "18");
@@ -319,7 +324,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AdminManagementTrace("AgentRegistration: Page_Load: Exception: " + Ex.Message);
+                ErrorLog.AdminManagementTrace("AgentRegistration: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -623,6 +628,7 @@ namespace SOR.Pages.Agent
             DataSet ds = null;
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 SetProperties();
                 _AgentRegistrationDAL.UserName = Session["UserName"].ToString();
                 _AgentRegistrationDAL.Flag = (int)enumBinding;
@@ -641,10 +647,11 @@ namespace SOR.Pages.Agent
                     btndownload.Visible = false;
                     btnExportCSV.Visible = false;
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegistration: FillGrid(): Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentRegistration: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return ds;
@@ -793,6 +800,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | PolulateSummary() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HidAGID.Value != null || !string.IsNullOrEmpty(txtPANNo.Text.Trim()))
                 {
                     _AgentRegistrationDAL.PanNo = txtPANNo.Text.Trim();
@@ -861,6 +869,7 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | PolulateSummary() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
@@ -876,6 +885,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | GetDetails() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _AgentRegistrationDAL.AgentReqId = agReqId;
                 DataSet ds = _AgentRegistrationDAL.GetAgentDetails();
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
@@ -1041,10 +1051,11 @@ namespace SOR.Pages.Agent
                 {
                     //clearselection();
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | GetDetails() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegistration: GetDetails: Failed - Fetch Agent Registration Details. Exception: " + Ex.Message + " UserName: " + UserName + " RequestId: " + HidAGID.Value);
+                ErrorLog.AgentManagementTrace("AgentRegistration: GetDetails: Failed - Fetch Agent Registration Details. Exception: " + Ex.Message + " UserName: " + UserName + " RequestId: " + HidAGID.Value + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -1056,11 +1067,20 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnSearch_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnSearch_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegistration: btnSearch_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentRegistration: btnSearch_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -1070,6 +1090,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnClear_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnClear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 ddlRequestType.SelectedValue = null;
                 ddlBucketId.SelectedValue = null;
                 ddlRequestStatus.SelectedValue = null;
@@ -1077,11 +1105,11 @@ namespace SOR.Pages.Agent
                 txtPanNoF.Value = string.Empty;
 
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
-
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnClear_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegitsration: btnClear_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentRegitsration: btnClear_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1090,14 +1118,16 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnAddnew_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 divOnboardFranchise.Visible = true;
                 divAction.Visible = false;
                 divMainDetailsGrid.Visible = false;
                 DIVDetails.Visible = true;
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnAddnew_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegitsration: btnAddnew_Click(): Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentRegitsration: btnAddnew_Click(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1106,6 +1136,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnZipsample_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadTrace(string.Format("Initiated Document Upload Sample File Download Request."));
                 string strURL = string.Empty;
 
@@ -1122,7 +1153,7 @@ namespace SOR.Pages.Agent
                 response.BinaryWrite(data);
                 response.End();
                 ErrorLog.UploadTrace(string.Format("Completed Document Upload Sample File Download."));
-
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnZipsample_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (System.Threading.ThreadAbortException Ex)
             {
@@ -1162,6 +1193,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | SetInheritedSerivcesFromParent() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _AgentRegistrationDAL.UserName = Session["Username"].ToString();
                 _AgentRegistrationDAL.AggCode = _FranchiseCode;
                 _AgentRegistrationDAL.Flag = '1';
@@ -1296,10 +1328,11 @@ namespace SOR.Pages.Agent
                     chkMATM.Visible = false;
                     lblchkMATM.Visible = false;
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | SetInheritedSerivcesFromParent() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : SetInheritedSerivcesFromParent\nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : SetInheritedSerivcesFromParent\nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'Agent Registration');", false);
                 return;
             }
@@ -1394,6 +1427,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (hdnUserConfirmation.Value.ToString() == "Yes")
                 {
                     Session["PanNo"] = txtPANNo.Text;
@@ -1495,7 +1529,14 @@ namespace SOR.Pages.Agent
                             _AgentRegistrationDAL.agReqId = HidAGID.Value != null && !string.IsNullOrEmpty(HidAGID.Value) ? Convert.ToInt32(HidAGID.Value) : 0;
                             if (_AgentRegistrationDAL.Insert_AgentRequest(UserName, out int RequestId, out string _status, out string _statusmsg))
                             {
-                                ErrorLog.AgentManagementTrace("AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName: " + UserName + " RequestId: " + RequestId);
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Agent-Registration";
+                            _auditParams[2] = "btnSubmitDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
+                            ErrorLog.AgentManagementTrace("AgentRegistration: btnSubmitDetails_Click: Successful - Agent Registration Request Dump In DB. UserName: " + UserName + " RequestId: " + RequestId);
                                 HidAGID.Value = RequestId.ToString();
                                 dbAccess.AgentReqID = RequestId.ToString();
                                 //dbAccess.InsertMessageLog(MsgId, RequestId, (int)AgentVerification.Configuration.EndPoints.NameScreening, null, null, (int)AgentVerification.Configuration.DBFlag.Select, out MsgId);
@@ -1558,10 +1599,11 @@ namespace SOR.Pages.Agent
                         //}
                     }
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator');", true);
                 return;
             }
@@ -1588,6 +1630,7 @@ namespace SOR.Pages.Agent
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | ValidateSetProperties() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 string contactNo = txtContactNo.Text;
                 string alternateNo = txtAlterNateNo.Text;
 
@@ -1755,16 +1798,17 @@ namespace SOR.Pages.Agent
                 //        return false;
                 //    }
                 //    else _AgentRegistrationDAL.TerminalId = txtTerminalId.Text.Trim().ToString();
-                
+
                 //if (chkAEPS.Checked == false && chkMATM.Checked == false)
                 //{
                 //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Atleast One Service');", true);
                 //    return false;
                 //}
+                ErrorLog.AgentManagementTrace("AgentRegistration | ValidateSetProperties() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message);
+                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Agent Registration');", true);
                 return false;
             }
@@ -1775,6 +1819,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnCancel_Click() | Startd. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnCancel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 DIVDetails.Visible = false;
                 div_Upload.Visible = false;
                 divPaymentReceipt.Visible = false;
@@ -1785,11 +1837,12 @@ namespace SOR.Pages.Agent
                 divMainDetailsGrid.Visible = true;
                 ClearAllControls();
                 HidAGID.Value = string.Empty;
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //Session["AGCode"] = string.Empty;
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs:btnCancel_Click \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs:btnCancel_Click \nFunction : ValidateFile \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 throw Ex;
             }
         }
@@ -1800,6 +1853,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "BtnSubmit-Docs";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (hdnUploadConfirmation.Value.ToString() == "Yes" && HidAGID.Value != null && !string.IsNullOrEmpty(HidAGID.Value))
                 {
                     _AgentRegistrationDAL.CreatedBy = Session["Username"].ToString();
@@ -1843,10 +1904,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Agent Registration');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | BtnSubmit_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. Exception: " + Ex.Message + " UserName: " + UserName);
+                ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. Exception: " + Ex.Message + " UserName: " + UserName + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Agent Registration');", true);
                 return;
             }
@@ -1856,17 +1918,25 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "BtnBack";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 div_Upload.Visible = false;
                 DIVDetails.Visible = true;
                 divPaymentReceipt.Visible = false;
                 btndownload.Visible = false;
                 divAction.Visible = false;
                 divMainDetailsGrid.Visible = false;
+                ErrorLog.AgentManagementTrace("AgentRegistration | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
-
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : BtnBack_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : BtnBack_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator','Agent Registration');", true);
                 return;
             }
@@ -1881,6 +1951,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | downloadPass_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "BtnSubmit-Final";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (hdnFinalConfirmation.Value.ToString() == "Yes")
                 {
                     if (ChkConfirmBC.Checked == true)
@@ -1890,6 +1968,7 @@ namespace SOR.Pages.Agent
                         _AgentRegistrationDAL.BCCode = ddlbcCode.SelectedValue.ToString();
 
                         _AgentRegistrationDAL.Flag = 1;
+
                         DataSet dsAgentMaster = _AgentRegistrationDAL.SetInsertUpdateAgentRequestHadlerDetails();
                         if (dsAgentMaster != null && dsAgentMaster.Tables.Count > 0 && dsAgentMaster.Tables[0].Rows[0]["Message"].ToString() == "Inserted")
                         {
@@ -1914,10 +1993,11 @@ namespace SOR.Pages.Agent
                         return;
                     }
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | downloadPass_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : downloadPass_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : downloadPass_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Agent Registration');", true);
             }
         }
@@ -1927,6 +2007,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnCloseReceipt_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnCloseReceipt";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (hdnUserConfirmation.Value.ToString() == "Yes")
                 {
                     ErrorLog.AgentManagementTrace("AgentRegistration: btnCloseReceipt_Click: Successful - Summary Close. UserName: " + UserName);
@@ -1942,11 +2030,12 @@ namespace SOR.Pages.Agent
                 {
                     ErrorLog.AgentManagementTrace("AgentRegistration: btnCloseReceipt_Click: Failed - Summary Close. UserName: " + UserName);
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnCloseReceipt_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegistration: btnCloseReceipt_Click: Failed - Summary Close. UserName: " + UserName + " Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentRegistration: btnCloseReceipt_Click: Failed - Summary Close. UserName: " + UserName + " Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Agent Registration');", true);
                 return;
             }
@@ -2081,11 +2170,20 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnExportCSV_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Agent_Registration_Details", dt);
                 }
                 else
@@ -2105,12 +2203,20 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btndownloadXLS_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.Export);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Agent_Registration_Details", dt);
                 }
                 {
@@ -2156,6 +2262,14 @@ namespace SOR.Pages.Agent
                 {
                     try
                     {
+                        ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-EditDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "Agent-Registration";
+                        _auditParams[2] = "RowCommand-EditDetails";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         ImageButton lb = (ImageButton)e.CommandSource;
                         GridViewRow gvr = (GridViewRow)lb.NamingContainer;
                         string agReqId = (gvAgentOnboard.DataKeys[gvr.RowIndex].Values["AgentReqId"]).ToString();
@@ -2183,16 +2297,24 @@ namespace SOR.Pages.Agent
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Agent request already pending for verification.', 'Warning');", true);
                             return;
                         }
-
+                        ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-EditDetails | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     }
                     catch (Exception Ex)
                     {
-                        ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
+                        ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                         throw Ex;
                     }
                 }
                 if (e.CommandName.Contains("DeleteDetails"))
                 {
+                    ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-DeleteDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[2] = "RowCommand-DeleteDetails";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     if (hdnDeleteConfirmation.Value.ToString() == "Yes")
                     {
                         try
@@ -2221,11 +2343,12 @@ namespace SOR.Pages.Agent
                             throw Ex;
                         }
                     }
+                    ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-DeleteDetails | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: gvBlockAG_RowCommand: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: gvBlockAG_RowCommand: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 
@@ -2320,6 +2443,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnUpSearch_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnUpSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (string.IsNullOrEmpty(txtFromDate.Value))
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please Select From Date.', 'Warning');</script>", false);
@@ -2335,12 +2466,13 @@ namespace SOR.Pages.Agent
                 {
                     FillGridSearch(EnumCollection.EnumBindingType.BindGrid);
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnUpSearch_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false); return;
             }
 
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("AgentRegistration : Error At btnUpSearch_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("AgentRegistration : Error At btnUpSearch_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
@@ -2351,15 +2483,24 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnUpClear_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnUpClear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 ddlFileTypeStatus.ClearSelection();
                 gvBulkManualKyc.Visible = false;
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false); return;
+                //ErrorLog.AgentManagementTrace("AgentRegistration | btnUpClear_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("AgentRegistration : Error At btnUpClear_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("AgentRegistration : Error At btnUpClear_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
@@ -2377,6 +2518,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnsample_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadTrace(string.Format("Initiated Agent Registration Upload Sample File Download Request."));
                 string strURL = string.Empty;
 
@@ -2443,6 +2585,14 @@ namespace SOR.Pages.Agent
             {
                 if (e.CommandName.Contains("DownloadDoc"))
                 {
+                    ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-DownloadDoc | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[2] = "RowCommand-DownloadDoc";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string status = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
@@ -2451,7 +2601,7 @@ namespace SOR.Pages.Agent
                     _ImportEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                     _ImportEntity.Flag = 3;
                     DataSet Ds = _ImportEntity.Get_AgentManualKycUpload();
-                    if (string.IsNullOrEmpty(status)) status = "Bulk Agent Regirstration Upload";
+                    if (string.IsNullOrEmpty(status)) status = "Bulk_Agent_Registration_Details";
                     if (Ds != null && Ds.Tables.Count > 0)
                     {
                         exportFormat.ExporttoExcel(Session["Username"].ToString(), Session["BankName"].ToString(), status, Ds);
@@ -2461,6 +2611,7 @@ namespace SOR.Pages.Agent
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Something went wrong. Try again', 'Warning');", true);
                         return;
                     }
+                    ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-DownloadDoc | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
 
             }
@@ -2509,7 +2660,7 @@ namespace SOR.Pages.Agent
             DataSet ds = null;
             try
             {
-
+                ErrorLog.AgentManagementTrace("AgentRegistration | FillGridSearch() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvBulkManualKyc.DataSource = null;
                 gvBulkManualKyc.DataBind();
                 SetPropertise();
@@ -2548,10 +2699,12 @@ namespace SOR.Pages.Agent
 
                     }
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | FillGridSearch() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.ZOMError(Ex);
+                ErrorLog.TransactionReportTrace("AgentRegistration: FillGridSearch(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return ds;
         }
@@ -2559,6 +2712,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnBulkUpload_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 string TotalRecords = null;
                 string _FileImport = fileUpload.FileName;
                 string _fileExtension = Path.GetExtension(_FileImport);
@@ -2617,50 +2771,51 @@ namespace SOR.Pages.Agent
                                         _BulkAgentEntity.AggegatorCode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][1].ToString()) ? dtExcelData.Rows[rows][1].ToString() : "";
                                         _BulkAgentEntity.AEPS = !string.IsNullOrEmpty(dtExcelData.Rows[rows][2].ToString()) ? dtExcelData.Rows[rows][2].ToString() : "";
                                         _BulkAgentEntity.MATM = !string.IsNullOrEmpty(dtExcelData.Rows[rows][3].ToString()) ? dtExcelData.Rows[rows][3].ToString() : "";
-                                        _BulkAgentEntity.PanNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][4].ToString()) ? dtExcelData.Rows[rows][4].ToString() : "";
-                                        _BulkAgentEntity.FirstName = !string.IsNullOrEmpty(dtExcelData.Rows[rows][5].ToString()) ? dtExcelData.Rows[rows][5].ToString() : "";
-                                        _BulkAgentEntity.MiddleName = !string.IsNullOrEmpty(dtExcelData.Rows[rows][6].ToString()) ? dtExcelData.Rows[rows][6].ToString() : "";
-                                        _BulkAgentEntity.LastName = !string.IsNullOrEmpty(dtExcelData.Rows[rows][7].ToString()) ? dtExcelData.Rows[rows][7].ToString() : "";
-                                        _BulkAgentEntity.Gender = !string.IsNullOrEmpty(dtExcelData.Rows[rows][8].ToString()) ? dtExcelData.Rows[rows][8].ToString() : "";
-                                        _BulkAgentEntity.AadharNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][9].ToString()) ? dtExcelData.Rows[rows][9].ToString() : "";
-                                        _BulkAgentEntity.AgentCategory = !string.IsNullOrEmpty(dtExcelData.Rows[rows][10].ToString()) ? dtExcelData.Rows[rows][10].ToString() : "";
-                                        _BulkAgentEntity.Dob = !string.IsNullOrEmpty(dtExcelData.Rows[rows][11].ToString()) ? dtExcelData.Rows[rows][11].ToString() : "";
-                                        _BulkAgentEntity.AccountNumber = !string.IsNullOrEmpty(dtExcelData.Rows[rows][12].ToString()) ? dtExcelData.Rows[rows][12].ToString() : "";
-                                        _BulkAgentEntity.IFSCCode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][13].ToString()) ? dtExcelData.Rows[rows][13].ToString() : "";
-                                        _BulkAgentEntity.PassPortNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][14].ToString()) ? dtExcelData.Rows[rows][14].ToString() : "";
-                                        _BulkAgentEntity.DeviceCode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][15].ToString()) ? dtExcelData.Rows[rows][15].ToString() : "";
-                                        _BulkAgentEntity.PopulationGroup = !string.IsNullOrEmpty(dtExcelData.Rows[rows][16].ToString()) ? dtExcelData.Rows[rows][16].ToString() : "";
-                                        _BulkAgentEntity.Address = !string.IsNullOrEmpty(dtExcelData.Rows[rows][17].ToString()) ? dtExcelData.Rows[rows][17].ToString() : "";
-                                        _BulkAgentEntity.Country = !string.IsNullOrEmpty(dtExcelData.Rows[rows][18].ToString()) ? dtExcelData.Rows[rows][18].ToString() : "";
-                                        _BulkAgentEntity.State = !string.IsNullOrEmpty(dtExcelData.Rows[rows][19].ToString()) ? dtExcelData.Rows[rows][19].ToString() : "";
-                                        _BulkAgentEntity.District = !string.IsNullOrEmpty(dtExcelData.Rows[rows][20].ToString()) ? dtExcelData.Rows[rows][20].ToString() : "";
-                                        _BulkAgentEntity.City = !string.IsNullOrEmpty(dtExcelData.Rows[rows][21].ToString()) ? dtExcelData.Rows[rows][21].ToString() : "";
-                                        _BulkAgentEntity.Pincode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][22].ToString()) ? dtExcelData.Rows[rows][22].ToString() : "";
-                                        _BulkAgentEntity.EmailId = !string.IsNullOrEmpty(dtExcelData.Rows[rows][23].ToString()) ? dtExcelData.Rows[rows][23].ToString() : "";
-                                        _BulkAgentEntity.ContactNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][24].ToString()) ? dtExcelData.Rows[rows][24].ToString() : "";
-                                        _BulkAgentEntity.LandlineNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][25].ToString()) ? dtExcelData.Rows[rows][25].ToString() : "";
-                                        _BulkAgentEntity.AlternateNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][26].ToString()) ? dtExcelData.Rows[rows][26].ToString() : "";
-                                        _BulkAgentEntity.ShopAddress = !string.IsNullOrEmpty(dtExcelData.Rows[rows][27].ToString()) ? dtExcelData.Rows[rows][27].ToString() : "";
-                                        _BulkAgentEntity.ShopCountry = !string.IsNullOrEmpty(dtExcelData.Rows[rows][28].ToString()) ? dtExcelData.Rows[rows][28].ToString() : "";
-                                        _BulkAgentEntity.ShopState = !string.IsNullOrEmpty(dtExcelData.Rows[rows][29].ToString()) ? dtExcelData.Rows[rows][29].ToString() : "";
-                                        _BulkAgentEntity.ShopDistrict = !string.IsNullOrEmpty(dtExcelData.Rows[rows][30].ToString()) ? dtExcelData.Rows[rows][30].ToString() : "";
-                                        _BulkAgentEntity.ShopCity = !string.IsNullOrEmpty(dtExcelData.Rows[rows][31].ToString()) ? dtExcelData.Rows[rows][31].ToString() : "";
-                                        _BulkAgentEntity.ShopPincode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][32].ToString()) ? dtExcelData.Rows[rows][32].ToString() : "";
-                                        _BulkAgentEntity.ShopEmailId = !string.IsNullOrEmpty(dtExcelData.Rows[rows][33].ToString()) ? dtExcelData.Rows[rows][33].ToString() : "";
-                                        _BulkAgentEntity.ShopContactNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][34].ToString()) ? dtExcelData.Rows[rows][34].ToString() : "";
-                                        _BulkAgentEntity.ShopLandlineNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][35].ToString()) ? dtExcelData.Rows[rows][35].ToString() : "";
-                                        _BulkAgentEntity.ShopAlternateNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][36].ToString()) ? dtExcelData.Rows[rows][36].ToString() : "";
-                                        _BulkAgentEntity.IdentityProofType = !string.IsNullOrEmpty(dtExcelData.Rows[rows][37].ToString()) ? dtExcelData.Rows[rows][37].ToString() : "";
-                                        _BulkAgentEntity.IdentityProofDocument = ConfigurationManager.AppSettings["UploadBulkDocument"] + dtExcelData.Rows[rows][38].ToString();
-                                        _BulkAgentEntity.AddressProofType = dtExcelData.Rows[rows][39].ToString();
-                                        _BulkAgentEntity.AddressProofDocument = ConfigurationManager.AppSettings["UploadBulkDocument"] + dtExcelData.Rows[rows][40].ToString();
-                                        _BulkAgentEntity.SignatureProofType = dtExcelData.Rows[rows][41].ToString();
-                                        _BulkAgentEntity.SignatureProofDocument = ConfigurationManager.AppSettings["UploadBulkDocument"] + dtExcelData.Rows[rows][42].ToString();
+                                        _BulkAgentEntity.DMT = !string.IsNullOrEmpty(dtExcelData.Rows[rows][4].ToString()) ? dtExcelData.Rows[rows][4].ToString() : "";
+                                        _BulkAgentEntity.PanNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][5].ToString()) ? dtExcelData.Rows[rows][5].ToString() : "";
+                                        _BulkAgentEntity.FirstName = !string.IsNullOrEmpty(dtExcelData.Rows[rows][6].ToString()) ? dtExcelData.Rows[rows][6].ToString() : "";
+                                        _BulkAgentEntity.MiddleName = !string.IsNullOrEmpty(dtExcelData.Rows[rows][7].ToString()) ? dtExcelData.Rows[rows][7].ToString() : "";
+                                        _BulkAgentEntity.LastName = !string.IsNullOrEmpty(dtExcelData.Rows[rows][8].ToString()) ? dtExcelData.Rows[rows][8].ToString() : "";
+                                        _BulkAgentEntity.Gender = !string.IsNullOrEmpty(dtExcelData.Rows[rows][9].ToString()) ? dtExcelData.Rows[rows][9].ToString() : "";
+                                        _BulkAgentEntity.AadharNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][10].ToString()) ? dtExcelData.Rows[rows][10].ToString() : "";
+                                        _BulkAgentEntity.AgentCategory = !string.IsNullOrEmpty(dtExcelData.Rows[rows][11].ToString()) ? dtExcelData.Rows[rows][11].ToString() : "";
+                                        _BulkAgentEntity.Dob = !string.IsNullOrEmpty(dtExcelData.Rows[rows][12].ToString()) ? dtExcelData.Rows[rows][12].ToString() : "";
+                                        _BulkAgentEntity.AccountNumber = !string.IsNullOrEmpty(dtExcelData.Rows[rows][13].ToString()) ? dtExcelData.Rows[rows][13].ToString() : "";
+                                        _BulkAgentEntity.IFSCCode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][14].ToString()) ? dtExcelData.Rows[rows][14].ToString() : "";
+                                        _BulkAgentEntity.PassPortNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][15].ToString()) ? dtExcelData.Rows[rows][15].ToString() : "";
+                                        _BulkAgentEntity.DeviceCode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][16].ToString()) ? dtExcelData.Rows[rows][16].ToString() : "";
+                                        _BulkAgentEntity.PopulationGroup = !string.IsNullOrEmpty(dtExcelData.Rows[rows][17].ToString()) ? dtExcelData.Rows[rows][17].ToString() : "";
+                                        _BulkAgentEntity.Address = !string.IsNullOrEmpty(dtExcelData.Rows[rows][18].ToString()) ? dtExcelData.Rows[rows][18].ToString() : "";
+                                        _BulkAgentEntity.Country = !string.IsNullOrEmpty(dtExcelData.Rows[rows][19].ToString()) ? dtExcelData.Rows[rows][19].ToString() : "";
+                                        _BulkAgentEntity.State = !string.IsNullOrEmpty(dtExcelData.Rows[rows][20].ToString()) ? dtExcelData.Rows[rows][20].ToString() : "";
+                                        _BulkAgentEntity.District = !string.IsNullOrEmpty(dtExcelData.Rows[rows][21].ToString()) ? dtExcelData.Rows[rows][21].ToString() : "";
+                                        _BulkAgentEntity.City = !string.IsNullOrEmpty(dtExcelData.Rows[rows][22].ToString()) ? dtExcelData.Rows[rows][22].ToString() : "";
+                                        _BulkAgentEntity.Pincode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][23].ToString()) ? dtExcelData.Rows[rows][23].ToString() : "";
+                                        _BulkAgentEntity.EmailId = !string.IsNullOrEmpty(dtExcelData.Rows[rows][24].ToString()) ? dtExcelData.Rows[rows][24].ToString() : "";
+                                        _BulkAgentEntity.ContactNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][25].ToString()) ? dtExcelData.Rows[rows][25].ToString() : "";
+                                        _BulkAgentEntity.LandlineNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][26].ToString()) ? dtExcelData.Rows[rows][26].ToString() : "";
+                                        _BulkAgentEntity.AlternateNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][27].ToString()) ? dtExcelData.Rows[rows][27].ToString() : "";
+                                        _BulkAgentEntity.ShopAddress = !string.IsNullOrEmpty(dtExcelData.Rows[rows][28].ToString()) ? dtExcelData.Rows[rows][28].ToString() : "";
+                                        _BulkAgentEntity.ShopCountry = !string.IsNullOrEmpty(dtExcelData.Rows[rows][29].ToString()) ? dtExcelData.Rows[rows][29].ToString() : "";
+                                        _BulkAgentEntity.ShopState = !string.IsNullOrEmpty(dtExcelData.Rows[rows][30].ToString()) ? dtExcelData.Rows[rows][30].ToString() : "";
+                                        _BulkAgentEntity.ShopDistrict = !string.IsNullOrEmpty(dtExcelData.Rows[rows][31].ToString()) ? dtExcelData.Rows[rows][31].ToString() : "";
+                                        _BulkAgentEntity.ShopCity = !string.IsNullOrEmpty(dtExcelData.Rows[rows][32].ToString()) ? dtExcelData.Rows[rows][32].ToString() : "";
+                                        _BulkAgentEntity.ShopPincode = !string.IsNullOrEmpty(dtExcelData.Rows[rows][33].ToString()) ? dtExcelData.Rows[rows][33].ToString() : "";
+                                        _BulkAgentEntity.ShopEmailId = !string.IsNullOrEmpty(dtExcelData.Rows[rows][34].ToString()) ? dtExcelData.Rows[rows][34].ToString() : "";
+                                        _BulkAgentEntity.ShopContactNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][35].ToString()) ? dtExcelData.Rows[rows][35].ToString() : "";
+                                        _BulkAgentEntity.ShopLandlineNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][36].ToString()) ? dtExcelData.Rows[rows][36].ToString() : "";
+                                        _BulkAgentEntity.ShopAlternateNo = !string.IsNullOrEmpty(dtExcelData.Rows[rows][37].ToString()) ? dtExcelData.Rows[rows][37].ToString() : "";
+                                        _BulkAgentEntity.IdentityProofType = !string.IsNullOrEmpty(dtExcelData.Rows[rows][38].ToString()) ? dtExcelData.Rows[rows][38].ToString() : "";
+                                        _BulkAgentEntity.IdentityProofDocument = ConfigurationManager.AppSettings["UploadBulkDocument"] + dtExcelData.Rows[rows][39].ToString();
+                                        _BulkAgentEntity.AddressProofType = dtExcelData.Rows[rows][40].ToString();
+                                        _BulkAgentEntity.AddressProofDocument = ConfigurationManager.AppSettings["UploadBulkDocument"] + dtExcelData.Rows[rows][41].ToString();
+                                        _BulkAgentEntity.SignatureProofType = dtExcelData.Rows[rows][42].ToString();
+                                        _BulkAgentEntity.SignatureProofDocument = ConfigurationManager.AppSettings["UploadBulkDocument"] + dtExcelData.Rows[rows][43].ToString();
                                         //_BulkAgentEntity.AgentCode = dtExcelData.Rows[rows][43].ToString();
-                                        _BulkAgentEntity.TerminalId = !string.IsNullOrEmpty(dtExcelData.Rows[rows][43].ToString()) ? dtExcelData.Rows[rows][43].ToString() : "";
+                                        _BulkAgentEntity.TerminalId = !string.IsNullOrEmpty(dtExcelData.Rows[rows][44].ToString()) ? dtExcelData.Rows[rows][44].ToString() : "";
 
-                                        _BulkAgentEntity.Lattitude = !string.IsNullOrEmpty(dtExcelData.Rows[rows][44].ToString()) ? dtExcelData.Rows[rows][44].ToString() : "";
-                                        _BulkAgentEntity.Longitude = !string.IsNullOrEmpty(dtExcelData.Rows[rows][45].ToString()) ? dtExcelData.Rows[rows][45].ToString() : "";
+                                        _BulkAgentEntity.Lattitude = !string.IsNullOrEmpty(dtExcelData.Rows[rows][45].ToString()) ? dtExcelData.Rows[rows][45].ToString() : "";
+                                        _BulkAgentEntity.Longitude = !string.IsNullOrEmpty(dtExcelData.Rows[rows][46].ToString()) ? dtExcelData.Rows[rows][46].ToString() : "";
 
 
                                         Random random = new Random();
@@ -2689,6 +2844,13 @@ namespace SOR.Pages.Agent
                                     }
                                     if (InsertFileData(FileId, Session["Username"].ToString(), TypeTable_BulkAgentRegistrationt, out statusmsg))
                                     {
+                                        #region Audit
+                                        _auditParams[0] = Session["Username"].ToString();
+                                        _auditParams[1] = "Agent-Registration";
+                                        _auditParams[2] = "btnBulkUpload";
+                                        _auditParams[3] = Session["LoginKey"].ToString();
+                                        _LoginEntity.StoreLoginActivities(_auditParams);
+                                        #endregion
                                         _successful = _successful - _dupRcdsCnt;
                                         _unsuessful = _unsuessful + _dupRcdsCnt;
 
@@ -2776,6 +2938,7 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please select both excel and document file to upload .','Warning');</script>", false);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnBulkUpload_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
 
             catch (ArgumentException) { }
@@ -2783,7 +2946,7 @@ namespace SOR.Pages.Agent
             catch (Exception Ex)
             {
                 ErrorLog.AgentManagementError(Ex);
-                ErrorLog.UploadTrace("AgentRegistration : Error At btnBulkUpload_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("AgentRegistration : Error At btnBulkUpload_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -2792,7 +2955,7 @@ namespace SOR.Pages.Agent
         }
         public bool InsertFileData(string FileId, string Username, DataTable dtTable, out string _statusmsg)
         {
-
+            ErrorLog.AgentManagementTrace("AgentRegistration | InsertFileData() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             ErrorLog.AgentManagementTrace(string.Format("Initiated Insert File Data For Agent Registration. FileType : {0}. FileID : {1}.", "Excel", FileId));
             try
             {
@@ -2886,6 +3049,7 @@ namespace SOR.Pages.Agent
                 FileId = string.Empty;
                 try
                 {
+                    ErrorLog.AgentManagementTrace("AgentRegistration | FileImportEntry() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     ErrorLog.AgentManagementTrace(string.Format("Initiated File Import  Request. Username : {0}. FilePath: {1}.FileID:", Session["Username"].ToString(), filePath, FileId));
                     _ImportEntity.filename = _FileValidator.FileName;
                     _ImportEntity.FilePath = _FileValidator.FilePath;
@@ -2896,12 +3060,13 @@ namespace SOR.Pages.Agent
                     _ImportEntity.Mode = "Insert";
                     string Status = _ImportEntity.InsertManuaBulkImportDetailsAgent(out FileId);
                     ErrorLog.AgentManagementTrace(string.Format("Completed File Import  Request. Username : {0}. FilePath: {1}.FileID:.", Session["Username"].ToString(), filePath, FileId));
+                    ErrorLog.AgentManagementTrace("AgentRegistration | FileImportEntry() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     return Status == "00" ? true : false;
                 }
 
                 catch (Exception Ex)
                 {
-                    ErrorLog.AgentManagementTrace(string.Format("Failed Insert File Data Request For InsertFileData. FileId : {0}. Exception : {1}", FileId, Ex.Message));
+                    ErrorLog.AgentManagementTrace(string.Format("Failed Insert File Data Request For InsertFileData. FileId : {0}. Exception : {1}", FileId, Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString()));
                     ErrorLog.AgentManagementError(Ex);
                     return false;
                 }
@@ -2909,7 +3074,7 @@ namespace SOR.Pages.Agent
         }
         public bool ProcessFile(string FileExtension, string FilePath, out DataTable dataTableExcel)
         {
-
+            ErrorLog.AgentManagementTrace("AgentRegistration | ProcessFile() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             bool IsFileProcessed = true;
             dataTableExcel = new DataTable();
             ErrorLog.AgentManagementTrace(string.Format("Initiated Process File For Agent Registration. FileType : {0}", FilePath));
@@ -2953,10 +3118,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please check the number of fields in the file.','File Format');</script>", false);
                     IsFileProcessed = false;
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | ProcessFile() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.AgentManagementTrace(string.Format("Successful Process File Request For Bulk Ticket Creation. Username : {0}. FilePath : {1}.FileExtension : {2}.", Page.User.Identity.Name.ToString(), FilePath, FileExtension));
             }
 
-
+            
             catch (ArgumentException Ex)
             {
                 ErrorLog.AgentManagementError(Ex);
@@ -2966,12 +3132,12 @@ namespace SOR.Pages.Agent
             catch (OleDbException Ex)
             {
                 ErrorLog.AgentManagementError(Ex);
-                ErrorLog.AgentManagementTrace(string.Format("Failed Process File For Agent Registration. FileType : {0} Exception : {1}.", FilePath, Ex.Message));
+                ErrorLog.AgentManagementTrace(string.Format("Failed Process File For Agent Registration. FileType : {0} Exception : {1}.", FilePath, Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString()));
                 IsFileProcessed = false;
             }
             catch (InvalidOperationException Ex)
             {
-                ErrorLog.AgentManagementTrace(string.Format("Failed Process File For Agent Registration. FileType : {0} Exception : {1} Message : {2].", FilePath, Ex.Message, "System does not supports " + FileExtension + " file format."));
+                ErrorLog.AgentManagementTrace(string.Format("Failed Process File For Agent Registration. FileType : {0} Exception : {1} Message : {2].", FilePath, Ex.Message, "System does not supports " + FileExtension + " file format." + " | LoginKey : " + Session["LoginKey"].ToString()));
                 IsFileProcessed = false;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('System does not supports " + FileExtension + " file format.','Warning');</script>", false);
                 ErrorLog.AgentManagementError(Ex);
@@ -2980,6 +3146,7 @@ namespace SOR.Pages.Agent
         }
         public bool ValidateFileData<T>(T TObj, out string _StatusCode, out string _StatusDesc, out int MsgId)
         {
+            ErrorLog.AgentManagementTrace("AgentRegistration | ValidateFileData() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             bool IsValidRecord = true;
             _StatusCode = string.Empty;
             _StatusDesc = string.Empty;
@@ -3408,12 +3575,13 @@ namespace SOR.Pages.Agent
 
                     }
                 }
-
+                ErrorLog.AgentManagementTrace("AgentRegistration | ValidateFileData() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
 
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementError(Ex);
+                ErrorLog.TransactionReportTrace("AgentRegistration: ValidateFileData(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 IsValidRecord = false;
             }
             return IsValidRecord;
@@ -3445,6 +3613,7 @@ namespace SOR.Pages.Agent
                 _RowTypeTable["Aggregatorid"] = _BulkAgentEntity.AggegatorCode;
                 _RowTypeTable["AEPS"] = _BulkAgentEntity.AEPS;
                 _RowTypeTable["MATM"] = _BulkAgentEntity.MATM;
+                _RowTypeTable["DMT"] = _BulkAgentEntity.DMT;
                 _RowTypeTable["PanNo"] = _BulkAgentEntity.PanNo;
                 _RowTypeTable["FirstName"] = _BulkAgentEntity.FirstName;
                 _RowTypeTable["MiddleName"] = _BulkAgentEntity.MiddleName;
@@ -3575,14 +3744,23 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnUploadCancel_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnUploadCancel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 fileUpload.Dispose();
                 gvBulkManualKyc.Visible = false;
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnUploadCancel_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false); return;
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName : Error At btnUploadCancel_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName : Error At btnUploadCancel_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
@@ -3591,6 +3769,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | UploadDocuments() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "UploadDocuments";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 bool isFolderExist = false;
                 string FileThumbnail = string.Empty;
                 string _FileImport = DocUpload.FileName;
@@ -3653,16 +3839,25 @@ namespace SOR.Pages.Agent
                     ErrorLog.UploadTrace("AgentRegistration : Error At btnDocUpload_ServerClick().Invalid File Uploaded. FILENAME : " + _FileImport);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning(Please upload valid ZIP file name', 'Warning');", true);
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | UploadDocuments() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception ex)
             {
-                ErrorLog.UploadTrace("Agent Bulk Registration : Error At UploadDocuments(). Username : " + Session["UserName"].ToString() + " Exception : " + ex.Message);
+                ErrorLog.UploadTrace("Agent Bulk Registration : Error At UploadDocuments(). Username : " + Session["UserName"].ToString() + " Exception : " + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
         protected void btnDocUpload_ServerClick(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnDocUpload_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Registration";
+                _auditParams[2] = "btnDocUpload";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string TotalRecords = null;
                 //lblUploadMessage.Text = string.Empty;
                 bool isFolderExist = false;
@@ -3742,11 +3937,13 @@ namespace SOR.Pages.Agent
                     ErrorLog.UploadTrace("AgentRegistration : Error At btnDocUpload_ServerClick().Invalid File Uploaded. FILENAME : " + _FileImport);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning(Please upload valid ZIP file name', 'Warning');", true);
                 }
+                ErrorLog.AgentManagementTrace("AgentRegistration | btnDocUpload_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-
-                throw;
+                ErrorLog.AgentManagementTrace("AgentRegistration: PbtnDocUpload_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                return;
             }
         }
         public bool ValidateZipFileFormat(string FileExtension)

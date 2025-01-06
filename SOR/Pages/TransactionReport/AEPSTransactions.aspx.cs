@@ -49,6 +49,7 @@ namespace SOR.Pages.TransactionReport
                             txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                             txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                             FillBc();
+                            FillAggregator();
                             BindAction();
                             UserPermissions.RegisterStartupScriptForNavigationListActive("7", "22");
                         }
@@ -429,7 +430,7 @@ namespace SOR.Pages.TransactionReport
                 {
                     ddlAggregator.DataSource = null;
                     ddlAggregator.DataBind();
-                    ddlAggregator.Items.Insert(0, new ListItem("No Data Found", "0"));
+                    ddlAggregator.Items.Insert(0, new ListItem("-- Select --", "0"));
                 }
             }
             catch (Exception ex)

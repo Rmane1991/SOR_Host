@@ -29,10 +29,13 @@ namespace SOR.Pages.Rule
         public static CommonEntity _CommonEntity = new CommonEntity(); // Initialize it here
         RuleEntity _RuleEntity = new RuleEntity();
         DataTable dt = new DataTable();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "TrRule.aspx", "7");
@@ -82,7 +85,7 @@ namespace SOR.Pages.Rule
             }
             catch (Exception Ex)
             {
-                ErrorLog.DashboardTrace("TrRule: Page_Load(): Exception: " + Ex.Message);
+                ErrorLog.DashboardTrace("TrRule: Page_Load(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -200,12 +203,23 @@ namespace SOR.Pages.Rule
         [WebMethod]
         public static string ToggleSlider(bool IsChecked, string Id)
         {
+            LoginEntity _LoginEntity = new LoginEntity();
+            string[] _auditParams = new string[4];
+            ErrorLog.RuleTrace("TrRule | ToggleSlider() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             bool isActive = IsChecked;
             _RuleEntityy.IsActive = isActive ? 0 : 1;
             _RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
             //_RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
             _RuleEntityy.GroupId = Convert.ToInt32(Id);
             _RuleEntityy.Flag = (int)EnumCollection.EnumRuleType.Update;
+
+            #region Audit
+            _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+            _auditParams[1] = "TrRule";
+            _auditParams[2] = "ToggleSlider-UpdateGroupStatus";
+            _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+            _LoginEntity.StoreLoginActivities(_auditParams);
+            #endregion
 
             string statusCode = _RuleEntityy.UpdateGroupStatus();
 
@@ -233,7 +247,7 @@ namespace SOR.Pages.Rule
             {
                 StatusMessage = _CommonEntity.ResponseMessage
             };
-
+            ErrorLog.RuleTrace("TrRule | ToggleSlider() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             ErrorLog.RuleTrace("TrRule: ToggleSlider(): DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
             return new JavaScriptSerializer().Serialize(response);
         }
@@ -241,6 +255,9 @@ namespace SOR.Pages.Rule
         [WebMethod]
         public static string ToggleRuleSlider(bool IsChecked, string Id)
         {
+            LoginEntity _LoginEntity = new LoginEntity();
+            string[] _auditParams = new string[4];
+            ErrorLog.RuleTrace("TrRule | ToggleRuleSlider() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             bool isActive = IsChecked;
             _RuleEntityy.IsActive = isActive ? 0 : 1;
             _RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
@@ -248,6 +265,13 @@ namespace SOR.Pages.Rule
             _RuleEntityy.RuleId = Convert.ToInt32(Id);
             _RuleEntityy.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
 
+            #region Audit
+            _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+            _auditParams[1] = "TrRule";
+            _auditParams[2] = "ToggleRuleSlider-UpdateRuleStatus";
+            _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+            _LoginEntity.StoreLoginActivities(_auditParams);
+            #endregion
             string grpstatusCode = _RuleEntityy.CheckGrpStatus();
 
             if (grpstatusCode == "00")
@@ -291,12 +315,21 @@ namespace SOR.Pages.Rule
                 ErrorLog.RuleTrace("TrRule: ToggleRuleSlider(): DB_StatusCode : " + grpstatusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                 return new JavaScriptSerializer().Serialize(responsee);
             }
+            //ErrorLog.RuleTrace("TrRule | ToggleRuleSlider() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
         }
 
         protected void rptrGroup_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.CommandName == "Edit")
             {
+                ErrorLog.RuleTrace("TrRule | rptrGroup_ItemCommand()-Edit | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "TrRule";
+                _auditParams[2] = "rptrGroup_ItemCommand()-Edit";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtGroupName.Enabled = false;
                 int itemId = Convert.ToInt32(e.CommandArgument);
                 _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
@@ -332,9 +365,19 @@ namespace SOR.Pages.Rule
                     Session["priority"] = "IsEdit";
                     hdnShowModalG.Value = "true";
                 }
+                ErrorLog.RuleTrace("TrRule | rptrGroup_ItemCommand()-Edit | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             else if (e.CommandName == "Delete")
             {
+                ErrorLog.RuleTrace("TrRule | rptrGroup_ItemCommand()-Delete | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "TrRule";
+                _auditParams[2] = "rptrGroup_ItemCommand()-Delete";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
+
                 int itemId = Convert.ToInt32(e.CommandArgument);
                 _RuleEntityy.IsDelete = 1;
                 _RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
@@ -359,16 +402,19 @@ namespace SOR.Pages.Rule
                     StatusMessage = _CommonEntity.ResponseMessage
                 };
                 BindGroup();
+                ErrorLog.RuleTrace("TrRule | rptrGroup_ItemCommand()-Delete | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 ErrorLog.RuleTrace("TrRule: Delete() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
             }
             else if (e.CommandName == "AddRule")
             {
+                ErrorLog.RuleTrace("TrRule | rptrGroup_ItemCommand()-AddRule | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 int itemId = Convert.ToInt32(e.CommandArgument);
                 BindDropdownValues();
                 BindSwitch();
                 ddlGroupName.SelectedValue = Convert.ToString(itemId);
                 hdnShowModalR.Value = "true";
+                ErrorLog.RuleTrace("TrRule | rptrGroup_ItemCommand()-AddRule | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
         //protected void Priority1_Click(object sender, EventArgs e)
@@ -416,6 +462,8 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | btnCreGroup_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                
                 if (string.IsNullOrEmpty(txtGroupName.Text))
                 {
                     ShowWarning("Please Enter Group Name. Try again", "Warning");
@@ -433,6 +481,13 @@ namespace SOR.Pages.Rule
                 //}
                 else
                 {
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "TrRule";
+                    _auditParams[2] = "btnCreGroup";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     if (Session["priority"] != null)
                     {
                         _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
@@ -506,11 +561,12 @@ namespace SOR.Pages.Rule
                 }
                 hdnShowModalG.Value = "false";
                 BindGroup();
+                ErrorLog.RuleTrace("TrRule | btnCreGroup_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
                 hdnShowModalG.Value = "false";
-                ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -520,16 +576,25 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | btnCloseGroup_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "TrRule";
+                _auditParams[2] = "btnCloseGroup";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtGroupName.Text = string.Empty;
                 txtGroupDescription.Text = string.Empty;
                 hdnShowModalG.Value = "false";
                 hdnShowModalG.Value = string.Empty;
                 Session["priority"] = null;
                 Session["priority2"] = null;
+                ErrorLog.RuleTrace("TrRule | btnCloseGroup_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("TrRule: btnCloseGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnCloseGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -537,14 +602,23 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | btnAddGroup_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "TrRule";
+                _auditParams[2] = "btnAddGroup";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtGroupName.Enabled = true;
                 Session["priority"] = null;
                 hdnShowModalR.Value = "false";
                 hdnShowModalG.Value = "true";
+                ErrorLog.RuleTrace("TrRule | btnAddGroup_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("TrRule: btnAddGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnAddGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -552,15 +626,24 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | btnAddRule_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "TrRule";
+                _auditParams[2] = "btnAddRule";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 Session["priority2"] = null;
                 hdnShowModalG.Value = "false";
                 hdnShowModalR.Value = "true";
                 BindDropdownValues();
                 BindSwitch();
+                ErrorLog.RuleTrace("TrRule | btnAddRule_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("TrRule: btnAddRule_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnAddRule_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
         string SetRuleEntityValue(string selectedValue, string warningMessage)
@@ -582,6 +665,8 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | btnCreateRule_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                
                 lblError.Text = string.Empty; ;
                 lblError.Visible = false;  // Make the error label visible
 
@@ -665,6 +750,14 @@ namespace SOR.Pages.Rule
                 }
                 else
                 {
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "TrRule";
+                    _auditParams[2] = "btnCreateRule";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
+
                     if (Session["priority2"] != null)
                     {
                         //string[] selectedValues = Request.Form.GetValues("chkAggregator");
@@ -808,11 +901,12 @@ namespace SOR.Pages.Rule
                 BindGroup();
                 _RuleEntity.GetRule();
                 hdnShowModalR.Value = "false";
+                ErrorLog.RuleTrace("TrRule | btnCreateRule_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
                 hdnShowModalR.Value = "false";
-                ErrorLog.RuleTrace("TrRule: btnCreateRule_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnCreateRule_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -820,14 +914,23 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("TrRule | btnCloseRule_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "TrRule";
+                _auditParams[2] = "btnCloseRule";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 hdnShowModalR.Value = "false";
                 hdnShowModalR.Value = string.Empty;
                 Session["priority"] = null;
                 Session["priority2"] = null;
+                ErrorLog.RuleTrace("TrRule | btnCloseRule_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("TrRule: btnCloseRule_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnCloseRule_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
         #region Bind DropDown
@@ -1039,6 +1142,14 @@ namespace SOR.Pages.Rule
             {
                 if (e.CommandName == "EditRule")
                 {
+                    ErrorLog.RuleTrace("TrRule | rptRule_ItemCommand-EditRule | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "TrRule";
+                    _auditParams[2] = "rptRule_ItemCommand-EditRule";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     ddlGroupName.Enabled = false;
                     txtRuleName.Enabled = false;
                     txtRuleDescription.Enabled = false;
@@ -1186,9 +1297,18 @@ namespace SOR.Pages.Rule
                         }
                         hdnShowModalR.Value = "true";
                     }
+                    ErrorLog.RuleTrace("TrRule | rptRule_ItemCommand-EditRule | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
                 else if (e.CommandName == "DeleteRule")
                 {
+                    ErrorLog.RuleTrace("TrRule | rptRule_ItemCommand-DeleteRule | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "TrRule";
+                    _auditParams[2] = "rptRule_ItemCommand-DeleteRule";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     int itemId = Convert.ToInt32(e.CommandArgument);
                     _RuleEntityy.IsDelete = 1;
                     _RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
@@ -1215,11 +1335,14 @@ namespace SOR.Pages.Rule
                     ErrorLog.RuleTrace("TrRule: Delete() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                     _RuleEntity.GetRule();
+                    ErrorLog.RuleTrace("TrRule | rptRule_ItemCommand-DeleteRule | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
             }
             catch (Exception Ex)
             {
-                throw;
+                ErrorLog.RuleTrace("TrRule: rptRule_ItemCommand(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                return;
             }
         }
 

@@ -1,0 +1,61 @@
+----------------------------------------------------------------------------
+Time : 04-Jan-2025 18:36
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnsample_ServerClick(Object sender, EventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2536
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 04-Jan-2025 18:36
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnZipsample_ServerClick(Object sender, EventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 1154
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 04-Jan-2025 18:40
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at SOR.Pages.Agent.AgentRegistration.btnZipsample_ServerClick(Object sender, EventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 1154
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 04-Jan-2025 18:42
+Source - : System.Data
+StackTrace -  :    at System.Data.Common.DbConnectionOptions.GetKeyValuePair(String connectionString, Int32 currentPosition, StringBuilder buffer, Boolean useOdbcRules, String& keyname, String& keyvalue)
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.OleDb.OleDbConnectionString..ctor(String connectionString, Boolean validate)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.OleDb.OleDbConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.OleDb.OleDbConnection.set_ConnectionString(String value)
+   at System.Data.OleDb.OleDbConnection..ctor(String connectionString)
+   at SOR.Pages.Agent.AgentRegistration.ProcessFile(String FileExtension, String FilePath, DataTable& dataTableExcel) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 3091
+Message - : Format of the initialization string does not conform to specification starting at index 147.
+----------------------------------------------------------------------------
+Time : 04-Jan-2025 19:06
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2607
+Message - : Thread was being aborted.
+----------------------------------------------------------------------------
+Time : 04-Jan-2025 19:09
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgentRegistration.gvBulkManualKyc_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgentRegistration.aspx.cs:line 2607
+Message - : Thread was being aborted.

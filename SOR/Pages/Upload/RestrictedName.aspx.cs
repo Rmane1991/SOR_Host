@@ -27,6 +27,8 @@ namespace SOR.Pages.Upload
         #endregion
 
         #region property declaration
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         UploadDAL _UploadDAL = new UploadDAL();
         DataTable TypeTableUploadDetails = null; // typetbale paramerters same in database   
 
@@ -98,6 +100,7 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "RestrictedName.aspx", "32");
@@ -144,18 +147,20 @@ namespace SOR.Pages.Upload
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName: Page_Load(): Exception: " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName: Page_Load(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
                 return;
             }
         }
+
         #region Fillgrid
         public DataSet FillGrid(EnumCollection.EnumBindingType _EnumBindingType, string sortExpression = null)
         {
             DataSet ds = new DataSet();
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvNegativeAgent.DataSource = null;
                 gvNegativeAgent.DataBind();
                 SetPropertise(ref importEntity);
@@ -190,10 +195,11 @@ namespace SOR.Pages.Upload
                         //ScriptManager.RegisterStartupScript(this, typeof(Page), "Script", "alert('No Data Found in Search Criteria. Try again', 'Warning');", true);
                     }
                 }
+                ErrorLog.UploadTrace("RestrictedName | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName: FillGrid(): Exception: " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
             }
@@ -237,12 +243,21 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | btnSave_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Upload-RestrictedName";
+                _auditParams[2] = "btnSave";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 Save();
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.UploadTrace("RestrictedName | btnSave_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName: btnSave_Click(): Exception: " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName: btnSave_Click(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
             }
@@ -251,6 +266,7 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | Save() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadTrace("Process Request Recieved for Upload RestrictedName File");
                 string TotalRecords = null;
                 string _FileImport = fileUpload.FileName;
@@ -373,10 +389,11 @@ namespace SOR.Pages.Upload
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please select the file to upload .','Warning');</script>", false);
                     return;
                 }
+                ErrorLog.UploadTrace("RestrictedName | Save() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace(" Failed for Save():" + Ex.Message);
+                ErrorLog.UploadTrace(" Failed for Save():" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
@@ -389,6 +406,7 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | InsertFileData() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 importEntity.FileID = FileID;
                 importEntity.Dtable = dtTable;
                 importEntity.UserName = Username;
@@ -406,11 +424,11 @@ namespace SOR.Pages.Upload
                     ErrorLog.UploadTrace(string.Format("Failed Insert File Data Request For Upload RestrictedName. Username : {0}. FileId : {1}. Status : {2} StatusMsg : {3}", UserName, FileID, Status, StatusMsg));
                     return false;
                 }
+                //ErrorLog.UploadTrace("RestrictedName | InsertFileData() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
-
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace(string.Format("Failed Insert File Data Request For Upload RestrictedName. Username : {0}. FileId : {1}. Exception : {2}", UserName, FileID, Ex.Message));
+                ErrorLog.UploadTrace(string.Format("Failed Insert File Data Request For Upload RestrictedName. Username : {0}. FileId : {1}. Exception : {2}", UserName, FileID, Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString()));
                 ErrorLog.UploadError(Ex);
                 return false;
             }
@@ -471,6 +489,7 @@ namespace SOR.Pages.Upload
 
         public bool ProcessFile(string FileExtension, string FilePath, out DataTable dataTableExcel)
         {
+            ErrorLog.UploadTrace("RestrictedName | ProcessFile() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             bool IsFileProcessed = true;
             dataTableExcel = new DataTable();
             ErrorLog.UploadTrace(string.Format("Initiated Process File Request. Username : {0}. FilePath : {1}.FileExtension : {2}.", Session["Username"].ToString(), FilePath, FileExtension));
@@ -515,26 +534,26 @@ namespace SOR.Pages.Upload
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please check the number of fields in the file.','File Format');</script>", false);
                     IsFileProcessed = true;
                 }
-
+                ErrorLog.UploadTrace("RestrictedName | ProcessFile() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadTrace(string.Format("Completed Process File Request. Username : {0}. FilePath : {1}. FileExtension : {2}.", Session["Username"].ToString(), FilePath, FileExtension));
             }
             catch (ArgumentException Ex)
             {
                 ErrorLog.UploadError( Ex);
-                ErrorLog.UploadTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message));
+                ErrorLog.UploadTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString()));
                 IsFileProcessed = false;
             }
             catch (OleDbException Ex)
             {
                 ErrorLog.UploadError( Ex);
-                ErrorLog.UploadTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message));
+                ErrorLog.UploadTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString()));
                 IsFileProcessed = false;
             }
             catch (InvalidOperationException Ex)
             {
                 IsFileProcessed = false;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('System does not supports " + FileExtension + " file format.','Warning');</script>", false);
-                ErrorLog.UploadTrace("RestrictedName : Error At ProcessFile(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName : Error At ProcessFile(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
             }
             return IsFileProcessed;
@@ -546,6 +565,7 @@ namespace SOR.Pages.Upload
             FileId = string.Empty;
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | FileImportEntry() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 importEntity.FileName = _FileValidator.FileName;
                 importEntity.FilePath = _FileValidator.FilePath;
                 importEntity.FileType = _FileValidator.FileType;
@@ -554,11 +574,12 @@ namespace SOR.Pages.Upload
                 importEntity.FileDescName = EnumCollection.EnumFileDesciption.UploadNegAgentList.ToString();
 
                 string Status = importEntity.InsertFileImport(out FileId);
+                ErrorLog.UploadTrace("RestrictedName | FileImportEntry() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 return Status == "00" ? true : false;
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName : Error At FileImportEntry(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName : Error At FileImportEntry(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 return false;
             }
@@ -626,6 +647,7 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | btnsample_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadTrace(string.Format("Initiated Ticket Upload Sample File Download Request."));
                 string strURL = string.Empty;
 
@@ -642,11 +664,11 @@ namespace SOR.Pages.Upload
                 response.BinaryWrite(data);
                 response.End();
                 ErrorLog.UploadTrace(string.Format("Completed RestrictedName Sample File Download."));
-
+                ErrorLog.UploadTrace("RestrictedName | btnsample_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (System.Threading.ThreadAbortException Ex)
             {
-                ErrorLog.UploadTrace( string.Format("Error RestrictedName Sample File Download."));
+                ErrorLog.UploadTrace( string.Format("Error RestrictedName Sample File Download." + " | LoginKey : " + Session["LoginKey"].ToString()));
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
@@ -658,6 +680,7 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | btnsearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (string.IsNullOrEmpty(txtFromDate.Value))
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please Select From Date.', 'Warning');</script>", false);
@@ -671,13 +694,21 @@ namespace SOR.Pages.Upload
 
                 else
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Upload-RestrictedName";
+                    _auditParams[2] = "btnsearch";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 }
+                ErrorLog.UploadTrace("RestrictedName | btnsearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
 
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName : Error At btnsearch_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName : Error At btnsearch_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
@@ -688,14 +719,23 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | Btnclear_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Upload-RestrictedName";
+                _auditParams[2] = "Btnclear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 ddlFileTypeStatus.ClearSelection();
                 gvNegativeAgent.Visible = false;
+                ErrorLog.UploadTrace("RestrictedName | Btnclear_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace( "RestrictedName : Error At Btnclear_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace( "RestrictedName : Error At Btnclear_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
@@ -712,6 +752,7 @@ namespace SOR.Pages.Upload
             {
                 if (e.CommandName.Contains("DownloadDoc"))
                 {
+                    ErrorLog.UploadTrace("RestrictedName | RowCommand-DownloadDoc | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     string status = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
@@ -724,6 +765,13 @@ namespace SOR.Pages.Upload
                     DataSet Ds = importEntity.ExportRestrictedName();
                     if (Ds != null && Ds.Tables.Count > 0 && Ds.Tables[0].Rows.Count > 0)
                     {
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "RowCommand-DownloadDoc";
+                        _auditParams[2] = "Btnclear";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         obj.ExporttoExcel(Session["UserName"].ToString(), "CMS", "Upload RestrictedName Details", Ds);
                     }
                     else
@@ -731,6 +779,7 @@ namespace SOR.Pages.Upload
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No data found.', 'Warning');", true);
                         return;
                     }
+                    ErrorLog.UploadTrace("RestrictedName | RowCommand-DownloadDoc | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 //if (e.CommandName.Contains("EditUpload"))
                 //{
@@ -747,7 +796,7 @@ namespace SOR.Pages.Upload
             catch (Exception Ex)
             {
                 ErrorLog.UploadError( Ex);
-                ErrorLog.UploadTrace("Failed For gvNegativeAgent_RowCommand:" + Ex.Message);
+                ErrorLog.UploadTrace("Failed For gvNegativeAgent_RowCommand:" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -757,13 +806,22 @@ namespace SOR.Pages.Upload
         {
             try
             {
+                ErrorLog.UploadTrace("RestrictedName | btncancel_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "btncancel";
+                _auditParams[2] = "Btnclear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 fileUpload.Dispose();
                 gvNegativeAgent.Visible = false;
+                ErrorLog.UploadTrace("RestrictedName | btncancel_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("RestrictedName : Error At Btnclear_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.UploadTrace("RestrictedName : Error At Btnclear_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
@@ -790,8 +848,8 @@ namespace SOR.Pages.Upload
         #region ValidateFileData
 
         public bool ValidateFileData<T>(T TObj, out string _StatusCode, out string _StatusDesc)
-
         {
+            ErrorLog.UploadTrace("RestrictedName | ValidateFileData() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             bool IsValidRecord = true;
             _StatusCode = string.Empty;
             _StatusDesc = "Valid";
@@ -964,13 +1022,13 @@ namespace SOR.Pages.Upload
                 //    IsValidRecord = false;
                 //    return false;
                 //}
-                
-                
+
+                ErrorLog.UploadTrace("RestrictedName | ValidateFileData() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
 
             }
             catch (Exception Ex)
             {
-                 ErrorLog.UploadTrace("RestrictedName : Error At ValidateFileData(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                 ErrorLog.UploadTrace("RestrictedName : Error At ValidateFileData(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.UploadError( Ex);
                 IsValidRecord = false;
             }

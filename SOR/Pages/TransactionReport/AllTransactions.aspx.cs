@@ -58,6 +58,7 @@ namespace SOR.Pages.TransactionReport
                             txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                             txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                             FillBc();
+                            FillAggregator();
                             BindAction();
 
                         }
@@ -181,13 +182,13 @@ namespace SOR.Pages.TransactionReport
                 {
                     ddlAggregator.DataSource = null;
                     ddlAggregator.DataBind();
-                    ddlAggregator.Items.Insert(0, new ListItem("No Data Found", "0"));
+                    ddlAggregator.Items.Insert(0, new ListItem("-- Select --", "0"));
                 }
             }
             catch (Exception ex)
             {
-                ErrorLog.TransactionReportTrace("Page : AllTransactions.cs \nFunction : FillAggregator()\nException Occured\n" + ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'All Transactions');", true);
+                ErrorLog.AgentManagementTrace("Page : AllTransactions.cs \nFunction : FillAggregator()\nException Occured\n" + ex.Message);
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'AEPS Transactions');", true);
                 return;
             }
         }
