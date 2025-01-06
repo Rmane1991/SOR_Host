@@ -72,6 +72,7 @@ namespace BussinessAccessLayer
         public string DocumentType { get; set; }
         public int AEPS { get; set; }
         public int MATM { get; set; }
+        public int DMT { get; set; }
         public int StageId { get; set; }
         public int Stage { get; set; }
         public int Flag { get; set; }
@@ -379,7 +380,7 @@ namespace BussinessAccessLayer
                     // Open the connection
                     sqlConn.Open();
 
-                    using (var cmd = new NpgsqlCommand("CALL public.SP_AgentRequest_Registration_Insert(NULL, NULL, NULL, @p_clientid, @p_createdby, @p_agentname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_passportno, @p_personalemailid, @p_firstname, @p_agentdob, @p_devicecode, @p_landlineno, @p_alternateno, @p_bccode, @p_aadharno, @p_panno, @p_gstno, @p_agentdistrict, @p_agentaddress, @p_agentcountry, @p_agentstate, @p_agentcity, @p_agentpincode, @p_shopaddress, @p_populationgroup, @p_agentcategory, @p_accountname, @p_accountnumber, @p_ifscode, @p_bank, @p_shopcountry, @p_shopstate, @p_shopcity, @p_shopemail, @p_shopdistrict, @p_shoppincode, @p_ispanverified, @p_isnsverified, @p_isibaverified, @p_kyctypeid, @p_kyctype, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_signatureprooftype, @p_addressproofdocument, @p_signatureproofdocument, @p_businessemailid, @p_agreqid, @p_documents, @p_documenttype, @p_terminalid, @p_lattitude, @p_longitude, @p_agentcode, @p_aeps, @p_matm, @p_stageid, @p_stage, @p_flag, @p_activitytype,@p_aggCode)", sqlConn))
+                    using (var cmd = new NpgsqlCommand("CALL public.SP_AgentRequest_Registration_Insert(NULL, NULL, NULL, @p_clientid, @p_createdby, @p_agentname, @p_middlename, @p_lastname, @p_gender, @p_emailid, @p_contactno, @p_passportno, @p_personalemailid, @p_firstname, @p_agentdob, @p_devicecode, @p_landlineno, @p_alternateno, @p_bccode, @p_aadharno, @p_panno, @p_gstno, @p_agentdistrict, @p_agentaddress, @p_agentcountry, @p_agentstate, @p_agentcity, @p_agentpincode, @p_shopaddress, @p_populationgroup, @p_agentcategory, @p_accountname, @p_accountnumber, @p_ifscode, @p_bank, @p_shopcountry, @p_shopstate, @p_shopcity, @p_shopemail, @p_shopdistrict, @p_shoppincode, @p_ispanverified, @p_isnsverified, @p_isibaverified, @p_kyctypeid, @p_kyctype, @p_identityprooftype, @p_identityproofdocument, @p_addressprooftype, @p_signatureprooftype, @p_addressproofdocument, @p_signatureproofdocument, @p_businessemailid, @p_agreqid, @p_documents, @p_documenttype, @p_terminalid, @p_lattitude, @p_longitude, @p_agentcode, @p_aeps, @p_matm, @p_dmt, @p_stageid, @p_stage, @p_flag, @p_activitytype,@p_aggCode)", sqlConn))
                     {
                         cmd.CommandType = CommandType.Text;
 
@@ -462,6 +463,7 @@ namespace BussinessAccessLayer
                         cmd.Parameters.AddWithValue("p_agentcode", (object)AgentID ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("p_aeps", AEPS);
                         cmd.Parameters.AddWithValue("p_matm", MATM);
+                        cmd.Parameters.AddWithValue("p_dmt", DMT);
                         cmd.Parameters.AddWithValue("p_stageid", (object)StageId ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("p_stage", (object)Stage ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("p_flag", Flag);

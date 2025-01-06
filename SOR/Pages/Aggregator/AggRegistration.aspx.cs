@@ -29,6 +29,8 @@ namespace SOR.Pages.BC
         public string pathId, PathAdd, PathSig;
         bool _IsValidFileAttached = false;
         int RequestId = 0;
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
 
         #region Objects Declaration
@@ -48,6 +50,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AggRegistration | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "AggRegistration.aspx", "14");
@@ -89,7 +92,7 @@ namespace SOR.Pages.BC
 
             catch (Exception Ex)
             {
-                ErrorLog.AdminManagementTrace("AggRegistration: Page_Load: Exception: " + Ex.Message);
+                ErrorLog.AdminManagementTrace("AggRegistration: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }

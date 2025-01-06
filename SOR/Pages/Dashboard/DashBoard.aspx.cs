@@ -110,6 +110,7 @@ namespace SOR.Pages.Dashboard
                     {
                         Day = t.Field<string>("time_period"),
                         CurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousDay = t.Field<string>("previous_time_period"),
                         PreviousMonthCount = t.Field<int>("previous_count")
                     }).ToList();
 
@@ -405,8 +406,7 @@ namespace SOR.Pages.Dashboard
             }
             catch (Exception ex)
             {
-                var lineNumber = new System.Diagnostics.StackTrace(ex, true).GetFrame(0).GetFileLineNumber();
-                ErrorLog.DashboardTrace("DashBoard: LoadTransactionCounts(): Exception: " + ex.Message + " at line: " + lineNumber);
+                ErrorLog.DashboardTrace("DashBoard: LoadTransactionCounts(): Exception: " + ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 
@@ -480,6 +480,7 @@ namespace SOR.Pages.Dashboard
                     {
                         Day = t.Field<string>("time_period"),
                         TxnsummaryCurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousDay = t.Field<string>("previous_time_period"),
                         TxnsummaryPreviousMonthCount = t.Field<int>("previous_count")
                     }).ToList();
 

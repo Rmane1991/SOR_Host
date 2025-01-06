@@ -454,8 +454,6 @@ namespace BussinessAccessLayer
 
         }
 
-
-
         public List<OnBoardedData> GetOnBoardingData()
         {
             var dataList = new List<OnBoardedData>();
@@ -525,8 +523,6 @@ namespace BussinessAccessLayer
             return transactions;
         }
 
-
-
         public List<TransactionSummary> GetMonthlySummaryCount(string dateFilter = null)
         {
             List<TransactionSummary> summaries = new List<TransactionSummary>();
@@ -584,18 +580,17 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "Txnsummarychart");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 1() \nException Occured\n");
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM Get_TopAggregatorData(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
-                        cmd.CommandTimeout = 180; // 180 seconds = 3 minutes (adjust this value as needed)
                         cmd.Parameters.AddWithValue("@dateFilter", (object)dateFilter ?? DBNull.Value);
                         using (var adapter = new NpgsqlDataAdapter(cmd))
                         {
                             adapter.Fill(ds, "Aggregators");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 2() \nException Occured\n");
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM get_SwitchChartDtata(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -605,7 +600,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "SwitchData");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 3() \nException Occured\n");
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM Get_Top5_Rule_Data(@dateFilter)", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -615,7 +610,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "RuleData");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 4() \nException Occured\n");
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_bctransactionsummarycount()", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -624,7 +619,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "MonthlyBCData");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 5() \nException Occured\n");
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_channelwisedatacount()", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -634,7 +629,7 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "ChannelwiseData");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 6() \nException Occured\n");
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.getBankRevenueData()", conn))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -643,20 +638,17 @@ namespace BussinessAccessLayer
                             adapter.Fill(ds, "BankRevenueData");
                         }
                     }
-                    ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : 7() \nException Occured\n");
+
                 }
             }
             catch (Exception ex)
             {
-                ErrorLog.DashboardTrace("DashBoardDAL.cs \nFunction : Get_AllData() \nException Occured\n" + ex.Message);
-                //Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
                 throw;
             }
 
             return ds;
         }
-
-
 
         public DataSet FilterData(string Type, string dateFilter = null)
         {
@@ -794,13 +786,12 @@ namespace BussinessAccessLayer
                     {
                         DateTime d1 = Convert.ToDateTime(fromDate);
                         DateTime d2 = Convert.ToDateTime(toDate);
-
-                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_top5_switch_data(@filtertype, @fromdate, @todate)", conn))
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_switchchartdata(@filtertype, @fromdate, @todate)", conn))
                         {
                             cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@filtertype", (object)filter ?? DBNull.Value);
-                            cmd.Parameters.AddWithValue("@fromdate", d1.Date);
-                            cmd.Parameters.AddWithValue("@todate", d2.Date);
+                            cmd.Parameters.AddWithValue("@filtertype", (object)filter ?? "last_week");
+                            cmd.Parameters.AddWithValue("@fromdate", ParseDate(fromDate));
+                            cmd.Parameters.AddWithValue("@todate", ParseDate(toDate));
                             using (var adapter = new NpgsqlDataAdapter(cmd))
                             {
                                 adapter.Fill(ds, "switchchart");
@@ -820,6 +811,7 @@ namespace BussinessAccessLayer
                                 adapter.Fill(ds, "Revenuechart");
                             }
                         }
+
                     }
 
                 }
@@ -850,10 +842,34 @@ namespace BussinessAccessLayer
 
             throw new FormatException($"Invalid date format: {dateString}");
         }
+        private object ParseDateWithoutTime(string dateString)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(dateString))
+                    return DBNull.Value;
+
+                if (DateTime.TryParseExact(dateString, "dd-MM-yyyy",
+                                            System.Globalization.CultureInfo.InvariantCulture,
+                                            System.Globalization.DateTimeStyles.None,
+                                            out DateTime parsedDate))
+                {
+                    return parsedDate.ToString("yyyy-MM-dd");
+                }
+
+                throw new FormatException($"Invalid date format: {dateString}");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+
 
         #endregion
-
-
 
     }
 

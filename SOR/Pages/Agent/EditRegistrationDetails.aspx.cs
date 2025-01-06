@@ -324,6 +324,7 @@ namespace SOR.Pages.Agent
 
                         _AgentRegistrationDAL.AEPS = chkAEPS.Checked == true ? 1 : 0;
                         _AgentRegistrationDAL.MATM = chkMATM.Checked == true ? 1 : 0;
+                        _AgentRegistrationDAL.DMT = chkdmt.Checked == true ? 1 : 0;
                         _AgentRegistrationDAL.FirstName = txtFirstName.Text.Trim();
                         _AgentRegistrationDAL.MiddleName = txtMiddleName.Text.Trim();
                         _AgentRegistrationDAL.LastName = txtLastName.Text.Trim();
@@ -1852,6 +1853,18 @@ namespace SOR.Pages.Agent
                     else
                     {
                         chkMATM.Checked = false;
+                    }
+                    if (ds.Tables[0].Rows[0]["dmt"].ToString() != "" || ds.Tables[0].Rows[0]["dmt"].ToString() != null)
+                    {
+                        //HdnMATM.Value = ds.Tables[0].Rows[0]["MATM"].ToString();
+                    }
+                    if (ds.Tables[0].Rows[0]["dmt"].ToString() == "1")
+                    {
+                        chkdmt.Checked = true;
+                    }
+                    else
+                    {
+                        chkdmt.Checked = false;
                     }
                     DIVDetails.Visible = true;
                 }
