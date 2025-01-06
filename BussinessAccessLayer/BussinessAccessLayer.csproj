@@ -93,6 +93,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvanceDashbordDAL.cs" />
     <Compile Include="AgentRegistrationAPI.cs" />
     <Compile Include="AgentRegistrationDAL.cs" />
     <Compile Include="AggregatorEntity.cs" />

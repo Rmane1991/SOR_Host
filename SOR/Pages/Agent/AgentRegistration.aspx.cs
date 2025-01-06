@@ -1459,6 +1459,7 @@ namespace SOR.Pages.Agent
 
                             _AgentRegistrationDAL.AEPS = chkAEPS.Checked == true ? 1 : 0;
                             _AgentRegistrationDAL.MATM = chkMATM.Checked == true ? 1 : 0;
+                            _AgentRegistrationDAL.DMT = chkdmt.Checked == true ? 1 : 0;
                             _AgentRegistrationDAL.FirstName = txtFirstName.Text.Trim();
                             _AgentRegistrationDAL.MiddleName = txtMiddleName.Text.Trim();
                             _AgentRegistrationDAL.LastName = txtLastName.Text.Trim();

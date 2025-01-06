@@ -100,7 +100,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Transaction</span>
+                                <span class="stats-small__label text-uppercase">Transactions</span>
                                 <h6 id="TxnCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -116,7 +116,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Business Correspondence</span>
+                                <span class="stats-small__label text-uppercase">BCs</span>
                                 <h6 id="bcCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -132,7 +132,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Aggregator</span>
+                                <span class="stats-small__label text-uppercase">Aggregators</span>
                                 <h6 id="aggregatorCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -148,7 +148,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">Agent</span>
+                                <span class="stats-small__label text-uppercase">Agents</span>
                                 <h6 id="agentCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -188,9 +188,9 @@
                         <div class="row border-bottom py-2 bg-light">
                             <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
                                 <div class="btn-group" data-attribute="TransactionSummary">
-                                    <%--<button type="button" class="btn btn-white active">Hour</button>
-                                    <button type="button" class="btn btn-white">Day</button>--%>
-                                    <button type="button" class="btn btn-white active" data-attribute="TransactionSummary" data-text="Week">Week</button>
+                                    <%--<button type="button" class="btn btn-white active">Hour</button>--%>
+                                    <button type="button" class="btn btn-white active" data-attribute="TransactionSummary" data-text="Day">Day</button>
+                                    <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Week">Week</button>
                                     <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Month">Month</button>
                                 </div>
                             </div>
@@ -582,13 +582,143 @@
 
                     if (FilterType === "TransactionSummary" || FilterType === "GlobalFilter") {
                         const txnData = newData.TxnSummaryChart;
-                        const currentMonthData = txnData.map(item => item.TxnsummaryCurrentMonthCount);
-                        const previousMonthData = txnData.map(item => item.TxnsummaryPreviousMonthCount);
+                        const transactions = txnData.map(item => ({
+                            Day: item.Day,
+                            PreviousDay: item.PreviousDay,
+                            CurrentMonthCount: item.TxnsummaryCurrentMonthCount,
+                            PreviousMonthCount: item.TxnsummaryPreviousMonthCount
+                        }));
 
-                        BlogOverviewUsers.data.datasets[0].data = currentMonthData;
-                        BlogOverviewUsers.data.datasets[1].data = previousMonthData;
-                        BlogOverviewUsers.data.labels = txnData.map(item => item.Day);
-                        BlogOverviewUsers.update();
+                        const currentMonthData = transactions.map(item => item.CurrentMonthCount);
+                        const previousMonthData = transactions.map(item => item.PreviousMonthCount);
+
+                        if (BlogOverviewUsers) {
+                            BlogOverviewUsers.destroy();
+                        }
+
+                        const bouData = {
+                            labels: transactions.map(item => item.Day),
+                            datasets: [{
+                                label: 'Current Data',
+                                fill: 'start',
+                                data: currentMonthData,
+                                backgroundColor: 'rgba(0,123,255,0.1)',
+                                borderColor: 'rgba(0,123,255,1)',
+                                pointBackgroundColor: '#ffffff',
+                                pointHoverBackgroundColor: 'rgb(0,123,255)',
+                                borderWidth: 1.5,
+                                pointRadius: 3,
+                                pointHoverRadius: 5,
+                                borderJoinStyle: 'round',
+                                lineTension: 0.3,
+                            }, {
+                                label: 'Previous Data',
+                                fill: 'start',
+                                data: previousMonthData,
+                                backgroundColor: 'rgba(255,65,105,0.1)',
+                                borderColor: 'rgba(255,65,105,1)',
+                                pointBackgroundColor: '#ffffff',
+                                pointHoverBackgroundColor: 'rgba(255,65,105,1)',
+                                borderDash: [3, 3],
+                                borderWidth: 1,
+                                pointRadius: 3,
+                                pointHoverRadius: 5,
+                                pointBorderColor: 'rgba(255,65,105,1)',
+                            }]
+                        };
+
+                        var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
+                        BlogOverviewUsers = new Chart(bouCtx, {
+                            type: 'LineWithLine',
+                            data: bouData,
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    position: 'top'
+                                },
+                                elements: {
+                                    line: {
+                                        tension: 0.3
+                                    },
+                                    point: {
+                                        radius: 3
+                                    }
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: false,
+                                        ticks: {
+                                            autoSkip: false,
+                                            maxRotation: 45,
+                                            minRotation: 0,
+                                            callback: function (tick, index) {
+                                                var totalLabels = transactions.length;
+                                                if (totalLabels <= 7) {
+                                                    return tick;
+                                                }
+                                                return index % 7 === 0 ? tick : '';
+                                            },
+                                            padding: 15
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            suggestedMax: 45,
+                                            callback: function (tick) {
+                                                if (tick >= 1e9) {
+                                                    return (tick / 1e9).toFixed(1) + 'B'; // Billions
+                                                } else if (tick >= 1e6) {
+                                                    return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                                                } else if (tick >= 1e3) {
+                                                    return (tick / 1e3).toFixed(1) + 'K'; // Thousands
+                                                } else {
+                                                    return tick;
+                                                }
+                                            }
+                                        }
+                                    }]
+                                },
+                                hover: {
+                                    mode: 'nearest',
+                                    intersect: false
+                                },
+                                tooltips: {
+                                    enabled: true,
+                                    mode: 'nearest',
+                                    intersect: true,
+                                    callbacks: {
+                                        title: function (tooltipItem, data) {
+                                            var index = tooltipItem[0].index;
+                                            var datasetIndex = tooltipItem[0].datasetIndex;
+
+                                            if (datasetIndex === 0) {
+                                                return `Date: ${transactions[index].Day}`;
+                                            } else if (datasetIndex === 1) {
+                                                return `Date: ${transactions[index].PreviousDay}`;
+                                            }
+                                        },
+                                        label: function (tooltipItem, data) {
+                                            var index = tooltipItem.index;
+                                            var datasetIndex = tooltipItem.datasetIndex;
+
+                                            var currentValue = (transactions[index] && transactions[index].CurrentMonthCount !== undefined)
+                                                ? transactions[index].CurrentMonthCount
+                                                : 'No data available';
+                                            var previousValue = (transactions[index] && transactions[index].PreviousMonthCount !== undefined)
+                                                ? transactions[index].PreviousMonthCount
+                                                : 'No data available';
+
+                                            if (datasetIndex === 0) {
+                                                return `Current Month: ${currentValue}`;
+                                            } else if (datasetIndex === 1) {
+                                                return `Previous Month: ${previousValue}`;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        });
                     }
 
                     if (FilterType === "BCTransactionSummary" || FilterType === "GlobalFilter") {
@@ -620,26 +750,24 @@
                         }
                     }
                     if (FilterType === "RevenueSummary" || FilterType === "GlobalFilter") {
-                        // Ensure newData.RevenueChart is not null or undefined
                         const txnData = newData.RevenueChart;
-                        
+
                         if (Array.isArray(txnData) && txnData.length > 0) {
-                            // Map the data for revenue, conversion rate, and periods
-                            const revenueData = txnData.map(item => item.TotalRevenue === 0 ? null : item.TotalRevenue);  
-                            const conversionRateData = txnData.map(item => item.ConversionRate === 0 ? null : item.ConversionRate); 
+                            const revenueData = txnData.map(item => item.TotalRevenue === 0 ? null : item.TotalRevenue);
+                            const conversionRateData = txnData.map(item => item.ConversionRate === 0 ? null : item.ConversionRate);
                             const categories = txnData.map(item => item.PeriodName);
-                            
+
                             if (window.RevenueComboChart) {
                                 window.RevenueComboChart.updateOptions({
                                     xaxis: {
-                                        categories: categories 
+                                        categories: categories
                                     }
                                 });
-                                
+
                                 window.RevenueComboChart.updateSeries([
                                     { name: 'Revenue', data: revenueData },
                                     { name: 'Conversion Rate', data: conversionRateData }
-                                ], true); 
+                                ], true);
                             } else {
                                 alert("RevenueComboChart is not initialized.");
                             }

@@ -1,4 +1,4 @@
-/*
+﻿/*
  |--------------------------------------------------------------------------
  | Shards Dashboards: Advance Dashbord|Milind
  |--------------------------------------------------------------------------
@@ -110,28 +110,38 @@
             });
         });
 
+        //***Channel-wise Summary Bar Chart
+        var DataString = $('#hiddenChannelData').val();
+        var Records = [];
+        DataString = DataString.replace(/\\/g, '');
+        Records = JSON.parse(DataString);
 
+        var timeperiod = Records.map(t => t.timeperiod);
+        var channel = Records.map(t => t.channel);
+        var totalcount = Records.map(t => t.totalcount);
+        var successcount = Records.map(t => t.successcount);
+        var failurecount = Records.map(t => t.failurecount);
+        var successrate = Records.map(t => t.successrate);
+        var failurerate = Records.map(t => t.failurerate);
 
-        // Transaction Summary Bar Chart
         var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
         var bouData = {
-            // Generate the days labels on the X axis.
-            labels: Array.from(new Array(30), function (_, i) {
-                return i + 1;
-            }),
+            labels: timeperiod,
 
             datasets: [{
-                label: 'Current Month',
-                data: [500, 800, 320, 180, 240, 320, 230, 650, 590, 1200, 750, 940, 1420, 1200, 960, 1450, 1820, 2800, 2102, 1920, 3920, 3202, 3140, 2800, 3200, 3200, 3400, 2910, 3100, 4250],
-                backgroundColor: 'rgba(0,123,255,0.5)',
-                borderColor: 'rgba(0,123,255,1)',
+                label: 'Success',
+                data: successcount,
+                backgroundColor: 'rgb(33, 150, 243)',
+                borderColor: 'rgb(33, 150, 243)',
                 borderWidth: 1.5,
+                stack: 'stack1'
             }, {
-                label: 'Past Month',
-                data: [380, 430, 120, 230, 410, 740, 472, 219, 391, 229, 400, 203, 301, 380, 291, 620, 700, 300, 630, 402, 320, 380, 289, 410, 300, 530, 630, 720, 780, 1200],
-                backgroundColor: 'rgba(255,65,105,0.5)',
-                borderColor: 'rgba(255,65,105,1)',
+                label: 'Failure',
+                data: failurecount,
+                backgroundColor: 'rgb(255, 69, 96)',
+                borderColor: 'rgb(255, 69, 96)',
                 borderWidth: 1.5,
+                stack: 'stack1'
             }]
         };
 
@@ -147,24 +157,35 @@
                     },
                     ticks: {
                         callback: function (tick, index) {
-                            // Jump every 7 values on the X axis labels to avoid clutter.
-                            return index % 7 !== 0 ? '' : tick;
+                            return index % 7 === 0 ? tick : '';
                         }
                     }
                 },
                 y: {
+                    stacked: true,
+                    beginAtZero: true, // Ensure the y-axis starts at zero
                     ticks: {
-                        suggestedMax: 4500, // Increased suggested max for better scaling
-                        callback: function (tick, index, ticks) {
-                            if (tick === 0) {
+                        // Dynamically adjust the max value based on your data
+                        min: 0,
+                        max: Math.max(...successcount, ...failurecount) * 1.2, // Add 20% padding
+                        callback: function (tick) {
+                            // If the tick value is greater than 1 million, format as "M"
+                            if (tick >= 1e6) {
+                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                            }
+                            // If the tick value is greater than 1 thousand, format as "K"
+                            else if (tick >= 1e3) {
+                                return (tick / 1e3).toFixed(1) + 'k'; // Thousands
+                            }
+                            // Return tick value as is if it's less than 1000
+                            else {
                                 return tick;
                             }
-                            // Format the amounts using Ks for thousands.
-                            return tick > 999 ? (tick / 1000).toFixed(1) + 'K' : tick;
                         }
                     }
                 }
             },
+
             hover: {
                 mode: 'nearest',
                 intersect: false
@@ -173,88 +194,78 @@
                 custom: false,
                 mode: 'nearest',
                 intersect: false
+            },
+            plugins: {
+                datalabels: {
+                    anchor: 'end',
+                    align: 'top',
+                    font: {
+                        weight: 'bold',
+                        size: 12
+                    },
+                    color: 'black',
+                    formatter: function (value, context) {
+                        const channelName = channel[context.dataIndex];
+                        return channelName;
+                    },
+                    backgroundColor: 'rgba(255,255,255,0.8)',
+                    borderRadius: 4
+                }
             }
         };
 
         window.BlogOverviewUsers = new Chart(bouCtx, {
-            type: 'bar', // Ensure the chart type is set to 'bar' for a bar chart
+            type: 'bar',
             data: bouData,
             options: bouOptions
         });
-        //End
+
+        //***End
 
 
-        //Rule-Wise Chart 
-        function generateDonutChart(canvasId, successPercentage) {
-            var ctx = document.getElementById(canvasId).getContext('2d');
-            var success = successPercentage;
-            var failure = 100 - success;
-            var chart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    datasets: [{
-                        data: [success, failure],
-                        backgroundColor: ['#007bff', '#f8d7da'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    cutoutPercentage: 70,
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            enabled: false
-                        }
-                    }
-                }
-            });
-        }
-        generateDonutChart('rule1-chart', 85);
-        generateDonutChart('rule2-chart', 80);
-        generateDonutChart('rule3-chart', 83.33);
-        generateDonutChart('rule4-chart', 90);
-        generateDonutChart('rule5-chart', 90);
-        //End Rule-Wise Chart 
 
 
-        //Agent OnBoard Trend Chart
+        //Agent OnBoard Line Chart
         var bouCtx = document.getElementsByClassName('AgentOnboardTrend')[0];
+        var DataString = $('#hiddenAgentOnboradingData').val();
+        var Records = [];
+        DataString = DataString.replace(/\\/g, '');
+        Records = JSON.parse(DataString);
 
-        // Data
+        var timeperiod = Records.map(t => t.timeperiod);
+        var Current = Records.map(t => t.currentcount);
+        var Previous = Records.map(t => t.previouscount);
+
         var bouData = {
-            labels: Array.from(new Array(30), function (_, i) {
-                return i === 0 ? 1 : i;
-            }),
+            labels: timeperiod,
             datasets: [{
-                label: 'Current Years',
+                label: 'Current',
                 fill: 'start',
-                data: [500, 800, 320, 180, 240, 320, 230, 650, 590, 1200, 750, 940, 1420, 1200, 960, 1450, 1820, 2800, 2102, 1920, 3920, 3202, 3140, 2800, 3200, 3200, 3400, 2910, 3100, 4250],
+                data: Current,
                 backgroundColor: 'rgba(0,123,255,0.1)',
                 borderColor: 'rgba(0,123,255,1)',
                 pointBackgroundColor: '#ffffff',
                 pointHoverBackgroundColor: 'rgb(0,123,255)',
                 borderWidth: 1.5,
-                pointRadius: 0,
-                pointHoverRadius: 3
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                borderJoinStyle: 'round',
+                lineTension: 0.3,
             }, {
-                label: 'Past Year',
+                label: 'Previous',
                 fill: 'start',
-                data: [380, 430, 120, 230, 410, 740, 472, 219, 391, 229, 400, 203, 301, 380, 291, 620, 700, 300, 630, 402, 320, 380, 289, 410, 300, 530, 630, 720, 780, 1200],
+                data: Previous,
                 backgroundColor: 'rgba(255,65,105,0.1)',
                 borderColor: 'rgba(255,65,105,1)',
                 pointBackgroundColor: '#ffffff',
                 pointHoverBackgroundColor: 'rgba(255,65,105,1)',
                 borderDash: [3, 3],
                 borderWidth: 1,
-                pointRadius: 0,
-                pointHoverRadius: 2,
-                pointBorderColor: 'rgba(255,65,105,1)'
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                pointBorderColor: 'rgba(255,65,105,1)',
             }]
         };
-        
         var bouOptions = {
             responsive: true,
             legend: {
@@ -265,26 +276,39 @@
                     tension: 0.3
                 },
                 point: {
-                    radius: 0
+                    radius: 3
                 }
             },
             scales: {
                 xAxes: [{
                     gridLines: false,
                     ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 0,
                         callback: function (tick, index) {
-                            return index % 7 !== 0 ? '' : tick;
-                        }
+                            var totalLabels = timeperiod.length;
+                            if (totalLabels <= 7) {
+                                return tick;
+                            }
+                            return index % 7 === 0 ? tick : '';
+                        },
+                        padding: 10
                     }
                 }],
                 yAxes: [{
                     ticks: {
                         suggestedMax: 45,
-                        callback: function (tick, index, ticks) {
-                            if (tick === 0) {
+                        callback: function (tick) {
+                            if (tick >= 1e9) {
+                                return (tick / 1e9).toFixed(1) + 'B'; // Billions
+                            } else if (tick >= 1e6) {
+                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                            } else if (tick >= 1e3) {
+                                return (tick / 1e3).toFixed(1) + 'K'; // Thousands
+                            } else {
                                 return tick;
                             }
-                            return tick > 999 ? (tick / 1000).toFixed(1) + 'K' : tick;
                         }
                     }
                 }]
@@ -310,80 +334,102 @@
 
 
 
-        //Aggregator Bar Chart
-        var bouCtx = document.getElementsByClassName('AggregatorView')[0];
-        var aggregators = [
+        //Agent Txn Bar Chart
+        var ctx = document.getElementsByClassName('AggregatorView')[0];
+
+        var AgentsName = [
             "DataHive", "ContentFusion", "InfoMerge", "WebSift", "StreamSync", "SyncMaster",
             "AgriFusion", "Collecto", "GatherPro", "DataBridge", "SmartFusion", "MegaCollect",
             "ContentCore", "MediaHub", "OmniAggregator"
         ];
-
-        var uniqueColors = [
-            'rgba(255,99,132,0.6)', 'rgba(54,162,235,0.6)', 'rgba(255,206,86,0.6)', 'rgba(75,192,192,0.6)',
-            'rgba(153,102,255,0.6)', 'rgba(255,159,64,0.6)', 'rgba(199,99,132,0.6)', 'rgba(255,123,200,0.6)',
-            'rgba(122,180,255,0.6)', 'rgba(12,20,255,0.6)', 'rgba(200,245,99,0.6)', 'rgba(99,122,255,0.6)',
-            'rgba(90,180,90,0.6)', 'rgba(100,150,200,0.6)', 'rgba(255,100,200,0.6)'
+        
+        var agentData = [
+            [20, 13, 8, 7, 22, 12, 3],  // DataHive
+            [40, 10, 10, 30, 20, 30, 50], // ContentFusion
+            [12, 23, 12, 14, 16, 18, 22], // InfoMerge
+            [25, 18, 15, 22, 30, 35, 40], // WebSift
+            [10, 12, 15, 20, 25, 30, 35], // StreamSync
+            [30, 25, 10, 5, 40, 45, 50],  // SyncMaster
+            [50, 45, 35, 40, 42, 47, 52], // AgriFusion
+            [18, 16, 14, 13, 19, 17, 22], // Collecto
+            [22, 30, 27, 28, 26, 32, 37], // GatherPro
+            [15, 18, 22, 24, 27, 31, 33], // DataBridge
+            [28, 19, 12, 25, 18, 15, 40], // SmartFusion
+            [35, 40, 30, 27, 22, 18, 30], // MegaCollect
+            [10, 14, 15, 18, 25, 35, 40], // ContentCore
+            [5, 10, 12, 18, 20, 22, 25],  // MediaHub
+            [40, 35, 32, 30, 27, 20, 22]  // OmniAggregator
         ];
-
-        var dataValues = [
-            500, 800, 320, 180, 240, 320, 230, 650, 590, 1200, 750, 940, 1420, 1200, 960
-        ];
-
-        var bouData = {
-            labels: aggregators,
-
-            datasets: [{
-                label: 'Current Month',
-                data: dataValues,
-                backgroundColor: uniqueColors,
-                borderColor: uniqueColors,
-                borderWidth: 1.5,
-            }]
+       
+        var chartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],  // Example months
+            datasets: []
         };
-
-        var bouOptions = {
-            responsive: true,
-            legend: {
-                position: 'top'
-            },
-            scales: {
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    ticks: {
-                        autoSkip: false,
-                        maxRotation: 45,
-                        minRotation: 45,
-                    }
-                },
-                y: {
-                    ticks: {
-                        suggestedMax: 4500,
-                        callback: function (tick, index, ticks) {
-                            if (tick === 0) {
-                                return tick;
+        
+        for (var i = 0; i < AgentsName.length; i++) {
+            chartData.datasets.push({
+                label: AgentsName[i], 
+                backgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.5)`, 
+                borderColor: `rgb(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255})`, 
+                borderWidth: 1,
+                data: agentData[i],  
+                hoverBackgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.7)`, 
+            });
+        }
+        
+        var myChart = new Chart(ctx, {
+            type: 'bar', 
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            callback: function (tick, index) {
+                                return index % 1 === 0 ? tick : '';
                             }
-                            return tick > 999 ? (tick / 1000).toFixed(1) + 'K' : tick;
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            min: 0,
+                            max: Math.max(...agentData.flat()) * 1.2,  
+                            callback: function (tick) {
+                                if (tick >= 1e6) {
+                                    return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                                } else if (tick >= 1e3) {
+                                    return (tick / 1e3).toFixed(1) + 'k'; // Thousands
+                                } else {
+                                    return tick;
+                                }
+                            }
                         }
                     }
+                },
+                plugins: {
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        font: {
+                            weight: 'bold',
+                            size: 12
+                        },
+                        color: 'black',
+                        backgroundColor: 'rgba(255,255,255,0.8)',
+                        borderRadius: 4
+                    }
                 }
-            },
-            hover: {
-                mode: 'nearest',
-                intersect: false
-            },
-            tooltips: {
-                custom: false,
-                mode: 'nearest',
-                intersect: false
             }
-        };
-
-        window.BlogOverviewUsers = new Chart(bouCtx, {
-            type: 'bar',
-            data: bouData,
-            options: bouOptions
         });
         //End
 
