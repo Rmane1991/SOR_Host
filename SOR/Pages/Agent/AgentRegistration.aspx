@@ -1184,7 +1184,7 @@
     <asp:HiddenField ID="AddPage" Value="#Upload" runat="server" />
     <div class="container-fluid">
         <div class="breadHeader">
-            <h5 class="page-title">Agent Registration (Onboarding)</h5>
+            <h5 class="page-title">Agent Registration</h5>
         </div>
         <asp:UpdatePanel runat="server" ID="upContentBody">
             <ContentTemplate>
@@ -1526,7 +1526,7 @@
                                                                         <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtaadharno" Width="100%" PlaceHolder="Enter 12 digit Aadhaarcard No." MaxLength="12"></asp:TextBox>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtaadharno" ReadOnly="true" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter Aadhaar card no"></asp:RequiredFieldValidator>
                                                                         <asp:HiddenField ID="hd_txtaadharno" runat="server" Value="1" />
-                                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator41" ControlToValidate="txtaadharno" Display="None" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter Aadhaar Card no"></asp:RequiredFieldValidator>
+                                                                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator41" ControlToValidate="txtaadharno" Display="None" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter Aadhaar Card no"></asp:RequiredFieldValidator>--%>
                                                                     </div>
 
                                                                     <%-- <div class="col"><label for="exampleInputEmail1">Aadhaar card No. <span class="err">*</span>

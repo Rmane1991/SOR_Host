@@ -61,6 +61,8 @@ namespace SOR.Pages.Agent
             CheckedAll = 1,
             UnCheckAll = 2
         }
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
 
         #region Page Load
@@ -68,6 +70,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["UserName"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["UserName"].ToString(), Session["UserRoleID"].ToString(), "AgVerification.aspx", "19");
@@ -115,7 +118,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Page : AgentVerification.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Page : AgentVerification.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -235,6 +238,7 @@ namespace SOR.Pages.Agent
             DataSet ds = new DataSet();
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvAgent.DataSource = null;
                 gvAgent.DataBind();
                 lblRecordsTotal.Text = "";
@@ -272,11 +276,11 @@ namespace SOR.Pages.Agent
                     panelGrid.Visible = false;
                     lblRecordsTotal.Text = "Total 0 Record(s) Found.";
                 }
-
+                ErrorLog.AgentManagementTrace("AgVerification | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: FillGrid: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: FillGrid: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return ds;
@@ -286,6 +290,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | CommonSave() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region  Alert and Log Messages
                 if (!String.IsNullOrEmpty(ViewState["ActionType"].ToString()))
                 {
@@ -367,9 +372,15 @@ namespace SOR.Pages.Agent
                                    
 
                                     _AgentRegistrationDAL.ATRemark = TxtRemarks.Text.Trim();
-                                    _AgentRegistrationDAL.UserName = Session["Username"].ToString(); 
+                                    _AgentRegistrationDAL.UserName = Session["Username"].ToString();
                                     //_dsVerification = _AgentRegistrationDAL.ChangeAgentStatus();
-
+                                    #region Audit
+                                    _auditParams[0] = Session["Username"].ToString();
+                                    _auditParams[1] = "Agent-Verification";
+                                    _auditParams[2] = _strAlertMessage_Header;
+                                    _auditParams[3] = Session["LoginKey"].ToString();
+                                    _LoginEntity.StoreLoginActivities(_auditParams);
+                                    #endregion
                                     if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Decline.ToString())
                                     {
                                         _dsVerification = _AgentRegistrationDAL.ChangeAgentStatus();
@@ -682,10 +693,11 @@ namespace SOR.Pages.Agent
                         #endregion
                         break;
                 }
+                ErrorLog.AgentManagementTrace("AgVerification | CommonSave() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: CommonSave: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: CommonSave: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -694,6 +706,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | SingleSave() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.AgentManagementTrace("AgentVerification: SingleSave: Received - Maker Verification.  StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentCode: " + AgentID + " Fullname: " + _strAgentFullName + " User: " + User + " ReceiverEmailID: " + ReceiverEmailID + " ContactNo: " + ContactNo + " Remarks: " + Remarks);
                 _AgentRegistrationDAL.ActivityType = _ActivityType;
                 _AgentRegistrationDAL.AgentCode = _AgentCode;
@@ -706,7 +719,13 @@ namespace SOR.Pages.Agent
                 _AgentRegistrationDAL.ATRemark = Remarks;
                 _AgentRegistrationDAL.UserName = Session["Username"].ToString();
                 _AgentRegistrationDAL.ClientId = _ClientCode;
-
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = _strAlertMessage_Header;
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Decline.ToString())
                 {
                     _dsVerification = _AgentRegistrationDAL.ChangeAgentStatus();
@@ -965,10 +984,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Approve/Decline Request Unsuccessful', 'Agent Verification');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("AgVerification | SingleSave() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: SingleSave: Failed - Maker Verification. Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: SingleSave: Failed - Maker Verification. Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -980,11 +1000,20 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | btnSearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                ErrorLog.AgentManagementTrace("AgVerification | btnSearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: btnSearch_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: btnSearch_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -993,16 +1022,25 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | btnClear_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "btnClear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 ddlBCCode.SelectedValue = "0";
                 ddlAgentCode.SelectedValue = "0";
                 ddlActivityType.SelectedValue = "-1";
                 ddlFileID.ClearSelection();
 
                 FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                ErrorLog.AgentManagementTrace("AgVerification | btnClear_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: btnClear_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: btnClear_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1014,6 +1052,14 @@ namespace SOR.Pages.Agent
             ViewState["ActionType"] = EnumCollection.EnumDBOperationType.Approve.ToString();
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | btnApprove_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "btnApprove";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 foreach (GridViewRow row in gvAgent.Rows)
                 {
                     if (row.RowType == DataControlRowType.DataRow)
@@ -1037,10 +1083,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Approve Agent(s)');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("AgVerification | btnApprove_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: btnApprove_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: btnApprove_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1052,6 +1099,14 @@ namespace SOR.Pages.Agent
             ViewState["ActionType"] = EnumCollection.EnumDBOperationType.Decline.ToString();
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | btnDecline_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "btnDecline";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 foreach (GridViewRow row in gvAgent.Rows)
                 {
                     if (row.RowType == DataControlRowType.DataRow)
@@ -1075,10 +1130,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Decline Agent(s)');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("AgVerification | btnDecline_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: btnDecline_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: btnDecline_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1089,6 +1145,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | btnSaveAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "btnSaveAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (TxtRemarks.Text == null || TxtRemarks.Text == "")
                 {
                     ModalPopupExtender_Declincard.Show();
@@ -1115,10 +1179,11 @@ namespace SOR.Pages.Agent
                     ViewState["SelectionType"] = null;
                     return;
                 }
+                //ErrorLog.AgentManagementTrace("AgVerification | btnSaveAction_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: btnSaveAction_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: btnSaveAction_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 ViewState["ActionType"] = null;
                 ViewState["SelectionType"] = null;
@@ -1132,6 +1197,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | btnCancelAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "btnSaveAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string _alertMessage = string.Empty;
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Approve.ToString())
                 {
@@ -1147,11 +1220,12 @@ namespace SOR.Pages.Agent
                 TxtRemarks.Text = string.Empty;
                 ViewState["ActionType"] = null;
                 FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
+                ErrorLog.AgentManagementTrace("AgVerification | btnCancelAction_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 return;
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: btnCancelAction_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: btnCancelAction_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 ViewState["ActionType"] = null;
                 return;
@@ -1719,6 +1793,14 @@ namespace SOR.Pages.Agent
             {
                 try
                 {
+                    ErrorLog.AgentManagementTrace("AgVerification | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Verification";
+                    _auditParams[2] = "btnSubmitDetails";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     if (txtFinalRemarks.Text != null && txtFinalRemarks.Text != "")
                     {
                         _fileLineNo = "0";
@@ -1745,10 +1827,11 @@ namespace SOR.Pages.Agent
 
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter Remarks', 'Agent Verification');", true);
                     }
+                    ErrorLog.AgentManagementTrace("AgVerification | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.AgentManagementTrace("AgentVerification: btnSubmitDetails_Click: Exception: " + Ex.Message);
+                    ErrorLog.AgentManagementTrace("AgentVerification: btnSubmitDetails_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 }
             }
@@ -1814,14 +1897,16 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | Unnamed_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 string pdfPath = Server.MapPath("~/Thumbnail/Aadhar/document-1_220422_110414 (1) (1).pdf");
                 Session["pdfPath"] = pdfPath;
                 string script = "<script type='text/javascript'>window.open('" + "PdfExport.aspx" + "')</script>";
                 this.ClientScript.RegisterStartupScript(this.GetType(), "script", script);
+                ErrorLog.AgentManagementTrace("AgVerification | Unnamed_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: Unnamed_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: Unnamed_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1831,6 +1916,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | BtnCsv_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 //_AgentRegistrationDAL.Flag = ((int)EnumCollection.EnumPermissionType.AgL2Export);
@@ -1838,6 +1924,13 @@ namespace SOR.Pages.Agent
                 DataSet dt = FillGrid(EnumCollection.EnumPermissionType.AgL2Export);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Verification";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "L3 Approval Business Correspondents Details", dt);
                 }
                 else
@@ -1856,6 +1949,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | BtnXls_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 //_AgentRegistrationDAL.Flag = ((int)EnumCollection.EnumPermissionType.AgL2Export);
@@ -1863,6 +1957,13 @@ namespace SOR.Pages.Agent
                 DataSet dt = FillGrid(EnumCollection.EnumPermissionType.AgL2Export);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-Verification";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "L3 Approval Business Correspondents Details", dt);
                 }
                 {
@@ -1918,6 +2019,7 @@ namespace SOR.Pages.Agent
             DataSet ds = null;
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | FillGridBulk() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
 
                 gvAgBulkL3.DataSource = null;
                 gvAgBulkL3.DataBind();
@@ -1959,10 +2061,12 @@ namespace SOR.Pages.Agent
 
                     }
                 }
+                ErrorLog.AgentManagementTrace("AgVerification | FillGridBulk() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.ZOMError(Ex);
+                ErrorLog.AgentManagementTrace("AgVerification: FillGridBulk(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return ds;
         }
@@ -2053,6 +2157,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | BulkApprove_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "BulkApprove";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 _strAlertMessage_Total = "Total Record Processed for Approve Agent(s) :  ";
 
                 _AgentRegistrationDAL.FileID = Session["FileID"].ToString();
@@ -2206,10 +2318,11 @@ namespace SOR.Pages.Agent
                 //{
                 //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 //}
+                ErrorLog.AgentManagementTrace("AgVerification | BulkApprove_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: BulkApprove_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: BulkApprove_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
@@ -2220,6 +2333,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgVerification | BulkDecline_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-Verification";
+                _auditParams[2] = "BulkDecline";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 _AgentRegistrationDAL.Mstatus = Convert.ToString((int)(EnumCollection.Onboarding.MakerDecline));
                 _AgentRegistrationDAL.ChStatus = Convert.ToString((int)(EnumCollection.Onboarding.CheckerPending));
                 _AgentRegistrationDAL.UserName = Session["Username"].ToString();
@@ -2265,48 +2386,51 @@ namespace SOR.Pages.Agent
                 }
                 FillGrid(EnumCollection.EnumPermissionType.EnableRoles);
                 FillGridBulk(EnumCollection.EnumBindingType.AgBulkL3);
+                ErrorLog.AgentManagementTrace("AgVerification | BulkDecline_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentVerification: BulkDecline_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentVerification: BulkDecline_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
         }
 
 
-        protected void BulkDecline_SerHJHJHJverClick(object sender, EventArgs e)
-        {
-            try
-            {
-                _AgentRegistrationDAL.Mstatus = Convert.ToString((int)(EnumCollection.Onboarding.MakerDecline));
-                _AgentRegistrationDAL.ChStatus = Convert.ToString((int)(EnumCollection.Onboarding.CheckerPending));
-                _AgentRegistrationDAL.UserName = Session["Username"].ToString();
-                _AgentRegistrationDAL.MakerRemark = txtResone.Text;
-                _AgentRegistrationDAL.ActionType = "8";
-                _AgentRegistrationDAL.FileID = Session["FILEID"].ToString();
-                _dsVerification = _AgentRegistrationDAL.ChangeAgentStatusBulk();
-                if (_dsVerification != null && _dsVerification.Tables[0].Rows.Count > 0)
-                {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Decline Successfully', 'Agent Verification');", true);
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
-                }
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.AgentManagementTrace("AgentVerification: BulkDecline_ServerClick: Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
-            }
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
-        }
+        //protected void BulkDecline_SerHJHJHJverClick(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        _AgentRegistrationDAL.Mstatus = Convert.ToString((int)(EnumCollection.Onboarding.MakerDecline));
+        //        _AgentRegistrationDAL.ChStatus = Convert.ToString((int)(EnumCollection.Onboarding.CheckerPending));
+        //        _AgentRegistrationDAL.UserName = Session["Username"].ToString();
+        //        _AgentRegistrationDAL.MakerRemark = txtResone.Text;
+        //        _AgentRegistrationDAL.ActionType = "8";
+        //        _AgentRegistrationDAL.FileID = Session["FILEID"].ToString();
+        //        _dsVerification = _AgentRegistrationDAL.ChangeAgentStatusBulk();
+        //        if (_dsVerification != null && _dsVerification.Tables[0].Rows.Count > 0)
+        //        {
+        //            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Decline Successfully', 'Agent Verification');", true);
+        //        }
+        //        else
+        //        {
+        //            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        ErrorLog.AgentManagementTrace("AgentVerification: BulkDecline_ServerClick: Exception: " + Ex.Message);
+        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+        //    }
+        //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
+        //}
 
         protected void bulkClose_ServerClick(object sender, EventArgs e)
         {
+            ErrorLog.AgentManagementTrace("AgVerification | bulkClose_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             ModalPopupExtender_EditRole.Hide();
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
+            ErrorLog.AgentManagementTrace("AgVerification | bulkClose_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
         protected void gvAgBulkL3_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -2314,6 +2438,7 @@ namespace SOR.Pages.Agent
             {
                 if (e.CommandName.Contains("DownloadDoc"))
                 {
+                    ErrorLog.AgentManagementTrace("AgVerification | RowCommand-DownloadDoc | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     string status = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
@@ -2326,6 +2451,13 @@ namespace SOR.Pages.Agent
                     if (string.IsNullOrEmpty(status)) status = "Bulk Manual Kyc Upload";
                     if (Ds != null && Ds.Tables.Count > 0)
                     {
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "Agent-Verification";
+                        _auditParams[2] = "RowCommand-DownloadDoc";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         exportFormat.ExporttoExcel(Session["Username"].ToString(), Session["BankName"].ToString(), status, Ds);
                     }
                     else
@@ -2333,11 +2465,20 @@ namespace SOR.Pages.Agent
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Something went wrong. Try again', 'Warning');", true);
                         return;
                     }
+                    ErrorLog.AgentManagementTrace("AgVerification | RowCommand-DownloadDoc | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 if (e.CommandName.Contains("DownloadZip"))
                 {
                     try
                     {
+                        ErrorLog.AgentManagementTrace("AgVerification | RowCommand-DownloadZip | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "Agent-Verification";
+                        _auditParams[2] = "RowCommand-DownloadZip";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         ImageButton lb = (ImageButton)e.CommandSource;
                         GridViewRow gvr = (GridViewRow)lb.NamingContainer;
                         int rowIndex = Convert.ToInt32(e.CommandArgument.ToString());
@@ -2357,12 +2498,11 @@ namespace SOR.Pages.Agent
                         response.BinaryWrite(data);
                         response.End();
                         ErrorLog.UploadTrace(string.Format("Completed Document Upload Sample File Download."));
+                        ErrorLog.AgentManagementTrace("AgVerification | RowCommand-DownloadZip | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     }
                     catch (Exception ex)
                     {
-
-
-                        ErrorLog.AgentManagementTrace("Pre-Verification: DownloadZip_Click: Exception: " + ex.Message);
+                        ErrorLog.AgentManagementTrace("Pre-Verification: DownloadZip_Click: Exception: " + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                         return;
                     }
                 }

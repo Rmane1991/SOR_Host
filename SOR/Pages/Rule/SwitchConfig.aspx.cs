@@ -28,11 +28,14 @@ namespace SOR.Pages.Rule
         DataTable dt = new DataTable();
         private DataTable dtSwitchValues;
         DataTable updatesTable = new DataTable();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "SwitchConfig.aspx", "8");
@@ -79,7 +82,7 @@ namespace SOR.Pages.Rule
             }
             catch (Exception Ex)
             {
-                ErrorLog.DashboardTrace("SwitchConfig : Page_Load(): Exception: " + Ex.Message);
+                ErrorLog.DashboardTrace("SwitchConfig : Page_Load(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -144,14 +147,23 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnAddSwitch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnAddSwitch_Click";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 Session["SwitchPercentage"] = null;
                 hdnShowModal.Value = "true";
                 BindSwitch();
                 BindDropdown();
+                ErrorLog.RuleTrace("SwitchConfig | btnAddSwitch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnAddGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnAddGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
         private void AddSwitchValue(DropDownList ddl, TextBox txt)
@@ -173,6 +185,8 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnCreSwitch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                
                 if (string.IsNullOrEmpty(txtSwitchName.Text))
                 {
                     ShowWarning("Please Enter Switch Name. Try again", "Warning");
@@ -315,7 +329,13 @@ namespace SOR.Pages.Rule
                     }
                 }
 
-
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnCreSwitch";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (Session["SwitchPercentage"] != null)
                 {
 
@@ -472,11 +492,12 @@ namespace SOR.Pages.Rule
 
                 hdnShowModal.Value = "false";
                 BindSwitch();
+                ErrorLog.RuleTrace("SwitchConfig | btnCreSwitch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
                 hdnShowModal.Value = "false";
-                ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("TrRule: btnCreGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -495,22 +516,33 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnCloseSwitch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 hdnShowModal.Value = "false";
+                ErrorLog.RuleTrace("SwitchConfig | btnCloseSwitch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnAddGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnAddGroup_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
         [WebMethod]
         public static string ToggleSlider(bool IsChecked, string Id)
         {
+            LoginEntity _LoginEntity = new LoginEntity();
+            string[] _auditParams = new string[4];
+            ErrorLog.RuleTrace("SwitchConfig | ToggleSlider() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             bool isActive = IsChecked;
             _RuleEntityy.IsActive = isActive ? 0 : 1;
             _RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
             _RuleEntityy.SwitchId = Convert.ToInt32(Id);
             _RuleEntityy.Flag = (int)EnumCollection.EnumRuleType.Update;
-
+            #region Audit
+            _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+            _auditParams[1] = "SwitchConfig";
+            _auditParams[2] = "ToggleSlider-UpdateSwitchStatus";
+            _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+            _LoginEntity.StoreLoginActivities(_auditParams);
+            #endregion
             string validateCode = _RuleEntityy.ValidateFailoverSwitch();
             if (validateCode == "00")
             {
@@ -552,6 +584,7 @@ namespace SOR.Pages.Rule
                 ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : " + validateCode);
                 return new JavaScriptSerializer().Serialize(response);
             }
+            //ErrorLog.RuleTrace("SwitchConfig | ToggleSlider() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
         }
 
         protected void rptrSwitch_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -609,6 +642,14 @@ namespace SOR.Pages.Rule
             txtswitch6.Text = string.Empty;
             if (e.CommandName == "Edit")
             {
+                ErrorLog.RuleTrace("SwitchConfig | rptrSwitch_ItemCommand-Edit | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "rptrSwitch_ItemCommand-Edit";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtSwitchName.Enabled = false;
                 int itemId = Convert.ToInt32(e.CommandArgument);
                 _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
@@ -755,9 +796,18 @@ $(document).ready(function () {
 
 
                 hdnShowModal.Value = "true";
+                ErrorLog.RuleTrace("SwitchConfig | rptrSwitch_ItemCommand-Edit | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             else if (e.CommandName == "Delete")
             {
+                ErrorLog.RuleTrace("SwitchConfig | rptrSwitch_ItemCommand-Delete | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "rptrSwitch_ItemCommand-Delete";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 int itemId = Convert.ToInt32(e.CommandArgument);
                 _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
                 _RuleEntity.SwitchId = Convert.ToInt32(itemId);
@@ -906,6 +956,7 @@ $(document).ready(function () {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('This Switch Already Use In The Failover Switch', 'Warning');", true);
                     return;
                 }
+                ErrorLog.RuleTrace("SwitchConfig | rptrSwitch_ItemCommand-Delete | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
         private void BindDropdown()
@@ -1204,15 +1255,33 @@ $(document).ready(function () {
             {
                 if (e.CommandName == "Edit")
                 {
+                    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "SwitchConfig";
+                    _auditParams[2] = "rptSwitchDetails_ItemCommand-Edit";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     // Find the TextBox in the current row (RepeaterItem)
                     TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
                     txtPercentage.Enabled = true;
+                    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
                 else if (e.CommandName == "Update")
                 {
+                    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Update | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "SwitchConfig";
+                    _auditParams[2] = "rptSwitchDetails_ItemCommand-Update";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     // Find the TextBox in the current row and disable it after updating
                     TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
                     txtPercentage.Enabled = false;
+                    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Update | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
                 string script = @"
 $(document).ready(function () {
@@ -1274,7 +1343,7 @@ $(document).ready(function () {
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: rptSwitchDetails_ItemCommand() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: rptSwitchDetails_ItemCommand() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -1934,12 +2003,21 @@ $(document).ready(function () {
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnManual_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnManual";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 hdnshowmanual.Value = "true";
                 BindManualDisableSwitch();
+                ErrorLog.RuleTrace("SwitchConfig | btnManual_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -1987,11 +2065,20 @@ $(document).ready(function () {
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnClsManual_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnManual";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 hdnshowmanual.Value = "false";
+                ErrorLog.RuleTrace("SwitchConfig | btnClsManual_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -2001,6 +2088,7 @@ $(document).ready(function () {
             {
                 if (e.CommandName == "Update")
                 {
+                    ErrorLog.RuleTrace("SwitchConfig | rptManual_ItemCommand-Update | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                     string id = e.CommandArgument.ToString();
                     _RuleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                     _RuleEntity.SwitchId = Convert.ToInt32(id);
@@ -2024,11 +2112,12 @@ $(document).ready(function () {
                     };
                     ErrorLog.RuleTrace("TrRule: btnUpdManual_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                    ErrorLog.RuleTrace("SwitchConfig | rptManual_ItemCommand-Update | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: rptManual_ItemCommand() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: rptManual_ItemCommand() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -2036,6 +2125,14 @@ $(document).ready(function () {
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnDelete_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnDelete";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 updatesTable = CreateUpdatesDataTable();
 
                 if (ViewState["Delete_dt"] == null)
@@ -2140,13 +2237,14 @@ $(document).ready(function () {
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                 HdnShowDelete.Value = "false";
                 BindSwitch();
+                ErrorLog.RuleTrace("SwitchConfig | btnDelete_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
                 lblDeleteMessage.Text = $"An error occurred: {Ex.Message}";
                 lblDeleteMessage.Visible = true;
                 HdnShowDelete.Value = "false";
-                ErrorLog.RuleTrace("SwitchConfig: btnDelete_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnDelete_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -2154,11 +2252,20 @@ $(document).ready(function () {
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnCloseDel_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnCloseDel";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 HdnShowDelete.Value = "false";
+                ErrorLog.RuleTrace("SwitchConfig | btnCloseDel_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
 
@@ -2166,6 +2273,14 @@ $(document).ready(function () {
         {
             try
             {
+                ErrorLog.RuleTrace("SwitchConfig | btnClearFailover_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "SwitchConfig";
+                _auditParams[2] = "btnClearFailover";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     ddlSwitch1.ClearSelection();
@@ -2181,10 +2296,11 @@ $(document).ready(function () {
                     txtswitch5.Text = string.Empty;
                     txtswitch6.Text = string.Empty;
                 }
+                ErrorLog.RuleTrace("SwitchConfig | btnClearFailover_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnClearFailover_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnClearFailover_Click() | Username : " + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
     }

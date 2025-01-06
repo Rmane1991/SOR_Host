@@ -1562,34 +1562,35 @@ namespace BussinessAccessLayer
         public string DeleteBcDetails()
         {
             string _Status = null;
-            string _StatusMsg = null;
             try
             {
-                using (SqlCommand cmd = new SqlCommand())
+                // Create a new connection object for PostgreSQL
+                using (NpgsqlConnection sqlConn = new NpgsqlConnection(ConnectionString))
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(ConnectionString))
+                    // Create the command object
+                    using (NpgsqlCommand cmd = new NpgsqlCommand("sp_agentrequest_delete", sqlConn))
                     {
-                        SqlParameter[] _Params =
-                        {
-                              new SqlParameter("@AgentReqId",AgentReqId),
-                              new SqlParameter("@Status", SqlDbType.VarChar, 200) { Direction = ParameterDirection.Output },
-                        };
-                        cmd.Connection = sqlConn;
-                        cmd.CommandText = "SP_AgentRequest_Delete";
+                        // Set the command type to stored procedure
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddRange(_Params);
-                        DataSet dataSet = new DataSet();
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        dataAdapter.Fill(dataSet);
-                        _Status = Convert.ToString(cmd.Parameters["@Status"].Value);
-                        cmd.Dispose();
-                        return _Status;
+
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_agentreqid", AgentReqId);  // Assuming AgentReqId is of string type
+                        cmd.Parameters.Add("p_status", NpgsqlTypes.NpgsqlDbType.Varchar, 200).Direction = ParameterDirection.Output;
+
+                        // Open connection and execute the command
+                        sqlConn.Open();
+                        cmd.ExecuteNonQuery();
+
+                        // Get the output parameter value
+                        _Status = Convert.ToString(cmd.Parameters["p_status"].Value);
                     }
                 }
+                return _Status;
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistrationDAL.cs \nFunction : EditValidate() \nException Occured\n" + Ex.Message);
+                // Log the error
+                ErrorLog.AgentManagementTrace("Class : AgentRegistrationDAL.cs \nFunction : DeleteBcDetails() \nException Occured\n" + Ex.Message);
                 ErrorLog.DBError(Ex);
                 throw;
             }

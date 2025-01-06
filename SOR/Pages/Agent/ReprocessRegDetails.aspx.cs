@@ -32,14 +32,16 @@ namespace SOR.Pages.Agent
             get { if (appSecurity == null) appSecurity = new AppSecurity(); return appSecurity; }
             set { appSecurity = value; }
         }
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion;
 
         #region Page_Load
         protected void Page_Load(object sender, EventArgs e)
         {
+            ErrorLog.AgentManagementTrace("ReprocessRegDetails | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (!IsPostBack == true)
             {
-
                 BindDropdownCountryState();
                 BindShopCountryState();
                 FillBc();
@@ -266,6 +268,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     string Status = string.Empty;
@@ -359,6 +362,13 @@ namespace SOR.Pages.Agent
 
                         if (_AgentRegistrationDAL.Insert_AgentRequest(Convert.ToString(Session["Username"]), out RequestId, out Status, out StatusMsg))
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Agent-ReprocessAgent";
+                            _auditParams[2] = "btnSubmitDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _AgentRegistrationDAL.AgentReqId = Page.Request.QueryString["AgentReqId"].ToString();
                             DataSet ds = _AgentRegistrationDAL.GetDocs();
 
@@ -409,10 +419,11 @@ namespace SOR.Pages.Agent
                         }
                     }
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegistrationDetails: btnSubmitDetails_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("EditRegistrationDetails: btnSubmitDetails_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -491,7 +502,7 @@ namespace SOR.Pages.Agent
             DataSet ds = null;
             try
             {
-
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ds = _AgentRegistrationDAL.GetAgentDetailForRegistration();
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
@@ -508,10 +519,11 @@ namespace SOR.Pages.Agent
                     btnExportCSV.Visible = false;
                     //lblRecordsTotal.Text = "Total 0 Record(s) Found.";
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegistrationDetails: FillGrid: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("EditRegistrationDetails: FillGrid: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return ds;
@@ -524,6 +536,7 @@ namespace SOR.Pages.Agent
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | ValidateSetProperties() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 // ClientName
                 if (hd_txtFirstName.Value == "1" || !string.IsNullOrEmpty(txtFirstName.Text))
                     if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.TextWithoutSpace, txtFirstName.Text))
@@ -664,11 +677,11 @@ namespace SOR.Pages.Agent
                     }
                     else _AgentRegistrationDAL.TerminalId = txtTerminalId.Text.Trim().ToString();
 
-
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | ValidateSetProperties() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegistrationDetails: ValidateSetProperties: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("EditRegistrationDetails: ValidateSetProperties: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return true;
@@ -789,6 +802,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | PolulateSummary() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HidAGID.Value != null || !string.IsNullOrEmpty(txtPANNo.Text.Trim()))
                 {
                     _AgentRegistrationDAL.PanNo = txtPANNo.Text.Trim();
@@ -857,10 +871,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | PolulateSummary() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegistrationDetails: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: " + Ex.Message + " UserName: " + UserName + " PanNo: " + _AgentRegistrationDAL.PanNo + " RequestId: " + HidAGID.Value);
+                ErrorLog.AgentManagementTrace("EditRegistrationDetails: PolulateSummary: Failed - Fetch Agent Registration Details Using RequestID/PAN From DB. Exception: " + Ex.Message + " UserName: " + UserName + " PanNo: " + _AgentRegistrationDAL.PanNo + " RequestId: " + HidAGID.Value + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
                 return;
             }
@@ -873,6 +888,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField2.Value.ToString() == "Yes")
                 {
                     
@@ -910,10 +926,11 @@ namespace SOR.Pages.Agent
                 else
                 {
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | BtnSubmit_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. Exception: " + Ex.Message + " UserName: " + UserName);
+                ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Failed - Upload Documents. Exception: " + Ex.Message + " UserName: " + UserName + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
                 return;
             }
@@ -1019,7 +1036,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: btnViewDownloadDoc_Click2: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: btnViewDownloadDoc_Click2: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1028,6 +1045,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnCloseReceipt() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     DIVDetails.Visible = true;
@@ -1043,10 +1061,11 @@ namespace SOR.Pages.Agent
                 {
 
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnCloseReceipt() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: btnCloseReceipt_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: btnCloseReceipt_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1077,7 +1096,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: SaveFile: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: SaveFile: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return string.Empty; ;
             }
@@ -1109,7 +1128,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: SaveFileAddprof: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: SaveFileAddprof: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return string.Empty;
             }
@@ -1141,7 +1160,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: SaveFileSignproof: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: SaveFileSignproof: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return string.Empty; ;
             }
@@ -1197,7 +1216,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: ValidateFile: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: ValidateFile: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 _IsValidFileAttached = false;
                 return false;
@@ -1254,7 +1273,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: ValidateFiles: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: ValidateFiles: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 _IsValidFileAttached = false;
                 return false;
@@ -1278,7 +1297,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: DeleteFile: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: DeleteFile: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1306,7 +1325,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: IsValidImage: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: IsValidImage: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return true;
@@ -1318,6 +1337,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | downloadPass_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField3.Value.ToString() == "Yes")
                 {
                     if (ChkConfirmBC.Checked == true)
@@ -1362,11 +1382,12 @@ namespace SOR.Pages.Agent
                     //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong', 'BC Registration');", true);
                     //return;
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | downloadPass_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
 
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: downloadPass_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: downloadPass_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 
@@ -1380,7 +1401,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: btntest_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: btntest_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1389,6 +1410,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DIVDetails.Visible = false;
                 div_Upload.Visible = false;
                 divPaymentReceipt.Visible = false;
@@ -1398,25 +1420,27 @@ namespace SOR.Pages.Agent
                 divAction.Visible = true;
                 divMainDetailsGrid.Visible = true;
                 Response.Redirect("~/Pages/Agent/AgentRegistration.aspx", false);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: btnCancel_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: btnCancel_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
-
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | Button2_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 divPaymentReceipt.Visible = false;
                 btndownload.Visible = true;
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | Button2_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: Button2_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: Button2_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1425,14 +1449,16 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnAddnew_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 divOnboardFranchise.Visible = true;
                 divAction.Visible = false;
                 divMainDetailsGrid.Visible = false;
                 DIVDetails.Visible = true;
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | btnAddnew_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: btnAddnew_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: btnAddnew_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1451,7 +1477,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: btnViewDownload_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: btnViewDownload_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1467,7 +1493,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: Unnamed_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: Unnamed_ServerClick: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1481,39 +1507,44 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DIVDetails.Visible = true;
                 div_Upload.Visible = false;
                 DivAgntDetails.Visible = false;
                 divPaymentReceipt.Visible = false;
                 string val = HidAGID.Value;
                 GetDetails(val);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: BtnBack_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: BtnBack_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
 
         protected void lbtnDelete_Click(object sender, ImageClickEventArgs e)
         {
+            ErrorLog.AgentManagementTrace("ReprocessRegDetails | lbtnDelete_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (hdnUserConfirmation.Value.ToString() == "Yes")
             {
                 //LnkId.Visible = false;
                 //lbtnDelete.Visible = false;
                 //divIdProof.Visible = true;
             }
-
+            ErrorLog.AgentManagementTrace("ReprocessRegDetails | lbtnDelete_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
         {
+            ErrorLog.AgentManagementTrace("ReprocessRegDetails | ImageButton3_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (hdnUserConfirmation.Value.ToString() == "Yes")
             {
                 //LnkSig.Visible = false;
                 //ImageButton3.Visible = false;
                 //divSigProof.Visible = true;
             }
+            ErrorLog.AgentManagementTrace("ReprocessRegDetails | ImageButton3_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         protected void CheckBoxAddress_CheckedChanged(object sender, EventArgs e)
@@ -1559,6 +1590,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | GetDetails() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _AgentRegistrationDAL.AgentReqId = AgentReqId;
 
                 DataSet ds = _AgentRegistrationDAL.GetAgentDetails();
@@ -1748,10 +1780,11 @@ namespace SOR.Pages.Agent
                 {
                     //clearselection();
                 }
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails | GetDetails() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("EditRegitsration: GetDetails: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("ReprocessRegDetails: GetDetails: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1795,7 +1828,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : ddlDistrict_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : ReprocessRegDetails.cs \nFunction : ddlDistrict_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.', 'Alert');", true);
             }
         }
@@ -1831,7 +1864,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : AgentRegistration.cs \nFunction : ddlShopDistrict_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : ReprocessRegDetails.cs \nFunction : ddlShopDistrict_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.', 'Alert');", true);
             }
         }
@@ -1876,7 +1909,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception ex)
             {
-                ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : FillBc()\nException Occured\n" + ex.Message);
+                ErrorLog.AgentManagementTrace("Page : ReprocessRegDetails.cs \nFunction : FillBc()\nException Occured\n" + ex.Message);
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Agent Registration');", true);
                 return;

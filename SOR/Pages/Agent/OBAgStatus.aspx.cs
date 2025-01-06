@@ -25,8 +25,6 @@ namespace SOR.Pages.Agent
 
         DataSet _dsDeactivateBC = null;
 
-        string[] _auditParams = new string[4];
-
         string[]
             _BCActiveParams = new string[8];
 
@@ -80,6 +78,8 @@ namespace SOR.Pages.Agent
             EnableMakerChecker = 1,
             EnableRoles = 2
         }
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
 
         #region Page Load
@@ -87,6 +87,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                 //bool HasPagePermission = true;
@@ -131,7 +132,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: Page_Load: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -253,6 +254,7 @@ namespace SOR.Pages.Agent
             DataSet _dsDeActivate = null;
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvBlockAG.DataSource = null;
                 gvBlockAG.DataBind();
                 lblRecordsTotal.Text = "";
@@ -287,11 +289,11 @@ namespace SOR.Pages.Agent
                     panelGrid.Visible = false;
                     lblRecordsTotal.Text = "Total 0 Record(s) Found.";
                 }
-
+                ErrorLog.AgentManagementTrace("OBAgStatus | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: FillGrid: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: FillGrid: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return _dsDeActivate;
@@ -304,6 +306,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnSearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (ddlActiontype.SelectedValue == "1")
                 {
                     btnActivate.Visible = false;
@@ -332,10 +335,11 @@ namespace SOR.Pages.Agent
                 {
                     FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
                 }
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnSearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: btnSearch_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: btnSearch_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -346,7 +350,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
-
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnClear_Click_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ddlState.SelectedValue = "0";
                 ddlActiontype.SelectedValue = "0";
                 ddlCity.DataSource = null;
@@ -367,10 +371,11 @@ namespace SOR.Pages.Agent
                 FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
                 BindBcDropdown();
                 UserPermissions.RegisterStartupScriptForNavigationListActive("4", "22");
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnClear_Click_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: btnClear_Click_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: btnClear_Click_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -424,6 +429,14 @@ namespace SOR.Pages.Agent
                 ViewState["ActionType"] = Convert.ToString((int)EnumCollection.EnumDBOperationType.Activate);
                 try
                 {
+                    ErrorLog.AgentManagementTrace("OBAgStatus | btnActivate_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-OnboardingStatus";
+                    _auditParams[2] = "btnActivate";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     foreach (GridViewRow row in gvBlockAG.Rows)
                     {
                         if (row.RowType == DataControlRowType.DataRow)
@@ -448,10 +461,11 @@ namespace SOR.Pages.Agent
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Activate Agent(s)');", true);
                         return;
                     }
+                    ErrorLog.AgentManagementTrace("OBAgStatus | btnActivate_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.AgentManagementTrace("OBAgStatus: btnActivate_ServerClick: Exception: " + Ex.Message);
+                    ErrorLog.AgentManagementTrace("OBAgStatus: btnActivate_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 }
             }
@@ -515,6 +529,14 @@ namespace SOR.Pages.Agent
                 ViewState["ActionType"] = Convert.ToString((int)EnumCollection.EnumDBOperationType.Deactivate);
                 try
                 {
+                    ErrorLog.AgentManagementTrace("OBAgStatus | btnDeactivate_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-OnboardingStatus";
+                    _auditParams[2] = "btnDeactivate";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     foreach (GridViewRow row in gvBlockAG.Rows)
                     {
                         if (row.RowType == DataControlRowType.DataRow)
@@ -539,10 +561,11 @@ namespace SOR.Pages.Agent
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Deactivate Agent(s)');", true);
                         return;
                     }
+                    ErrorLog.AgentManagementTrace("OBAgStatus | btnDeactivate_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.AgentManagementTrace("OBAgStatus: btnDeactivate_ServerClick: Exception: " + Ex.Message);
+                    ErrorLog.AgentManagementTrace("OBAgStatus: btnDeactivate_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 }
             }
@@ -616,6 +639,14 @@ namespace SOR.Pages.Agent
             {
                 if (e.CommandName.Contains("EditDetails"))
                 {
+                    ErrorLog.AgentManagementTrace("OBAgStatus | RowCommand-EditDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-OnboardingStatus";
+                    _auditParams[2] = "RowCommand-EditDetails";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string requestid = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
@@ -644,9 +675,18 @@ namespace SOR.Pages.Agent
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Agent request already pending for verification.', 'Warning');", true);
                         return;
                     }
+                    ErrorLog.AgentManagementTrace("OBAgStatus | RowCommand-EditDetails | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 if (e.CommandName.Contains("ViewDetails"))
                 {
+                    ErrorLog.AgentManagementTrace("OBAgStatus | RowCommand-ViewDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-OnboardingStatus";
+                    _auditParams[2] = "RowCommand-ViewDetails";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string requestid = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
@@ -666,11 +706,12 @@ namespace SOR.Pages.Agent
                         ModalPopupResponse.Hide();
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found', 'Warning');", true);
                     }
+                    ErrorLog.AgentManagementTrace("OBAgStatus | RowCommand-ViewDetails | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: gvBlockAG_RowCommand: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: gvBlockAG_RowCommand: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -707,6 +748,14 @@ namespace SOR.Pages.Agent
             ViewState["ActionType"] = Convert.ToString((int)EnumCollection.EnumDBOperationType.OnboardTerminate);
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnTerminate_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-OnboardingStatus";
+                _auditParams[2] = "btnTerminate";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 foreach (GridViewRow row in gvBlockAG.Rows)
                 {
                     if (row.RowType == DataControlRowType.DataRow)
@@ -730,10 +779,11 @@ namespace SOR.Pages.Agent
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Terminate Agent(s)');", true);
                     return;
                 }
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnTerminate_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("Class : OBAgStatus.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message);
+                ErrorLog.AgentManagementTrace("Class : OBAgStatus.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive Agent');", true);
                 return;
             }
@@ -744,6 +794,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnSaveAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-OnboardingStatus";
+                _auditParams[2] = "btnSaveAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (TxtRemarks.Text == null || TxtRemarks.Text == "")
                 {
                     ModalPopupExtender_Declincard.Show();
@@ -930,10 +988,11 @@ namespace SOR.Pages.Agent
                     ViewState["SelectionType"] = null;
                     return;
                 }
+                //ErrorLog.AgentManagementTrace("OBAgStatus | btnSaveAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: btnSaveAction_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: btnSaveAction_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 ViewState["ActionType"] = null;
                 ViewState["SelectionType"] = null;
@@ -947,6 +1006,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnCancelAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-OnboardingStatus";
+                _auditParams[2] = "btnCancelAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string _alertMessage = string.Empty;
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.OnboardTerminate.ToString())
                 {
@@ -962,12 +1029,13 @@ namespace SOR.Pages.Agent
                 ModalPopupExtender_Declincard.Hide();
                 TxtRemarks.Text = string.Empty;
                 ViewState["ActionType"] = null;
+                ErrorLog.AgentManagementTrace("OBAgStatus | btnCancelAction_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
                 return;
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: btnCancelAction_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: btnCancelAction_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1110,23 +1178,30 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | BtnCsv_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "Onboard Agent Details", dt);
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-OnboardingStatus";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Onboard_Agent_Details", dt);
                 }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No data found.', 'Alert');", true);
                 }
-
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: BtnCsv_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: BtnCsv_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1135,13 +1210,21 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("OBAgStatus | BtnXls_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "Onboard Agent Details", dt);
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-OnboardingStatus";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Onboard_Agent_Details", dt);
                 }
                 {
                     //lblRecordCount.Text = "No Record's Found.";
@@ -1151,7 +1234,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: BtnXls_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("OBAgStatus: BtnXls_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }

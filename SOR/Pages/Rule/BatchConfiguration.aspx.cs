@@ -17,10 +17,13 @@ namespace SOR.Pages.Rule
     {
         RuleEntity _ruleEntity = new RuleEntity();
         CommonEntity _CommonEntity = new CommonEntity();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BatchConfiguration.aspx", "30");
@@ -65,7 +68,7 @@ namespace SOR.Pages.Rule
             }
             catch (Exception Ex)
             {
-                ErrorLog.DashboardTrace("BatchConfiguration : Page_Load(): Exception: " + Ex.Message);
+                ErrorLog.DashboardTrace("BatchConfiguration : Page_Load(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -74,11 +77,20 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnSearch_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "BatchConfiguration";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.RuleTrace("BatchConfiguration | btnSearch_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BatchConfiguration: btnSearch_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.LimitTrace("BatchConfiguration: btnSearch_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -88,15 +100,24 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnClear_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "BatchConfiguration";
+                _auditParams[2] = "btnClear";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 gvBankConfiguration.DataSource = null;
                 gvBankConfiguration.DataBind();
+                ErrorLog.RuleTrace("BatchConfiguration | btnClear_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //ddlBCCode.ClearSelection();
                 //ddlClientCode.ClearSelection();
                 //gvLimitStatus.Visible = false;
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BatchConfiguration: btnClear_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.LimitTrace("BatchConfiguration: btnClear_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -106,6 +127,7 @@ namespace SOR.Pages.Rule
             DataTable dt = new DataTable();
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvBankConfiguration.DataSource = null;
                 gvBankConfiguration.DataBind();
                 _ruleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
@@ -125,10 +147,11 @@ namespace SOR.Pages.Rule
                     gvBankConfiguration.DataSource = null;
                     gvBankConfiguration.DataBind();
                 }
+                ErrorLog.RuleTrace("BatchConfiguration | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BatchConfiguration: FillGrid(): Exception: " + Ex.Message);
+                ErrorLog.LimitTrace("BatchConfiguration: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return dt;
@@ -137,14 +160,23 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnAdd_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "BatchConfiguration";
+                _auditParams[2] = "btnAdd";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 BindSwitch();
                 formone.Visible = false;
                 formTwo.Visible = true;
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "AddBatchRows", "addRow();", true);
+                ErrorLog.RuleTrace("BatchConfiguration | btnAdd_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BatchConfiguration: btnAdd_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.LimitTrace("BatchConfiguration: btnAdd_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -153,6 +185,8 @@ namespace SOR.Pages.Rule
         { 
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnSubmit_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                
                 if ((ddlSwitch.SelectedValue == "0") && string.IsNullOrEmpty(ddlSwitch.SelectedValue))
                 {
                     ShowWarning("Please select switch. Try again", "Warning");
@@ -193,7 +227,13 @@ namespace SOR.Pages.Rule
                 _ruleEntity.SwitchId = Convert.ToInt32(ddlSwitch.SelectedValue) != 0 ? Convert.ToInt32(ddlSwitch.SelectedValue) : 0;
                 _ruleEntity.dt = dt;
                 _ruleEntity.Flag = (int)EnumCollection.EnumRuleType.BindGrid;
-
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "BatchConfiguration";
+                _auditParams[2] = "btnSubmit";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string statusCode = _ruleEntity.InsertOrUpdateBatch();
                 if (statusCode == "INS00")
                 {
@@ -210,12 +250,13 @@ namespace SOR.Pages.Rule
                     StatusMessage = _CommonEntity.ResponseMessage
                 };
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.RuleTrace("BatchConfiguration | btnSubmit_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ErrorLog.RuleTrace("BatchConfiguration: btnSubmit_ServerClick() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("BatchConfiguration: btnSubmit_ServerClick() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("BatchConfiguration: btnSubmit_ServerClick() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -223,15 +264,21 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnReset_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                _auditParams[1] = "BatchConfiguration";
+                _auditParams[2] = "btnReset";
+                _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 formTwo.Visible = false;
                 formone.Visible = true;
-                //AppPening.Visible = true;
-                //FillGrid(EnumCollection.EnumBindingType.BindGrid);
-                //FillGridP(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.RuleTrace("BatchConfiguration | btnReset_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("BatchConfiguration: btnReset_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.RuleTrace("BatchConfiguration: btnReset_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -255,6 +302,7 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnReset_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataTable dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
@@ -262,6 +310,13 @@ namespace SOR.Pages.Rule
                 ds.Tables.Add(dt);
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "BatchConfiguration";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BatchConfiguration", ds);
                 }
                 else
@@ -280,6 +335,7 @@ namespace SOR.Pages.Rule
         {
             try
             {
+                ErrorLog.RuleTrace("BatchConfiguration | btnReset_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataTable dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
@@ -287,6 +343,13 @@ namespace SOR.Pages.Rule
                 ds.Tables.Add(dt);
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                    _auditParams[1] = "BatchConfiguration";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BatchConfiguration", ds);
                 }
                 {

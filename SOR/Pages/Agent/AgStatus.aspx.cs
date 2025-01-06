@@ -13,14 +13,18 @@ namespace SOR.Pages.Agent
     public partial class AgStatus : System.Web.UI.Page
     {
         #region Objects Declaration
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         AgentRegistrationDAL _AgentRegistrationDAL = new AgentRegistrationDAL();
-
+        EmailAlerts _EmailAlerts = new EmailAlerts();
+        ClientRegistrationEntity clientMngnt = new ClientRegistrationEntity();
         public bool HasPagePermission { get; private set; }
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentStatus | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     //bool HasPagePermission = true;
@@ -61,7 +65,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentStatus: Page_Load: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentStatus: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -72,6 +76,7 @@ namespace SOR.Pages.Agent
             DataSet _dsAllAgents = new DataSet();
             try
             {
+                ErrorLog.AgentManagementTrace("AgentStatus | fillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvTransactions.DataSource = null;
                 gvTransactions.DataBind();
                 _AgentRegistrationDAL.UserName = Session["Username"].ToString();
@@ -100,10 +105,11 @@ namespace SOR.Pages.Agent
                     lblRecordCount.Text = "Total 0 Record(s) Found.";
 
                 }
+                ErrorLog.AgentManagementTrace("AgentStatus | fillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentStatus: fillGrid: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentStatus: fillGrid: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return _dsAllAgents;
@@ -229,6 +235,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentStatus | btnSearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Agent-AgentStatus";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (ddlOperationType.SelectedValue == "1" && ddlVerification.SelectedValue == "1")
                 {
                     _AgentRegistrationDAL.BCstatus = Convert.ToString((int)EnumCollection.Onboarding.Approve);
@@ -335,11 +349,11 @@ namespace SOR.Pages.Agent
                     lblRecordCount.Text = "Total 0 Record(s) Found.";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Operation Type. Try again', 'Warning');", true);
                 }
-
+                ErrorLog.AgentManagementTrace("AgentStatus | btnSearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentStatus: btnSearch_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentStatus: btnSearch_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -350,6 +364,7 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentStatus | btnReset_Click() | Start. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ddlClient.SelectedValue = "0";
                 ddlStatusType.SelectedValue = "0";
                 ddlAgent.SelectedValue = "0";
@@ -361,10 +376,11 @@ namespace SOR.Pages.Agent
                 txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 gvTransactions.DataSource = null;
                 gvTransactions.DataBind();
+                ErrorLog.AgentManagementTrace("AgentStatus | btnReset_Click() | End. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentStatus: btnReset_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentStatus: btnReset_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -392,12 +408,14 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentStatus | btnCancel_Click() | Start. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DIVFilter.Visible = true;
                 DIVRegister.Visible = false;
+                ErrorLog.AgentManagementTrace("AgentStatus | btnCancel_Click() | End. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgentStatus: btnCancel_Click: Exception: " + Ex.Message);
+                ErrorLog.AgentManagementTrace("AgentStatus: btnCancel_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -425,14 +443,21 @@ namespace SOR.Pages.Agent
         {
             try
             {
-
+                ErrorLog.AgentManagementTrace("AgentStatus | BtnCsv_Click() | Start. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 _AgentRegistrationDAL.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
                 setProperties();
                 DataSet _dsAllAgents = _AgentRegistrationDAL.AgentStatusReportGrid();
                 if (_dsAllAgents != null && _dsAllAgents.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "Agent Status Report", _dsAllAgents);
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-AgentStatus";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
+                    _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Agent_Status", _dsAllAgents);
                 }
                 else
                 {
@@ -451,13 +476,21 @@ namespace SOR.Pages.Agent
         {
             try
             {
+                ErrorLog.AgentManagementTrace("AgentStatus | BtnXls_Click() | Start. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 _AgentRegistrationDAL.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
                 setProperties();
                 DataSet _dsAllAgents = _AgentRegistrationDAL.AgentStatusReportGrid();
                 if (_dsAllAgents != null && _dsAllAgents.Tables[0].Rows.Count > 0)
                 {
-                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "Agent Status Report", _dsAllAgents);
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Agent-AgentStatus";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
+                    _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Agent_Status", _dsAllAgents);
                 }
                 else
                 {
