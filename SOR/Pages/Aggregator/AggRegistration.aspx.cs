@@ -50,7 +50,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-                ErrorLog.AgentManagementTrace("AggRegistration | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.AggregatorTrace("AggregatorRegistration | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "AggRegistration.aspx", "14");
@@ -92,7 +92,7 @@ namespace SOR.Pages.BC
 
             catch (Exception Ex)
             {
-                ErrorLog.AdminManagementTrace("AggRegistration: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.AggregatorTrace("AggRegistration: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -133,7 +133,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("AggRegistration: gvBCOnboard_RowDataBound: Exception: " + Ex.Message);
+                ErrorLog.AggregatorTrace("AggRegistration: gvBCOnboard_RowDataBound: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong. Try again', 'alert');", true);
                 return;
             }
@@ -156,7 +156,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -188,7 +188,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : valiadtereqid() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : valiadtereqid() \nException Occured\n" + Ex.Message);
             }
             return isValid;
         }
@@ -198,6 +198,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | GetDetails() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _BCEntity.BCRequest = BCReqId;
 
                 DataSet ds = _BCEntity.GetPendingbcDetails();
@@ -316,10 +317,11 @@ namespace SOR.Pages.BC
                 {
                     //clearselection();
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | GetDetails() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : GetDetails() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : GetDetails() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -329,6 +331,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
 
@@ -382,7 +385,14 @@ namespace SOR.Pages.BC
                         // string _status = _BCEntity.SetInsertUpdateBCDetails(out string _statusmsg, out string RequestId);
                         if (_BCEntity.Insert_aggregatorRequest(Session["UserName"].ToString(), out int RequestId, out string _status, out string _statusmsg))
                         {
-                            ErrorLog.BCManagementTrace("AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Aggregator-Registration";
+                            _auditParams[2] = "btnSubmitDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
+                            ErrorLog.AggregatorTrace("AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
                             DivBcDetails.Visible = true;
                             _BCEntity.BCCode = RequestId.ToString();
                             HidBCID.Value = RequestId.ToString();
@@ -393,17 +403,18 @@ namespace SOR.Pages.BC
                         }
                         else
                         {
-                            ErrorLog.BCManagementTrace("AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
+                            ErrorLog.AggregatorTrace("AggRegistration: btnSubmitDetails_Click: Failed - Aggregator Registration Request Dump In DB. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
                             ClearAllControls();
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('" + _statusmsg + "', 'Alert');", true);
                             return;
                         }
                     }
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
@@ -415,6 +426,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnExportCSV() | Strated. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
@@ -423,6 +435,13 @@ namespace SOR.Pages.BC
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Aggregator-Registration";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "Aggregator Registration Details", dt);
                 }
                 else
@@ -432,7 +451,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Page : AggRegistration.cs \nFunction : btnExportCSV_Click\nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Page : AggRegistration.cs \nFunction : btnExportCSV_Click\nException Occured\n" + Ex.Message);
             }
         }
 
@@ -448,7 +467,7 @@ namespace SOR.Pages.BC
             catch (Exception Ex)
             {
                 //_systemLogger.WriteErrorLog(this, Ex);
-                ErrorLog.BCManagementTrace(Ex.Message);
+                ErrorLog.AggregatorTrace(Ex.Message);
             }
             return pageFilters;
         }
@@ -457,11 +476,26 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btndownload_Click() | Strated. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Registration";
+                _auditParams[2] = "Export-To-Excel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Aggregator-Registration";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "Proxima", "Aggregator Registration Details", dt);
                 }
                 {
@@ -474,7 +508,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Page : AggRegistration.cs \nFunction : btndownload_Click\nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Page : AggRegistration.cs \nFunction : btndownload_Click\nException Occured\n" + Ex.Message);
             }
         }
         public bool AreContactNumbersDifferent(string contactNo, string alternateNo)
@@ -487,6 +521,7 @@ namespace SOR.Pages.BC
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | ValidateSetProperties() | Strated. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 string contactNo = txtContactNo.Text;
                 string alternateNo = txtAlterNateNo.Text;
 
@@ -643,10 +678,11 @@ namespace SOR.Pages.BC
                     ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | ValidateSetProperties() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception ex)
             {
-                ErrorLog.BCManagementTrace("Page : AggRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message);
+                ErrorLog.AggregatorTrace("Page : AggRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong..! Please try again',' Aggregator Registration');", true);
                 return false;
@@ -729,6 +765,7 @@ namespace SOR.Pages.BC
             DataSet ds = null;
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _BCEntity.BCID = Session["Username"].ToString();
                 // _BCEntity.= ddlBucketId.SelectedValue=="1" && ddlRequestStatus.SelectedValue=="0"?
                 _BCEntity.Flag = (int)enumBinding;
@@ -752,10 +789,11 @@ namespace SOR.Pages.BC
                     btnExportCSV.Visible = false;
                     //lblRecordsTotal.Text = "Total 0 Record(s) Found.";
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Error", "showError('Something went wrong.Please try again','Warning');", true);
             }
             return ds;
@@ -866,7 +904,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception EX)
             {
-                ErrorLog.BCManagementTrace("Page : AggRegistration.cs \nFunction : setProperties() \nException Occured\n" + EX.Message);
+                ErrorLog.AggregatorTrace("Page : AggRegistration.cs \nFunction : setProperties() \nException Occured\n" + EX.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -899,7 +937,7 @@ namespace SOR.Pages.BC
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ddlCountry_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
+        //        ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ddlCountry_SelectedIndexChanged() \nException Occured\n" + Ex.Message);
 
         //        ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
         //    }
@@ -1016,7 +1054,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ClearAllControls() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ClearAllControls() \nException Occured\n" + Ex.Message);
             }
         }
         #endregion
@@ -1026,6 +1064,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | Bindreceipt() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DataSet ds_Receipt = _BCEntity.getAggReceiptData();
                 if (ds_Receipt != null && ds_Receipt.Tables.Count > 0 && ds_Receipt.Tables[0].Rows.Count > 0)
                 {
@@ -1068,10 +1107,11 @@ namespace SOR.Pages.BC
 
                     ViewState["BCReqId"] = ds_Receipt.Tables[0].Rows[0]["BCReqID"].ToString();
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | Bindreceipt() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : Bindreceipt() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : Bindreceipt() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1079,13 +1119,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes" && HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value))
                 {
 
                         _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
                         _BCEntity.ClientId = ddlbcCode.SelectedValue.ToString();
-                    _BCEntity.CreatedBy = Session["Username"].ToString();
-                    _BCEntity.IdentityProofDocument = Session["IdFilePath"].ToString();
+                        _BCEntity.CreatedBy = Session["Username"].ToString();
+                        _BCEntity.IdentityProofDocument = Session["IdFilePath"].ToString();
 
                         _BCEntity.IdentityProofType = ddlIdentityProof.SelectedValue;
                         _BCEntity.AddressProofDocument = Session["AddFilePath"].ToString();
@@ -1098,7 +1139,7 @@ namespace SOR.Pages.BC
 
                     if (_BCEntity.Insert_aggregatorRequest(Session["UserName"].ToString(), out int RequestId, out string _status, out string _statusmsg))
                     {
-                        ErrorLog.BCManagementTrace("AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
+                        ErrorLog.AggregatorTrace("AggRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
                         DivBcDetails.Visible = true;
                         _BCEntity.BCCode = RequestId.ToString();
                         HidBCID.Value = RequestId.ToString();
@@ -1114,7 +1155,7 @@ namespace SOR.Pages.BC
                     }
                     else
                     {
-                        ErrorLog.BCManagementTrace("AggRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
+                        ErrorLog.AggregatorTrace("AggRegistration: BtnSubmit_Click: Failed - Upload Documents. UserName: " + UserName + " Status: " + _status + " StatusMsg: " + _statusmsg + " RequestId: " + RequestId);
                         ClearAllControls();
                         Session["IdFilePath"] = string.Empty;
                         Session["IdFileName"] = string.Empty;
@@ -1129,14 +1170,15 @@ namespace SOR.Pages.BC
                 
                 else
                 {
-                    ErrorLog.BCManagementTrace("AggRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: " + UserName);
+                    ErrorLog.AggregatorTrace("AggRegistration: BtnSubmit_Click: Failed - Upload Documents. User Confirmation Or RequestId Are Empty. UserName: " + UserName);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again later', 'Alert');", true);
                     return;
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | BtnSubmit_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -1144,7 +1186,7 @@ namespace SOR.Pages.BC
 
         protected void btnCloseReceipt_Click(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("AggregatorRegistration | btnCloseReceipt_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (HiddenField1.Value.ToString() == "Yes")
             {
                 DIVDetails.Visible = true;
@@ -1159,6 +1201,7 @@ namespace SOR.Pages.BC
             {
 
             }
+            ErrorLog.AggregatorTrace("AggregatorRegistration | btnCloseReceipt_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
         }
 
@@ -1187,7 +1230,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
                 return string.Empty; ;
             }
         }
@@ -1217,7 +1260,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
                 return string.Empty; ;
             }
         }
@@ -1247,7 +1290,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : SaveFile() \nException Occured\n" + Ex.Message);
                 return string.Empty; ;
             }
         }
@@ -1301,7 +1344,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
                 _IsValidFileAttached = false;
                 return false;
             }
@@ -1357,7 +1400,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ValidateFile \nException Occured\n" + Ex.Message);
                 _IsValidFileAttached = false;
                 return false;
             }
@@ -1379,7 +1422,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception EX)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : DeleteFile() \nException Occured\n" + EX.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : DeleteFile() \nException Occured\n" + EX.Message);
             }
         }
         #endregion
@@ -1406,7 +1449,7 @@ namespace SOR.Pages.BC
             }
             catch (OutOfMemoryException ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : IsValidImage() \nException Occured\n" + ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : IsValidImage() \nException Occured\n" + ex.Message);
                 return false;
             }
         }
@@ -1416,6 +1459,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | ProcessBCData_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField3.Value.ToString() == "Yes")
                 {
                     if (ChkConfirmBC.Checked == true)
@@ -1462,10 +1506,11 @@ namespace SOR.Pages.BC
                 {
 
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | ProcessBCData_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception EX)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : DeleteFile() \nException Occured\n" + EX.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : DeleteFile() \nException Occured\n" + EX.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1474,6 +1519,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DIVDetails.Visible = false;
                 div_Upload.Visible = false;
                 btndownload.Visible = true;
@@ -1483,12 +1529,13 @@ namespace SOR.Pages.BC
                 divMainDetailsGrid.Visible = true;
                 ClearAllControls();
                 HidBCID.Value = string.Empty;
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
                 //////Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowgridDiv()", true);
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnCancel_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnCancel_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1498,15 +1545,17 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnAddnew_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 divOnboardFranchise.Visible = true;
                 divAction.Visible = false;
                 divMainDetailsGrid.Visible = false;
                 DIVDetails.Visible = true;
                 FillBc();
+                ErrorLog.AggregatorTrace("AggregatorRegistration | btnAddnew_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnAddnew_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnAddnew_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1524,7 +1573,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnViewDownload_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnViewDownload_Click() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Aggregator Verification');", true);
                 return;
             }
@@ -1561,7 +1610,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ImageButton1_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ImageButton1_Click() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', ' Aggregator Registration');", true);
                 return;
             }
@@ -1597,7 +1646,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ImageButton2_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ImageButton2_Click() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', ' Aggregator Registration');", true);
                 return;
             }
@@ -1634,7 +1683,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : ImageButton2_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : ImageButton2_Click() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', ' Aggregator Registration');", true);
                 return;
             }
@@ -1665,7 +1714,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : imgbtnform_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : imgbtnform_Click() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', ' Aggregator Registration ');", true);
                 return;
             }
@@ -1679,6 +1728,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | GetDetailsBack() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _BCEntity.BCRequest = val;
 
                 DataSet ds = _BCEntity.GetOnboradingbcDetails();
@@ -1788,10 +1838,12 @@ namespace SOR.Pages.BC
                 {
                     //clearselection();
                 }
+                ErrorLog.AggregatorTrace("AggregatorRegistration | GetDetailsBack() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
+                ErrorLog.AggregatorError(Ex);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : GetDetailsBack() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -1801,6 +1853,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("AggregatorRegistration | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //Response.Redirect("~/Pages/bc/BCRegistration.aspx", false);
                 //HttpContext.Current.ApplicationInstance.CompleteRequest();
                 DIVDetails.Visible = true;
@@ -1809,11 +1862,11 @@ namespace SOR.Pages.BC
                 string val = HidBCID.Value;
                 GetDetailsBack(val);
 
-                // Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "ReloadPage()", true);
+                ErrorLog.AggregatorTrace("AggregatorRegistration | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception EX)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : BtnBack_Click() \nException Occured\n" + EX.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : BtnBack_Click() \nException Occured\n" + EX.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1821,16 +1874,25 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("btnSearch_Click | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //if (ddlBucketId.SelectedValue != "-1" && ddlRequestStatus.SelectedValue == "-1")
                 //{
                 //    ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Please Select Request Status', ' Aggregator Registration');", true);
                 //    return;
                 //}
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Registration";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.AggregatorTrace("btnSearch_Click | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -1840,6 +1902,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("btnSearch_Click | butnCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ddlRequestType.SelectedValue = null;
                 //ddlBucketId.SelectedValue = null;
                 ddlRequestStatus.SelectedValue = null;
@@ -1850,10 +1913,18 @@ namespace SOR.Pages.BC
                 //txtContactNoF.Value = string.Empty;
                 //txtPersonalEmailIDF.Value = string.Empty;
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.AggregatorTrace("btnSearch_Click | butnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Registration";
+                _auditParams[2] = "butnCancel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : butnCancel_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggregatorRegistration.cs \nFunction : butnCancel_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
@@ -1891,6 +1962,7 @@ namespace SOR.Pages.BC
                 {
                     try
                     {
+                        ErrorLog.AggregatorTrace("btnSearch_Click | RowCommand-EditDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         ImageButton lb = (ImageButton)e.CommandSource;
                         GridViewRow gvr = (GridViewRow)lb.NamingContainer;
                         string BCRequestId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["ReqId"]).ToString();
@@ -1900,6 +1972,13 @@ namespace SOR.Pages.BC
                         _BCEntity.BCReqId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["ReqId"]).ToString();
                         if (ValidateReEditRequest())
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Aggregator-Registration";
+                            _auditParams[2] = "RowCommand-EditDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             int BCReqID = Convert.ToInt32(BCRequestId);
                             HidBCID.Value = BCRequestId;
 
@@ -1918,10 +1997,11 @@ namespace SOR.Pages.BC
                             ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Agent request already pending for verification.', 'Warning');", true);
                             return;
                         }
+                        ErrorLog.AggregatorTrace("btnSearch_Click | RowCommand-EditDetails | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     }
                     catch (Exception Ex)
                     {
-                        ErrorLog.CommonTrace("Class : AggregatorRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
+                        ErrorLog.CommonTrace("Class : AggregatorRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                         throw Ex;
                     }
                 }
@@ -1931,10 +2011,18 @@ namespace SOR.Pages.BC
                     {
                         try
                         {
+                            ErrorLog.AggregatorTrace("btnSearch_Click | RowCommand-DeleteDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                             ImageButton lb = (ImageButton)e.CommandSource;
                             GridViewRow gvr = (GridViewRow)lb.NamingContainer;
                             string BCReqId = (gvBCOnboard.DataKeys[gvr.RowIndex].Values["AgentReqId"]).ToString();
                             _BCEntity.BCReqId = BCReqId;
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Aggregator-Registration";
+                            _auditParams[2] = "RowCommand-EditDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             string _status = _BCEntity.DeleteBcDetails();
                             if (_status == "00")
                             {
@@ -1947,11 +2035,11 @@ namespace SOR.Pages.BC
                                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Data Delete Unsuccessful.', 'Warning');", true);
                                 return;
                             }
-
+                            //ErrorLog.AggregatorTrace("btnSearch_Click | RowCommand-DeleteDetails | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         }
                         catch (Exception Ex)
                         {
-                            ErrorLog.CommonTrace("Class : AggregatorRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message);
+                            ErrorLog.AggregatorTrace("Class : AggregatorRegistration.cs \nFunction : btnView_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                             throw Ex;
                         }
                     }
@@ -1959,7 +2047,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("OBAgStatus: gvBlockAG_RowCommand: Exception: " + Ex.Message);
+                ErrorLog.AggregatorTrace("AggregatorRegistration: gvBlockAG_RowCommand: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 
@@ -1989,7 +2077,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : BtnBack_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggregatorRegistration.cs \nFunction : BtnBack_Click() \nException Occured\n" + Ex.Message);
             }
         }
 
@@ -2024,7 +2112,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : AggRegistration.cs \nFunction : btnViewDownload_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AggregatorRegistration.cs \nFunction : btnViewDownload_Click() \nException Occured\n" + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'Aggregator Verification');", true);
                 return;
             }
@@ -2052,6 +2140,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("btnSearch_Click | SetInheritedSerivcesFromParent() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _BCEntity.UserName = Session["Username"].ToString();
                 _BCEntity.Clientcode = _Clientcode;
                 _BCEntity.Flag = 1;
@@ -2182,10 +2271,11 @@ namespace SOR.Pages.BC
                     chkMATM.Visible = false;
                     lblchkMATM.Visible = false;
                 }
+                ErrorLog.AggregatorTrace("btnSearch_Click | SetInheritedSerivcesFromParent() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : FranchiseRegistration.cs \nFunction : SetInheritedSerivcesFromParent() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Class : AggregatorRegistration.cs \nFunction : SetInheritedSerivcesFromParent() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong..! Please try again','Franchise Registration');</script>", false);
                 return;
             }

@@ -1740,7 +1740,7 @@ namespace SOR.Pages.Agent
                         ddlShopCity.SelectedValue = ds.Tables[0].Rows[0]["ShopCity"].ToString();
                     }
                     txtshoppin.Text = ds.Tables[0].Rows[0]["ShopPinCode"].ToString();
-                    txtshopEmailID.Text = ds.Tables[0].Rows[0]["BusinessEmailID"].ToString();
+                    txtshopEmailID.Text = ds.Tables[0].Rows[0]["ShopEmailId"].ToString();
                     TextBox5.Text = ds.Tables[0].Rows[0]["ContactNo"].ToString();
                     txtLandline.Text = ds.Tables[0].Rows[0]["LandlineNo"].ToString();
                     //TextBox9.Text = ds.Tables[0].Rows[0]["PersonalEmailID"].ToString();

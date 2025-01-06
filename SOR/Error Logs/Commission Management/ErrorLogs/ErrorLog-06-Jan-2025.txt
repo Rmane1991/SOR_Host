@@ -1,0 +1,10 @@
+----------------------------------------------------------------------------
+Time : 06-Jan-2025 17:55
+Source - : mscorlib
+StackTrace -  :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at BussinessAccessLayer.ExportFormat.ExporttoExcel(String username, String BankName, String ReportName, DataSet _dsTransactionViewer) in D:\Data\Aakash\SOR\SOR\BussinessAccessLayer\ExportFormat.cs:line 153
+   at SOR.Pages.Agent.AgVerification.gvAgBulkL3_RowCommand(Object sender, GridViewCommandEventArgs e) in D:\Data\Aakash\SOR\SOR\SOR\Pages\Agent\AgVerification.aspx.cs:line 2461
+Message - : Thread was being aborted.
