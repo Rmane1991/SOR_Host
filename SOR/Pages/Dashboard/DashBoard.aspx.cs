@@ -79,18 +79,7 @@ namespace SOR.Pages.Dashboard
 
             try
             {
-                /* var transactions = _DashDAL.GetMonthlyTxnDataCount();
-
-                 var formattedTransactions = transactions.Select(t => new
-                 {
-                     Day = t.Day,
-                     CurrentMonthCount = t.CurrentMonthCount,
-                     PreviousMonthCount = t.PreviousMonthCount
-                 }).ToList();
-
-                 var serializedTransactions = JsonConvert.SerializeObject(formattedTransactions);
-                 ViewState["Transactions"] = serializedTransactions;*/
-
+              
                 var summary = _DashDAL.GetMonthlySummaryCount();
                 var summaryData = summary.Select(t => new
                 {
@@ -110,14 +99,14 @@ namespace SOR.Pages.Dashboard
                     {
                         Day = t.Field<string>("time_period"),
                         CurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousDay = t.Field<string>("previous_time_period"),
                         PreviousMonthCount = t.Field<int>("previous_count")
                     }).ToList();
 
                     var TxnSummary = JsonConvert.SerializeObject(txn);
                     ViewState["Transactions"] = TxnSummary;
                 }
-
-
+                 
                 if (txnDetails.Tables.Contains("Aggregators"))
                 {
                     StringBuilder sb = new StringBuilder();
@@ -309,69 +298,6 @@ namespace SOR.Pages.Dashboard
                     ViewState["BankRevenueData"] = serializedTxn;
                 }
 
-                if (txnDetails.Tables.Contains("RuleData"))
-                {
-                    StringBuilder sb = new StringBuilder();
-
-                    foreach (DataRow row in txnDetails.Tables["RuleData"].Rows)
-                    {
-                        var groupID = HttpUtility.JavaScriptStringEncode(row["GroupID"].ToString());
-                        var groupName = HttpUtility.JavaScriptStringEncode(row["GroupName"].ToString());
-                        var ruleID = HttpUtility.JavaScriptStringEncode(row["ruleid"].ToString());
-                        var ruleName = HttpUtility.JavaScriptStringEncode(row["RuleName"].ToString());
-                        int totalTransactions = row["TotalCount"] != null && int.TryParse(row["TotalCount"].ToString(), out int r) ? r : 0;
-                        var successCount = row["SuccessCount"] != null && int.TryParse(row["SuccessCount"].ToString(), out int s) ? s : 0;
-                        var failureCount = row["FailureCount"] != null && int.TryParse(row["FailureCount"].ToString(), out int f) ? f : 0;
-                        var RoutingPercentage = row["OverallPerc"];
-                        var uniqueId = $"{groupName}{ruleName}_Chart";
-
-                        sb.Append("<tr>");
-                        sb.Append($"<td class='text-right'>{groupName} | {ruleName}</td>");
-                        sb.Append($"<td class='text-right'>{totalTransactions}</td>");
-                        sb.Append($"<td class='text-right'>Routing% {RoutingPercentage} </td>");
-                        sb.Append($"<td class='text-right'>");
-                        sb.Append($"<canvas class='my-auto' id='{uniqueId}' width='40' height='40' style='width: 40px; height: 40px;'></canvas>");
-                        sb.Append("</td>");
-                        sb.Append("</tr>");
-                        sb.Append($@"<script>
-                        document.addEventListener('DOMContentLoaded', function() {{
-                        const ctx = document.getElementById('{uniqueId}').getContext('2d');
-                        const data = {{
-                            datasets: [{{
-                                label: '{ruleName}', 
-                                data: [{successCount}, {failureCount}], 
-                                backgroundColor:{totalTransactions} > 0 ? [
-                                    'rgba(54, 162, 235, 0.8)', 
-                                    'rgba(255, 99, 132, 0.8)'  
-                                ]:['rgba(144,238,144,0.5)'],
-                                borderWidth: 1 
-                            }}]
-                        }};
-                         
-                        const chart = new Chart(ctx, {{
-                            type: 'doughnut',
-                            data: data,
-                            options: {{
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                cutoutPercentage: 50,
-                                plugins: {{
-                                    tooltip: {{
-                                        enabled: true
-                                    }},
-                                    legend: {{
-                                        display: true
-                                    }}
-                                }}
-                            }}
-                        }});
-                    }});
-                    </script>
-                    ");
-                    }
-                    ruleLiteralControl.Text = sb.ToString();
-                }
-
                 if (txnDetails.Tables.Contains("MonthlyBCData"))
                 {
                     var txn = txnDetails.Tables["MonthlyBCData"].AsEnumerable().Select(t => new
@@ -479,6 +405,7 @@ namespace SOR.Pages.Dashboard
                     {
                         Day = t.Field<string>("time_period"),
                         TxnsummaryCurrentMonthCount = t.Field<int>("current_count"),
+                        PreviousDay = t.Field<string>("previous_time_period"),
                         TxnsummaryPreviousMonthCount = t.Field<int>("previous_count")
                     }).ToList();
 
