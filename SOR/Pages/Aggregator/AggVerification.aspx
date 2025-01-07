@@ -195,10 +195,10 @@
                                                 <div class="selectInputBox">
                                                     <asp:DropDownList ID="ddlActivityType" runat="server" CssClass="maximus-select w-100" AutoPostBack="true">
                                                         <asp:ListItem Value="-1">--Select--</asp:ListItem>
-                                                        <asp:ListItem Value="0">Onboard</asp:ListItem>
-                                                        <asp:ListItem Value="1">Activate</asp:ListItem>
-                                                        <asp:ListItem Value="2">Deactivate</asp:ListItem>
-                                                        <asp:ListItem Value="3">Terminate</asp:ListItem>
+                                                        <asp:ListItem Value="0">Onboarded</asp:ListItem>
+                                                        <asp:ListItem Value="1">Activated</asp:ListItem>
+                                                        <asp:ListItem Value="2">Deactivated</asp:ListItem>
+                                                        <asp:ListItem Value="3">Terminated</asp:ListItem>
                                                         <asp:ListItem Value="4">ReEdit</asp:ListItem>
                                                     </asp:DropDownList>
                                                 </div>
