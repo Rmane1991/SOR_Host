@@ -543,9 +543,9 @@ namespace SOR.Pages.Rule
             _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
             _LoginEntity.StoreLoginActivities(_auditParams);
             #endregion
-            string validateCode = _RuleEntityy.ValidateFailoverSwitch();
-            if (validateCode == "00")
-            {
+            //string validateCode = _RuleEntityy.ValidateFailoverSwitch();
+            //if (validateCode == "00")
+            //{
                 string statusCode = _RuleEntityy.UpdateSwitchStatus();
 
                 if (statusCode == "UPD00")
@@ -574,16 +574,16 @@ namespace SOR.Pages.Rule
                 };
                 ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                 return new JavaScriptSerializer().Serialize(response);
-            }
-            else
-            {
-                var response = new
-                {
-                    StatusMessage = "This Switch Already Use In The Failover Switch"
-                };
-                ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : " + validateCode);
-                return new JavaScriptSerializer().Serialize(response);
-            }
+            //}
+            //else
+            //{
+            //    var response = new
+            //    {
+            //        StatusMessage = "This Switch Already Use In The Failover Switch"
+            //    };
+            //    ErrorLog.RuleTrace("SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : " + validateCode);
+            //    return new JavaScriptSerializer().Serialize(response);
+            //}
             //ErrorLog.RuleTrace("SwitchConfig | ToggleSlider() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
         }
 

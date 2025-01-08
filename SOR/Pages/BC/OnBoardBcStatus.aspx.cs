@@ -19,13 +19,12 @@ namespace SOR.Pages.BC
         public string UserName { get; set; }
         BCEntity _BCEntity = new BCEntity();
         ClientRegistrationEntity clientMngnt = new ClientRegistrationEntity();
-
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion;
 
         #region Variable and Objects
         DataSet _dsDeactivateBC = null;
-
-        string[] _auditParams = new string[4];
 
         string[]
             _BCActiveParams = new string[8];
@@ -59,6 +58,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission =  HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "OnBoardBcStatus.aspx", "12");
@@ -104,8 +104,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "Page_Load()", Ex);
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
                 return;
             }

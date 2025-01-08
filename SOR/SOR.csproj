@@ -978,6 +978,7 @@
     <Content Include="images\PayRakam.png" />
     <Content Include="images\PendingTranscation.jpg" />
     <Content Include="images\plus.png" />
+    <Content Include="images\plus_add.png" />
     <Content Include="images\prod.png" />
     <Content Include="images\Profile.jpg" />
     <Content Include="images\Profile1.png" />

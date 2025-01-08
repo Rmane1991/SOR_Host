@@ -521,48 +521,67 @@
             flex: 0 0 auto;
             width: 5.333333%;
         }
+
         .col-md-1111 {
             flex: 0 0 auto;
             width: 10.0%;
         }
+
         .col-md-11111 {
             flex: 0 0 auto;
             width: 4.333333%;
         }
+
         .col-md-22 {
             flex: 0 0 auto;
             width: 4.333333%;
         }
+
         .col-md-23 {
             flex: 0 0 auto;
             width: 5.3%;
         }
+
         .col-md-24 {
             flex: 0 0 auto;
             width: 16.9%;
         }
+
         .col-md-25 {
             flex: 0 0 auto;
             width: 4.9%;
         }
-</style>
+    </style>
     <style>
-    .list-view-pf-additional-info {
-        display: flex; /* Use flexbox to align items in a row */
-        gap: 60px; /* Add a gap between each item */
-        align-items: center; /* Center items vertically */
-    }
-    
-    .list-view-pf-additional-info-item {
-        display: flex;
-        align-items: center;
-    }
+        .list-view-pf-additional-info-item {
+            /*display: flex;*/
+            flex-direction: row; /* Align header and content horizontally */
+            align-items: center; /* Vertically center content */
+            margin-bottom: 8px; /* Reduced space between items to reduce row height */
+        }
 
-    /* Optional: add some margin to the items if needed */
-    .list-view-pf-additional-info-item img {
-        margin-right: 5px; /* Adds space between the icon and text */
-    }
-</style>
+        .header-item {
+            font-weight: normal; /* Lighter header */
+            color: #7f8fa4; /* Set header color to #7f8fa4 */
+            text-align: left; /* Align header text to the left */
+            margin-right: 16px; /* Space between header and content */
+            flex: 1; /* Ensure header takes available space */
+            margin-bottom: 8px; /* Add space between header and value */
+        }
+
+        .content-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align content to the left */
+            text-align: left; /* Align text to the left */
+            flex: 2; /* Ensure content takes more space */
+        }
+
+            .content-item strong {
+                font-weight: bold; /* Make value bold */
+                color: #555; /* Optional: color for the values */
+            }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
     <div class="breadHeader">
@@ -599,13 +618,13 @@
                 <i class="fas fa-chevron-right"></i>
             </button>--%>
             <%--<div id="buttonContainer" style="display: none; margin-left: 10px;">--%>
-                <!-- Initially hidden -->
-                <asp:Button ID="btnAddGroup" runat="server" CssClass="btn btn-primary" Text="Add Group" OnClick="btnAddGroup_Click" />
-                &nbsp;&nbsp;
+            <!-- Initially hidden -->
+            <asp:Button ID="btnAddGroup" runat="server" CssClass="btn btn-primary" Text="Add Group" OnClick="btnAddGroup_Click" />
+            &nbsp;&nbsp;
             <asp:Button ID="btnAddRule" runat="server" CssClass="btn btn-primary" Text="Add Rule" OnClick="btnAddRule_Click" />
             <%--</div>--%>
         </div>
-        
+
     </div>
     &nbsp;&nbsp;
     <!-- Modal Group -->
@@ -891,22 +910,7 @@
     <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
         <asp:PlaceHolder ID="headerPlaceholder" runat="server"></asp:PlaceHolder>
         <asp:Repeater ID="rptrGroup" runat="server" OnItemCommand="rptrGroup_ItemCommand" OnItemDataBound="rptrGroup_ItemDataBound">
-            <HeaderTemplate>
-                <div class="row" style="width: 103%; background-color: #fbd2ce; height: 30px; font-size: medium; align-items: center; font-weight: bold;">
-                <%--<div class="row">--%>
-                    <div class="col-md-25"></div>
-                    <div class="col-md-1111">Name</div>
-                    <div class="col-md-3">Description</div>
-                    <div class="col-md-11"></div>
-                    <div class="col-md-111">Count</div>
-                     <div class="col-md-22"></div>
-                    <div class="col-md-11111">Priority</div>
-                    <div class="col-md-23"></div>
-                    <div class="col-md-1">Status</div>
-                    <div class="col-md-24"></div>
-                    <div class="col-md-1111">Action</div>
-                </div>
-            </HeaderTemplate>
+
             <ItemTemplate>
                 <div class="sortable-item" data-id='<%# Eval("id") %>'>
                     <div class="mainGroup" data-id='<%# Eval("id") %>'>
@@ -950,7 +954,7 @@
                                     </div>
 
                                     <div class="list-view-pf-actions">
-                                        <asp:ImageButton ID="imgAddRule" runat="server" ImageUrl="../../images/icons/plus_.png" CommandName="AddRule" CommandArgument='<%# Eval("id") %>' Text="Delete" Style="width: 35px; height: 35px;" />
+                                        <asp:ImageButton ID="imgAddRule" runat="server" ImageUrl="../../images/plus_add.png" CommandName="AddRule" CommandArgument='<%# Eval("id") %>' Text="Delete" Style="width: 30px; height: 30px;" />
                                     </div>
 
                                     <div class="list-view-pf-main-info">
@@ -961,39 +965,71 @@
                                             <img src="../../images/icons/group_.png" style="width: 25px; height: 25px;" />
                                         </div>
                                         <div class="list-view-pf-body">
+                                            <!-- Group Description Section -->
                                             <div class="list-view-pf-description">
-                                                <div class="list-group-item-heading">
-                                                    <%# Eval("group_name") %>
+                                                <div class="list-view-pf-additional-info-item">
+                                                    <div class="header-item">
+                                                        <strong>Group Name</strong>
+                                                    </div>
+
+                                                    <div class="content-item">
+                                                        <strong><%# Eval("group_name") %></strong>
+                                                    </div>
                                                 </div>
-                                                <div class="list-group-item-text">
-                                                    <%# Eval("group_description") %>
+                                                <div class="list-view-pf-additional-info-item">
+                                                    <div class="header-item">
+                                                        <strong>Group Description</strong>
+                                                    </div>
+                                                    <div class="content-item">
+
+                                                        <strong><%# Eval("group_description") %></strong>
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            <!-- Hidden Group ID for backend processing -->
                                             <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
+
+                                            <!-- Additional Information Section (Dynamic Data) -->
                                             <div class="list-view-pf-additional-info">
-                                                <div class="list-view-pf-additional-info-item">
-                                                    <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
-                                                    <strong><%# Eval("rule_count") %></strong>
 
-                                                </div>
-                                                
+                                                <!-- Rule Count Section -->
                                                 <div class="list-view-pf-additional-info-item">
-                                                    <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
-                                                    <strong><%# Eval("priority") %></strong>
-
+                                                    <div class="header-item">
+                                                        <strong>Rule Count</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
+                                                        <strong><%# Eval("rule_count") %></strong>
+                                                    </div>
                                                 </div>
-                                                
+
+                                                <!-- Priority Section -->
                                                 <div class="list-view-pf-additional-info-item">
-                                                    <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                                    <strong><%# Eval("isactive") %></strong>
-
+                                                    <div class="header-item">
+                                                        <strong>Priority</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
+                                                        <strong><%# Eval("priority") %></strong>
+                                                    </div>
                                                 </div>
-                                                <%-- <div class="list-view-pf-additional-info-item">
-                                                    <span class="pficon pficon-image"></span>
-                                                    <%--<strong>8</strong> Images--%>
-                                                <%--</div>--%>
+
+                                                <!-- Status Section -->
+                                                <div class="list-view-pf-additional-info-item">
+                                                    <div class="header-item">
+                                                        <strong>Status</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
+                                                        <strong><%# Eval("isactive") %></strong>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                                 <div class="list-group" style="width: 98%">
@@ -1035,29 +1071,74 @@
                                                                         <div class="list-view-pf-left">
                                                                             <img src="../../images/icons/rules_1.png" style="width: 25px; height: 25px;" />
                                                                         </div>
+
                                                                         <div class="list-view-pf-body">
+                                                                            <!-- Rule Description Section -->
                                                                             <div class="list-view-pf-description">
-                                                                                <div class="list-group-item-heading">
-                                                                                    <%# Eval("rulename") %>
+                                                                                <div class="list-view-pf-additional-info-item">
+                                                                                    <div class="header-item">
+                                                                                        <strong>Rule Name</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <strong><%# Eval("rulename") %></strong>
+                                                                                        <!-- Rule Name -->
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="list-group-item-text">
-                                                                                    <%# Eval("ruledescription") %>
+                                                                                <div class="list-view-pf-additional-info-item">
+                                                                                    <div class="header-item">
+                                                                                        <strong>Rule Description</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <strong><%# Eval("ruledescription") %></strong>
+                                                                                        <!-- Rule Description -->
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="list-view-pf-additional-info-item">
+                                                                                    <div class="header-item">
+                                                                                        <strong>Switch Name</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <strong><%# Eval("switchname") %></strong>
+                                                                                        <!-- Rule Description -->
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="list-view-pf-additional-info-item">
+                                                                                    <div class="header-item">
+                                                                                        <strong>Channel</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <strong><%# Eval("channel") %></strong>
+                                                                                        <!-- Rule Description -->
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
+
+                                                                            <!-- Additional Information Section (Dynamic Data) -->
                                                                             <div class="list-view-pf-additional-info">
-                                                                                <%--<input type="hidden" id="hdRuleId" value='<%# Eval("rule_id") %>' />--%>
+                                                                                <!-- Priority Section -->
                                                                                 <div class="list-view-pf-additional-info-item">
-                                                                                    <%--<span class="pficon pficon-cluster"></span>--%>
-                                                                                    <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
-                                                                                    <strong><%# Eval("priority") %></strong>
+                                                                                    <div class="header-item">
+                                                                                        <strong>Priority</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
+                                                                                        <strong><%# Eval("priority") %></strong>
+                                                                                    </div>
                                                                                 </div>
+
+                                                                                <!-- Status Section -->
                                                                                 <div class="list-view-pf-additional-info-item">
-                                                                                    <%--<span class="pficon pficon-container-node"></span>--%>
-                                                                                    <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                                                                    <strong><%# Eval("is_active") %></strong>
+                                                                                    <div class="header-item">
+                                                                                        <strong>Status</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
+                                                                                        <strong><%# Eval("is_active") %></strong>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="list-group-item-container_next container-fluid hidden">

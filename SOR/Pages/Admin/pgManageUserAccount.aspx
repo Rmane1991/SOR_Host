@@ -216,7 +216,7 @@
                                                     <asp:ListItem Text="-- Select --" Value="0" Selected="True"></asp:ListItem>
                                                     <asp:ListItem Text="Active" Value="1"></asp:ListItem>
                                                     <asp:ListItem Text="Inactive" Value="2"></asp:ListItem>
-                                                    <asp:ListItem Text="Block" Value="3"></asp:ListItem>
+                                                    <asp:ListItem Text="Blocked" Value="3"></asp:ListItem>
                                                     <asp:ListItem Text="Terminated" Value="4"></asp:ListItem>
                                                 </asp:DropDownList>
                                             </div>

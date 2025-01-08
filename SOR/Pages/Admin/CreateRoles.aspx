@@ -630,7 +630,7 @@
                 <asp:Panel ID="Panel_EditRole" TabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
                     Style="display: none;" runat="server">
                     <center>
-                    <div class="modal-content" style="width: 469px;height: 311px;">
+                    <div class="modal-content" style="width: 469px;height: 210px;">
                         <!-- Modal Header -->
                         <div class="modal-header">
                             <h4 class="modal-title">Add New Role</h4>

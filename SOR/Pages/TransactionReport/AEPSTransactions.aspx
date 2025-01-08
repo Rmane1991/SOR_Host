@@ -260,7 +260,7 @@
                                             <asp:ListItem Text="All" Value="0"></asp:ListItem>
                                             <asp:ListItem Text="Withdrawal" Value="Withdrawal"></asp:ListItem>
                                             <asp:ListItem Text="Balance Enquiry" Value="BalanceEnquiry"></asp:ListItem>
-                                            <asp:ListItem Text="MiniStatement" Value="MiniStatement"></asp:ListItem>
+                                            <asp:ListItem Text="Mini Statement" Value="MiniStatement"></asp:ListItem>
                                             <asp:ListItem Text="Reversal" Value="Reversal"></asp:ListItem>
                                         </asp:DropDownList>
                                     </div>

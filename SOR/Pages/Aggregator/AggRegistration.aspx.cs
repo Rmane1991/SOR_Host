@@ -415,12 +415,9 @@ namespace SOR.Pages.BC
             catch (Exception Ex)
             {
                 ErrorLog.AggregatorTrace("Class : AggRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
-
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }
-
-
         }
         protected void btnExportCSV_Click(object sender, ImageClickEventArgs e)
         {

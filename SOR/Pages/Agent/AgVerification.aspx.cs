@@ -612,7 +612,7 @@ namespace SOR.Pages.Agent
                                         try
                                         {
                                             int val = 0;
-                                            switch (row.Cells[52].Text)
+                                            switch (row.Cells[31].Text)
                                             {
                                                 case "Onboard":
                                                     val = (int)EnumCollection.ActivityType.Onboard;
@@ -632,9 +632,9 @@ namespace SOR.Pages.Agent
                                                     //default  = 4
                                             }
                                             string AgentCode_ = null;
-                                            if (!string.IsNullOrEmpty(row.Cells[23].Text))
+                                            if (!string.IsNullOrEmpty(row.Cells[2].Text))
                                             {
-                                                AgentCode_ = row.Cells[23].Text;
+                                                AgentCode_ = row.Cells[2].Text;
                                             }
                                             else
                                             {
@@ -643,7 +643,7 @@ namespace SOR.Pages.Agent
 
 
                                             _reocrdsProcessed = _reocrdsProcessed + 1;
-                                            SingleSave(_reocrdsProcessed, _Flag, _Flag, row.Cells[3].Text, row.Cells[22].Text, Convert.ToString(Session["Username"]), TxtRemarks.Text.Trim(), row.Cells[40].Text, row.Cells[41].Text, row.Cells[51].Text, val, row.Cells[23].Text);
+                                            SingleSave(_reocrdsProcessed, _Flag, _Flag, row.Cells[3].Text, row.Cells[10].Text, Convert.ToString(Session["Username"]), TxtRemarks.Text.Trim(), row.Cells[28].Text, row.Cells[29].Text, row.Cells[30].Text, val, row.Cells[9].Text);
                                             //SingleSave(_reocrdsProcessed, _Flag, _Flag, row.Cells[2].Text, row.Cells[5].Text, Convert.ToString(Session["Username"]), TxtRemarks.Text.Trim(), row.Cells[9].Text, row.Cells[8].Text, row.Cells[6].Text, val, AgentCode_);
                                         }
                                         catch (Exception Ex)
