@@ -389,7 +389,7 @@
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
                                 <asp:BoundField DataField="Mobile No" HeaderText="Mobile No" />
                                 <asp:BoundField DataField="Email" HeaderText="Email" />
-                                <asp:BoundField DataField="Lattitude" HeaderText="Lattitude" />
+                                <asp:BoundField DataField="Lattitude" HeaderText="Latitude" />
                                 <asp:BoundField DataField="Longitude" HeaderText="Longitude" />
                                 <asp:BoundField DataField="State" HeaderText="State" />
                                 <asp:BoundField DataField="District" HeaderText="District" />

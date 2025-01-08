@@ -650,7 +650,7 @@ namespace BussinessAccessLayer
                 using (var conn = new NpgsqlConnection(ConnectionString))
                 {
                     conn.Open();
-                    using (var cmd = new NpgsqlCommand("public.insert_or_update_switch", conn))
+                    using (var cmd = new NpgsqlCommand("public.insert_or_update_switch", conn)) 
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("p_username", (object)UserName ?? DBNull.Value);

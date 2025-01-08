@@ -202,7 +202,8 @@
 }
 
 .icon-settings:before {
-    content: "\e908"; /* Unicode for settings icon */
+    /*content: "\e908";*/ /* Unicode for settings icon */
+    content: "\e913"; /* Unicode for settings icon */
     color: var(--color-primary-default);
 }
 
@@ -213,7 +214,8 @@
 }
 
 .icon-clipboard-list:before {
-    content: "\e903"; /* Unicode for clipboard/list (patch management) icon */
+    /*content: "\e903";*/
+    content: "\e919";
     color: var(--color-primary-default);
 }
 

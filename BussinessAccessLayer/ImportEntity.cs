@@ -584,8 +584,8 @@ namespace BussinessAccessLayer
                 }
             }
             catch (Exception ex)
-            {
-                ErrorLog.CommonTrace("Class: ImportEntity.cs \nFunction: Get_AgentManualKycUpload() \nException Occurred\n" + ex.Message);
+            {              
+                ErrorLog.AgentManagementTrace("Class: ImportEntity.cs \nFunction: Get_AgentManualKycUpload() \nException Occurred\n" + ex.Message);
             }
             return dataSet;
         }

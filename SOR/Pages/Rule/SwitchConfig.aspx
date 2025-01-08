@@ -480,6 +480,7 @@
             flex: 0 0 auto;
             width: 9.333333%;
         }
+
         .col-md-11112 {
             flex: 0 0 auto;
             width: 8.333333%;
@@ -527,6 +528,52 @@
             left: -70px; /* Moves the content 25px to the left */
         }
     </style>
+
+    <style>
+        .list-view-pf-body {
+            /* General container styles can be added here */
+        }
+
+        .list-view-pf-description {
+            /* Optional: You can add styles for the description section if needed */
+        }
+
+        .list-view-pf-additional-info-itemm {
+            /*display: flex;*/
+            flex-direction: row; /* Align header and content horizontally */
+            align-items: center; /* Vertically center content */
+            margin-bottom: 8px; /* Reduced space between items to reduce row height */
+        }
+
+        .header-item {
+            font-weight: normal; /* Lighter header */
+            color: #7f8fa4; /* Set header color to #7f8fa4 */
+            text-align: left; /* Align header text to the left */
+            margin-right: 16px; /* Space between header and content */
+            flex: 1; /* Ensure header takes available space */
+            margin-bottom: 8px; /* Add space between header and value */
+        }
+
+        .content-item {
+            /*display: flex;*/
+            align-items: center;
+            justify-content: flex-start; /* Align content to the left */
+            text-align: left; /* Align text to the left */
+            flex: 2; /* Ensure content takes more space */
+        }
+
+            .content-item strong {
+                font-weight: bold; /* Make value bold */
+                color: #555; /* Optional: color for the values */
+            }
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px; /* Optional: Space between the image and the value */
+        }
+    </style>
+
     <script type="text/javascript">
         function Confirm() {
             let confirm_value = document.createElement("INPUT");
@@ -1014,23 +1061,6 @@
     <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
 
         <asp:Repeater ID="rptrSwitch" runat="server" OnItemDataBound="rptrSwitch_ItemDataBound" OnItemCommand="rptrSwitch_ItemCommand">
-            <HeaderTemplate>
-                <div class="row" style="width: 103%; background-color: #fbd2ce; height: 30px; font-size: medium; align-items: center; font-weight: bold;">
-                    <%--<div class="row">--%>
-                    <div class="col-md-25"></div>
-                    <div class="col-md-1111">Name</div>
-                    <div class="col-md-3">Description</div>
-                    <div class="col-md-11"></div>
-                    <%--<div class="col-md-111"></div>--%>
-                    <%--<div class="col-md-22"></div>--%>
-                    <div class="col-md-11111">Percentage</div>
-                    <div class="col-md-11112">Count</div>
-                    <%--<div class="col-md-23"></div>--%>
-                    <div class="col-md-1">Status</div>
-                    <div class="col-md-24"></div>
-                    <div class="col-md-1111">Action</div>
-                </div>
-            </HeaderTemplate>
             <ItemTemplate>
                 <asp:HiddenField ID="hd1" Value='<%# Eval("id") %>' runat="server" />
                 <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
@@ -1075,45 +1105,72 @@
                                 </div>
 
                                 <div class="list-view-pf-body">
+                                    
                                     <div class="list-view-pf-description">
-                                        <div class="list-group-item-heading">
-                                            <%# Eval("switchname") %>
-                                        </div>
-                                        <div class="list-group-item-text">
-                                            <%# Eval("description") %>
-                                        </div>
-                                    </div>
+                                                <div class="list-view-pf-additional-info-itemm">
+                                                    <div class="header-item">
+                                                        <strong>Group Name</strong>
+                                                    </div>
+
+                                                    <div class="content-item">
+                                                        <strong><%# Eval("switchname") %></strong>
+                                                    </div>
+                                                </div>
+                                                <div class="list-view-pf-additional-info-itemm">
+                                                    <div class="header-item">
+                                                        <strong>Group Description</strong>
+                                                    </div>
+                                                    <div class="content-item">
+
+                                                        <strong><%# Eval("description") %></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <!-- Hidden Group ID for backend processing -->
                                     <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
+
+                                    <!-- Additional Information Section (Dynamic Data) -->
                                     <div class="list-view-pf-additional-info">
-                                        <div class="list-view-pf-additional-info-item">
-                                            <%--<span class="pficon pficon-screen"></span>--%>
-                                            <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
-                                            <strong><%# Eval("percentage") %></strong>
 
+                                        <!-- Percentage Section -->
+                                        <div class="list-view-pf-additional-info-itemm">
+                                           
+                                            <div class="header-item">
+                                                <strong>Percentage</strong>
+                                            </div>
+                                            <div class="content-item">
+                                                 <img src="../../images/icons/rules_2.png" />
+                                                <strong><%# Eval("percentage") %></strong>
+                                            </div>
                                         </div>
-                                        <div class="list-view-pf-additional-info-item">
-                                            <%--<span class="pficon pficon-screen"></span>--%>
-                                            <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
-                                            <strong><%# Eval("maxcount") %></strong>
 
+                                        <!-- Count Section -->
+                                        <div class="list-view-pf-additional-info-itemm">
+                                           
+                                            <div class="header-item">
+                                                <strong>Count</strong>
+                                            </div>
+                                            <div class="content-item">
+                                                 <img src="../../images/icons/rules_2.png" />
+                                                <strong><%# Eval("maxcount") %></strong>
+                                            </div>
                                         </div>
-                                        <div class="list-view-pf-additional-info-item">
-                                            <%--<span class="pficon pficon-cluster"></span>--%>
-                                            <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                            <strong><%# Eval("switchstatus") %></strong>
 
+                                        <!-- Status Section -->
+                                        <div class="list-view-pf-additional-info-itemm">
+                                            
+                                            <div class="header-item">
+                                                <strong>Status</strong>
+                                            </div>
+                                            <div class="content-item">
+                                                <img src="../../images/icons/status.png" />
+                                                <strong><%# Eval("switchstatus") %></strong>
+                                            </div>
                                         </div>
-                                        <%--<div class="list-view-pf-additional-info-item">
-                                            <span class="pficon pficon-container-node"></span>
-                                            <strong><%# Eval("isactive") %></strong>
 
-                                        </div>
-                                        <div class="list-view-pf-additional-info-item">
-                                            <span class="pficon pficon-image"></span>
-                                            <strong>8</strong> Images
-                                        </div>--%>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

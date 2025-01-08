@@ -139,6 +139,15 @@ namespace SOR.Pages.BC {
         protected global::System.Web.UI.WebControls.DropDownList ddlRequestStatus;
         
         /// <summary>
+        /// RequiredFieldValidator7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
+        
+        /// <summary>
         /// txtPanNoF control.
         /// </summary>
         /// <remarks>
@@ -148,31 +157,31 @@ namespace SOR.Pages.BC {
         protected global::System.Web.UI.WebControls.TextBox txtPanNoF;
         
         /// <summary>
-        /// hd_txtPanNoF control.
+        /// HiddenField4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hd_txtPanNoF;
+        protected global::System.Web.UI.WebControls.HiddenField HiddenField4;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// RegularExpressionValidator5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
         
         /// <summary>
-        /// FilteredTextBoxExtender52 control.
+        /// FilteredTextBoxExtender4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.FilteredTextBoxExtender FilteredTextBoxExtender52;
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender FilteredTextBoxExtender4;
         
         /// <summary>
         /// btnSearch control.

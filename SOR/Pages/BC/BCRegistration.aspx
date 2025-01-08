@@ -951,7 +951,7 @@
                                     <hr class="hr-line">
                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">RequestType</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">Request Type</label>
                                             <asp:DropDownList ID="ddlRequestType" runat="server" CssClass="maximus-select w-100" Width="100%" AutoPostBack="false">
                                                 <asp:ListItem Text="All" Value="-1"></asp:ListItem>
                                                 <asp:ListItem Text="Registration" Value="0"></asp:ListItem>
@@ -972,7 +972,7 @@
                                             </asp:DropDownList>
                                         </div>--%>
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">RequestStatus</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">Request Status</label>
                                             <asp:DropDownList ID="ddlRequestStatus" runat="server" CssClass="maximus-select w-100" Width="100%" AutoPostBack="false">
                                                 <asp:ListItem Text="All" Value="-1"></asp:ListItem>
                                                 <asp:ListItem Text="Pending" Value="0"></asp:ListItem>
@@ -987,13 +987,13 @@
                                             </div>
                                         </div>--%>
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">PanNo</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">Pan No</label>
                                             <div class="inputBox w-100">
-                                                <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" />--%>
-                                                <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10"></asp:TextBox>
-                                                <asp:HiddenField ID="hd_txtPanNoF" runat="server" Value="1" />
-                                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPanNoF" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />
-                                                <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender52" runat="server" FilterType="UppercaseLetters,Numbers" TargetControlID="txtPanNoF" />
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="txtPanNoF" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
+                                                <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
+                                                <asp:HiddenField ID="HiddenField4" runat="server" Value="1" />
+                                                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPanNoF" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />
+                                                <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" runat="server" FilterType="UppercaseLetters,Numbers, LowercaseLetters" TargetControlID="txtPanNoF" />
                                             </div>
                                         </div>
                                         <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
@@ -1188,7 +1188,7 @@
                                                         <div class="col" id="dvfield_PANNo" runat="server" style="display: normal;">
                                                             <label for="exampleInputEmail1">PAN No. <span class="err">*</span></label>
                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" ControlToValidate="txtPANNo" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
-                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPANNo" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10"></asp:TextBox>
+                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPANNo" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
                                                             <asp:HiddenField ID="hd_txtPANNo" runat="server" Value="1" />
                                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPANNo" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />
                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender6" runat="server" FilterType="UppercaseLetters,Numbers, LowercaseLetters" TargetControlID="txtPANNo" />

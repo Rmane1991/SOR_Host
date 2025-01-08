@@ -1229,7 +1229,7 @@
                                                 <!-- grid -->
                                                 <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
                                                     <div class="col">
-                                                        <label class="selectInputLabel" for="selectInputLabel">RequestType</label>
+                                                        <label class="selectInputLabel" for="selectInputLabel">Request Type</label>
                                                         <asp:DropDownList ID="ddlRequestType" runat="server" CssClass="maximus-select w-100" AutoPostBack="false">
                                                             <asp:ListItem Text="select" Value="-1"></asp:ListItem>
                                                             <asp:ListItem Text="Registration" Value="0"></asp:ListItem>
@@ -1251,7 +1251,7 @@
                                                         </asp:DropDownList>
                                                     </div>
                                                     <div class="col">
-                                                        <label class="selectInputLabel" for="selectInputLabel">RequestStatus</label>
+                                                        <label class="selectInputLabel" for="selectInputLabel">Request Status</label>
                                                         <asp:DropDownList ID="ddlRequestStatus" runat="server" CssClass="maximus-select w-100" AutoPostBack="false">
                                                             <asp:ListItem Text="select" Value="-1"></asp:ListItem>
                                                             <asp:ListItem Text="Pending" Value="0"></asp:ListItem>
@@ -1265,35 +1265,46 @@
                                                             <input type="text" id="txtAgentCode" runat="server" class="input-text form-control" style="width: 100%" placeholder="Agent Code" />
                                                         </div>
                                                     </div>--%>
-                                                    <div class="col">
+                                                    <%--<div class="col">
                                                         <label class="selectInputLabel" for="selectInputLabel">Pan No.</label>
                                                         <div class="inputBox w-100">
-                                                            <input type="text" id="txtPanNoF" runat="server" class="input-text form-control" style="width: 100%" placeholder="Pan No." />
+                                                            
+                                                        </div>
+                                                    </div>--%>
+                                                    <div class="col">
+                                                        <label class="selectInputLabel" for="selectInputLabel">Pan No</label>
+                                                        <div class="inputBox w-100">
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="txtPanNoF" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
+                                                            <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" style="width: 100%" placeholder="Pan No MaxLength="10" oninput="this.value = this.value.toUpperCase();"/>--%>
+                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
+                                                            <asp:HiddenField ID="HiddenField1" runat="server" Value="1" />
+                                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPanNoF" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />
+                                                            <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" FilterType="UppercaseLetters,Numbers, LowercaseLetters" TargetControlID="txtPanNoF" />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row d-flex justify-content-center align-items-center">
-    <!-- Container for buttons, centered with export buttons on the right -->
-    <div class="d-flex justify-content-between align-items-center w-100">
-        <!-- Search and Clear buttons (centered) -->
-        <div class="d-flex justify-content-center gap-3 w-100">
-            <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" onserverclick="btnSearch_ServerClick">
-                Search
-            </button>
-            <button type="button" id="btnClear" runat="server" onserverclick="btnClear_ServerClick" class="themeBtn resetBtn themeCancelBtn" data-bs-toggle="modal" style="margin-top:18px;">
-                Clear
-            </button>
-        </div>
-        
-        <!-- Export buttons aligned to the right -->
-        <div class="d-flex justify-content-end">
-            <asp:ImageButton ID="btnExportCSV" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
-                ToolTip="Csv" OnClick="btnExportCSV_Click" data-toggle="modal" data-target="#myModal" />
-            <asp:ImageButton ID="btndownload" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
-                ToolTip="Xls" OnClick="btndownloadXLS_Click" data-toggle="modal" data-target="#myModal" />
-        </div>
-    </div>
-</div>
+                                                    <!-- Container for buttons, centered with export buttons on the right -->
+                                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                                        <!-- Search and Clear buttons (centered) -->
+                                                        <div class="d-flex justify-content-center gap-3 w-100">
+                                                            <button type="button" id="btnSearch" runat="server" class="themeBtn themeApplyBtn" onserverclick="btnSearch_ServerClick">
+                                                                Search
+                                                            </button>
+                                                            <button type="button" id="btnClear" runat="server" onserverclick="btnClear_ServerClick" class="themeBtn resetBtn themeCancelBtn" data-bs-toggle="modal" style="margin-top: 18px;">
+                                                                Clear
+                                                            </button>
+                                                        </div>
+
+                                                        <!-- Export buttons aligned to the right -->
+                                                        <div class="d-flex justify-content-end">
+                                                            <asp:ImageButton ID="btnExportCSV" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                                                ToolTip="Csv" OnClick="btnExportCSV_Click" data-toggle="modal" data-target="#myModal" />
+                                                            <asp:ImageButton ID="btndownload" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
+                                                                ToolTip="Xls" OnClick="btndownloadXLS_Click" data-toggle="modal" data-target="#myModal" />
+                                                        </div>
+                                                    </div>
+                                                </div>
 
 
 
@@ -1461,7 +1472,7 @@
                                                                     <div class="col" id="dvfield_PANNo" runat="server" style="display: normal;">
                                                                         <label for="exampleInputEmail1">PAN No. <span class="err">*</span></label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator13" ControlToValidate="txtPANNo" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
-                                                                        <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPANNo" OnTextChanged="txtPANNo_TextChanged" AutoPostBack="true" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10"></asp:TextBox>
+                                                                        <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPANNo" OnTextChanged="txtPANNo_TextChanged" AutoPostBack="true" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
                                                                         <asp:Label ID="lblPanNoError" runat="server" Text="" CssClass="err"></asp:Label>
                                                                         <asp:HiddenField ID="hd_txtPANNo" runat="server" Value="1" />
                                                                         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ValidationGroup="FranchiseReg" runat="server" Display="None" ErrorMessage="Provided PAN No is not valid! Please enter PAN No start with 'eg.ABCDE1234K'." ControlToValidate="txtPANNo" ValidationExpression="[A-Z]{5}\d{4}[A-Z]{1}" />

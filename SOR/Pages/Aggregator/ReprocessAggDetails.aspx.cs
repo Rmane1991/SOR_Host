@@ -31,6 +31,8 @@ namespace SOR.Pages.BC
         string _salt = string.Empty;
         public string pathId, PathAdd, PathSig, pathlnkId, PathlnkAdd, PathlnkSig;
         bool _IsValidFileAttached = false;
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
 
         #region String builder Instantiation.
@@ -82,7 +84,7 @@ namespace SOR.Pages.BC
         #region PageLoad
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (!IsPostBack == true)
             {
                 FillBc();
@@ -108,7 +110,6 @@ namespace SOR.Pages.BC
                     PathSig = hidimgSig.Value;
                 }
             }
-
         }
 
 
@@ -116,6 +117,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | GetDetails() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //_BCEntity.BCReqId = HidBCID.Value;
                 _BCEntity.BCRequest = BCReqId;
 
@@ -257,13 +259,12 @@ namespace SOR.Pages.BC
                 {
                     //clearselection();
                 }
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | GetDetails() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
-
+                ErrorLog.AggregatorTrace("ReprocessAggDetails: GetDetails() : Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }
@@ -273,6 +274,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     string Status = string.Empty;
@@ -328,6 +330,13 @@ namespace SOR.Pages.BC
 
                         if (_BCEntity.Insert_aggregatorRequest(Convert.ToString(Session["Username"]), out RequestId, out Status, out StatusMsg))
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Aggregator-Reprocess";
+                            _auditParams[2] = "btnSubmitDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _BCEntity.BCReqId = Page.Request.QueryString["BCReqId"].ToString();
                             DataSet ds = _BCEntity.GetAggregatorDocs();
 
@@ -376,10 +385,11 @@ namespace SOR.Pages.BC
 
                     }
                 }
+                ErrorLog.AggregatorTrace("AgentRegistration | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Class : ReprocessAggDetails.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
@@ -394,8 +404,8 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                //_systemLogger.WriteErrorLog(this, Ex);
-                ErrorLog.CommonTrace(Ex.Message);
+                ErrorLog.CommonTrace("Class : ReprocessAggDetails.cs \nFunction : SetPageFiltersExport() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
             }
             return pageFilters;
         }
@@ -406,6 +416,7 @@ namespace SOR.Pages.BC
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | ValidateSetProperties() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 // ClientName
                 if (hd_txtFirstName.Value == "1" || !string.IsNullOrEmpty(txtFirstName.Text))
                     if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.TextWithoutSpace, txtFirstName.Text))
@@ -545,14 +556,12 @@ namespace SOR.Pages.BC
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
                 }
-
-
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | ValidateSetProperties() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Page : ClientRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message);
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Aggregator Registration');", true);
+                ErrorLog.AggregatorTrace("Page : ReprocessAggDetails.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Reprocess Aggregator');", true);
                 return false;
             }
             return true;
@@ -747,7 +756,7 @@ namespace SOR.Pages.BC
         {
             try
             {
-
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | Bindreceipt() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DataSet ds_Receipt = _BCEntity.getAggReceiptData();
                 if (ds_Receipt != null && ds_Receipt.Tables.Count > 0 && ds_Receipt.Tables[0].Rows.Count > 0)
                 {
@@ -787,11 +796,13 @@ namespace SOR.Pages.BC
                     hidimgSig.Value = PathSig;
                     ViewState["BCReqId"] = ds_Receipt.Tables[0].Rows[0]["BCReqID"].ToString();
                 }
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | Bindreceipt() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-
-                throw Ex;
+                ErrorLog.AggregatorTrace("ReprocessAggDetails: Bindreceipt() : Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                return;
             }
         }
 
@@ -799,6 +810,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
@@ -832,11 +844,11 @@ namespace SOR.Pages.BC
                         return;
                     }
                 }
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | BtnSubmit_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
-
+                ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
@@ -844,9 +856,16 @@ namespace SOR.Pages.BC
 
         protected void btnCloseReceipt_Click(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | btnCloseReceipt_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (HiddenField1.Value.ToString() == "Yes")
             {
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Reprocess";
+                _auditParams[2] = "btnCloseReceipt";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 DIVDetails.Visible = true;
                 DivBcDetails.Visible = false;
                 ddlSignature.SelectedValue = null;
@@ -860,6 +879,7 @@ namespace SOR.Pages.BC
 
             }
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | btnCloseReceipt_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         #region SaveFile IdentityProof
@@ -1114,6 +1134,7 @@ namespace SOR.Pages.BC
 
         protected void ProcessBCData_Click(object sender, EventArgs e)
         {
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | ProcessBCData_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (HiddenField1.Value.ToString() == "Yes")
             {
                 if (ChkConfirmBC.Checked == true)
@@ -1178,7 +1199,7 @@ namespace SOR.Pages.BC
             {
 
             }
-
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | ProcessBCData_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         protected void btntest_Click(object sender, EventArgs e)
@@ -1188,12 +1209,20 @@ namespace SOR.Pages.BC
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | btnCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+            #region Audit
+            _auditParams[0] = Session["Username"].ToString();
+            _auditParams[1] = "Aggregator-Reprocess";
+            _auditParams[2] = "btnCancel";
+            _auditParams[3] = Session["LoginKey"].ToString();
+            _LoginEntity.StoreLoginActivities(_auditParams);
+            #endregion
             DIVDetails.Visible = false;
             div_Upload.Visible = false;
             //divPaymentReceipt.Visible = false;
             divOnboardFranchise.Visible = false;
             Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+            ErrorLog.AggregatorTrace("ReprocessAggDetails | btnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         #region View Download
@@ -1398,17 +1427,26 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Reprocess";
+                _auditParams[2] = "BtnBack";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 DIVDetails.Visible = false;
                 div_Upload.Visible = false;
                 DivBcDetails.Visible = false;
                // divPaymentReceipt.Visible = false;
                 string val = HidBCID.Value;
                 GetDetails(val);
-               // GetDetailsBack(val);
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                // GetDetailsBack(val);
             }
             catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Page : EditBCRegistration.cs \nFunction : BindDropdownCountry()\nException Occured\n" + ex.Message);
+                ErrorLog.AggregatorTrace("Page : EditBCRegistration.cs \nFunction : BindDropdownCountry()\nException Occured\n" + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1416,6 +1454,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | GetDetailsBack() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Reprocess";
+                _auditParams[2] = "GetDetailsBack";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 _BCEntity.BCRequest = val;
                
                 DataSet ds = _BCEntity.GetOnboradingbcDetails();
@@ -1524,11 +1570,12 @@ namespace SOR.Pages.BC
                 {
                     //clearselection();
                 }
+                ErrorLog.AggregatorTrace("ReprocessAggDetails | GetDetailsBack() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
+                ErrorLog.AggregatorTrace("ReprocessAggDetails: GetDetailsBack() : Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }

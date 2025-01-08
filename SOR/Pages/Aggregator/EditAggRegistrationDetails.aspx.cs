@@ -74,12 +74,14 @@ namespace SOR.Pages.Aggregator
             RealTime = 93,
             Offline = 94
         }
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion;
 
         #region PageLoad
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("EditAggRegistrationDetails | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (!IsPostBack == true)
             {
                 fillClient();
@@ -113,6 +115,7 @@ namespace SOR.Pages.Aggregator
         {
             try
             {
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | GetDetails() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //_BCEntity.BCReqId = HidBCID.Value;
                 _BCEntity.BCRequest = BCReqId;
 
@@ -254,13 +257,12 @@ namespace SOR.Pages.Aggregator
                 {
                     //clearselection();
                 }
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | GetDetails() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
-
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
         }
@@ -270,6 +272,7 @@ namespace SOR.Pages.Aggregator
         {
             try
             {
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     string Status = string.Empty;
@@ -341,6 +344,13 @@ namespace SOR.Pages.Aggregator
 
                         if (_BCEntity.Insert_aggregatorRequest(Convert.ToString(Session["Username"]), out RequestId, out Status, out StatusMsg))
                         {
+                            #region Audit
+                            _auditParams[0] = Session["Username"].ToString();
+                            _auditParams[1] = "Aggregator-EditRegistration";
+                            _auditParams[2] = "btnSubmitDetails";
+                            _auditParams[3] = Session["LoginKey"].ToString();
+                            _LoginEntity.StoreLoginActivities(_auditParams);
+                            #endregion
                             _BCEntity.BCReqId = Page.Request.QueryString["BCReqId"].ToString();
                             DataSet ds = _BCEntity.GetAggregatorDocs();
 
@@ -389,10 +399,11 @@ namespace SOR.Pages.Aggregator
 
                     }
                 }
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.AggregatorTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
@@ -419,6 +430,7 @@ namespace SOR.Pages.Aggregator
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | ValidateSetProperties() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 // ClientName
                 if (hd_txtFirstName.Value == "1" || !string.IsNullOrEmpty(txtFirstName.Text))
                     if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.TextWithoutSpace, txtFirstName.Text))
@@ -565,11 +577,11 @@ namespace SOR.Pages.Aggregator
                     return false;
                 }
 
-
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | ValidateSetProperties() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Page : ClientRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message);
+                ErrorLog.CommonTrace("Page : ClientRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Aggregator Registration');", true);
                 return false;
@@ -835,7 +847,7 @@ namespace SOR.Pages.Aggregator
         {
             try
             {
-
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | Bindreceipt() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DataSet ds_Receipt = _BCEntity.getAggReceiptData();
                 if (ds_Receipt != null && ds_Receipt.Tables.Count > 0 && ds_Receipt.Tables[0].Rows.Count > 0)
                 {
@@ -875,11 +887,13 @@ namespace SOR.Pages.Aggregator
                     hidimgSig.Value = PathSig;
                     ViewState["BCReqId"] = ds_Receipt.Tables[0].Rows[0]["BCReqID"].ToString();
                 }
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | Bindreceipt() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-
-                throw Ex;
+                ErrorLog.AggregatorTrace("Class : EditAggRegistrationDetails.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
+                return;
             }
         }
 
@@ -887,6 +901,7 @@ namespace SOR.Pages.Aggregator
         {
             try
             {
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
@@ -920,11 +935,11 @@ namespace SOR.Pages.Aggregator
                         return;
                     }
                 }
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | BtnSubmit_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
-
+                ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Aggregator Registration');", true);
                 return;
             }
@@ -932,7 +947,7 @@ namespace SOR.Pages.Aggregator
 
         protected void btnCloseReceipt_Click(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("EditAggRegistrationDetails | btnCloseReceipt_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (HiddenField1.Value.ToString() == "Yes")
             {
                 DIVDetails.Visible = true;
@@ -948,6 +963,7 @@ namespace SOR.Pages.Aggregator
 
             }
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
+            ErrorLog.AggregatorTrace("EditAggRegistrationDetails | btnCloseReceipt_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         #region SaveFile IdentityProof
@@ -1202,69 +1218,80 @@ namespace SOR.Pages.Aggregator
 
         protected void ProcessBCData_Click(object sender, EventArgs e)
         {
-            if (HiddenField1.Value.ToString() == "Yes")
+            try
             {
-                if (ChkConfirmBC.Checked == true)
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | ProcessBCData_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                if (HiddenField1.Value.ToString() == "Yes")
                 {
-                   div_Upload.Visible = false;
-                   DivBcDetails.Visible = false;
-
-                    DivBcDetails.Visible = true;
-                    _BCEntity.CreatedBy = Session["Username"].ToString();
-                   _BCEntity.BCReqId = HidBCID.Value.ToString();
-                    _BCEntity.Activity = Convert.ToString(Session["RequestType"]);
-                    _BCEntity.Flag = 2;
-                    //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
-                    //if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
-                    //{
-                    //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'Aggregator Registration');", true);
-                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Aggregator Registration');", true);
-                    //    div_Upload.Visible = false;
-                    //    divOnboardFranchise.Visible = false;
-                    //    DivBcDetails.Visible = false;
-                    //    DIVDetails.Visible = false;
-                    //    ClearAllControls();
-                    //     Session["AGCode"] = string.Empty;
-                    //     Session["BCReqId"] = string.Empty;
-                    //     Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
-                    //     //HttpContext.Current.ApplicationInstance.CompleteRequest();
-                    // }
-                    // else
-                    // {
-                    //     ClearAllControls();
-                    // }
-                    string statusMessage = _BCEntity.SetInsertUpdateaggregatorTrackerDetails();
-
-                    if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
+                    if (ChkConfirmBC.Checked == true)
                     {
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Aggregator Registration');", true);
                         div_Upload.Visible = false;
-                        divOnboardFranchise.Visible = false;
                         DivBcDetails.Visible = false;
-                        DIVDetails.Visible = false;
-                        ClearAllControls();
-                        Session["AGCode"] = string.Empty;
-                        Session["BCReqId"] = string.Empty;
-                        Response.Redirect("~/Pages/Aggregator/OnBoardAggStatus.aspx", false);
-                    }
-                    else if (statusMessage == "Updated")
-                    {
-                        // Handle the case when the record is updated
+
+                        DivBcDetails.Visible = true;
+                        _BCEntity.CreatedBy = Session["Username"].ToString();
+                        _BCEntity.BCReqId = HidBCID.Value.ToString();
+                        _BCEntity.Activity = Convert.ToString(Session["RequestType"]);
+                        _BCEntity.Flag = 2;
+                        //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
+                        //if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
+                        //{
+                        //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'Aggregator Registration');", true);
+                        //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Aggregator Registration');", true);
+                        //    div_Upload.Visible = false;
+                        //    divOnboardFranchise.Visible = false;
+                        //    DivBcDetails.Visible = false;
+                        //    DIVDetails.Visible = false;
+                        //    ClearAllControls();
+                        //     Session["AGCode"] = string.Empty;
+                        //     Session["BCReqId"] = string.Empty;
+                        //     Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+                        //     //HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        // }
+                        // else
+                        // {
+                        //     ClearAllControls();
+                        // }
+                        string statusMessage = _BCEntity.SetInsertUpdateaggregatorTrackerDetails();
+
+                        if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
+                        {
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Aggregator Registration');", true);
+                            div_Upload.Visible = false;
+                            divOnboardFranchise.Visible = false;
+                            DivBcDetails.Visible = false;
+                            DIVDetails.Visible = false;
+                            ClearAllControls();
+                            Session["AGCode"] = string.Empty;
+                            Session["BCReqId"] = string.Empty;
+                            Response.Redirect("~/Pages/Aggregator/OnBoardAggStatus.aspx", false);
+                        }
+                        else if (statusMessage == "Updated")
+                        {
+                            // Handle the case when the record is updated
+                        }
+                        else
+                        {
+                            ClearAllControls();
+                        }
                     }
                     else
                     {
-                        ClearAllControls();
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Confirmation on all above BC Deatils are properly filled', 'Aggregator Registration');", true);
+                        return;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Confirmation on all above BC Deatils are properly filled', 'Aggregator Registration');", true);
-                    return;
-                }
-            }
-            else
-            {
 
+                }
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | ProcessBCData_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.AggregatorTrace("Class : EditAggRegistrationDetails.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
+                return;
             }
 
         }
@@ -1276,12 +1303,20 @@ namespace SOR.Pages.Aggregator
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
+            ErrorLog.AggregatorTrace("EditAggRegistrationDetails | btnCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+            #region Audit
+            _auditParams[0] = Session["Username"].ToString();
+            _auditParams[1] = "Aggregator-Registration";
+            _auditParams[2] = "btnCancel";
+            _auditParams[3] = Session["LoginKey"].ToString();
+            _LoginEntity.StoreLoginActivities(_auditParams);
+            #endregion
             DIVDetails.Visible = false;
             div_Upload.Visible = false;
             //divPaymentReceipt.Visible = false;
             divOnboardFranchise.Visible = false;
             Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+            ErrorLog.AggregatorTrace("EditAggRegistrationDetails | btnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         #region View Download
@@ -1486,17 +1521,28 @@ namespace SOR.Pages.Aggregator
         {
             try
             {
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Aggregator-Registration";
+                _auditParams[2] = "BtnBack";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
+
                 DIVDetails.Visible = false;
                 div_Upload.Visible = false;
                 DivBcDetails.Visible = false;
                // divPaymentReceipt.Visible = false;
                 string val = HidBCID.Value;
                 GetDetails(val);
-               // GetDetailsBack(val);
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                // GetDetailsBack(val);
             }
             catch (Exception ex)
             {
-                ErrorLog.CommonTrace("Page : EditBCRegistration.cs \nFunction : BindDropdownCountry()\nException Occured\n" + ex.Message);
+                ErrorLog.AggregatorTrace("Page : EditBCRegistration.cs \nFunction : BindDropdownCountry()\nException Occured\n" + ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1504,6 +1550,7 @@ namespace SOR.Pages.Aggregator
         {
             try
             {
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | GetDetailsBack() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _BCEntity.BCRequest = val;
                
                 DataSet ds = _BCEntity.GetOnboradingbcDetails();
@@ -1600,10 +1647,11 @@ namespace SOR.Pages.Aggregator
                 {
                     //clearselection();
                 }
+                ErrorLog.AggregatorTrace("EditAggRegistrationDetails | GetDetailsBack() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
+                ErrorLog.AggregatorTrace("Class : EditAggRegistrationDetails.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
                 return;
             }

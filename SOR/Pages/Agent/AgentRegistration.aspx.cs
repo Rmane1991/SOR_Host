@@ -324,7 +324,7 @@ namespace SOR.Pages.Agent
             }
             catch (Exception Ex)
             {
-                ErrorLog.AdminManagementTrace("AgentRegistration: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.AggregatorTrace("AgentRegistration: Page_Load: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -737,7 +737,7 @@ namespace SOR.Pages.Agent
                 _AgentRegistrationDAL.BucketId = ddlBucketId.SelectedValue != "-1" ? (ddlBucketId.SelectedValue) : null;
                 _AgentRegistrationDAL.RequestStatusId = ddlRequestStatus.SelectedValue != "-1" ? (ddlRequestStatus.SelectedValue) : null;
                 //_AgentRegistrationDAL.AgentCode = !string.IsNullOrEmpty(txtAgentCode.Value) ? txtAgentCode.Value.Trim() : null;
-                _AgentRegistrationDAL.PanNo = !string.IsNullOrEmpty(txtPanNoF.Value) ? txtPanNoF.Value.Trim() : null;
+                _AgentRegistrationDAL.PanNo = !string.IsNullOrEmpty(txtPanNoF.Text) ? txtPanNoF.Text.Trim() : null;
 
             }
             catch (Exception Ex)
@@ -1070,7 +1070,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnSearch_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnSearch";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -1093,7 +1093,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnClear_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnClear";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -1102,7 +1102,7 @@ namespace SOR.Pages.Agent
                 ddlBucketId.SelectedValue = null;
                 ddlRequestStatus.SelectedValue = null;
                 //txtAgentCode.Value = string.Empty;
-                txtPanNoF.Value = string.Empty;
+                txtPanNoF.Text = string.Empty;
 
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnClear_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
@@ -1532,7 +1532,7 @@ namespace SOR.Pages.Agent
                             {
                             #region Audit
                             _auditParams[0] = Session["Username"].ToString();
-                            _auditParams[1] = "Agent-Registration";
+                            _auditParams[1] = "Aggregator-Registration";
                             _auditParams[2] = "btnSubmitDetails";
                             _auditParams[3] = Session["LoginKey"].ToString();
                             _LoginEntity.StoreLoginActivities(_auditParams);
@@ -1823,7 +1823,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnCancel_Click() | Startd. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnCancel";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -1857,7 +1857,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "BtnSubmit-Docs";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -1922,7 +1922,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "BtnBack";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -1955,7 +1955,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | downloadPass_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "BtnSubmit-Final";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2011,7 +2011,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnCloseReceipt_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnCloseReceipt";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2180,7 +2180,7 @@ namespace SOR.Pages.Agent
                 {
                     #region Audit
                     _auditParams[0] = Session["Username"].ToString();
-                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[1] = "Aggregator-Registration";
                     _auditParams[2] = "Export-To-CSV";
                     _auditParams[3] = Session["LoginKey"].ToString();
                     _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2213,7 +2213,7 @@ namespace SOR.Pages.Agent
                 {
                     #region Audit
                     _auditParams[0] = Session["Username"].ToString();
-                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[1] = "Aggregator-Registration";
                     _auditParams[2] = "Export-To-Excel";
                     _auditParams[3] = Session["LoginKey"].ToString();
                     _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2266,7 +2266,7 @@ namespace SOR.Pages.Agent
                         ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-EditDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                         #region Audit
                         _auditParams[0] = Session["Username"].ToString();
-                        _auditParams[1] = "Agent-Registration";
+                        _auditParams[1] = "Aggregator-Registration";
                         _auditParams[2] = "RowCommand-EditDetails";
                         _auditParams[3] = Session["LoginKey"].ToString();
                         _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2311,7 +2311,7 @@ namespace SOR.Pages.Agent
                     ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-DeleteDetails | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     #region Audit
                     _auditParams[0] = Session["Username"].ToString();
-                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[1] = "Aggregator-Registration";
                     _auditParams[2] = "RowCommand-DeleteDetails";
                     _auditParams[3] = Session["LoginKey"].ToString();
                     _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2447,7 +2447,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnUpSearch_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnUpSearch";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2487,7 +2487,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnUpClear_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnUpClear";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2589,7 +2589,7 @@ namespace SOR.Pages.Agent
                     ErrorLog.AgentManagementTrace("AgentRegistration | RowCommand-DownloadDoc | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     #region Audit
                     _auditParams[0] = Session["Username"].ToString();
-                    _auditParams[1] = "Agent-Registration";
+                    _auditParams[1] = "Aggregator-Registration";
                     _auditParams[2] = "RowCommand-DownloadDoc";
                     _auditParams[3] = Session["LoginKey"].ToString();
                     _LoginEntity.StoreLoginActivities(_auditParams);
@@ -2847,7 +2847,7 @@ namespace SOR.Pages.Agent
                                     {
                                         #region Audit
                                         _auditParams[0] = Session["Username"].ToString();
-                                        _auditParams[1] = "Agent-Registration";
+                                        _auditParams[1] = "Aggregator-Registration";
                                         _auditParams[2] = "btnBulkUpload";
                                         _auditParams[3] = Session["LoginKey"].ToString();
                                         _LoginEntity.StoreLoginActivities(_auditParams);
@@ -3444,6 +3444,19 @@ namespace SOR.Pages.Agent
                         return false;
                     }
                 }
+                if (!string.IsNullOrEmpty(_bulkAgentEntity.AggegatorCode))
+                {
+                    _bulkAgentEntity.BCID = _bulkAgentEntity.AggegatorCode;
+                    _bulkAgentEntity.Flag = "2";
+                    _bulkAgentEntity.ImportBulkKycValidateData(out string StatusCode, out string SatatusDesc);
+                    _StatusDesc = SatatusDesc;
+                    _StatusCode = StatusCode;
+                    IsValidRecord = _StatusCode == "00" ? true : false;
+                    if (IsValidRecord == false)
+                    {
+                        return false;
+                    }
+                }
                 //if (!string.IsNullOrEmpty(_bulkAgentEntity.Pincode))
                 //{
                 //    _bulkAgentEntity.Pincode = _bulkAgentEntity.Pincode;
@@ -3748,7 +3761,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnUploadCancel_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnUploadCancel";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -3773,7 +3786,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | UploadDocuments() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "UploadDocuments";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);
@@ -3854,7 +3867,7 @@ namespace SOR.Pages.Agent
                 ErrorLog.AgentManagementTrace("AgentRegistration | btnDocUpload_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region Audit
                 _auditParams[0] = Session["Username"].ToString();
-                _auditParams[1] = "Agent-Registration";
+                _auditParams[1] = "Aggregator-Registration";
                 _auditParams[2] = "btnDocUpload";
                 _auditParams[3] = Session["LoginKey"].ToString();
                 _LoginEntity.StoreLoginActivities(_auditParams);

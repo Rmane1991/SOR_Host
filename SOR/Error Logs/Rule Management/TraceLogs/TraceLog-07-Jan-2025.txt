@@ -1,0 +1,129 @@
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : 96
+Time : 07-Jan-2025 11:37 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:37 Message : SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : 96
+Time : 07-Jan-2025 11:38 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 773240
+Time : 07-Jan-2025 11:38 Message : SwitchConfig: ToggleSlider(): This Switch Already Use In The Failover Switch | DB_ValidateCode : 96
+Time : 07-Jan-2025 11:40 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:40 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:40 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 07-Jan-2025 11:40 Message : SwitchConfig | ToggleSlider() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:40 Message : SwitchConfig: ToggleSlider(): DB_StatusCode : UPD00 | ResponseCode : UPD00 | ResponseMessage : Update Successful
+Time : 07-Jan-2025 11:40 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:40 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:40 Message : SwitchConfig | rptrSwitch_ItemCommand-Delete | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | rptrSwitch_ItemCommand-Delete | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | btnAddSwitch_Click() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | btnAddSwitch_Click() | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:41 Message : SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | btnCreSwitch_Click() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | btnCreSwitch_Click() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | btnCreSwitch_Click() | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:42 Message : SwitchConfig | rptrSwitch_ItemCommand-Delete | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:43 Message : SwitchConfig | rptrSwitch_ItemCommand-Delete | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:43 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:43 Message : SwitchConfig | btnDelete_Click() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:45 Message : TrRule: EditGroup() | DB_StatusCode : DEL00 | ResponseCode : DEL00 | ResponseMessage : Delete Successful
+Time : 07-Jan-2025 11:45 Message : SwitchConfig | btnDelete_Click() | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | btnAddRule_Click() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | btnAddRule_Click() | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | btnCloseRule_Click() | Started. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 11:48 Message : TrRule | btnCloseRule_Click() | Ended. | UserName : Maximus | LoginKey : 509651
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | rptrSwitch_ItemCommand-Edit | Started. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | rptrSwitch_ItemCommand-Edit | Ended. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | btnCloseSwitch_Click() | Started. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 12:34 Message : SwitchConfig | btnCloseSwitch_Click() | Ended. | UserName : Maximus | LoginKey : 778780
+Time : 07-Jan-2025 16:50 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 806756
+Time : 07-Jan-2025 16:50 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 806756
+Time : 07-Jan-2025 17:45 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 418856
+Time : 07-Jan-2025 17:45 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 418856
+Time : 07-Jan-2025 17:45 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 418856
+Time : 07-Jan-2025 18:07 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 674998
+Time : 07-Jan-2025 18:10 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:11 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:12 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:16 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:17 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:21 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:22 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 360984
+Time : 07-Jan-2025 18:26 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 808735
+Time : 07-Jan-2025 18:29 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 808735
+Time : 07-Jan-2025 18:29 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 808735
+Time : 07-Jan-2025 18:31 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 808735
+Time : 07-Jan-2025 18:31 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 808735
+Time : 07-Jan-2025 18:32 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:36 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:37 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:38 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:39 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:48 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:48 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:49 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:50 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:51 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:52 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:53 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:54 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | rptrGroup_ItemCommand()-AddRule | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | rptrGroup_ItemCommand()-AddRule | Ended. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | btnAddGroup_Click() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | btnAddGroup_Click() | Ended. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | btnCreGroup_Click() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Jan-2025 18:55 Message : TrRule | btnCreGroup_Click() | Ended. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | btnAddGroup_Click() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | btnAddGroup_Click() | Ended. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule | btnCreGroup_Click() | Started. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:55 Message : TrRule: btnCreGroup_Click() | DB_StatusCode : INS00 | ResponseCode : INS00 | ResponseMessage : Insert Successful
+Time : 07-Jan-2025 18:55 Message : TrRule | btnCreGroup_Click() | Ended. | UserName : Maximus | LoginKey : 171551
+Time : 07-Jan-2025 18:57 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 213332
+Time : 07-Jan-2025 18:58 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 213332
+Time : 07-Jan-2025 19:02 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 213332
+Time : 07-Jan-2025 19:03 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 213332
+Time : 07-Jan-2025 19:05 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 213332
+Time : 07-Jan-2025 19:14 Message : SwitchConfig | Page_Load() | Started. | UserName : Maximus | LoginKey : 896694
+Time : 07-Jan-2025 19:14 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 896694
+Time : 07-Jan-2025 19:17 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 896694
+Time : 07-Jan-2025 19:18 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 896694
+Time : 07-Jan-2025 19:35 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 274283
+Time : 07-Jan-2025 19:39 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 274283
+Time : 07-Jan-2025 19:39 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 274283
+Time : 07-Jan-2025 19:39 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:40 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:41 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:42 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:42 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:45 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:48 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:49 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668
+Time : 07-Jan-2025 19:49 Message : TrRule | Page_Load() | Started. | UserName : Maximus | LoginKey : 429668

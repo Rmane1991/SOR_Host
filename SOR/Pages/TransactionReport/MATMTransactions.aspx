@@ -304,7 +304,7 @@
                                             <asp:ListItem Text="All" Value="0"></asp:ListItem>
                                             <asp:ListItem Text="Withdrawal" Value="010000"></asp:ListItem>
                                             <asp:ListItem Text="Balance Enquiry" Value="310000"></asp:ListItem>
-                                            <asp:ListItem Text="MiniStatement" Value="900000"></asp:ListItem>
+                                            <asp:ListItem Text="Mini Statement" Value="900000"></asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
 
