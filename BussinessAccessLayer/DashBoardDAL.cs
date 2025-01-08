@@ -601,15 +601,15 @@ namespace BussinessAccessLayer
                         }
                     }
 
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM Get_Top5_Rule_Data(@dateFilter)", conn))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@dateFilter", (object)dateFilter ?? DBNull.Value);
-                        using (var adapter = new NpgsqlDataAdapter(cmd))
-                        {
-                            adapter.Fill(ds, "RuleData");
-                        }
-                    }
+                    //using (var cmd = new NpgsqlCommand("SELECT * FROM Get_Top5_Rule_Data(@dateFilter)", conn))
+                    //{
+                    //    cmd.CommandType = CommandType.Text;
+                    //    cmd.Parameters.AddWithValue("@dateFilter", (object)dateFilter ?? DBNull.Value);
+                    //    using (var adapter = new NpgsqlDataAdapter(cmd))
+                    //    {
+                    //        adapter.Fill(ds, "RuleData");
+                    //    }
+                    //}
 
                     using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_bctransactionsummarycount()", conn))
                     {

@@ -531,47 +531,61 @@
 
     <style>
         .list-view-pf-body {
-            /* General container styles can be added here */
-        }
+    /* General container styles can be added here */
+}
 
-        .list-view-pf-description {
-            /* Optional: You can add styles for the description section if needed */
-        }
+.list-view-pf-description {
+    /* Optional: You can add styles for the description section if needed */
+}
 
-        .list-view-pf-additional-info-itemm {
-            /*display: flex;*/
-            flex-direction: row; /* Align header and content horizontally */
-            align-items: center; /* Vertically center content */
-            margin-bottom: 8px; /* Reduced space between items to reduce row height */
-        }
+.list-view-pf-additional-info-itemm {
+   
+    flex-direction: row; /* Align header and content horizontally */
+    align-items: center; /* Vertically center content */
+    margin-bottom: 8px; /* Reduced space between items to reduce row height */
+    flex-wrap: wrap; /* Allow wrapping of items if needed */
+}
 
-        .header-item {
-            font-weight: normal; /* Lighter header */
-            color: #7f8fa4; /* Set header color to #7f8fa4 */
-            text-align: left; /* Align header text to the left */
-            margin-right: 16px; /* Space between header and content */
-            flex: 1; /* Ensure header takes available space */
-            margin-bottom: 8px; /* Add space between header and value */
-        }
+.header-item {
+    /* font-weight: normal; */
+    /* color: #7f8fa4; */
+    text-align: left;
+    margin-right: 16px;
+    padding: 8px;
+    /* white-space: nowrap; */
+    /* background-color: #f4f6f9; */
+    /* position: sticky; */
+    top: 0;
+    z-index: 2;
+    text-align: left;
+    /* border-bottom: 2px solid #ddd; */
+    width: 150px;
+    color: #7f8fa4;
+}
+/* Content of each row */
+.content-item {
+    display: table-cell; /* Treat this as a cell in the table */
+    padding: 8px; /* Padding for content cells */
+    text-align: left; /* Align content text to the left */
+    word-wrap: break-word; /* Allow content to wrap */
+    max-width: 100%; /* Ensure content doesn't overflow */
+    vertical-align: top; /* Align content to the top */
+    width: 200px; /* Fixed width for content columns */
+}
 
-        .content-item {
-            /*display: flex;*/
-            align-items: center;
-            justify-content: flex-start; /* Align content to the left */
-            text-align: left; /* Align text to the left */
-            flex: 2; /* Ensure content takes more space */
-        }
+/* Optional: Add styling for strong text inside the content */
+.content-item strong {
+    font-weight: bold;
+    color: #555;
+    word-break: break-word; /* Break long words */
+}
 
-            .content-item strong {
-                font-weight: bold; /* Make value bold */
-                color: #555; /* Optional: color for the values */
-            }
+img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px; /* Optional: Space between the image and the value */
+}
 
-        img {
-            width: 25px;
-            height: 25px;
-            margin-right: 8px; /* Optional: Space between the image and the value */
-        }
     </style>
 
     <script type="text/javascript">
