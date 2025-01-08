@@ -288,7 +288,7 @@ namespace SOR.Pages.Aggregator
                 {
                     gvTransactions.DataSource = null;
                     gvTransactions.DataBind();
-
+                    fillGrid();
                 }
 
             }

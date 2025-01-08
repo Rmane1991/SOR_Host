@@ -434,9 +434,9 @@
                                             <asp:BoundField DataField="Onboarded By" HeaderText="Onboarded By" />
                                             <asp:BoundField DataField="Onboarded On" HeaderText="Onboarded On" />
                                             <asp:BoundField DataField="Status" HeaderText="Status" />
-                                            <asp:BoundField DataField="Virefication_By" HeaderText="Virefication By" />
-                                            <asp:BoundField DataField="Virefication_On" HeaderText="Virefication On" />
-                                            <asp:BoundField DataField="Virefication_Remarks" HeaderText="Virefication Remarks" />
+                                            <asp:BoundField DataField="Verification_By" HeaderText="Verification By" />
+                                            <asp:BoundField DataField="Verification_On" HeaderText="Verification On" />
+                                            <asp:BoundField DataField="Verification_Remarks" HeaderText="Verification Remarks" />
                                             <asp:BoundField DataField="Terminated_By" HeaderText="Terminated By" />
                                             <asp:BoundField DataField="Terminated_On" HeaderText="Terminated On" />
                                         </Columns>

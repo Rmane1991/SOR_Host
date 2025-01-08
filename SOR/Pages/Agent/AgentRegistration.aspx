@@ -1548,7 +1548,7 @@
 
                                                                     </div>--%>
                                                                     <div class="col">
-                                                                        <label for="exampleInputEmail1">Agent Category</label>
+                                                                        <label for="exampleInputEmail1">Category</label>
                                                                         <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCategory" Width="100%">
                                                                             <asp:ListItem Value="General">General</asp:ListItem>
                                                                             <asp:ListItem Value="OBC">OBC</asp:ListItem>
@@ -1558,9 +1558,9 @@
                                                                     </div>
 
                                                                     <div class="col">
-                                                                        <label class="selectInputLabel" for="selectInputLabel">Agent DOB <span class="err">*</span> </label>
+                                                                        <label class="selectInputLabel" for="selectInputLabel">DOB <span class="err">*</span> </label>
                                                                         <div class="selectInputDateBox w-100">
-                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtdob" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please Select AgentDOB"></asp:RequiredFieldValidator>
+                                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtdob" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please Select DOB"></asp:RequiredFieldValidator>
                                                                             <asp:TextBox ID="txtdob" runat="server" Width="100%" CssClass="input-text form-control" TextMode="Date" onchange="javascript:ValidateDob();"
                                                                                 oncopy="return false;" oncut="return false;" onkeypress="return block(event);"
                                                                                 onpaste="return false;"></asp:TextBox>
@@ -1568,7 +1568,7 @@
                                                                     </div>
 
                                                                     <div class="col">
-                                                                        <label for="exampleInputAccountNumber">Agent Account Number <span class="err">*</span></label>
+                                                                        <label for="exampleInputAccountNumber">Account Number <span class="err">*</span></label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator36" ControlToValidate="txtAccountNumber" ValidationGroup="FranchiseReg" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please enter Account Number"></asp:RequiredFieldValidator>
                                                                         <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtAccountNumber" Width="100%" PlaceHolder="Account Number" MaxLength="19"></asp:TextBox>
                                                                         <asp:HiddenField ID="hd_txtAccountNumber" runat="server" Value="1" />
@@ -1762,7 +1762,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <br />
+                                        <div style="height: 10px"></div>
                                         <asp:UpdatePanel runat="server" ChildrenAsTriggers="true" UpdateMode="Always">
                                             <ContentTemplate>
                                                 <div class="form-group">
@@ -1780,10 +1781,10 @@
 
                                             </Triggers>
                                         </asp:UpdatePanel>
-                                        <br />
+                                        
 
 
-                                        <div style="height: 10px"></div>
+                                        
 
                                         <div class="col-md-12">
                                             <div class="panel panel-default">
@@ -1811,14 +1812,14 @@
                                                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
 
                                                                         <div class="col1">
-                                                                            <label for="exampleInputEmail1">Shop Address </label>
+                                                                            <label for="exampleInputEmail1">Address </label>
                                                                             <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtshopadd" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter Shop address"></asp:RequiredFieldValidator>--%>
-                                                                            <asp:TextBox runat="server" class="form-control" ID="txtshopadd" TextMode="MultiLine" Width="100%" PlaceHolder="Shop Address " Style="resize: none"></asp:TextBox>
+                                                                            <asp:TextBox runat="server" class="form-control" ID="txtshopadd" TextMode="MultiLine" Width="100%" PlaceHolder="Address " Style="resize: none"></asp:TextBox>
                                                                             <asp:HiddenField ID="HiddenField4" runat="server" Value="1" />
                                                                         </div>
                                                                         <!-- input -->
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop Pincode </label>
+                                                                            <label for="exampleInputEmail1">Pincode </label>
                                                                             <asp:TextBox runat="server" CssClass="input-text form-control" PlaceHolder="eg.400601" Width="100%" ID="txtshoppin" AutoPostBack="true" MaxLength="6" OnTextChanged="txtshoppin_TextChanged"></asp:TextBox>
                                                                             <%--  <asp:HiddenField ID="HiddenField9" runat="server" Value="1" />--%>
                                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender5" runat="server" FilterType="Numbers" TargetControlID="txtshoppin" />
@@ -1826,41 +1827,41 @@
                                                                         </div>
                                                                         <!-- input -->
                                                                         <div class="col" style="display: none">
-                                                                            <label for="exampleInputEmail1">Shop Country </label>
+                                                                            <label for="exampleInputEmail1">Country </label>
                                                                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="ddlshopCountry" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select Shop country"></asp:RequiredFieldValidator>--%>
                                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlshopCountry" Width="100%" AutoPostBack="true"></asp:DropDownList>
                                                                             <%--OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged"--%>
                                                                             <%--<asp:HiddenField ID="HiddenField5" runat="server" Value="1" />--%>
                                                                         </div>
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop State </label>
+                                                                            <label for="exampleInputEmail1">State </label>
                                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlShopState" Width="100%" OnSelectedIndexChanged="ddlShopState_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                                                             <%--OnSelectedIndexChanged="ddlState_SelectedIndexChanged"--%>
                                                                             <%--<asp:HiddenField ID="HiddenField6" runat="server" Value="1" />--%>
                                                                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="ddlShopState" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select Shop state"></asp:RequiredFieldValidator>--%>
                                                                         </div>
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop District</label>
+                                                                            <label for="exampleInputEmail1">District</label>
                                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlShopDistrict" Width="100%" OnSelectedIndexChanged="ddlShopDistrict_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                                                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator19" ControlToValidate="ddlShopDistrict" Width="100%" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select state"></asp:RequiredFieldValidator>--%>
                                                                         </div>
                                                                         <br />
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop City </label>
+                                                                            <label for="exampleInputEmail1">City </label>
                                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" Width="100%" ID="ddlShopCity"></asp:DropDownList>
                                                                             <%--  <asp:HiddenField ID="HiddenField8" runat="server" Value="1" />--%>
                                                                             <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator18" ControlToValidate="ddlShopCity" InitialValue="0" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please select city"></asp:RequiredFieldValidator>--%>
                                                                         </div>
 
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop EmailId </label>
+                                                                            <label for="exampleInputEmail1">EmailId </label>
                                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtshopEmailID" PlaceHolder="Email ID" Width="100%" MaxLength="50"></asp:TextBox>
 
-                                                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="None" ValidationGroup="FranchiseReg" ErrorMessage="Please enter valid Shop email id" ControlToValidate="txtEmailID" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+                                                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="None" ValidationGroup="FranchiseReg" ErrorMessage="Please enter valid email id" ControlToValidate="txtEmailID" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
                                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender9" runat="server" FilterType="Numbers,UppercaseLetters, LowercaseLetters, Custom" ValidChars=".@!#$%^&*()_,/\-" TargetControlID="txtEmailID" />
                                                                         </div>
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop Contact No. </label>
+                                                                            <label for="exampleInputEmail1">Contact No. </label>
                                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="TextBox5" PlaceHolder="Enter contact No." Width="100%" MaxLength="10"></asp:TextBox>
                                                                             <%-- <asp:HiddenField ID="hdnUserConfirmation0" runat="server" Value="1" />--%>
                                                                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator21" ControlToValidate="TextBox5" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter Shop contact no"></asp:RequiredFieldValidator>--%>
@@ -1868,7 +1869,7 @@
                                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender13" runat="server" FilterType="Numbers" TargetControlID="TextBox5" />
                                                                         </div>
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">Shop Landline No. </label>
+                                                                            <label for="exampleInputEmail1">Landline No. </label>
                                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="TextBox6" PlaceHolder="Enter landline no." Width="100%" MaxLength="10"></asp:TextBox>
                                                                             <%--<asp:HiddenField ID="hdnUserConfirmation1" runat="server" Value="1" />--%>
                                                                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator22" ControlToValidate="TextBox6" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please enter Shop landline no"></asp:RequiredFieldValidator>--%>
@@ -2150,7 +2151,7 @@
 
                                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
                                                         <div class="col1">
-                                                            <label for="exampleInputEmail1">Agent Name</label>
+                                                            <label for="exampleInputEmail1">Name</label>
                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtbcname" TextMode="MultiLine" ReadOnly="true" PlaceHolder="First Name" Width="100%" MaxLength="50"></asp:TextBox>
                                                         </div>
 
@@ -2184,8 +2185,8 @@
                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtaadh" Width="100%" ReadOnly="true" PlaceHolder="Enter 12 digit Aadhaarcard No." MaxLength="12" onkeypress="return isNumber(event)"></asp:TextBox>
                                                         </div>
                                                         <div class="col">
-                                                            <label for="exampleInputEmail1">Agent Category</label>
-                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtagentcategory" PlaceHolder="Agent Category" ReadOnly="true" Width="100%" MaxLength="11"></asp:TextBox>
+                                                            <label for="exampleInputEmail1">Category</label>
+                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtagentcategory" PlaceHolder="Category" ReadOnly="true" Width="100%" MaxLength="11"></asp:TextBox>
                                                             <%--   <asp:DropDownList runat="server" class="form-control" ID="DDLcat" Enabled="false" Width="100%">
                                                     <asp:ListItem Value="0">--Select--</asp:ListItem>--%>
                                                             <%--</asp:DropDownList>--%>
@@ -2201,7 +2202,7 @@
                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtifsc" PlaceHolder="IFSC Code" ReadOnly="true" Width="100%" MaxLength="11"></asp:TextBox>
                                                         </div>
                                                         <div class="col">
-                                                            <label for="exampleInputEmail1">Agent DOB</label>
+                                                            <label for="exampleInputEmail1">DOB</label>
 
                                                             <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtAgrdob" ReadOnly="true" Width="100%" MaxLength="10"></asp:TextBox>
 

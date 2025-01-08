@@ -554,33 +554,58 @@
     </style>
     <style>
         .list-view-pf-additional-info-item {
-            /*display: flex;*/
-            flex-direction: row; /* Align header and content horizontally */
-            align-items: center; /* Vertically center content */
-            margin-bottom: 8px; /* Reduced space between items to reduce row height */
-        }
+    flex-direction: row; /* Align header and content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 8px; /* Space between items */
+    position: relative; /* Ensure content flows below header */
+}
 
-        .header-item {
-            font-weight: normal; /* Lighter header */
-            color: #7f8fa4; /* Set header color to #7f8fa4 */
-            text-align: left; /* Align header text to the left */
-            margin-right: 16px; /* Space between header and content */
-            flex: 1; /* Ensure header takes available space */
-            margin-bottom: 8px; /* Add space between header and value */
-        }
+/* Container to manage the list */
+.list-view-pf-description {
+    display: table; /* Treat this as a table container */
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders collapse (if any) */
+}
 
-        .content-item {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Align content to the left */
-            text-align: left; /* Align text to the left */
-            flex: 2; /* Ensure content takes more space */
-        }
+/* Each row */
 
-            .content-item strong {
-                font-weight: bold; /* Make value bold */
-                color: #555; /* Optional: color for the values */
-            }
+
+/* Header */
+.header-item {
+    /* font-weight: normal; */
+    /* color: #7f8fa4; */
+    text-align: left;
+    margin-right: 16px;
+    padding: 8px;
+    /* white-space: nowrap; */
+    /* background-color: #f4f6f9; */
+    /* position: sticky; */
+    top: 0;
+    z-index: 2;
+    text-align: left;
+    /* border-bottom: 2px solid #ddd; */
+    width: 150px;
+    color: #7f8fa4;
+}
+/* Content of each row */
+.content-item {
+    display: table-cell; /* Treat this as a cell in the table */
+    padding: 8px; /* Padding for content cells */
+    text-align: left; /* Align content text to the left */
+    word-wrap: break-word; /* Allow content to wrap */
+    max-width: 100%; /* Ensure content doesn't overflow */
+    vertical-align: top; /* Align content to the top */
+    width: 200px; /* Fixed width for content columns */
+}
+
+/* Optional: Add styling for strong text inside the content */
+.content-item strong {
+    font-weight: bold;
+    color: #555;
+    word-break: break-word; /* Break long words */
+}
+
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
@@ -985,13 +1010,10 @@
                                                         <strong><%# Eval("group_description") %></strong>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <!-- Hidden Group ID for backend processing -->
-                                            <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
+                                            
 
                                             <!-- Additional Information Section (Dynamic Data) -->
-                                            <div class="list-view-pf-additional-info">
+                                          
 
                                                 <!-- Rule Count Section -->
                                                 <div class="list-view-pf-additional-info-item">
@@ -1027,6 +1049,9 @@
                                                 </div>
 
                                             </div>
+
+                                            <!-- Hidden Group ID for backend processing -->
+                                            <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
                                         </div>
 
 
@@ -1111,10 +1136,7 @@
                                                                                         <!-- Rule Description -->
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-
-                                                                            <!-- Additional Information Section (Dynamic Data) -->
-                                                                            <div class="list-view-pf-additional-info">
+                                                                            
                                                                                 <!-- Priority Section -->
                                                                                 <div class="list-view-pf-additional-info-item">
                                                                                     <div class="header-item">
@@ -1291,19 +1313,16 @@
                                                                                 <p class="sub-header">Comprehensive insights into your transaction metrics</p>
                                                                                 <dl class="dl-horizontal">
                                                                                     <dt>Switch Name</dt>
-                                                                                    <dd>Switch-XYZ</dd>
+                                                                                    <dd><%# Eval("switchname") %></dd>
                                                                                     <dt>Rule Name</dt>
-                                                                                    <dd>Rule-ABC</dd>
+                                                                                    <dd><%# Eval("rulename") %></dd>
                                                                                     <dt>Combination of Rules</dt>
-                                                                                    <dd>Rule-ABC + Rule-DEF</dd>
+                                                                                    <dd><%# Eval("rulename") %></dd>
                                                                                     <dt>Time Created</dt>
-                                                                                    <dd>January 10, 2016 09:00:00 AM</dd>
+                                                                                    <dd><%# Eval("createdon") %></dd>
                                                                                     <dt>Last Transaction</dt>
-                                                                                    <dd>January 15, 2016 10:45:11 AM</dd>
-                                                                                    <dt>Severity Level</dt>
-                                                                                    <dd>Warning</dd>
-                                                                                    <dt>Cluster Name</dt>
-                                                                                    <dd>Cluster 1</dd>
+                                                                                    <dd><%# Eval("lasttransaction") %></dd>
+                                                                                    
                                                                                 </dl>
                                                                                 <%--<button class="btn btn-primary" onclick="alert('More details coming soon!')">View More Details</button>--%>
                                                                             </div>
