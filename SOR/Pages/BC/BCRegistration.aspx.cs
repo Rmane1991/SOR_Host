@@ -17,6 +17,8 @@ namespace SOR.Pages.BC
     {
 
         #region Object Declarations
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         //BCEntity _BCEntity = new BCEntity();
         ClientRegistrationEntity clientMngnt = new ClientRegistrationEntity();
         public clsCustomeRegularExpressions customeRegExpValidation = null;
