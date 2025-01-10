@@ -78,10 +78,10 @@
   content: "\e907";
   color: var(--color-primary-default);
 }
-.icon-hide:before {
+/*.icon-hide:before {
   content: "\e908";
   color: var(--color-primary-default);
-}
+}*/
 .icon-housekeeping-activity:before {
   content: "\e909";
   color: var(--color-primary-default);
@@ -98,12 +98,10 @@
     content: "\e90a";
     color: var(--color-primary-default);
 }
-.icon-terminal-status:before {
-    /*content: "\e91c";*/
+/*.icon-terminal-status:before {
     content: "\e91c";
-    /*content: "\e90d";*/
     color: var(--color-primary-default);
-}
+}*/
 .icon-ticket-centre:before {
   content: "\e90e";
   color: var(--color-primary-default);
@@ -173,11 +171,34 @@
     color: var(--color-primary-default);
 }
 
-.icon-rule-management:before {
+/*.icon-rule-management:before {
     content: "\e91a";
     color: var(--color-primary-default);
     font-size: 25px;
+}*/
+.icon-rule-management:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/rule-mangement.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
 }
+.icon-terminal-status:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/report-management.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
+}
+
 
 
 .icon-network:before {
@@ -185,9 +206,20 @@
     color: var(--color-primary-default);
 }
 
-.icon-userr:before {
-    content: "\e902"; /* Unicode for user icon --Agent*/
+/*.icon-userr:before {
+    content: "\e902";
     color: var(--color-primary-default);
+}*/
+.icon-userr:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/agent-mangement.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
 }
 
 .icon-file-alt:before {
@@ -195,16 +227,37 @@
     color: var(--color-primary-default);
 }
 
-.icon-cogs:before {
-    /*content: "\e907";*/ /* Unicode for cogs (settings) icon */
-    content: "\e90e"; /* Unicode for cogs (settings) icon */
+/*.icon-cogs:before {
+    content: "\e90e";
     color: var(--color-primary-default);
+}*/
+.icon-cogs:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/patch-management.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
 }
 
-.icon-settings:before {
-    /*content: "\e908";*/ /* Unicode for settings icon */
-    content: "\e913"; /* Unicode for settings icon */
+/*.icon-settings:before {
+    
+    content: "\e913";
     color: var(--color-primary-default);
+}*/
+.icon-settings:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/configuration.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
 }
 
 .icon-upload:before {
@@ -213,10 +266,31 @@
     color: var(--color-primary-default);
 }
 
-.icon-clipboard-list:before {
-    /*content: "\e903";*/
+/*.icon-clipboard-list:before {
     content: "\e919";
     color: var(--color-primary-default);
+}*/
+.icon-clipboard-list:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/application-management.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
+}
+.icon-restricted:before {
+    content: "";
+    display: inline-block;
+    width: 20px; /* Adjust width of the image */
+    height: 20px; /* Adjust height of the image */
+    background-image: url('../../images/icons/upload.png');
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image */
+    color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
+    font-size: 0; /* Remove font-size as it's not necessary with background-image */
 }
 
 .icon-lab:before {
@@ -224,11 +298,11 @@
     color: var(--color-primary-default);
 }
 
-.icon-restricted:before {
+/*.icon-restricted:before {
     content: "\e918";
     color: var(--color-primary-default);
     font-size: 25px;
-}
+}*/
 /*.icon-rule-status:before {
     content: "\f0cb";
     font-family: 'FontAwesome';

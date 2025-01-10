@@ -387,8 +387,8 @@
                                 <asp:BoundField DataField="Aggregator Code" HeaderText="Aggregator Code" />
                                 <asp:BoundField DataField="Code" HeaderText="Code" />
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
-                                <asp:BoundField DataField="Mobile No" HeaderText="Mobile No" />
-                                <asp:BoundField DataField="Email" HeaderText="Email" />
+                                <asp:BoundField DataField="Mobile No" HeaderText="Mobile No." />
+                                <asp:BoundField DataField="Email" HeaderText="Email Id" />
                                 <asp:BoundField DataField="Lattitude" HeaderText="Latitude" />
                                 <asp:BoundField DataField="Longitude" HeaderText="Longitude" />
                                 <asp:BoundField DataField="State" HeaderText="State" />

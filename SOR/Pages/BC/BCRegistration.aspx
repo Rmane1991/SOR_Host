@@ -987,7 +987,7 @@
                                             </div>
                                         </div>--%>
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">Pan No</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">Pan No.</label>
                                             <div class="inputBox w-100">
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="txtPanNoF" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
                                                 <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
@@ -1032,7 +1032,6 @@
                     <asp:Panel ID="panelGrid" runat="server" HorizontalScroll="false" ScrollBars="None" Style="padding: 5px 10px 0px 0px;">
                         <div class="form-group row">
                             <div class="tableBorderBox HeaderStyle" style="width: 100%; padding: 10px 10px; overflow: scroll; max-height: 400px;">
-                                <div class="table-box">
                                     <asp:GridView ID="gvBCOnboard" runat="server"
                                         AutoGenerateColumns="false"
                                         GridLines="None"
@@ -1075,18 +1074,17 @@
                                             <asp:BoundField DataField="BCReqId" HeaderText="ID" />
                                             <asp:BoundField DataField="Name" HeaderText="Name" />
                                             <asp:BoundField DataField="Address" HeaderText="Address" />
-                                            <asp:BoundField DataField="Pan No" HeaderText="Pan No" />
-                                            <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No" />
-                                            <asp:BoundField DataField="Contact No" HeaderText="Mobile No" />
+                                            <asp:BoundField DataField="Pan No" HeaderText="Pan No." />
+                                            <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No." />
+                                            <asp:BoundField DataField="Contact No" HeaderText="Mobile No." />
                                             <asp:BoundField DataField="Email Id" HeaderText="Email Id" />
-                                            <asp:BoundField DataField="RequestType" HeaderText="RequestType" />
+                                            <asp:BoundField DataField="RequestType" HeaderText="Type" />
                                             <asp:BoundField DataField="Bucket" HeaderText="Bucket" Visible="false" />
-                                            <asp:BoundField DataField="RequestStatus" HeaderText="RequestStatus" />
-                                            <asp:BoundField DataField="ActivityType" HeaderText="ActivityType" Visible="false" />
+                                            <asp:BoundField DataField="RequestStatus" HeaderText="Status" />
+                                            <asp:BoundField DataField="ActivityType" HeaderText="Activity Type" Visible="false" />
                                         </Columns>
                                         <HeaderStyle BackColor="#8DCCF6" ForeColor="#3D62B6" />
                                     </asp:GridView>
-                                </div>
                             </div>
                         </div>
                     </asp:Panel>
@@ -1206,21 +1204,6 @@
                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator41" ControlToValidate="txtaadharno" Display="None" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter Aadhaarcard no"></asp:RequiredFieldValidator>
                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender34" runat="server" FilterType="Numbers" TargetControlID="txtaadharno" />
                                                         </div>
-                                                    </div>
-                                                    <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
-
-
-
-                                                        <div class="col">
-                                                            <label for="exampleInputEmail1">BC Category </label>
-                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCategory" Width="100%">
-                                                                <asp:ListItem Value="Select">--Select--</asp:ListItem>
-                                                                <asp:ListItem Value="General">General</asp:ListItem>
-                                                                <asp:ListItem Value="OBC">OBC</asp:ListItem>
-                                                                <asp:ListItem Value="SC">SC</asp:ListItem>
-                                                                <asp:ListItem Value="ST">ST</asp:ListItem>
-                                                            </asp:DropDownList>
-                                                        </div>
                                                         <div class="col">
                                                             <label for="exampleInputEmail1">Type Of Organization </label>
                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="DDlOrg" Width="100%">
@@ -1231,6 +1214,22 @@
                                                                 <%--     <asp:ListItem Value="ST">ST</asp:ListItem>--%>
                                                             </asp:DropDownList>
                                                         </div>
+                                                    </div>
+                                                    <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
+
+
+
+                                                        <div class="col" style="display:none">
+                                                            <label for="exampleInputEmail1">BC Category </label>
+                                                            <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCategory" Width="100%">
+                                                                <asp:ListItem Value="Select">--Select--</asp:ListItem>
+                                                                <asp:ListItem Value="General">General</asp:ListItem>
+                                                                <asp:ListItem Value="OBC">OBC</asp:ListItem>
+                                                                <asp:ListItem Value="SC">SC</asp:ListItem>
+                                                                <asp:ListItem Value="ST">ST</asp:ListItem>
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                        
                                                         <div class="col">
                                                             <label for="exampleInputAccountNumber">Account Number <span class="err">*</span></label>
                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator36" ControlToValidate="txtAccountNumber" ValidationGroup="FranchiseReg" Style="display: none" runat="server" CssClass="err" ErrorMessage="Please enter Account Number"></asp:RequiredFieldValidator>

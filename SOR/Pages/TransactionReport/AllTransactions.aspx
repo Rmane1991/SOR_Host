@@ -312,7 +312,7 @@
                                             <asp:DropDownList ID="ddlChannelType" runat="server" CssClass="maximus-select w-100" AutoPostBack="false">
                                                 <asp:ListItem Text="All" Value="0"></asp:ListItem>
                                                 <asp:ListItem Text="AEPS" Value="1"></asp:ListItem>
-                                                <asp:ListItem Text="MATM" Value="2"></asp:ListItem>
+                                                <%--<asp:ListItem Text="MATM" Value="2"></asp:ListItem>--%>
                                             </asp:DropDownList>
                                         </div>
                                         <div class="col col-all-filter">
@@ -331,9 +331,9 @@
                                             <label class="selectInputLabel" for="selectInputLabel">Txn Type</label>
                                             <asp:DropDownList ID="ddlTranType" runat="server" CssClass="maximus-select w-100" AutoPostBack="false">
                                                 <asp:ListItem Text="All" Value="0"></asp:ListItem>
-                                                <asp:ListItem Text="Withdrawal" Value="010000"></asp:ListItem>
-                                                <asp:ListItem Text="Balance Enquiry" Value="310000"></asp:ListItem>
-                                                <asp:ListItem Text="Mini Statement" Value="900000"></asp:ListItem>
+                                                <asp:ListItem Text="Withdrawal" Value="Withdrawal"></asp:ListItem>
+                                                <asp:ListItem Text="Balance Enquiry" Value="BalanceEnquiry"></asp:ListItem>
+                                                <asp:ListItem Text="Mini Statement" Value="MiniStatement"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
                                         <div class="col">
@@ -411,7 +411,7 @@
                 </br>
 
                 <asp:Panel ID="pnlTicketSummary" runat="server" Style="width: 75%; padding: 06px 0px; overflow: auto; margin: 0 auto;">
-                    <table class="OuterTable">
+                    <table class="OuterTable" style="margin:auto">
                         <tr>
                             <td class="OuterTD">
                                 <asp:Panel ID="Panel2" runat="server" HorizontalAlign="Center" Style="margin: 0px 5px 0px 0px;">
@@ -465,7 +465,7 @@
                                 </asp:Panel>
                             </td>
 
-                            <td class="OuterTD">
+                            <td class="OuterTD" style="display:none">
                                 <asp:Panel ID="Panel3" runat="server" HorizontalAlign="Center" Style="margin: 0px 5px 0px 0px;">
                                     <fieldset class="scheduler-border" style="margin-left: -6px">
                                         <legend class="scheduler-border">MATM Transactions </legend>

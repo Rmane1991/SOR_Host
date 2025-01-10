@@ -234,7 +234,7 @@
                             <div>
                                 <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
 
-                                    <div class="col">
+                                    <div class="col" style="display:none">
                                         <label class="selectInputLabel" for="selectInputLabel">Channel</label>
                                         <asp:DropDownList ID="ddlChannelType" runat="server" CssClass="maximus-select w-100" AutoPostBack="false">
                                             <asp:ListItem Text="AEPS" Value="1"></asp:ListItem>

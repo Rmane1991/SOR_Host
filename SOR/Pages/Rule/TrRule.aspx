@@ -319,7 +319,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
             margin-left: 130px;
-            width: max-content;
+            /*width: max-content;*/
             margin-bottom: 10PX;
         }
 
@@ -403,7 +403,8 @@
 
         /* Dropdown End */
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">--%>
+    <link rel="stylesheet" href="../../css/rule_all.min.css">
     <style>
         /*#toggleButton {
             cursor: pointer; 
@@ -595,7 +596,7 @@
     word-wrap: break-word; /* Allow content to wrap */
     max-width: 100%; /* Ensure content doesn't overflow */
     vertical-align: top; /* Align content to the top */
-    width: 200px; /* Fixed width for content columns */
+    width: 100px; /* Fixed width for content columns */
 }
 
 /* Optional: Add styling for strong text inside the content */
@@ -653,6 +654,8 @@
     </div>
     &nbsp;&nbsp;
     <!-- Modal Group -->
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -676,27 +679,6 @@
                             <asp:TextBox ID="txtGroupDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Group Description"></asp:TextBox>
                         </div>
                     </div>
-
-                    <%--<div class="form-group row mb-3">
-                        <label for="lblPriority" class="col-md-4 col-form-label">Priority</label>
-                        <div class="col-md-8">
-                            <div class="btn-group" role="group">
-                                <asp:LinkButton ID="LinkButton1" CssClass="btn btn-outline-secondary" OnClick="Priority1_Click" CommandArgument="1" runat="server">Low</asp:LinkButton>
-                                <asp:LinkButton ID="LinkButton2" CssClass="btn btn-outline-secondary" OnClick="Priority1_Click" CommandArgument="2" runat="server">Medium</asp:LinkButton>
-                                <asp:LinkButton ID="LinkButton3" CssClass="btn btn-outline-secondary" OnClick="Priority1_Click" CommandArgument="3" runat="server">High</asp:LinkButton>
-                            </div>
-                        </div>
-                    </div>--%>
-                    <%--<div class="row mb-3">
-                        <label for="lblPriority" runat="server" class="col-md-4 col-form-label">Priority</label>
-                        <div class="col-md-8">
-                            <div class="justify-content-around">
-                                <asp:LinkButton ID="LinkButton1" CssClass="priority-label btn btn-outline-secondary" OnClick="Priority1_Click" CommandArgument="1" runat="server">Low</asp:LinkButton>
-                                <asp:LinkButton ID="LinkButton2" CssClass="priority-label btn btn-outline-secondary" OnClick="Priority1_Click" CommandArgument="2" runat="server">Medium</asp:LinkButton>
-                                <asp:LinkButton ID="LinkButton3" CssClass="priority-label btn btn-outline-secondary" OnClick="Priority1_Click" CommandArgument="3" runat="server">High</asp:LinkButton>
-                            </div>
-                        </div>
-                    </div>--%>
                 </div>
                 <!-- Footer -->
                 <div class="modal-footer">
@@ -707,8 +689,13 @@
         </div>
     </div>
     <asp:HiddenField ID="hdnShowModalG" runat="server" Value="false" />
-
+    </ContentTemplate>
+    <Triggers>
+    </Triggers>
+</asp:UpdatePanel>
     <!-- Modal Rule -->
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+    <ContentTemplate>
     <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabelR" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -931,7 +918,11 @@
         </div>
     </div>
     <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
-
+    </ContentTemplate>
+    <Triggers>
+        
+    </Triggers>
+</asp:UpdatePanel>
     <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
         <asp:PlaceHolder ID="headerPlaceholder" runat="server"></asp:PlaceHolder>
         <asp:Repeater ID="rptrGroup" runat="server" OnItemCommand="rptrGroup_ItemCommand" OnItemDataBound="rptrGroup_ItemDataBound">
@@ -1309,20 +1300,19 @@
                                                                         </div>
                                                                         <div class="col-md-6">
                                                                             <div class="details-container">
-                                                                                <h2 class="details-header">Detailed Transaction Overview</h2>
-                                                                                <p class="sub-header">Comprehensive insights into your transaction metrics</p>
-                                                                                <dl class="dl-horizontal">
-                                                                                    <dt>Switch Name</dt>
-                                                                                    <dd><%# Eval("switchname") %></dd>
+                                                                                <h2 class="details-header">Overview - <%# Eval("rulename") %> </h2>
+                                                                                <%--<p class="sub-header">Comprehensive insights into your transaction metrics</p>--%>
+                                                                                <dl class="dl-horizontal" style="overflow: auto;">
                                                                                     <dt>Rule Name</dt>
                                                                                     <dd><%# Eval("rulename") %></dd>
-                                                                                    <dt>Combination of Rules</dt>
+                                                                                    <dt>Rule Description</dt>
                                                                                     <dd><%# Eval("rulename") %></dd>
-                                                                                    <dt>Time Created</dt>
+                                                                                    <dt>Switch Name</dt>
+                                                                                    <dd><%# Eval("switchname") %></dd>
+                                                                                    <dt>Created On</dt>
                                                                                     <dd><%# Eval("createdon") %></dd>
-                                                                                    <dt>Last Transaction</dt>
-                                                                                    <dd><%# Eval("lasttransaction") %></dd>
-                                                                                    
+                                                                                    <%--<dt>Last Transaction</dt>
+                                                                                    <dd><%# Eval("lasttransaction") %></dd>--%>
                                                                                 </dl>
                                                                                 <%--<button class="btn btn-primary" onclick="alert('More details coming soon!')">View More Details</button>--%>
                                                                             </div>
@@ -1370,15 +1360,35 @@
                 $dropdown.toggleClass('dropup', space < 10);
             });
 
-            // click the list-view heading then expand a row
-            $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
-                if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
-                    $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
-                        .end().parent().toggleClass("list-view-pf-expand-active")
-                        .find(".list-group-item-container").toggleClass("hidden");
-                } else {
-                }
-            })
+            //// click the list-view heading then expand a row
+            //$("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
+            //    if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+            //        $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
+            //            .end().parent().toggleClass("list-view-pf-expand-active")
+            //            .find(".list-group-item-container").toggleClass("hidden");
+            //    } else {
+            //    }
+            //})
+            // Click the list-view heading to expand/collapse a row
+    $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
+        if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+            var $angleIcon = $(this).find(".fa");  // Find the angle icon in the header
+            var $parent = $(this).parent();
+            var $container = $parent.find(".list-group-item-container");
+
+            if ($parent.hasClass("list-view-pf-expand-active")) {
+                // Collapse: Change icon to fa-angle-right, hide container, and remove active class
+                $angleIcon.removeClass("fa-angle-down").addClass("fa-angle-right");
+                $container.addClass("hidden");
+                $parent.removeClass("list-view-pf-expand-active");
+            } else {
+                // Expand: Change icon to fa-angle-down, show container, and add active class
+                $angleIcon.removeClass("fa-angle-right").addClass("fa-angle-down");
+                $container.removeClass("hidden");
+                $parent.addClass("list-view-pf-expand-active");
+            }
+        }
+    });
 
             $("#pf-list-simple-expansion .list-group-item-header_Next").click(function (event) {
                 if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {

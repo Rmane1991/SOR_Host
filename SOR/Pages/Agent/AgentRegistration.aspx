@@ -1272,7 +1272,7 @@
                                                         </div>
                                                     </div>--%>
                                                     <div class="col">
-                                                        <label class="selectInputLabel" for="selectInputLabel">Pan No</label>
+                                                        <label class="selectInputLabel" for="selectInputLabel">Pan No.</label>
                                                         <div class="inputBox w-100">
                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="txtPanNoF" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
                                                             <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" style="width: 100%" placeholder="Pan No MaxLength="10" oninput="this.value = this.value.toUpperCase();"/>--%>
@@ -1369,11 +1369,12 @@
                                                     <%--<asp:BoundField DataField="AgentCode" HeaderText="Code" />--%>
                                                     <asp:BoundField DataField="Name" HeaderText="Name" />
                                                     <asp:BoundField DataField="AgentAddress" HeaderText="Address" />
-                                                    <asp:BoundField DataField="PanNo" HeaderText="Pan No" />
-                                                    <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No" />
-                                                    <asp:BoundField DataField="Request Type" HeaderText="Request Type" />
+                                                    <asp:BoundField DataField="PanNo" HeaderText="Pan No." />
+                                                    <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No." />
+                                                    <asp:BoundField DataField="ContactNo" HeaderText="Mobile No." />
+                                                    <asp:BoundField DataField="Request Type" HeaderText="Type" />
                                                     <asp:BoundField DataField="Bucket" HeaderText="Bucket" Visible="false" />
-                                                    <asp:BoundField DataField="RequestStatus" HeaderText="Request Status" />
+                                                    <asp:BoundField DataField="RequestStatus" HeaderText="Status" />
                                                     <asp:BoundField DataField="ActivityType" HeaderText="ActivityType" Visible="false" />
 
 
@@ -1547,7 +1548,7 @@
                                                                         <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" FilterType="Numbers,UppercaseLetters" ValidChars="1234567890X" TargetControlID="txtaadharno" />
 
                                                                     </div>--%>
-                                                                    <div class="col">
+                                                                    <div class="col" style="display:none">
                                                                         <label for="exampleInputEmail1">Category</label>
                                                                         <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCategory" Width="100%">
                                                                             <asp:ListItem Value="General">General</asp:ListItem>
@@ -1558,7 +1559,7 @@
                                                                     </div>
 
                                                                     <div class="col">
-                                                                        <label class="selectInputLabel" for="selectInputLabel">DOB <span class="err">*</span> </label>
+                                                                        <label class="selectInputDOB" for="selectInputLabel">DOB <span class="err">*</span> </label>
                                                                         <div class="selectInputDateBox w-100">
                                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtdob" Style="display: none" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please Select DOB"></asp:RequiredFieldValidator>
                                                                             <asp:TextBox ID="txtdob" runat="server" Width="100%" CssClass="input-text form-control" TextMode="Date" onchange="javascript:ValidateDob();"
@@ -1574,10 +1575,6 @@
                                                                         <asp:HiddenField ID="hd_txtAccountNumber" runat="server" Value="1" />
                                                                         <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender22" runat="server" FilterType="Numbers" TargetControlID="txtAccountNumber" />
                                                                     </div>
-                                                                </div>
-
-                                                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
-
                                                                     <div class="col">
                                                                         <label for="exampleInputIFSCode">IFSC Code<span class="err">*</span></label>
                                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator35" ControlToValidate="txtIFsccode" Style="display: none" runat="server" ValidationGroup="FranchiseReg" CssClass="err" ErrorMessage="Please enter IFSC Code"></asp:RequiredFieldValidator>
@@ -1585,6 +1582,11 @@
                                                                         <asp:HiddenField ID="hd_txtIFsccode" runat="server" Value="1" />
                                                                         <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender23" runat="server" FilterType="UppercaseLetters,Numbers" TargetControlID="txtIFsccode" />
                                                                     </div>
+                                                                </div>
+
+                                                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
+
+                                                                    
                                                                     <div class="col">
                                                                         <label for="exampleInputIFSCode">PassPort No</label>
                                                                         <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPass" PlaceHolder="Passport No" Width="100%" MaxLength="11"></asp:TextBox>
@@ -1623,11 +1625,6 @@
 
                                                                         <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender3" runat="server" FilterType="UppercaseLetters,LowercaseLetters,Numbers" TargetControlID="txtagentId" />
                                                                     </div>--%>
-                                                                </div>
-                                                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
-
-
-
                                                                     <div class="col">
                                                                         <label for="exampleInputIFSCode">Latitude<span class="err">*</span></label>
                                                                         <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtLatitude" Display="None" ValidationGroup="FranchiseReg" runat="server" CssClass="err" ErrorMessage="Please Enter Latitude"></asp:RequiredFieldValidator>--%>
@@ -1636,6 +1633,12 @@
 
                                                                         <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" runat="server" FilterType="Numbers,Custom" ValidChars="." TargetControlID="txtLatitude" />
                                                                     </div>
+                                                                </div>
+                                                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
+
+
+
+                                                                    
 
                                                                     <div class="col">
                                                                         <label for="exampleInputIFSCode">Longitude <span class="err">*</label>
@@ -1854,8 +1857,8 @@
                                                                         </div>
 
                                                                         <div class="col">
-                                                                            <label for="exampleInputEmail1">EmailId </label>
-                                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtshopEmailID" PlaceHolder="Email ID" Width="100%" MaxLength="50"></asp:TextBox>
+                                                                            <label for="exampleInputEmail1">Email Id </label>
+                                                                            <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtshopEmailID" PlaceHolder="Email Id" Width="100%" MaxLength="50"></asp:TextBox>
 
                                                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="None" ValidationGroup="FranchiseReg" ErrorMessage="Please enter valid email id" ControlToValidate="txtEmailID" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
                                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender9" runat="server" FilterType="Numbers,UppercaseLetters, LowercaseLetters, Custom" ValidChars=".@!#$%^&*()_,/\-" TargetControlID="txtEmailID" />

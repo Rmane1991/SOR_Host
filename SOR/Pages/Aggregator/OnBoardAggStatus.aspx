@@ -384,11 +384,12 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="BCId" HeaderText="BCId" Visible="false"/>
+                                <asp:BoundField DataField="BC_Name" HeaderText="BC Name" />
                                 <asp:BoundField DataField="BC_Code" HeaderText="Code" />
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
-                                <asp:BoundField DataField="Contact_No" HeaderText="Mobile No" />
-                                <asp:BoundField DataField="BC_Name" HeaderText="BC Name" />
-                                <asp:BoundField DataField="Email" HeaderText="Email" />
+                                <asp:BoundField DataField="Contact_No" HeaderText="Mobile No." />
+                                
+                                <asp:BoundField DataField="Email" HeaderText="Email Id" />
                                 <asp:BoundField DataField="State" HeaderText="State" />
                                 <asp:BoundField DataField="District" HeaderText="District" />
                                 <asp:BoundField DataField="City" HeaderText="City" />

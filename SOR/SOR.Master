@@ -317,8 +317,10 @@
                             <span class="icon-hamburger"></span>
                         </button>
                         <span id="navbar-module" class="navbar-module" data-bs-toggle="tooltip"
+                            <%--<img src="../../images/proxima_logo.png" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">--%>
                             <%--data-bs-placement="bottom" data-bs-title="Version 6.0.0"--%>>
-                            <img src="../../images/nsdl.jpg" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">
+                            <%--<img src="../../images/nsdl.jpg" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">--%>
+                            <img src="../../images/proxima_logo.png" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">
                             <img src="../../images/nsdl.jpg" class="module-dark-logo" alt="module_logo">
                         </span>
                     </div>
@@ -377,7 +379,8 @@
                         </li>
                     </ul>
                     <a class="navbar-portal" href="#">
-                        <img src="../../images/proxima_logo.png" class="brand-logo" alt="brand_logo">
+                        <%--<img src="../../images/proxima_logo.png" class="brand-logo" alt="brand_logo">--%>
+                        <img src="../../images/nsdl.jpg" class="brand-logo" alt="brand_logo">
                         <img src="../../images/YES-BANK.png" class="brand-dark-logo" alt="brand_logo">
                     </a>
                 </div>
@@ -914,12 +917,17 @@
     // Check if the current page is DashBoard.aspx
     const isDashboardPage = window.location.pathname.includes('DashBoard.aspx'); // Check for 'DashBoard.aspx' in the URL
     
-    // If it's the dashboard page, close the sidebar by default
+    // If it's the dashboard page, close the sidebar by default and prevent the default action
     if (isDashboardPage) {
         sidebar.classList.add('closed');
         sidebar.classList.remove('open');
         sliderButton.classList.remove('rotate');
         localStorage.setItem('sidebarState', 'closed');  // Save state as closed for dashboard
+        
+        // Prevent any action or postback from the slider button
+        sliderButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default behavior (like postback)
+        });
     } else {
         // If it's not the dashboard page, use the saved state from localStorage
         const sidebarState = localStorage.getItem('sidebarState');
@@ -932,23 +940,27 @@
             sidebar.classList.remove('closed');
             sliderButton.classList.add('rotate');
         }
-    }
 
-    // Toggle the sidebar when the slider button is clicked
-    sliderButton.addEventListener('click', function () {
-        if (sidebar.classList.contains('open')) {
-            sidebar.classList.remove('open');
-            sidebar.classList.add('closed');
-            sliderButton.classList.remove('rotate');
-            localStorage.setItem('sidebarState', 'closed'); // Save state as closed
-        } else {
-            sidebar.classList.remove('closed');
-            sidebar.classList.add('open');
-            sliderButton.classList.add('rotate');
-            localStorage.setItem('sidebarState', 'open'); // Save state as open
-        }
-    });
+        // Toggle the sidebar when the slider button is clicked
+        sliderButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default behavior (like postback)
+            
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                sidebar.classList.add('closed');
+                sliderButton.classList.remove('rotate');
+                localStorage.setItem('sidebarState', 'closed'); // Save state as closed
+            } else {
+                sidebar.classList.remove('closed');
+                sidebar.classList.add('open');
+                sliderButton.classList.add('rotate');
+                localStorage.setItem('sidebarState', 'open'); // Save state as open
+            }
+        });
+    }
 });
+
+
 
 
         </script>

@@ -433,7 +433,7 @@
         }
 
         .textboxx {
-            margin-left: 25px;
+            margin-left: 1px;
             width: 76%;
         }
     </style>
@@ -531,61 +531,59 @@
 
     <style>
         .list-view-pf-body {
-    /* General container styles can be added here */
-}
+            /* General container styles can be added here */
+        }
 
-.list-view-pf-description {
-    /* Optional: You can add styles for the description section if needed */
-}
+        .list-view-pf-description {
+            /* Optional: You can add styles for the description section if needed */
+        }
 
-.list-view-pf-additional-info-itemm {
-   
-    flex-direction: row; /* Align header and content horizontally */
-    align-items: center; /* Vertically center content */
-    margin-bottom: 8px; /* Reduced space between items to reduce row height */
-    flex-wrap: wrap; /* Allow wrapping of items if needed */
-}
+        .list-view-pf-additional-info-itemm {
+            flex-direction: row; /* Align header and content horizontally */
+            align-items: center; /* Vertically center content */
+            margin-bottom: 8px; /* Reduced space between items to reduce row height */
+            flex-wrap: wrap; /* Allow wrapping of items if needed */
+        }
 
-.header-item {
-    /* font-weight: normal; */
-    /* color: #7f8fa4; */
-    text-align: left;
-    margin-right: 16px;
-    padding: 8px;
-    /* white-space: nowrap; */
-    /* background-color: #f4f6f9; */
-    /* position: sticky; */
-    top: 0;
-    z-index: 2;
-    text-align: left;
-    /* border-bottom: 2px solid #ddd; */
-    width: 150px;
-    color: #7f8fa4;
-}
-/* Content of each row */
-.content-item {
-    display: table-cell; /* Treat this as a cell in the table */
-    padding: 8px; /* Padding for content cells */
-    text-align: left; /* Align content text to the left */
-    word-wrap: break-word; /* Allow content to wrap */
-    max-width: 100%; /* Ensure content doesn't overflow */
-    vertical-align: top; /* Align content to the top */
-    width: 200px; /* Fixed width for content columns */
-}
+        .header-item {
+            /* font-weight: normal; */
+            /* color: #7f8fa4; */
+            text-align: left;
+            margin-right: 16px;
+            padding: 8px;
+            /* white-space: nowrap; */
+            /* background-color: #f4f6f9; */
+            /* position: sticky; */
+            top: 0;
+            z-index: 2;
+            text-align: left;
+            /* border-bottom: 2px solid #ddd; */
+            width: 150px;
+            color: #7f8fa4;
+        }
+        /* Content of each row */
+        .content-item {
+            display: table-cell; /* Treat this as a cell in the table */
+            padding: 8px; /* Padding for content cells */
+            text-align: left; /* Align content text to the left */
+            word-wrap: break-word; /* Allow content to wrap */
+            max-width: 100%; /* Ensure content doesn't overflow */
+            vertical-align: top; /* Align content to the top */
+            width: 100px; /* Fixed width for content columns */
+        }
 
-/* Optional: Add styling for strong text inside the content */
-.content-item strong {
-    font-weight: bold;
-    color: #555;
-    word-break: break-word; /* Break long words */
-}
+            /* Optional: Add styling for strong text inside the content */
+            .content-item strong {
+                font-weight: bold;
+                color: #555;
+                word-break: break-word; /* Break long words */
+            }
 
-img {
-    width: 25px;
-    height: 25px;
-    margin-right: 8px; /* Optional: Space between the image and the value */
-}
-
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px; /* Optional: Space between the image and the value */
+        }
     </style>
 
     <script type="text/javascript">
@@ -742,9 +740,16 @@ img {
                                             <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
                                         </td>
                                         <td>
-                                            <asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>
-                                            <asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />
-                                            <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
+                                            
+
+                                            <!-- Buttons are wrapped in an UpdatePanel -->
+                                            <asp:UpdatePanel ID="upnlButtons" runat="server">
+                                                <ContentTemplate>
+                                                    <asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>
+                                                    <asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />
+                                                    <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
                                         </td>
                                     </tr>
                                 </ItemTemplate>
@@ -817,8 +822,8 @@ img {
                                     <div class="tab-container">
                                         <div class="tab-buttons">
                                             <div class="tab-button active" onclick="showTab('tab1')">AEPS</div>
-                                            <div class="tab-button" onclick="showTab('tab2')">DMT</div>
-                                            <div class="tab-button" onclick="showTab('tab3')">MATM</div>
+                                            <div class="tab-button" onclick="showTab('tab2')" style="display: none">DMT</div>
+                                            <div class="tab-button" onclick="showTab('tab3')" style="display: none">MATM</div>
                                         </div>
 
                                         <div id="tab1" class="tab active">
@@ -870,7 +875,7 @@ img {
                     </div>
                     <div class="bordered-section">
                         <div class="section-header">
-                            <h3>Failoversss Details</h3>
+                            <h3>Failovers Details</h3>
                         </div>
                         <div class="row">
                             <div class="col text-end">
@@ -886,27 +891,49 @@ img {
                         </div>
                         &nbsp;
                         <!-- First Row -->
+
                         <div class="container">
                             <!-- First Row -->
-
                             <div class="form-group row mb-3">
                                 <div class="col-md-4">
-
                                     <label for="ddlSwitch1" class="col-form-label">S-1</label>
-                                    <asp:DropDownList ID="ddlSwitch1" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch1_SelectedIndexChanged">
-                                    </asp:DropDownList>
+
+                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                    <asp:UpdatePanel ID="upnlSwitch1" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlSwitch1" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch1_SelectedIndexChanged">
+                                            </asp:DropDownList>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
                                     <asp:TextBox ID="txtswitch1" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-1 %" />
                                 </div>
+
                                 <div class="col-md-4">
                                     <label for="ddlSwitch2" class="col-form-label">S-2</label>
-                                    <asp:DropDownList ID="ddlSwitch2" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch2_SelectedIndexChanged" Enabled="false">
-                                    </asp:DropDownList>
+
+                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                    <asp:UpdatePanel ID="upnlSwitch2" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlSwitch2" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch2_SelectedIndexChanged" Enabled="false">
+                                            </asp:DropDownList>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
                                     <asp:TextBox ID="txtswitch2" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-2 %" Enabled="false" />
                                 </div>
+
                                 <div class="col-md-4">
                                     <label for="ddlSwitch3" class="col-form-label">S-3</label>
-                                    <asp:DropDownList ID="ddlSwitch3" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch3_SelectedIndexChanged" Enabled="false">
-                                    </asp:DropDownList>
+
+                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                    <asp:UpdatePanel ID="upnlSwitch3" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlSwitch3" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch3_SelectedIndexChanged" Enabled="false">
+                                            </asp:DropDownList>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
                                     <asp:TextBox ID="txtswitch3" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-3 %" Enabled="false" />
                                 </div>
                             </div>
@@ -915,20 +942,43 @@ img {
                             <div class="form-group row mb-3">
                                 <div class="col-md-4">
                                     <label for="ddlSwitch4" class="col-form-label">S-4</label>
-                                    <asp:DropDownList ID="ddlSwitch4" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch4_SelectedIndexChanged" Enabled="false">
-                                    </asp:DropDownList>
+
+                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                    <asp:UpdatePanel ID="upnlSwitch4" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlSwitch4" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch4_SelectedIndexChanged" Enabled="false">
+                                            </asp:DropDownList>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
                                     <asp:TextBox ID="txtswitch4" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-4 %" Enabled="false" />
                                 </div>
+
                                 <div class="col-md-4">
                                     <label for="ddlSwitch5" class="col-form-label">S-5</label>
-                                    <asp:DropDownList ID="ddlSwitch5" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch5_SelectedIndexChanged" Enabled="false">
-                                    </asp:DropDownList>
+
+                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                    <asp:UpdatePanel ID="upnlSwitch5" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlSwitch5" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch5_SelectedIndexChanged" Enabled="false">
+                                            </asp:DropDownList>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
                                     <asp:TextBox ID="txtswitch5" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-5 %" Enabled="false" />
                                 </div>
+
                                 <div class="col-md-4">
                                     <label for="ddlSwitch6" class="col-form-label">S-6</label>
-                                    <asp:DropDownList ID="ddlSwitch6" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" Enabled="false">
-                                    </asp:DropDownList>
+
+                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                    <asp:UpdatePanel ID="upnlSwitch6" runat="server">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlSwitch6" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" Enabled="false">
+                                            </asp:DropDownList>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
                                     <asp:TextBox ID="txtswitch6" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-6 %" Enabled="false" />
                                 </div>
                             </div>
@@ -1119,27 +1169,27 @@ img {
                                 </div>
 
                                 <div class="list-view-pf-body">
-                                    
+
                                     <div class="list-view-pf-description">
-                                                <div class="list-view-pf-additional-info-itemm">
-                                                    <div class="header-item">
-                                                        <strong>Group Name</strong>
-                                                    </div>
-
-                                                    <div class="content-item">
-                                                        <strong><%# Eval("switchname") %></strong>
-                                                    </div>
-                                                </div>
-                                                <div class="list-view-pf-additional-info-itemm">
-                                                    <div class="header-item">
-                                                        <strong>Group Description</strong>
-                                                    </div>
-                                                    <div class="content-item">
-
-                                                        <strong><%# Eval("description") %></strong>
-                                                    </div>
-                                                </div>
+                                        <div class="list-view-pf-additional-info-itemm">
+                                            <div class="header-item">
+                                                <strong>Group Name</strong>
                                             </div>
+
+                                            <div class="content-item">
+                                                <strong><%# Eval("switchname") %></strong>
+                                            </div>
+                                        </div>
+                                        <div class="list-view-pf-additional-info-itemm">
+                                            <div class="header-item">
+                                                <strong>Group Description</strong>
+                                            </div>
+                                            <div class="content-item">
+
+                                                <strong><%# Eval("description") %></strong>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!-- Hidden Group ID for backend processing -->
                                     <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
 
@@ -1148,31 +1198,31 @@ img {
 
                                         <!-- Percentage Section -->
                                         <div class="list-view-pf-additional-info-itemm">
-                                           
+
                                             <div class="header-item">
                                                 <strong>Percentage</strong>
                                             </div>
                                             <div class="content-item">
-                                                 <img src="../../images/icons/rules_2.png" />
+                                                <img src="../../images/icons/rules_2.png" />
                                                 <strong><%# Eval("percentage") %></strong>
                                             </div>
                                         </div>
 
                                         <!-- Count Section -->
                                         <div class="list-view-pf-additional-info-itemm">
-                                           
+
                                             <div class="header-item">
                                                 <strong>Count</strong>
                                             </div>
                                             <div class="content-item">
-                                                 <img src="../../images/icons/rules_2.png" />
+                                                <img src="../../images/icons/rules_2.png" />
                                                 <strong><%# Eval("maxcount") %></strong>
                                             </div>
                                         </div>
 
                                         <!-- Status Section -->
                                         <div class="list-view-pf-additional-info-itemm">
-                                            
+
                                             <div class="header-item">
                                                 <strong>Status</strong>
                                             </div>
@@ -1192,7 +1242,21 @@ img {
             </ItemTemplate>
         </asp:Repeater>
     </div>
-
+    <script>
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        if (prm != null) {
+            prm.add_endRequest(function (sender, e) {
+                if (sender._postBackSettings.panelsToUpdate != null) {
+                    $("#<%=ddlSwitch1.ClientID%>").select2();
+                    $("#<%=ddlSwitch2.ClientID%>").select2();
+                    $("#<%=ddlSwitch3.ClientID%>").select2();
+                    $("#<%=ddlSwitch4.ClientID%>").select2();
+                    $("#<%=ddlSwitch5.ClientID%>").select2();
+                    $("#<%=ddlSwitch6.ClientID%>").select2();
+                }
+            });
+        };
+    </script>
     <script>
         $(document).ready(function () {
             // Row Checkbox Selection

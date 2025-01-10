@@ -193,6 +193,15 @@ namespace SOR.Pages.Rule {
         protected global::System.Web.UI.WebControls.Button btnClearFailover;
         
         /// <summary>
+        /// upnlSwitch1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch1;
+        
+        /// <summary>
         /// ddlSwitch1 control.
         /// </summary>
         /// <remarks>
@@ -209,6 +218,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch1;
+        
+        /// <summary>
+        /// upnlSwitch2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch2;
         
         /// <summary>
         /// ddlSwitch2 control.
@@ -229,6 +247,15 @@ namespace SOR.Pages.Rule {
         protected global::System.Web.UI.WebControls.TextBox txtswitch2;
         
         /// <summary>
+        /// upnlSwitch3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch3;
+        
+        /// <summary>
         /// ddlSwitch3 control.
         /// </summary>
         /// <remarks>
@@ -245,6 +272,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch3;
+        
+        /// <summary>
+        /// upnlSwitch4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch4;
         
         /// <summary>
         /// ddlSwitch4 control.
@@ -265,6 +301,15 @@ namespace SOR.Pages.Rule {
         protected global::System.Web.UI.WebControls.TextBox txtswitch4;
         
         /// <summary>
+        /// upnlSwitch5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch5;
+        
+        /// <summary>
         /// ddlSwitch5 control.
         /// </summary>
         /// <remarks>
@@ -281,6 +326,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtswitch5;
+        
+        /// <summary>
+        /// upnlSwitch6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch6;
         
         /// <summary>
         /// ddlSwitch6 control.

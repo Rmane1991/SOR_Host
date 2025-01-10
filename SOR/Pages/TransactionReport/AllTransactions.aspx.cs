@@ -451,6 +451,18 @@ namespace SOR.Pages.TransactionReport
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Aggregator. Try again', 'Warning');", true);
                         return;
                     }
+                    else
+                    {
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "Report-All";
+                        _auditParams[2] = "btnSearch";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
+                        gvAllTransactions.PageIndex = 0;
+                        fillGrid(EnumCollection.EnumBindingType.BindGrid);
+                    }
                 }
                 else
                 {
