@@ -157,6 +157,7 @@ namespace SOR.Pages.Rule
                 #endregion
                 Session["SwitchPercentage"] = null;
                 hdnShowModal.Value = "true";
+                hdnshowmanual.Value = "false";
                 BindSwitch();
                 BindDropdown();
                 ErrorLog.RuleTrace("SwitchConfig | btnAddSwitch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
@@ -203,9 +204,7 @@ namespace SOR.Pages.Rule
                     ShowWarning("Please Enter Switch Percentage Or Switch Count. Try again", "Warning");
                     return;
                 }
-
-
-
+                
                 if (!CheckForDuplicateValues())
                 {
                     return;
@@ -1253,34 +1252,97 @@ $(document).ready(function () {
         {
             try
             {
+                //if (e.CommandName == "Edit")
+                //{
+                //    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                //    #region Audit
+                //    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                //    _auditParams[1] = "SwitchConfig";
+                //    _auditParams[2] = "rptSwitchDetails_ItemCommand-Edit";
+                //    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                //    _LoginEntity.StoreLoginActivities(_auditParams);
+                //    #endregion
+                //    // Find the TextBox in the current row (RepeaterItem)
+                //    //TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
+                //    //txtPercentage.Enabled = true;
+                //    TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
+                //    txtPercentage.Enabled = true; // Enable the textbox for editing
+                //    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                //}
+                //else if (e.CommandName == "Update")
+                //{
+                //    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Update | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                //    #region Audit
+                //    _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
+                //    _auditParams[1] = "SwitchConfig";
+                //    _auditParams[2] = "rptSwitchDetails_ItemCommand-Update";
+                //    _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
+                //    _LoginEntity.StoreLoginActivities(_auditParams);
+                //    #endregion
+                //    // Find the TextBox in the current row and disable it after updating
+                //    //TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
+                //    //txtPercentage.Enabled = false;
+                //    TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
+                //    string updatedPercentage = txtPercentage.Text;
+                //    ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Update | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
+                //}
                 if (e.CommandName == "Edit")
                 {
+                    // Log the Edit action with User and LoginKey information
                     ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
-                    #region Audit
+
+                    // Audit logging
                     _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
                     _auditParams[1] = "SwitchConfig";
                     _auditParams[2] = "rptSwitchDetails_ItemCommand-Edit";
                     _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
                     _LoginEntity.StoreLoginActivities(_auditParams);
-                    #endregion
-                    // Find the TextBox in the current row (RepeaterItem)
+
+                    // Find the TextBox and enable it for editing
                     TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
-                    txtPercentage.Enabled = true;
+                    txtPercentage.Enabled = true;  // Enable the TextBox for editing
+
+                    // Find and hide the Edit button
+                    ImageButton btnEdit = (ImageButton)e.Item.FindControl("btnEdit");
+                    btnEdit.Visible = false;
+
+                    // Find and show the Update button
+                    ImageButton btnUpdate = (ImageButton)e.Item.FindControl("btnUpdate");
+                    btnUpdate.Visible = true;
+
+                    // Log the Edit action end
                     ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Edit | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
                 else if (e.CommandName == "Update")
                 {
+                    // Log the Update action with User and LoginKey information
                     ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Update | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
-                    #region Audit
+
+                    // Audit logging
                     _auditParams[0] = HttpContext.Current.Session["Username"].ToString();
                     _auditParams[1] = "SwitchConfig";
                     _auditParams[2] = "rptSwitchDetails_ItemCommand-Update";
                     _auditParams[3] = HttpContext.Current.Session["LoginKey"].ToString();
                     _LoginEntity.StoreLoginActivities(_auditParams);
-                    #endregion
-                    // Find the TextBox in the current row and disable it after updating
+
+                    // Find the TextBox, retrieve the updated value, and disable the TextBox
                     TextBox txtPercentage = (TextBox)e.Item.FindControl("txtPercentage");
+                    string updatedPercentage = txtPercentage.Text;
+
+                    // Perform your update logic here, e.g., saving the updatedPercentage to the database
+
+                    // Disable the TextBox after update
                     txtPercentage.Enabled = false;
+
+                    // Find and show the Edit button
+                    ImageButton btnEdit = (ImageButton)e.Item.FindControl("btnEdit");
+                    btnEdit.Visible = true;
+
+                    // Find and hide the Update button
+                    ImageButton btnUpdate = (ImageButton)e.Item.FindControl("btnUpdate");
+                    btnUpdate.Visible = false;
+
+                    // Log the Update action end
                     ErrorLog.RuleTrace("SwitchConfig | rptSwitchDetails_ItemCommand-Update | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
                 }
                 string script = @"
@@ -2012,6 +2074,7 @@ $(document).ready(function () {
                 _LoginEntity.StoreLoginActivities(_auditParams);
                 #endregion
                 hdnshowmanual.Value = "true";
+                hdnShowModal.Value = "false";
                 BindManualDisableSwitch();
                 ErrorLog.RuleTrace("SwitchConfig | btnManual_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }

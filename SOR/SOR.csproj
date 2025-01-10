@@ -893,6 +893,7 @@
     <Content Include="css\icons.css" />
     <Content Include="css\jquery.dataTables.min.css" />
     <Content Include="css\new-ticket.css" />
+    <Content Include="css\rule_all.min.css" />
     <Content Include="css\select2.min.css" />
     <Content Include="css\sliderbutton.css" />
     <Content Include="css\style.css" />
@@ -945,6 +946,7 @@
     <Content Include="images\bg4.jpg" />
     <Content Include="images\chat.png" />
     <Content Include="images\collapse_blue.jpg" />
+    <Content Include="images\DashbordLoder.gif" />
     <Content Include="images\datepicker.png" />
     <Content Include="images\document-delete.png" />
     <Content Include="images\document-edit.png" />
@@ -957,13 +959,20 @@
     <Content Include="images\ExportCsvBW30.png" />
     <Content Include="images\ExportXlsBW30.png" />
     <Content Include="images\eyeview.png" />
+    <Content Include="images\icons\agent-mangement.png" />
+    <Content Include="images\icons\application-management.png" />
+    <Content Include="images\icons\configuration.png" />
     <Content Include="images\icons\group_.png" />
+    <Content Include="images\icons\patch-management.png" />
     <Content Include="images\icons\plus_.png" />
     <Content Include="images\icons\priority_.png" />
+    <Content Include="images\icons\report-management.png" />
+    <Content Include="images\icons\rule-mangement.png" />
     <Content Include="images\icons\rules_1.png" />
     <Content Include="images\icons\rules_2.png" />
     <Content Include="images\icons\status.png" />
     <Content Include="images\icons\switch.png" />
+    <Content Include="images\icons\upload.png" />
     <Content Include="images\img-plus.jpg" />
     <Content Include="images\LdrPlzWait.gif" />
     <Content Include="images\loading.gif" />

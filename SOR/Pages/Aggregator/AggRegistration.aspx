@@ -987,7 +987,7 @@
                                             </div>
                                         </div>--%>
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">Pan No</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">Pan No.</label>
                                             <div class="inputBox w-100">
                                                 <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" />--%>
                                                 <%--<asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
@@ -1080,12 +1080,12 @@
                                             <asp:BoundField DataField="ReqId" HeaderText="Aggregator ID" Visible="false" />
                                             <asp:BoundField DataField="aggName" HeaderText="Name" />
                                             <asp:BoundField DataField="aggAddress" HeaderText="Address" />
-                                            <asp:BoundField DataField="PanNo" HeaderText="Pan No" />
-                                            <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No" />
-                                            <asp:BoundField DataField="ContactNo" HeaderText="Mobile No" />
-                                            <asp:BoundField DataField="RequestType" HeaderText="Request Type" />
+                                            <asp:BoundField DataField="PanNo" HeaderText="Pan No." />
+                                            <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No." />
+                                            <asp:BoundField DataField="ContactNo" HeaderText="Mobile No." />
+                                            <asp:BoundField DataField="RequestType" HeaderText="Type" />
                                             <asp:BoundField DataField="Bucket" HeaderText="Bucket" Visible="false" />
-                                            <asp:BoundField DataField="RequestStatus" HeaderText="RequestStatus" />
+                                            <asp:BoundField DataField="RequestStatus" HeaderText="Status" />
                                             <asp:BoundField DataField="ActivityType" HeaderText="ActivityType" Visible="false" />
                                         </Columns>
                                         <HeaderStyle BackColor="#8DCCF6" ForeColor="#3D62B6" />
@@ -1212,7 +1212,7 @@
                                                             <Ajax:FilteredTextBoxExtender ID="FilteredTextBoxExtender34" runat="server" FilterType="Numbers" TargetControlID="txtaadharno" />
                                                         </div>
                                                         <div class="col">
-                                                            <label class="selectInputLabel" for="selectInputLabel">Edu. Qualification <span class="err">*</span> </label>
+                                                            <label class="selectInputEdu" for="selectInputLabel">Edu. Qualification <span class="err">*</span> </label>
                                                             <asp:DropDownList runat="server" class="maximus-select w-100" ID="ddleducation">
                                                                 <asp:ListItem Value="Under 10th">Under 10th</asp:ListItem>
                                                                 <asp:ListItem Value="10th">10th</asp:ListItem>
@@ -1227,7 +1227,7 @@
 
 
 
-                                                        <div class="col">
+                                                        <div class="col" style="display:none">
                                                             <label for="exampleInputEmail1">BC Category </label>
                                                             <asp:DropDownList runat="server" class="form-control" CssClass="maximus-select w-100" ID="ddlCategory" Width="100%">
                                                                 <asp:ListItem Value="Select">--Select--</asp:ListItem>

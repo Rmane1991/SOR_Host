@@ -185,8 +185,7 @@ namespace SOR.Pages.Rule
                                 sliderDiv.Style["background-color"] = "red"; // Example style change
 
                             }
-
-
+                            
                             rptChild.DataSource = dt;
                             rptChild.DataBind();
                             groupId = 0;
@@ -199,7 +198,7 @@ namespace SOR.Pages.Rule
                 throw;
             }
         }
-
+        
         [WebMethod]
         public static string ToggleSlider(bool IsChecked, string Id)
         {

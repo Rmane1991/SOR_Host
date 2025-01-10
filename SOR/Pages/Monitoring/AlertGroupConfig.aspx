@@ -667,7 +667,59 @@
             }).disableSelection();
         });
     </script>
+    <style>
+        .list-view-pf-additional-info-item {
+            flex-direction: row; /* Align header and content horizontally */
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 8px; /* Space between items */
+            position: relative; /* Ensure content flows below header */
+        }
 
+        /* Container to manage the list */
+        .list-view-pf-description {
+            display: table; /* Treat this as a table container */
+            width: 100%;
+            border-collapse: collapse; /* Ensure borders collapse (if any) */
+        }
+
+        /* Each row */
+
+
+        /* Header */
+        .header-item {
+            /* font-weight: normal; */
+            /* color: #7f8fa4; */
+            text-align: left;
+            margin-right: 16px;
+            padding: 8px;
+            /* white-space: nowrap; */
+            /* background-color: #f4f6f9; */
+            /* position: sticky; */
+            top: 0;
+            z-index: 2;
+            text-align: left;
+            /* border-bottom: 2px solid #ddd; */
+            width: 150px;
+            color: #7f8fa4;
+        }
+        /* Content of each row */
+        .content-item {
+            display: table-cell; /* Treat this as a cell in the table */
+            padding: 8px; /* Padding for content cells */
+            text-align: left; /* Align content text to the left */
+            word-wrap: break-word; /* Allow content to wrap */
+            max-width: 100%; /* Ensure content doesn't overflow */
+            vertical-align: top; /* Align content to the top */
+            width: 100px; /* Fixed width for content columns */
+        }
+
+            /* Optional: Add styling for strong text inside the content */
+            .content-item strong {
+                font-weight: bold;
+                color: #555;
+                word-break: break-word; /* Break long words */
+            }
+    </style>
 </asp:Content>
 
 
@@ -1156,31 +1208,55 @@
                                             <img src="../../images/icons/group_.png" style="width: 25px; height: 25px;" />
                                         </div>
                                         <div class="list-view-pf-body">
+                                            <!-- Group Description Section -->
                                             <div class="list-view-pf-description">
-                                                <div class="list-group-item-heading">
-                                                    <%# Eval("groupname") %>
-                                                </div>
-                                                <div class="list-group-item-text">
-                                                    <%# Eval("groupdescription") %>
-                                                </div>
-                                            </div>
-                                            <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
-                                            <div class="list-view-pf-additional-info">
+                                                <!-- Group Name Section -->
                                                 <div class="list-view-pf-additional-info-item">
-                                                    <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
-                                                    <strong><%# Eval("membercount") %></strong>
+                                                    <div class="header-item">
+                                                        <strong>Name</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <strong><%# Eval("groupname") %></strong>
+                                                    </div>
+                                                </div>
 
-                                                </div>
+                                                <!-- Group Description Section -->
                                                 <div class="list-view-pf-additional-info-item">
-                                                    <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
-                                                    <%-- <strong><%# Eval("priority") %></strong>--%>
+                                                    <div class="header-item">
+                                                        <strong>Description</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <strong><%# Eval("groupdescription") %></strong>
+                                                    </div>
                                                 </div>
+
+                                                <!-- Rule Count Section -->
                                                 <div class="list-view-pf-additional-info-item">
-                                                    <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                                    <strong><%# Eval("isactive") %></strong>
+                                                    <div class="header-item">
+                                                        <strong>Count</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
+                                                        <strong><%# Eval("membercount") %></strong>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Status Section -->
+                                                <div class="list-view-pf-additional-info-item">
+                                                    <div class="header-item">
+                                                        <strong>Status</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
+                                                        <strong><%# Eval("isactive") %></strong>
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            <!-- Hidden Group ID for backend processing -->
+                                            <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="list-group" style="width: 98%">
@@ -1219,23 +1295,29 @@
                                                                             <img src="../../images/icons/rules_1.png" style="width: 25px; height: 25px;" />
                                                                         </div>
                                                                         <div class="list-view-pf-body">
+                                                                            <!-- Group Description Section -->
                                                                             <div class="list-view-pf-description">
-                                                                                <div class="list-group-item-heading">
-                                                                                    <%# Eval("contactname") %>
-                                                                                </div>
-                                                                                <div class="list-group-item-text">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="list-view-pf-additional-info">
+                                                                                <!-- Contact Name Section -->
                                                                                 <div class="list-view-pf-additional-info-item">
-                                                                                    <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
+                                                                                    <div class="header-item">
+                                                                                        <strong>Name</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <strong><%# Eval("contactname") %></strong>
+                                                                                    </div>
                                                                                 </div>
                                                                                 <div class="list-view-pf-additional-info-item">
-                                                                                    <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                                                                    <strong><%# Eval("isactive") %></strong>
+                                                                                    <div class="header-item">
+                                                                                        <strong>Status</strong>
+                                                                                    </div>
+                                                                                    <div class="content-item">
+                                                                                        <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
+                                                                                        <strong><%# Eval("isactive") %></strong>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="list-group-item-container_next container-fluid hidden">
@@ -1556,16 +1638,16 @@
     </script>--%>
 
     <script type="text/javascript">
-        
+
         Sys.Application.add_load(function () {
             var $ddlColumnSelected = $('#<%= ddlColumnSelected.ClientID %>');
-        var $divddlResponseCode = $('#<%= divddlResponseCode.ClientID %>');
-        var $divddlTransationType = $('#<%= divddlTransationType.ClientID %>');
-        var $divOption3 = $('#<%= divddlTransationType.ClientID %>');  // This might be redundant, please check
-        var $ddlResponseCode = $('#<%= ddlResponseCode.ClientID %>');
-        var $ddlTxnType = $('#<%= ddlTxnType.ClientID %>');
-        var $hdnValueSelc = $('#<%= hdnValueSelc.ClientID %>');
-            
+            var $divddlResponseCode = $('#<%= divddlResponseCode.ClientID %>');
+            var $divddlTransationType = $('#<%= divddlTransationType.ClientID %>');
+            var $divOption3 = $('#<%= divddlTransationType.ClientID %>');  // This might be redundant, please check
+            var $ddlResponseCode = $('#<%= ddlResponseCode.ClientID %>');
+            var $ddlTxnType = $('#<%= ddlTxnType.ClientID %>');
+            var $hdnValueSelc = $('#<%= hdnValueSelc.ClientID %>');
+
             $ddlColumnSelected.change(function () {
                 //alert("event occurred");
                 var selectedValue = $(this).val();
@@ -1579,7 +1661,7 @@
                     $divddlResponseCode.show();
                 }
             });
-            
+
             $ddlResponseCode.add($ddlTxnType).change(function () {
                 var selectedValue;
                 if ($(this).is($ddlResponseCode)) {

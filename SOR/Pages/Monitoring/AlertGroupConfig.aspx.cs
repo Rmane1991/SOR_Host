@@ -724,7 +724,6 @@ namespace SOR.Pages.Monitoring
             DataSet _dsClient = new DataSet();
             try
             {
-
                 _alertEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                 var tables = _alertEntity.GetDropDownValues();
                 dt = _alertEntity.getAlertTypeList(null);
@@ -796,8 +795,6 @@ namespace SOR.Pages.Monitoring
 
         protected void ddlBClist_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             string bcid = ddlBClist.SelectedValue;
             DataTable channel = _alertEntity.getChannelListofBCs(bcid);
 

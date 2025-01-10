@@ -297,7 +297,7 @@
                                     <asp:BoundField DataField="Aggregator Name" HeaderText="Name" />
                                     <%--<asp:BoundField DataField="Client ID" HeaderText="Client ID" />
                                     <asp:BoundField DataField="Client Name" HeaderText="Client Name" />--%>
-                                    <asp:BoundField DataField="Mobile No" HeaderText="Mobile No" />
+                                    <asp:BoundField DataField="Mobile No" HeaderText="Mobile No." />
                                     <asp:BoundField DataField="Email" HeaderText="Email Id" />
                                     <asp:BoundField DataField="State" HeaderText="State" />
                                     <asp:BoundField DataField="Pincode" HeaderText="Pincode" />
