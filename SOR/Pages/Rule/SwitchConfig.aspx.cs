@@ -158,6 +158,20 @@ namespace SOR.Pages.Rule
                 Session["SwitchPercentage"] = null;
                 hdnShowModal.Value = "true";
                 hdnshowmanual.Value = "false";
+                HdnShowDelete.Value = "false";
+
+                txtSwitchName.Enabled = true;
+                txtSwitchName.Text = string.Empty;
+                txtSwitchDescription.Text = string.Empty;
+                txtSwitchPercentage.Text = string.Empty;
+                txtCount.Text = string.Empty;
+                ddlSwitch1.ClearSelection();
+                ddlSwitch2.ClearSelection();
+                ddlSwitch3.ClearSelection();
+                ddlSwitch4.ClearSelection();
+                ddlSwitch5.ClearSelection();
+                ddlSwitch6.ClearSelection();
+
                 BindSwitch();
                 BindDropdown();
                 ErrorLog.RuleTrace("SwitchConfig | btnAddSwitch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
@@ -795,6 +809,8 @@ $(document).ready(function () {
 
 
                 hdnShowModal.Value = "true";
+                hdnshowmanual.Value = "false";
+                HdnShowDelete.Value = "false";
                 ErrorLog.RuleTrace("SwitchConfig | rptrSwitch_ItemCommand-Edit | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             else if (e.CommandName == "Delete")
@@ -908,6 +924,7 @@ $(document).ready(function () {
                     //DataTable dt2 = new DataTable();
                     //var tables = _RuleEntity.GetDropDownValues();
                     hdnShowModal.Value = "false";
+                    hdnshowmanual.Value = "false";
                     HdnShowDelete.Value = "true";
                     //int itemId = Convert.ToInt32(e.CommandArgument);
                     //_RuleEntityy.IsDelete = 1;
