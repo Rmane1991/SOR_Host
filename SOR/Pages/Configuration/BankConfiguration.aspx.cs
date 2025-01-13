@@ -17,10 +17,13 @@ namespace SOR.Pages.Configuration
     {
         RuleEntity _ruleEntity = new RuleEntity();
         CommonEntity _CommonEntity = new CommonEntity();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "BankConfiguration.aspx", "9");
@@ -65,7 +68,7 @@ namespace SOR.Pages.Configuration
             }
             catch (Exception Ex)
             {
-                ErrorLog.DashboardTrace("BankConfiguration : Page_Load(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration : Page_Load(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -74,11 +77,20 @@ namespace SOR.Pages.Configuration
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnSearch_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Configuration-BankConfiguration";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnSearch_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BankConfiguration: btnSearch_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: btnSearch_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -88,13 +100,19 @@ namespace SOR.Pages.Configuration
         {
             try
             {
-                //ddlBCCode.ClearSelection();
-                //ddlClientCode.ClearSelection();
-                //gvLimitStatus.Visible = false;
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnClear_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Configuration-BankConfiguration";
+                _auditParams[2] = "btnClear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnClear_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BankConfiguration: btnClear_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: btnClear_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -104,6 +122,7 @@ namespace SOR.Pages.Configuration
             DataTable dt = new DataTable();
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvBankConfiguration.DataSource = null;
                 gvBankConfiguration.DataBind();
                 _ruleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
@@ -123,10 +142,11 @@ namespace SOR.Pages.Configuration
                     gvBankConfiguration.DataSource = null;
                     gvBankConfiguration.DataBind();
                 }
+                ErrorLog.ConfigurationTrace("BankConfiguration | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BankConfiguration: FillGrid(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             return dt;
@@ -135,13 +155,22 @@ namespace SOR.Pages.Configuration
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnAdd_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Configuration-BankConfiguration";
+                _auditParams[2] = "btnAdd";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 formone.Visible = false;
                 formTwo.Visible = true;
                 Session["id"] = null;
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnAdd_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BankConfiguration: btnAdd_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: btnAdd_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -150,6 +179,7 @@ namespace SOR.Pages.Configuration
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnSubmit_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _ruleEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                 _ruleEntity.Fromdate = !string.IsNullOrEmpty(txtFromDate.Value) ? Convert.ToDateTime(txtFromDate.Value).ToString("yyyy-MM-dd") : null;
                 _ruleEntity.Todate = !string.IsNullOrEmpty(txtToDate.Value) ? Convert.ToDateTime(txtToDate.Value).ToString("yyyy-MM-dd") : null;
@@ -160,7 +190,16 @@ namespace SOR.Pages.Configuration
                 _ruleEntity.SubCode = !string.IsNullOrEmpty(txtSubCode.Value) ? txtSubCode.Value.Trim() : null;
                 _ruleEntity.LicenceKey = !string.IsNullOrEmpty(txtLicenceKey.Value) ? txtLicenceKey.Value.Trim() : null;
                 _ruleEntity.BankCode = !string.IsNullOrEmpty(txtBankCode.Value) ? txtBankCode.Value.Trim() : null;
-                if(Session["id"] != null)
+
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Configuration-BankConfiguration";
+                _auditParams[2] = "btnSubmit";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
+
+                if (Session["id"] != null)
                 {
                     _ruleEntity.Flag = (int)EnumCollection.EnumRuleType.Insert;
                     _ruleEntity.ReqId = !string.IsNullOrEmpty(Session["id"].ToString()) ? Session["id"].ToString().Trim() : null;
@@ -198,14 +237,14 @@ namespace SOR.Pages.Configuration
                     };
                     formTwo.Visible = false;
                     formone.Visible = true;
-                    ErrorLog.RuleTrace("BankConfiguration: btnSubmit_ServerClick() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                    ErrorLog.ConfigurationTrace("BankConfiguration: btnSubmit_ServerClick() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                 }
-                
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnSubmit_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("BankConfiguration: btnSubmit_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: btnSubmit_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -215,12 +254,23 @@ namespace SOR.Pages.Configuration
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnReset_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "Configuration-BankConfiguration";
+                _auditParams[2] = "btnReset";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
+
                 formTwo.Visible = false;
                 formone.Visible = true;
+                ErrorLog.ConfigurationTrace("BankConfiguration | btnReset_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("BankConfiguration: btnReset_ServerClick(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: btnReset_ServerClick(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -235,7 +285,7 @@ namespace SOR.Pages.Configuration
             }
             catch (Exception Ex)
             {
-                ErrorLog.LimitTrace("BankConfiguration: gvBankConfiguration_PageIndexChanging(): Exception: " + Ex.Message);
+                ErrorLog.ConfigurationTrace("BankConfiguration: gvBankConfiguration_PageIndexChanging(): Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -244,6 +294,8 @@ namespace SOR.Pages.Configuration
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | BtnCsv_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataTable dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
@@ -251,6 +303,13 @@ namespace SOR.Pages.Configuration
                 ds.Tables.Add(dt);
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Configuration-BankConfiguration";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BankConfiguration", ds);
                 }
                 else
@@ -269,6 +328,7 @@ namespace SOR.Pages.Configuration
         {
             try
             {
+                ErrorLog.ConfigurationTrace("BankConfiguration | BtnXls_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataTable dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
@@ -276,6 +336,13 @@ namespace SOR.Pages.Configuration
                 ds.Tables.Add(dt);
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "Configuration-BankConfiguration";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "Proxima", "BankConfiguration", ds);
                 }
                 {

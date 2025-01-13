@@ -1774,5 +1774,99 @@ namespace AppLogger
         }
         #endregion
 
+        #region Configuration Logs
+        static object FileLocConfigurationTrace = new object();
+        public static void ConfigurationTrace(string msg)
+        {
+            lock (FileLocConfigurationTrace)
+            {
+                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Configuration\\TraceLogs";
+                {
+                    if (!Directory.Exists(m_Path))
+                    {
+                        DirectoryInfo dir = new DirectoryInfo(m_Path);
+                        dir.Create();
+                    }
+                    FileStream tw = new FileStream(String.Format(@"{0}.txt", m_Path + "\\TraceLog-" + DateTime.Now.ToString("dd-MMM-yyyy")), FileMode.Append, FileAccess.Write);
+                    StreamWriter sw = new StreamWriter(tw);
+                    sw.WriteLine(String.Format("Time : {0} {1} Message : {2}", DateTime.Now.ToString("dd-MMM-yyyy"), DateTime.Now.ToShortTimeString(), msg));
+                    sw.Close();
+                    tw.Close();
+                }
+            }
+        }
+
+        static object FileLocConfigurationError = new object();
+        public static void ConfigurationError(Exception Ex)
+        {
+            lock (FileLocAgentManagementError)
+            {
+                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Configuration\\ErrorLogs";
+                {
+                    if (!Directory.Exists(m_Path))
+                    {
+                        DirectoryInfo dir = new DirectoryInfo(m_Path);
+                        dir.Create();
+                    }
+                    FileStream tw = new FileStream(String.Format(@"{0}.txt", m_Path + "\\ErrorLog-" + DateTime.Now.ToString("dd-MMM-yyyy")), FileMode.Append, FileAccess.Write);
+                    StreamWriter sw = new StreamWriter(tw);
+                    sw.WriteLine("----------------------------------------------------------------------------");
+                    sw.WriteLine(String.Format("Time : {0} {1}", DateTime.Now.ToString("dd-MMM-yyyy"), DateTime.Now.ToShortTimeString()));
+                    sw.WriteLine(String.Format("Source - : " + Ex.Source.ToString() + Environment.NewLine +
+                    "StackTrace -  : " + Ex.StackTrace.ToString() + Environment.NewLine +
+                    "Message - : " + Ex.Message.ToString()));
+                    sw.Close();
+                    tw.Close();
+                }
+            }
+        }
+        #endregion
+        #region PatchMgmt Logs
+        static object FileLocPatchMgmtTrace = new object();
+        public static void PatchMgmtTrace(string msg)
+        {
+            lock (FileLocConfigurationTrace)
+            {
+                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Patch Mgmt\\TraceLogs";
+                {
+                    if (!Directory.Exists(m_Path))
+                    {
+                        DirectoryInfo dir = new DirectoryInfo(m_Path);
+                        dir.Create();
+                    }
+                    FileStream tw = new FileStream(String.Format(@"{0}.txt", m_Path + "\\TraceLog-" + DateTime.Now.ToString("dd-MMM-yyyy")), FileMode.Append, FileAccess.Write);
+                    StreamWriter sw = new StreamWriter(tw);
+                    sw.WriteLine(String.Format("Time : {0} {1} Message : {2}", DateTime.Now.ToString("dd-MMM-yyyy"), DateTime.Now.ToShortTimeString(), msg));
+                    sw.Close();
+                    tw.Close();
+                }
+            }
+        }
+
+        static object FileLocPatchMgmtError = new object();
+        public static void PatchMgmtError(Exception Ex)
+        {
+            lock (FileLocPatchMgmtError)
+            {
+                string m_Path = HttpContext.Current.Server.MapPath("~/") + "Error Logs\\Patch Mgmt\\ErrorLogs";
+                {
+                    if (!Directory.Exists(m_Path))
+                    {
+                        DirectoryInfo dir = new DirectoryInfo(m_Path);
+                        dir.Create();
+                    }
+                    FileStream tw = new FileStream(String.Format(@"{0}.txt", m_Path + "\\ErrorLog-" + DateTime.Now.ToString("dd-MMM-yyyy")), FileMode.Append, FileAccess.Write);
+                    StreamWriter sw = new StreamWriter(tw);
+                    sw.WriteLine("----------------------------------------------------------------------------");
+                    sw.WriteLine(String.Format("Time : {0} {1}", DateTime.Now.ToString("dd-MMM-yyyy"), DateTime.Now.ToShortTimeString()));
+                    sw.WriteLine(String.Format("Source - : " + Ex.Source.ToString() + Environment.NewLine +
+                    "StackTrace -  : " + Ex.StackTrace.ToString() + Environment.NewLine +
+                    "Message - : " + Ex.Message.ToString()));
+                    sw.Close();
+                    tw.Close();
+                }
+            }
+        }
+        #endregion
     }
 }

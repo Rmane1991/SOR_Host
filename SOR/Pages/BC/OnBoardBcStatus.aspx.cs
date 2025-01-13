@@ -279,7 +279,7 @@ namespace SOR.Pages.BC
             DataSet _dsDeActivate = null;
             try
             {
-
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvBlockBC.DataSource = null;
                 gvBlockBC.DataBind();
                 lblRecordsTotal.Text = "";
@@ -313,11 +313,11 @@ namespace SOR.Pages.BC
                     panelGrid.Visible = false;
                     lblRecordsTotal.Text = "Total 0 Record(s) Found.";
                 }
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "FillGrid()", Ex);
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : FillGrid() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
             }
             return _dsDeActivate;
@@ -330,8 +330,15 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnSearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-OnBoardStatus";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (ddlActiontype.SelectedValue == "0")
-
                 {
                     _BCEntity.IsActive = "";
 
@@ -363,12 +370,11 @@ namespace SOR.Pages.BC
                     _BCEntity.IsActive = Convert.ToString((int)EnumCollection.AgentStatus.Terminated);
                     FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
                 }
-
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnSearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "btnSearch_Click()", Ex);
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
                 return;
             }
@@ -383,6 +389,14 @@ namespace SOR.Pages.BC
             ViewState["ActionType"] = Convert.ToString((int)EnumCollection.EnumDBOperationType.OnboardTerminate);
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnTerminate_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-OnBoardStatus";
+                _auditParams[2] = "btnTerminate";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 foreach (GridViewRow row in gvBlockBC.Rows)
                 {
                     if (row.RowType == DataControlRowType.DataRow)
@@ -407,12 +421,11 @@ namespace SOR.Pages.BC
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Terminate BC(s)');", true);
                     return;
                 }
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnTerminate_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "btnTerminate_ServerClick()", Ex);
-
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnTerminate_ServerClick() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
                 return;
             }
@@ -423,6 +436,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnClear_Click_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-OnBoardStatus";
+                _auditParams[2] = "btnClear_Click_Click";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 ddlClientCode.SelectedValue = "0";
 
                 ddlState.SelectedValue = "0";
@@ -436,14 +457,12 @@ namespace SOR.Pages.BC
                 ddlCity.Items.Insert(0, new ListItem("-- City --", "0"));
                 FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
                 BindDropdownsBc();
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnClear_Click_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnClear_Click() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "btnClear_Clicks()", Ex);
-
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnClear_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
-
                 return;
             }
         }
@@ -504,6 +523,14 @@ namespace SOR.Pages.BC
                 ViewState["ActionType"] = Convert.ToString((int)EnumCollection.EnumDBOperationType.Activate);
                 try
                 {
+                    ErrorLog.BCManagementTrace("OnBoardBcStatus | btnActivate_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-OnBoardStatus";
+                    _auditParams[2] = "btnActivate";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     foreach (GridViewRow row in gvBlockBC.Rows)
                     {
                         if (row.RowType == DataControlRowType.DataRow)
@@ -528,12 +555,11 @@ namespace SOR.Pages.BC
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Activate BC(s)');", true);
                         return;
                     }
+                    ErrorLog.BCManagementTrace("OnBoardBcStatus | btnActivate_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnActivate_ServerClick() \nException Occured\n" + Ex.Message);
-                    //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "btnActivate_ServerClick()", Ex);
-
+                    ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnActivate_ServerClick() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
                     return;
                 }
@@ -553,6 +579,14 @@ namespace SOR.Pages.BC
                 ViewState["ActionType"] = Convert.ToString((int)EnumCollection.EnumDBOperationType.Deactivate);
                 try
                 {
+                    ErrorLog.BCManagementTrace("OnBoardBcStatus | btnDeactivate_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-OnBoardStatus";
+                    _auditParams[2] = "btnDeactivate";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     foreach (GridViewRow row in gvBlockBC.Rows)
                     {
                         if (row.RowType == DataControlRowType.DataRow)
@@ -577,21 +611,17 @@ namespace SOR.Pages.BC
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Deactivate BC(s)');", true);
                         return;
                     }
+                    ErrorLog.BCManagementTrace("OnBoardBcStatus | btnDeactivate_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.BCManagementTrace("Class : ActiveBcReport.cs \nFunction : btnDeactivate_ServerClick() \nException Occured\n" + Ex.Message);
-                    //_dbAccess.StoreErrorDescription(UserName, "ActiveBcReport.cs", "btnDeactivate_ServerClick()", Ex);
-
+                    ErrorLog.BCManagementTrace("Class : ActiveBcReport.cs \nFunction : btnDeactivate_ServerClick() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Active BC');", true);
                     return;
                 }
             }
         }
-
-
         #endregion
-
 
         public bool CheckSelfRequest(out string requestid)
         {
@@ -616,8 +646,17 @@ namespace SOR.Pages.BC
         {
             try
             {
+                
                 if (e.CommandName.Contains("EditDetails"))
                 {
+                    ErrorLog.BCManagementTrace("OnBoardBcStatus | gvBlockBC_RowCommand() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-OnBoardStatus";
+                    _auditParams[2] = "RowCommand-EditDetails";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string requestid = string.Empty;
                     ImageButton lb = (ImageButton)e.CommandSource;
                     GridViewRow gvr = (GridViewRow)lb.NamingContainer;
@@ -646,12 +685,12 @@ namespace SOR.Pages.BC
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Bc request already pending for verification.', 'Warning');", true);
                         return;
                     }
+                    ErrorLog.BCManagementTrace("OnBoardBcStatus | gvBlockBC_RowCommand() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCLimitRequest.cs \nFunction : gvLimitRequest_RowCommand() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "BCLimitRequest.cs", "gvLimitRequest_RowCommand()", Ex);
+                ErrorLog.BCManagementTrace("Class : BCLimitRequest.cs \nFunction : gvLimitRequest_RowCommand() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
                 return;
             }
@@ -679,6 +718,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnSaveAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-OnBoardStatus";
+                _auditParams[2] = "btnSaveAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (TxtRemarks.Text == null || TxtRemarks.Text == "")
                 {
                     ModalPopupExtender_Declincard.Show();
@@ -858,12 +905,11 @@ namespace SOR.Pages.BC
                     ViewState["SelectionType"] = null;
                     return;
                 }
+                //ErrorLog.BCManagementTrace("OnBoardBcStatus | btnSaveAction_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnSaveAction_Click() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "btnSaveAction_Click()", Ex);
-
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnSaveAction_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','Deactive BC');", true);
                 ViewState["ActionType"] = null;
                 ViewState["SelectionType"] = null;
@@ -919,6 +965,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnCancelAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-OnBoardStatus";
+                _auditParams[2] = "btnCancelAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string _alertMessage = string.Empty;
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.OnboardTerminate.ToString())
                 {
@@ -935,13 +989,12 @@ namespace SOR.Pages.BC
                 TxtRemarks.Text = string.Empty;
                 ViewState["ActionType"] = null;
                 FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | btnCancelAction_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 return;
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "btnCancelAction_Click()", Ex);
-
+                ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : btnCancelAction_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
                 ViewState["ActionType"] = null;
                 return;
@@ -1097,26 +1150,31 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | BtnCsv_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-OnBoardStatus";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "De-Active Business Correspondents Details", dt);
                 }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No data found.', 'Alert');", true);
                 }
-
             }
-
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Page : OnBoardBcStatus.cs \nFunction : btnexport_ServerClick\nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.aspx.cs", "btnexport_ServerClick", Ex);
-
             }
         }
 
@@ -1124,31 +1182,32 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("OnBoardBcStatus | BtnXls_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 DataSet dt = FillGrid(EnumCollection.EnumPermissionType.ActiveDeactive);
 
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-OnBoardStatus";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "De-Active Business Correspondents Details", dt);
                 }
                 {
-                    //lblRecordCount.Text = "No Record's Found.";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No data found.', 'Alert');", true);
 
                 }
-
-
-
             }
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Page : OnBoardBcStatus.cs \nFunction : btnexport_ServerClick\nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.aspx.cs", "btnexport_ServerClick", Ex);
-
             }
         }
-
 
         #region Export
         protected void btnexport_ServerClick(object sender, EventArgs e)
@@ -1263,14 +1322,11 @@ namespace SOR.Pages.BC
             catch (Exception Ex)
             {
                 ErrorLog.BCManagementTrace("Class : OnBoardBcStatus.cs \nFunction : BindDropdownsFranchise() \nException Occured\n" + Ex.Message);
-                //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.cs", "BindDropdownsFranchise()", Ex);
-
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Verified BC');", true);
                 return;
             }
         }
         #endregion
-
 
         #region Dropdown Events
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
@@ -1305,24 +1361,7 @@ namespace SOR.Pages.BC
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
                 return;
             }
-        }
-
-        //protected void ddlClientCode_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        BindDropdownsFranchise();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ErrorLog.BCManagementTrace("Page : OnBoardBcStatus.cs \nFunction : ddlClientCode_SelectedIndexChanged\nException Occured\n" + ex.Message);
-        //        //_dbAccess.StoreErrorDescription(UserName, "OnBoardBcStatus.aspx.cs", "ddlClientCode_SelectedIndexChanged", ex);
-
-        //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
-
-        //        return;
-        //    }
-        //}
+        }        
         #endregion
     }
 }

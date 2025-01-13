@@ -19,6 +19,8 @@ namespace SOR.Pages.BC
         public string UserName { get; set; }
         BCEntity _BCEntity = new BCEntity();
         public ExportFormat _exportFormat = null;
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         public ExportFormat exportFormat
         {
             get { if (_exportFormat == null) _exportFormat = new ExportFormat(); return _exportFormat; }
@@ -30,6 +32,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("BCStatus | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
 
@@ -69,8 +72,7 @@ namespace SOR.Pages.BC
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Page : BCStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
-
+                ErrorLog.BCManagementTrace("Page : BCStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
                 return;
             }
@@ -82,6 +84,7 @@ namespace SOR.Pages.BC
             DataSet _dsAllAgents = new DataSet();
             try
             {
+                ErrorLog.BCManagementTrace("BCStatus | fillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvTransactions.DataSource = null;
                 gvTransactions.DataBind();
                 _BCEntity.Flag = (int)EnumCollection.EnumBindingType.BindGrid;
@@ -109,16 +112,16 @@ namespace SOR.Pages.BC
                     lblRecordCount.Text = "Total 0 Record(s) Found.";
 
                 }
+                ErrorLog.BCManagementTrace("BCStatus | fillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Page : BC Status.cs \nFunction : fillGrid() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Page : BC Status.cs \nFunction : fillGrid() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Contact System Administrator', 'BC Status');", true);
                 return _dsAllAgents;
             }
             return _dsAllAgents;
         }
-
 
         #endregion
 
@@ -226,6 +229,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("BCStatus | btnSearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-BCStatus";
+                _auditParams[2] = "btnSearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (ddlOperationType.SelectedValue == "1" && ddlVerification.SelectedValue == "1")
                 {
                     _BCEntity.CHstatus = Convert.ToString((int)EnumCollection.Onboarding.CheckerApprove);
@@ -295,11 +306,11 @@ namespace SOR.Pages.BC
                     //gvTransactions.DataBind();
 
                 }
-
+                ErrorLog.BCManagementTrace("BCStatus | btnSearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCStatus.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.BCManagementTrace("Class : BCStatus.cs \nFunction : btnSearch_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
                 return;
             }
@@ -311,6 +322,14 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("BCStatus | btnReset_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-BCStatus";
+                _auditParams[2] = "btnReset";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 ddlClient.SelectedValue = "0";
                 ddlStatusType.SelectedValue = "0";
                 ddlAgent.SelectedValue = "0";
@@ -319,69 +338,11 @@ namespace SOR.Pages.BC
                 ddlStatus.SelectedValue = "0";
                 ddlBCType.SelectedValue = "0";
                 fillGrid();
+                ErrorLog.BCManagementTrace("BCStatus | btnReset_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.BCManagementTrace("Class : BCStatus.cs \nFunction : btnReset_Click() \nException Occured\n" + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
-                return;
-            }
-        }
-        #endregion
-
-
-        #region CSV
-        protected void btnExportCSV_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _BCEntity.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
-                setProperties();
-                DataSet _dsAllAgents = _BCEntity.BCStatusReportGrid();
-                if (_dsAllAgents != null)
-                {
-                    if (_dsAllAgents.Tables.Count > 0)
-                    {
-                        exportFormat.ExportInCSV(Session["Username"].ToString(), "Payrakam", "BC Status Details", _dsAllAgents);
-                    }
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Success", "showSuccess('No data found.', 'BC Status Details');", true);
-                }
-            }
-            catch (Exception EX)
-            {
-                ErrorLog.BCManagementTrace("Page : BCStatus.cs \nFunction : btnExportCSV_Click() \nException Occured\n" + EX.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
-                return;
-            }
-        }
-        #endregion
-
-        #region Excel
-        protected void btnExportXLS_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _BCEntity.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
-                setProperties();
-                DataSet _dsAllAgents = _BCEntity.BCStatusReportGrid();
-                if (_dsAllAgents != null)
-                {
-                    if (_dsAllAgents.Tables.Count > 0)
-                    {
-                        exportFormat.ExporttoExcel(Session["Username"].ToString(), "Payrakam", "BC Status Details", _dsAllAgents);
-                    }
-                }
-                else
-                {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Success", "showSuccess('No data found.', 'BC Status Details');", true);
-                }
-            }
-            catch (Exception EX)
-            {
-                ErrorLog.BCManagementTrace("Page : BCStatus.cs \nFunction : btnExportXLS_Click() \nException Occured\n" + EX.Message);
+                ErrorLog.BCManagementTrace("Class : BCStatus.cs \nFunction : btnReset_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('Something went wrong.Please try again','BC Status');", true);
                 return;
             }
@@ -494,13 +455,20 @@ namespace SOR.Pages.BC
         {
             try
             {
-
+                ErrorLog.BCManagementTrace("BCStatus | BtnCsv_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 _BCEntity.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
                 setProperties();
                 DataSet _dsAllAgents = _BCEntity.BCStatusReportGrid();
                 if (_dsAllAgents != null && _dsAllAgents.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-BCStatus";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "BC Status Report", _dsAllAgents);
                 }
                 else
@@ -520,6 +488,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("BCStatus | BtnXls_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 //_BCEntity.Flag = (int)EnumCollection.EnumPermissionType.EnableRoles;
                 //setProperties();
@@ -527,14 +496,19 @@ namespace SOR.Pages.BC
                 DataSet _dsAllAgents = ViewState["Data"] as DataSet;
                 if (_dsAllAgents != null && _dsAllAgents.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-BCStatus";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "BC Status Report", _dsAllAgents);
                 }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page),  "Warning", "showWarning('No data found.', 'Alert');", true);
                 }
-
-
             }
             catch (Exception Ex)
             {
@@ -547,9 +521,17 @@ namespace SOR.Pages.BC
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            DIVFilter.Visible = true;
-            //DIVDocument.Visible = true;
-            DIVRegister.Visible = false;
+            try
+            {
+                DIVFilter.Visible = true;
+                DIVRegister.Visible = false;
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.BCManagementTrace("Class : BCStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'Deactive BC');", true);
+                return;
+            }
         }
         protected void clearselection()
         {
@@ -565,9 +547,5 @@ namespace SOR.Pages.BC
             ddlStatusType.SelectedValue = "0";
         }
         #endregion
-
-
-
-
     }
 }

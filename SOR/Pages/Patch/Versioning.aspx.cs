@@ -22,8 +22,8 @@ namespace SOR.Pages.Patch
     public partial class Versioning : System.Web.UI.Page
     {
         #region ConnectionString
-
-        //SystemLogger _systemLogger = new SystemLogger();
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         ImportEntity importEntity = new ImportEntity();
         int _CmdTimeOut = Convert.ToInt32(ConfigurationManager.AppSettings["CommandTimeOut"]);
         #endregion
@@ -53,8 +53,8 @@ namespace SOR.Pages.Patch
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace("Versioning: RestrictedPIN(): Exception: " + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("Versioning: RestrictedPIN(): Exception: " + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
         //    }
         //}
@@ -63,6 +63,7 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["Username"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["Username"].ToString(), Session["UserRoleID"].ToString(), "Versioning.aspx", "34");
@@ -111,8 +112,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: Page_Load(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: Page_Load(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
                 return;
             }
@@ -124,6 +125,7 @@ namespace SOR.Pages.Patch
             DataSet ds = new DataSet();
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 gvVersioning.DataSource = null;
                 gvVersioning.DataBind();
                 SetPropertise();
@@ -157,11 +159,12 @@ namespace SOR.Pages.Patch
                         //ScriptManager.RegisterStartupScript(this, typeof(Page), "Script", "alert('No Data Found in Search Criteria. Try again', 'Warning');", true);
                     }
                 }
+                ErrorLog.PatchMgmtTrace("Versioning | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: FillGrid(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
             }
             return ds;
@@ -192,8 +195,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: SetPropertise(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: SetPropertise(): Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 throw;
             }
         }
@@ -204,6 +207,14 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btnSave_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btnSave";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (ddlPatchType.SelectedValue == "0")
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please select patchtype', 'Warning');</script>", false);
@@ -219,11 +230,12 @@ namespace SOR.Pages.Patch
                     Save();
                     FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 }
+                ErrorLog.PatchMgmtTrace("Versioning | btnSave_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: btnSave_Click(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: btnSave_Click(): Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
             }
         }
@@ -236,6 +248,14 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | Save() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "Save";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string releaseNotePath = string.Empty;
                 string extractedPatchPath = string.Empty;
                 string releaseNoteFileName = string.Empty;
@@ -282,7 +302,7 @@ namespace SOR.Pages.Patch
                     catch (Exception ex)
                     {
                         // Handle extraction error
-                        ErrorLog.UploadTrace($"Error extracting file: {ex.Message}");
+                        ErrorLog.PatchMgmtTrace($"Error extracting file: {ex.Message}");
                         return;
                     }
 
@@ -299,16 +319,16 @@ namespace SOR.Pages.Patch
                             string dllVersion = versionInfo.FileVersion;
 
                             // Log the DLL file name and its version
-                            ErrorLog.UploadTrace($"DLL File: {Path.GetFileName(dllFilePath)} - Version: {dllVersion}");
+                            ErrorLog.PatchMgmtTrace($"DLL File: {Path.GetFileName(dllFilePath)} - Version: {dllVersion}");
 
                             // Compare DLL version with the version from the textbox
                             if (dllVersion.Equals(versionFromTextbox, StringComparison.OrdinalIgnoreCase))
                             {
-                                ErrorLog.UploadTrace($"Match found for DLL: {Path.GetFileName(dllFilePath)} - Version: {dllVersion}");
+                                ErrorLog.PatchMgmtTrace($"Match found for DLL: {Path.GetFileName(dllFilePath)} - Version: {dllVersion}");
                             }
                             else
                             {
-                                ErrorLog.UploadTrace($"Version Not Match for DLL: {Path.GetFileName(dllFilePath)} - Version: {dllVersion}");
+                                ErrorLog.PatchMgmtTrace($"Version Not Match for DLL: {Path.GetFileName(dllFilePath)} - Version: {dllVersion}");
                                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Version Not Match. Try again', 'Warning');</script>", false);
                                 return;
                             }
@@ -316,7 +336,7 @@ namespace SOR.Pages.Patch
                     }
                     else
                     {
-                        ErrorLog.UploadTrace("No DLL files found in the extracted files.");
+                        ErrorLog.PatchMgmtTrace("No DLL files found in the extracted files.");
                         return;
                     }
 
@@ -333,12 +353,12 @@ namespace SOR.Pages.Patch
                         UploadReleaseNote.SaveAs(releaseNotePath);
 
                         // Log the path of the release note for future reference
-                        ErrorLog.UploadTrace($"Release note uploaded: {releaseNotePath}");
-                        ErrorLog.UploadTrace($"Successfully uploaded release note to: {releaseNotePath}");
+                        ErrorLog.PatchMgmtTrace($"Release note uploaded: {releaseNotePath}");
+                        ErrorLog.PatchMgmtTrace($"Successfully uploaded release note to: {releaseNotePath}");
                     }
                     else
                     {
-                        ErrorLog.UploadTrace("No valid release note uploaded. Please upload a .docx file.");
+                        ErrorLog.PatchMgmtTrace("No valid release note uploaded. Please upload a .docx file.");
                         return;
                     }
 
@@ -346,7 +366,7 @@ namespace SOR.Pages.Patch
 
                     //File.Delete(zipFilePath);
 
-                    ErrorLog.UploadTrace("Versioning: btnSave_Click(): Set Propertise...");
+                    ErrorLog.PatchMgmtTrace("Versioning: btnSave_Click(): Set Propertise...");
                     _PatchEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                     _PatchEntity.PatchType = ddlPatchType.SelectedValue != "0" ? ddlPatchType.SelectedValue : null;
                     _PatchEntity.PatchPath = !string.IsNullOrEmpty(extractedPatchPath) ? extractedPatchPath.Trim() : null;
@@ -355,7 +375,7 @@ namespace SOR.Pages.Patch
                     _PatchEntity.ReleasedOn = !string.IsNullOrEmpty(txtReleasedOn.Value) ? Convert.ToDateTime(txtReleasedOn.Value).ToString("yyyy-MM-dd") : null;
                     _PatchEntity.Flag = Convert.ToInt32(EnumCollection.EnumBindingType.BindGrid);
                     _PatchEntity.ReleaseNoteFileName = !string.IsNullOrEmpty(releaseNoteFileName) ? releaseNoteFileName : null;
-                    ErrorLog.UploadTrace("Versioning: btnSave_Click(): Going For Insert");
+                    ErrorLog.PatchMgmtTrace("Versioning: btnSave_Click(): Going For Insert");
                     string statusCode = _PatchEntity.InsertOrUpdatePatchDetails();
                     if (statusCode == "INS00")
                     {
@@ -374,11 +394,12 @@ namespace SOR.Pages.Patch
                     ErrorLog.RuleTrace("Versioning: btnSave_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                 }
+                ErrorLog.PatchMgmtTrace("Versioning | Save() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: Save(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: Save(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
                 return;
             }
@@ -401,20 +422,20 @@ namespace SOR.Pages.Patch
         //        importEntity.InsertBulkTerminalDetailsPIN(dtTable, out Status, out StatusMsg, FileID);
         //        if (Status == "00" || Status == "02")
         //        {
-        //            ErrorLog.UploadTrace(string.Format("Successful Insert File Data Request For Upload RestrictedPIN. Username : {0}. FileId : {1}. Status : {2} StatusMsg : {3}", UserName, FileID, Status, StatusMsg));
+        //            ErrorLog.PatchMgmtTrace(string.Format("Successful Insert File Data Request For Upload RestrictedPIN. Username : {0}. FileId : {1}. Status : {2} StatusMsg : {3}", UserName, FileID, Status, StatusMsg));
         //            return true;
         //        }
         //        else
         //        {
-        //            ErrorLog.UploadTrace(string.Format("Failed Insert File Data Request For Upload RestrictedPIN. Username : {0}. FileId : {1}. Status : {2} StatusMsg : {3}", UserName, FileID, Status, StatusMsg));
+        //            ErrorLog.PatchMgmtTrace(string.Format("Failed Insert File Data Request For Upload RestrictedPIN. Username : {0}. FileId : {1}. Status : {2} StatusMsg : {3}", UserName, FileID, Status, StatusMsg));
         //            return false;
         //        }
         //    }
 
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace(string.Format("Failed Insert File Data Request For Upload RestrictedPIN. Username : {0}. FileId : {1}. Exception : {2}", UserName, FileID, Ex.Message));
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace(string.Format("Failed Insert File Data Request For Upload RestrictedPIN. Username : {0}. FileId : {1}. Exception : {2}", UserName, FileID, Ex.Message));
+        //        ErrorLog.PatchMgmtError(Ex);
         //        return false;
         //    }
         //}
@@ -427,7 +448,7 @@ namespace SOR.Pages.Patch
         //    try
         //    {
         //        ImportEntity _FileIpmort = (ImportEntity)(object)TObj;
-        //        ErrorLog.UploadTrace(string.Format("Initiated Insert Add Row To DataTable Request. AgentName : {0}. Address : {1}. City : {2}. State : {3}. PinCode : {4}. AadhaarNo : {5}. PANNo : {6}. MobileNo : {7}. DateOfBlackListing : {8}. ReasonForBlackListing : {9}. CorporateBCName : {10}. BankName : {11}. IFSCCode : {12}. AccountNo : {13}. IsPoliceComplaint : {14}. IfFIRCompliant : {15}. DateofComplaint : {16}. IsBCAgentArrested : {17}. IsRemoved : {18}. IsvalidRecord : {19}. RecordStatus : {20}. FileStatus : {21}. RecordID : {22}. StatusDescription : {23}. FileId. ", _FileIpmort.AgentName, _FileIpmort.Address, _FileIpmort.City, _FileIpmort.State, _FileIpmort.PINCODE, _FileIpmort.AadhaarNo, _FileIpmort.PANNo, _FileIpmort.MobileNo, _FileIpmort.DateOfBlackListing, _FileIpmort.ReasonForBlackListing, _FileIpmort.CorporateBCName, _FileIpmort.BankName, _FileIpmort.IFSCCode, _FileIpmort.AccountNo, _FileIpmort.IsPoliceComplaint, _FileIpmort.IfFIRCompliant, _FileIpmort.DateofComplaint, _FileIpmort.IsBCAgentArrested, _FileIpmort.IsRemoved, _FileIpmort.IsValidRecord, _FileIpmort.RecordStatus, _FileIpmort.FileStatus, _FileIpmort.RecordID, _FileIpmort.RecordStatus, _FileIpmort.FileID));
+        //        ErrorLog.PatchMgmtTrace(string.Format("Initiated Insert Add Row To DataTable Request. AgentName : {0}. Address : {1}. City : {2}. State : {3}. PinCode : {4}. AadhaarNo : {5}. PANNo : {6}. MobileNo : {7}. DateOfBlackListing : {8}. ReasonForBlackListing : {9}. CorporateBCName : {10}. BankName : {11}. IFSCCode : {12}. AccountNo : {13}. IsPoliceComplaint : {14}. IfFIRCompliant : {15}. DateofComplaint : {16}. IsBCAgentArrested : {17}. IsRemoved : {18}. IsvalidRecord : {19}. RecordStatus : {20}. FileStatus : {21}. RecordID : {22}. StatusDescription : {23}. FileId. ", _FileIpmort.AgentName, _FileIpmort.Address, _FileIpmort.City, _FileIpmort.State, _FileIpmort.PINCODE, _FileIpmort.AadhaarNo, _FileIpmort.PANNo, _FileIpmort.MobileNo, _FileIpmort.DateOfBlackListing, _FileIpmort.ReasonForBlackListing, _FileIpmort.CorporateBCName, _FileIpmort.BankName, _FileIpmort.IFSCCode, _FileIpmort.AccountNo, _FileIpmort.IsPoliceComplaint, _FileIpmort.IfFIRCompliant, _FileIpmort.DateofComplaint, _FileIpmort.IsBCAgentArrested, _FileIpmort.IsRemoved, _FileIpmort.IsValidRecord, _FileIpmort.RecordStatus, _FileIpmort.FileStatus, _FileIpmort.RecordID, _FileIpmort.RecordStatus, _FileIpmort.FileID));
         //        DataRow _RowTypeTable = TypeTableUploadDetails.NewRow();
         //        _RowTypeTable["City"] = _FileIpmort.City;
         //        _RowTypeTable["State"] = _FileIpmort.State;
@@ -450,12 +471,12 @@ namespace SOR.Pages.Patch
         //        _RowTypeTable["RecordStatusDescription"] = _FileIpmort.RecordStatusDescription;
         //        TypeTableUploadDetails.Rows.Add(_RowTypeTable);
 
-        //        ErrorLog.UploadTrace(string.Format("Completed Insert Add Row To DataTable Request. AgentName : {0}. Address : {1}. City : {2}. State : {3}. PinCode : {4}. AadhaarNo : {5}. PANNo : {6}. MobileNo : {7}. DateOfBlackListing : {8}. ReasonForBlackListing : {9}. CorporateBCName : {10}. BankName : {11}. IFSCCode : {12}. AccountNo : {13}. IsPoliceComplaint : {14}. IfFIRCompliant : {15}. DateofComplaint : {16}. IsBCAgentArrested : {17}. IsRemoved : {18}. IsvalidRecord : {19}. RecordStatus : {20}. FileStatus : {21}. RecordID : {22}. StatusDescription : {23}. FileId. ", _FileIpmort.AgentName, _FileIpmort.Address, _FileIpmort.City, _FileIpmort.State, _FileIpmort.PINCODE, _FileIpmort.AadhaarNo, _FileIpmort.PANNo, _FileIpmort.MobileNo, _FileIpmort.DateOfBlackListing, _FileIpmort.ReasonForBlackListing, _FileIpmort.CorporateBCName, _FileIpmort.BankName, _FileIpmort.IFSCCode, _FileIpmort.AccountNo, _FileIpmort.IsPoliceComplaint, _FileIpmort.IfFIRCompliant, _FileIpmort.DateofComplaint, _FileIpmort.IsBCAgentArrested, _FileIpmort.IsRemoved, _FileIpmort.IsValidRecord, _FileIpmort.RecordStatus, _FileIpmort.FileStatus, _FileIpmort.RecordID, _FileIpmort.RecordStatus, _FileIpmort.FileID));
+        //        ErrorLog.PatchMgmtTrace(string.Format("Completed Insert Add Row To DataTable Request. AgentName : {0}. Address : {1}. City : {2}. State : {3}. PinCode : {4}. AadhaarNo : {5}. PANNo : {6}. MobileNo : {7}. DateOfBlackListing : {8}. ReasonForBlackListing : {9}. CorporateBCName : {10}. BankName : {11}. IFSCCode : {12}. AccountNo : {13}. IsPoliceComplaint : {14}. IfFIRCompliant : {15}. DateofComplaint : {16}. IsBCAgentArrested : {17}. IsRemoved : {18}. IsvalidRecord : {19}. RecordStatus : {20}. FileStatus : {21}. RecordID : {22}. StatusDescription : {23}. FileId. ", _FileIpmort.AgentName, _FileIpmort.Address, _FileIpmort.City, _FileIpmort.State, _FileIpmort.PINCODE, _FileIpmort.AadhaarNo, _FileIpmort.PANNo, _FileIpmort.MobileNo, _FileIpmort.DateOfBlackListing, _FileIpmort.ReasonForBlackListing, _FileIpmort.CorporateBCName, _FileIpmort.BankName, _FileIpmort.IFSCCode, _FileIpmort.AccountNo, _FileIpmort.IsPoliceComplaint, _FileIpmort.IfFIRCompliant, _FileIpmort.DateofComplaint, _FileIpmort.IsBCAgentArrested, _FileIpmort.IsRemoved, _FileIpmort.IsValidRecord, _FileIpmort.RecordStatus, _FileIpmort.FileStatus, _FileIpmort.RecordID, _FileIpmort.RecordStatus, _FileIpmort.FileID));
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace("Failed for AddRowToDataTable:" + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("Failed for AddRowToDataTable:" + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //    }
         //}
 
@@ -463,7 +484,7 @@ namespace SOR.Pages.Patch
         //{
         //    bool IsFileProcessed = true;
         //    dataTableExcel = new DataTable();
-        //    ErrorLog.UploadTrace(string.Format("Initiated Process File Request. Username : {0}. FilePath : {1}.FileExtension : {2}.", Session["Username"].ToString(), FilePath, FileExtension));
+        //    ErrorLog.PatchMgmtTrace(string.Format("Initiated Process File Request. Username : {0}. FilePath : {1}.FileExtension : {2}.", Session["Username"].ToString(), FilePath, FileExtension));
         //    if (FileExtension.ToLower() == ".xls")
         //    {
         //        _ConnctionString.Append("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath.ToString() + ";Extended Properties=\"Excel 8.0;HDR=Yes;IMEX=2\"");
@@ -506,26 +527,26 @@ namespace SOR.Pages.Patch
         //            IsFileProcessed = true;
         //        }
 
-        //        ErrorLog.UploadTrace(string.Format("Completed Process File Request. Username : {0}. FilePath : {1}. FileExtension : {2}.", Session["Username"].ToString(), FilePath, FileExtension));
+        //        ErrorLog.PatchMgmtTrace(string.Format("Completed Process File Request. Username : {0}. FilePath : {1}. FileExtension : {2}.", Session["Username"].ToString(), FilePath, FileExtension));
         //    }
         //    catch (ArgumentException Ex)
         //    {
-        //        ErrorLog.UploadError(Ex);
-        //        ErrorLog.UploadTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message));
+        //        ErrorLog.PatchMgmtError(Ex);
+        //        ErrorLog.PatchMgmtTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message));
         //        IsFileProcessed = false;
         //    }
         //    catch (OleDbException Ex)
         //    {
-        //        ErrorLog.UploadError(Ex);
-        //        ErrorLog.UploadTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message));
+        //        ErrorLog.PatchMgmtError(Ex);
+        //        ErrorLog.PatchMgmtTrace(string.Format("Failed Process File Request. Username : {0}. FilePath : {1}. Status : {2}", Session["Username"].ToString(), FilePath, Ex.Message));
         //        IsFileProcessed = false;
         //    }
         //    catch (InvalidOperationException Ex)
         //    {
         //        IsFileProcessed = false;
         //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('System does not supports " + FileExtension + " file format.','Warning');</script>", false);
-        //        ErrorLog.UploadTrace("RestrictedPIN : Error At ProcessFile(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("RestrictedPIN : Error At ProcessFile(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //    }
         //    return IsFileProcessed;
 
@@ -548,8 +569,8 @@ namespace SOR.Pages.Patch
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace("RestrictedPIN : Error At FileImportEntry(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("RestrictedPIN : Error At FileImportEntry(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //        return false;
         //    }
         //}
@@ -560,13 +581,13 @@ namespace SOR.Pages.Patch
         //{
         //    try
         //    {
-        //        ErrorLog.UploadTrace(string.Format("Initiated Validate File Request. Username : {0}.", Session["Username"].ToString()));
+        //        ErrorLog.PatchMgmtTrace(string.Format("Initiated Validate File Request. Username : {0}.", Session["Username"].ToString()));
         //        return FileExtension.ToUpper() != ".XLS" && FileExtension.ToUpper() != ".XLSX" ? false : true;
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace("RestrictedPIN : Error At ValidateFileFormat(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("RestrictedPIN : Error At ValidateFileFormat(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //        return false;
         //    }
         //}
@@ -579,10 +600,10 @@ namespace SOR.Pages.Patch
         //{
         //    try
         //    {
-        //        ErrorLog.UploadTrace(string.Format("Initiated Save File Request. Username : {0}. FileName: {1}.", Session["Username"].ToString(), fileUpload.PostedFile.FileName));
+        //        ErrorLog.PatchMgmtTrace(string.Format("Initiated Save File Request. Username : {0}. FileName: {1}.", Session["Username"].ToString(), fileUpload.PostedFile.FileName));
         //        string PathLocation = ConfigurationManager.AppSettings["UploadRestrictedPIN"].ToString();
 
-        //        ErrorLog.UploadTrace("PathLocation: " + PathLocation);
+        //        ErrorLog.PatchMgmtTrace("PathLocation: " + PathLocation);
         //        if (!Directory.Exists(PathLocation))
         //        {
         //            Directory.CreateDirectory(PathLocation);
@@ -593,20 +614,20 @@ namespace SOR.Pages.Patch
         //        {
         //            File.Delete(PathLocation);
         //            fileUpload.SaveAs(PathLocation);
-        //            ErrorLog.UploadTrace(string.Format("Completed Save File Request. Username : {0}. FileName: {1}.", Session["Username"].ToString(), fileUpload.PostedFile.FileName));
+        //            ErrorLog.PatchMgmtTrace(string.Format("Completed Save File Request. Username : {0}. FileName: {1}.", Session["Username"].ToString(), fileUpload.PostedFile.FileName));
         //        }
         //        else
         //        {
         //            fileUpload.SaveAs(PathLocation);
-        //            ErrorLog.UploadTrace(string.Format("Completed Save File Request. Username : {0}. FileName: {1}.", Session["Username"].ToString(), fileUpload.PostedFile.FileName));
+        //            ErrorLog.PatchMgmtTrace(string.Format("Completed Save File Request. Username : {0}. FileName: {1}.", Session["Username"].ToString(), fileUpload.PostedFile.FileName));
         //        }
         //        return PathLocation;
 
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace("RestrictedPIN : Error At SaveFile(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("RestrictedPIN : Error At SaveFile(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //        return string.Empty;
         //    }
         //}
@@ -618,7 +639,8 @@ namespace SOR.Pages.Patch
         {
             try
             {
-                ErrorLog.UploadTrace(string.Format("btnsample_Click() | Initiated Release Note Sample File Download Request."));
+                ErrorLog.PatchMgmtTrace("Versioning | btnsample_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtTrace(string.Format("btnsample_Click() | Initiated Release Note Sample File Download Request."));
                 string strURL = string.Empty;
 
 
@@ -633,23 +655,30 @@ namespace SOR.Pages.Patch
                 byte[] data = req.DownloadData(Server.MapPath(strURL));
                 response.BinaryWrite(data);
                 response.End();
-                ErrorLog.UploadTrace(string.Format("Completed RestrictedPIN Sample File Download."));
-
+                ErrorLog.PatchMgmtTrace(string.Format("Completed RestrictedPIN Sample File Download."));
+                ErrorLog.PatchMgmtTrace("Versioning | btnsample_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (System.Threading.ThreadAbortException Ex)
             {
-                ErrorLog.UploadTrace("Versioning: btnsample_Click(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: btnsample_Click(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
                 return;
             }
-
         }
 
         protected void btnsearch_Click(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btnsearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btnsearch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (string.IsNullOrEmpty(txtFromDate.Value))
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Please Select From Date.', 'Warning');</script>", false);
@@ -665,12 +694,13 @@ namespace SOR.Pages.Patch
                 {
                     FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 }
+                ErrorLog.PatchMgmtTrace("Versioning | btnsearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
 
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: btnsearch_Click(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: btnsearch_Click(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
                 return;
             }
@@ -680,20 +710,27 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | Btnclear_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "Btnclear";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtFromDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 txtToDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 ddlFileTypeStatus.ClearSelection();
                 gvVersioning.Visible = false;
+                ErrorLog.PatchMgmtTrace("Versioning | Btnclear_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: Btnclear_Click(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: Btnclear_Click(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
-
         }
-
         #endregion
 
         #region Gridview Events
@@ -702,6 +739,7 @@ namespace SOR.Pages.Patch
             ExportFormat obj = new ExportFormat();
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | RowCommand() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 Session["IsCancelReqId"] = null;
                 Session["ReqId"] = null;
                 Session["IsSchedule"] = null;
@@ -710,21 +748,38 @@ namespace SOR.Pages.Patch
                 {
                     try
                     {
+                        ErrorLog.PatchMgmtTrace("Versioning | RowCommand-EditPatch | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "PatchMgmt-Versioning";
+                        _auditParams[2] = "RowCommand-EditPatch";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
                         string patchPath = e.CommandArgument.ToString();
                         Session["ReqId"] = patchPath;
                         hdnshowmanual.Value = "true";  // Set hidden field to show the modal
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowModal", "showModal();", true);
+                        ErrorLog.PatchMgmtTrace("Versioning | RowCommand-EditPatch | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                     }
                     catch (Exception Ex)
                     {
-                        ErrorLog.UploadTrace("Versioning: gvVersioning_RowCommand(): Exception: " + Ex.Message);
-                        ErrorLog.UploadError(Ex);
+                        ErrorLog.PatchMgmtTrace("Versioning: gvVersioning_RowCommand(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                        ErrorLog.PatchMgmtError(Ex);
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
                         return;
                     }
                 }
                 if (e.CommandName == "OpenReleaseNote")
                 {
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-OpenReleaseNote | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-Versioning";
+                    _auditParams[2] = "RowCommand-OpenReleaseNote";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string releaseNoteRelativePath = e.CommandArgument.ToString();
                     string baseDirectory = ConfigurationManager.AppSettings["ReleaseNote"];
                     string fullPath = Path.Combine(baseDirectory, releaseNoteRelativePath);
@@ -752,9 +807,18 @@ namespace SOR.Pages.Patch
                     {
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "FileNotFound", "alert('File not found.');", true);
                     }
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-OpenReleaseNote | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 if (e.CommandName == "DownloadDoc")
                 {
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-DownloadDoc | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-Versioning";
+                    _auditParams[2] = "RowCommand-DownloadDoc";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string releaseNoteRelativePath = e.CommandArgument.ToString();
                     string baseDirectory = ConfigurationManager.AppSettings["Patches"];
                     string fullPath = Path.Combine(baseDirectory, releaseNoteRelativePath);
@@ -763,32 +827,58 @@ namespace SOR.Pages.Patch
                     //string patchPath = @"D:\UploadedPatches\Patches\22112024181723"; // Use @ to denote a verbatim string;
                     ////string modifiedPath = patchPath.Replace("\\\\", "\\");
                     DownloadPatch(fullPath);
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-DownloadDoc | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 if (e.CommandName == "Cancel")
                 {
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-Cancel | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-Versioning";
+                    _auditParams[2] = "RowCommand-Cancel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string rowId = e.CommandArgument.ToString();
                     Session["IsCancelReqId"] = rowId;
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-Cancel | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 if (e.CommandName == "Reschedule")
                 {
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-Reschedule | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-Versioning";
+                    _auditParams[2] = "RowCommand-Reschedule";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     int rowIndex = Convert.ToInt32(e.CommandArgument);
                     Session["ReqId"] = rowIndex;
                     hdnshowmanual.Value = "true";
                     Session["IsSchedule"] = "1";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowModal", "showModal();", true);
-
-
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-Reschedule | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 if (e.CommandName == "Production")
                 {
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-Production | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-Versioning";
+                    _auditParams[2] = "RowCommand-Production";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     string rowId = e.CommandArgument.ToString();
                     Session["IsProductionReqId"] = rowId;
+                    ErrorLog.PatchMgmtTrace("Versioning | RowCommand-Production | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : Error At gvVersioning_RowCommand(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : Error At gvVersioning_RowCommand(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -813,7 +903,7 @@ namespace SOR.Pages.Patch
             if (!Directory.Exists(patchPath))
             {
                 // Handle directory not found
-                ErrorLog.UploadTrace($"Directory not found: {patchPath}");
+                ErrorLog.PatchMgmtTrace($"Directory not found: {patchPath}");
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Directory not found. Try again', 'Warning');</script>", false);
                 return;
             }
@@ -822,6 +912,14 @@ namespace SOR.Pages.Patch
 
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | DownloadPatch() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "DownloadPatch";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 // Create a zip file from the directory using Ionic.Zip (DotNetZip)
                 ZipFilesInDirectory(patchPath, zipFilePath);
 
@@ -834,11 +932,12 @@ namespace SOR.Pages.Patch
 
                 // Optionally, delete the temp zip file after sending it
                 File.Delete(zipFilePath);
+                ErrorLog.PatchMgmtTrace("Versioning | DownloadPatch() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception ex)
             {
                 // Handle errors
-                ErrorLog.UploadTrace($"Error zipping or downloading: {ex.Message}");
+                ErrorLog.PatchMgmtTrace($"Error zipping or downloading: {ex.Message}");
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Error", "<script>showWarning('Error zipping or downloading the patch. Try again.', 'Error');</script>", false);
             }
         }
@@ -882,8 +981,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : Error At BindCugServices(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : Error At BindCugServices(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -904,8 +1003,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : Error At ddlpatchscheduletype_SelectedIndexChanged(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : Error At ddlpatchscheduletype_SelectedIndexChanged(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -914,14 +1013,23 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btncancel_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btncancel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 txtDate.Value = DateTime.Now.ToString("yyyy-MM-dd");
                 //fileUpload.Dispose();
                 gvVersioning.Visible = false;
+                ErrorLog.PatchMgmtTrace("Versioning | btncancel_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : Error At btncancel_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : Error At btncancel_ServerClick(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1045,8 +1153,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : Error At gvVersioning_RowDataBound(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : Error At gvVersioning_RowDataBound(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -1056,10 +1164,18 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | confirmCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "confirmCancel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 _PatchEntity.Remarks = txtRemark.Text;
                 _PatchEntity.ReqId = Session["IsCancelReqId"].ToString();
                 _PatchEntity.Flag = Convert.ToInt32(EnumCollection.EnumBindingType.Export);
-                ErrorLog.UploadTrace("Versioning: btnSubmitRemarks_Click(): Going For Insert");
+                ErrorLog.PatchMgmtTrace("Versioning: btnSubmitRemarks_Click(): Going For Insert");
 
                 string statusCode = _PatchEntity.InsertOrUpdateVersioningDetails();
 
@@ -1080,13 +1196,13 @@ namespace SOR.Pages.Patch
                 };
 
                 ErrorLog.RuleTrace("Versioning: btnSubmitDetails_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-
+                ErrorLog.PatchMgmtTrace("Versioning | confirmCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : confirmCancel_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : confirmCancel_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -1101,8 +1217,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : Error At gvVersioning_PageIndexChanging(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : Error At gvVersioning_PageIndexChanging(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1119,7 +1235,7 @@ namespace SOR.Pages.Patch
         //    try
         //    {
         //        ImportEntity _CommentUpdateFileIpmort = (ImportEntity)(object)TObj;
-        //        ErrorLog.UploadTrace(string.Format("Initiated Validate File Request for Username : {0}.", Session["Username"].ToString()));
+        //        ErrorLog.PatchMgmtTrace(string.Format("Initiated Validate File Request for Username : {0}.", Session["Username"].ToString()));
         //        _CustomeRegExpValidation = new clsCustomeRegularExpressions();
 
         //        if (string.IsNullOrEmpty(_CommentUpdateFileIpmort.City))
@@ -1165,17 +1281,26 @@ namespace SOR.Pages.Patch
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.UploadTrace("RestrictedPIN : Error At ValidateFileData(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-        //        ErrorLog.UploadError(Ex);
+        //        ErrorLog.PatchMgmtTrace("RestrictedPIN : Error At ValidateFileData(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
+        //        ErrorLog.PatchMgmtError(Ex);
         //        IsValidRecord = false;
         //    }
         //    return IsValidRecord;
         //}
+
         #region Submit
         protected void btnSubmitDetails_Click(object sender, EventArgs e)
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btnSubmitDetails";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (Session["IsSchedule"] != null)
                 {
                     string selectedServices = hdnSelectedServices.Value;
@@ -1196,7 +1321,7 @@ namespace SOR.Pages.Patch
                     _PatchEntity.ReqId = Session["ReqId"].ToString();
 
                     _PatchEntity.Flag = Convert.ToInt32(EnumCollection.EnumBindingType.ExportBulk);
-                    ErrorLog.UploadTrace("Versioning: btnSubmitDetails_Click(): Going For Insert");
+                    ErrorLog.PatchMgmtTrace("Versioning: btnSubmitDetails_Click(): Going For Insert");
                     string statusCode = _PatchEntity.InsertOrUpdateVersioningDetails();
                     if (statusCode == "UPD00")
                     {
@@ -1235,7 +1360,7 @@ namespace SOR.Pages.Patch
                     _PatchEntity.ReqId = Session["ReqId"].ToString();
 
                     _PatchEntity.Flag = Convert.ToInt32(EnumCollection.EnumBindingType.BindGrid);
-                    ErrorLog.UploadTrace("Versioning: btnSubmitDetails_Click(): Going For Insert");
+                    ErrorLog.PatchMgmtTrace("Versioning: btnSubmitDetails_Click(): Going For Insert");
                     string statusCode = _PatchEntity.InsertOrUpdateVersioningDetails();
                     if (statusCode == "INS00")
                     {
@@ -1254,12 +1379,12 @@ namespace SOR.Pages.Patch
                     ErrorLog.RuleTrace("Versioning: btnSubmitDetails_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                 }
-
+                ErrorLog.PatchMgmtTrace("Versioning | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : btnSubmitDetails_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : btnSubmitDetails_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1268,11 +1393,20 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btnClsManual_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btnClsManual";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 hdnshowmanual.Value = "false";
+                ErrorLog.PatchMgmtTrace("Versioning | btnClsManual_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message);
+                ErrorLog.RuleTrace("SwitchConfig: btnClsManual_Click() | Username :" + Session["Username"].ToString() + "Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
             }
         }
 
@@ -1280,6 +1414,14 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btncugstatus_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btncugstatus";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string cugDocumentPath = string.Empty;
                 string cugDocumentFileName = string.Empty;
 
@@ -1321,8 +1463,8 @@ namespace SOR.Pages.Patch
                         FileUploadCUG.SaveAs(cugDocumentPath);
 
                         // Log the path of the CUG document for future reference
-                        ErrorLog.UploadTrace($"CUG document uploaded: {cugDocumentPath}");
-                        ErrorLog.UploadTrace($"Successfully uploaded CUG document to: {cugDocumentPath}");
+                        ErrorLog.PatchMgmtTrace($"CUG document uploaded: {cugDocumentPath}");
+                        ErrorLog.PatchMgmtTrace($"Successfully uploaded CUG document to: {cugDocumentPath}");
 
                         _PatchEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                         _PatchEntity.Status = ddlcugstatus.SelectedValue != "0" ? ddlcugstatus.SelectedValue : null;
@@ -1331,7 +1473,7 @@ namespace SOR.Pages.Patch
                         _PatchEntity.Flag = Convert.ToInt32(EnumCollection.EnumBindingType.BindGrid);
                         _PatchEntity.Id = Session["IsProductionReqId"].ToString();
 
-                        ErrorLog.UploadTrace("Versioning: btncugstatus_Click(): Going For Insert");
+                        ErrorLog.PatchMgmtTrace("Versioning: btncugstatus_Click(): Going For Insert");
                         string statusCode = _PatchEntity.UpdatecugprodDocumnetsDetails();
                         if (statusCode == "UPD00")
                         {
@@ -1354,20 +1496,21 @@ namespace SOR.Pages.Patch
                     else
                     {
                         // If the file extension is not allowed, log an error message
-                        ErrorLog.UploadTrace($"Invalid file type. Allowed types: {string.Join(", ", allowedExtensions)}.");
+                        ErrorLog.PatchMgmtTrace($"Invalid file type. Allowed types: {string.Join(", ", allowedExtensions)}.");
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Invalid file type. Only PDF, DOCX. are allowed.', 'Warning');</script>", false);
                     }
                 }
                 else
                 {
                     // If no file is uploaded, log an error message
-                    ErrorLog.UploadTrace("Versioning : btncugstatus_Click() No file uploaded. Please select a file to upload.");
+                    ErrorLog.PatchMgmtTrace("Versioning : btncugstatus_Click() No file uploaded. Please select a file to upload.");
                 }
+                ErrorLog.PatchMgmtTrace("Versioning | btncugstatus_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : btncugstatus_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : btncugstatus_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1376,6 +1519,14 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("Versioning | btnprodstatus_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-Versioning";
+                _auditParams[2] = "btnprodstatus";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string cugDocumentPath = string.Empty;
                 string cugDocumentFileName = string.Empty;
 
@@ -1417,8 +1568,8 @@ namespace SOR.Pages.Patch
                         FileUploadProd.SaveAs(cugDocumentPath);
 
                         // Log the path of the CUG document for future reference
-                        ErrorLog.UploadTrace($"CUG document uploaded: {cugDocumentPath}");
-                        ErrorLog.UploadTrace($"Successfully uploaded CUG document to: {cugDocumentPath}");
+                        ErrorLog.PatchMgmtTrace($"CUG document uploaded: {cugDocumentPath}");
+                        ErrorLog.PatchMgmtTrace($"Successfully uploaded CUG document to: {cugDocumentPath}");
 
                         _PatchEntity.UserName = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
                         _PatchEntity.Status = ddlcugstatus.SelectedValue != "0" ? ddlcugstatus.SelectedValue : null;
@@ -1427,7 +1578,7 @@ namespace SOR.Pages.Patch
                         _PatchEntity.Flag = Convert.ToInt32(EnumCollection.EnumBindingType.Export);
                         _PatchEntity.Id = Session["IsProductionReqId"].ToString();
 
-                        ErrorLog.UploadTrace("Versioning: btncugstatus_Click(): Going For Insert");
+                        ErrorLog.PatchMgmtTrace("Versioning: btncugstatus_Click(): Going For Insert");
                         string statusCode = _PatchEntity.UpdatecugprodDocumnetsDetails();
                         if (statusCode == "UPD00")
                         {
@@ -1450,20 +1601,21 @@ namespace SOR.Pages.Patch
                     else
                     {
                         // If the file extension is not allowed, log an error message
-                        ErrorLog.UploadTrace($"Invalid file type. Allowed types: {string.Join(", ", allowedExtensions)}.");
+                        ErrorLog.PatchMgmtTrace($"Invalid file type. Allowed types: {string.Join(", ", allowedExtensions)}.");
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Invalid file type. Only PDF, DOCX. are allowed.', 'Warning');</script>", false);
                     }
                 }
                 else
                 {
                     // If no file is uploaded, log an error message
-                    ErrorLog.UploadTrace("Versioning : btncugstatus_Click() No file uploaded. Please select a file to upload.");
+                    ErrorLog.PatchMgmtTrace("Versioning : btncugstatus_Click() No file uploaded. Please select a file to upload.");
                 }
+                ErrorLog.PatchMgmtTrace("Versioning | btnprodstatus_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning : btncugstatus_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning : btncugstatus_Click(). Username : " + Session["UserName"].ToString() + " Exception : " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
