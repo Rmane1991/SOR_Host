@@ -51,6 +51,8 @@ namespace SOR.Pages.BC
             get { if (fileName == null) fileName = new StringBuilder(); return fileName; }
             set { fileName = value; }
         }
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         #endregion
 
         #region Objects Declaration
@@ -79,7 +81,7 @@ namespace SOR.Pages.BC
         #region PageLoad
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ErrorLog.BCManagementTrace("ReprocessBCDetails | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             if (!IsPostBack == true)
             {
                 fillClient();
@@ -113,6 +115,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | GetDetails() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 //_BCEntity.BCReqId = HidBCID.Value;
                 _BCEntity.BCRequest = BCReqId;
 
@@ -254,13 +257,12 @@ namespace SOR.Pages.BC
                 {
                     //clearselection();
                 }
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | GetDetails() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
-
+                ErrorLog.BCManagementTrace("Page : ReprocessBCDetails.cs \nFunction : GetDetails() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
                 return;
             }
         }
@@ -270,6 +272,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField1.Value.ToString() == "Yes")
                 {
                     string Status = string.Empty;
@@ -321,6 +324,13 @@ namespace SOR.Pages.BC
                         _BCEntity.Activity = Page.Request.QueryString["RequestType"].ToString();
                         _BCEntity.BCReqId = HidBCID.Value != null && !string.IsNullOrEmpty(HidBCID.Value) ? Convert.ToString(HidBCID.Value) : Convert.ToString(Page.Request.QueryString["BCReqId"]);
                         // _BCEntity.BCReqId = BCReqId;
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "BC-ReprocessDetails";
+                        _auditParams[2] = "btnSubmitDetails-1";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
 
                         if (_BCEntity.Insert_BCRequest(Convert.ToString(Session["Username"]), out RequestId, out Status, out StatusMsg))
                         {
@@ -372,10 +382,11 @@ namespace SOR.Pages.BC
 
                     }
                 }
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Class : AgentRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
                 return;
             }
@@ -402,6 +413,7 @@ namespace SOR.Pages.BC
             _CustomeRegExpValidation = new clsCustomeRegularExpressions();
             try
             {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | ValidateSetProperties() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 // ClientName
                 if (hd_txtFirstName.Value == "1" || !string.IsNullOrEmpty(txtFirstName.Text))
                     if (!_CustomeRegExpValidation.CustomeRegExpValidation(clsCustomeRegularExpressions.Validators.TextWithoutSpace, txtFirstName.Text))
@@ -541,15 +553,12 @@ namespace SOR.Pages.BC
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please Select Atleast One Service','Warning');", true);
                     return false;
                 }
-
-
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | ValidateSetProperties() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Page : ClientRegistration.cs \nFunction : ValidateSetProperties\nException Occured\n" + ex.Message);
-
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong..! Please try again','BC Registration');", true);
-                return false;
+                ErrorLog.BCManagementTrace("Page : ReprocessBCDetails.cs \nFunction : ValidateSetProperties() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
             }
             return true;
         }
@@ -588,9 +597,7 @@ namespace SOR.Pages.BC
             }
         }
         #endregion
-
-
-
+        
         #region Method
         public void fillClient()
         {
@@ -807,13 +814,12 @@ namespace SOR.Pages.BC
             }
         }
         #endregion
-
-
+        
         protected void Bindreceipt()
         {
             try
             {
-
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | Bindreceipt() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 DataSet ds_Receipt = _BCEntity.getReceiptData();
                 if (ds_Receipt != null && ds_Receipt.Tables.Count > 0 && ds_Receipt.Tables[0].Rows.Count > 0)
                 {
@@ -853,11 +859,13 @@ namespace SOR.Pages.BC
                     hidimgSig.Value = PathSig;
                     ViewState["BCReqId"] = ds_Receipt.Tables[0].Rows[0]["BCReqID"].ToString();
                 }
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | Bindreceipt() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-
-                throw Ex;
+                ErrorLog.BCManagementTrace("Page : BCStatus.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
+                return;
             }
         }
 
@@ -865,6 +873,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | BtnSubmit_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (HiddenField2.Value.ToString() == "Yes")
                 {
                     _BCEntity.Flag = (int)EnumCollection.DBFlag.Update;
@@ -878,7 +887,13 @@ namespace SOR.Pages.BC
                     _BCEntity.SignatureProofDocument = Session["SigFilePath"].ToString();
                     _BCEntity.SignatureProofType = ddlSignature.SelectedValue;
                     _BCEntity.BCReqId = HidBCID.Value;
-
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "BC-ReprocessDetails";
+                    _auditParams[2] = "btnSubmitDetails-2";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     if (_BCEntity.Insert_BCRequest(Convert.ToString(Session["Username"]), out int RequestId, out string Status, out string StatusMsg))
                     {
                         ErrorLog.AgentManagementTrace("AgentRegistration: BtnSubmit_Click: Successful - Upload Documents. UserName: " + UserName + " Status: " + Status + " StatusMsg: " + StatusMsg + " RequestId: " + RequestId);
@@ -898,10 +913,11 @@ namespace SOR.Pages.BC
                         return;
                     }
                 }
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | BtnSubmit_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message);
+                ErrorLog.CommonTrace("Class : BCRegistration.cs \nFunction : btnSubmitDetails_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BC Registration');", true);
                 return;
@@ -910,7 +926,14 @@ namespace SOR.Pages.BC
 
         protected void btnCloseReceipt_Click(object sender, EventArgs e)
         {
-
+            ErrorLog.BCManagementTrace("ReprocessBCDetails | btnCloseReceipt_Click() | Strated. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+            #region Audit
+            _auditParams[0] = Session["Username"].ToString();
+            _auditParams[1] = "BC-ReprocessDetails";
+            _auditParams[2] = "btnCloseReceipt";
+            _auditParams[3] = Session["LoginKey"].ToString();
+            _LoginEntity.StoreLoginActivities(_auditParams);
+            #endregion
             if (HiddenField1.Value.ToString() == "Yes")
             {
                 DIVDetails.Visible = true;
@@ -926,6 +949,7 @@ namespace SOR.Pages.BC
 
             }
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "funShowOnboardDiv()", true);
+            ErrorLog.BCManagementTrace("ReprocessBCDetails | btnCloseReceipt_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
         }
 
         #region SaveFile IdentityProof
@@ -1180,71 +1204,88 @@ namespace SOR.Pages.BC
 
         protected void ProcessBCData_Click(object sender, EventArgs e)
         {
-            if (HiddenField1.Value.ToString() == "Yes")
+            try
             {
-                if (ChkConfirmBC.Checked == true)
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | ProcessBCData_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                if (HiddenField1.Value.ToString() == "Yes")
                 {
-                   div_Upload.Visible = false;
-                   DivBcDetails.Visible = false;
-
-                    DivBcDetails.Visible = true;
-                    _BCEntity.CreatedBy = Session["Username"].ToString();
-                   _BCEntity.BCReqId = HidBCID.Value.ToString();
-                    _BCEntity.Activity = Convert.ToString(Session["RequestType"]);
-                    _BCEntity.Flag = 2;
-                    //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
-                    //if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
-                    //{
-                    //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'BC Registration');", true);
-                    //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
-                    //    div_Upload.Visible = false;
-                    //    divOnboardFranchise.Visible = false;
-                    //    DivBcDetails.Visible = false;
-                    //    DIVDetails.Visible = false;
-                    //    ClearAllControls();
-                    //     Session["AGCode"] = string.Empty;
-                    //     Session["BCReqId"] = string.Empty;
-                    //     Response.Redirect("~/Pages/BC/BCRegistration.aspx", false);
-                    //     //HttpContext.Current.ApplicationInstance.CompleteRequest();
-                    // }
-                    // else
-                    // {
-                    //     ClearAllControls();
-                    // }
-                    string statusMessage = _BCEntity.SetInsertUpdateBCTrackerDetails();
-
-                    if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
+                    if (ChkConfirmBC.Checked == true)
                     {
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
                         div_Upload.Visible = false;
-                        divOnboardFranchise.Visible = false;
                         DivBcDetails.Visible = false;
-                        DIVDetails.Visible = false;
-                        ClearAllControls();
-                        Session["AGCode"] = string.Empty;
-                        Session["BCReqId"] = string.Empty;
-                        Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
-                    }
-                    else if (statusMessage == "Updated")
-                    {
-                        // Handle the case when the record is updated
+
+                        DivBcDetails.Visible = true;
+                        _BCEntity.CreatedBy = Session["Username"].ToString();
+                        _BCEntity.BCReqId = HidBCID.Value.ToString();
+                        _BCEntity.Activity = Convert.ToString(Session["RequestType"]);
+                        _BCEntity.Flag = 2;
+                        //DataSet dsBCMaster = _BCEntity.SetInsertUpdateBCTrackerDetails();
+                        //if (dsBCMaster != null && dsBCMaster.Tables.Count > 0 && dsBCMaster.Tables[0].Rows[0]["Status"].ToString() == "Inserted")
+                        //{
+                        //    //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showError('Data Registered Successfully', 'BC Registration');", true);
+                        //    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                        //    div_Upload.Visible = false;
+                        //    divOnboardFranchise.Visible = false;
+                        //    DivBcDetails.Visible = false;
+                        //    DIVDetails.Visible = false;
+                        //    ClearAllControls();
+                        //     Session["AGCode"] = string.Empty;
+                        //     Session["BCReqId"] = string.Empty;
+                        //     Response.Redirect("~/Pages/BC/BCRegistration.aspx", false);
+                        //     //HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        // }
+                        // else
+                        // {
+                        //     ClearAllControls();
+                        // }
+                        #region Audit
+                        _auditParams[0] = Session["Username"].ToString();
+                        _auditParams[1] = "BC-ReprocessDetails";
+                        _auditParams[2] = "btnSubmitDetails-3";
+                        _auditParams[3] = Session["LoginKey"].ToString();
+                        _LoginEntity.StoreLoginActivities(_auditParams);
+                        #endregion
+                        string statusMessage = _BCEntity.SetInsertUpdateBCTrackerDetails();
+
+                        if (!string.IsNullOrEmpty(statusMessage) && statusMessage == "Inserted")
+                        {
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'BC Registration');", true);
+                            div_Upload.Visible = false;
+                            divOnboardFranchise.Visible = false;
+                            DivBcDetails.Visible = false;
+                            DIVDetails.Visible = false;
+                            ClearAllControls();
+                            Session["AGCode"] = string.Empty;
+                            Session["BCReqId"] = string.Empty;
+                            Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+                        }
+                        else if (statusMessage == "Updated")
+                        {
+                            // Handle the case when the record is updated
+                        }
+                        else
+                        {
+                            ClearAllControls();
+                        }
                     }
                     else
                     {
-                        ClearAllControls();
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Confirmation on all above BC Details are properly filled', 'BC Registration');", true);
+                        return;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select Confirmation on all above BC Details are properly filled', 'BC Registration');", true);
-                    return;
+
                 }
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | ProcessBCData_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
-            else
+            catch (Exception Ex)
             {
-
+                ErrorLog.BCManagementTrace("Page : BCStatus.cs \nFunction : ProcessBCData_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
+                return;
             }
-
         }
 
         protected void btntest_Click(object sender, EventArgs e)
@@ -1254,12 +1295,28 @@ namespace SOR.Pages.BC
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
-            DIVDetails.Visible = false;
-            div_Upload.Visible = false;
-            //divPaymentReceipt.Visible = false;
-            divOnboardFranchise.Visible = false;
-            Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+            try
+            {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | btnCancel_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-ReprocessDetails";
+                _auditParams[2] = "btnCancel";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
+                DIVDetails.Visible = false;
+                div_Upload.Visible = false;
+                divOnboardFranchise.Visible = false;
+                Response.Redirect("~/Pages/BC/OnBoardBcStatus.aspx", false);
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | btnCancel_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+            }
+            catch (Exception Ex)
+            {
+                ErrorLog.BCManagementTrace("Page : ReprocessBCDetails.cs \nFunction : btnCancel_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
+                return;
+            }
         }
 
         #region View Download
@@ -1390,7 +1447,6 @@ namespace SOR.Pages.BC
 
         #endregion
 
-
         #region Bind Dropdown
         public void BindDropdownCountryState()
         {
@@ -1464,17 +1520,27 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | BtnBack_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "BC-ReprocessDetails";
+                _auditParams[2] = "BtnBack";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 DIVDetails.Visible = false;
                 div_Upload.Visible = false;
                 DivBcDetails.Visible = false;
                // divPaymentReceipt.Visible = false;
                 string val = HidBCID.Value;
                 GetDetails(val);
-               // GetDetailsBack(val);
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | BtnBack_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Page : EditBCRegistration.cs \nFunction : BindDropdownCountry()\nException Occured\n" + ex.Message);
+                ErrorLog.BCManagementTrace("Page : ReprocessBCDetails.cs \nFunction : BtnBack_Click() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
+                return;
             }
         }
 
@@ -1482,6 +1548,7 @@ namespace SOR.Pages.BC
         {
             try
             {
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | GetDetailsBack() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _BCEntity.BCRequest = val;
                
                 DataSet ds = _BCEntity.GetOnboradingbcDetails();
@@ -1590,11 +1657,12 @@ namespace SOR.Pages.BC
                 {
                     //clearselection();
                 }
+                ErrorLog.BCManagementTrace("ReprocessBCDetails | GetDetailsBack() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonError(Ex);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong.Please try again','Warning');", true);
+                ErrorLog.BCManagementTrace("Page : ReprocessBCDetails.cs \nFunction : GetDetailsBack() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Contact System Administrator', 'BCStatus');", true);
                 return;
             }
         }
@@ -1731,8 +1799,7 @@ namespace SOR.Pages.BC
                 return;
             }
         }
-
-
+        
         protected void btnViewDownloadDoc_Click(object sender, ImageClickEventArgs e)
         {
             try

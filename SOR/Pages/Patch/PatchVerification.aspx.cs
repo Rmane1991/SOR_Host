@@ -17,6 +17,8 @@ namespace SOR.Pages.Patch
     public partial class PatchVerification : System.Web.UI.Page
     {
         #region Property Declaration
+        LoginEntity _LoginEntity = new LoginEntity();
+        string[] _auditParams = new string[4];
         AgentRegistrationDAL _AgentRegistrationDAL = new AgentRegistrationDAL();
         ImportEntity _ImportEntity = new ImportEntity();
         PatchEntity _PatchEntity = new PatchEntity();
@@ -69,6 +71,7 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | Page_Load() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 if (Session["UserName"] != null && Session["UserRoleID"] != null)
                 {
                     bool HasPagePermission = UserPermissions.IsPageAccessibleToUser(Session["UserName"].ToString(), Session["UserRoleID"].ToString(), "PatchVerification.aspx", "35");
@@ -113,7 +116,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.CommonTrace("Page : PatchVerification.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message);
+                ErrorLog.PatchMgmtTrace("Page : PatchVerification.cs \nFunction : Page_Load() \nException Occured\n" + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 return;
             }
@@ -170,7 +173,7 @@ namespace SOR.Pages.Patch
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.AgentManagementTrace("PatchVerification: BindDropdownsBC: Exception: " + Ex.Message);
+        //        ErrorLog.PatchMgmtTrace("PatchVerification: BindDropdownsBC: Exception: " + Ex.Message);
         //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
         //    }
         //}
@@ -223,13 +226,14 @@ namespace SOR.Pages.Patch
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.AgentManagementTrace("PatchVerification: BindDropdownsAgent: Exception: " + Ex.Message);
+        //        ErrorLog.PatchMgmtTrace("PatchVerification: BindDropdownsAgent: Exception: " + Ex.Message);
         //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
         //    }
         //}
 
         public DataSet FillGrid(EnumCollection.EnumBindingType _EnumBindingType, string sortExpression = null)
         {
+            ErrorLog.PatchMgmtTrace("PatchVerification | FillGrid() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             DataSet ds = new DataSet();
             try
             {
@@ -265,11 +269,12 @@ namespace SOR.Pages.Patch
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Script", "alert('No Data Found in Search Criteria. Try again', 'Warning');", true);
                     }
                 }
+                ErrorLog.PatchMgmtTrace("PatchVerification | FillGrid() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("PatchVerification: FillGrid(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("PatchVerification: FillGrid(): Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
+                ErrorLog.PatchMgmtError(Ex);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "<script>showWarning('Something went wrong. Try again', 'Warning');</script>", false);
             }
             return ds;
@@ -279,6 +284,7 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | CommonSave() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 #region  Alert and Log Messages
                 if (!String.IsNullOrEmpty(ViewState["ActionType"].ToString()))
                 {
@@ -312,6 +318,14 @@ namespace SOR.Pages.Patch
                             {
                                 try
                                 {
+                                    #region Audit
+                                    _auditParams[0] = Session["Username"].ToString();
+                                    _auditParams[1] = "PatchMgmt-PatchVerification";
+                                    _auditParams[2] = "CommonSave" + ViewState["ActionType"].ToString();
+                                    _auditParams[3] = Session["LoginKey"].ToString();
+                                    _LoginEntity.StoreLoginActivities(_auditParams);
+                                    #endregion
+
                                     _reocrdsProcessed = _reocrdsProcessed + 1;
 
                                     _PatchEntity.UserName = Session["Username"].ToString();
@@ -324,7 +338,7 @@ namespace SOR.Pages.Patch
                                     {
                                         _dsVerification = _PatchEntity.ChangePatchStatus();
                                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Request Declined Successfully', 'Patch Verification');", true);
-                                        ErrorLog.AgentManagementTrace("PatchVerification: Commonsave:CheckAll(): Successful - Patch Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " id: " + _PatchEntity.Id + " UserName: " + Session["Username"].ToString());
+                                        ErrorLog.PatchMgmtTrace("PatchVerification: Commonsave:CheckAll(): Successful - Patch Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " id: " + _PatchEntity.Id + " UserName: " + Session["Username"].ToString());
                                     }
                                     
 
@@ -395,10 +409,11 @@ namespace SOR.Pages.Patch
                         #endregion
                         break;
                 }
+                ErrorLog.PatchMgmtTrace("PatchVerification | CommonSave() | Endded. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: CommonSave: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: CommonSave: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -407,17 +422,24 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | SingleSave() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 _PatchEntity.UserName = User;
                 _PatchEntity.Id = Convert.ToString(id);
                 _PatchEntity.Remarks = Remarks;
                 _PatchEntity.Flag = _Flag;
                 _dsVerification = _PatchEntity.ChangePatchStatus();
-
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "SingleSave" + ViewState["ActionType"].ToString();
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Decline.ToString())
                 {
                     _dsVerification = _PatchEntity.ChangePatchStatus();
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Request Declined Successfully', 'Patch Verification');", true);
-                    ErrorLog.AgentManagementTrace("PatchVerification: Commonsave:SingleSave(): Successful - Patch Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " id: " + _PatchEntity.Id + " UserName: " + Session["Username"].ToString());
+                    ErrorLog.PatchMgmtTrace("PatchVerification: Commonsave:SingleSave(): Successful - Patch Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " id: " + _PatchEntity.Id + " UserName: " + Session["Username"].ToString());
                 }
                 
                 if (Convert.ToInt32(Convert.ToString(_dsVerification.Tables[0].Rows[0][0])) > 0)
@@ -430,10 +452,11 @@ namespace SOR.Pages.Patch
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Approve/Decline Request Unsuccessful', 'Agent Verification');", true);
                     return;
                 }
+                ErrorLog.PatchMgmtTrace("PatchVerification | SingleSave() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: SingleSave: Failed - Maker Verification. Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: SingleSave: Failed - Maker Verification. Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -445,11 +468,20 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnSearch_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "btnSearch_Click";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnSearch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnSearch_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnSearch_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -458,16 +490,20 @@ namespace SOR.Pages.Patch
         {
             try
             {
-                //ddlBCCode.SelectedValue = "0";
-                //ddlAgentCode.SelectedValue = "0";
-                //ddlActivityType.SelectedValue = "-1";
-                //ddlFileID.ClearSelection();
-
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnClear_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "btnClear_Click";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnClear_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnClear_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnClear_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -479,6 +515,14 @@ namespace SOR.Pages.Patch
             ViewState["ActionType"] = EnumCollection.EnumDBOperationType.Approve.ToString();
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnApprove_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "btnApprove_ServerClick";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 foreach (GridViewRow row in gvVerification.Rows)
                 {
                     if (row.RowType == DataControlRowType.DataRow)
@@ -502,10 +546,11 @@ namespace SOR.Pages.Patch
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Approve');", true);
                     return;
                 }
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnApprove_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnApprove_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnApprove_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -517,6 +562,14 @@ namespace SOR.Pages.Patch
             ViewState["ActionType"] = EnumCollection.EnumDBOperationType.Decline.ToString();
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnDecline_ServerClick() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "btnDecline";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 foreach (GridViewRow row in gvVerification.Rows)
                 {
                     if (row.RowType == DataControlRowType.DataRow)
@@ -540,10 +593,11 @@ namespace SOR.Pages.Patch
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Select at least one record.','Decline');", true);
                     return;
                 }
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnDecline_ServerClick() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnDecline_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnDecline_ServerClick: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -554,6 +608,14 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnSaveAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "btnSaveAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 if (TxtRemarks.Text == null || TxtRemarks.Text == "")
                 {
                     ModalPopupExtender_Declincard.Show();
@@ -580,10 +642,11 @@ namespace SOR.Pages.Patch
                     ViewState["SelectionType"] = null;
                     return;
                 }
+                //ErrorLog.PatchMgmtTrace("PatchVerification | btnSaveAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnSaveAction_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnSaveAction_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 ViewState["ActionType"] = null;
                 ViewState["SelectionType"] = null;
@@ -597,6 +660,14 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnCancelAction_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                #region Audit
+                _auditParams[0] = Session["Username"].ToString();
+                _auditParams[1] = "PatchMgmt-PatchVerification";
+                _auditParams[2] = "btnCancelAction";
+                _auditParams[3] = Session["LoginKey"].ToString();
+                _LoginEntity.StoreLoginActivities(_auditParams);
+                #endregion
                 string _alertMessage = string.Empty;
                 if (ViewState["ActionType"].ToString() == EnumCollection.EnumDBOperationType.Approve.ToString())
                 {
@@ -612,11 +683,12 @@ namespace SOR.Pages.Patch
                 TxtRemarks.Text = string.Empty;
                 ViewState["ActionType"] = null;
                 FillGrid(EnumCollection.EnumBindingType.BindGrid);
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnCancelAction_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 return;
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: btnCancelAction_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnCancelAction_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 ViewState["ActionType"] = null;
                 return;
@@ -659,7 +731,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: gvVerification_PageIndexChanging: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: gvVerification_PageIndexChanging: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -715,7 +787,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: chBoxSelectRow_CheckedChanged: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: chBoxSelectRow_CheckedChanged: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -752,7 +824,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: CheckBoxAll_CheckedChanged: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: CheckBoxAll_CheckedChanged: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -793,7 +865,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: CheckBoxAllOperationOnPageIndex: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: CheckBoxAllOperationOnPageIndex: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -804,6 +876,7 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnView_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ImageButton btn = (ImageButton)sender;
                 string[] commandArgs = btn.CommandArgument.ToString().Split(new char[] { '=' });
                 //_AgentEntity.AgentReqId = ViewState["AgentReqId"].ToString();
@@ -910,12 +983,12 @@ namespace SOR.Pages.Patch
 
                     ViewState["AgentType"] = ds.Tables[0].Rows[0]["RoleID"].ToString();
                 }
-
+                ErrorLog.PatchMgmtTrace("PatchVerification | btnView_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnView_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnView_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -944,7 +1017,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: EyeImage_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: EyeImage_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -971,7 +1044,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: EyeImage1_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: EyeImage1_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -997,7 +1070,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: EyeImage3_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: EyeImage3_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 
@@ -1043,7 +1116,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: btnViewResp_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("AgLvl1: btnViewResp_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1086,7 +1159,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: btnViewDownload_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: btnViewDownload_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
 
@@ -1100,7 +1173,7 @@ namespace SOR.Pages.Patch
         //    }
         //    catch (Exception Ex)
         //    {
-        //        ErrorLog.AgentManagementTrace("PatchVerification: ddlBCCode_SelectedIndexChanged: Exception: " + Ex.Message);
+        //        ErrorLog.PatchMgmtTrace("PatchVerification: ddlBCCode_SelectedIndexChanged: Exception: " + Ex.Message);
         //        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
         //    }
         //}
@@ -1136,7 +1209,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: ImageButton1_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: ImageButton1_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1172,7 +1245,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: imgbtnform_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: imgbtnform_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1184,6 +1257,14 @@ namespace SOR.Pages.Patch
             {
                 try
                 {
+                    ErrorLog.PatchMgmtTrace("PatchVerification | btnSubmitDetails_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-PatchVerification";
+                    _auditParams[2] = "btnSubmitDetails";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     if (txtFinalRemarks.Text != null && txtFinalRemarks.Text != "")
                     {
                         _fileLineNo = "0";
@@ -1210,10 +1291,11 @@ namespace SOR.Pages.Patch
 
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Please enter Remarks', 'Agent Verification');", true);
                     }
+                    ErrorLog.PatchMgmtTrace("PatchVerification | btnSubmitDetails_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 }
                 catch (Exception Ex)
                 {
-                    ErrorLog.AgentManagementTrace("PatchVerification: btnSubmitDetails_Click: Exception: " + Ex.Message);
+                    ErrorLog.PatchMgmtTrace("PatchVerification: btnSubmitDetails_Click: Exception: " + Ex.Message + " | LoginKey : " + Session["LoginKey"].ToString());
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 }
             }
@@ -1251,7 +1333,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: ddlState_SelectedIndexChanged: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: ddlState_SelectedIndexChanged: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1268,28 +1350,13 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: SetPageFiltersExport: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("AgLvl1: SetPageFiltersExport: Exception: " + Ex.Message);
             }
             return pageFilters;
         }
 
         #endregion
 
-        protected void Unnamed_ServerClick(object sender, EventArgs e)
-        {
-            try
-            {
-                string pdfPath = Server.MapPath("~/Thumbnail/Aadhar/document-1_220422_110414 (1) (1).pdf");
-                Session["pdfPath"] = pdfPath;
-                string script = "<script type='text/javascript'>window.open('" + "PdfExport.aspx" + "')</script>";
-                this.ClientScript.RegisterStartupScript(this.GetType(), "script", script);
-            }
-            catch (Exception Ex)
-            {
-                ErrorLog.AgentManagementTrace("PatchVerification: Unnamed_ServerClick: Exception: " + Ex.Message);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
-            }
-        }
         #endregion
 
         protected void gvVerification_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -1317,8 +1384,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: gvVerification_RowDataBound(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: gvVerification_RowDataBound(): Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 throw;
             }
         }
@@ -1328,6 +1395,8 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | BtnCsv_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
+                
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 //_AgentRegistrationDAL.Flag = ((int)EnumCollection.EnumPermissionType.AgL2Export);
@@ -1335,6 +1404,13 @@ namespace SOR.Pages.Patch
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-PatchVerification";
+                    _auditParams[2] = "Export-To-CSV";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExportInCSV(Convert.ToString(Session["Username"]), "PayRakam", "L3 Approval Business Correspondents Details", dt);
                 }
                 else
@@ -1344,7 +1420,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: BtnCsv_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: BtnCsv_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1353,6 +1429,7 @@ namespace SOR.Pages.Patch
         {
             try
             {
+                ErrorLog.PatchMgmtTrace("PatchVerification | BtnXls_Click() | Started. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
                 ExportFormat _ExportFormat = new ExportFormat();
                 string pageFilters = SetPageFiltersExport();
                 //_AgentRegistrationDAL.Flag = ((int)EnumCollection.EnumPermissionType.AgL2Export);
@@ -1360,6 +1437,13 @@ namespace SOR.Pages.Patch
                 DataSet dt = FillGrid(EnumCollection.EnumBindingType.BindGrid);
                 if (dt != null && dt.Tables[0].Rows.Count > 0)
                 {
+                    #region Audit
+                    _auditParams[0] = Session["Username"].ToString();
+                    _auditParams[1] = "PatchMgmt-PatchVerification";
+                    _auditParams[2] = "Export-To-Excel";
+                    _auditParams[3] = Session["LoginKey"].ToString();
+                    _LoginEntity.StoreLoginActivities(_auditParams);
+                    #endregion
                     _ExportFormat.ExporttoExcel(Convert.ToString(Session["Username"]), "PayRakam", "L3 Approval Business Correspondents Details", dt);
                 }
                 {
@@ -1368,7 +1452,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("PatchVerification: BtnXls_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("PatchVerification: BtnXls_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1378,7 +1462,8 @@ namespace SOR.Pages.Patch
             get { return ViewState["SortDirection"] != null ? ViewState["SortDirection"].ToString() : "ASC"; }
             set { ViewState["SortDirection"] = value; }
         }
-       
+
+        #region Old Method
         protected void btnViewBulk_Click(object sender, ImageClickEventArgs e)
         {
             try
@@ -1392,7 +1477,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: btnView_Click: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("AgLvl1: btnView_Click: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
         }
@@ -1489,7 +1574,7 @@ namespace SOR.Pages.Patch
                                     //_EmailSMSAlertscs.OTPFlag = "0";
                                     //_EmailSMSAlertscs.var1 = "SBM";
                                     //_EmailSMSAlertscs.var2 = DateTime.Now.ToString();
-                                    //ErrorLog.AgentManagementTrace("Page : Aglvl3.cs \nFunction : BulkApprove_ServerClick() => Details forwarded for SMS Preparation. => HttpGetRequest()");
+                                    //ErrorLog.PatchMgmtTrace("Page : Aglvl3.cs \nFunction : BulkApprove_ServerClick() => Details forwarded for SMS Preparation. => HttpGetRequest()");
                                     //ErrorLog.SMSTrace("Page : Aglvl3.cs \nFunction : BulkApprove_ServerClick() => Details forwarded for SMS Preparation. MobileNo : " + _AgentRegistrationDAL.PersonalContact);
                                     //_EmailSMSAlertscs.HttpGetRequest();
                                     //#endregion
@@ -1501,18 +1586,18 @@ namespace SOR.Pages.Patch
                                     //_EmailSMSAlertscs.OTPFlag = "0";
                                     //_EmailSMSAlertscs.var1 = "SBM";
                                     //_EmailSMSAlertscs.var2 = DateTime.Now.ToString();
-                                    //ErrorLog.AgentManagementTrace("Page : AgentRegistration.cs \nFunction : BulkApprove_ServerClick() => Reistration Details forwarded for Email Preparation. => HttpGetRequestEmail()");
+                                    //ErrorLog.PatchMgmtTrace("Page : AgentRegistration.cs \nFunction : BulkApprove_ServerClick() => Reistration Details forwarded for Email Preparation. => HttpGetRequestEmail()");
                                     //ErrorLog.SMSTrace("Page : AgentRegistration.cs \nFunction : BulkApprove_ServerClick() => Reistration Details forwarded for Email Preparation. Email : " + _AgentRegistrationDAL.PersonalEmailID);
                                     //_EmailSMSAlertscs.HttpGetRequestEmail();
                                     //#endregion
                                     //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Data Registered Successfully', 'Agent Registration');", true);
-                                    // ErrorLog.AgentManagementTrace("PatchVerification: Commonsave:CheckAll(): Successful - Authorizer Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentrequestID: " + _AgentRegistrationDAL.AgentReqId + " User: " + User + "ActivityType: " + _ActivityType);
+                                    // ErrorLog.PatchMgmtTrace("PatchVerification: Commonsave:CheckAll(): Successful - Authorizer Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentrequestID: " + _AgentRegistrationDAL.AgentReqId + " User: " + User + "ActivityType: " + _ActivityType);
                                 }
                                 else
                                 {
                                     //ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Registration Unscuccessful : '" + status + " ');", true);
-                                   // ErrorLog.AgentManagementTrace("PatchVerification: Commonsave:CheckAll(): Failed - Authorizer Verification. Agent Already Terminated ");
-                                   // ErrorLog.AgentManagementTrace("PatchVerification: Commonsave:CheckAll(): Successful - Authorizer Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentrequestID: " + _AgentRegistrationDAL.AgentReqId + " User: " + User + "ActivityType: " + _ActivityType);
+                                   // ErrorLog.PatchMgmtTrace("PatchVerification: Commonsave:CheckAll(): Failed - Authorizer Verification. Agent Already Terminated ");
+                                   // ErrorLog.PatchMgmtTrace("PatchVerification: Commonsave:CheckAll(): Successful - Authorizer Verification. StatusFlag: " + ViewState["ActionType"].ToString() + " Flag: " + _Flag + " AgentrequestID: " + _AgentRegistrationDAL.AgentReqId + " User: " + User + "ActivityType: " + _ActivityType);
                                 }
                             }
 
@@ -1556,7 +1641,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: BulkApprove_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("AgLvl1: BulkApprove_ServerClick: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
@@ -1577,10 +1662,10 @@ namespace SOR.Pages.Patch
                 if (_dsVerification != null && _dsVerification.Tables[0].Rows.Count > 0)
                 {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('Request Decline Successfully', 'Verification Level 3-agent');", true);
-                    ErrorLog.AgentManagementTrace("Page : AgLvl3.cs \nFunction : BulkDecline_ServerClick() => SMS/Email sending process started... Count :" + _dsVerification.Tables[1].Rows.Count);
+                    ErrorLog.PatchMgmtTrace("Page : AgLvl3.cs \nFunction : BulkDecline_ServerClick() => SMS/Email sending process started... Count :" + _dsVerification.Tables[1].Rows.Count);
                     for (int i = 0; i < _dsVerification.Tables[1].Rows.Count; i++)
                     {
-                        ErrorLog.AgentManagementTrace("Page : AgLvl3 \nFunction : BulkDecline_ServerClick() => SMS/Email sending process started for SMS...");
+                        ErrorLog.PatchMgmtTrace("Page : AgLvl3 \nFunction : BulkDecline_ServerClick() => SMS/Email sending process started for SMS...");
                         #region SMS
                         _EmailSMSAlertscs.FROM = Session["Username"].ToString();
                         _EmailSMSAlertscs.to = Convert.ToString(_dsVerification.Tables[1].Rows[i]["ContactNo"]);
@@ -1588,11 +1673,11 @@ namespace SOR.Pages.Patch
                         _EmailSMSAlertscs.OTPFlag = "0";
                         _EmailSMSAlertscs.var1 = "SBM";
                         _EmailSMSAlertscs.var2 = DateTime.Now.ToString();
-                        ErrorLog.AgentManagementTrace("Page : Aglvl3.cs \nFunction : BulkDecline_ServerClick() => Details forwarded for SMS Preparation. => HttpGetRequest()");
+                        ErrorLog.PatchMgmtTrace("Page : Aglvl3.cs \nFunction : BulkDecline_ServerClick() => Details forwarded for SMS Preparation. => HttpGetRequest()");
                         ErrorLog.SMSTrace("Page : Aglvl3.cs \nFunction : BulkDecline_ServerClick() => Details forwarded for SMS Preparation. MobileNo : " + Convert.ToString(_dsVerification.Tables[1].Rows[i]["ContactNo"]));
                         _EmailSMSAlertscs.HttpGetRequest();
                         #endregion
-                        ErrorLog.AgentManagementTrace("Page : AgLvl3.cs \nFunction : BulkDecline_ServerClick() => Email sending process started for Email...");
+                        ErrorLog.PatchMgmtTrace("Page : AgLvl3.cs \nFunction : BulkDecline_ServerClick() => Email sending process started for Email...");
                         #region EMAIL
                         _EmailSMSAlertscs.FROM = "info@sbmbank.co.in";
                         _EmailSMSAlertscs.to = Convert.ToString(_dsVerification.Tables[1].Rows[i]["PersonalEmailID"]);
@@ -1600,7 +1685,7 @@ namespace SOR.Pages.Patch
                         _EmailSMSAlertscs.OTPFlag = "0";
                         _EmailSMSAlertscs.var1 = "SBM";
                         _EmailSMSAlertscs.var2 = DateTime.Now.ToString();
-                        ErrorLog.AgentManagementTrace("Page : Aglvl3.cs \nFunction : BulkDecline_ServerClick() => Reistration Details forwarded for Email Preparation. => HttpGetRequestEmail()");
+                        ErrorLog.PatchMgmtTrace("Page : Aglvl3.cs \nFunction : BulkDecline_ServerClick() => Reistration Details forwarded for Email Preparation. => HttpGetRequestEmail()");
                         ErrorLog.SMSTrace("Page : Aglvl3.cs \nFunction : BulkDecline_ServerClick() => Reistration Details forwarded for Email Preparation. Email : " + Convert.ToString(_dsVerification.Tables[1].Rows[i]["PersonalEmailID"]));
                         _EmailSMSAlertscs.HttpGetRequestEmail();
                         #endregion
@@ -1614,7 +1699,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: BulkDecline_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("AgLvl1: BulkDecline_ServerClick: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
@@ -1643,7 +1728,7 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.AgentManagementTrace("AgLvl1: BulkDecline_ServerClick: Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtTrace("AgLvl1: BulkDecline_ServerClick: Exception: " + Ex.Message);
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "Script", "<script>SetTab();</script>", false);
@@ -1674,6 +1759,7 @@ namespace SOR.Pages.Patch
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('No Data Found', 'Warning');", true);
             }
         }
+        #endregion
         #region setproperty
         private void SetPropertise()
         {
@@ -1688,8 +1774,8 @@ namespace SOR.Pages.Patch
             }
             catch (Exception Ex)
             {
-                ErrorLog.UploadTrace("Versioning: SetPropertise(): Exception: " + Ex.Message);
-                ErrorLog.UploadError(Ex);
+                ErrorLog.PatchMgmtTrace("Versioning: SetPropertise(): Exception: " + Ex.Message);
+                ErrorLog.PatchMgmtError(Ex);
                 throw;
             }
         }

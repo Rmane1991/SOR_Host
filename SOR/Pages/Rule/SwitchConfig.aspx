@@ -1173,7 +1173,7 @@
                                     <div class="list-view-pf-description">
                                         <div class="list-view-pf-additional-info-itemm">
                                             <div class="header-item">
-                                                <strong>Group Name</strong>
+                                                <strong>Name</strong>
                                             </div>
 
                                             <div class="content-item">
@@ -1182,7 +1182,7 @@
                                         </div>
                                         <div class="list-view-pf-additional-info-itemm">
                                             <div class="header-item">
-                                                <strong>Group Description</strong>
+                                                <strong>Description</strong>
                                             </div>
                                             <div class="content-item">
 
