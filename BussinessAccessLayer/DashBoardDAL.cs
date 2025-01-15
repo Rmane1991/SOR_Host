@@ -572,6 +572,152 @@ namespace BussinessAccessLayer
                 {
                     conn.Open();
 
+                    try
+                    {
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_transactionsummarycountbyfilter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "Txnsummarychart");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM get_topaggregatordatafilter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "Aggregators");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM get_switchchartdtatafilter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "SwitchData");
+                            }
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM getruledata_filter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "RuleData");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_bctransactionsummarycountfilter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "MonthlyBCData");
+                            }
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.get_channelwisechartdata_filter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "ChannelwiseData");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    try
+                    {
+                        using (var cmd = new NpgsqlCommand("SELECT * FROM public.getbankrevenuedata_filter()", conn))
+                        {
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@date_filter", (object)dateFilter ?? DBNull.Value);
+                            using (var adapter = new NpgsqlDataAdapter(cmd))
+                            {
+                                adapter.Fill(ds, "BankRevenueData");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+
+            }
+
+            return ds;
+        }
+
+
+
+        public DataSet Get_AllData_bkp15012025(string dateFilter = null)
+        {
+            DataSet ds = new DataSet();
+
+            try
+            {
+                using (var conn = new NpgsqlConnection(ConnectionString))
+                {
+                    conn.Open();
+
                     using (var cmd = new NpgsqlCommand("SELECT * FROM get_TransactionSummaryCount()", conn))
                     {
                         cmd.CommandType = CommandType.Text;

@@ -982,6 +982,7 @@
     <Content Include="images\minus.png" />
     <Content Include="images\NSDL.jpg" />
     <Content Include="images\NSDL.png" />
+    <Content Include="images\NSDL_logo.png" />
     <Content Include="images\OurBank.png" />
     <Content Include="images\Pay.png" />
     <Content Include="images\PayRakam.png" />

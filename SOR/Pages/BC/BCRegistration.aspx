@@ -987,7 +987,7 @@
                                             </div>
                                         </div>--%>
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">Pan No.</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">PAN No.</label>
                                             <div class="inputBox w-100">
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="txtPanNoF" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
                                                 <asp:TextBox runat="server" CssClass="input-text form-control" ID="txtPanNoF" PlaceHolder="Enter 10 digit PAN No." Width="100%" MaxLength="10" oninput="this.value = this.value.toUpperCase();"></asp:TextBox>
@@ -1074,7 +1074,7 @@
                                             <asp:BoundField DataField="BCReqId" HeaderText="ID" />
                                             <asp:BoundField DataField="Name" HeaderText="Name" />
                                             <asp:BoundField DataField="Address" HeaderText="Address" />
-                                            <asp:BoundField DataField="Pan No" HeaderText="Pan No." />
+                                            <asp:BoundField DataField="Pan No." HeaderText="PAN No." />
                                             <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No." />
                                             <asp:BoundField DataField="Contact No" HeaderText="Mobile No." />
                                             <asp:BoundField DataField="Email Id" HeaderText="Email Id" />

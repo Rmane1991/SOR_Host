@@ -1272,7 +1272,7 @@
                                                         </div>
                                                     </div>--%>
                                                     <div class="col">
-                                                        <label class="selectInputLabel" for="selectInputLabel">Pan No.</label>
+                                                        <label class="selectInputLabel" for="selectInputLabel">PAN No.</label>
                                                         <div class="inputBox w-100">
                                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="txtPanNoF" Style="display: none" runat="server" CssClass="err" ValidationGroup="FranchiseReg" ErrorMessage="Please enter pan no"></asp:RequiredFieldValidator>
                                                             <%--<input type="text" id="txtPanNoF" runat="server" class="input-text form-control" style="width: 100%" placeholder="Pan No MaxLength="10" oninput="this.value = this.value.toUpperCase();"/>--%>
@@ -1369,7 +1369,7 @@
                                                     <%--<asp:BoundField DataField="AgentCode" HeaderText="Code" />--%>
                                                     <asp:BoundField DataField="Name" HeaderText="Name" />
                                                     <asp:BoundField DataField="AgentAddress" HeaderText="Address" />
-                                                    <asp:BoundField DataField="PanNo" HeaderText="Pan No." />
+                                                    <asp:BoundField DataField="PAN No." HeaderText="PAN No." />
                                                     <asp:BoundField DataField="AadharNo" HeaderText="Aadhar No." />
                                                     <asp:BoundField DataField="ContactNo" HeaderText="Mobile No." />
                                                     <asp:BoundField DataField="Request Type" HeaderText="Type" />

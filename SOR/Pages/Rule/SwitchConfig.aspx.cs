@@ -156,9 +156,7 @@ namespace SOR.Pages.Rule
                 _LoginEntity.StoreLoginActivities(_auditParams);
                 #endregion
                 Session["SwitchPercentage"] = null;
-                hdnShowModal.Value = "true";
-                hdnshowmanual.Value = "false";
-                HdnShowDelete.Value = "false";
+                
 
                 txtSwitchName.Enabled = true;
                 txtSwitchName.Text = string.Empty;
@@ -174,6 +172,11 @@ namespace SOR.Pages.Rule
 
                 BindSwitch();
                 BindDropdown();
+
+                hdnShowModal.Value = "true";
+                hdnshowmanual.Value = "false";
+                HdnShowDelete.Value = "false";
+
                 ErrorLog.RuleTrace("SwitchConfig | btnAddSwitch_Click() | Ended. | UserName : " + Session["Username"].ToString() + " | LoginKey : " + Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
@@ -926,6 +929,8 @@ $(document).ready(function () {
                     hdnShowModal.Value = "false";
                     hdnshowmanual.Value = "false";
                     HdnShowDelete.Value = "true";
+                    //ScriptManager.RegisterStartupScript(this, typeof(Page), "showDeleteModal", "checkDeleteModal();", true);
+
                     //int itemId = Convert.ToInt32(e.CommandArgument);
                     //_RuleEntityy.IsDelete = 1;
                     //_RuleEntityy.UserName = !string.IsNullOrEmpty(Convert.ToString(HttpContext.Current.Session["Username"])) ? Convert.ToString(HttpContext.Current.Session["Username"]) : null;
@@ -972,6 +977,8 @@ $(document).ready(function () {
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('This Switch Already Use In The Failover Switch', 'Warning');", true);
                     return;
                 }
+                
+                //ClientScript.RegisterStartupScript(this.GetType(), "showModalScript", "showDeleteModalIfTriggered();", true);
                 ErrorLog.RuleTrace("SwitchConfig | rptrSwitch_ItemCommand-Delete | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
         }
@@ -2093,6 +2100,7 @@ $(document).ready(function () {
                 hdnshowmanual.Value = "true";
                 hdnShowModal.Value = "false";
                 BindManualDisableSwitch();
+                ClientScript.RegisterStartupScript(this.GetType(), "showModalScript", "showModalIfTriggered();", true);
                 ErrorLog.RuleTrace("SwitchConfig | btnManual_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)

@@ -181,7 +181,7 @@
         <ContentTemplate>
 
             <div class="breadHeader">
-                <h5 class="page-title">OnBoard BC Status</h5>
+                <h5 class="page-title">Onboard BC Status</h5>
                 <%-- <i class="lnr lnr-home"></i>/ AGENT MANAGEMENT / DEACTIVE AGENTS--%>
                 <input id="btnRedirectAudit" type="button" value="View Audit Logs" class="btn-default pull-right" style="margin-right: -15px; display: none" onclick="window.location = '../../YES/Report/pgAgentAuditReports.aspx';" />
 

@@ -216,7 +216,7 @@
                     <asp:HiddenField ID="hidUsername" runat="server" />
                     <asp:HiddenField ID="hidCount" runat="server" />
                     <asp:HiddenField ID="hidInfo" runat="server" Value="" />
-                    <asp:Button ID="btnLogin" Style="margin-left: 0px;" runat="server" Class="btn btn-primary btn-block" OnClick="btnLogin_Click" Text="Submit" />
+                    <asp:Button ID="btnLogin" Style="margin-left: 0px;" runat="server" Class="btn btn-primary btn-block" OnClick="btnLogin_Click" Text="Sign in" />
                     <%--<asp:Button ID="btnLogin" Style="margin-left: 0px;" runat="server" Class="btn btn-primary btn-block" OnClientClick="ChangeBackround();" OnClick="btnLogin_Click" Text="Submit" />--%>
                     <asp:Button ID="btnValidateOTP" Visible="false" Style="margin-left: 0px;" runat="server" CssClass="btn btn-primary btn-block" Text="Validate OTP" OnClick="btnValidateOTP_Click"></asp:Button>
                     <div class="form-group">

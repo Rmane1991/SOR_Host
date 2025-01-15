@@ -13,6 +13,15 @@ namespace SOR.Pages.Rule {
     public partial class TrRule {
         
         /// <summary>
+        /// upnlRule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlRule;
+        
+        /// <summary>
         /// btnAddGroup control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreGroup;
+        
+        /// <summary>
+        /// btncreategroup_disabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncreategroup_disabled;
         
         /// <summary>
         /// btnCloseGroup control.
@@ -263,6 +281,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreateRule;
+        
+        /// <summary>
+        /// btncreaterule_disabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncreaterule_disabled;
         
         /// <summary>
         /// btnCloseRule control.

@@ -611,7 +611,9 @@
     <div class="breadHeader">
         <h5 class="page-title" style="font-size: larger">Switch Configuration</h5>
     </div>
-    <%--<div class="row">
+    <asp:UpdatePanel ID="upnlSwitch" runat="server">
+        <ContentTemplate>
+            <%--<div class="row">
         <div class="col-md-2">
         </div>
         <div class="col-md-2">
@@ -627,621 +629,645 @@
             <asp:Button ID="btnAddSwitch" runat="server" CssClass="btn btn-primary" Text="Add Switch" OnClick="btnAddSwitch_Click" Style="margin: 19px; margin-left: 60px;" />
         </div>
     </div>--%>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
-            <asp:Button ID="btnManual" runat="server" CssClass="btn btn-primary" Text="Manual" OnClick="btnManual_Click" />
-            &nbsp;&nbsp;
+            <%--<div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <asp:Button ID="btnManual" runat="server" CssClass="btn btn-primary" Text="Manual" OnClick="btnManual_Click" />
+                    &nbsp;&nbsp;
             <asp:Button ID="btnAddSwitch" runat="server" CssClass="btn btn-primary" Text="Add Switch" OnClick="btnAddSwitch_Click" />
-        </div>
-        &nbsp;&nbsp;
-    </div>
-    <!-- Modal Group -->
-    <div class="modal fade" id="exampleModalManual" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!-- Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabelManual">Manual Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!-- Body -->
-                <div class="modal-body">
-                    <asp:Label ID="Label1" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
-                    <!-- Table -->
-                    <table class="table table-striped mb-3">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Switch Status</th>
-                                <th>IsManual</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <asp:Repeater ID="rptManual" runat="server" OnItemCommand="rptManual_ItemCommand">
-                                <ItemTemplate>
-                                    <tr>
-                                        <td>
-                                            <asp:Label ID="lblID" runat="server" Text='<%# Eval("id") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblName" runat="server" Text='<%# Eval("switchname") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("description") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <%--<asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>--%>
-                                            <%--<asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />--%>
-                                            <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
-                                        </td>
-                                    </tr>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <%--<asp:Button ID="btnUpdManual" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnUpdManual_Click" />--%>
-                    <asp:Button ID="btnClsManual" CssClass="btn btn-secondary" runat="server" Text="Close" OnClick="btnClsManual_Click" data-bs-dismiss="modal" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <asp:HiddenField ID="hdnshowmanual" runat="server" Value="false" />
-    <%-- End --%>
-    <!-- Modal Group -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!-- Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Switch Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Body -->
-                <div class="modal-body">
-                    <asp:Label ID="lblErrorMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
-                    <!-- Table -->
-                    <table class="table table-striped mb-3">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Switch Status</th>
-                                <th>Percentage</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <asp:Repeater ID="rptSwitchDetails" runat="server" OnItemCommand="rptSwitchDetails_ItemCommand">
-                                <ItemTemplate>
-                                    <tr>
-                                        <td>
-                                            <asp:Label ID="lblID" runat="server" Text='<%# Eval("id") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblName" runat="server" Text='<%# Eval("switchname") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("description") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            
+                &nbsp;&nbsp;
+            </div>--%>
 
-                                            <!-- Buttons are wrapped in an UpdatePanel -->
-                                            <asp:UpdatePanel ID="upnlButtons" runat="server">
-                                                <ContentTemplate>
-                                                    <asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>
-                                                    <asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />
-                                                    <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
-                                                </ContentTemplate>
-                                            </asp:UpdatePanel>
-                                        </td>
-                                    </tr>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </tbody>
-                    </table>
-                    <div class="bordered-section">
-                        <div class="section-header">
-                            <h3>Switch Details</h3>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                            <asp:Button ID="btnManual" runat="server" CssClass="btn btn-primary" Text="Manual" OnClick="btnManual_Click" />
+                            &nbsp;&nbsp;
+               
+                            <asp:Button ID="btnAddSwitch" runat="server" CssClass="btn btn-primary" Text="Add Switch" OnClick="btnAddSwitch_Click" />
                         </div>
-                        <div class="bordered-section">
+                    </div>
 
-                            <div class="row mb-4">
-                                <!-- Row for both parts -->
-                                <div class="col-md-6">
-                                    <!-- Part A -->
-                                    <div class="form-group">
-                                        <label for="SwitchName" class="col-form-label">Name</label>
-                                        <asp:TextBox ID="txtSwitchName" CssClass="form-control" runat="server" placeholder="Enter Name"></asp:TextBox>
-                                    </div>
+                    <!-- Modal Group -->
+                    <div class="modal fade" id="exampleModalManual" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabelManual">Manual Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Body -->
+                                <div class="modal-body">
+                                    <asp:Label ID="Label1" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
+                                    <!-- Table -->
+                                    <table class="table table-striped mb-3">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Switch Status</th>
+                                                <th>IsManual</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <asp:Repeater ID="rptManual" runat="server" OnItemCommand="rptManual_ItemCommand">
+                                                <ItemTemplate>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:Label ID="lblID" runat="server" Text='<%# Eval("id") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblName" runat="server" Text='<%# Eval("switchname") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("description") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <%--<asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>--%>
+                                                            <%--<asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />--%>
+                                                            <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
+                                                        </td>
+                                                    </tr>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Footer -->
+                                <div class="modal-footer">
+                                    <%--<asp:Button ID="btnUpdManual" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnUpdManual_Click" />--%>
+                                    <asp:Button ID="btnClsManual" CssClass="btn btn-secondary" runat="server" Text="Close" OnClick="btnClsManual_Click" data-bs-dismiss="modal" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <asp:HiddenField ID="hdnshowmanual" runat="server" Value="false" />
+                    <%-- End --%>
+                    <!-- Modal Group -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Switch Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Body -->
+                                <div class="modal-body">
+                                    <asp:Label ID="lblErrorMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
+                                    <!-- Table -->
+                                    <table class="table table-striped mb-3">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Switch Status</th>
+                                                <th>Percentage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <asp:Repeater ID="rptSwitchDetails" runat="server" OnItemCommand="rptSwitchDetails_ItemCommand">
+                                                <ItemTemplate>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:Label ID="lblID" runat="server" Text='<%# Eval("id") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblName" runat="server" Text='<%# Eval("switchname") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("description") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
 
-                                    <div class="form-group">
-                                        <label for="SwitchDescription" class="col-form-label">Description</label>
-                                        <asp:TextBox ID="txtSwitchDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Description"></asp:TextBox>
-                                    </div>
-                                    <%--<div class="form-group">
+
+                                                            <!-- Buttons are wrapped in an UpdatePanel -->
+                                                            <asp:UpdatePanel ID="upnlButtons" runat="server">
+                                                                <ContentTemplate>
+                                                                    <asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>
+                                                                    <asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />
+                                                                    <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
+                                                                </ContentTemplate>
+                                                            </asp:UpdatePanel>
+                                                        </td>
+                                                    </tr>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </tbody>
+                                    </table>
+                                    <div class="bordered-section">
+                                        <div class="section-header">
+                                            <h3>Switch Details</h3>
+                                        </div>
+                                        <div class="bordered-section">
+
+                                            <div class="row mb-4">
+                                                <!-- Row for both parts -->
+                                                <div class="col-md-6">
+                                                    <!-- Part A -->
+                                                    <div class="form-group">
+                                                        <label for="SwitchName" class="col-form-label">Name</label>
+                                                        <asp:TextBox ID="txtSwitchName" CssClass="form-control" runat="server" placeholder="Enter Name"></asp:TextBox>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="SwitchDescription" class="col-form-label">Description</label>
+                                                        <asp:TextBox ID="txtSwitchDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Description"></asp:TextBox>
+                                                    </div>
+                                                    <%--<div class="form-group">
                                         <label for="txtSwitchPercentage" class="col-form-label">Percentage %</label>
                                         <asp:TextBox ID="txtSwitchPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
                                     </div>--%>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <div class="form-group row">
-                                                <label class="col-md-4 col-form-label">Switch Count</label>
-                                                <div class="col-md-8">
-                                                    <label class="switchh">
-                                                        <input type="checkbox" id="Switch" />
-                                                        <span class="sliderr"></span>
-                                                    </label>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label">Switch Count</label>
+                                                                <div class="col-md-8">
+                                                                    <label class="switchh">
+                                                                        <input type="checkbox" id="Switch" />
+                                                                        <span class="sliderr"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Panels for Percentage and Count -->
+                                                    <div class="row mb-3">
+
+                                                        <div class="form-group row">
+                                                            <!-- Panel for Percentage -->
+                                                            <asp:Panel ID="pnlPercentage" runat="server">
+                                                                <label for="txtSwitchPercentage" class="col-md-5 col-form-label">Percentage %</label>
+                                                                <div class="col-md-5">
+                                                                    <asp:TextBox ID="txtSwitchPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
+                                                                </div>
+                                                            </asp:Panel>
+                                                            <!-- Panel for Count -->
+                                                            <asp:Panel ID="pnlCount" runat="server" CssClass="toggle-field">
+                                                                <label for="txtCount" class="col-md-5 col-form-label">Count</label>
+                                                                <div class="col-md-5">
+                                                                    <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
+                                                                </div>
+                                                            </asp:Panel>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <!-- Part B -->
+                                                    <div class="tab-container">
+                                                        <div class="tab-buttons">
+                                                            <div class="tab-button active" onclick="showTab('tab1')">AEPS</div>
+                                                            <div class="tab-button" onclick="showTab('tab2')" style="display: none">DMT</div>
+                                                            <div class="tab-button" onclick="showTab('tab3')" style="display: none">MATM</div>
+                                                        </div>
+
+                                                        <div id="tab1" class="tab active">
+                                                            <div class="tab-content">
+                                                                <table class="table table-responsive">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Txn Type</th>
+                                                                            <th>Input Value</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="divAEPS" runat="server">
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab2" class="tab">
+                                                            <div class="tab-content">
+                                                                <table class="table table-responsive">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Txn Type</th>
+                                                                            <th>Input Value</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="divDMT" runat="server">
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div id="tab3" class="tab">
+                                                            <div class="tab-content">
+                                                                <table class="table table-responsive">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Txn Type</th>
+                                                                            <th>Input Value</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="divMATM" runat="server">
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Panels for Percentage and Count -->
-                                    <div class="row mb-3">
-
-                                        <div class="form-group row">
-                                            <!-- Panel for Percentage -->
-                                            <asp:Panel ID="pnlPercentage" runat="server">
-                                                <label for="txtSwitchPercentage" class="col-md-5 col-form-label">Percentage %</label>
-                                                <div class="col-md-5">
-                                                    <asp:TextBox ID="txtSwitchPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
-                                                </div>
-                                            </asp:Panel>
-                                            <!-- Panel for Count -->
-                                            <asp:Panel ID="pnlCount" runat="server" CssClass="toggle-field">
-                                                <label for="txtCount" class="col-md-5 col-form-label">Count</label>
-                                                <div class="col-md-5">
-                                                    <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
-                                                </div>
-                                            </asp:Panel>
+                                    <div class="bordered-section">
+                                        <div class="section-header">
+                                            <h3>Failovers Details</h3>
                                         </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-6">
-                                    <!-- Part B -->
-                                    <div class="tab-container">
-                                        <div class="tab-buttons">
-                                            <div class="tab-button active" onclick="showTab('tab1')">AEPS</div>
-                                            <div class="tab-button" onclick="showTab('tab2')" style="display: none">DMT</div>
-                                            <div class="tab-button" onclick="showTab('tab3')" style="display: none">MATM</div>
-                                        </div>
-
-                                        <div id="tab1" class="tab active">
-                                            <div class="tab-content">
-                                                <table class="table table-responsive">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Txn Type</th>
-                                                            <th>Input Value</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="divAEPS" runat="server">
-                                                    </tbody>
-                                                </table>
+                                        <div class="row">
+                                            <div class="col text-end">
+                                                <asp:Button
+                                                    ID="btnClearFailover"
+                                                    CssClass="btn btn-secondary"
+                                                    runat="server"
+                                                    Text="Clear"
+                                                    OnClientClick="return Confirm();"
+                                                    OnClick="btnClearFailover_Click"
+                                                    data-bs-dismiss="modal" />
                                             </div>
                                         </div>
-                                        <div id="tab2" class="tab">
-                                            <div class="tab-content">
-                                                <table class="table table-responsive">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Txn Type</th>
-                                                            <th>Input Value</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="divDMT" runat="server">
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div id="tab3" class="tab">
-                                            <div class="tab-content">
-                                                <table class="table table-responsive">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Txn Type</th>
-                                                            <th>Input Value</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="divMATM" runat="server">
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bordered-section">
-                        <div class="section-header">
-                            <h3>Failovers Details</h3>
-                        </div>
-                        <div class="row">
-                            <div class="col text-end">
-                                <asp:Button
-                                    ID="btnClearFailover"
-                                    CssClass="btn btn-secondary"
-                                    runat="server"
-                                    Text="Clear"
-                                    OnClientClick="return Confirm();"
-                                    OnClick="btnClearFailover_Click"
-                                    data-bs-dismiss="modal" />
-                            </div>
-                        </div>
-                        &nbsp;
+                                        &nbsp;
                         <!-- First Row -->
 
-                        <div class="container">
-                            <!-- First Row -->
-                            <div class="form-group row mb-3">
-                                <div class="col-md-4">
-                                    <label for="ddlSwitch1" class="col-form-label">S-1</label>
+                                        <div class="container">
+                                            <!-- First Row -->
+                                            <div class="form-group row mb-3">
+                                                <div class="col-md-4">
+                                                    <label for="ddlSwitch1" class="col-form-label">S-1</label>
 
-                                    <!-- Wrap the dropdown inside an UpdatePanel -->
-                                    <asp:UpdatePanel ID="upnlSwitch1" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlSwitch1" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch1_SelectedIndexChanged">
-                                            </asp:DropDownList>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
+                                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                                    <asp:UpdatePanel ID="upnlSwitch1" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:DropDownList ID="ddlSwitch1" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch1_SelectedIndexChanged">
+                                                            </asp:DropDownList>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
 
-                                    <asp:TextBox ID="txtswitch1" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-1 %" />
+                                                    <asp:TextBox ID="txtswitch1" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-1 %" />
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="ddlSwitch2" class="col-form-label">S-2</label>
+
+                                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                                    <asp:UpdatePanel ID="upnlSwitch2" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:DropDownList ID="ddlSwitch2" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch2_SelectedIndexChanged" Enabled="false">
+                                                            </asp:DropDownList>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+
+                                                    <asp:TextBox ID="txtswitch2" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-2 %" Enabled="false" />
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="ddlSwitch3" class="col-form-label">S-3</label>
+
+                                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                                    <asp:UpdatePanel ID="upnlSwitch3" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:DropDownList ID="ddlSwitch3" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch3_SelectedIndexChanged" Enabled="false">
+                                                            </asp:DropDownList>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+
+                                                    <asp:TextBox ID="txtswitch3" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-3 %" Enabled="false" />
+                                                </div>
+                                            </div>
+
+                                            <!-- Second Row -->
+                                            <div class="form-group row mb-3">
+                                                <div class="col-md-4">
+                                                    <label for="ddlSwitch4" class="col-form-label">S-4</label>
+
+                                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                                    <asp:UpdatePanel ID="upnlSwitch4" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:DropDownList ID="ddlSwitch4" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch4_SelectedIndexChanged" Enabled="false">
+                                                            </asp:DropDownList>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+
+                                                    <asp:TextBox ID="txtswitch4" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-4 %" Enabled="false" />
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="ddlSwitch5" class="col-form-label">S-5</label>
+
+                                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                                    <asp:UpdatePanel ID="upnlSwitch5" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:DropDownList ID="ddlSwitch5" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch5_SelectedIndexChanged" Enabled="false">
+                                                            </asp:DropDownList>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+
+                                                    <asp:TextBox ID="txtswitch5" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-5 %" Enabled="false" />
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="ddlSwitch6" class="col-form-label">S-6</label>
+
+                                                    <!-- Wrap the dropdown inside an UpdatePanel -->
+                                                    <asp:UpdatePanel ID="upnlSwitch6" runat="server">
+                                                        <ContentTemplate>
+                                                            <asp:DropDownList ID="ddlSwitch6" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" Enabled="false">
+                                                            </asp:DropDownList>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+
+                                                    <asp:TextBox ID="txtswitch6" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-6 %" Enabled="false" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
-
-                                <div class="col-md-4">
-                                    <label for="ddlSwitch2" class="col-form-label">S-2</label>
-
-                                    <!-- Wrap the dropdown inside an UpdatePanel -->
-                                    <asp:UpdatePanel ID="upnlSwitch2" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlSwitch2" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch2_SelectedIndexChanged" Enabled="false">
-                                            </asp:DropDownList>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-
-                                    <asp:TextBox ID="txtswitch2" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-2 %" Enabled="false" />
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label for="ddlSwitch3" class="col-form-label">S-3</label>
-
-                                    <!-- Wrap the dropdown inside an UpdatePanel -->
-                                    <asp:UpdatePanel ID="upnlSwitch3" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlSwitch3" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch3_SelectedIndexChanged" Enabled="false">
-                                            </asp:DropDownList>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-
-                                    <asp:TextBox ID="txtswitch3" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-3 %" Enabled="false" />
-                                </div>
-                            </div>
-
-                            <!-- Second Row -->
-                            <div class="form-group row mb-3">
-                                <div class="col-md-4">
-                                    <label for="ddlSwitch4" class="col-form-label">S-4</label>
-
-                                    <!-- Wrap the dropdown inside an UpdatePanel -->
-                                    <asp:UpdatePanel ID="upnlSwitch4" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlSwitch4" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch4_SelectedIndexChanged" Enabled="false">
-                                            </asp:DropDownList>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-
-                                    <asp:TextBox ID="txtswitch4" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-4 %" Enabled="false" />
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label for="ddlSwitch5" class="col-form-label">S-5</label>
-
-                                    <!-- Wrap the dropdown inside an UpdatePanel -->
-                                    <asp:UpdatePanel ID="upnlSwitch5" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlSwitch5" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch5_SelectedIndexChanged" Enabled="false">
-                                            </asp:DropDownList>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-
-                                    <asp:TextBox ID="txtswitch5" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-5 %" Enabled="false" />
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label for="ddlSwitch6" class="col-form-label">S-6</label>
-
-                                    <!-- Wrap the dropdown inside an UpdatePanel -->
-                                    <asp:UpdatePanel ID="upnlSwitch6" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlSwitch6" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" Enabled="false">
-                                            </asp:DropDownList>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-
-                                    <asp:TextBox ID="txtswitch6" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-6 %" Enabled="false" />
+                                <!-- Footer -->
+                                <div class="modal-footer">
+                                    <asp:Button ID="btnCreSwitch" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreSwitch_Click" OnClientClick="return changebtntext();" style="display: inline-block; position: relative;"/>
+                                    <asp:Button ID="btnCreSwitch_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
+                                    <asp:Button ID="btnCloseSwitch" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseSwitch_Click" data-bs-dismiss="modal" />
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div>
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <asp:Button ID="btnCreSwitch" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreSwitch_Click" />
-                    <asp:Button ID="btnCloseSwitch" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseSwitch_Click" data-bs-dismiss="modal" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <asp:HiddenField ID="hdnShowModal" runat="server" Value="false" />
-    <%-- End --%>
+                    <asp:HiddenField ID="hdnShowModal" runat="server" Value="false" />
+                    <%-- End --%>
 
-    <!-- Modal Group -->
-    <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabelDelete" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!-- Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabelDelete">Switch Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Body -->
-                <div class="modal-body">
-                    <asp:Label ID="lblDeleteMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
-                    <!-- Table -->
-                    <table class="table table-striped mb-3">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Switch Status</th>
-                                <th>Percentage</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <asp:Repeater ID="rptSwitchDetailsDelete" runat="server" OnItemCommand="rptSwitchDetails_ItemCommand">
-                                <ItemTemplate>
-                                    <tr>
-                                        <td>
-                                            <asp:Label ID="lblID" runat="server" Text='<%# Eval("id") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblName" runat="server" Text='<%# Eval("switchname") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("description") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>
-                                            <asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />
-                                            <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
-                                        </td>
-                                    </tr>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </tbody>
-                    </table>
-                    <div class="bordered-section">
-                        <div class="section-header">
-                            <h3>Switch Details</h3>
-                        </div>
-                        <div class="bordered-section">
+                    <!-- Modal Group -->
+                    <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabelDelete" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabelDelete">Switch Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Body -->
+                                <div class="modal-body">
+                                    <asp:Label ID="lblDeleteMessage" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
+                                    <!-- Table -->
+                                    <table class="table table-striped mb-3">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Switch Status</th>
+                                                <th>Percentage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <asp:Repeater ID="rptSwitchDetailsDelete" runat="server" OnItemCommand="rptSwitchDetails_ItemCommand">
+                                                <ItemTemplate>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:Label ID="lblID" runat="server" Text='<%# Eval("id") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblName" runat="server" Text='<%# Eval("switchname") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("description") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:Label ID="lblSwitchStatus" runat="server" Text='<%# Eval("switchstatus") %>'></asp:Label>
+                                                        </td>
+                                                        <td>
+                                                            <asp:TextBox ID="txtPercentage" runat="server" Text='<%# Eval("percentage") %>' CssClass="form-control" TextMode="Number" Style="width: 80px;" Enabled="false"></asp:TextBox>
+                                                            <asp:ImageButton ID="btnEdit" runat="server" ImageUrl="~/images/edit.png" Width="20px" Height="20px" CommandName="Edit" CommandArgument='<%# Eval("id") %>' />
+                                                            <asp:ImageButton ID="btnUpdate" runat="server" ImageUrl="~/images/update.png" Width="20px" Height="20px" CommandName="Update" CommandArgument='<%# Eval("id") %>' />
+                                                        </td>
+                                                    </tr>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </tbody>
+                                    </table>
+                                    <div class="bordered-section">
+                                        <div class="section-header">
+                                            <h3>Switch Details</h3>
+                                        </div>
+                                        <div class="bordered-section">
 
-                            <div class="row mb-4">
-                                <!-- Row for both parts -->
-                                <div class="col-md-6">
-                                    <!-- Part A -->
-                                    <div class="form-group">
-                                        <label for="SwitchName" class="col-form-label">Switch Name</label>
-                                        <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" placeholder="Enter Switch Name"></asp:TextBox>
-                                    </div>
+                                            <div class="row mb-4">
+                                                <!-- Row for both parts -->
+                                                <div class="col-md-6">
+                                                    <!-- Part A -->
+                                                    <div class="form-group">
+                                                        <label for="SwitchName" class="col-form-label">Switch Name</label>
+                                                        <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" placeholder="Enter Switch Name"></asp:TextBox>
+                                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="SwitchDescription" class="col-form-label">Switch Description</label>
-                                        <asp:TextBox ID="TextBox2" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Switch Description"></asp:TextBox>
-                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="SwitchDescription" class="col-form-label">Switch Description</label>
+                                                        <asp:TextBox ID="TextBox2" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Switch Description"></asp:TextBox>
+                                                    </div>
 
-                                    <%--<div class="form-group">
+                                                    <%--<div class="form-group">
                                         <label for="txtSwitchPercentage" class="col-form-label">Percentage %</label>
                                         <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
                                     </div>--%>
 
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <div class="form-group row">
-                                                <label class="col-md-4 col-form-label">Switch Count</label>
-                                                <div class="col-md-8">
-                                                    <label class="switchh">
-                                                        <input type="checkbox" id="Switchh" />
-                                                        <span class="sliderr"></span>
-                                                    </label>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label">Switch Count</label>
+                                                                <div class="col-md-8">
+                                                                    <label class="switchh">
+                                                                        <input type="checkbox" id="Switchh" />
+                                                                        <span class="sliderr"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Panels for Percentage and Count -->
+                                                    <div class="row mb-3">
+
+                                                        <div class="form-group row">
+                                                            <asp:Panel ID="Panel1" runat="server">
+                                                                <label for="txtSwitchPercentage" class="col-md-5 col-form-label">Percentage %</label>
+                                                                <div class="col-md-5">
+                                                                    <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
+                                                                </div>
+                                                            </asp:Panel>
+                                                            <asp:Panel ID="Panel2" runat="server" CssClass="toggle-field">
+                                                                <label for="txtCount" class="col-md-5 col-form-label">Count</label>
+                                                                <div class="col-md-5">
+                                                                    <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
+                                                                </div>
+                                                            </asp:Panel>
+                                                        </div>
+
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Panels for Percentage and Count -->
-                                    <div class="row mb-3">
-
-                                        <div class="form-group row">
-                                            <asp:Panel ID="Panel1" runat="server">
-                                                <label for="txtSwitchPercentage" class="col-md-5 col-form-label">Percentage %</label>
-                                                <div class="col-md-5">
-                                                    <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
-                                                </div>
-                                            </asp:Panel>
-                                            <asp:Panel ID="Panel2" runat="server" CssClass="toggle-field">
-                                                <label for="txtCount" class="col-md-5 col-form-label">Count</label>
-                                                <div class="col-md-5">
-                                                    <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
-                                                </div>
-                                            </asp:Panel>
-                                        </div>
-
-                                    </div>
-
+                                </div>
+                                <!-- Footer -->
+                                <div class="modal-footer">
+                                    <asp:Button ID="btnDelete" CssClass="btn btn-primary" runat="server" Text="Delete" OnClick="btnDelete_Click" OnClientClick="return changebtntextdelete();" style="display: inline-block; position: relative;"/>
+                                    <asp:Button ID="btnDelete_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
+                                    <asp:Button ID="btnCloseDel" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseDel_Click" data-bs-dismiss="modal" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <asp:HiddenField ID="HdnShowDelete" runat="server" Value="false" />
+                    <%-- End --%>
+                
+            <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
 
-                </div>
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <asp:Button ID="btnDelete" CssClass="btn btn-primary" runat="server" Text="Delete" OnClick="btnDelete_Click" />
-                    <asp:Button ID="btnCloseDel" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseDel_Click" data-bs-dismiss="modal" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <asp:HiddenField ID="HdnShowDelete" runat="server" Value="false" />
-    <%-- End --%>
-
-    <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
-
-        <asp:Repeater ID="rptrSwitch" runat="server" OnItemDataBound="rptrSwitch_ItemDataBound" OnItemCommand="rptrSwitch_ItemCommand">
-            <ItemTemplate>
-                <asp:HiddenField ID="hd1" Value='<%# Eval("id") %>' runat="server" />
-                <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
-                    <div class="list-group-item">
-                        <div class="list-group-item-header">
-                            <%--<div class="list-view-pf-expand">
+                <asp:Repeater ID="rptrSwitch" runat="server" OnItemDataBound="rptrSwitch_ItemDataBound" OnItemCommand="rptrSwitch_ItemCommand">
+                    <ItemTemplate>
+                        <asp:HiddenField ID="hd1" Value='<%# Eval("id") %>' runat="server" />
+                        <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
+                            <div class="list-group-item">
+                                <div class="list-group-item-header">
+                                    <%--<div class="list-view-pf-expand">
                                 <span class="fa fa-angle-right"></span>
                             </div>--%>
-                            <%--<div class="list-view-pf-checkbox">
+                                    <%--<div class="list-view-pf-checkbox">
                                 <input type="checkbox">
                             </div>--%>
 
-                            <div class="list-view-pf-actions shift-left">
+                                    <div class="list-view-pf-actions shift-left">
 
-                                <label class="switchh">
-                                    <input type="checkbox" runat="server" id="chkSlider" class="clsslider" onitemdatabound="">
-                                    <span class="sliderr"></span>
-                                </label>
+                                        <label class="switchh">
+                                            <input type="checkbox" runat="server" id="chkSlider" class="clsslider" onitemdatabound="">
+                                            <span class="sliderr"></span>
+                                        </label>
 
-                                <span class="slider round"></span>
-                                <div class="dropdown pull-right dropdown-kebab-pf">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        <span class="fa fa-ellipsis-v"></span>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
-                                        <li>
-                                            <asp:HiddenField ID="HiddenField1" Value='<%# Eval("id") %>' runat="server" />
-                                            <asp:LinkButton ID="btnEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("id") %>' Text="Edit" />
-                                        </li>
-                                        <li>
-                                            <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Delete" CommandArgument='<%# Eval("id") %>' Text="Delete" />
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div class="list-view-pf-main-info">
-                                <div class="list-view-pf-left">
-                                    <%--<span class="fa fa-plane list-view-pf-icon-sm"></span>--%>
-                                    <img src="../../images/icons/switch.png" style="width: 25px; height: 25px;" />
-                                </div>
-
-                                <div class="list-view-pf-body">
-
-                                    <div class="list-view-pf-description">
-                                        <div class="list-view-pf-additional-info-itemm">
-                                            <div class="header-item">
-                                                <strong>Name</strong>
-                                            </div>
-
-                                            <div class="content-item">
-                                                <strong><%# Eval("switchname") %></strong>
-                                            </div>
-                                        </div>
-                                        <div class="list-view-pf-additional-info-itemm">
-                                            <div class="header-item">
-                                                <strong>Description</strong>
-                                            </div>
-                                            <div class="content-item">
-
-                                                <strong><%# Eval("description") %></strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Hidden Group ID for backend processing -->
-                                    <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
-
-                                    <!-- Additional Information Section (Dynamic Data) -->
-                                    <div class="list-view-pf-additional-info">
-
-                                        <!-- Percentage Section -->
-                                        <div class="list-view-pf-additional-info-itemm">
-
-                                            <div class="header-item">
-                                                <strong>Percentage</strong>
-                                            </div>
-                                            <div class="content-item">
-                                                <img src="../../images/icons/rules_2.png" />
-                                                <strong><%# Eval("percentage") %></strong>
-                                            </div>
-                                        </div>
-
-                                        <!-- Count Section -->
-                                        <div class="list-view-pf-additional-info-itemm">
-
-                                            <div class="header-item">
-                                                <strong>Count</strong>
-                                            </div>
-                                            <div class="content-item">
-                                                <img src="../../images/icons/rules_2.png" />
-                                                <strong><%# Eval("maxcount") %></strong>
-                                            </div>
-                                        </div>
-
-                                        <!-- Status Section -->
-                                        <div class="list-view-pf-additional-info-itemm">
-
-                                            <div class="header-item">
-                                                <strong>Status</strong>
-                                            </div>
-                                            <div class="content-item">
-                                                <img src="../../images/icons/status.png" />
-                                                <strong><%# Eval("switchstatus") %></strong>
-                                            </div>
+                                        <span class="slider round"></span>
+                                        <div class="dropdown pull-right dropdown-kebab-pf">
+                                            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <span class="fa fa-ellipsis-v"></span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                                <li>
+                                                    <asp:HiddenField ID="HiddenField1" Value='<%# Eval("id") %>' runat="server" />
+                                                    <asp:LinkButton ID="btnEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("id") %>' Text="Edit" />
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Delete" CommandArgument='<%# Eval("id") %>' Text="Delete" />
+                                                </li>
+                                            </ul>
                                         </div>
 
                                     </div>
-                                </div>
 
+                                    <div class="list-view-pf-main-info">
+                                        <div class="list-view-pf-left">
+                                            <%--<span class="fa fa-plane list-view-pf-icon-sm"></span>--%>
+                                            <img src="../../images/icons/switch.png" style="width: 25px; height: 25px;" />
+                                        </div>
+
+                                        <div class="list-view-pf-body">
+
+                                            <div class="list-view-pf-description">
+                                                <div class="list-view-pf-additional-info-itemm">
+                                                    <div class="header-item">
+                                                        <strong>Name</strong>
+                                                    </div>
+
+                                                    <div class="content-item">
+                                                        <strong><%# Eval("switchname") %></strong>
+                                                    </div>
+                                                </div>
+                                                <div class="list-view-pf-additional-info-itemm">
+                                                    <div class="header-item">
+                                                        <strong>Description</strong>
+                                                    </div>
+                                                    <div class="content-item">
+
+                                                        <strong><%# Eval("description") %></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Hidden Group ID for backend processing -->
+                                            <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
+
+                                            <!-- Additional Information Section (Dynamic Data) -->
+                                            <div class="list-view-pf-additional-info">
+
+                                                <!-- Percentage Section -->
+                                                <div class="list-view-pf-additional-info-itemm">
+
+                                                    <div class="header-item">
+                                                        <strong>Percentage</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/rules_2.png" />
+                                                        <strong><%# Eval("percentage") %></strong>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Count Section -->
+                                                <div class="list-view-pf-additional-info-itemm">
+
+                                                    <div class="header-item">
+                                                        <strong>Count</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/rules_2.png" />
+                                                        <strong><%# Eval("maxcount") %></strong>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Status Section -->
+                                                <div class="list-view-pf-additional-info-itemm">
+
+                                                    <div class="header-item">
+                                                        <strong>Status</strong>
+                                                    </div>
+                                                    <div class="content-item">
+                                                        <img src="../../images/icons/status.png" />
+                                                        <strong><%# Eval("switchstatus") %></strong>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnManual" EventName="Click" />
+            <asp:AsyncPostBackTrigger ControlID="btnAddSwitch" EventName="Click" />
+            <%-- <asp:AsyncPostBackTrigger ControlID="LinkButton1" EventName="Click" />--%>
+        </Triggers>
+    </asp:UpdatePanel>
     <script>
         var prm = Sys.WebForms.PageRequestManager.getInstance();
         if (prm != null) {
@@ -1307,7 +1333,7 @@
 
     </script>
 
-    <script>
+    <%--<script>
         $(document).ready(function () {
             var showModal = document.getElementById('<%= hdnShowModal.ClientID %>').value;
 
@@ -1316,8 +1342,58 @@
                 exampleModal.show();
             }
         });
-    </script>
+    </script>--%>
+    <%--<script>
+        // Function to show the modal if triggered
+        function checkModal() {
+            //alert('Hi')
+            const showModal = document.getElementById('<%= hdnShowModal.ClientID %>').value;
+            if (showModal === "true") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.show();
+            }
+        }
+
+        // Run the checkModal function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkModal();
+        });
+    </script>--%>
     <script>
+        
+        function checkModal() {
+            $('.modal-backdrop').remove();
+            const showModal = document.getElementById('<%= hdnShowModal.ClientID %>').value;
+            console.log(showModal)
+            if (showModal === "true") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.show();
+            }
+            else if (showModal === "false") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.hide();
+                $('.modal-backdrop').remove();
+            }
+        }
+
+        function changebtntext() {
+            console.log('button clicked by client evetn...')
+            const submitButton = document.getElementById('<%= btnCreSwitch.ClientID %>');
+            submitButton.hidden = true;
+
+            const submitButton_Disabled = document.getElementById('<%= btnCreSwitch_disabled.ClientID %>');
+            submitButton_Disabled.style.visibility = 'visible';
+            submitButton_Disabled.value = 'Submitting...';
+            return true;
+        }
+        
+        // Run the checkModal function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkModal();
+        });
+    </script>
+
+    <%--<script>
         $(document).ready(function () {
             var showModal = document.getElementById('<%= hdnshowmanual.ClientID %>').value;
 
@@ -1326,9 +1402,32 @@
                 exampleModalManual.show();
             }
         });
-    </script>
-    <%-- Delete --%>
+    </script>--%>
     <script>
+        // Function to show the modal if triggered using jQuery (with a different name)
+        function showModalIfTriggered() {
+            //alert('Hi');
+            var showModal = document.getElementById('<%= hdnshowmanual.ClientID %>').value;
+
+            if (showModal === "true") {
+                var exampleModalManual = new bootstrap.Modal(document.getElementById('exampleModalManual'));
+                exampleModalManual.show();
+            }
+        }
+
+        // Run the showModalIfTriggered function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            showModalIfTriggered();
+        });
+
+        // Also run the showModalIfTriggered function on initial page load
+        $(document).ready(function () {
+            showModalIfTriggered();
+        });
+    </script>
+
+    <%-- Delete --%>
+    <%--<script>
         $(document).ready(function () {
             var showModal = document.getElementById('<%= HdnShowDelete.ClientID %>').value;
 
@@ -1336,6 +1435,55 @@
                 var exampleModal = new bootstrap.Modal(document.getElementById('exampleModalDelete'));
                 exampleModal.show();
             }
+        });
+    </script>--%>
+    <%--<script type="text/javascript">
+        // Function to check and show the delete modal
+        function checkDeleteModal() {
+            var showModal = document.getElementById('<%= HdnShowDelete.ClientID %>').value;
+
+            if (showModal === "true") {
+                var exampleModalDelete = new bootstrap.Modal(document.getElementById('exampleModalDelete'));
+                exampleModalDelete.show();
+            }
+        }
+
+        // Trigger the modal check after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkDeleteModal();  // Call this after the postback
+        });
+    </script>--%>
+     <script>
+        
+        function checkModalDelete() {
+            $('.modal-backdrop').remove();
+            const showModal = document.getElementById('<%= HdnShowDelete.ClientID %>').value;
+            console.log(showModal)
+            if (showModal === "true") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModalDelete'));
+                modal.show();
+            }
+            else if (showModal === "false") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModalDelete'));
+                modal.hide();
+                $('.modal-backdrop').remove();
+            }
+        }
+
+        function changebtntextdelete() {
+            console.log('button clicked by client evetn...')
+            const submitButton = document.getElementById('<%= btnDelete.ClientID %>');
+            submitButton.hidden = true;
+
+            const submitButton_Disabled = document.getElementById('<%= btnDelete_disabled.ClientID %>');
+            submitButton_Disabled.style.visibility = 'visible';
+            submitButton_Disabled.value = 'Submitting...';
+            return true;
+        }
+        
+        // Run the checkModal function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkModalDelete();
         });
     </script>
 </asp:Content>

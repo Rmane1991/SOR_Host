@@ -382,9 +382,9 @@
                                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                                 </asp:TemplateField>
                                 <asp:BoundField DataField="Agent Id" HeaderText="Agent Id" />
-                                <asp:BoundField DataField="Client Id" HeaderText="Client Id" />
-                                <asp:BoundField DataField="BC Code" HeaderText="BC Code" />
-                                <asp:BoundField DataField="Aggregator Code" HeaderText="Aggregator Code" />
+                                <asp:BoundField DataField="Client Id" HeaderText="Client Id" visible="false"/>
+                                <asp:BoundField DataField="BC Name" HeaderText="BC Name" />
+                                <asp:BoundField DataField="Aggregator Name" HeaderText="Aggregator Name" />
                                 <asp:BoundField DataField="Code" HeaderText="Code" />
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
                                 <asp:BoundField DataField="Mobile No" HeaderText="Mobile No." />

@@ -1,0 +1,35 @@
+Time : 15-Jan-2025 14:47 Message : AggregatorRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : AggregatorRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : AggregatorRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:54 Message : AggregatorRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:54 Message : AggregatorRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:54 Message : Class : AggRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'PanNo' was not found on the selected data source. | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | btndownload_Click() | Strated. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : AggregatorRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:55 Message : Page : AggRegistration.cs 
+Function : btndownload_Click
+Exception Occured
+Thread was being aborted.
+Time : 15-Jan-2025 15:00 Message : AggregatorRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : AggregatorRegistration | btnAddnew_Click() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : AggregatorRegistration | btnAddnew_Click() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : OnBoardAggStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : OnBoardAggStatus | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : OnBoardAggStatus | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : AggregatorStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : AggregatorStatus | fillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:00 Message : AggregatorStatus | fillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:44 Message : AggregatorStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:44 Message : AggregatorStatus | fillGrid() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:44 Message : AggregatorStatus | fillGrid() | Ended. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:44 Message : OnBoardAggStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:44 Message : OnBoardAggStatus | FillGrid() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:44 Message : OnBoardAggStatus | FillGrid() | Ended. | UserName : Maximus | LoginKey : 585032

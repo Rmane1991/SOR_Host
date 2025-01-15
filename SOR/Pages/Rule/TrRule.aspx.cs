@@ -185,7 +185,7 @@ namespace SOR.Pages.Rule
                                 sliderDiv.Style["background-color"] = "red"; // Example style change
 
                             }
-                            
+
                             rptChild.DataSource = dt;
                             rptChild.DataBind();
                             groupId = 0;
@@ -198,7 +198,7 @@ namespace SOR.Pages.Rule
                 throw;
             }
         }
-        
+
         [WebMethod]
         public static string ToggleSlider(bool IsChecked, string Id)
         {
@@ -462,7 +462,7 @@ namespace SOR.Pages.Rule
             try
             {
                 ErrorLog.RuleTrace("TrRule | btnCreGroup_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
-                
+
                 if (string.IsNullOrEmpty(txtGroupName.Text))
                 {
                     ShowWarning("Please Enter Group Name. Try again", "Warning");
@@ -498,24 +498,24 @@ namespace SOR.Pages.Rule
                         //string validateCode = _RuleEntity.ValidateGroup();
                         //if (validateCode == "00")
                         //{
-                            string statusCode = _RuleEntity.InsertOrUpdateGroup();
-                            if (statusCode == "UPD00")
-                            {
-                                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                            }
-                            else
-                            {
-                                _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                                _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                            }
-                            var response = new
-                            {
-                                StatusMessage = _CommonEntity.ResponseMessage
-                            };
-                            ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
-                            Session["GroupId"] = null;
+                        string statusCode = _RuleEntity.InsertOrUpdateGroup();
+                        if (statusCode == "UPD00")
+                        {
+                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                        }
+                        else
+                        {
+                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                        }
+                        var response = new
+                        {
+                            StatusMessage = _CommonEntity.ResponseMessage
+                        };
+                        ErrorLog.RuleTrace("TrRule: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                        Session["GroupId"] = null;
                         //}
                         //else
                         //{
@@ -558,8 +558,9 @@ namespace SOR.Pages.Rule
                         }
                     }
                 }
-                hdnShowModalG.Value = "false";
+
                 BindGroup();
+                hdnShowModalG.Value = "false"; 
                 ErrorLog.RuleTrace("TrRule | btnCreGroup_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
@@ -613,6 +614,7 @@ namespace SOR.Pages.Rule
                 Session["priority"] = null;
                 hdnShowModalR.Value = "false";
                 hdnShowModalG.Value = "true";
+                ClientScript.RegisterStartupScript(this.GetType(), "showModalScript", "checkModal();", true);
                 ErrorLog.RuleTrace("TrRule | btnAddGroup_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
@@ -638,6 +640,7 @@ namespace SOR.Pages.Rule
                 hdnShowModalR.Value = "true";
                 BindDropdownValues();
                 BindSwitch();
+                ClientScript.RegisterStartupScript(this.GetType(), "showModalScript", "checkModalRule();", true);
                 ErrorLog.RuleTrace("TrRule | btnAddRule_Click() | Ended. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
             }
             catch (Exception Ex)
@@ -665,7 +668,7 @@ namespace SOR.Pages.Rule
             try
             {
                 ErrorLog.RuleTrace("TrRule | btnCreateRule_Click() | Started. | UserName : " + HttpContext.Current.Session["Username"].ToString() + " | LoginKey : " + HttpContext.Current.Session["LoginKey"].ToString());
-                
+
                 lblError.Text = string.Empty; ;
                 lblError.Visible = false;  // Make the error label visible
 
@@ -812,7 +815,7 @@ namespace SOR.Pages.Rule
                         var result = _RuleEntity.ValidateRule();
                         string validateCode = result.status;
                         string validateMessage = result.statusMessage;
-                        
+
                         if (validateCode == "00" || validateCode == "01")
                         {
                             string statusCode = _RuleEntity.InsertOrUpdateRule();
