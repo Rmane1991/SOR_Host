@@ -116,7 +116,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label text-uppercase">BCs</span>
+                                <span class="stats-small__label">BCs</span>
                                 <h6 id="bcCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">

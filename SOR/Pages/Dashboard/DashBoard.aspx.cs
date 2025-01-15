@@ -93,49 +93,64 @@ namespace SOR.Pages.Dashboard
 
                 var txnDetails = _DashDAL.Get_AllData();
 
-                if (txnDetails.Tables.Contains("Txnsummarychart"))
+                try
                 {
-                    var txn = txnDetails.Tables["Txnsummarychart"].AsEnumerable().Select(t => new
-                    {
-                        Day = t.Field<string>("time_period"),
-                        CurrentMonthCount = t.Field<int>("current_count"),
-                        PreviousDay = t.Field<string>("previous_time_period"),
-                        PreviousMonthCount = t.Field<int>("previous_count")
-                    }).ToList();
 
-                    var TxnSummary = JsonConvert.SerializeObject(txn);
-                    ViewState["Transactions"] = TxnSummary;
+                    if (txnDetails.Tables.Contains("Txnsummarychart"))
+                    {
+                        var txn = txnDetails.Tables["Txnsummarychart"].AsEnumerable().Select(t => new
+                        {
+                            Day = t.Field<string>("time_period"),
+                            CurrentMonthCount = t.Field<int>("current_count"),
+                            PreviousDay = t.Field<string>("previous_time_period"),
+                            PreviousMonthCount = t.Field<int>("previous_count")
+                        }).ToList();
+
+                        var TxnSummary = JsonConvert.SerializeObject(txn);
+                        ViewState["Transactions"] = TxnSummary;
+                    }
                 }
-                 
-                if (txnDetails.Tables.Contains("Aggregators"))
+
+
+                catch(Exception ex)
                 {
-                    StringBuilder sb = new StringBuilder();
-                    bool isFirstCard = true;
-                    foreach (DataRow row in txnDetails.Tables["Aggregators"].Rows)
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                }
+
+                try
+
+                {
+                    if (txnDetails.Tables.Contains("Aggregators"))
                     {
-                        var aggregatorName = row["AggreName"].ToString();
-                        var transactionCount = row["Count"].ToString();
-                        var sucessCount = row["successCount"].ToString();
-                        var failCount = row["failureCount"].ToString();
-                        decimal successRate = Convert.ToDecimal(row["successRate"]);
-                        decimal failureRate = Convert.ToDecimal(row["failureRate"]);
-                        var changePercentage = Convert.ToDecimal(row["ChangePercentage"]);
-
-                        decimal avgAmount = Convert.ToDecimal(row["AvgAmount"]);
-                        decimal totalRevenue = Convert.ToDecimal(row["TotalRevenue"]);
-
-                        int progressWidth = (int)Math.Min(Math.Abs(changePercentage), 100);
-                        string progressClass = "bg-success";
-
-                        if (changePercentage < 0)
+                        StringBuilder sb = new StringBuilder();
+                        bool isFirstCard = true;
+                        foreach (DataRow row in txnDetails.Tables["Aggregators"].Rows)
                         {
-                            progressClass = "bg-danger";
-                        }
-                        else if (changePercentage == 0)
-                        {
-                            progressClass = "bg-warning";
-                        }
-                        sb.Append($@"<div class='carousel-item {(isFirstCard ? "active" : "")}'>
+                            var aggregatorName = row["AggreName"].ToString();
+                            var transactionCount = row["Count"].ToString();
+                            var sucessCount = row["successCount"].ToString();
+                            var failCount = row["failureCount"].ToString();
+                            decimal successRate = Convert.ToDecimal(row["successRate"]);
+                            decimal failureRate = Convert.ToDecimal(row["failureRate"]);
+                            var changePercentage = Convert.ToDecimal(row["ChangePercentage"]);
+
+                            decimal avgAmount = Convert.ToDecimal(row["AvgAmount"]);
+                            decimal totalRevenue = Convert.ToDecimal(row["TotalRevenue"]);
+
+                            int progressWidth = (int)Math.Min(Math.Abs(changePercentage), 100);
+                            string progressClass = "bg-success";
+
+                            if (changePercentage < 0)
+                            {
+                                progressClass = "bg-danger";
+                            }
+                            else if (changePercentage == 0)
+                            {
+                                progressClass = "bg-warning";
+                            }
+                            sb.Append($@"<div class='carousel-item {(isFirstCard ? "active" : "")}'>
                         <div class='aggregator-card'>
                         <div class='card-header'><h6>{aggregatorName}</h6>
                         <span class='badge {progressClass}'>High Performer</span>
@@ -253,89 +268,200 @@ namespace SOR.Pages.Dashboard
                          }}
                      }});
                       </script>");
-                        isFirstCard = false;
+                            isFirstCard = false;
+                        }
+                        Aggregator.Text = sb.ToString();
                     }
-                    Aggregator.Text = sb.ToString();
                 }
-
-                if (txnDetails.Tables.Contains("SwitchData"))
+                catch (Exception ex)
                 {
-                    var txn = txnDetails.Tables["SwitchData"].AsEnumerable().Select(t => new
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                }
+                try
+                {
+                    if (txnDetails.Tables.Contains("SwitchData"))
                     {
-                        SwitchName = t.Field<string>("switchname"),
-                        Counts = t.Field<int>("Count"),
-                        Percent = t.Field<decimal>("percent")
-                    }).ToList();
+                        var txn = txnDetails.Tables["SwitchData"].AsEnumerable().Select(t => new
+                        {
+                            SwitchName = t.Field<string>("switchname"),
+                            Counts = t.Field<int>("Count"),
+                            Percent = t.Field<decimal>("percent")
+                        }).ToList();
 
-                    var serializedTxn = JsonConvert.SerializeObject(txn);
-                    ViewState["SwitchMonthlyData"] = serializedTxn;
+                        var serializedTxn = JsonConvert.SerializeObject(txn);
+                        ViewState["SwitchMonthlyData"] = serializedTxn;
 
-                    StringBuilder sb = new StringBuilder();
-                    foreach (DataRow row in txnDetails.Tables["SwitchData"].Rows)
-                    {
-                        var switchId = row["switchid"];
-                        var SwitchName = row["switchname"];
-                        var count = row["Count"];
+                        StringBuilder sb = new StringBuilder();
+                        foreach (DataRow row in txnDetails.Tables["SwitchData"].Rows)
+                        {
+                            var switchId = row["switchid"];
+                            var SwitchName = row["switchname"];
+                            var count = row["Count"];
 
-                        sb.Append("<tr>");
-                        sb.Append($"<td class='text-right'>{SwitchName}</td>");
-                        sb.Append($"<td class='text-right' style='text-align: right !important;'>{count}</td>");
-                        sb.Append("</tr>");
+                            sb.Append("<tr>");
+                            sb.Append($"<td class='text-right'>{SwitchName}</td>");
+                            sb.Append($"<td class='text-right' style='text-align: right !important;'>{count}</td>");
+                            sb.Append("</tr>");
+                        }
+                        SwitchLteralControl.Text = sb.ToString();
                     }
-                    SwitchLteralControl.Text = sb.ToString();
                 }
-
-                if (txnDetails.Tables.Contains("BankRevenueData"))
+                catch (Exception Ex)
                 {
-                    var txn = txnDetails.Tables["BankRevenueData"].AsEnumerable().Select(t => new
-                    {
-                        TotalRevenue = t.Field<decimal>("TotalRevenue"),
-                        ConversionRate = t.Field<decimal>("ConversionRt"),
-                        PeriodName = t.Field<string>("PeriodName")
-                    }).ToList();
 
-                    var serializedTxn = JsonConvert.SerializeObject(txn);
-                    ViewState["BankRevenueData"] = serializedTxn;
                 }
+                try
+                {
+                    if (txnDetails.Tables.Contains("BankRevenueData"))
+                    {
+                        var txn = txnDetails.Tables["BankRevenueData"].AsEnumerable().Select(t => new
+                        {
+                            TotalRevenue = t.Field<decimal>("TotalRevenue"),
+                            ConversionRate = t.Field<decimal>("ConversionRt"),
+                            PeriodName = t.Field<string>("PeriodName")
+                        }).ToList();
+
+                        var serializedTxn = JsonConvert.SerializeObject(txn);
+                        ViewState["BankRevenueData"] = serializedTxn;
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                }
+                try
+                {
+                    if (txnDetails.Tables.Contains("RuleData"))
+                    {
+                        StringBuilder sb = new StringBuilder();
+
+                        foreach (DataRow row in txnDetails.Tables["RuleData"].Rows)
+                        {
+                            var groupID = HttpUtility.JavaScriptStringEncode(row["GroupID"].ToString());
+                            var groupName = HttpUtility.JavaScriptStringEncode(row["GroupName"].ToString());
+                            var ruleID = HttpUtility.JavaScriptStringEncode(row["ruleid"].ToString());
+                            var ruleName = HttpUtility.JavaScriptStringEncode(row["RuleName"].ToString());
+                            int totalTransactions = row["TotalCount"] != null && int.TryParse(row["TotalCount"].ToString(), out int r) ? r : 0;
+                            var successCount = row["SuccessCount"] != null && int.TryParse(row["SuccessCount"].ToString(), out int s) ? s : 0;
+                            var failureCount = row["FailureCount"] != null && int.TryParse(row["FailureCount"].ToString(), out int f) ? f : 0;
+                            var RoutingPercentage = row["OverallPerc"];
+                            var uniqueId = $"{groupName}{ruleName}_Chart";
+
+                            sb.Append("<tr>");
+                            sb.Append($"<td class='text-right'>{groupName} | {ruleName}</td>");
+                            sb.Append($"<td class='text-right'>{totalTransactions}</td>");
+                            sb.Append($"<td class='text-right'>Routing% {RoutingPercentage} </td>");
+                            sb.Append($"<td class='text-right'>");
+                            sb.Append($"<canvas class='my-auto' id='{uniqueId}' width='40' height='40' style='width: 40px; height: 40px;'></canvas>");
+                            sb.Append("</td>");
+                            sb.Append("</tr>");
+                            sb.Append($@"<script>
+                        document.addEventListener('DOMContentLoaded', function() {{
+                        const ctx = document.getElementById('{uniqueId}').getContext('2d');
+                        const data = {{
+                            datasets: [{{
+                                label: '{ruleName}', 
+                                data: [{successCount}, {failureCount}], 
+                                backgroundColor:{totalTransactions} > 0 ? [
+                                    'rgba(54, 162, 235, 0.8)', 
+                                    'rgba(255, 99, 132, 0.8)'  
+                                ]:['rgba(144,238,144,0.5)'],
+                                borderWidth: 1 
+                            }}]
+                        }};
+                         
+                        const chart = new Chart(ctx, {{
+                            type: 'doughnut',
+                            data: data,
+                            options: {{
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                cutoutPercentage: 50,
+                                plugins: {{
+                                    tooltip: {{
+                                        enabled: true
+                                    }},
+                                    legend: {{
+                                        display: true
+                                    }}
+                                }}
+                            }}
+                        }});
+                    }});
+                    </script>
+                    ");
+                        }
+                        ruleLiteralControl.Text = sb.ToString();
+                    }
+                }
+                catch (Exception ex)
+
 
                 if (txnDetails.Tables.Contains("MonthlyBCData"))
+
                 {
-                    var txn = txnDetails.Tables["MonthlyBCData"].AsEnumerable().Select(t => new
-                    {
-                        Month = t.Field<int>("month"),
-                        Year = t.Field<int>("year"),
-                        bcname = t.Field<string>("bcname"),
-                        Success = t.Field<int>("currentsuccess"),
-                        Failure = t.Field<int>("currentfailure"),
-                        SuccessRate = t.Field<double>("successrate").ToString("F2"),
-                        FailureRate = t.Field<double>("failrate").ToString("F2")
-                    }).ToList();
-
-                    var serializedTxn = JsonConvert.SerializeObject(txn);
-                    ViewState["BcMonthlyData"] = serializedTxn;
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 }
-
-                if (txnDetails.Tables.Contains("ChannelwiseData"))
+                try
                 {
-                    var txn = txnDetails.Tables["ChannelwiseData"].AsEnumerable().Select(t => new
+                    if (txnDetails.Tables.Contains("MonthlyBCData"))
                     {
-                        channel = t.Field<string>("channel"),
-                        totalcount = t.Field<long>("totalcount"),
-                        successcount = t.Field<long>("successcount")
-                    }).ToList();
+                        var txn = txnDetails.Tables["MonthlyBCData"].AsEnumerable().Select(t => new
+                        {
+                            Month = t.Field<int>("month"),
+                            Year = t.Field<int>("year"),
+                            bcname = t.Field<string>("bcname"),
+                            Success = t.Field<int>("currentsuccess"),
+                            Failure = t.Field<int>("currentfailure"),
+                            SuccessRate = t.Field<double>("successrate").ToString("F2"),
+                            FailureRate = t.Field<double>("failrate").ToString("F2")
+                        }).ToList();
 
-                    var serializedTxn = JsonConvert.SerializeObject(txn);
-                    ViewState["ChannelwiseData"] = serializedTxn;
+                        var serializedTxn = JsonConvert.SerializeObject(txn);
+                        ViewState["BcMonthlyData"] = serializedTxn;
+                    }
                 }
+                catch (Exception ex)
+                {
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                }
+                try
+                {
+                    if (txnDetails.Tables.Contains("ChannelwiseData"))
+                    {
+                        var txn = txnDetails.Tables["ChannelwiseData"].AsEnumerable().Select(t => new
+                        {
+                            channel = t.Field<string>("channel"),
+                            totalcount = t.Field<long>("totalcount"),
+                            successcount = t.Field<long>("successcount")
+                        }).ToList();
 
+                        var serializedTxn = JsonConvert.SerializeObject(txn);
+                        ViewState["ChannelwiseData"] = serializedTxn;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
+                }
             }
             catch (Exception ex)
             {
                 ErrorLog.DashboardTrace("DashBoard: LoadTransactionCounts(): Exception: " + ex.Message);
+                ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
             }
-
-
         }
 
         private void LoadOnBoardCounts()
@@ -386,8 +512,7 @@ namespace SOR.Pages.Dashboard
             return count.ToString();
         }
         #endregion
-
-
+        
         [WebMethod]
         public static string ChartdataFilter(string fromDate, string toDate, string FilterType, string Filter)
         {
@@ -609,6 +734,5 @@ namespace SOR.Pages.Dashboard
             }
             return data;
         }
-
     }
 }

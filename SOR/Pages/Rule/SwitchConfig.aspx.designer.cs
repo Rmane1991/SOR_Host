@@ -31,6 +31,15 @@ namespace SOR.Pages.Rule {
         protected global::System.Web.UI.WebControls.HiddenField HiddenField1;
         
         /// <summary>
+        /// upnlSwitch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlSwitch;
+        
+        /// <summary>
         /// btnManual control.
         /// </summary>
         /// <remarks>
@@ -364,6 +373,15 @@ namespace SOR.Pages.Rule {
         protected global::System.Web.UI.WebControls.Button btnCreSwitch;
         
         /// <summary>
+        /// btnCreSwitch_disabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreSwitch_disabled;
+        
+        /// <summary>
         /// btnCloseSwitch control.
         /// </summary>
         /// <remarks>
@@ -461,6 +479,15 @@ namespace SOR.Pages.Rule {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
+        /// btnDelete_disabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete_disabled;
         
         /// <summary>
         /// btnCloseDel control.

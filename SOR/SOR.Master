@@ -380,7 +380,8 @@
                     </ul>
                     <a class="navbar-portal" href="#">
                         <%--<img src="../../images/proxima_logo.png" class="brand-logo" alt="brand_logo">--%>
-                        <img src="../../images/nsdl.jpg" class="brand-logo" alt="brand_logo">
+                        <%--<img src="../../images/nsdl.jpg" class="brand-logo" alt="brand_logo">--%>
+                        <img src="../../images/NSDL_logo.png" class="brand-logo" alt="brand_logo">
                         <img src="../../images/YES-BANK.png" class="brand-dark-logo" alt="brand_logo">
                     </a>
                 </div>
@@ -455,7 +456,7 @@
             </div>
         </div>
         <footer class="main-footer">
-            <p class="main-footer-text">
+            <p class="main-footer-text" style="color: #043389; font-family: Verdana; font-size: small">
                 © Maximus Infoware (India) Private Limited <%= DateTime.Now.Year %>
             </p>
         </footer>

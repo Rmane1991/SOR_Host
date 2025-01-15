@@ -1,0 +1,74 @@
+Time : 15-Jan-2025 14:41 Message : OnBoardBcStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:41 Message : OnBoardBcStatus | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:41 Message : OnBoardBcStatus | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:41 Message : OnBoardBcStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:41 Message : OnBoardBcStatus | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:41 Message : OnBoardBcStatus | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:42 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:42 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:42 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:43 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:43 Message : BCRegistration | btnAddnew_Click() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:43 Message : BCRegistration | btnAddnew_Click() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:43 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:43 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:43 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:44 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:44 Message : BCRegistration | btnAddnew_Click() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:44 Message : BCRegistration | btnAddnew_Click() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:44 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:44 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:44 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:45 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:45 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:45 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BC-Verification | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BC-Verification | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BC-Verification | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | btndownload_Click()-Export-To-Excel | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'Bucket'. | LoginKey : 770040
+Time : 15-Jan-2025 14:46 Message : Page : BCRegistration.cs 
+Function : btndownload_Click
+Exception Occured
+Thread was being aborted. | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : BC-Verification | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : BC-Verification | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : BC-Verification | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : OnBoardBcStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : OnBoardBcStatus | FillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : OnBoardBcStatus | FillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : BCStatus | Page_Load() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : BCStatus | fillGrid() | Started. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 14:47 Message : BCStatus | fillGrid() | Ended. | UserName : Maximus | LoginKey : 770040
+Time : 15-Jan-2025 15:43 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:43 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:43 Message : Class : BCRegistration.cs 
+Function : FillGrid() 
+Exception Occured
+A field or property with the name 'Pan No' was not found on the selected data source. | LoginKey : 585032
+Time : 15-Jan-2025 15:43 Message : BCRegistration | Page_Load() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:43 Message : BCRegistration | FillGrid() | Started. | UserName : Maximus | LoginKey : 585032
+Time : 15-Jan-2025 15:43 Message : BCRegistration | FillGrid() | Ended. | UserName : Maximus | LoginKey : 585032

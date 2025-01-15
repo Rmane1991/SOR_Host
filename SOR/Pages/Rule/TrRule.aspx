@@ -555,67 +555,67 @@
     </style>
     <style>
         .list-view-pf-additional-info-item {
-    flex-direction: row; /* Align header and content horizontally */
-    align-items: flex-start; /* Align items to the top */
-    margin-bottom: 8px; /* Space between items */
-    position: relative; /* Ensure content flows below header */
-}
+            flex-direction: row; /* Align header and content horizontally */
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 8px; /* Space between items */
+            position: relative; /* Ensure content flows below header */
+        }
 
-/* Container to manage the list */
-.list-view-pf-description {
-    display: table; /* Treat this as a table container */
-    width: 100%;
-    border-collapse: collapse; /* Ensure borders collapse (if any) */
-}
+        /* Container to manage the list */
+        .list-view-pf-description {
+            display: table; /* Treat this as a table container */
+            width: 100%;
+            border-collapse: collapse; /* Ensure borders collapse (if any) */
+        }
 
-/* Each row */
-
-
-/* Header */
-.header-item {
-    /* font-weight: normal; */
-    /* color: #7f8fa4; */
-    text-align: left;
-    margin-right: 16px;
-    padding: 8px;
-    /* white-space: nowrap; */
-    /* background-color: #f4f6f9; */
-    /* position: sticky; */
-    top: 0;
-    z-index: 2;
-    text-align: left;
-    /* border-bottom: 2px solid #ddd; */
-    width: 150px;
-    color: #7f8fa4;
-}
-/* Content of each row */
-.content-item {
-    display: table-cell; /* Treat this as a cell in the table */
-    padding: 8px; /* Padding for content cells */
-    text-align: left; /* Align content text to the left */
-    word-wrap: break-word; /* Allow content to wrap */
-    max-width: 100%; /* Ensure content doesn't overflow */
-    vertical-align: top; /* Align content to the top */
-    width: 100px; /* Fixed width for content columns */
-}
-
-/* Optional: Add styling for strong text inside the content */
-.content-item strong {
-    font-weight: bold;
-    color: #555;
-    word-break: break-word; /* Break long words */
-}
+        /* Each row */
 
 
+        /* Header */
+        .header-item {
+            /* font-weight: normal; */
+            /* color: #7f8fa4; */
+            text-align: left;
+            margin-right: 16px;
+            padding: 8px;
+            /* white-space: nowrap; */
+            /* background-color: #f4f6f9; */
+            /* position: sticky; */
+            top: 0;
+            z-index: 2;
+            text-align: left;
+            /* border-bottom: 2px solid #ddd; */
+            width: 150px;
+            color: #7f8fa4;
+        }
+        /* Content of each row */
+        .content-item {
+            display: table-cell; /* Treat this as a cell in the table */
+            padding: 8px; /* Padding for content cells */
+            text-align: left; /* Align content text to the left */
+            word-wrap: break-word; /* Allow content to wrap */
+            max-width: 100%; /* Ensure content doesn't overflow */
+            vertical-align: top; /* Align content to the top */
+            width: 100px; /* Fixed width for content columns */
+        }
+
+            /* Optional: Add styling for strong text inside the content */
+            .content-item strong {
+                font-weight: bold;
+                color: #555;
+                word-break: break-word; /* Break long words */
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
     <div class="breadHeader">
         <h5 class="page-title" style="font-size: larger">Rule Configuration</h5>
     </div>
-    <%--<asp:HiddenField ID="hdnPriority1" runat="server" />--%>
-    <%--<asp:HiddenField ID="hdnPriority2" runat="server" />--%>
-    <%--<div class="row">
+    <asp:UpdatePanel ID="upnlRule" runat="server">
+        <ContentTemplate>
+            <%--<asp:HiddenField ID="hdnPriority1" runat="server" />--%>
+            <%--<asp:HiddenField ID="hdnPriority2" runat="server" />--%>
+            <%--<div class="row">
         <div class="col-md-2">
         </div>
         <div class="col-md-2">
@@ -632,101 +632,102 @@
         </div>
     </div>--%>
 
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
-            <!-- Flex container for alignment -->
-            <%--<button id="toggleButton" class="btn btn-secondary" style="margin: 19px;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <!-- Flex container for alignment -->
+                    <%--<button id="toggleButton" class="btn btn-secondary" style="margin: 19px;">
                 <i class="fas fa-chevron-right"></i>
             </button>--%>
-            <%--<div id="buttonContainer" style="display: none; margin-left: 10px;">--%>
-            <!-- Initially hidden -->
-            <asp:Button ID="btnAddGroup" runat="server" CssClass="btn btn-primary" Text="Add Group" OnClick="btnAddGroup_Click" />
-            &nbsp;&nbsp;
+                    <%--<div id="buttonContainer" style="display: none; margin-left: 10px;">--%>
+                    <!-- Initially hidden -->
+                    <asp:Button ID="btnAddGroup" runat="server" CssClass="btn btn-primary" Text="Add Group" OnClick="btnAddGroup_Click" />
+                    &nbsp;&nbsp;
             <asp:Button ID="btnAddRule" runat="server" CssClass="btn btn-primary" Text="Add Rule" OnClick="btnAddRule_Click" />
-            <%--</div>--%>
-        </div>
+                    <%--</div>--%>
+                </div>
 
-    </div>
-    &nbsp;&nbsp;
-    <!-- Modal Group -->
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-    <ContentTemplate>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!-- Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Group Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Body -->
-                <div class="modal-body">
-                    <div class="form-group row mb-3">
-                        <label for="groupName" class="col-md-4 col-form-label">Group Name</label>
-                        <div class="col-md-8">
-                            <asp:TextBox ID="txtGroupName" CssClass="form-control" runat="server" placeholder="Enter Group Name"></asp:TextBox>
-                        </div>
-                    </div>
-
-                    <div class="form-group row mb-3">
-                        <label for="groupDescription" class="col-md-4 col-form-label">Group Description</label>
-                        <div class="col-md-8">
-                            <asp:TextBox ID="txtGroupDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Group Description"></asp:TextBox>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <asp:Button ID="btnCreGroup" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreGroup_Click" />
-                    <asp:Button ID="btnCloseGroup" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseGroup_Click" data-bs-dismiss="modal" />
-                </div>
             </div>
-        </div>
-    </div>
-    <asp:HiddenField ID="hdnShowModalG" runat="server" Value="false" />
-    </ContentTemplate>
-    <Triggers>
-    </Triggers>
-</asp:UpdatePanel>
-    <!-- Modal Rule -->
-    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-    <ContentTemplate>
-    <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabelR" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <!-- Header -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabelR">Rule Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Body -->
-                <div class="modal-body">
-                    <div class="row mb-3">
-                        <label for="groupName" class="col-md-2 col-form-label">Group Name</label>
-                        <div class="col-md-8">
-                            <asp:DropDownList ID="ddlGroupName" runat="server" Width="100%" CssClass="dropdown-custom">
-                            </asp:DropDownList>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="RuleName" class="col-md-2 col-form-label">Rule Name</label>
-                        <div class="col-md-8">
-                            <asp:TextBox ID="txtRuleName" CssClass="form-control" runat="server" placeholder="Enter Rule Name"></asp:TextBox>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="RuleDescription" class="col-md-2 col-form-label">Rule Description</label>
-                        <div class="col-md-8">
-                            <asp:TextBox ID="txtRuleDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Rule Description"></asp:TextBox>
-                        </div>
-                    </div>
+            &nbsp;&nbsp;
+    <!-- Modal Group -->
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Group Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Body -->
+                                <div class="modal-body">
+                                    <div class="form-group row mb-3">
+                                        <label for="groupName" class="col-md-4 col-form-label">Group Name</label>
+                                        <div class="col-md-8">
+                                            <asp:TextBox ID="txtGroupName" CssClass="form-control" runat="server" placeholder="Enter Group Name"></asp:TextBox>
+                                        </div>
+                                    </div>
 
-                    <%--<div class="row mb-3">
+                                    <div class="form-group row mb-3">
+                                        <label for="groupDescription" class="col-md-4 col-form-label">Group Description</label>
+                                        <div class="col-md-8">
+                                            <asp:TextBox ID="txtGroupDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Group Description"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Footer -->
+                                <div class="modal-footer">
+                                    <asp:Button ID="btnCreGroup" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreGroup_Click" OnClientClick="return changebtntext();" style="display: inline-block; position: relative;" />
+                                    <asp:Button ID="btncreategroup_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
+                                    <asp:Button ID="btnCloseGroup" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseGroup_Click" data-bs-dismiss="modal" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <asp:HiddenField ID="hdnShowModalG" runat="server" Value="false" />
+                </ContentTemplate>
+                <Triggers>
+                </Triggers>
+            </asp:UpdatePanel>
+            <!-- Modal Rule -->
+            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>
+                    <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabelR" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <!-- Header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabelR">Rule Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Body -->
+                                <div class="modal-body">
+                                    <div class="row mb-3">
+                                        <label for="groupName" class="col-md-2 col-form-label">Group Name</label>
+                                        <div class="col-md-8">
+                                            <asp:DropDownList ID="ddlGroupName" runat="server" Width="100%" CssClass="dropdown-custom">
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="RuleName" class="col-md-2 col-form-label">Rule Name</label>
+                                        <div class="col-md-8">
+                                            <asp:TextBox ID="txtRuleName" CssClass="form-control" runat="server" placeholder="Enter Rule Name"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="RuleDescription" class="col-md-2 col-form-label">Rule Description</label>
+                                        <div class="col-md-8">
+                                            <asp:TextBox ID="txtRuleDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Rule Description"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <%--<div class="row mb-3">
                         <label for="lblPriority" runat="server" class="col-md-2 col-form-label">Priority</label>
                         <div class="col-md-8">
                             <div class="justify-content-around">
@@ -737,7 +738,7 @@
                         </div>
                     </div>--%>
 
-                    <%--<div class="row mb-3">
+                                    <%--<div class="row mb-3">
                         <asp:HiddenField ID="hfSelectedValues" runat="server" />
                         <label for="lblAggregator" class="col-md-4 col-form-label">Aggregator</label>
                         <div class="col-md-8">
@@ -756,62 +757,62 @@
                             </div>
                         </div>
                     </div>--%>
-                    <div class="row mb-3">
-                        <asp:HiddenField ID="hfSelectedValues" runat="server" />
-                        <label for="lblAggregator" class="col-md-2 col-form-label">Aggregator</label>
-                        <div class="col-md-8">
-                            <asp:DropDownList ID="ddlAggregator" runat="server" CssClass="maximus-select w-100" Visible="false">
-                            </asp:DropDownList>
-                            <div class="multi-select-container">
-                                <div class="selected-items" id="selectedItems" onclick="toggleDropdown('dropdownContent', 'searchBox')">
-                                    <span class="placeholderr">Select options...</span>
-                                </div>
-                                <div class="dropdown-content" id="dropdownContent">
-                                    <input type="text" id="searchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('dropdownContent', 'searchBox')" />
-                                    <div id="dropdownItems">
-                                        <asp:Literal ID="litAggregator" runat="server"></asp:Literal>
+                                    <div class="row mb-3">
+                                        <asp:HiddenField ID="hfSelectedValues" runat="server" />
+                                        <label for="lblAggregator" class="col-md-2 col-form-label">Aggregator</label>
+                                        <div class="col-md-8">
+                                            <asp:DropDownList ID="ddlAggregator" runat="server" CssClass="maximus-select w-100" Visible="false">
+                                            </asp:DropDownList>
+                                            <div class="multi-select-container">
+                                                <div class="selected-items" id="selectedItems" onclick="toggleDropdown('dropdownContent', 'searchBox')">
+                                                    <span class="placeholderr">Select options...</span>
+                                                </div>
+                                                <div class="dropdown-content" id="dropdownContent">
+                                                    <input type="text" id="searchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('dropdownContent', 'searchBox')" />
+                                                    <div id="dropdownItems">
+                                                        <asp:Literal ID="litAggregator" runat="server"></asp:Literal>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <asp:HiddenField ID="hfSelectedSecondValues" runat="server" />
-                        <label for="lblIIN" class="col-md-2 col-form-label">IIN</label>
-                        <div class="col-md-8">
-                            <asp:DropDownList ID="ddlIIN" runat="server" CssClass="maximus-select w-100" Visible="false">
-                            </asp:DropDownList>
-                            <div class="multi-select-container">
-                                <div class="selected-items" id="selectedSecondItems" onclick="toggleDropdown('secondDropdownContent', 'secondSearchBox')">
-                                    <span class="placeholderr">Select options...</span>
-                                </div>
-                                <div class="dropdown-content" id="secondDropdownContent">
-                                    <input type="text" id="secondSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('secondDropdownContent', 'secondSearchBox')" />
-                                    <div id="secondDropdownItems">
-                                        <asp:Literal ID="litIIN" runat="server"></asp:Literal>
+                                    <div class="row mb-3">
+                                        <asp:HiddenField ID="hfSelectedSecondValues" runat="server" />
+                                        <label for="lblIIN" class="col-md-2 col-form-label">IIN</label>
+                                        <div class="col-md-8">
+                                            <asp:DropDownList ID="ddlIIN" runat="server" CssClass="maximus-select w-100" Visible="false">
+                                            </asp:DropDownList>
+                                            <div class="multi-select-container">
+                                                <div class="selected-items" id="selectedSecondItems" onclick="toggleDropdown('secondDropdownContent', 'secondSearchBox')">
+                                                    <span class="placeholderr">Select options...</span>
+                                                </div>
+                                                <div class="dropdown-content" id="secondDropdownContent">
+                                                    <input type="text" id="secondSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('secondDropdownContent', 'secondSearchBox')" />
+                                                    <div id="secondDropdownItems">
+                                                        <asp:Literal ID="litIIN" runat="server"></asp:Literal>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
-                        <div class="col-md-8">
-                            <asp:DropDownList ID="ddlChannel" runat="server" CssClass="dropdown-custom" Width="100%">
-                                <asp:ListItem Text="--Select--" Value="" />
-                                <asp:ListItem Text="AEPS" Value="1" />
-                                <asp:ListItem Text="BBPS" Value="2" />
-                                <asp:ListItem Text="DMT" Value="3" />
-                                <asp:ListItem Text="MATM" Value="4" />
-                            </asp:DropDownList>
-                        </div>
-                    </div>
+                                    <div class="row mb-3">
+                                        <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
+                                        <div class="col-md-8">
+                                            <asp:DropDownList ID="ddlChannel" runat="server" CssClass="dropdown-custom" Width="100%">
+                                                <asp:ListItem Text="--Select--" Value="" />
+                                                <asp:ListItem Text="AEPS" Value="1" />
+                                                <asp:ListItem Text="BBPS" Value="2" />
+                                                <asp:ListItem Text="DMT" Value="3" />
+                                                <asp:ListItem Text="MATM" Value="4" />
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
 
-                    <div class="row mb-3 align-items-center">
-                        <!-- First Dropdown -->
-                        <asp:HiddenField ID="hdnTxnType" runat="server" />
-                        <%--<div class="col-md-4">
+                                    <div class="row mb-3 align-items-center">
+                                        <!-- First Dropdown -->
+                                        <asp:HiddenField ID="hdnTxnType" runat="server" />
+                                        <%--<div class="col-md-4">
                             <div class="form-group row">
                                 <label for="lblTxnType" class="col-md-6 col-form-label">Txn Type</label>
                                 <div class="col-md-6">
@@ -821,527 +822,535 @@
                                 </div>
                             </div>
                         </div>--%>
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label for="lblTxnType" class="col-md-6 col-form-label">Txn Type</label>
-                                <div class="col-md-4">
-                                    <asp:DropDownList ID="ddlTxnType" runat="server" CssClass="maximus-select w-100" Width="100%" Visible="false">
-                                        <asp:ListItem Text="--Select--" Value="" />
-                                    </asp:DropDownList>
-                                    <div class="multi-select-container">
-                                        <div class="selected-items" id="selectedTItems" onclick="toggleDropdown('TDropdownContent', 'TSearchBox')">
-                                            <span class="placeholderr">Select options...</span>
-                                        </div>
-                                        <div class="dropdown-content" id="TDropdownContent">
-                                            <input type="text" id="TSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('TDropdownContent', 'TSearchBox')" />
-                                            <div id="TDropdownItems">
-                                                <asp:Literal ID="ltrtxntype" runat="server"></asp:Literal>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Toggle slider for FIN/Non-FIN visibility -->
-                        <div class="col-md-3 text-center" style="margin-left: 13px; margin-top: -11px;">
-                            <label class="switchh">
-                                <input type="checkbox" id="ddlTxn" />
-                                <span class="sliderr"></span>
-                            </label>
-                        </div>
-
-                        <!-- Second Dropdown -->
-                        <div class="col-md-4" id="dropdownFinNonFin" style="display: none; margin-left: -67px;">
-                            <div class="form-group row">
-                                <label for="lblTxnTypeFIN" class="col-md-6 col-form-label">FIN/NON-FIN</label>
-                                <div class="col-md-6">
-                                    <asp:DropDownList ID="ddlTxnTypeFIN" runat="server" CssClass="maximus-select w-100" Width="89%">
-                                        <asp:ListItem Text="--Select--" Value="" />
-                                        <asp:ListItem Text="FIN" Value="4,5,7,8" />
-                                        <asp:ListItem Text="NONFIN" Value="2,3,6" />
-                                    </asp:DropDownList>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
-                        <div class="col-md-8">
-                            <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="dropdown-custom" Width="100%">
-                                <%--<asp:ListItem Text="--Select--" Value="" />
-                                <asp:ListItem Text="Maximus" Value="1" />
-                                <asp:ListItem Text="Sarvatra" Value="2" />
-                                <asp:ListItem Text="PayRakam" Value="3" />--%>
-                            </asp:DropDownList>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3 align-items-center">
-                        <!-- Percentage TextBox -->
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label for="txtPercentage" class="col-md-6 col-form-label">Percentage %</label>
-                                <div class="col-md-6">
-                                    <asp:TextBox ID="txtPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Toggle slider for FIN/Non-FIN visibility -->
-                        <div class="col-md-2 text-center">
-                            <label class="switchh">
-                                <input type="checkbox" id="Switch" />
-                                <span class="sliderr"></span>
-                            </label>
-                        </div>
-
-                        <!-- Count TextBox -->
-                        <div class="col-md-4" id="countDiv" style="display: none;">
-                            <div class="form-group row">
-                                <label for="txtCount" class="col-md-4 col-form-label">Count</label>
-                                <div class="col-md-8">
-                                    <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" />
-                    </div>
-                </div>
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <asp:Button ID="btnCreateRule" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreateRule_Click" />
-                    <asp:Button ID="btnCloseRule" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseRule_Click" data-bs-dismiss="modal" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
-    </ContentTemplate>
-    <Triggers>
-        
-    </Triggers>
-</asp:UpdatePanel>
-    <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
-        <asp:PlaceHolder ID="headerPlaceholder" runat="server"></asp:PlaceHolder>
-        <asp:Repeater ID="rptrGroup" runat="server" OnItemCommand="rptrGroup_ItemCommand" OnItemDataBound="rptrGroup_ItemDataBound">
-
-            <ItemTemplate>
-                <div class="sortable-item" data-id='<%# Eval("id") %>'>
-                    <div class="mainGroup" data-id='<%# Eval("id") %>'>
-                        <asp:HiddenField ID="hd1" Value='<%# Eval("id") %>' runat="server" />
-                        <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
-                            <div class="list-group-item">
-                                <div class="list-group-item-header">
-                                    <div class="list-view-pf-expand">
-                                        <span class="fa fa-angle-right"></span>
-                                    </div>
-                                    <%-- <div class="list-view-pf-checkbox">
-                                        <input type="checkbox">
-                                    </div>--%>
-                                    <%-- <asp:ImageButton ID="imgAddRule" runat="server" ImageUrl="../../images/img-plus.jpg" AlternateText="Click me!" OnClick="imgAddRule_Click" />--%>
-
-
-                                    <div class="list-view-pf-actions" style="padding-top: 7px;">
-                                        <%--<button class="btn btn-default">Action</button>--%>
-
-                                        <label class="switchh">
-                                            <input type="checkbox" runat="server" id="chkSlider" class="clsslider" onitemdatabound="">
-                                            <span class="sliderr"></span>
-                                        </label>
-
-                                        <span class="slider round"></span>
-                                        <div class="dropdown pull-right dropdown-kebab-pf">
-                                            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                <span class="fa fa-ellipsis-v"></span>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
-                                                <li>
-                                                    <asp:HiddenField ID="HiddenField1" Value='<%# Eval("id") %>' runat="server" />
-                                                    <asp:LinkButton ID="btnEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("id") %>' Text="Edit" />
-                                                </li>
-                                                <li>
-                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Delete" CommandArgument='<%# Eval("id") %>' Text="Delete" />
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="list-view-pf-actions">
-                                        <asp:ImageButton ID="imgAddRule" runat="server" ImageUrl="../../images/plus_add.png" CommandName="AddRule" CommandArgument='<%# Eval("id") %>' Text="Delete" Style="width: 30px; height: 30px;" />
-                                    </div>
-
-                                    <div class="list-view-pf-main-info">
-                                        <%--<div class="list-view-pf-left">
-                                    <span class="fa fa-plane list-view-pf-icon-sm"></span>
-                                </div>--%>
-                                        <div class="list-view-pf-left">
-                                            <img src="../../images/icons/group_.png" style="width: 25px; height: 25px;" />
-                                        </div>
-                                        <div class="list-view-pf-body">
-                                            <!-- Group Description Section -->
-                                            <div class="list-view-pf-description">
-                                                <div class="list-view-pf-additional-info-item">
-                                                    <div class="header-item">
-                                                        <strong>Group Name</strong>
-                                                    </div>
-
-                                                    <div class="content-item">
-                                                        <strong><%# Eval("group_name") %></strong>
-                                                    </div>
-                                                </div>
-                                                <div class="list-view-pf-additional-info-item">
-                                                    <div class="header-item">
-                                                        <strong>Group Description</strong>
-                                                    </div>
-                                                    <div class="content-item">
-
-                                                        <strong><%# Eval("group_description") %></strong>
-                                                    </div>
-                                                </div>
-                                            
-
-                                            <!-- Additional Information Section (Dynamic Data) -->
-                                          
-
-                                                <!-- Rule Count Section -->
-                                                <div class="list-view-pf-additional-info-item">
-                                                    <div class="header-item">
-                                                        <strong>Rule Count</strong>
-                                                    </div>
-                                                    <div class="content-item">
-                                                        <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
-                                                        <strong><%# Eval("rule_count") %></strong>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Priority Section -->
-                                                <div class="list-view-pf-additional-info-item">
-                                                    <div class="header-item">
-                                                        <strong>Priority</strong>
-                                                    </div>
-                                                    <div class="content-item">
-                                                        <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
-                                                        <strong><%# Eval("priority") %></strong>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Status Section -->
-                                                <div class="list-view-pf-additional-info-item">
-                                                    <div class="header-item">
-                                                        <strong>Status</strong>
-                                                    </div>
-                                                    <div class="content-item">
-                                                        <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                                        <strong><%# Eval("isactive") %></strong>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <!-- Hidden Group ID for backend processing -->
-                                            <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="list-group" style="width: 98%">
-                                    <asp:Repeater ID="rptRule" runat="server" OnItemCommand="rptRule_ItemCommand" OnItemDataBound="rptRule_ItemDataBound">
-                                        <ItemTemplate>
-                                            <div class="sortable-item" data-id='<%# Eval("rule_id") %>'>
-                                                <div class="childGroup" data-id='<%# Eval("rule_id") %>'>
-                                                    <div class="list-group-item-container container-fluid hidden" style="background: #ffe8e5; padding: 0px !important; margin: 0px 0px 0px 12px;">
-                                                        <%--<div class="close">
-                                                            <span class="pficon pficon-close"></span>
-                                                        </div>--%>
-                                                        <div class="col-md-12 row" style="box-shadow: 0px 3px 5px 0px gray; margin: 0px 0px 0px 0px;">
-                                                            <%-- <div class="col-md-1"></div>--%>
-                                                            <div class="col-md-12">
-                                                                <div class="list-group-item-header_Next">
-                                                                    <div class="list-view-pf-actions">
-                                                                        <label class="switchh">
-                                                                            <input type="checkbox" runat="server" id="chkSliderRule" class="clssliderRule">
-                                                                            <span class="sliderr"></span>
-                                                                        </label>
-                                                                        <input type="hidden" id="hdRuleId" value='<%# Eval("rule_id") %>' />
-                                                                        <span class="slider round"></span>
-                                                                        <div class="dropdown pull-right dropdown-kebab-pf">
-                                                                            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                                                <span class="fa fa-ellipsis-v"></span>
-                                                                            </button>
-                                                                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
-                                                                                <li>
-                                                                                    <asp:HiddenField ID="HiddenField2" Value='<%# Eval("rule_id") %>' runat="server" />
-                                                                                    <asp:LinkButton ID="btnRuleEdit" runat="server" CommandName="EditRule" CommandArgument='<%# Eval("rule_id") %>' Text="Edit" />
-                                                                                </li>
-                                                                                <li>
-                                                                                    <asp:LinkButton ID="btnRuleDelete" runat="server" CommandName="DeleteRule" CommandArgument='<%# Eval("rule_id") %>' Text="Delete" />
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="list-view-pf-main-info">
-                                                                        <div class="list-view-pf-left">
-                                                                            <img src="../../images/icons/rules_1.png" style="width: 25px; height: 25px;" />
-                                                                        </div>
-
-                                                                        <div class="list-view-pf-body">
-                                                                            <!-- Rule Description Section -->
-                                                                            <div class="list-view-pf-description">
-                                                                                <div class="list-view-pf-additional-info-item">
-                                                                                    <div class="header-item">
-                                                                                        <strong>Rule Name</strong>
-                                                                                    </div>
-                                                                                    <div class="content-item">
-                                                                                        <strong><%# Eval("rulename") %></strong>
-                                                                                        <!-- Rule Name -->
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="list-view-pf-additional-info-item">
-                                                                                    <div class="header-item">
-                                                                                        <strong>Rule Description</strong>
-                                                                                    </div>
-                                                                                    <div class="content-item">
-                                                                                        <strong><%# Eval("ruledescription") %></strong>
-                                                                                        <!-- Rule Description -->
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="list-view-pf-additional-info-item">
-                                                                                    <div class="header-item">
-                                                                                        <strong>Switch Name</strong>
-                                                                                    </div>
-                                                                                    <div class="content-item">
-                                                                                        <strong><%# Eval("switchname") %></strong>
-                                                                                        <!-- Rule Description -->
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="list-view-pf-additional-info-item">
-                                                                                    <div class="header-item">
-                                                                                        <strong>Channel</strong>
-                                                                                    </div>
-                                                                                    <div class="content-item">
-                                                                                        <strong><%# Eval("channel") %></strong>
-                                                                                        <!-- Rule Description -->
-                                                                                    </div>
-                                                                                </div>
-                                                                            
-                                                                                <!-- Priority Section -->
-                                                                                <div class="list-view-pf-additional-info-item">
-                                                                                    <div class="header-item">
-                                                                                        <strong>Priority</strong>
-                                                                                    </div>
-                                                                                    <div class="content-item">
-                                                                                        <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
-                                                                                        <strong><%# Eval("priority") %></strong>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <!-- Status Section -->
-                                                                                <div class="list-view-pf-additional-info-item">
-                                                                                    <div class="header-item">
-                                                                                        <strong>Status</strong>
-                                                                                    </div>
-                                                                                    <div class="content-item">
-                                                                                        <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
-                                                                                        <strong><%# Eval("is_active") %></strong>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                                <div class="list-group-item-container_next container-fluid hidden">
-                                                                    <div class="row col-md-12">
-                                                                        <div class="col-md-6">
-
-                                                                            <div class="chart-container">
-                                                                                <canvas id="myChart_<%# Eval("rule_id") %>"></canvas>
-                                                                            </div>
-                                                                            <script>
-                                                                                // milind | 21Sep2024
-                                                                                var Success = <%# Eval("success_count") %>;
-                                                                                var Failure = <%# Eval("failure_count") %>;
-                                                                                var TechnicalFailure = <%# Eval("technical_failure_count") %>;
-                                                                                var TotalFailures = Failure + TechnicalFailure;
-                                                                                var OverallTotal = Success + TotalFailures;
-
-                                                                                var ruleId = '<%# Eval("rule_id") %>';
-                                                                                var ctx = document.getElementById('myChart_' + ruleId).getContext('2d');
-                                                                                var allZero = Success === 0 && Failure === 0 && TechnicalFailure === 0 && TotalFailures === 0 && OverallTotal === 0;
-                                                                                var chartData = allZero ? [1] : [Success, Failure, TechnicalFailure, TotalFailures, OverallTotal];
-
-                                                                                var backgroundColor = allZero ? ['rgba(173, 216, 230, 0.7)'] : [
-                                                                                    'rgba(76, 175, 80, 0.7)',    // Success (Green)
-                                                                                    'rgba(255, 99, 132, 0.7)',   // Failure (Red)
-                                                                                    'rgba(255, 165, 0, 0.7)',    // Technical Failure (Orange)
-                                                                                    'rgba(192, 192, 192, 0.7)',  // Total Failures (Gray)
-                                                                                    'rgba(0, 123, 255, 0.7)'     // Overall Total (Blue)
-                                                                                ];
-
-                                                                                var borderColor = allZero ? ['rgba(173, 216, 230,1.05)'] : [
-                                                                                    'rgba(76, 175, 80, 1)',      // Solid Green
-                                                                                    'rgba(255, 99, 132, 1)',     // Solid Red
-                                                                                    'rgba(255, 165, 0, 1)',      // Solid Orange
-                                                                                    'rgba(192, 192, 192, 1)',    // Solid Gray
-                                                                                    'rgba(0, 123, 255, 1)'       // Solid Blue
-                                                                                ];
-
-                                                                                var data = {
-                                                                                    labels: allZero ? ['No Data'] : ['Success', 'Failures', 'Technical Failures', 'Total Failures', 'Overall Total'],
-                                                                                    datasets: [{
-                                                                                        data: chartData,
-                                                                                        backgroundColor: backgroundColor,
-                                                                                        borderColor: borderColor,
-                                                                                        borderWidth: 1,
-                                                                                        hoverOffset: 15,
-                                                                                        tension: 0.4,
-                                                                                        pointRadius: 5,
-                                                                                        pointHoverRadius: 7,
-                                                                                        fill: true,
-                                                                                        lineTension: 0.2,
-                                                                                        rotation: 45,
-                                                                                        showLine: true,
-                                                                                        responsive: true,
-                                                                                        maintainAspectRatio: false,
-                                                                                        clip: true
-                                                                                    }]
-                                                                                };
-
-                                                                                var options = {
-                                                                                    responsive: true,
-                                                                                    maintainAspectRatio: false,
-                                                                                    plugins: {
-                                                                                        legend: {
-                                                                                            position: 'bottom',
-                                                                                            labels: {
-                                                                                                font: {
-                                                                                                    size: 15,
-                                                                                                    weight: 'bold'
-                                                                                                },
-                                                                                                color: '#333'
-                                                                                            }
-                                                                                        },
-                                                                                        title: {
-                                                                                            display: true,
-                                                                                            text: allZero ? 'No Data Available for Rule' : 'Rule Transactions Details',
-                                                                                            font: {
-                                                                                                size: 20,
-                                                                                                weight: 'bold'
-                                                                                            },
-                                                                                            color: '#333'
-                                                                                        },
-                                                                                        tooltip: {
-                                                                                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                                                                                            titleColor: '#fff',
-                                                                                            bodyColor: '#fff',
-                                                                                            borderColor: 'rgba(255, 255, 255, 0.5)',
-                                                                                            borderWidth: 1,
-                                                                                            callbacks: {
-                                                                                                label: function (tooltipItem) {
-                                                                                                    var dataset = tooltipItem.dataset;
-                                                                                                    var total = dataset.data.reduce((sum, value) => sum + value, 0);
-                                                                                                    var value = dataset.data[tooltipItem.dataIndex];
-                                                                                                    var percentage = ((value / total) * 100).toFixed(2);
-                                                                                                    return `${tooltipItem.label}: ${value} (${percentage}%)`;
-                                                                                                }
-                                                                                            }
-                                                                                        },
-                                                                                        datalabels: {
-                                                                                            display: true,
-                                                                                            anchor: 'center',
-                                                                                            align: 'center',
-                                                                                            formatter: function (value, context) {
-                                                                                                var total = context.dataset.data.reduce((sum, val) => sum + val, 0);
-                                                                                                var percentage = ((value / total) * 100).toFixed(2);
-                                                                                                return `${value} (${percentage}%)`;
-                                                                                            },
-                                                                                            color: '#fff',
-                                                                                            font: {
-                                                                                                weight: 'bold',
-                                                                                                size: '20'
-                                                                                            }
-                                                                                        },
-
-                                                                                        afterDraw: function (chart) {
-                                                                                            var ctx = chart.ctx;
-                                                                                            var width = chart.width;
-                                                                                            var height = chart.height;
-                                                                                            var centerX = width / 2;
-                                                                                            var centerY = height / 2;
-                                                                                            ctx.save();
-
-                                                                                            var centerText = allZero ? 'No Data Available' : OverallTotal;
-                                                                                            var fontSize = allZero ? "16px Arial" : "30px Arial";
-
-                                                                                            ctx.font = fontSize;
-                                                                                            ctx.fillStyle = '#333';
-                                                                                            ctx.textAlign = 'center';
-                                                                                            ctx.textBaseline = 'middle';
-                                                                                            ctx.fillText(centerText, centerX, centerY);
-                                                                                            ctx.restore();
-                                                                                        }
-                                                                                    },
-                                                                                    cutout: '50%',
-                                                                                    rotation: -0.1,
-                                                                                };
-
-                                                                                // Create the chart
-                                                                                var myChart = new Chart(ctx, {
-                                                                                    type: 'doughnut',
-                                                                                    data: data,
-                                                                                    options: options
-                                                                                });
-                                                                            </script>
-
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="details-container">
-                                                                                <h2 class="details-header">Overview - <%# Eval("rulename") %> </h2>
-                                                                                <%--<p class="sub-header">Comprehensive insights into your transaction metrics</p>--%>
-                                                                                <dl class="dl-horizontal" style="overflow: auto;">
-                                                                                    <dt>Rule Name</dt>
-                                                                                    <dd><%# Eval("rulename") %></dd>
-                                                                                    <dt>Rule Description</dt>
-                                                                                    <dd><%# Eval("rulename") %></dd>
-                                                                                    <dt>Switch Name</dt>
-                                                                                    <dd><%# Eval("switchname") %></dd>
-                                                                                    <dt>Created On</dt>
-                                                                                    <dd><%# Eval("createdon") %></dd>
-                                                                                    <%--<dt>Last Transaction</dt>
-                                                                                    <dd><%# Eval("lasttransaction") %></dd>--%>
-                                                                                </dl>
-                                                                                <%--<button class="btn btn-primary" onclick="alert('More details coming soon!')">View More Details</button>--%>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <style>
-                                                                        .chart-container {
-                                                                            position: relative;
-                                                                            width: 100%;
-                                                                            height: 300px;
-                                                                            margin: 20px 0;
-                                                                        }
-                                                                    </style>
-                                                                </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label for="lblTxnType" class="col-md-6 col-form-label">Txn Type</label>
+                                                <div class="col-md-4">
+                                                    <asp:DropDownList ID="ddlTxnType" runat="server" CssClass="maximus-select w-100" Width="100%" Visible="false">
+                                                        <asp:ListItem Text="--Select--" Value="" />
+                                                    </asp:DropDownList>
+                                                    <div class="multi-select-container">
+                                                        <div class="selected-items" id="selectedTItems" onclick="toggleDropdown('TDropdownContent', 'TSearchBox')">
+                                                            <span class="placeholderr">Select options...</span>
+                                                        </div>
+                                                        <div class="dropdown-content" id="TDropdownContent">
+                                                            <input type="text" id="TSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('TDropdownContent', 'TSearchBox')" />
+                                                            <div id="TDropdownItems">
+                                                                <asp:Literal ID="ltrtxntype" runat="server"></asp:Literal>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </ItemTemplate>
-                                    </asp:Repeater>
+                                        </div>
+
+                                        <!-- Toggle slider for FIN/Non-FIN visibility -->
+                                        <div class="col-md-3 text-center" style="margin-left: 13px; margin-top: -11px;">
+                                            <label class="switchh">
+                                                <input type="checkbox" id="ddlTxn" />
+                                                <span class="sliderr"></span>
+                                            </label>
+                                        </div>
+
+                                        <!-- Second Dropdown -->
+                                        <div class="col-md-4" id="dropdownFinNonFin" style="display: none; margin-left: -67px;">
+                                            <div class="form-group row">
+                                                <label for="lblTxnTypeFIN" class="col-md-6 col-form-label">FIN/NON-FIN</label>
+                                                <div class="col-md-6">
+                                                    <asp:DropDownList ID="ddlTxnTypeFIN" runat="server" CssClass="maximus-select w-100" Width="89%">
+                                                        <asp:ListItem Text="--Select--" Value="" />
+                                                        <asp:ListItem Text="FIN" Value="4,5,7,8" />
+                                                        <asp:ListItem Text="NONFIN" Value="2,3,6" />
+                                                    </asp:DropDownList>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
+                                        <div class="col-md-8">
+                                            <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="dropdown-custom" Width="100%">
+                                                <%--<asp:ListItem Text="--Select--" Value="" />
+                                <asp:ListItem Text="Maximus" Value="1" />
+                                <asp:ListItem Text="Sarvatra" Value="2" />
+                                <asp:ListItem Text="PayRakam" Value="3" />--%>
+                                            </asp:DropDownList>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3 align-items-center">
+                                        <!-- Percentage TextBox -->
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label for="txtPercentage" class="col-md-6 col-form-label">Percentage %</label>
+                                                <div class="col-md-6">
+                                                    <asp:TextBox ID="txtPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Toggle slider for FIN/Non-FIN visibility -->
+                                        <div class="col-md-2 text-center">
+                                            <label class="switchh">
+                                                <input type="checkbox" id="Switch" />
+                                                <span class="sliderr"></span>
+                                            </label>
+                                        </div>
+
+                                        <!-- Count TextBox -->
+                                        <div class="col-md-4" id="countDiv" style="display: none;">
+                                            <div class="form-group row">
+                                                <label for="txtCount" class="col-md-4 col-form-label">Count</label>
+                                                <div class="col-md-8">
+                                                    <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" />
+                                    </div>
+                                </div>
+                                <!-- Footer -->
+                                <div class="modal-footer">
+                                    <asp:Button ID="btnCreateRule" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreateRule_Click" OnClientClick="return changebtntextrule();" style="display: inline-block; position: relative;"/>
+                                    <asp:Button ID="btncreaterule_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
+                                    <asp:Button ID="btnCloseRule" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseRule_Click" data-bs-dismiss="modal" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+                    <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
+                </ContentTemplate>
+                <Triggers>
+                </Triggers>
+            </asp:UpdatePanel>
+            <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
+                <asp:PlaceHolder ID="headerPlaceholder" runat="server"></asp:PlaceHolder>
+                <asp:Repeater ID="rptrGroup" runat="server" OnItemCommand="rptrGroup_ItemCommand" OnItemDataBound="rptrGroup_ItemDataBound">
+
+                    <ItemTemplate>
+                        <div class="sortable-item" data-id='<%# Eval("id") %>'>
+                            <div class="mainGroup" data-id='<%# Eval("id") %>'>
+                                <asp:HiddenField ID="hd1" Value='<%# Eval("id") %>' runat="server" />
+                                <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
+                                    <div class="list-group-item">
+                                        <div class="list-group-item-header">
+                                            <div class="list-view-pf-expand">
+                                                <span class="fa fa-angle-right"></span>
+                                            </div>
+                                            <%-- <div class="list-view-pf-checkbox">
+                                        <input type="checkbox">
+                                    </div>--%>
+                                            <%-- <asp:ImageButton ID="imgAddRule" runat="server" ImageUrl="../../images/img-plus.jpg" AlternateText="Click me!" OnClick="imgAddRule_Click" />--%>
+
+
+                                            <div class="list-view-pf-actions" style="padding-top: 7px;">
+                                                <%--<button class="btn btn-default">Action</button>--%>
+
+                                                <label class="switchh">
+                                                    <input type="checkbox" runat="server" id="chkSlider" class="clsslider" onitemdatabound="">
+                                                    <span class="sliderr"></span>
+                                                </label>
+
+                                                <span class="slider round"></span>
+                                                <div class="dropdown pull-right dropdown-kebab-pf">
+                                                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        <span class="fa fa-ellipsis-v"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                                        <li>
+                                                            <asp:HiddenField ID="HiddenField1" Value='<%# Eval("id") %>' runat="server" />
+                                                            <asp:LinkButton ID="btnEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("id") %>' Text="Edit" />
+                                                        </li>
+                                                        <li>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Delete" CommandArgument='<%# Eval("id") %>' Text="Delete" />
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="list-view-pf-actions">
+                                                <asp:ImageButton ID="imgAddRule" runat="server" ImageUrl="../../images/plus_add.png" CommandName="AddRule" CommandArgument='<%# Eval("id") %>' Text="Delete" Style="width: 30px; height: 30px;" />
+                                            </div>
+
+                                            <div class="list-view-pf-main-info">
+                                                <%--<div class="list-view-pf-left">
+                                    <span class="fa fa-plane list-view-pf-icon-sm"></span>
+                                </div>--%>
+                                                <div class="list-view-pf-left">
+                                                    <img src="../../images/icons/group_.png" style="width: 25px; height: 25px;" />
+                                                </div>
+                                                <div class="list-view-pf-body">
+                                                    <!-- Group Description Section -->
+                                                    <div class="list-view-pf-description">
+                                                        <div class="list-view-pf-additional-info-item">
+                                                            <div class="header-item">
+                                                                <strong>Group Name</strong>
+                                                            </div>
+
+                                                            <div class="content-item">
+                                                                <strong><%# Eval("group_name") %></strong>
+                                                            </div>
+                                                        </div>
+                                                        <div class="list-view-pf-additional-info-item">
+                                                            <div class="header-item">
+                                                                <strong>Group Description</strong>
+                                                            </div>
+                                                            <div class="content-item">
+
+                                                                <strong><%# Eval("group_description") %></strong>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!-- Additional Information Section (Dynamic Data) -->
+
+
+                                                        <!-- Rule Count Section -->
+                                                        <div class="list-view-pf-additional-info-item">
+                                                            <div class="header-item">
+                                                                <strong>Rule Count</strong>
+                                                            </div>
+                                                            <div class="content-item">
+                                                                <img src="../../images/icons/rules_2.png" style="width: 25px; height: 25px;" />
+                                                                <strong><%# Eval("rule_count") %></strong>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Priority Section -->
+                                                        <div class="list-view-pf-additional-info-item">
+                                                            <div class="header-item">
+                                                                <strong>Priority</strong>
+                                                            </div>
+                                                            <div class="content-item">
+                                                                <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
+                                                                <strong><%# Eval("priority") %></strong>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Status Section -->
+                                                        <div class="list-view-pf-additional-info-item">
+                                                            <div class="header-item">
+                                                                <strong>Status</strong>
+                                                            </div>
+                                                            <div class="content-item">
+                                                                <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
+                                                                <strong><%# Eval("isactive") %></strong>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Hidden Group ID for backend processing -->
+                                                    <input type="hidden" id="hdnGroupId" value='<%# Eval("id") %>' />
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="list-group" style="width: 98%">
+                                            <asp:Repeater ID="rptRule" runat="server" OnItemCommand="rptRule_ItemCommand" OnItemDataBound="rptRule_ItemDataBound">
+                                                <ItemTemplate>
+                                                    <div class="sortable-item" data-id='<%# Eval("rule_id") %>'>
+                                                        <div class="childGroup" data-id='<%# Eval("rule_id") %>'>
+                                                            <div class="list-group-item-container container-fluid hidden" style="background: #ffe8e5; padding: 0px !important; margin: 0px 0px 0px 12px;">
+                                                                <%--<div class="close">
+                                                            <span class="pficon pficon-close"></span>
+                                                        </div>--%>
+                                                                <div class="col-md-12 row" style="box-shadow: 0px 3px 5px 0px gray; margin: 0px 0px 0px 0px;">
+                                                                    <%-- <div class="col-md-1"></div>--%>
+                                                                    <div class="col-md-12">
+                                                                        <div class="list-group-item-header_Next">
+                                                                            <div class="list-view-pf-actions">
+                                                                                <label class="switchh">
+                                                                                    <input type="checkbox" runat="server" id="chkSliderRule" class="clssliderRule">
+                                                                                    <span class="sliderr"></span>
+                                                                                </label>
+                                                                                <input type="hidden" id="hdRuleId" value='<%# Eval("rule_id") %>' />
+                                                                                <span class="slider round"></span>
+                                                                                <div class="dropdown pull-right dropdown-kebab-pf">
+                                                                                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                                        <span class="fa fa-ellipsis-v"></span>
+                                                                                    </button>
+                                                                                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                                                                        <li>
+                                                                                            <asp:HiddenField ID="HiddenField2" Value='<%# Eval("rule_id") %>' runat="server" />
+                                                                                            <asp:LinkButton ID="btnRuleEdit" runat="server" CommandName="EditRule" CommandArgument='<%# Eval("rule_id") %>' Text="Edit" />
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <asp:LinkButton ID="btnRuleDelete" runat="server" CommandName="DeleteRule" CommandArgument='<%# Eval("rule_id") %>' Text="Delete" />
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="list-view-pf-main-info">
+                                                                                <div class="list-view-pf-left">
+                                                                                    <img src="../../images/icons/rules_1.png" style="width: 25px; height: 25px;" />
+                                                                                </div>
+
+                                                                                <div class="list-view-pf-body">
+                                                                                    <!-- Rule Description Section -->
+                                                                                    <div class="list-view-pf-description">
+                                                                                        <div class="list-view-pf-additional-info-item">
+                                                                                            <div class="header-item">
+                                                                                                <strong>Rule Name</strong>
+                                                                                            </div>
+                                                                                            <div class="content-item">
+                                                                                                <strong><%# Eval("rulename") %></strong>
+                                                                                                <!-- Rule Name -->
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="list-view-pf-additional-info-item">
+                                                                                            <div class="header-item">
+                                                                                                <strong>Rule Description</strong>
+                                                                                            </div>
+                                                                                            <div class="content-item">
+                                                                                                <strong><%# Eval("ruledescription") %></strong>
+                                                                                                <!-- Rule Description -->
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="list-view-pf-additional-info-item">
+                                                                                            <div class="header-item">
+                                                                                                <strong>Switch Name</strong>
+                                                                                            </div>
+                                                                                            <div class="content-item">
+                                                                                                <strong><%# Eval("switchname") %></strong>
+                                                                                                <!-- Rule Description -->
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="list-view-pf-additional-info-item">
+                                                                                            <div class="header-item">
+                                                                                                <strong>Channel</strong>
+                                                                                            </div>
+                                                                                            <div class="content-item">
+                                                                                                <strong><%# Eval("channel") %></strong>
+                                                                                                <!-- Rule Description -->
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <!-- Priority Section -->
+                                                                                        <div class="list-view-pf-additional-info-item">
+                                                                                            <div class="header-item">
+                                                                                                <strong>Priority</strong>
+                                                                                            </div>
+                                                                                            <div class="content-item">
+                                                                                                <img src="../../images/icons/priority_.png" style="width: 25px; height: 25px;" />
+                                                                                                <strong><%# Eval("priority") %></strong>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <!-- Status Section -->
+                                                                                        <div class="list-view-pf-additional-info-item">
+                                                                                            <div class="header-item">
+                                                                                                <strong>Status</strong>
+                                                                                            </div>
+                                                                                            <div class="content-item">
+                                                                                                <img src="../../images/icons/status.png" style="width: 25px; height: 25px;" />
+                                                                                                <strong><%# Eval("is_active") %></strong>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list-group-item-container_next container-fluid hidden">
+                                                                            <div class="row col-md-12">
+                                                                                <div class="col-md-6">
+
+                                                                                    <div class="chart-container">
+                                                                                        <canvas id="myChart_<%# Eval("rule_id") %>"></canvas>
+                                                                                    </div>
+                                                                                    <script>
+                                                                                        // milind | 21Sep2024
+                                                                                        var Success = <%# Eval("success_count") %>;
+                                                                                        var Failure = <%# Eval("failure_count") %>;
+                                                                                        var TechnicalFailure = <%# Eval("technical_failure_count") %>;
+                                                                                        var TotalFailures = Failure + TechnicalFailure;
+                                                                                        var OverallTotal = Success + TotalFailures;
+
+                                                                                        var ruleId = '<%# Eval("rule_id") %>';
+                                                                                        var ctx = document.getElementById('myChart_' + ruleId).getContext('2d');
+                                                                                        var allZero = Success === 0 && Failure === 0 && TechnicalFailure === 0 && TotalFailures === 0 && OverallTotal === 0;
+                                                                                        var chartData = allZero ? [1] : [Success, Failure, TechnicalFailure, TotalFailures, OverallTotal];
+
+                                                                                        var backgroundColor = allZero ? ['rgba(173, 216, 230, 0.7)'] : [
+                                                                                            'rgba(76, 175, 80, 0.7)',    // Success (Green)
+                                                                                            'rgba(255, 99, 132, 0.7)',   // Failure (Red)
+                                                                                            'rgba(255, 165, 0, 0.7)',    // Technical Failure (Orange)
+                                                                                            'rgba(192, 192, 192, 0.7)',  // Total Failures (Gray)
+                                                                                            'rgba(0, 123, 255, 0.7)'     // Overall Total (Blue)
+                                                                                        ];
+
+                                                                                        var borderColor = allZero ? ['rgba(173, 216, 230,1.05)'] : [
+                                                                                            'rgba(76, 175, 80, 1)',      // Solid Green
+                                                                                            'rgba(255, 99, 132, 1)',     // Solid Red
+                                                                                            'rgba(255, 165, 0, 1)',      // Solid Orange
+                                                                                            'rgba(192, 192, 192, 1)',    // Solid Gray
+                                                                                            'rgba(0, 123, 255, 1)'       // Solid Blue
+                                                                                        ];
+
+                                                                                        var data = {
+                                                                                            labels: allZero ? ['No Data'] : ['Success', 'Failures', 'Technical Failures', 'Total Failures', 'Overall Total'],
+                                                                                            datasets: [{
+                                                                                                data: chartData,
+                                                                                                backgroundColor: backgroundColor,
+                                                                                                borderColor: borderColor,
+                                                                                                borderWidth: 1,
+                                                                                                hoverOffset: 15,
+                                                                                                tension: 0.4,
+                                                                                                pointRadius: 5,
+                                                                                                pointHoverRadius: 7,
+                                                                                                fill: true,
+                                                                                                lineTension: 0.2,
+                                                                                                rotation: 45,
+                                                                                                showLine: true,
+                                                                                                responsive: true,
+                                                                                                maintainAspectRatio: false,
+                                                                                                clip: true
+                                                                                            }]
+                                                                                        };
+
+                                                                                        var options = {
+                                                                                            responsive: true,
+                                                                                            maintainAspectRatio: false,
+                                                                                            plugins: {
+                                                                                                legend: {
+                                                                                                    position: 'bottom',
+                                                                                                    labels: {
+                                                                                                        font: {
+                                                                                                            size: 15,
+                                                                                                            weight: 'bold'
+                                                                                                        },
+                                                                                                        color: '#333'
+                                                                                                    }
+                                                                                                },
+                                                                                                title: {
+                                                                                                    display: true,
+                                                                                                    text: allZero ? 'No Data Available for Rule' : 'Rule Transactions Details',
+                                                                                                    font: {
+                                                                                                        size: 20,
+                                                                                                        weight: 'bold'
+                                                                                                    },
+                                                                                                    color: '#333'
+                                                                                                },
+                                                                                                tooltip: {
+                                                                                                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                                                                                    titleColor: '#fff',
+                                                                                                    bodyColor: '#fff',
+                                                                                                    borderColor: 'rgba(255, 255, 255, 0.5)',
+                                                                                                    borderWidth: 1,
+                                                                                                    callbacks: {
+                                                                                                        label: function (tooltipItem) {
+                                                                                                            var dataset = tooltipItem.dataset;
+                                                                                                            var total = dataset.data.reduce((sum, value) => sum + value, 0);
+                                                                                                            var value = dataset.data[tooltipItem.dataIndex];
+                                                                                                            var percentage = ((value / total) * 100).toFixed(2);
+                                                                                                            return `${tooltipItem.label}: ${value} (${percentage}%)`;
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                datalabels: {
+                                                                                                    display: true,
+                                                                                                    anchor: 'center',
+                                                                                                    align: 'center',
+                                                                                                    formatter: function (value, context) {
+                                                                                                        var total = context.dataset.data.reduce((sum, val) => sum + val, 0);
+                                                                                                        var percentage = ((value / total) * 100).toFixed(2);
+                                                                                                        return `${value} (${percentage}%)`;
+                                                                                                    },
+                                                                                                    color: '#fff',
+                                                                                                    font: {
+                                                                                                        weight: 'bold',
+                                                                                                        size: '20'
+                                                                                                    }
+                                                                                                },
+
+                                                                                                afterDraw: function (chart) {
+                                                                                                    var ctx = chart.ctx;
+                                                                                                    var width = chart.width;
+                                                                                                    var height = chart.height;
+                                                                                                    var centerX = width / 2;
+                                                                                                    var centerY = height / 2;
+                                                                                                    ctx.save();
+
+                                                                                                    var centerText = allZero ? 'No Data Available' : OverallTotal;
+                                                                                                    var fontSize = allZero ? "16px Arial" : "30px Arial";
+
+                                                                                                    ctx.font = fontSize;
+                                                                                                    ctx.fillStyle = '#333';
+                                                                                                    ctx.textAlign = 'center';
+                                                                                                    ctx.textBaseline = 'middle';
+                                                                                                    ctx.fillText(centerText, centerX, centerY);
+                                                                                                    ctx.restore();
+                                                                                                }
+                                                                                            },
+                                                                                            cutout: '50%',
+                                                                                            rotation: -0.1,
+                                                                                        };
+
+                                                                                        // Create the chart
+                                                                                        var myChart = new Chart(ctx, {
+                                                                                            type: 'doughnut',
+                                                                                            data: data,
+                                                                                            options: options
+                                                                                        });
+                                                                                    </script>
+
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="details-container">
+                                                                                        <h2 class="details-header">Overview - <%# Eval("rulename") %> </h2>
+                                                                                        <%--<p class="sub-header">Comprehensive insights into your transaction metrics</p>--%>
+                                                                                        <dl class="dl-horizontal" style="overflow: auto;">
+                                                                                            <dt>Rule Name</dt>
+                                                                                            <dd><%# Eval("rulename") %></dd>
+                                                                                            <dt>Rule Description</dt>
+                                                                                            <dd><%# Eval("rulename") %></dd>
+                                                                                            <dt>Switch Name</dt>
+                                                                                            <dd><%# Eval("switchname") %></dd>
+                                                                                            <dt>Created On</dt>
+                                                                                            <dd><%# Eval("createdon") %></dd>
+                                                                                            <%--<dt>Last Transaction</dt>
+                                                                                    <dd><%# Eval("lasttransaction") %></dd>--%>
+                                                                                        </dl>
+                                                                                        <%--<button class="btn btn-primary" onclick="alert('More details coming soon!')">View More Details</button>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <style>
+                                                                                .chart-container {
+                                                                                    position: relative;
+                                                                                    width: 100%;
+                                                                                    height: 300px;
+                                                                                    margin: 20px 0;
+                                                                                }
+                                                                            </style>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnAddGroup" EventName="Click" />
+            <asp:AsyncPostBackTrigger ControlID="btnAddRule" EventName="Click" />
+            <%-- <asp:AsyncPostBackTrigger ControlID="LinkButton1" EventName="Click" />--%>
+        </Triggers>
+    </asp:UpdatePanel>
+
     <script>
         $(document).ready(function () {
             // Row Checkbox Selection
@@ -1370,25 +1379,25 @@
             //    }
             //})
             // Click the list-view heading to expand/collapse a row
-    $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
-        if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
-            var $angleIcon = $(this).find(".fa");  // Find the angle icon in the header
-            var $parent = $(this).parent();
-            var $container = $parent.find(".list-group-item-container");
+            $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
+                if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+                    var $angleIcon = $(this).find(".fa");  // Find the angle icon in the header
+                    var $parent = $(this).parent();
+                    var $container = $parent.find(".list-group-item-container");
 
-            if ($parent.hasClass("list-view-pf-expand-active")) {
-                // Collapse: Change icon to fa-angle-right, hide container, and remove active class
-                $angleIcon.removeClass("fa-angle-down").addClass("fa-angle-right");
-                $container.addClass("hidden");
-                $parent.removeClass("list-view-pf-expand-active");
-            } else {
-                // Expand: Change icon to fa-angle-down, show container, and add active class
-                $angleIcon.removeClass("fa-angle-right").addClass("fa-angle-down");
-                $container.removeClass("hidden");
-                $parent.addClass("list-view-pf-expand-active");
-            }
-        }
-    });
+                    if ($parent.hasClass("list-view-pf-expand-active")) {
+                        // Collapse: Change icon to fa-angle-right, hide container, and remove active class
+                        $angleIcon.removeClass("fa-angle-down").addClass("fa-angle-right");
+                        $container.addClass("hidden");
+                        $parent.removeClass("list-view-pf-expand-active");
+                    } else {
+                        // Expand: Change icon to fa-angle-down, show container, and add active class
+                        $angleIcon.removeClass("fa-angle-right").addClass("fa-angle-down");
+                        $container.removeClass("hidden");
+                        $parent.addClass("list-view-pf-expand-active");
+                    }
+                }
+            });
 
             $("#pf-list-simple-expansion .list-group-item-header_Next").click(function (event) {
                 if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
@@ -1959,7 +1968,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     <%-- Model Group --%>
-    <script>
+    <%--<script>
         $(document).ready(function () {
             var showModal = document.getElementById('<%= hdnShowModalG.ClientID %>').value;
 
@@ -1968,9 +1977,42 @@ document.addEventListener('DOMContentLoaded', function () {
                 exampleModal.show();
             }
         });
+    </script>--%>
+    <script>
+        
+        function checkModal() {
+            $('.modal-backdrop').remove();
+            const showModal = document.getElementById('<%= hdnShowModalG.ClientID %>').value;
+            console.log(showModal)
+            if (showModal === "true") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.show();
+            }
+            else if (showModal === "false") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.hide();
+                $('.modal-backdrop').remove();
+            }
+        }
+
+        function changebtntext() {
+            console.log('button clicked by client evetn...')
+            const submitButton = document.getElementById('<%= btnCreGroup.ClientID %>');
+            submitButton.hidden = true;
+
+            const submitButton_Disabled = document.getElementById('<%= btncreategroup_disabled.ClientID %>');
+            submitButton_Disabled.style.visibility = 'visible';
+            submitButton_Disabled.value = 'Submitting...';
+            return true;
+        }
+        
+        // Run the checkModal function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkModal();
+        });
     </script>
     <%-- Model Rule --%>
-    <script>
+    <%--<script>
         $(document).ready(function () {
             var showModal = document.getElementById('<%= hdnShowModalR.ClientID %>').value;
 
@@ -1979,7 +2021,71 @@ document.addEventListener('DOMContentLoaded', function () {
                 exampleModalR.show();
             }
         });
-    </script>
+    </script>--%>
+    <%--<script>
+        // Function to show the modal if triggered
+        function checkModalRule() {
+            //alert('Hi')
+            const showModal = document.getElementById('<%= hdnShowModalR.ClientID %>').value;
+            if (showModal === "true") {
+                const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
+                modal.show();
+            }
+        }
+
+        // Run the checkModal function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkModalRule();
+        });
+    </script>--%>
+    <script>
+    // Function to show or hide the modal if triggered
+        function checkModalRule() {
+        $('.modal-backdrop').remove();
+        const showModal = document.getElementById('<%= hdnShowModalR.ClientID %>').value;
+        
+        if (showModal === "true") {
+            // If showModal is true, show the modal
+            const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
+            modal.show();
+        }
+        else if (showModal === "false") {
+            // If showModal is false, hide the modal and remove any backdrops
+            const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
+            modal.hide();
+            $('.modal-backdrop').remove(); // Remove the backdrop after hiding the modal
+        }
+    }
+
+    // Function to change button text and disable it
+    function changebtntextrule() {
+        console.log('Button clicked by client event...');
+        
+        const submitButton = document.getElementById('<%= btnCreateRule.ClientID %>');
+        submitButton.hidden = true; // Hide the original submit button
+        
+        const submitButton_Disabled = document.getElementById('<%= btncreaterule_disabled.ClientID %>');
+        submitButton_Disabled.style.visibility = 'visible'; // Make the "Submitting..." button visible
+        submitButton_Disabled.value = 'Submitting...'; // Change the button text
+
+        return true; // Allow the postback to continue
+    }
+
+    // Run the checkModal function after every partial postback
+    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+        checkModalRule();
+    });
+</script>
+
+
+    <%--<script type="text/javascript">
+        function hideDeleteModal() {
+            alert('Hi')
+            var exampleModalDelete = new bootstrap.Modal(document.getElementById('exampleModal'));
+            exampleModalDelete.hide();
+        }
+    </script>--%>
+
     <script>
         document.getElementById("toggleButton").addEventListener("click", function (event) {
             event.preventDefault(); // Prevent form submission
