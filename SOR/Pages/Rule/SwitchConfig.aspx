@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SOR.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="SwitchConfig.aspx.cs" Inherits="SOR.Pages.Rule.SwitchConfig" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link rel="stylesheet" href="../../v3/assets/css/patternfly-adjusted.min.css">
@@ -787,6 +787,15 @@
     <div class="breadHeader">
         <h5 class="page-title" style="font-size: larger">Switch Configuration</h5>
     </div>
+    <asp:Panel ID="upPanel" runat="server" HorizontalAlign="Center" Width="100%">
+        <asp:UpdateProgress ID="upContentBodyUpdateProgress" runat="server" AssociatedUpdatePanelID="upnlSwitch">
+            <ProgressTemplate>
+                <div style="width: 100%; height: 100%; opacity: 0.8; background-color: black; position: fixed; top: 0; left: 0">
+                    <img alt="" id="progressImage1" style="margin-top: 20%; width:115px; height:50px;" src='<%=Page.ResolveClientUrl("../../Images/loading2_1.gif") %>' />
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+    </asp:Panel>
     <asp:UpdatePanel ID="upnlSwitch" runat="server">
         <ContentTemplate>
             <%--<div class="row">
@@ -1444,6 +1453,7 @@
             <%-- <asp:AsyncPostBackTrigger ControlID="LinkButton1" EventName="Click" />--%>
         </Triggers>
     </asp:UpdatePanel>
+    <cc1:ModalPopupExtender ID="mpeProgress" runat="server" TargetControlID="upPanel" PopupControlID="upContentBodyUpdateProgress" BackgroundCssClass="modalBackground" DropShadow="false" />
     <script>
         var prm = Sys.WebForms.PageRequestManager.getInstance();
         if (prm != null) {
