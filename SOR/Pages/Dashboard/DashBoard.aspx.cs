@@ -95,7 +95,6 @@ namespace SOR.Pages.Dashboard
 
                 try
                 {
-
                     if (txnDetails.Tables.Contains("Txnsummarychart"))
                     {
                         var txn = txnDetails.Tables["Txnsummarychart"].AsEnumerable().Select(t => new
@@ -308,9 +307,11 @@ namespace SOR.Pages.Dashboard
                         SwitchLteralControl.Text = sb.ToString();
                     }
                 }
-                catch (Exception Ex)
+                catch (Exception ex)
                 {
-
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
+                    ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showWarning('Something went wrong. Try again', 'Warning');", true);
                 }
                 try
                 {

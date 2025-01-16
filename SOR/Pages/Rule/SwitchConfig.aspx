@@ -101,7 +101,7 @@
         }
     </style>
 
-    <script>
+    <%--<script>
         $(document).ready(function () {
 
             $('.clsslider').change(function () {
@@ -131,9 +131,51 @@
                 });
             });
         });
-    </script>
-
+    </script>--%>
     <script>
+    jQuery.noConflict();
+    jQuery(function ($) {
+        // Function to initialize event handlers
+        function initializeEventHandlers() {
+            $('.clsslider').change(function () {
+                var isChecked = $(this).is(':checked');
+                var hdnGroupId = $(this).closest('.list-group-item').find('input[type="hidden"]').val();
+
+                $(this).prop('disabled', true);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'SwitchConfig.aspx/ToggleSlider',
+                    data: JSON.stringify({ IsChecked: isChecked, Id: hdnGroupId }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (response) {
+                        var data = JSON.parse(response.d);
+                        //alert(data.StatusMessage);
+                        showSuccess(data.StatusMessage);
+                        $('.clsslider').prop('disabled', false);
+                    },
+                    error: function (error) {
+                        alert('An error occurred: ' + error.responseText);
+                        showWarning(error.responseText); // Ensure error message is from response
+                        $('.clsslider').prop('disabled', false);
+                    }
+                });
+            });
+        }
+
+        // Initialize event handlers
+        initializeEventHandlers();
+
+        // Reinitialize event handlers after each partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            initializeEventHandlers();
+        });
+    });
+</script>
+
+
+    <%--<script>
         $(document).ready(function () {
             $('#Switch').change(function () {
                 var isChecked = $(this).is(':checked');
@@ -185,8 +227,75 @@
                 });
             });
         });
-    </script>
+    </script>--%>
+
     <script>
+    $(document).ready(function () {
+        // Bind the event for the Switch checkbox
+        bindSwitchEvent();
+
+        // Rebind the event handler after each partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            bindSwitchEvent();
+        });
+
+        // Function to bind the Switch checkbox event
+        function bindSwitchEvent() {
+            $('#Switch').change(function () {
+                var isChecked = $(this).is(':checked');
+                debugger;
+                // Disable the checkbox while processing
+                $(this).prop('disabled', true);
+
+                // AJAX call to the server to determine which panel to show and which textbox to clear
+                $.ajax({
+                    type: 'POST',
+                    url: 'SwitchConfig.aspx/ToggleSwitch',
+                    data: JSON.stringify({ IsChecked: isChecked }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (response) {
+                        var result = response.d;
+
+                        // Get the client IDs of the panels and textboxes
+                        var pnlPercentageID = '<%= pnlPercentage.ClientID %>';
+                        var pnlCountID = '<%= pnlCount.ClientID %>';
+                        var txtSwitchPercentageID = '<%= txtSwitchPercentage.ClientID %>';
+                        var txtCountID = '<%= txtCount.ClientID %>';
+
+                        // Check the result and show/hide panels accordingly
+                        if (result === "showCount-clearPercentage") {
+                            // Show Count panel, hide Percentage panel, and clear Percentage textbox
+                            $('#' + pnlPercentageID).hide();
+                            $('#' + pnlCountID).show();
+                            $('#' + txtSwitchPercentageID).val(''); // Clear Percentage textbox
+                        } else if (result === "showPercentage-clearCount") {
+                            // Show Percentage panel, hide Count panel, and clear Count textbox
+                            $('#' + pnlCountID).hide();
+                            $('#' + pnlPercentageID).show();
+                            $('#' + txtCountID).val(''); // Clear Count textbox
+                        } else {
+                            console.log("Unexpected result:", result);
+                        }
+
+                        // Enable the checkbox after processing
+                        $('#Switch').prop('disabled', false);
+                    },
+                    error: function (error) {
+                        console.error('An error occurred:', error);
+                        alert('An error occurred: ' + error.responseText);
+
+                        // Enable the checkbox after an error
+                        $('#Switch').prop('disabled', false);
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+
+    <%--<script>
         $(document).ready(function () {
             $('#Switchh').change(function () {
                 var isChecked = $(this).is(':checked');
@@ -238,7 +347,74 @@
                 });
             });
         });
-    </script>
+    </script>--%>
+
+    <script>
+    jQuery.noConflict();
+    jQuery(function ($) {
+        // Function to initialize event handlers
+        function initializeSwitchHandler() {
+            $('#Switchh').change(function () {
+                var isChecked = $(this).is(':checked');
+
+                // Disable the checkbox while processing (optional)
+                $(this).prop('disabled', true);
+
+                // AJAX call to the server to determine which panel to show and which textbox to clear
+                $.ajax({
+                    type: 'POST',
+                    url: 'SwitchConfig.aspx/ToggleSwitchh',
+                    data: JSON.stringify({ IsChecked: isChecked }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (response) {
+                        var result = response.d;
+
+                        // Get the client IDs of the panels and textboxes
+                        var pnlPercentageID = '<%= Panel1.ClientID %>';
+                        var pnlCountID = '<%= Panel2.ClientID %>';
+                        var txtSwitchPercentageID = '<%= TextBox3.ClientID %>';
+                        var txtCountID = '<%= TextBox4.ClientID %>';
+
+                        // Check the result and show/hide panels accordingly
+                        if (result === "showCount-clearPercentage") {
+                            // Show Count panel, hide Percentage panel, and clear Percentage textbox
+                            $('#' + pnlPercentageID).hide();
+                            $('#' + pnlCountID).show();
+                            $('#' + txtSwitchPercentageID).val(''); // Clear Percentage textbox
+                        } else if (result === "showPercentage-clearCount") {
+                            // Show Percentage panel, hide Count panel, and clear Count textbox
+                            $('#' + pnlCountID).hide();
+                            $('#' + pnlPercentageID).show();
+                            $('#' + txtCountID).val(''); // Clear Count textbox
+                        } else {
+                            console.log("Unexpected result:", result);
+                        }
+
+                        // Re-enable the checkbox after processing
+                        $('#Switchh').prop('disabled', false);
+                    },
+                    error: function (error) {
+                        console.error('An error occurred:', error);
+                        alert('An error occurred: ' + error.responseText);
+
+                        // Re-enable the checkbox after an error
+                        $('#Switchh').prop('disabled', false);
+                    }
+                });
+            });
+        }
+
+        // Initialize the event handler when the page loads
+        initializeSwitchHandler();
+
+        // Reinitialize the event handler after each partial postback (due to UpdatePanel)
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            initializeSwitchHandler();
+        });
+    });
+</script>
+
 
 
     <%--<script>
