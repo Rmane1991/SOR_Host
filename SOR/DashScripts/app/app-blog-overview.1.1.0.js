@@ -139,9 +139,6 @@
         var transactionsString = $('#hiddenTransactions').val();
         var transactions = [];
 
-        var SummaryDataString = $('#hiddenSummaryData').val();
-        var SummaryDataTxn = [];
-
         var BcWiseDataString = $('#hiddenBCwiseData').val();
         var BCWiseDataTxn = [];
 
@@ -150,6 +147,7 @@
 
         var RevenueDataString = $('#hiddenRevenueData').val();
         var RevenueDataTxn = [];
+
         RevenueDataString = RevenueDataString.replace(/\\/g, '');
         RevenueDataTxn = JSON.parse(RevenueDataString);
 
@@ -157,13 +155,10 @@
             try {
 
                 transactionsString = transactionsString.replace(/\\/g, '');
-                SummaryDataString = SummaryDataString.replace(/\\/g, '');
                 BcWiseDataString = BcWiseDataString.replace(/\\/g, '');
                 SwitchWiseDataString = SwitchWiseDataString.replace(/\\/g, '');
 
-
                 transactions = JSON.parse(transactionsString);
-                SummaryDataTxn = JSON.parse(SummaryDataString);
                 BCWiseDataTxn = JSON.parse(BcWiseDataString);
                 SwitchWiseDataTxn = JSON.parse(SwitchWiseDataString);
 
@@ -179,10 +174,6 @@
         var currentMonthData = transactions.map(t => t.CurrentMonthCount);
         var PreviousTxnDays = transactions.map(t => t.PreviousDay);
         var previousMonthData = transactions.map(t => t.PreviousMonthCount);*/
-
-        var SwitchTotalTxn = SummaryDataTxn.map(t => t.BC);
-        var BCTotalTxn = SummaryDataTxn.map(t => t.Switch);
-        var RuleTotalTxn = SummaryDataTxn.map(t => t.Rule);
 
         var SwitchName = SwitchWiseDataTxn.map(t => t.SwitchName);
         var SwitchCounts = SwitchWiseDataTxn.map(t => t.Counts);
@@ -289,6 +280,14 @@
         var PreviousTxnDays = transactions.map(t => t.PreviousDay);
         var previousMonthData = transactions.map(t => t.PreviousMonthCount);
 
+        // Calculate averages Weekly
+        const currentAvg = 200;//(CurrentTxnDays.reduce((a, b) => a + b, 0) / CurrentTxnDays.length).toFixed(2);
+        const pastAvg = 100;//(PreviousTxnDays.reduce((a, b) => a + b, 0) / PreviousTxnDays.length).toFixed(2);
+
+        // Calculate averages Monthly
+        const currentMonthAvg_Monthly = 100;//(currentMonthData.reduce((a, b) => a + b, 0) / currentMonthData.length).toFixed(2);
+        const pastMonthAvg_Monthly = (previousMonthData.reduce((a, b) => a + b, 0) / previousMonthData.length).toFixed(2);
+
         var bouData = {
             labels: CurrentTxnDays,
             datasets: [{
@@ -317,7 +316,25 @@
                 pointRadius: 3,
                 pointHoverRadius: 5,
                 pointBorderColor: 'rgba(255,65,105,1)',
-            }]
+            },
+
+            // Add average lines
+            {
+                label: 'Current Avg',
+                data: Array(30).fill(currentAvg),
+                borderColor: 'rgba(0,123,255,1)',
+                borderWidth: 2,
+                fill: false,
+                pointRadius: 0,
+            }, {
+                label: 'Past Avg',
+                data: Array(30).fill(pastAvg),
+                borderColor: 'rgba(255,65,105,1)',
+                borderWidth: 2,
+                fill: false,
+                pointRadius: 0,
+            },
+            ]
         };
 
         var bouOptions = {
@@ -342,7 +359,7 @@
                         minRotation: 0,
                         callback: function (tick, index) {
                             var totalLabels = CurrentTxnDays.length;
-                            if (totalLabels <= 7) {
+                            if (totalLabels <= 13) {
                                 return tick;
                             }
                             return index % 7 === 0 ? tick : '';
@@ -352,19 +369,25 @@
                 }],
                 yAxes: [{
                     ticks: {
-                        suggestedMax: 45,
+                        suggestedMax: 10,
                         callback: function (tick) {
+                            let value;
+
                             if (tick >= 1e9) {
-                                return (tick / 1e9).toFixed(1) + 'B'; // Billions
+                                value = tick / 1e9;
+                                return (value % 1 === 0 ? Math.round(value / 1000000000) : value.toFixed(1)) + 'B'; // Billions
                             } else if (tick >= 1e6) {
-                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                                value = tick / 1e6;
+                                return (value % 1 === 0 ? Math.round(value / 1000000) : value.toFixed(1)) + 'M'; // Millions
                             } else if (tick >= 1e3) {
-                                return (tick / 1e3).toFixed(1) + 'K'; // Thousands
+                                value = tick / 1e3;
+                                return (value % 1 === 0 ? Math.round(value / 1000) : value.toFixed(1)) + 'K'; // Thousands
                             } else {
                                 return tick;
                             }
                         }
                     }
+
                 }]
             },
             hover: {
@@ -484,60 +507,7 @@
             options: ubdOptions
         });
 
-        //SwitchCounts = [10, 20, 30, 40]; // Replace with your counts
-        //SwitchPercent = [25, 50, 15, 10]; // Replace with your percentages
-        //SwitchName = ["Switch A", "Switch B", "Switch C", "Switch D"]; // Replace with labels
 
-        //var hasData = SwitchCounts.some(count => count > 0);
-
-        //// Dynamic data
-        //const chartData = hasData ? SwitchPercent.map((percent, index) => ({
-        //    name: SwitchName[index],
-        //    y: percent,
-        //    color: `rgba(0,123,255,${0.3 + (index * 0.2)})` // Adjusting opacity dynamically
-        //})) : [{ name: "No Data", y: 1, color: 'rgba(144,238,144,0.5)' }];
-
-        //// Highcharts Donut Chart
-        //const chartContainer = document.getElementsByClassName('blog-users-by-device')[0];
-
-        //Highcharts.chart(chartContainer, {
-        //    chart: {
-        //        type: 'pie'
-        //    },
-        //    title: {
-        //        text: hasData ? 'Switch Data Distribution' : 'No Data Available'
-        //    },
-        //    credits: {
-        //        enabled: false // Correct placement to remove the Highcharts watermark
-        //    },
-        //    plotOptions: {
-        //        pie: {
-        //            innerSize: '75%', // Creates the donut shape
-        //            dataLabels: {
-        //                enabled: true,
-        //                format: '<b>{point.name}</b>: {point.y}%' // Label format
-        //            },
-        //            borderWidth: 2,
-        //            borderColor: '#ffffff'
-        //        }
-        //    },
-        //    tooltip: {
-        //        formatter: function () {
-        //            return `<b>${this.point.name}</b>: ${this.point.y}%`;
-        //        }
-        //    },
-        //    series: [{
-        //        name: 'Percentage',
-        //        data: chartData
-        //    }],
-        //    legend: {
-        //        enabled: false // Hide legend
-        //    }
-        //});
-
-
-
-        //End
 
 
         //Bar graph for BC-wise Summary (ApexChart)
@@ -615,7 +585,7 @@
                 },
                 yaxis: {
                     title: {
-                        text: 'Business Correspondence',
+                        text: 'Business Correspondent',
                         style: {
                             fontSize: '14px',
                             fontWeight: 'bold',
@@ -675,107 +645,98 @@
         })();
         // End Bar graph for BC-wise Summary (ApexChart)
 
-
-        /*Revenue Chart (ApexChart)*/
-        //window.RevenueComboChart = (function () {
-        //    var revenueData = RevenueDataTxn.map(t => t.TotalRevenue);
-        //    var conversionRateData = RevenueDataTxn.map(t => t.ConversionRate);
-        //    var categories = RevenueDataTxn.map(t => t.PeriodName);
-
-        //    var options = {
-        //        series: [
-        //            {
-        //                name: 'Revenue',
-        //                type: 'bar',
-        //                data: revenueData
-        //            },
-        //            {
-        //                name: 'Conversion Rate',
-        //                type: 'line',
-        //                data: conversionRateData
-        //            }
-        //        ],
-        //        chart: {
-        //            height: 400,
-        //            type: 'line',
-        //            zoom: {
-        //                enabled: false
-        //            }
-        //        },
-        //        dataLabels: {
-        //            enabled: true,
-        //            style: {
-        //                fontSize: '12px',
-        //                fontWeight: 'bold',
-        //                colors: ['#000'] // Color of the labels
-        //            },
-        //            dropShadow: {
-        //                enabled: true,
-        //                top: 2,
-        //                left: 2,
-        //                blur: 4,
-        //                opacity: 0.3
-        //            },
-        //            offsetY: -10
-        //        },
-        //        stroke: {
-        //            width: [0, 3]
-        //        },
-        //        title: {
-        //            text: 'Revenue and Conversion Rate Summary'
-        //        },
-        //        xaxis: {
-        //            categories: categories,
-        //        },
-        //        yaxis: [
-        //            {
-        //                title: {
-        //                    text: 'Revenue (₹)'
-        //                }
-        //            },
-        //            {
-        //                opposite: true,
-        //                title: {
-        //                    text: 'Conversion Rate (%)'
-        //                }
-        //            }
-        //        ],
-        //        tooltip: {
-        //            shared: true,
-        //            intersect: false
-        //        },
-        //        // Optional annotations section entirely
-        //        plotOptions: {
-        //            bar: {
-        //                dataLabels: {
-        //                    position: 'top'
-        //                }
-        //            }
-        //        }
-        //    };
-
-        //    var chart = new ApexCharts(document.querySelector("#overview-RevenueSummary"), options);
-        //    chart.render();
-        //    return chart;
-        //})();
-
         /*Revenue Chart (ApexChart)*/
         window.RevenueComboChart = (function () {
             var revenueData = RevenueDataTxn.map(t => t.TotalRevenue);
-            var conversionRateData = RevenueDataTxn.map(t => t.ConversionRate);
-            var categories = RevenueDataTxn.map(t => t.PeriodName);
-
+            var TimePeriodName = RevenueDataTxn.map(t => t.PeriodName); // Current Time Periods
+            var previousRevenueData = RevenueDataTxn.map(t => t.PreviousTotalRevenue); // Previous Revenue Data
+            var previousTimePeriod = RevenueDataTxn.map(t => t.PreviousPeriodName); // Previous Time Periods
             var options = {
                 series: [
                     {
                         name: 'Revenue',
                         type: 'bar',
-                        data: revenueData
+                        data: revenueData,
+                        dataLabels: {
+                            enabled: true,
+                            position: 'top',
+                            style: {
+                                fontSize: '12px',
+                                fontWeight: 'bold',
+                                colors: ['#000']
+                            },
+                            dropShadow: {
+                                enabled: true,
+                                top: 2,
+                                left: 2,
+                                blur: 4,
+                                opacity: 0.3
+                            },
+                            offsetY: -10,
+                            formatter: function (value) {
+                                return value.toFixed(0); // Display the value as an integer
+                            }
+                        }
                     },
                     {
-                        name: 'Conversion Rate',
+                        name: 'Previous Revenue',
                         type: 'line',
-                        data: conversionRateData
+                        data: previousRevenueData, // Line chart will show previous revenue data
+                        dataLabels: {
+                            enabled: true,
+                            style: {
+                                fontSize: '12px',
+                                fontWeight: 'bold',
+                                colors: ['#000']
+                            },
+                            dropShadow: {
+                                enabled: true,
+                                top: 2,
+                                left: 2,
+                                blur: 4,
+                                opacity: 0.3
+                            },
+                            offsetX: 5,
+                            offsetY: -5
+                        },
+                        stroke: {
+                            width: 3,              // Line thickness
+                            curve: 'smooth',       // Smooth curve for the line
+                            dashArray: [1, 3],     // Dotted line (small dash, large gap)
+                            lineCap: 'round'       // Rounded edges for dashes
+                        },
+                        markers: {
+                            size: 5,
+                            hover: {
+                                size: 7
+                            }
+                        },
+                        tooltip: {
+                            shared: true,
+                            intersect: false,
+                            y: {
+                                formatter: function (value, { seriesIndex, dataPointIndex }) {
+                                    const previousPeriod = previousTimePeriod[dataPointIndex] || 'N/A';
+                                    const previousRevenue = previousRevenueData[dataPointIndex] || 0;
+                                    if (seriesIndex === 0) {
+                                        return `Current Revenue: ₹${value.toFixed(0)}`;
+                                    } else if (seriesIndex === 1) {
+                                        return `Previous Revenue: ₹${previousRevenue.toFixed(0)}<br>Previous Period: ${previousPeriod}`;
+                                    }
+                                }
+                            },
+                            title: {
+                                formatter: function (tooltipItem) {
+                                    var index = tooltipItem[0].dataPointIndex;
+                                    var seriesIndex = tooltipItem[0].seriesIndex;
+                                    if (seriesIndex === 0) {
+                                        return `Date: ${TimePeriodName[index]}`;
+                                    } else if (seriesIndex === 1) {
+                                        return `Date: ${previousTimePeriod[index]}`;
+                                    }
+                                }
+                            }
+                        }
                     }
                 ],
                 chart: {
@@ -785,30 +746,15 @@
                         enabled: false
                     }
                 },
-                dataLabels: {
-                    enabled: true,
-                    style: {
-                        fontSize: '12px',
-                        fontWeight: 'bold',
-                        colors: ['#000'] // Color of the labels
-                    },
-                    dropShadow: {
-                        enabled: true,
-                        top: 2,
-                        left: 2,
-                        blur: 4,
-                        opacity: 0.3
-                    },
-                    offsetY: -10
-                },
                 stroke: {
-                    width: [0, 3]
+                    width: [0, 3],
+                    curve: 'smooth'
                 },
                 title: {
-                    text: 'Revenue and Conversion Rate Summary'
+                    text: ''
                 },
                 xaxis: {
-                    categories: categories,
+                    categories: TimePeriodName, // Use TimePeriodName for both x-axes (bar and line)
                 },
                 yaxis: [
                     {
@@ -818,21 +764,15 @@
                         labels: {
                             formatter: function (value) {
                                 if (value >= 1000000000) {
-                                    return (value / 1000000000).toFixed(1) + "B"; // Billions
+                                    return (value % 1 === 0 ? Math.round(value / 1000000000) : value.toFixed(1)) + 'B'; // Billions
                                 } else if (value >= 1000000) {
-                                    return (value / 1000000).toFixed(1) + "M"; // Millions
+                                    return (value % 1 === 0 ? Math.round(value / 1000000) : value.toFixed(1)) + "M"; // Millions
                                 } else if (value >= 1000) {
-                                    return (value / 1000).toFixed(1) + "K"; // Thousands
+                                    return (value % 1 === 0 ? Math.round(value / 1000) : value.toFixed(1)) + "K"; // Thousands
                                 } else {
-                                    return value; // No suffix for smaller values
+                                    return value;
                                 }
                             }
-                        }
-                    },
-                    {
-                        opposite: true,
-                        title: {
-                            text: 'Conversion Rate (%)'
                         }
                     }
                 ],
@@ -840,7 +780,6 @@
                     shared: true,
                     intersect: false
                 },
-                // Optional annotations section entirely
                 plotOptions: {
                     bar: {
                         dataLabels: {
@@ -854,7 +793,6 @@
             chart.render();
             return chart;
         })();
-        /*  End Revenue Chart */
 
         /*  End Revenue Chart */
 

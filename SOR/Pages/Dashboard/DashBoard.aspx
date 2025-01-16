@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--for Chart.js 4.x -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@0.5.7"></script>
     <!--for ApexChart -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!--for Google chart -->
@@ -57,6 +58,93 @@
         }
     </style>
 
+    <style>
+        /*Loader for chart seperatly*/
+        .loading-wrapper-TransactionSummary {
+            position: absolute; /* Position loader inside the parent container */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            display: flex;
+            pointer-events: none;
+        }
+
+        .loading-wrapper-BCTransactionSummary {
+            position: absolute; /* Position loader inside the parent container */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            display: flex;
+            pointer-events: none;
+        }
+
+        .loading-wrapper-RevenueSummary {
+            position: absolute; /* Position loader inside the parent container */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            display: flex;
+            pointer-events: none;
+        }
+
+        /*common for all chart*/
+
+        .loading-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+            width: 100%;
+            height: 100%;
+        }
+
+            .loading-text img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Ensure the parent container is positioned relative */
+        .card-body {
+            position: relative;
+            overflow: hidden;
+        }
+        /* ENd Loader*/
+    </style>
+
+
+
+
+
+
     <%-- *Hide left bar menu defult*--%>
     <%--<script>
         $(document).ready(function () {
@@ -92,6 +180,14 @@
                 </div>
             </div>
         </div>
+        <!-- Loading Spinner -->
+        <%--<div id="loading-wrapper" style="display: none;">
+            <div id="loading-text">
+                <img src="../../images/DashbordLoder.gif" alt="Loading...">
+            </div>
+            <div id="loading-content"></div>
+        </div>--%>
+
         <!-- End Page Header -->
         <!-- Small Stats Blocks -->
         <div class="row">
@@ -116,7 +212,7 @@
                     <div class="card-body p-0 d-flex">
                         <div class="d-flex flex-column m-auto">
                             <div class="stats-small__data text-center">
-                                <span class="stats-small__label">BCs</span>
+                                <span class="stats-small__label text-uppercase">BCs</span>
                                 <h6 id="bcCount" runat="server" class="stats-small__value count my-3"></h6>
                             </div>
                             <div class="stats-small__data">
@@ -185,30 +281,36 @@
                         <h6 class="m-0">Transaction Summary</h6>
                     </div>
                     <div class="card-body pt-0">
-                        <div class="row border-bottom py-2 bg-light">
-                            <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
-                                <div class="btn-group" data-attribute="TransactionSummary">
-                                    <%--<button type="button" class="btn btn-white active">Hour</button>--%>
-                                    <button type="button" class="btn btn-white active" data-attribute="TransactionSummary" data-text="Day">Day</button>
-                                    <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Week">Week</button>
-                                    <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Month">Month</button>
-                                </div>
+                        <!-- Loader inside card-body (specific to this section) -->
+                        <div class="loading-wrapper-TransactionSummary" style="display: none;">
+                            <div class="loading-text">
+                                <img src="../../images/DashbordLoder.gif" alt="Loading...">
                             </div>
-
-                            <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
-                                <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
-                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
-                                    <span class="input-group-append">
-                                        <button type="button" class="btn btn-primary searchTxnSummary" data-attribute="TransactionSummary" data-text="DateRange">Search →</button>
-                                    </span>
-                                </div>
-                            </div>
-                            <%-- <div class="col-12 col-sm-6 d-flex mb-2 mb-sm-0">
-                                <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</button>
-                            </div>--%>
                         </div>
-                        <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users"></canvas>
+
+                        <!-- Content to be displayed after data is loaded -->
+                        <div class="content">
+                            <div class="row border-bottom py-2 bg-light">
+                                <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
+                                    <div class="btn-group" data-attribute="TransactionSummary">
+                                        <button type="button" class="btn btn-white active" data-attribute="TransactionSummary" data-text="Day">1Day</button>
+                                        <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Week">Last 7Days</button>
+                                        <button type="button" class="btn btn-white" data-attribute="TransactionSummary" data-text="Month">Month</button>
+                                    </div>
+                                </div>
+
+                                <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
+                                    <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                                        <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
+                                        <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                                        <span class="input-group-append">
+                                            <button type="button" class="btn btn-primary searchTxnSummary" data-attribute="TransactionSummary" data-text="DateRange">Search →</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -274,7 +376,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card card-small h-100">
                     <div class="card-header border-bottom">
-                        <h6 class="m-0">Switch Transactions Overview</h6>
+                        <h6 class="m-0">Switch Transactions Summary</h6>
                     </div>
                     <div class="card-body d-flex py-0">
                         <canvas height="220" class="blog-users-by-device m-auto"></canvas>
@@ -333,27 +435,37 @@
             <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                     <div class="card-header border-bottom">
-                        <h6 class="m-0">Revenue</h6>
+                        <h6 class="m-0">Revenue Summary</h6>
                     </div>
                     <div class="card-body pt-0">
-                        <div class="row border-bottom py-2 bg-light">
-                            <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
-                                <div class="btn-group" data-attribute="RevenueSummary">
-                                    <button type="button" class="btn btn-white active" data-attribute="RevenueSummary" data-text="Week">Week</button>
-                                    <button type="button" class="btn btn-white" data-attribute="RevenueSummary" data-text="Month">Month</button>
-                                </div>
-                            </div>
-                            <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
-                                <div id="RevenueSummary" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="RevenueSummary-d1">
-                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="RevenueSummary-d2">
-                                    <span class="input-group-append">
-                                        <button type="button" class="btn btn-primary searchRevenueSummary" data-attribute="RevenueSummary" data-text="DateRange">Search →</button>
-                                    </span>
-                                </div>
+                        <!-- Loader inside card-body (specific to this section) -->
+                        <div class="loading-wrapper-RevenueSummary" style="display: none;">
+                            <div class="loading-text">
+                                <img src="../../images/DashbordLoder.gif" alt="Loading...">
                             </div>
                         </div>
-                        <div id="overview-RevenueSummary" style="height: 400px; max-width: 100%;"></div>
+
+                        <!-- Content to be displayed after data is loaded -->
+                        <div class="content">
+                            <div class="row border-bottom py-2 bg-light">
+                                <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
+                                    <div class="btn-group" data-attribute="RevenueSummary">
+                                        <button type="button" class="btn btn-white active" data-attribute="RevenueSummary" data-text="Week">Week</button>
+                                        <button type="button" class="btn btn-white" data-attribute="RevenueSummary" data-text="Month">Month</button>
+                                    </div>
+                                </div>
+                                <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
+                                    <div id="RevenueSummary" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                                        <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="RevenueSummary-d1">
+                                        <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="RevenueSummary-d2">
+                                        <span class="input-group-append">
+                                            <button type="button" class="btn btn-primary searchRevenueSummary" data-attribute="RevenueSummary" data-text="DateRange">Search →</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="overview-RevenueSummary" style="height: 400px; max-width: 100%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -364,7 +476,7 @@
             <div class="col-lg-8 col-md-12 col-sm-12 mb-4" hidden="hidden">
                 <div class="card card-small h-100">
                     <div class="border-bottom card-header">
-                        <h6 class="m-0">Rule Performance Overview</h6>
+                        <h6 class="m-0">Rule Performance Summary</h6>
                         <div class="block-handle"></div>
                     </div>
                     <div class="py-0 card-body" style="max-height: 200px; overflow-y: auto;">
@@ -398,7 +510,7 @@
             <div class="mb-4 col-lg-4" hidden="hidden">
                 <div class="card card-small h-100 country-stats card card-small">
                     <div class="border-bottom card-header">
-                        <h6 class="m-0">Switch Performance Overview</h6>
+                        <h6 class="m-0">Switch Performance Summary</h6>
                         <div class="block-handle"></div>
                     </div>
                     <div class="p-0 card-body">
@@ -454,31 +566,39 @@
             <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                     <div class="card-header border-bottom">
-                        <h6 class="m-0">BC-Wise Summary</h6>
+                        <h6 class="m-0">BC's Summary</h6>
                     </div>
                     <div class="card-body pt-0">
-                        <div class="row border-bottom py-2 bg-light">
-                            <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
-                                <div class="btn-group" data-attribute="BCTransactionSummary">
-                                    <%--<button type="button" class="btn btn-white active">Hour</button>
-                                        <button type="button" class="btn btn-white">Day</button>--%>
-                                    <button type="button" class="btn btn-white active" data-attribute="BCTransactionSummary" data-text="Week">Week</button>
-                                    <button type="button" class="btn btn-white" data-attribute="BCTransactionSummary" data-text="Month">Month</button>
-                                </div>
+                        <!-- Loader inside card-body (specific to this section) -->
+                        <div class="loading-wrapper-BCTransactionSummary" style="display: none;">
+                            <div class="loading-text">
+                                <img src="../../images/DashbordLoder.gif" alt="Loading...">
                             </div>
-                            <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
-                                <div id="overview-date-bc-wise" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="overview-date-bc-wise-1">
-                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="overview-date-bc-wise-2">
-                                    <span class="input-group-append">
-                                        <button type="button" class="btn btn-primary searchBCSummary" data-attribute="BCTransactionSummary" data-text="DateRange">Search →</button>
-                                    </span>
-                                </div>
-                            </div>
-
                         </div>
-                        <%--<canvas height="130" style="max-width: 100% !important;" class="blog-overview-BCWise"></canvas>--%>
-                        <div id="blog-overview-BCWise" style="height: 400px; max-width: 100%;"></div>
+                        <!-- Content to be displayed after data is loaded -->
+                        <div class="content">
+                            <div class="row border-bottom py-2 bg-light">
+                                <div class="col d-flex mb-2 mb-sm-0 col-sm-6">
+                                    <div class="btn-group" data-attribute="BCTransactionSummary">
+                                        <%--<button type="button" class="btn btn-white active">Hour</button>
+                                        <button type="button" class="btn btn-white">Day</button>--%>
+                                        <button type="button" class="btn btn-white active" data-attribute="BCTransactionSummary" data-text="Week">Week</button>
+                                        <button type="button" class="btn btn-white" data-attribute="BCTransactionSummary" data-text="Month">Month</button>
+                                    </div>
+                                </div>
+                                <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
+                                    <div id="overview-date-bc-wise" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                                        <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="overview-date-bc-wise-1">
+                                        <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="overview-date-bc-wise-2">
+                                        <span class="input-group-append">
+                                            <button type="button" class="btn btn-primary searchBCSummary" data-attribute="BCTransactionSummary" data-text="DateRange">Search →</button>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="blog-overview-BCWise" style="height: 400px; max-width: 100%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -528,7 +648,6 @@
     <script src="../../DashScripts/app/app-blog-overview.1.1.0.js"></script>
 
     <input type="hidden" id="hiddenTransactions" value='<%= HttpUtility.JavaScriptStringEncode(ViewState["Transactions"]?.ToString() ?? "") %>' />
-    <input type="hidden" id="hiddenSummaryData" value='<%= HttpUtility.JavaScriptStringEncode(ViewState["summary"]?.ToString() ?? "") %>' />
     <input type="hidden" id="hiddenBCwiseData" value='<%= HttpUtility.JavaScriptStringEncode(ViewState["BcMonthlyData"]?.ToString() ?? "") %>' />
     <input type="hidden" id="hiddenSwitchwiseData" value='<%= HttpUtility.JavaScriptStringEncode(ViewState["SwitchMonthlyData"]?.ToString() ?? "") %>' />
     <input type="hidden" id="hiddenChannelwiseData" value='<%= HttpUtility.JavaScriptStringEncode(ViewState["ChannelwiseData"]?.ToString() ?? "") %>' />
@@ -538,7 +657,8 @@
         //Filter data of Global Page
         $('.GlobalFilter, .searchTxnSummary, .btn-group button, .searchBCSummary, .searchRevenueSummary').click(function () {
             //var Filter = $(this).text(); //day month
-            //var FilterType = $(this).closest('.btn-group').data('attribute'); // Report Name
+            //var FilterType = $(this).closest('.btn-group').data('attribute'); // Report
+
             var Filter = $(this).data('text');
             var FilterType = $(this).data('attribute');
             var id = $(this).prop('id');
@@ -553,18 +673,20 @@
             }
 
             if (FilterType == "TransactionSummary") {
+                $(".loading-wrapper-TransactionSummary").css('display', 'block');
                 fromDate = $('#blog-overview-date-range-1').val();
                 toDate = $('#blog-overview-date-range-2').val();
 
             } else if (FilterType == "BCTransactionSummary") {
+                $(".loading-wrapper-BCTransactionSummary").css('display', 'block');
                 fromDate = $('#overview-date-bc-wise-1').val();
                 toDate = $('#overview-date-bc-wise-2').val();
             }
             else if (FilterType == "RevenueSummary") {
+                $(".loading-wrapper-RevenueSummary").css('display', 'block');
                 fromDate = $('#RevenueSummary-d1').val();
                 toDate = $('#RevenueSummary-d2').val();
             }
-
             else {
 
             }
@@ -577,9 +699,8 @@
                 dataType: "json",
                 success: function (response) {
                     //alert(response.d);
-                    //console.log(response.d);
-                    const newData = JSON.parse(response.d);
 
+                    const newData = JSON.parse(response.d);
                     if (FilterType === "TransactionSummary" || FilterType === "GlobalFilter") {
                         const txnData = newData.TxnSummaryChart;
                         const transactions = txnData.map(item => ({
@@ -591,6 +712,9 @@
 
                         const currentMonthData = transactions.map(item => item.CurrentMonthCount);
                         const previousMonthData = transactions.map(item => item.PreviousMonthCount);
+                        const currentAvg = 200;
+                        const pastAvg = 100;
+
 
                         if (BlogOverviewUsers) {
                             BlogOverviewUsers.destroy();
@@ -624,7 +748,24 @@
                                 pointRadius: 3,
                                 pointHoverRadius: 5,
                                 pointBorderColor: 'rgba(255,65,105,1)',
-                            }]
+                            },
+                            // Add average lines
+                            {
+                                label: 'Current  Avg',
+                                data: Array(30).fill(currentAvg),
+                                borderColor: 'rgba(0,123,255,1)',
+                                borderWidth: 2,
+                                fill: false,
+                                pointRadius: 0,
+                            }, {
+                                label: 'Previous  Avg',
+                                data: Array(30).fill(pastAvg),
+                                borderColor: 'rgba(255,65,105,1)',
+                                borderWidth: 2,
+                                fill: false,
+                                pointRadius: 0,
+                            },
+                            ]
                         };
 
                         var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
@@ -663,7 +804,7 @@
                                     }],
                                     yAxes: [{
                                         ticks: {
-                                            suggestedMax: 45,
+                                            suggestedMax: 10,
                                             callback: function (tick) {
                                                 if (tick >= 1e9) {
                                                     return (tick / 1e9).toFixed(1) + 'B'; // Billions
@@ -754,19 +895,21 @@
 
                         if (Array.isArray(txnData) && txnData.length > 0) {
                             const revenueData = txnData.map(item => item.TotalRevenue === 0 ? null : item.TotalRevenue);
-                            const conversionRateData = txnData.map(item => item.ConversionRate === 0 ? null : item.ConversionRate);
-                            const categories = txnData.map(item => item.PeriodName);
+                            const TimePeriodName = txnData.map(item => item.PeriodName);
+                            const previousRevenueData = txnData.map(t => t.PreviousTotalRevenue);
+                            const previousTimePeriod = txnData.map(t => t.PreviousPeriodName);
 
                             if (window.RevenueComboChart) {
                                 window.RevenueComboChart.updateOptions({
                                     xaxis: {
-                                        categories: categories
+                                        categories: TimePeriodName
                                     }
                                 });
 
                                 window.RevenueComboChart.updateSeries([
                                     { name: 'Revenue', data: revenueData },
-                                    { name: 'Conversion Rate', data: conversionRateData }
+                                    { name: 'Previous Revenue', data: previousRevenueData }
+                                    //{ name: 'Conversion Rate', data: conversionRateData }
                                 ], true);
                             } else {
                                 alert("RevenueComboChart is not initialized.");
@@ -775,10 +918,11 @@
                             alert("Invalid txnData: Ensure it is an array with data.");
                         }
                     }
-
+                    //$(".loading-wrapper").css('display', 'none');
+                    $("[class^='loading-wrapper']").css('display', 'none');
                 },
                 error: function (xhr, status, error) {
-                    console.error("Error occurred: " + error);
+                    $(".loading-wrapper").css('display', 'none');
                     alert("An error occurred while processing your request.");
                 }
             });
@@ -788,6 +932,7 @@
         $(".filter-0").on("change", function () {
             var Type = $(this).prop('id');
             var filterType = $("#" + Type).find("option:selected").val();
+            alert(filterType);
             $.ajax({
                 type: "POST",
                 url: "DashBoard.aspx/GetDataByDatePeriod",

@@ -9,12 +9,8 @@
 (function ($) {
     $(document).ready(function () {
 
-        // Blog overview date range init.
         $('#blog-overview-date-range').datepicker({});
 
-        //
-        // Small Stats
-        //
 
         // Datasets
         var boSmallStatsDatasets = [
@@ -45,7 +41,7 @@
             }
         ];
 
-        // Options
+        // Options 
         function boSmallStatsOptions(max) {
             return {
                 maintainAspectRatio: true,
@@ -110,7 +106,7 @@
             });
         });
 
-        //***Channel-wise Summary Bar Chart
+        //***Channel-wise Summary ApexBar Chart
         var DataString = $('#hiddenChannelData').val();
         var Records = [];
         DataString = DataString.replace(/\\/g, '');
@@ -118,112 +114,120 @@
 
         var timeperiod = Records.map(t => t.timeperiod);
         var channel = Records.map(t => t.channel);
-        var totalcount = Records.map(t => t.totalcount);
         var successcount = Records.map(t => t.successcount);
         var failurecount = Records.map(t => t.failurecount);
         var successrate = Records.map(t => t.successrate);
         var failurerate = Records.map(t => t.failurerate);
 
-        var bouCtx = document.getElementsByClassName('blog-overview-users')[0];
-        var bouData = {
-            labels: timeperiod,
-
-            datasets: [{
-                label: 'Success',
-                data: successcount,
-                backgroundColor: 'rgb(33, 150, 243)',
-                borderColor: 'rgb(33, 150, 243)',
-                borderWidth: 1.5,
-                stack: 'stack1'
+        // Define the options for ApexCharts
+        var options = {
+            chart: {
+                type: 'bar',
+                stacked: true,
+                height: 350
+            },
+            series: [{
+                name: 'Success',
+                data: successcount
             }, {
-                label: 'Failure',
-                data: failurecount,
-                backgroundColor: 'rgb(255, 69, 96)',
-                borderColor: 'rgb(255, 69, 96)',
-                borderWidth: 1.5,
-                stack: 'stack1'
-            }]
-        };
-
-        var bouOptions = {
-            responsive: true,
+                name: 'Failure',
+                data: failurecount
+            }],
+            xaxis: {
+                categories: timeperiod, 
+                labels: {
+                    style: {
+                        fontSize: '12px',
+                        rotation: -45 //avoid overlap
+                    },
+                    formatter: function (value, index) {
+                        if (timeperiod.length === 7) {
+                            return value;  
+                        } else if (timeperiod.length === 31) {
+                            return value;  
+                        }
+                        return '';
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    formatter: function (value) {
+                        if (value >= 1e9) {
+                            return (value / 1e9).toFixed(1) + 'B'; // Billions
+                        } else if (value >= 1e6) {
+                            return (value / 1e6).toFixed(1) + 'M'; // Millions
+                        } else if (value >= 1e3) {
+                            return (value / 1e3).toFixed(1) + 'K'; // Thousands
+                        } else {
+                            return value;
+                        }
+                    }
+                }
+            },
             legend: {
                 position: 'top'
             },
-            scales: {
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    ticks: {
-                        callback: function (tick, index) {
-                            return index % 7 === 0 ? tick : '';
-                        }
-                    }
-                },
+            tooltip: {
                 y: {
-                    stacked: true,
-                    beginAtZero: true, // Ensure the y-axis starts at zero
-                    ticks: {
-                        // Dynamically adjust the max value based on your data
-                        min: 0,
-                        max: Math.max(...successcount, ...failurecount) * 1.2, // Add 20% padding
-                        callback: function (tick) {
-                            // If the tick value is greater than 1 million, format as "M"
-                            if (tick >= 1e6) {
-                                return (tick / 1e6).toFixed(1) + 'M'; // Millions
-                            }
-                            // If the tick value is greater than 1 thousand, format as "K"
-                            else if (tick >= 1e3) {
-                                return (tick / 1e3).toFixed(1) + 'k'; // Thousands
-                            }
-                            // Return tick value as is if it's less than 1000
-                            else {
-                                return tick;
-                            }
-                        }
+                    formatter: function (value) {
+                        return value;
                     }
                 }
             },
+            dataLabels: {
+                enabled: true,
+                formatter: function (value, { seriesIndex, dataPointIndex, w }) {
+                    if (seriesIndex === 0) {
+                        return `${successrate[dataPointIndex]}%`; // Success rate inside the success segment
+                    } else if (seriesIndex === 1) {
+                        return `${failurerate[dataPointIndex]}%`; // Failure rate inside the failure segment
+                    }
+                },
+                style: {
+                    fontSize: '10px',
+                    fontWeight: 'bold',
+                    colors: ['#fff']
+                }
+            },
 
-            hover: {
-                mode: 'nearest',
-                intersect: false
-            },
-            tooltips: {
-                custom: false,
-                mode: 'nearest',
-                intersect: false
-            },
-            plugins: {
-                datalabels: {
-                    anchor: 'end',
-                    align: 'top',
-                    font: {
-                        weight: 'bold',
-                        size: 12
+            annotations: {
+                points: timeperiod.map((period, index) => ({
+                    x: period,
+                    y: successcount[index] + failurecount[index] + 10,
+                    marker: {
+                        size: 0
                     },
-                    color: 'black',
-                    formatter: function (value, context) {
-                        const channelName = channel[context.dataIndex];
-                        return channelName;
-                    },
-                    backgroundColor: 'rgba(255,255,255,0.8)',
-                    borderRadius: 4
+                    label: {
+                        text: channel[index],
+                        style: {
+                            fontSize: '12px',
+                            fontWeight: 'bold',
+                            color: '#000',
+                            padding: 5
+                        }
+                    }
+                }))
+            },
+            colors: ['#2196F3', '#dc3545'],
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: 'vertical',
+                    shadeIntensity: 0.5,
+                    gradientToColors: ['#1e88e5'],
+                    inverseColors: false,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 100]
                 }
             }
         };
-
-        window.BlogOverviewUsers = new Chart(bouCtx, {
-            type: 'bar',
-            data: bouData,
-            options: bouOptions
-        });
+        var chart = new ApexCharts(document.querySelectorAll(".ChannelTxnSummary")[0], options);
+        chart.render();
 
         //***End
-
-
-
 
         //Agent OnBoard Line Chart
         var bouCtx = document.getElementsByClassName('AgentOnboardTrend')[0];
@@ -331,8 +335,7 @@
         });
         window.BlogOverviewUsers.render();
         //End Agent OnBoard Trend Chart
-
-
+        
 
         //Agent Txn Bar Chart
         var ctx = document.getElementsByClassName('AggregatorView')[0];
@@ -342,7 +345,7 @@
             "AgriFusion", "Collecto", "GatherPro", "DataBridge", "SmartFusion", "MegaCollect",
             "ContentCore", "MediaHub", "OmniAggregator"
         ];
-        
+
         var agentData = [
             [20, 13, 8, 7, 22, 12, 3],  // DataHive
             [40, 10, 10, 30, 20, 30, 50], // ContentFusion
@@ -360,25 +363,25 @@
             [5, 10, 12, 18, 20, 22, 25],  // MediaHub
             [40, 35, 32, 30, 27, 20, 22]  // OmniAggregator
         ];
-       
+
         var chartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],  // Example months
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: []
         };
-        
+
         for (var i = 0; i < AgentsName.length; i++) {
             chartData.datasets.push({
-                label: AgentsName[i], 
-                backgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.5)`, 
-                borderColor: `rgb(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255})`, 
+                label: AgentsName[i],
+                backgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.5)`,
+                borderColor: `rgb(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255})`,
                 borderWidth: 1,
-                data: agentData[i],  
-                hoverBackgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.7)`, 
+                data: agentData[i],
+                hoverBackgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.7)`,
             });
         }
-        
+
         var myChart = new Chart(ctx, {
-            type: 'bar', 
+            type: 'bar',
             data: chartData,
             options: {
                 responsive: true,
@@ -398,7 +401,7 @@
                         beginAtZero: true,
                         ticks: {
                             min: 0,
-                            max: Math.max(...agentData.flat()) * 1.2,  
+                            max: Math.max(...agentData.flat()) * 1.2,
                             callback: function (tick) {
                                 if (tick >= 1e6) {
                                     return (tick / 1e6).toFixed(1) + 'M'; // Millions
@@ -476,6 +479,18 @@
             data: ubdData,
             options: ubdOptions
         });
+
+        //Tab controls Day/Week/Month/Year
+        const buttons = document.querySelectorAll('.btn-group .btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+        //end
+
+
 
     });
 })(jQuery);
