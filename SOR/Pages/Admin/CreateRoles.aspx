@@ -569,7 +569,7 @@
                 <asp:Panel ID="Panel_Declincard" Style="display: none;" runat="server">
                     <center>
                         <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content" style="width: 469px;height: 200px;">
+                            <div class="modal-content" style="width: 469px;height: 310px;">
                                 <!-- Modal Header -->
                                 <div class="modal-header">
                                     <h3 class="modal-title">
@@ -577,7 +577,7 @@
                                     </h3>
                                 </div>
                                 <!-- Modal body Aarti-->
-                                <div class="modal-body ">
+                                <div class="modal-body " style="padding:9px;">
                                     <asp:Label ID="lblconfirm" runat="server" Font-Bold="true"></asp:Label>
                                     <div class="form-group">
                                         <div class="row">
@@ -591,7 +591,7 @@
                                             </div>
                                             <div class="form-group" id="DivEnterReason" runat="server">
                                                 <div class="row">
-                                                    <div class="col-sm-12" style="padding: 0 28px 0 28px;">
+                                                    <div class="col-sm-12" style="padding: 10px 28px 0 28px;">
                                                         <asp:TextBox ID="txtResone" runat="server" TextMode="multiline" Rows="5" Placeholder="Please enter reason" Height="100"  width="300" CssClass="input-text form-control" Style="resize: none"></asp:TextBox>
                                                     </div>
                                                 </div>
