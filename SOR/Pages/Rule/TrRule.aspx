@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SOR.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="TrRule.aspx.cs" Inherits="SOR.Pages.Rule.TrRule" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--<head>--%>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -776,6 +776,15 @@
     <div class="breadHeader">
         <h5 class="page-title" style="font-size: larger">Rule Configuration</h5>
     </div>
+    <asp:Panel ID="upPanel" runat="server" HorizontalAlign="Center" Width="100%">
+        <asp:UpdateProgress ID="upContentBodyUpdateProgress" runat="server" AssociatedUpdatePanelID="upnlRule">
+            <ProgressTemplate>
+                <div style="width: 100%; height: 100%; opacity: 0.8; background-color: black; position: fixed; top: 0; left: 0">
+                    <img alt="" id="progressImage1" style="margin-top: 20%" src='<%=Page.ResolveClientUrl("../../Images/loading2_1.gif") %>' />
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+    </asp:Panel>
     <asp:UpdatePanel ID="upnlRule" runat="server">
         <ContentTemplate>
             <%--<asp:HiddenField ID="hdnPriority1" runat="server" />--%>
@@ -1515,7 +1524,7 @@
             <%-- <asp:AsyncPostBackTrigger ControlID="LinkButton1" EventName="Click" />--%>
         </Triggers>
     </asp:UpdatePanel>
-
+    <cc1:ModalPopupExtender ID="mpeProgress" runat="server" TargetControlID="upPanel" PopupControlID="upContentBodyUpdateProgress" BackgroundCssClass="modalBackground" DropShadow="false" />
     <script>
         jQuery.noConflict();
         jQuery(function ($) {
