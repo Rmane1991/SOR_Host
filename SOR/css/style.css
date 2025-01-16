@@ -65,7 +65,8 @@ ol {
     --color-table-bg: #f5f9ff;
     --color-table-border: #e3e3e3;
     --color-scrollbar: #9ea5b9;
-    --header-background: #062F6D;
+    /*--header-background: #062F6D;*/
+    --header-background: #fbd2ce;
     --icon-color: #003087;
     --background-white: #ffffff;
     --breadcrumb-icon: #000000;
