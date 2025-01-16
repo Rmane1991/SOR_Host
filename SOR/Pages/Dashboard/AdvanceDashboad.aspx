@@ -44,7 +44,7 @@
                     <input type="text" id="startDate" placeholder="Start Date" class="text-center form-control form-control-sm" value="">
                     <input type="text" id="endDate" placeholder="End Date" class="text-center form-control form-control-sm" value="">
                     <span class="input-group-append">
-                        <button type="button" class="btn btn-primary GlobalFilter" data-attribute="GlobalFilter" data-text="DateRange">Search &rarr;</button>
+                        <button type="button" class="btn btn-primary GlobalSearch" data-attribute="GlobalFilter" data-text="DateRange">Search &rarr;</button>
                     </span>
                 </div>
             </div>
@@ -205,12 +205,10 @@
 
                             <div class="col-12 col-sm-3">
                                 <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
-                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="ChanneldateRange1">
+                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="ChanneldateRange2">
                                     <span class="input-group-append">
-                                        <span class="input-group-text">
-                                            <i class="material-icons"></i>
-                                        </span>
+                                        <button type="button" class="btn btn-primary ChannelWiseTxn" data-attribute="ChannelWiseTxn" data-text="DateRange">Search &rarr;</button>
                                     </span>
                                 </div>
                             </div>
@@ -218,7 +216,9 @@
                                 <button type="button" class="btn btn-sm btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report →</button>
                             </div>--%>
                         </div>
-                        <canvas height="348" style="max-width: 100% !important; display: block; width: 805px; height: 348px;" class="blog-overview-users chartjs-render-monitor" width="805"></canvas>
+                        <%--<canvas height="348" style="max-width: 100% !important; display: block; width: 805px; height: 348px;" class="ChannelTxnSummary chartjs-render-monitor" width="805"></canvas>--%>
+                        <div class="ChannelTxnSummary"></div>
+
                     </div>
                 </div>
             </div>
@@ -287,12 +287,10 @@
 
                             <div class="col-12 col-sm-6">
                                 <div id="Agent-daterange" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="Agent-range-1">
-                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="Agent-range-2">
+                                    <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="AgentDateRange-1">
+                                    <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="AgentDateRange-2">
                                     <span class="input-group-append">
-                                        <span class="input-group-text">
-                                            <i class="material-icons"></i>
-                                        </span>
+                                        <button type="button" class="btn btn-primary AgentOnbordingData" data-attribute="AgentOnbordingData" data-text="DateRange">Search &rarr;</button>
                                     </span>
                                 </div>
                             </div>
@@ -413,7 +411,7 @@
                                 label: function (tooltipItem) {
                                     var value = tooltipItem.raw;
                                     var label = tooltipItem.index === 0 ? 'Success' : 'Failure';
-                                    return label + ': ' + value.toFixed(2) + '%';  // Display percentage
+                                    return label + ': ' + value.toFixed(2) + '%';  
                                 }
                             }
                         }
@@ -421,6 +419,82 @@
                 }
             });
         }
+    </script>
+
+    <script>
+        $('.GlobalSearch, .ChannelWiseSearch, .btn-group button, .AgentOnboardSearch, .AgentTxnSearch').click(function () {
+            var Filter = $(this).data('text');
+            var FilterType = $(this).data('attribute');
+            var id = $(this).prop('id');
+            var fromDate;
+            var toDate;
+           
+            if ($(this).hasClass('GlobalSearch')) {
+                fromDate = $('#startDate').val();
+                toDate = $('#endDate').val();
+                FilterType = "GlobalSearch";
+                Filter = "DateRange";
+            }
+
+            if (FilterType == "ChannelWiseTxn") {
+                fromDate = $('#ChanneldateRange1').val();
+                toDate = $('#ChanneldateRange2').val();
+            } else if (FilterType == "AgentOnbordingData") {
+                fromDate = $('#AgentDateRange1').val();
+                toDate = $('#AgentDateRange2').val();
+            }
+            else if (FilterType == "AgentTxnSummary") {
+                fromDate = $('#AgentTxnd1').val();
+                toDate = $('#AgentTxnd2').val();
+            }
+
+            else {
+
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "AdvanceDashboad.aspx/ChartdataFilter",
+                data: JSON.stringify({ fromDate: fromDate, toDate: toDate, FilterType: FilterType, Filter: Filter }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    const newData = JSON.parse(response.d);
+
+                    if (FilterType === "ChannelWiseTxn" || FilterType === "GlobalSearch") {
+                        const Records = newData.ChannelTxnData;
+                        var timeperiod = Records.map(t => t.timeperiod);
+                        var channel = Records.map(t => t.channel);
+                        var successcount = Records.map(t => t.successcount);
+                        var failurecount = Records.map(t => t.failurecount);
+
+                        BlogOverviewUsers.data.labels = timeperiod;
+                        BlogOverviewUsers.data.datasets[0].data = successcount;
+                        BlogOverviewUsers.data.datasets[1].data = failurecount;
+                        BlogOverviewUsers.data.datasets[0].label = 'Success';
+                        BlogOverviewUsers.data.datasets[1].label = 'Failure';
+                        BlogOverviewUsers.update();
+                    }
+                    if (FilterType === "AgentOnbordingData" || FilterType === "GlobalSearch") {
+                        const Records = newData.AgentOnboard; 
+                        var timeperiod = Records.map(t => t.timeperiod);
+                        var Current = Records.map(t => t.currentcount);
+                        var Previous = Records.map(t => t.previouscount);
+                        
+                        BlogOverviewUsers.data.labels = timeperiod;  
+                        BlogOverviewUsers.data.datasets[0].data = Current;   
+                        BlogOverviewUsers.data.datasets[1].data = Previous; 
+                        // BlogOverviewUsers.data.datasets[0].backgroundColor = 'newColor';
+                        // BlogOverviewUsers.data.datasets[1].borderColor = 'newBorderColor';
+                        BlogOverviewUsers.update();
+                    }
+                    
+                },
+                error: function (xhr, status, error) {
+                    alert("An error occurred while processing your request.");
+                }
+            });
+        });
     </script>
 
 
