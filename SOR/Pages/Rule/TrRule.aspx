@@ -81,7 +81,7 @@
             return false; // Prevent default button action if any
         }
     </script>
-    <script>
+    <%--<script>
         $(document).ready(function () {
             $('.clsslider').change(function () {
                 var isChecked = $(this).is(':checked');
@@ -111,10 +111,96 @@
                 });
             });
         });
-    </script>
+    </script>--%>
+
     <script>
         $(document).ready(function () {
+            // This function will bind the event handler to the checkbox
+            function bindSliderEvent() {
+                $('.clsslider').change(function () {
+                    var isChecked = $(this).is(':checked');
+                    var hdnGroupId = $(this).closest('.list-group-item').find('input[type="hidden"]').val();
+
+                    $(this).prop('disabled', true);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'TrRule.aspx/ToggleSlider',
+                        data: JSON.stringify({ IsChecked: isChecked, Id: hdnGroupId }),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (response) {
+                            var data = JSON.parse(response.d);
+                            showSuccess(data.StatusMessage);
+                            $('.clsslider').prop('disabled', false);
+                            //window.location.replace(window.location.href);
+                        },
+                        error: function (error) {
+                            alert('An error occurred: ' + error.responseText);
+                            showWarning(data.StatusMessage);
+                            $('.clsslider').prop('disabled', false);
+                        }
+                    });
+                });
+            }
+
+            // Call the function to bind the event handler initially
+            bindSliderEvent();
+
+            // Rebind the event handler after every partial postback
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                bindSliderEvent();
+            });
+        });
+    </script>
+
+    <script>
+    jQuery.noConflict();
+    jQuery(function ($) {
+        // Function to initialize event handlers
+        function bindSliderEvent_Rule() {
             $('.clssliderRule').change(function () {
+                console.log('change event called..')
+                var isChecked = $(this).is(':checked');
+                var hdnRuleId = $(this).closest('.list-group-item-container').find('input[id="hdRuleId"]').val();
+
+                $(this).prop('disabled', true);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'TrRule.aspx/ToggleRuleSlider',
+                    data: JSON.stringify({ IsChecked: isChecked, Id: hdnRuleId }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (response) {
+                        var data = JSON.parse(response.d);
+                        showSuccess(data.StatusMessage);
+                        $('.clssliderRule').prop('disabled', false);
+                    },
+                    error: function (error) {
+                        alert('An error occurred: ' + error.responseText);
+                        showWarning(error.responseText);
+                        $('.clssliderRule').prop('disabled', false);
+                    }
+                });
+            });
+        }
+
+        // Initialize event handlers
+        bindSliderEvent_Rule();
+
+        // Reinitialize event handlers after each partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            bindSliderEvent_Rule();
+        });
+    });
+</script>
+
+
+    <%--<script>
+        $(document).ready(function () {
+            $('.clssliderRule').change(function () {
+                console.log('change event called..')
                 var isChecked = $(this).is(':checked');
                 //var hdnRuleId = $(this).closest('.list-group-item').find('input[type="hidden"]').val();
                 //var hdnRuleId = $(this).closest('.list-group-item').find('input[id$="hdRuleId"]').val();
@@ -143,7 +229,7 @@
                 });
             });
         });
-    </script>
+    </script>--%>
 
     <style>
         /*priority*/
@@ -275,9 +361,10 @@
             font-size: x-small;
         }
     </style>
-    <script>
+    <%--<script>
         $(document).ready(function () {
             $('#ddlTxn').change(function () {
+                debugger;
                 if ($(this).is(':checked')) {
                     // Show the second dropdown if the toggle is checked
                     $('#dropdownFinNonFin').show();
@@ -297,7 +384,35 @@
             });
         });
 
+    </script>--%>
+    <script>
+        $(document).ready(function () {
+            // This will be called after each partial postback
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                // Code to handle the toggle button for #ddlTxn
+                $('#ddlTxn').change(function () {
+                    debugger;
+                    if ($(this).is(':checked')) {
+                        // Show the second dropdown if the toggle is checked
+                        $('#dropdownFinNonFin').show();
+                    } else {
+                        // Hide the second dropdown if the toggle is unchecked
+                        $('#dropdownFinNonFin').hide();
+                    }
+                });
+
+                // Code to handle the toggle button for #Switch
+                $('#Switch').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#countDiv').show();
+                    } else {
+                        $('#countDiv').hide();
+                    }
+                });
+            });
+        });
     </script>
+
 
     <style>
         .toast-success {
@@ -442,20 +557,7 @@
     <%--Sorting groups & Txn Rule milind|19Sep2024--%>
 
 
-    <script>
-        //jQuery.noConflict();
-        //jQuery(function ($) {
-        //    $(".list-group").sortable({
-        //        items: ".sortable-item",
-        //        cursor: "move",
-        //        placeholder: "sortable-placeholder",
-        //        update: function (event, ui) {
-        //            var newOrder = $(this).sortable("toArray");
-        //            console.log(newOrder);
-        //        }
-        //    }).disableSelection();
-        //});
-
+    <%--<script>
         jQuery.noConflict();
         jQuery(function ($) {
             $(".list-group").sortable({
@@ -506,7 +608,69 @@
                 }
             }).disableSelection();
         });
+    </script>--%>
+
+    <script>
+        jQuery.noConflict();
+        jQuery(function ($) {
+            // Function to initialize sortable
+            function initializeSortable() {
+                $(".list-group").sortable({
+                    items: ".sortable-item",
+                    cursor: "move",
+                    placeholder: "sortable-placeholder",
+                    update: function (event, ui) {
+                        var parentOrder = [];
+                        var childOrders = {};
+
+                        $(".list-group > .sortable-item > .mainGroup").each(function (index) {
+                            var parentId = $(this).data('id');
+                            parentOrder.push({
+                                id: parentId,
+                                order: index + 1
+                            });
+                            var childOrder = [];
+                            $(this).find(".list-group > .sortable-item > .childGroup").each(function (childIndex) {
+                                childOrder.push({
+                                    ruleid: $(this).data('id'),
+                                    order: childIndex + 1
+                                });
+                            });
+                            childOrders[parentId] = childOrder;
+                        });
+
+                        // AJAX call to save the sorted data
+                        $.ajax({
+                            url: 'TrRule.aspx/ShortingTxnRuleGroups',
+                            method: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify({
+                                orderData: {
+                                    ParentOrder: parentOrder,
+                                    ChildOrders: childOrders
+                                }
+                            }),
+                            success: function (response) {
+                                alert(response.d);  // Success message
+                            },
+                            error: function (xhr, status, error) {
+                                alert("Something went wrong!!!.....");  // Error message
+                            }
+                        });
+                    }
+                }).disableSelection();
+            }
+
+            // Initialize sortable initially
+            initializeSortable();
+
+            // Rebind sortable after each partial postback (when UpdatePanel completes)
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                initializeSortable();
+            });
+        });
     </script>
+
     <style>
         .col-md-1 {
             flex: 0 0 auto;
@@ -606,6 +770,7 @@
                 word-break: break-word; /* Break long words */
             }
     </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
     <div class="breadHeader">
@@ -654,80 +819,80 @@
             </div>
             &nbsp;&nbsp;
     <!-- Modal Group -->
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <!-- Header -->
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Group Details</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>--%>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Group Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <div class="form-group row mb-3">
+                                <label for="groupName" class="col-md-4 col-form-label">Group Name</label>
+                                <div class="col-md-8">
+                                    <asp:TextBox ID="txtGroupName" CssClass="form-control" runat="server" placeholder="Enter Group Name"></asp:TextBox>
                                 </div>
-                                <!-- Body -->
-                                <div class="modal-body">
-                                    <div class="form-group row mb-3">
-                                        <label for="groupName" class="col-md-4 col-form-label">Group Name</label>
-                                        <div class="col-md-8">
-                                            <asp:TextBox ID="txtGroupName" CssClass="form-control" runat="server" placeholder="Enter Group Name"></asp:TextBox>
-                                        </div>
-                                    </div>
+                            </div>
 
-                                    <div class="form-group row mb-3">
-                                        <label for="groupDescription" class="col-md-4 col-form-label">Group Description</label>
-                                        <div class="col-md-8">
-                                            <asp:TextBox ID="txtGroupDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Group Description"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Footer -->
-                                <div class="modal-footer">
-                                    <asp:Button ID="btnCreGroup" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreGroup_Click" OnClientClick="return changebtntext();" style="display: inline-block; position: relative;" />
-                                    <asp:Button ID="btncreategroup_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
-                                    <asp:Button ID="btnCloseGroup" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseGroup_Click" data-bs-dismiss="modal" />
+                            <div class="form-group row mb-3">
+                                <label for="groupDescription" class="col-md-4 col-form-label">Group Description</label>
+                                <div class="col-md-8">
+                                    <asp:TextBox ID="txtGroupDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Group Description"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <asp:Button ID="btnCreGroup" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreGroup_Click" OnClientClick="return changebtntext();" Style="display: inline-block; position: relative;" />
+                            <asp:Button ID="btncreategroup_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
+                            <asp:Button ID="btnCloseGroup" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseGroup_Click" data-bs-dismiss="modal" />
+                        </div>
                     </div>
-                    <asp:HiddenField ID="hdnShowModalG" runat="server" Value="false" />
-                </ContentTemplate>
+                </div>
+            </div>
+            <asp:HiddenField ID="hdnShowModalG" runat="server" Value="false" />
+            <%--</ContentTemplate>
                 <Triggers>
                 </Triggers>
-            </asp:UpdatePanel>
+            </asp:UpdatePanel>--%>
             <!-- Modal Rule -->
-            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                <ContentTemplate>
-                    <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabelR" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <!-- Header -->
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabelR">Rule Details</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <%--<asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>--%>
+            <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabelR" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabelR">Rule Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <div class="row mb-3">
+                                <label for="groupName" class="col-md-2 col-form-label">Group Name</label>
+                                <div class="col-md-8">
+                                    <asp:DropDownList ID="ddlGroupName" runat="server" Width="100%" CssClass="dropdown-custom">
+                                    </asp:DropDownList>
                                 </div>
-                                <!-- Body -->
-                                <div class="modal-body">
-                                    <div class="row mb-3">
-                                        <label for="groupName" class="col-md-2 col-form-label">Group Name</label>
-                                        <div class="col-md-8">
-                                            <asp:DropDownList ID="ddlGroupName" runat="server" Width="100%" CssClass="dropdown-custom">
-                                            </asp:DropDownList>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label for="RuleName" class="col-md-2 col-form-label">Rule Name</label>
-                                        <div class="col-md-8">
-                                            <asp:TextBox ID="txtRuleName" CssClass="form-control" runat="server" placeholder="Enter Rule Name"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label for="RuleDescription" class="col-md-2 col-form-label">Rule Description</label>
-                                        <div class="col-md-8">
-                                            <asp:TextBox ID="txtRuleDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Rule Description"></asp:TextBox>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="RuleName" class="col-md-2 col-form-label">Rule Name</label>
+                                <div class="col-md-8">
+                                    <asp:TextBox ID="txtRuleName" CssClass="form-control" runat="server" placeholder="Enter Rule Name"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="RuleDescription" class="col-md-2 col-form-label">Rule Description</label>
+                                <div class="col-md-8">
+                                    <asp:TextBox ID="txtRuleDescription" CssClass="form-control" TextMode="MultiLine" Rows="3" runat="server" placeholder="Enter Rule Description"></asp:TextBox>
+                                </div>
+                            </div>
 
-                                    <%--<div class="row mb-3">
+                            <%--<div class="row mb-3">
                         <label for="lblPriority" runat="server" class="col-md-2 col-form-label">Priority</label>
                         <div class="col-md-8">
                             <div class="justify-content-around">
@@ -738,7 +903,7 @@
                         </div>
                     </div>--%>
 
-                                    <%--<div class="row mb-3">
+                            <%--<div class="row mb-3">
                         <asp:HiddenField ID="hfSelectedValues" runat="server" />
                         <label for="lblAggregator" class="col-md-4 col-form-label">Aggregator</label>
                         <div class="col-md-8">
@@ -757,62 +922,62 @@
                             </div>
                         </div>
                     </div>--%>
-                                    <div class="row mb-3">
-                                        <asp:HiddenField ID="hfSelectedValues" runat="server" />
-                                        <label for="lblAggregator" class="col-md-2 col-form-label">Aggregator</label>
-                                        <div class="col-md-8">
-                                            <asp:DropDownList ID="ddlAggregator" runat="server" CssClass="maximus-select w-100" Visible="false">
-                                            </asp:DropDownList>
-                                            <div class="multi-select-container">
-                                                <div class="selected-items" id="selectedItems" onclick="toggleDropdown('dropdownContent', 'searchBox')">
-                                                    <span class="placeholderr">Select options...</span>
-                                                </div>
-                                                <div class="dropdown-content" id="dropdownContent">
-                                                    <input type="text" id="searchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('dropdownContent', 'searchBox')" />
-                                                    <div id="dropdownItems">
-                                                        <asp:Literal ID="litAggregator" runat="server"></asp:Literal>
-                                                    </div>
-                                                </div>
+                            <div class="row mb-3">
+                                <asp:HiddenField ID="hfSelectedValues" runat="server" />
+                                <label for="lblAggregator" class="col-md-2 col-form-label">Aggregator</label>
+                                <div class="col-md-8">
+                                    <asp:DropDownList ID="ddlAggregator" runat="server" CssClass="maximus-select w-100" Visible="false">
+                                    </asp:DropDownList>
+                                    <div class="multi-select-container">
+                                        <div class="selected-items" id="selectedItems" onclick="toggleDropdown('dropdownContent', 'searchBox')">
+                                            <span class="placeholderr">Select options...</span>
+                                        </div>
+                                        <div class="dropdown-content" id="dropdownContent">
+                                            <input type="text" id="searchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('dropdownContent', 'searchBox')" />
+                                            <div id="dropdownItems">
+                                                <asp:Literal ID="litAggregator" runat="server"></asp:Literal>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div class="row mb-3">
-                                        <asp:HiddenField ID="hfSelectedSecondValues" runat="server" />
-                                        <label for="lblIIN" class="col-md-2 col-form-label">IIN</label>
-                                        <div class="col-md-8">
-                                            <asp:DropDownList ID="ddlIIN" runat="server" CssClass="maximus-select w-100" Visible="false">
-                                            </asp:DropDownList>
-                                            <div class="multi-select-container">
-                                                <div class="selected-items" id="selectedSecondItems" onclick="toggleDropdown('secondDropdownContent', 'secondSearchBox')">
-                                                    <span class="placeholderr">Select options...</span>
-                                                </div>
-                                                <div class="dropdown-content" id="secondDropdownContent">
-                                                    <input type="text" id="secondSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('secondDropdownContent', 'secondSearchBox')" />
-                                                    <div id="secondDropdownItems">
-                                                        <asp:Literal ID="litIIN" runat="server"></asp:Literal>
-                                                    </div>
-                                                </div>
+                            <div class="row mb-3">
+                                <asp:HiddenField ID="hfSelectedSecondValues" runat="server" />
+                                <label for="lblIIN" class="col-md-2 col-form-label">IIN</label>
+                                <div class="col-md-8">
+                                    <asp:DropDownList ID="ddlIIN" runat="server" CssClass="maximus-select w-100" Visible="false">
+                                    </asp:DropDownList>
+                                    <div class="multi-select-container">
+                                        <div class="selected-items" id="selectedSecondItems" onclick="toggleDropdown('secondDropdownContent', 'secondSearchBox')">
+                                            <span class="placeholderr">Select options...</span>
+                                        </div>
+                                        <div class="dropdown-content" id="secondDropdownContent">
+                                            <input type="text" id="secondSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('secondDropdownContent', 'secondSearchBox')" />
+                                            <div id="secondDropdownItems">
+                                                <asp:Literal ID="litIIN" runat="server"></asp:Literal>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
-                                        <div class="col-md-8">
-                                            <asp:DropDownList ID="ddlChannel" runat="server" CssClass="dropdown-custom" Width="100%">
-                                                <asp:ListItem Text="--Select--" Value="" />
-                                                <asp:ListItem Text="AEPS" Value="1" />
-                                                <asp:ListItem Text="BBPS" Value="2" />
-                                                <asp:ListItem Text="DMT" Value="3" />
-                                                <asp:ListItem Text="MATM" Value="4" />
-                                            </asp:DropDownList>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
+                                <div class="col-md-8">
+                                    <asp:DropDownList ID="ddlChannel" runat="server" CssClass="dropdown-custom" Width="100%">
+                                        <asp:ListItem Text="--Select--" Value="" />
+                                        <asp:ListItem Text="AEPS" Value="1" />
+                                        <asp:ListItem Text="BBPS" Value="2" />
+                                        <asp:ListItem Text="DMT" Value="3" />
+                                        <asp:ListItem Text="MATM" Value="4" />
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
 
-                                    <div class="row mb-3 align-items-center">
-                                        <!-- First Dropdown -->
-                                        <asp:HiddenField ID="hdnTxnType" runat="server" />
-                                        <%--<div class="col-md-4">
+                            <div class="row mb-3 align-items-center">
+                                <!-- First Dropdown -->
+                                <asp:HiddenField ID="hdnTxnType" runat="server" />
+                                <%--<div class="col-md-4">
                             <div class="form-group row">
                                 <label for="lblTxnType" class="col-md-6 col-form-label">Txn Type</label>
                                 <div class="col-md-6">
@@ -822,108 +987,108 @@
                                 </div>
                             </div>
                         </div>--%>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="lblTxnType" class="col-md-6 col-form-label">Txn Type</label>
                                         <div class="col-md-4">
-                                            <div class="form-group row">
-                                                <label for="lblTxnType" class="col-md-6 col-form-label">Txn Type</label>
-                                                <div class="col-md-4">
-                                                    <asp:DropDownList ID="ddlTxnType" runat="server" CssClass="maximus-select w-100" Width="100%" Visible="false">
-                                                        <asp:ListItem Text="--Select--" Value="" />
-                                                    </asp:DropDownList>
-                                                    <div class="multi-select-container">
-                                                        <div class="selected-items" id="selectedTItems" onclick="toggleDropdown('TDropdownContent', 'TSearchBox')">
-                                                            <span class="placeholderr">Select options...</span>
-                                                        </div>
-                                                        <div class="dropdown-content" id="TDropdownContent">
-                                                            <input type="text" id="TSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('TDropdownContent', 'TSearchBox')" />
-                                                            <div id="TDropdownItems">
-                                                                <asp:Literal ID="ltrtxntype" runat="server"></asp:Literal>
-                                                            </div>
-                                                        </div>
+                                            <asp:DropDownList ID="ddlTxnType" runat="server" CssClass="maximus-select w-100" Width="100%" Visible="false">
+                                                <asp:ListItem Text="--Select--" Value="" />
+                                            </asp:DropDownList>
+                                            <div class="multi-select-container">
+                                                <div class="selected-items" id="selectedTItems" onclick="toggleDropdown('TDropdownContent', 'TSearchBox')">
+                                                    <span class="placeholderr">Select options...</span>
+                                                </div>
+                                                <div class="dropdown-content" id="TDropdownContent">
+                                                    <input type="text" id="TSearchBox" class="search-box" placeholder="Search..." onkeyup="filterDropdown('TDropdownContent', 'TSearchBox')" />
+                                                    <div id="TDropdownItems">
+                                                        <asp:Literal ID="ltrtxntype" runat="server"></asp:Literal>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Toggle slider for FIN/Non-FIN visibility -->
-                                        <div class="col-md-3 text-center" style="margin-left: 13px; margin-top: -11px;">
-                                            <label class="switchh">
-                                                <input type="checkbox" id="ddlTxn" />
-                                                <span class="sliderr"></span>
-                                            </label>
-                                        </div>
-
-                                        <!-- Second Dropdown -->
-                                        <div class="col-md-4" id="dropdownFinNonFin" style="display: none; margin-left: -67px;">
-                                            <div class="form-group row">
-                                                <label for="lblTxnTypeFIN" class="col-md-6 col-form-label">FIN/NON-FIN</label>
-                                                <div class="col-md-6">
-                                                    <asp:DropDownList ID="ddlTxnTypeFIN" runat="server" CssClass="maximus-select w-100" Width="89%">
-                                                        <asp:ListItem Text="--Select--" Value="" />
-                                                        <asp:ListItem Text="FIN" Value="4,5,7,8" />
-                                                        <asp:ListItem Text="NONFIN" Value="2,3,6" />
-                                                    </asp:DropDownList>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
+                                </div>
 
-                                    <div class="row mb-3">
-                                        <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
-                                        <div class="col-md-8">
-                                            <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="dropdown-custom" Width="100%">
-                                                <%--<asp:ListItem Text="--Select--" Value="" />
-                                <asp:ListItem Text="Maximus" Value="1" />
-                                <asp:ListItem Text="Sarvatra" Value="2" />
-                                <asp:ListItem Text="PayRakam" Value="3" />--%>
+                                <!-- Toggle slider for FIN/Non-FIN visibility -->
+                                <div class="col-md-3 text-center" style="margin-left: 13px; margin-top: -11px;">
+                                    <label class="switchh">
+                                        <input type="checkbox" id="ddlTxn" />
+                                        <span class="sliderr"></span>
+                                    </label>
+                                </div>
+
+                                <!-- Second Dropdown -->
+                                <div class="col-md-4" id="dropdownFinNonFin" style="display: none; margin-left: -67px;">
+                                    <div class="form-group row">
+                                        <label for="lblTxnTypeFIN" class="col-md-6 col-form-label">FIN/NON-FIN</label>
+                                        <div class="col-md-6">
+                                            <asp:DropDownList ID="ddlTxnTypeFIN" runat="server" CssClass="maximus-select w-100" Width="89%">
+                                                <asp:ListItem Text="--Select--" Value="" />
+                                                <asp:ListItem Text="FIN" Value="4,5,7,8" />
+                                                <asp:ListItem Text="NONFIN" Value="2,3,6" />
                                             </asp:DropDownList>
                                         </div>
                                     </div>
-
-                                    <div class="row mb-3 align-items-center">
-                                        <!-- Percentage TextBox -->
-                                        <div class="col-md-4">
-                                            <div class="form-group row">
-                                                <label for="txtPercentage" class="col-md-6 col-form-label">Percentage %</label>
-                                                <div class="col-md-6">
-                                                    <asp:TextBox ID="txtPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Toggle slider for FIN/Non-FIN visibility -->
-                                        <div class="col-md-2 text-center">
-                                            <label class="switchh">
-                                                <input type="checkbox" id="Switch" />
-                                                <span class="sliderr"></span>
-                                            </label>
-                                        </div>
-
-                                        <!-- Count TextBox -->
-                                        <div class="col-md-4" id="countDiv" style="display: none;">
-                                            <div class="form-group row">
-                                                <label for="txtCount" class="col-md-4 col-form-label">Count</label>
-                                                <div class="col-md-8">
-                                                    <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" />
-                                    </div>
-                                </div>
-                                <!-- Footer -->
-                                <div class="modal-footer">
-                                    <asp:Button ID="btnCreateRule" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreateRule_Click" OnClientClick="return changebtntextrule();" style="display: inline-block; position: relative;"/>
-                                    <asp:Button ID="btncreaterule_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
-                                    <asp:Button ID="btnCloseRule" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseRule_Click" data-bs-dismiss="modal" />
                                 </div>
                             </div>
+
+                            <div class="row mb-3">
+                                <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
+                                <div class="col-md-8">
+                                    <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="dropdown-custom" Width="100%">
+                                        <%--<asp:ListItem Text="--Select--" Value="" />
+                                <asp:ListItem Text="Maximus" Value="1" />
+                                <asp:ListItem Text="Sarvatra" Value="2" />
+                                <asp:ListItem Text="PayRakam" Value="3" />--%>
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 align-items-center">
+                                <!-- Percentage TextBox -->
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label for="txtPercentage" class="col-md-6 col-form-label">Percentage %</label>
+                                        <div class="col-md-6">
+                                            <asp:TextBox ID="txtPercentage" CssClass="form-control" runat="server" MaxLength="3" placeholder="Enter Percentage"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Toggle slider for FIN/Non-FIN visibility -->
+                                <div class="col-md-2 text-center">
+                                    <label class="switchh">
+                                        <input type="checkbox" id="Switch" />
+                                        <span class="sliderr"></span>
+                                    </label>
+                                </div>
+
+                                <!-- Count TextBox -->
+                                <div class="col-md-4" id="countDiv" style="display: none;">
+                                    <div class="form-group row">
+                                        <label for="txtCount" class="col-md-4 col-form-label">Count</label>
+                                        <div class="col-md-8">
+                                            <asp:TextBox ID="txtCount" CssClass="form-control" runat="server" placeholder="Enter Count"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" />
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <asp:Button ID="btnCreateRule" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreateRule_Click" OnClientClick="return changebtntextrule();" Style="display: inline-block; position: relative;" />
+                            <asp:Button ID="btncreaterule_disabled" CssClass="btn btn-primary" runat="server" Enabled="false" Text="Submiting" Style="visibility: hidden; display: inline-block; position: absolute; margin-right: 65px;" />
+                            <asp:Button ID="btnCloseRule" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseRule_Click" data-bs-dismiss="modal" />
                         </div>
                     </div>
-                    <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
-                </ContentTemplate>
+                </div>
+            </div>
+            <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
+            <%-- </ContentTemplate>
                 <Triggers>
                 </Triggers>
-            </asp:UpdatePanel>
+            </asp:UpdatePanel>--%>
             <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
                 <asp:PlaceHolder ID="headerPlaceholder" runat="server"></asp:PlaceHolder>
                 <asp:Repeater ID="rptrGroup" runat="server" OnItemCommand="rptrGroup_ItemCommand" OnItemDataBound="rptrGroup_ItemDataBound">
@@ -1352,6 +1517,79 @@
     </asp:UpdatePanel>
 
     <script>
+        jQuery.noConflict();
+        jQuery(function ($) {
+            // Function to initialize all event handlers
+            function initializeEventHandlers() {
+                // Row Checkbox Selection
+                $("#pf-list-simple-expansion input[type='checkbox']").change(function (e) {
+                    if ($(this).is(":checked")) {
+                        $(this).closest('.list-group-item').addClass("active");
+                    } else {
+                        $(this).closest('.list-group-item').removeClass("active");
+                    }
+                });
+
+                // Toggle dropdown menu
+                $("#pf-list-simple-expansion .list-view-pf-actions").on('show.bs.dropdown', function () {
+                    var $this = $(this);
+                    var $dropdown = $this.find('.dropdown');
+                    var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+                    $dropdown.toggleClass('dropup', space < 10);
+                });
+
+                // Click the list-view heading to expand/collapse a row
+                $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
+                    if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+                        var $angleIcon = $(this).find(".fa");  // Find the angle icon in the header
+                        var $parent = $(this).parent();
+                        var $container = $parent.find(".list-group-item-container");
+
+                        if ($parent.hasClass("list-view-pf-expand-active")) {
+                            // Collapse: Change icon to fa-angle-right, hide container, and remove active class
+                            $angleIcon.removeClass("fa-angle-down").addClass("fa-angle-right");
+                            $container.addClass("hidden");
+                            $parent.removeClass("list-view-pf-expand-active");
+                        } else {
+                            // Expand: Change icon to fa-angle-down, show container, and add active class
+                            $angleIcon.removeClass("fa-angle-right").addClass("fa-angle-down");
+                            $container.removeClass("hidden");
+                            $parent.addClass("list-view-pf-expand-active");
+                        }
+                    }
+                });
+
+                $("#pf-list-simple-expansion .list-group-item-header_Next").click(function (event) {
+                    if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+                        $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
+                            .end().parent().toggleClass("list-view-pf-expand-active")
+                            .find(".list-group-item-container_next").toggleClass("hidden");
+                    }
+                });
+
+                // Click the close button, hide the expand row and remove the active status
+                $("#pf-list-simple-expansion .list-group-item-container .close").on("click", function () {
+                    $(this).parent().addClass("hidden")
+                        .parent().removeClass("list-view-pf-expand-active")
+                        .find(".fa-angle-right").removeClass("fa-angle-down");
+                });
+
+                // Initialize Donut Charts
+                // (You may need to dynamically initialize charts based on item index)
+            }
+
+            // Initialize event handlers initially
+            initializeEventHandlers();
+
+            // Reinitialize event handlers after each partial postback
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                initializeEventHandlers();
+            });
+        });
+    </script>
+
+
+    <%--<script>
         $(document).ready(function () {
             // Row Checkbox Selection
             $("#pf-list-simple-expansion input[type='checkbox']").change(function (e) {
@@ -1419,7 +1657,7 @@
             // (You may need to dynamically initialize charts based on item index)
         });
 
-    </script>
+    </script>--%>
 
     <%--<script>
         document.addEventListener('click', function (event) {
@@ -1979,7 +2217,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     </script>--%>
     <script>
-        
+
         function checkModal() {
             $('.modal-backdrop').remove();
             const showModal = document.getElementById('<%= hdnShowModalG.ClientID %>').value;
@@ -2005,7 +2243,7 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton_Disabled.value = 'Submitting...';
             return true;
         }
-        
+
         // Run the checkModal function after every partial postback
         Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
             checkModal();
@@ -2039,43 +2277,44 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     </script>--%>
     <script>
-    // Function to show or hide the modal if triggered
+        // Function to show or hide the modal if triggered
         function checkModalRule() {
-        $('.modal-backdrop').remove();
-        const showModal = document.getElementById('<%= hdnShowModalR.ClientID %>').value;
-        
-        if (showModal === "true") {
-            // If showModal is true, show the modal
-            const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
-            modal.show();
+            $('.modal-backdrop').remove();
+            const showModal = document.getElementById('<%= hdnShowModalR.ClientID %>').value;
+
+            if (showModal === "true") {
+                // If showModal is true, show the modal
+                const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
+                modal.show();
+            }
+            else if (showModal === "false") {
+                // If showModal is false, hide the modal and remove any backdrops
+                const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
+                modal.hide();
+                $('.modal-backdrop').remove(); // Remove the backdrop after hiding the modal
+            }
         }
-        else if (showModal === "false") {
-            // If showModal is false, hide the modal and remove any backdrops
-            const modal = new bootstrap.Modal(document.getElementById('exampleModalR'));
-            modal.hide();
-            $('.modal-backdrop').remove(); // Remove the backdrop after hiding the modal
+
+        // Function to change button text and disable it
+        function changebtntextrule() {
+            console.log('Button clicked by client event...');
+
+            const submitButton = document.getElementById('<%= btnCreateRule.ClientID %>');
+            submitButton.hidden = true; // Hide the original submit button
+
+            const submitButton_Disabled = document.getElementById('<%= btncreaterule_disabled.ClientID %>');
+            submitButton_Disabled.style.visibility = 'visible'; // Make the "Submitting..." button visible
+            submitButton_Disabled.value = 'Submitting...'; // Change the button text
+
+            return true; // Allow the postback to continue
         }
-    }
 
-    // Function to change button text and disable it
-    function changebtntextrule() {
-        console.log('Button clicked by client event...');
-        
-        const submitButton = document.getElementById('<%= btnCreateRule.ClientID %>');
-        submitButton.hidden = true; // Hide the original submit button
-        
-        const submitButton_Disabled = document.getElementById('<%= btncreaterule_disabled.ClientID %>');
-        submitButton_Disabled.style.visibility = 'visible'; // Make the "Submitting..." button visible
-        submitButton_Disabled.value = 'Submitting...'; // Change the button text
+        // Run the checkModal function after every partial postback
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            checkModalRule();
 
-        return true; // Allow the postback to continue
-    }
-
-    // Run the checkModal function after every partial postback
-    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
-        checkModalRule();
-    });
-</script>
+        });
+    </script>
 
 
     <%--<script type="text/javascript">
@@ -2115,6 +2354,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('<%= txtPercentage.ClientID %>').value = '';
             }
         }
+    </script>
+    <script>
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        if (prm != null) {
+            prm.add_endRequest(function (sender, e) {
+                if (sender._postBackSettings.panelsToUpdate != null) {
+                    $("#<%=ddlTxnTypeFIN.ClientID%>").select2();
+                }
+            });
+        };
     </script>
 
 </asp:Content>

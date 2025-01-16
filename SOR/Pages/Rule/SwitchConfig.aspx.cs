@@ -1843,10 +1843,6 @@ $(document).ready(function () {
             }
         }
 
-
-
-
-
         protected void ddlSwitch1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
