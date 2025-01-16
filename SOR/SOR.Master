@@ -456,7 +456,7 @@
                 </div>
             </div>
         </div>
-        <footer class="main-footer" style="position: fixed; left: 0; bottom: 0;">
+        <footer class="main-footer" style="position: fixed; left: 0; bottom: 0; z-index: 1000;">
             <p class="main-footer-text" style="color: #043389; font-family: Verdana; font-size: small">
                 © Maximus Infoware (India) Private Limited <%= DateTime.Now.Year %>
             </p>
