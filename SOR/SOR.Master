@@ -330,7 +330,7 @@
                 </div>
                 <div class="nav-right">
                     <ul class="navbar-nav align-items-center">
-                        <li class="nav-item">
+                        <li class="nav-item" style="display:none">
                             <div class="nav-link p-0">
                                 <div class="dropdown dropdown-center">
                                     <button class="nav-setting-btn icon-setting nav-link-icons nav-links-btn dropdown-toggle" type="button"
@@ -365,7 +365,7 @@
                                     <button class="nav-user-btn  nav-links-btn" type="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         <span class="icon-user nav-link-icons"></span>
-                                        <div class="user-box" style="color: #FFFFFF">
+                                        <div class="user-box" style="color: black">
                                             <asp:Label ID="lblWelcome" runat="server"></asp:Label>
                                         </div>
                                     </button>
@@ -456,7 +456,7 @@
                 </div>
             </div>
         </div>
-        <footer class="main-footer">
+        <footer class="main-footer" style="position: fixed; left: 0; bottom: 0;">
             <p class="main-footer-text" style="color: #043389; font-family: Verdana; font-size: small">
                 © Maximus Infoware (India) Private Limited <%= DateTime.Now.Year %>
             </p>

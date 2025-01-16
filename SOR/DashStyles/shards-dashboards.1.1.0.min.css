@@ -5540,9 +5540,9 @@ a.text-accent:focus, a.text-accent:hover {
     min-height: calc(100vh - 7.5rem)
 }
 
-.main-footer {
+/*.main-footer {
     height: 3.75rem
-}
+}*/
 
     .main-footer .copyright {
         color: #818ea3
