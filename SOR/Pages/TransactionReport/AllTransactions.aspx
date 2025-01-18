@@ -494,10 +494,10 @@
                     </table>
                 </asp:Panel>
 
-                <asp:Panel ID="panelGrid" runat="server" Style="width: 75%; padding: 06px 0px; overflow: auto; margin: 0 auto;">
+                <asp:Panel ID="panelGrid" runat="server" Style="width: 100%; padding: 06px 0px; overflow: auto; margin: 0 auto;">
                     <asp:UpdatePanel runat="server" ID="UpdatePanel1">
                         <ContentTemplate>
-                            <div class="HeaderStyle gv-responsive" style="width: 100%; overflow-x: auto;">
+                            <%--<div class="HeaderStyle gv-responsive">--%>
                                 <asp:GridView ID="gvAllTransactions" runat="server"
                                     HeaderStyle-CssClass="text-center"
                                     CssClass="GridView"
@@ -531,7 +531,7 @@
                                     <Columns>
                                     </Columns>
                                 </asp:GridView>
-                            </div>
+                            <%--</div>--%>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </asp:Panel>
