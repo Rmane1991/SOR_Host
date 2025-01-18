@@ -17,6 +17,7 @@
     <link href="./css/select2.min.css" rel="stylesheet" />
     <link href="./css/bootstrap-datepicker.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/icons.css">
+    <link rel="stylesheet" href="./css/Font.css">
 
     <!-- OWN CSS -->
     <link href="./css/Thumbnil.css" rel="stylesheet">
@@ -329,7 +330,7 @@
                     <asp:LinkButton ID="lnkFake" runat="server" />
                 </div>
                 <div class="nav-right">
-                    <ul class="navbar-nav align-items-center">
+                    <ul class="navbar-nav align-items-center" style="margin-right:125px">
                         <li class="nav-item" style="display:none">
                             <div class="nav-link p-0">
                                 <div class="dropdown dropdown-center">
@@ -381,7 +382,7 @@
                     <a class="navbar-portal" href="#">
                         <%--<img src="../../images/proxima_logo.png" class="brand-logo" alt="brand_logo">--%>
                         <%--<img src="../../images/nsdl.jpg" class="brand-logo" alt="brand_logo">--%>
-                        <img src="../../images/NSDL_logo.png" class="brand-logo" alt="brand_logo">
+                        <img src="../../images/NSDL_logo.png" class="brand-logo" alt="brand_logo" style="height: 40px;width: auto;margin-left: -125px;">
                         <img src="../../images/YES-BANK.png" class="brand-dark-logo" alt="brand_logo">
                     </a>
                 </div>
