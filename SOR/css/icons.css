@@ -177,11 +177,14 @@
     font-size: 25px;
 }*/
 .icon-rule-management:before {
+    margin-left:6px;
     content: "";
     display: inline-block;
-    width: 20px; /* Adjust width of the image */
-    height: 20px; /* Adjust height of the image */
-    background-image: url('../../images/icons/rule-mangement.png');
+    width: 16px; /* Adjust width of the image */
+    height: 16px; /* Adjust height of the image */
+    /*background-image: url('../../images/icons/rule-mangement.png');*/
+    background-image: url('../../images/icons/rule-management.svg');
+
     background-size: cover; /* Ensure the image covers the element */
     background-position: center; /* Center the image */
     color: var(--color-primary-default); /* Set the color of the icon (if needed for text) */
