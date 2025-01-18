@@ -1082,12 +1082,12 @@
                                                     <!-- Wrap the dropdown inside an UpdatePanel -->
                                                     <asp:UpdatePanel ID="upnlSwitch2" runat="server">
                                                         <ContentTemplate>
-                                                            <asp:DropDownList ID="ddlSwitch2" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch2_SelectedIndexChanged" Enabled="false">
+                                                            <asp:DropDownList ID="ddlSwitch2" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch2_SelectedIndexChanged">
                                                             </asp:DropDownList>
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>
 
-                                                    <asp:TextBox ID="txtswitch2" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-2 %" Enabled="false" />
+                                                    <asp:TextBox ID="txtswitch2" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-2 %" />
                                                 </div>
 
                                                 <div class="col-md-4">
@@ -1096,12 +1096,12 @@
                                                     <!-- Wrap the dropdown inside an UpdatePanel -->
                                                     <asp:UpdatePanel ID="upnlSwitch3" runat="server">
                                                         <ContentTemplate>
-                                                            <asp:DropDownList ID="ddlSwitch3" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch3_SelectedIndexChanged" Enabled="false">
+                                                            <asp:DropDownList ID="ddlSwitch3" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch3_SelectedIndexChanged" >
                                                             </asp:DropDownList>
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>
 
-                                                    <asp:TextBox ID="txtswitch3" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-3 %" Enabled="false" />
+                                                    <asp:TextBox ID="txtswitch3" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-3 %" />
                                                 </div>
                                             </div>
 
@@ -1113,12 +1113,12 @@
                                                     <!-- Wrap the dropdown inside an UpdatePanel -->
                                                     <asp:UpdatePanel ID="upnlSwitch4" runat="server">
                                                         <ContentTemplate>
-                                                            <asp:DropDownList ID="ddlSwitch4" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch4_SelectedIndexChanged" Enabled="false">
+                                                            <asp:DropDownList ID="ddlSwitch4" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch4_SelectedIndexChanged" >
                                                             </asp:DropDownList>
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>
 
-                                                    <asp:TextBox ID="txtswitch4" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-4 %" Enabled="false" />
+                                                    <asp:TextBox ID="txtswitch4" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-4 %" />
                                                 </div>
 
                                                 <div class="col-md-4">
@@ -1127,12 +1127,12 @@
                                                     <!-- Wrap the dropdown inside an UpdatePanel -->
                                                     <asp:UpdatePanel ID="upnlSwitch5" runat="server">
                                                         <ContentTemplate>
-                                                            <asp:DropDownList ID="ddlSwitch5" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch5_SelectedIndexChanged" Enabled="false">
+                                                            <asp:DropDownList ID="ddlSwitch5" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" OnSelectedIndexChanged="ddlSwitch5_SelectedIndexChanged" >
                                                             </asp:DropDownList>
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>
 
-                                                    <asp:TextBox ID="txtswitch5" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-5 %" Enabled="false" />
+                                                    <asp:TextBox ID="txtswitch5" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-5 %" />
                                                 </div>
 
                                                 <div class="col-md-4">
@@ -1141,12 +1141,12 @@
                                                     <!-- Wrap the dropdown inside an UpdatePanel -->
                                                     <asp:UpdatePanel ID="upnlSwitch6" runat="server">
                                                         <ContentTemplate>
-                                                            <asp:DropDownList ID="ddlSwitch6" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" Enabled="false">
+                                                            <asp:DropDownList ID="ddlSwitch6" runat="server" CssClass="maximus-select w-100" Width="77%" AutoPostBack="true" >
                                                             </asp:DropDownList>
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>
 
-                                                    <asp:TextBox ID="txtswitch6" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-6 %" Enabled="false" />
+                                                    <asp:TextBox ID="txtswitch6" runat="server" MaxLength="3" CssClass="form-control mt-2 textboxx" placeholder="Enter Switch-6 %" />
                                                 </div>
                                             </div>
                                         </div>
