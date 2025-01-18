@@ -415,8 +415,6 @@
     });
 </script>
 
-
-
     <%--<script>
         function callToggleSwitch(isChecked) {
             $.ajax({
@@ -565,8 +563,6 @@
                 background-color: #007bff; /* Active tab background color */
                 box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow for active tab */
             }
-
-
 
         .tab {
             display: none;
@@ -737,7 +733,7 @@
             width: 150px;
             color: #7f8fa4;
         }
-        /* Content of each row */
+        
         .content-item {
             display: table-cell; /* Treat this as a cell in the table */
             padding: 8px; /* Padding for content cells */
@@ -774,15 +770,12 @@
             else {
                 document.getElementById("<%= HiddenField1.ClientID %>").value = "No";
             }
-
-            //document.forms[0].appendChild(confirm_value);
         }
     </script>
 
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPHMasterMain" runat="server">
-    <asp:HiddenField ID="hdnSwitchId" runat="server" Value="false" />
+    
     <asp:HiddenField ID="HiddenField1" runat="server" />
     <div class="breadHeader">
         <h5 class="page-title" style="font-size: larger">Switch Configuration</h5>
@@ -798,36 +791,8 @@
     </asp:Panel>
     <asp:UpdatePanel ID="upnlSwitch" runat="server">
         <ContentTemplate>
-            <%--<div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-2">
-            <asp:Button ID="btnManual" runat="server" CssClass="btn btn-primary" Text="Manual" OnClick="btnManual_Click" Style="margin: 19px; margin-left: 60px;" />
-        </div>
-        <div class="col-md-2">
-            <asp:Button ID="btnAddSwitch" runat="server" CssClass="btn btn-primary" Text="Add Switch" OnClick="btnAddSwitch_Click" Style="margin: 19px; margin-left: 60px;" />
-        </div>
-    </div>--%>
-            <%--<div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-                <div class="col-md-2"></div>
-                <div class="col-md-2">
-                    <asp:Button ID="btnManual" runat="server" CssClass="btn btn-primary" Text="Manual" OnClick="btnManual_Click" />
-                    &nbsp;&nbsp;
-            <asp:Button ID="btnAddSwitch" runat="server" CssClass="btn btn-primary" Text="Add Switch" OnClick="btnAddSwitch_Click" />
-                </div>
-                &nbsp;&nbsp;
-            </div>--%>
-
+            <asp:HiddenField ID="hdnSwitchId" runat="server" Value="false" />
+            
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-2"></div>
