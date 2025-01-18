@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./fonts/icomoon.eot?dlp8zx');
+    src:  url('./fonts/icomoon.eot?dlp8zx#iefix') format('embedded-opentype'),
+      url('./fonts/icomoon.ttf?dlp8zx') format('truetype'),
+      url('./fonts/icomoon.woff?dlp8zx') format('woff'),
+      url('./fonts/icomoon.svg?dlp8zx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-AEPS:before {
+    content: "\e91f";
+    color: var(--color-primary-default);
+  }
+  .icon-BBPS:before {
+    content: "\e923";
+    color: var(--color-primary-default);
+  }
+  .icon-wallet2:before {
+    content: "\e924";
+    color: var(--color-primary-default);
+  }
+  .icon-add:before {
+    content: "\e900";
+    color: var(--color-primary-default);
+  }
+.icon-admin-management:before {
+    content: "\e901";
+    color: var(--color-primary-default);
+    font-size: 24px;
+}
+  .icon-agent-management:before {
+    content: "\e902";
+    color: var(--color-primary-default);
+  }
+  .icon-alert:before {
+    content: "\e903";
+    color: var(--color-primary-default);
+  }
+  .icon-Breadcrumb-Arrow:before {
+    content: "\e904";
+  }
+  .icon-Bulk-upload:before {
+    content: "\e905";
+    color: var(--color-primary-default);
+  }
+.icon-client-management:before {
+    content: "\e906";
+    color: var(--color-primary-default);
+    font-size: 24px;
+}
+  .icon-commission-management:before {
+    content: "\e908";
+    color: var(--color-primary-default);
+  }
+  .icon-commission-report:before {
+    content: "\e909";
+    color: var(--color-primary-default);
+  }
+  .icon-complaint:before {
+    content: "\e90a";
+    color: var(--color-primary-default);
+  }
+  .icon-dashboard:before {
+    content: "\e90b";
+    color: var(--color-primary-default);
+  }
+  .icon-delete:before {
+    content: "\e90c";
+    color: #c54031;
+  }
+  .icon-DMT:before {
+    content: "\e90d";
+    color: var(--color-primary-default);
+  }
+  .icon-download:before {
+    content: "\e90e";
+    color: var(--color-primary-default);
+  }
+  .icon-eye-view:before {
+    content: "\e90f";
+    color: var(--color-primary-default);
+  }
+.icon-hide:before {
+    content: "\e90f";
+    color: var(--color-primary-default);
+}
+.icon-franchise-management:before {
+    content: "\e910";
+    color: var(--color-primary-default);
+    font-size: 24px;
+}
+  .icon-Hamburger-Menu:before {
+    content: "\e911";
+      color: var(--color-black);
+        font-size: 24px;
+  }
+  .icon-home:before {
+    content: "\e912";
+    color: var(--color-primary-default);
+  }
+  .icon-limit:before {
+    content: "\e913";
+    color: var(--color-primary-default);
+  }
+  .icon-notification:before {
+    content: "\e914";
+    color: var(--color-primary-default);
+  }
+  .icon-profile:before {
+    content: "\e915";
+    color: var(--color-primary-default);
+  }
+  .icon-rupee:before {
+    content: "\e916";
+    color: var(--color-primary-default);
+  }
+  .icon-Search:before {
+    content: "\e917";
+    color: var(--color-primary-default);
+  }
+  .icon-search-header:before {
+    content: "\e918";
+    color: var(--color-primary-default);
+  }
+  .icon-settings:before {
+    content: "\e919";
+    color: var(--color-primary-default);
+  }
+  .icon-settle:before {
+    content: "\e91a";
+    color: var(--color-primary-default);
+  }
+  .icon-Sort-icon:before {
+    content: "\e91b";
+    color: #868686;
+  }
+  .icon-Transaction-report:before {
+    content: "\e91c";
+    color: var(--color-primary-default);
+    font-size:24px;
+  }
+  .icon-vertical-line:before {
+    content: "\e91e";
+    color: var(--color-primary-default);
+  }
+  .icon-wallet-copy:before {
+    content: "\e920";
+    color: var(--color-primary-default);
+  }
+  .icon-wallet:before {
+    content: "\e921";
+    color: var(--color-primary-default);
+  }
+  .icon-xlsheet:before {
+    content: "\e922";
+    color: #5c5c5c;
+  }
+  

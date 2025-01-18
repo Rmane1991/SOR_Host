@@ -404,9 +404,9 @@
                                     </div>
                                     <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap">
                                         <div class="col">
-                                            <label class="selectInputLabel" for="selectInputLabel">Aua Code</label>
+                                            <label class="selectInputLabel" for="selectInputLabel">AUA Code</label>
                                             <div class="inputBox w-100">
-                                                <input type="text" id="txtAuaCode" runat="server" class="input-text form-control" style="width: 100%" placeholder="Aua Code" />
+                                                <input type="text" id="txtAuaCode" runat="server" class="input-text form-control" style="width: 100%" placeholder="AUA Code" />
                                             </div>
                                         </div>
                                         <div class="col">

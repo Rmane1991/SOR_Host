@@ -932,7 +932,7 @@
         $(".filter-0").on("change", function () {
             var Type = $(this).prop('id');
             var filterType = $("#" + Type).find("option:selected").val();
-            alert(filterType);
+            ///alert(filterType);
             $.ajax({
                 type: "POST",
                 url: "DashBoard.aspx/GetDataByDatePeriod",

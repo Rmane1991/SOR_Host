@@ -317,6 +317,7 @@
 .icon-configuration:before {
     content: "\e921"; /* Unicode for wrench icon */
     color: var(--color-primary-default);
+    font-size: 24px;
 }
 [class^="icon-"], [class*=" icon-"] {
     /*font-family: 'icomoon' !important;
