@@ -257,7 +257,7 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-
+                                
                             </div>
 
                             <%--<div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
@@ -276,27 +276,27 @@
                                 <button type="button" id="btnexport" runat="server" class="themeBtn themeApplyBtn" data-bs-toggle="modal" autopostback="true" onserverclick="btnexport_ServerClick" style="display: none">
                                 </button>
                             </div>--%>
-                            
+
                             <div class="row d-flex justify-content-center align-items-center">
-                                            <div class="col-auto text-center">
-                                                <strong>
-                                                    <asp:Label ID="lblRecordsTotal" runat="server" Text=""></asp:Label>
-                                                </strong>
-                                            </div>
-                                            <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
-                                                <asp:Button ID="btnSearch" runat="server" Text="Search" OnClientClick="return CheckValidations();"
-                                    OnClick="btnSearch_Click" TabIndex="5" CssClass="themeBtn themeApplyBtn" BackColor="#003087" />
-                                <asp:Button ID="btnClear_Click" runat="server" Text="Clear"
-                                    TabIndex="5" CssClass="themeBtn resetBtn themeCancelBtn me-0" OnClick="btnClear_Click_Click" />
-                                            </div>
-                                            <div class="d-flex justify-content-end">
-                                                 <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
+                                <div class="col-auto text-center">
+                                    <strong>
+                                        <asp:Label ID="lblRecordsTotal" runat="server" Text=""></asp:Label>
+                                    </strong>
+                                </div>
+                                <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
+                                    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClientClick="return CheckValidations();"
+                                        OnClick="btnSearch_Click" TabIndex="5" CssClass="themeBtn themeApplyBtn" BackColor="#003087" />
+                                    <asp:Button ID="btnClear_Click" runat="server" Text="Clear"
+                                        TabIndex="5" CssClass="themeBtn resetBtn themeCancelBtn me-0" OnClick="btnClear_Click_Click" />
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <asp:ImageButton ID="BtnCsv" runat="server" ImageUrl="../../images/617449.png" CssClass="iconButtonBox"
                                         ToolTip="Csv" OnClick="BtnCsv_Click" data-toggle="modal" data-target="#myModal" />
 
                                     <asp:ImageButton ID="BtnXls" runat="server" ImageUrl="../../images/4726040.png" CssClass="iconButtonBox"
                                         ToolTip="Xls" OnClick="BtnXls_Click" data-toggle="modal" data-target="#myModal" />
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -347,23 +347,23 @@
                             <HeaderStyle HorizontalAlign="Center" Wrap="false" />
                             <RowStyle Wrap="false" />
                             <Columns>
-                                <asp:TemplateField >
-                                   
-                                    <HeaderTemplate >
+                                <asp:TemplateField>
+
+                                    <HeaderTemplate>
                                         <table>
                                             <tr>
-                                                <td style="background: #fbd2ce; color: black; display:none; border: none;">
+                                                <td style="background: #fbd2ce; color: black; display: none; border: none;">
                                                     <label>All </label>
                                                 </td>
                                                 <td style="background: #fbd2ce; color: #FFF; border: none;">
-                                                    <asp:CheckBox ID="CheckBoxAll" runat="server" AutoPostBack="true" visible="false" OnCheckedChanged="CheckBoxAll_CheckedChanged" /></td>
+                                                    <asp:CheckBox ID="CheckBoxAll" runat="server" AutoPostBack="true" Visible="false" OnCheckedChanged="CheckBoxAll_CheckedChanged" /></td>
                                             </tr>
                                         </table>
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <asp:CheckBox ID="chBoxSelectRow" runat="server" AutoPostBack="true" OnCheckedChanged="chBoxSelectRow_CheckedChanged" />
                                     </ItemTemplate>
-                                     
+
                                 </asp:TemplateField>
 
                                 <asp:TemplateField ItemStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" HeaderText="Action" HeaderStyle-CssClass="text-center">
@@ -383,12 +383,12 @@
                                         <asp:HiddenField ID="hfBCID" runat="server" Value='<%# Eval("BCId") %>' />
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:BoundField DataField="BCId" HeaderText="BCId" Visible="false"/>
+                                <asp:BoundField DataField="BCId" HeaderText="BCId" Visible="false" />
                                 <asp:BoundField DataField="BC_Name" HeaderText="BC Name" />
                                 <asp:BoundField DataField="BC_Code" HeaderText="Code" />
                                 <asp:BoundField DataField="Name" HeaderText="Name" />
                                 <asp:BoundField DataField="Contact_No" HeaderText="Mobile No." />
-                                
+
                                 <asp:BoundField DataField="Email" HeaderText="Email Id" />
                                 <asp:BoundField DataField="State" HeaderText="State" />
                                 <asp:BoundField DataField="District" HeaderText="District" />
@@ -398,7 +398,7 @@
                                 <asp:BoundField DataField="Onboarding Status" HeaderText="Onboarding Status" />
                                 <asp:BoundField DataField="Created_By" HeaderText="Onboarded By" />
                                 <asp:BoundField DataField="CreatedOn" HeaderText="Onboarded On" />
- 
+
                             </Columns>
                         </asp:GridView>
                     </div>
@@ -503,4 +503,5 @@
             });
         };
     </script>
+    
 </asp:Content>

@@ -829,4 +829,28 @@
             });
         };
     </script>
+    <script type="text/javascript">  
+        function checkDate() {
+            var date = document.getElementById("<%= txtFromDate.ClientID %>").value;
+            var todayDate = new Date().toISOString().slice(0, 10);
+            if (date > todayDate) {
+                alert("Selected date can not be greater than Current date !!");
+                document.getElementById("<%= txtFromDate.ClientID %>").value = todayDate;
+            }
+            else
+                document.getElementById("datePicker").value = todayDate;
+        }
+    </script>
+    <script type="text/javascript">  
+        function checkToDate() {
+            var date = document.getElementById("<%= txtToDate.ClientID %>").value;
+            var todayDate = new Date().toISOString().slice(0, 10);
+            if (date > todayDate) {
+                alert("Selected date can not be greater than Current date !!");
+                document.getElementById("<%= txtToDate.ClientID %>").value = todayDate;
+            }
+            else
+                document.getElementById("datePicker").value = todayDate;
+        }
+    </script>
 </asp:Content>
