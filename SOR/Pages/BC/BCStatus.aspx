@@ -332,6 +332,19 @@
                                                     </div>
                                                 </div>
                                                 <!-- input -->
+                                                <div class="col">
+                                                    <label class="selectInputLabel" for="selectInputLabel">From Date</label>
+                                                    <div class="selectInputDateBox w-100">
+                                                        <input type="date" runat="server" id="txtFromDate" class="multiple-dates select-date form-control" style="width: 100%; height: auto" placeholder="Select Date" onchange="checkDate()" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col ">
+                                                    <label class="selectInputLabel" for="selectInputLabel">To Date</label>
+                                                    <div class="selectInputDateBox w-100">
+                                                        <input type="date" runat="server" id="txtToDate" class="multiple-dates select-date form-control" style="width: 100%; height: auto" placeholder="Select Date" onchange="checkToDate()" />
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="row row-cols-auto selectInput-grid20 selectGrid-m-y select-grid-gap searchbox-btns">
@@ -1011,5 +1024,29 @@
                 }
             });
         };
+    </script>
+    <script type="text/javascript">  
+        function checkDate() {
+            var date = document.getElementById("<%= txtFromDate.ClientID %>").value;
+            var todayDate = new Date().toISOString().slice(0, 10);
+            if (date > todayDate) {
+                alert("Selected date can not be greater than Current date !!");
+                document.getElementById("<%= txtFromDate.ClientID %>").value = todayDate;
+            }
+            else
+                document.getElementById("datePicker").value = todayDate;
+        }
+    </script>
+    <script type="text/javascript">  
+        function checkToDate() {
+            var date = document.getElementById("<%= txtToDate.ClientID %>").value;
+            var todayDate = new Date().toISOString().slice(0, 10);
+            if (date > todayDate) {
+                alert("Selected date can not be greater than Current date !!");
+                document.getElementById("<%= txtToDate.ClientID %>").value = todayDate;
+            }
+            else
+                document.getElementById("datePicker").value = todayDate;
+        }
     </script>
 </asp:Content>
