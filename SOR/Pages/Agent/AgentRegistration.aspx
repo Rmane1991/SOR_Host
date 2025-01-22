@@ -1325,7 +1325,7 @@
                                 </asp:UpdatePanel>
                                 <asp:Panel ID="panelGrid" runat="server" HorizontalScroll="false" ScrollBars="None" Style="padding: 5px 10px 0px 0px;">
                                     <div class="form-group row">
-                                        <div class="tableBorderBox HeaderStyle" style="width: 100%; padding: 10px 10px; overflow: scroll; max-height: 400px;">
+                                        <div class="tableBorderBox HeaderStyle" style="padding: 10px 10px;">
                                             <%--OnPageIndexChanging="gvBusinessCorrespondents_PageIndexChanging"--%>
                                             <asp:GridView ID="gvAgentOnboard" runat="server"
                                                 AutoGenerateColumns="false"
@@ -1355,11 +1355,15 @@
                                                             </table>
                                                         </HeaderTemplate>
                                                         <ItemTemplate>
+                                                             <div style="display: flex; justify-content: center; align-items: center;">
                                                             <%-- CommandArgument='<%#Eval("BC Code")+","+ Eval("numBCID")%>'--%>   <%--OnClick="btnView_Click"--%>
                                                             <asp:ImageButton ID="btnView" runat="server" ImageUrl="../../images/Edit-01-512.png" Width="20px" Height="20px" CommandName="EditDetails"
                                                                 ToolTip="Click Here To Edit Data" data-toggle="modal" data-target="#ModalBC" />
                                                             <asp:ImageButton ID="btndelete" runat="server" ImageUrl="../../images/document-delete.png" OnClientClick="Confirm2();" Width="20px" Height="20px" CommandName="DeleteDetails"
                                                                 ToolTip="Click Here To Delete Data" data-toggle="modal" data-target="#ModalBC" />
+                                                            <asp:ImageButton ID="btnSuccess" runat="server" ImageUrl="../../images/Sucessfull.png" Width="20px" Height="20px"
+                                                                ToolTip="Done" data-toggle="modal" data-target="#ModalBC"/>
+                                                                 </div>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                     <%--   <asp:BoundField DataField="Sr.No." HeaderText="Sr.No." />--%>

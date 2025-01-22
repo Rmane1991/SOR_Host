@@ -370,18 +370,14 @@
                                             <ContentTemplate>
                                                 <asp:ImageButton ID="lbtnEdit" runat="server" CommandArgument='<%# Eval("BC ID") %>' runnat="server"
                                                     CommandName="EditDetails" ToolTip="Edit role" Width="16" Height="16" ImageUrl="~/Images/Edit-01-512.png" />
+                                                <asp:HiddenField ID="hfBCID" runat="server" Value='<%# Eval("BC ID") %>' />
                                             </ContentTemplate>
                                         </asp:UpdatePanel>
                                     </ItemTemplate>
                                     <HeaderStyle CssClass="text-center" />
                                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                                 </asp:TemplateField>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:HiddenField ID="hfBCID" runat="server" Value='<%# Eval("BC ID") %>' />
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-
+                                
                                 <asp:BoundField DataField="BC Code" HeaderText="Code" />
                                 <%--<asp:BoundField DataField="Client ID" HeaderText="Client ID" />
                                 <asp:BoundField DataField="Client Name" HeaderText="Client Name" />--%>
