@@ -1,0 +1,93 @@
+﻿.loading-wrapper-ChannelTxnSummary {
+    position: absolute; /* Position loader inside the parent container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: flex;
+    pointer-events: none;
+}
+
+.loading-wrapper-AgentOnboradTrend {
+    position: absolute; /* Position loader inside the parent container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: flex;
+    pointer-events: none;
+}
+
+.loading-wrapper-AgentTransactionSummary {
+    position: absolute; /* Position loader inside the parent container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: flex;
+    pointer-events: none;
+}
+
+.loading-wrapper-UniqueCustomer{
+    position: absolute; /* Position loader inside the parent container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: flex;
+    pointer-events: none;
+}
+
+
+
+/*common for all Chart*/
+.loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+    .loading-text img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ensure the parent container is positioned relative */
+.card-body {
+    position: relative;
+    overflow: hidden;
+}
