@@ -402,6 +402,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Modal for Switch Overview Report -->
             <div class="modal fade" id="switchOverviewModal" tabindex="-1" role="dialog" aria-labelledby="switchOverviewModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
@@ -896,8 +897,8 @@
                         if (Array.isArray(txnData) && txnData.length > 0) {
                             const revenueData = txnData.map(item => item.TotalRevenue === 0 ? null : item.TotalRevenue);
                             const TimePeriodName = txnData.map(item => item.PeriodName);
-                            const previousRevenueData = txnData.map(t => t.PreviousTotalRevenue);
-                            const previousTimePeriod = txnData.map(t => t.PreviousPeriodName);
+                            //const previousRevenueData = txnData.map(t => t.PreviousTotalRevenue);
+                            //const previousTimePeriod = txnData.map(t => t.PreviousPeriodName);
 
                             if (window.RevenueComboChart) {
                                 window.RevenueComboChart.updateOptions({
@@ -908,7 +909,7 @@
 
                                 window.RevenueComboChart.updateSeries([
                                     { name: 'Revenue', data: revenueData },
-                                    { name: 'Previous Revenue', data: previousRevenueData }
+                                    //{ name: 'Previous Revenue', data: previousRevenueData }
                                     //{ name: 'Conversion Rate', data: conversionRateData }
                                 ], true);
                             } else {
@@ -932,7 +933,7 @@
         $(".filter-0").on("change", function () {
             var Type = $(this).prop('id');
             var filterType = $("#" + Type).find("option:selected").val();
-            ///alert(filterType);
+            //alert(filterType);
             $.ajax({
                 type: "POST",
                 url: "DashBoard.aspx/GetDataByDatePeriod",
@@ -940,6 +941,8 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
+                    console.log(response.d)
+
                     if (response.d === null ||
                         response.d === "" ||
                         (Array.isArray(response.d) && response.d.length === 0)) {
@@ -948,8 +951,12 @@
                         if (Type == "ddlSwitchFilter") {
                             SwitchChart(response.d);
                         } else if (Type == "ddlAggreFilter") {
-                            $("#tbAggregator").empty().html(response.d);
 
+                            console.log('abc');
+                            console.log(Type);
+
+                            $("#tbAggregator").empty().html(response.d);
+                      
                         } else if (Type == "ddlRuleFilter") {
                             $("#tbRule").empty().html(response.d);
                             initializeCharts();
@@ -1227,6 +1234,9 @@
                     $('#reportModalLabel').text('Aggregator Report');
                     // Get content from the Aggregator Literal
                     var aggregatorContent = $('#tbAggregator').html();
+                     console.log('xyz');
+                    console.log(aggregatorContent);
+
                     $('#modalReportContent').html(aggregatorContent);
                     break;
                 case 'rule':
