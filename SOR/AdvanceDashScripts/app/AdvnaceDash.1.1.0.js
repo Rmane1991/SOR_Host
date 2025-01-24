@@ -9,102 +9,19 @@
 (function ($) {
     $(document).ready(function () {
 
-        $('#blog-overview-date-range').datepicker({});
 
-
-        // Datasets
-        var boSmallStatsDatasets = [
-            {
-                backgroundColor: 'rgba(0, 184, 216, 0.1)',
-                borderColor: 'rgb(0, 184, 216)',
-                data: [1, 2, 1, 3, 5, 4, 7],
-            },
-            {
-                backgroundColor: 'rgba(23,198,113,0.1)',
-                borderColor: 'rgb(23,198,113)',
-                data: [1, 2, 3, 3, 3, 4, 4]
-            },
-            {
-                backgroundColor: 'rgba(255,180,0,0.1)',
-                borderColor: 'rgb(255,180,0)',
-                data: [2, 3, 3, 3, 4, 3, 3]
-            },
-            {
-                backgroundColor: 'rgba(255,65,105,0.1)',
-                borderColor: 'rgb(255,65,105)',
-                data: [1, 7, 1, 3, 1, 4, 8]
-            },
-            {
-                backgroundColor: 'rgb(0,123,255,0.1)',
-                borderColor: 'rgb(0,123,255)',
-                data: [3, 2, 3, 2, 4, 5, 4]
-            }
-        ];
-
-        // Options 
-        function boSmallStatsOptions(max) {
-            return {
-                maintainAspectRatio: true,
-                responsive: true,
-                // Uncomment the following line in order to disable the animations.
-                // animation: false,
-                legend: {
-                    display: false
-                },
-                tooltips: {
-                    enabled: false,
-                    custom: false
-                },
-                elements: {
-                    point: {
-                        radius: 0
-                    },
-                    line: {
-                        tension: 0.3
-                    }
-                },
-                scales: {
-                    xAxes: [{
-                        gridLines: false,
-                        scaleLabel: false,
-                        ticks: {
-                            display: false
-                        }
-                    }],
-                    yAxes: [{
-                        gridLines: false,
-                        scaleLabel: false,
-                        ticks: {
-                            display: false,
-                            // Avoid getting the graph line cut of at the top of the canvas.
-                            // Chart.js bug link: https://github.com/chartjs/Chart.js/issues/4790
-                            suggestedMax: max
-                        }
-                    }],
-                },
-            };
-        }
-
-        // Generate the small charts
-        boSmallStatsDatasets.map(function (el, index) {
-            var chartOptions = boSmallStatsOptions(Math.max.apply(Math, el.data) + 1);
-            var ctx = document.getElementsByClassName('blog-overview-stats-small-' + (index + 1));
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6", "Label 7"],
-                    datasets: [{
-                        label: 'Today',
-                        fill: 'start',
-                        data: el.data,
-                        backgroundColor: el.backgroundColor,
-                        borderColor: el.borderColor,
-                        borderWidth: 1.5,
-                    }]
-                },
-                options: chartOptions
-            });
+        /*  ***Date Picker Start**  */
+        $('#blog-overview-date-range,.DateRangeCustom').datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true
         });
+
+
+
+
+
+
+        /*  **Date Picker End** */
 
         //***Channel-wise Summary ApexBar Chart
         var DataString = $('#hiddenChannelData').val();
@@ -119,7 +36,6 @@
         var successrate = Records.map(t => t.successrate);
         var failurerate = Records.map(t => t.failurerate);
 
-        // Define the options for ApexCharts
         var options = {
             chart: {
                 type: 'bar',
@@ -134,7 +50,7 @@
                 data: failurecount
             }],
             xaxis: {
-                categories: timeperiod, 
+                categories: timeperiod,
                 labels: {
                     style: {
                         fontSize: '12px',
@@ -142,9 +58,9 @@
                     },
                     formatter: function (value, index) {
                         if (timeperiod.length === 7) {
-                            return value;  
+                            return value;
                         } else if (timeperiod.length === 31) {
-                            return value;  
+                            return value;
                         }
                         return '';
                     }
@@ -335,52 +251,58 @@
         });
         window.BlogOverviewUsers.render();
         //End Agent OnBoard Trend Chart
-        
 
-        //Agent Txn Bar Chart
-        var ctx = document.getElementsByClassName('AggregatorView')[0];
 
-        var AgentsName = [
-            "DataHive", "ContentFusion", "InfoMerge", "WebSift", "StreamSync", "SyncMaster",
-            "AgriFusion", "Collecto", "GatherPro", "DataBridge", "SmartFusion", "MegaCollect",
-            "ContentCore", "MediaHub", "OmniAggregator"
-        ];
+        //**Agent Txn ApexBarChart
+        var ctx = document.getElementsByClassName('AgentTxnSummary')[0];
+        var DataString = $('#hiddenAgentTxnData').val();
+        DataString = DataString.replace(/\\/g, '');
+        var Records = JSON.parse(DataString);
+        var timeperiod = Records.map(t => t.timeperiod);
+        var agentname = Records.map(t => t.agentname);
+        var TotalCount = Records.map(t => t.totalcount);
+        var SuccessCount = Records.map(t => t.successcount);
+        var Failurecount = Records.map(t => t.failurecount);
+        var Successrate = Records.map(t => t.successrate);
+        var Failurerate = Records.map(t => t.failurerate);
 
-        var agentData = [
-            [20, 13, 8, 7, 22, 12, 3],  // DataHive
-            [40, 10, 10, 30, 20, 30, 50], // ContentFusion
-            [12, 23, 12, 14, 16, 18, 22], // InfoMerge
-            [25, 18, 15, 22, 30, 35, 40], // WebSift
-            [10, 12, 15, 20, 25, 30, 35], // StreamSync
-            [30, 25, 10, 5, 40, 45, 50],  // SyncMaster
-            [50, 45, 35, 40, 42, 47, 52], // AgriFusion
-            [18, 16, 14, 13, 19, 17, 22], // Collecto
-            [22, 30, 27, 28, 26, 32, 37], // GatherPro
-            [15, 18, 22, 24, 27, 31, 33], // DataBridge
-            [28, 19, 12, 25, 18, 15, 40], // SmartFusion
-            [35, 40, 30, 27, 22, 18, 30], // MegaCollect
-            [10, 14, 15, 18, 25, 35, 40], // ContentCore
-            [5, 10, 12, 18, 20, 22, 25],  // MediaHub
-            [40, 35, 32, 30, 27, 20, 22]  // OmniAggregator
-        ];
+        var AgentsName = [...new Set(agentname)];
 
         var chartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: timeperiod,
             datasets: []
         };
 
+
+        const colorPalette = [
+            "#FF5733", "#33FF57", "#3357FF", "#57FF33", "#FF33FF", "#33FFFF", "#FFFF33", "#FF3333", "#33FF33", "#3333FF",
+            "#FF9933", "#33FF99", "#9933FF", "#99FF33", "#FF6699", "#99FF66", "#6699FF", "#FF3366", "#66FF33", "#3366FF",
+            "#FF6600", "#FF0066", "#6600FF", "#0066FF", "#FF3366", "#6600FF", "#0066FF", "#FF6600", "#FF0066", "#66FF33",
+            "#3366FF", "#66FF33", "#3366FF", "#FF0033", "#33FF33", "#3333FF", "#FF0033", "#3399FF", "#99FF33", "#66FFFF",
+            "#FF6666", "#66FF66", "#3366CC", "#FFCC00", "#00FFCC", "#CCCC00", "#33CCFF", "#FFCC33", "#3399CC", "#66CCCC"
+        ];
+
+
+        function getColorForAgent(index) {
+            return colorPalette[index % colorPalette.length];
+        }
+
+
         for (var i = 0; i < AgentsName.length; i++) {
+            const agentData = Records.filter(t => t.agentname === AgentsName[i]).map(t => t.totalcount);
+
+
             chartData.datasets.push({
                 label: AgentsName[i],
-                backgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.5)`,
-                borderColor: `rgb(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255})`,
+                backgroundColor: getColorForAgent(i),
+                borderColor: getColorForAgent(i),
                 borderWidth: 1,
-                data: agentData[i],
-                hoverBackgroundColor: `rgba(${(i * 50) % 255}, ${(i * 100) % 255}, ${(i * 150) % 255}, 0.7)`,
+                data: agentData,
+                hoverBackgroundColor: getColorForAgent(i),
             });
         }
 
-        var myChart = new Chart(ctx, {
+        var AgentTxnChart = new Chart(ctx, {
             type: 'bar',
             data: chartData,
             options: {
@@ -393,6 +315,7 @@
                         },
                         ticks: {
                             callback: function (tick, index) {
+
                                 return index % 1 === 0 ? tick : '';
                             }
                         }
@@ -401,12 +324,12 @@
                         beginAtZero: true,
                         ticks: {
                             min: 0,
-                            max: Math.max(...agentData.flat()) * 1.2,
+                            max: Math.max(...TotalCount) * 1.2,
                             callback: function (tick) {
                                 if (tick >= 1e6) {
-                                    return (tick / 1e6).toFixed(1) + 'M'; // Millions
+                                    return (tick / 1e6).toFixed(1) + 'M';
                                 } else if (tick >= 1e3) {
-                                    return (tick / 1e3).toFixed(1) + 'k'; // Thousands
+                                    return (tick / 1e3).toFixed(1) + 'K';
                                 } else {
                                     return tick;
                                 }
@@ -434,51 +357,115 @@
                 }
             }
         });
-        //End
 
+        //**End
 
-        // Users by device pie chart
-        // Data
-        var ubdData = {
-            datasets: [{
-                hoverBorderColor: '#ffffff',
-                data: [68.3, 24.2, 7.5],
-                backgroundColor: [
-                    'rgba(0,123,255,0.9)',
-                    'rgba(0,123,255,0.5)',
-                    'rgba(0,123,255,0.3)'
-                ]
-            }],
-            labels: ["Desktop", "Tablet", "Mobile"]
-        };
+        //**Unique Customer Bar Chart
+        window.UniqueCustomerChart = (function () {
+            var DataString = $('#hiddenUnqCustomerData').val();
+            DataString = DataString.replace(/\\/g, '');
+            Records = JSON.parse(DataString);
+            var CurrentTime = Records.map(t => t.CurrentPeriod);
+            var currentData = Records.map(t => t.CurrentCount);
+            var PreviousTime = Records.map(t => t.PreviousTimePeriod);
+            var previousData = Records.map(t => t.PreviousCount);
 
-        // Options
-        var ubdOptions = {
-            legend: {
-                position: 'bottom',
-                labels: {
-                    padding: 25,
-                    boxWidth: 20
+            const allData = [...currentData, ...previousData];
+            const minY = Math.min(...allData) - 0;
+            const maxY = Math.max(...allData) + 5;
+
+            var options = {
+                series: [
+                    {
+                        name: 'Current Data',
+                        type: 'line',
+                        data: currentData
+                    },
+                    {
+                        name: 'Previous Data',
+                        type: 'line',
+                        data: previousData
+                    }
+                ],
+                chart: {
+                    height: 350,
+                    type: 'line',
+                    dropShadow: {
+                        enabled: true,
+                        color: '#000',
+                        top: 18,
+                        left: 7,
+                        blur: 10,
+                        opacity: 0.5
+                    },
+                    zoom: {
+                        enabled: false
+                    },
+                    toolbar: {
+                        show: false
+                    }
+                },
+                colors: ['#00BFFF', '#ADD8E6'],
+                dataLabels: {
+                    enabled: true
+                },
+                stroke: {
+                    curve: 'smooth'
+                },
+                title: {
+                    text: '',
+                    align: 'left'
+                },
+                grid: {
+                    borderColor: '#e7e7e7',
+                    row: {
+                        colors: ['#f3f3f3', 'transparent'],
+                        opacity: 0.5
+                    }
+                },
+                markers: {
+                    size: 1
+                },
+                xaxis: {
+                    categories: CurrentTime,
+                    title: {
+                        text: ''
+                    }
+                },
+                yaxis: {
+                    title: {
+                        text: ''
+                    },
+                    min: 0,
+                    max: 10,
+                    labels: {
+                        formatter: function (value) {
+                            if (value >= 1e9) { // Billions
+                                return Math.round(value / 1e9) + 'B';
+                            } else if (value >= 1e6) { // Millions
+                                return Math.round(value / 1e6) + 'M';
+                            } else if (value >= 1e3) { // Thousands
+                                return Math.round(value / 1e3) + 'K';
+                            } else {
+                                return value;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    position: 'top',
+                    horizontalAlign: 'right',
+                    floating: true,
+                    offsetY: -25,
+                    offsetX: -5
                 }
-            },
-            cutoutPercentage: 0,
-            // Uncomment the following line in order to disable the animations.
-            // animation: false,
-            tooltips: {
-                custom: false,
-                mode: 'index',
-                position: 'nearest'
-            }
-        };
-
-        var ubdCtx = document.getElementsByClassName('blog-users-by-device')[0];
-
-        // Generate the users by device chart.
-        window.ubdChart = new Chart(ubdCtx, {
-            type: 'pie',
-            data: ubdData,
-            options: ubdOptions
-        });
+            };
+            var chart = new ApexCharts(document.querySelector(".UniqueCustomer"), options);
+            chart.render();
+            //window.UniqueCustomerChart = chart;
+            return chart;
+        })();
+        //**END
 
         //Tab controls Day/Week/Month/Year
         const buttons = document.querySelectorAll('.btn-group .btn');
@@ -489,8 +476,6 @@
             });
         });
         //end
-
-
 
     });
 })(jQuery);
