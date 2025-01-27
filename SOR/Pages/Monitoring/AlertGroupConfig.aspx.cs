@@ -27,6 +27,7 @@ namespace SOR.Pages.Monitoring
         AlertEntity _alertEntity = new AlertEntity();
         DataTable dt = new DataTable();
         private List<string> conditions;
+        private List<string> QueryCondtions;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -64,10 +65,14 @@ namespace SOR.Pages.Monitoring
                         {
                             conditions = new List<string>();
                             ViewState["Conditions"] = conditions;
+
+                            QueryCondtions = new List<string>();
+                            ViewState["QueryCondtions"] = QueryCondtions;
                         }
                         else
                         {
                             conditions = (List<string>)ViewState["Conditions"];
+                            QueryCondtions = (List<string>)ViewState["QueryCondtions"];
                         }
                     }
                 }
@@ -481,217 +486,238 @@ namespace SOR.Pages.Monitoring
         {
             try
             {
-                if (string.IsNullOrEmpty(txtRuleName.Text))
-                {
-                    ShowWarning("Please Enter Contact Name. Try again", "Warning");
-                    return;
-                }
-                //else if (string.IsNullOrEmpty(txtemailBody.Text))
-                //{
-                //    ShowWarning("Please Enter mailbody. Try again", "Warning");
-                //    return;
-                //}
-                //else if (string.IsNullOrEmpty(txtsmsBody.Text))
-                //{
-                //    ShowWarning("Please Enter smsbody. Try again", "Warning");
-                //    return;
-                //}
-                else if (string.IsNullOrEmpty(txtEmail.Text))
-                {
-                    ShowWarning("Please Enter EmailID. Try again", "Warning");
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtMobile.Text))
-                {
-                    ShowWarning("Please Enter Mobile. Try again", "Warning");
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtEmailCC.Text))
-                {
-                    ShowWarning("Please Enter EmailCC. Try again", "Warning");
-                    return;
-                }
-                else if ((ddlAlertsentOn.SelectedValue == "0") && !string.IsNullOrEmpty(ddlAlertsentOn.SelectedValue))
-                {
-                    ShowWarning("Please select SendOn. Try again", "Warning");
-                    return;
-                }
+                /* if (string.IsNullOrEmpty(txtRuleName.Text))
+                 {
+                     ShowWarning("Please Enter Alert Name. Try again", "Warning");
+                     return;
+                 }
+                 else if ((ddlBClist.SelectedValue == "0") && !string.IsNullOrEmpty(ddlBClist.SelectedValue))
+                 {
+                     ShowWarning("Please Select BC's. Try again", "Warning");
+                     return;
+                 }
+                 else if ((ddlSwitch.SelectedValue == "0") && !string.IsNullOrEmpty(ddlSwitch.SelectedValue))
+                 {
+                     ShowWarning("Please Select Switch. Try again", "Warning");
+                     return;
+                 }
+                 else if ((ddlChannels.SelectedValue == "0") && !string.IsNullOrEmpty(ddlChannels.SelectedValue))
+                 {
+                     ShowWarning("Please Select Channel. Try again", "Warning");
+                     return;
+                 }
+                 else if (string.IsNullOrEmpty(txtemailBody.Text))
+                 {
+                     ShowWarning("Please Enter Mail Body. Try again", "Warning");
+                     return;
+                 }
+                 else if (string.IsNullOrEmpty(txtsmsBody.Text))
+                 {
+                     ShowWarning("Please Enter SMS Body. Try again", "Warning");
+                     return;
+                 }
+                 else if (string.IsNullOrEmpty(txtEmail.Text))
+                 {
+                     ShowWarning("Please Enter Email Id. Try again", "Warning");
+                     return;
+                 }
+                 else if (string.IsNullOrEmpty(txtMobile.Text))
+                 {
+                     ShowWarning("Please Enter Mobile Number. Try again", "Warning");
+                     return;
+                 }
+                 else if (string.IsNullOrEmpty(txtEmailCC.Text))
+                 {
+                     ShowWarning("Please Enter Email CC. Try again", "Warning");
+                     return;
+                 }
+                 else if (string.IsNullOrEmpty(txtsubject.Text))
+                 {
+                     ShowWarning("Please Enter Mail Subject. Try again", "Warning");
+                     return;
+                 }
+                 else if ((ddlAlertsentOn.SelectedValue == "0") && !string.IsNullOrEmpty(ddlAlertsentOn.SelectedValue))
+                 {
+                     ShowWarning("Please select Alert Mode. Try again", "Warning");
+                     return;
+                 }  
+                 else
+                 {
 
-                else
+                 } */
+                if (Session["priority2"] != null)
                 {
-                    if (Session["priority2"] != null)
+                    _alertEntity.CreatedBy = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                    _alertEntity.AlertGroupId = Convert.ToString(ddlGroupName.SelectedValue) != "0" ? Convert.ToString(ddlGroupName.SelectedValue) : "0";
+                    _alertEntity.AlertMemberId = Convert.ToString(Session["RuleId"].ToString());
+                    _alertEntity.AlertSwitch = Convert.ToString(ddlSwitch.SelectedValue) != "0" ? Convert.ToString(ddlSwitch.SelectedValue) : "0";
+                    _alertEntity.AlertGroupName = !string.IsNullOrEmpty(txtGroupName.Text) ? txtGroupName.Text.Trim() : null;
+                    _alertEntity.GroupType = "";
+                    _alertEntity.MemeberName = !string.IsNullOrEmpty(txtRuleName.Text) ? txtRuleName.Text.Trim() : null;
+                    _alertEntity.Email = !string.IsNullOrEmpty(txtEmail.Text) ? txtEmail.Text.Trim() : null;
+                    _alertEntity.Phone = !string.IsNullOrEmpty(txtMobile.Text) ? txtMobile.Text.Trim() : null;
+                    _alertEntity.EmailCC = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
+                    _alertEntity.EmailBcc = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
+                    _alertEntity.Subject = !string.IsNullOrEmpty(txtsubject.Text) ? txtsubject.Text.Trim() : null;
+                    //_alertEntity.EmailBody = !string.IsNullOrEmpty(txtemailBody.Text) ? txtemailBody.Text.Trim() : null;
+                    //_alertEntity.SMSBody = !string.IsNullOrEmpty(txtsmsBody.Text) ? txtsmsBody.Text.Trim() : null;
+                    string sanitizedEmailBody = SanitizeHtml(txtemailBody.Text.Trim());
+                    string sanitizedSMSBody = SanitizeHtml(txtsmsBody.Text.Trim());
+                    _alertEntity.EmailBody = !string.IsNullOrEmpty(sanitizedEmailBody) ? sanitizedEmailBody : null;
+                    _alertEntity.SMSBody = !string.IsNullOrEmpty(sanitizedSMSBody) ? sanitizedSMSBody : null;
+                    _alertEntity.AlertType = Convert.ToString(ddlAlertType.SelectedItem.Text) != "0" ? Convert.ToString(ddlAlertType.SelectedItem.Text) : "0";
+                    _alertEntity.AlertSentOn = Convert.ToString(ddlAlertsentOn.SelectedValue) != "0" ? Convert.ToString(ddlAlertsentOn.SelectedValue) : "0";
+                    _alertEntity.TimerInterval = !string.IsNullOrEmpty(txtTimerInterval.Text) ? txtTimerInterval.Text.Trim() : null;
+                    _alertEntity.MaxRetryCount = !string.IsNullOrEmpty(txtmaxRetry.Text) ? txtmaxRetry.Text.Trim() : null;
+                    _alertEntity.NextInterval = !string.IsNullOrEmpty(txtNxtInterval.Text) ? txtNxtInterval.Text.Trim() : null;
+                    _alertEntity.StartTime = !string.IsNullOrEmpty(txtStartTime.Text) ? txtStartTime.Text.Trim() : null;
+                    _alertEntity.EndTime = !string.IsNullOrEmpty(txtEndTime.Text) ? txtEndTime.Text.Trim() : null;
+                    _alertEntity.Bc = Convert.ToString(ddlBClist.SelectedItem.Text) != "0" ? Convert.ToString(ddlBClist.SelectedItem.Text) : "0";
+                    _alertEntity.Channels = Convert.ToString(ddlChannels.SelectedItem.Text) != "0" ? Convert.ToString(ddlChannels.SelectedItem.Text) : "0";
+                    _alertEntity.ColumSelector = !string.IsNullOrEmpty(ddlColumnSelected.Text) ? ddlColumnSelected.Text.Trim() : null;
+                    _alertEntity.TransactionType = Convert.ToString(ddlTxnType.SelectedItem.Text) != "0" ? Convert.ToString(ddlTxnType.SelectedItem.Text) : "0";
+                    _alertEntity.DeclineCount = !string.IsNullOrEmpty(txtConsicativeDeclineCount.Text) ? txtConsicativeDeclineCount.Text.Trim() : null;
+
+                    StringBuilder sbquery = new StringBuilder();
+                    bool isFirstCondition = true;
+                    foreach (GridViewRow row in gvConditions.Rows)
                     {
-                        _alertEntity.CreatedBy = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
-                        _alertEntity.AlertGroupId = Convert.ToString(ddlGroupName.SelectedValue) != "0" ? Convert.ToString(ddlGroupName.SelectedValue) : "0";
-                        _alertEntity.AlertMemberId = Convert.ToString(Session["RuleId"].ToString());
-                        _alertEntity.AlertSwitch = Convert.ToString(ddlSwitch.SelectedValue) != "0" ? Convert.ToString(ddlSwitch.SelectedValue) : "0";
-                        _alertEntity.AlertGroupName = !string.IsNullOrEmpty(txtGroupName.Text) ? txtGroupName.Text.Trim() : null;
-                        _alertEntity.GroupType = "";
-                        _alertEntity.MemeberName = !string.IsNullOrEmpty(txtRuleName.Text) ? txtRuleName.Text.Trim() : null;
-                        _alertEntity.Email = !string.IsNullOrEmpty(txtEmail.Text) ? txtEmail.Text.Trim() : null;
-                        _alertEntity.Phone = !string.IsNullOrEmpty(txtMobile.Text) ? txtMobile.Text.Trim() : null;
-                        _alertEntity.EmailCC = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
-                        _alertEntity.EmailBcc = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
-                        _alertEntity.Subject = !string.IsNullOrEmpty(txtsubject.Text) ? txtsubject.Text.Trim() : null;
-                        //_alertEntity.EmailBody = !string.IsNullOrEmpty(txtemailBody.Text) ? txtemailBody.Text.Trim() : null;
-                        //_alertEntity.SMSBody = !string.IsNullOrEmpty(txtsmsBody.Text) ? txtsmsBody.Text.Trim() : null;
-                        string sanitizedEmailBody = SanitizeHtml(txtemailBody.Text.Trim());
-                        string sanitizedSMSBody = SanitizeHtml(txtsmsBody.Text.Trim());
-                        _alertEntity.EmailBody = !string.IsNullOrEmpty(sanitizedEmailBody) ? sanitizedEmailBody : null;
-                        _alertEntity.SMSBody = !string.IsNullOrEmpty(sanitizedSMSBody) ? sanitizedSMSBody : null;
-                        _alertEntity.AlertType = Convert.ToString(ddlAlertType.SelectedItem.Text) != "0" ? Convert.ToString(ddlAlertType.SelectedItem.Text) : "0";
-                        _alertEntity.AlertSentOn = Convert.ToString(ddlAlertsentOn.SelectedValue) != "0" ? Convert.ToString(ddlAlertsentOn.SelectedValue) : "0";
-                        _alertEntity.TimerInterval = !string.IsNullOrEmpty(txtTimerInterval.Text) ? txtTimerInterval.Text.Trim() : null;
-                        _alertEntity.MaxRetryCount = !string.IsNullOrEmpty(txtmaxRetry.Text) ? txtmaxRetry.Text.Trim() : null;
-                        _alertEntity.NextInterval = !string.IsNullOrEmpty(txtNxtInterval.Text) ? txtNxtInterval.Text.Trim() : null;
-                        _alertEntity.StartTime = !string.IsNullOrEmpty(txtStartTime.Text) ? txtStartTime.Text.Trim() : null;
-                        _alertEntity.EndTime = !string.IsNullOrEmpty(txtEndTime.Text) ? txtEndTime.Text.Trim() : null;
-                        _alertEntity.Bc = Convert.ToString(ddlBClist.SelectedItem.Text) != "0" ? Convert.ToString(ddlBClist.SelectedItem.Text) : "0";
-                        _alertEntity.Channels = Convert.ToString(ddlChannels.SelectedItem.Text) != "0" ? Convert.ToString(ddlChannels.SelectedItem.Text) : "0";
-                        _alertEntity.ColumSelector = !string.IsNullOrEmpty(ddlColumnSelected.Text) ? ddlColumnSelected.Text.Trim() : null;
-                        _alertEntity.TransactionType = Convert.ToString(ddlTxnType.SelectedItem.Text) != "0" ? Convert.ToString(ddlTxnType.SelectedItem.Text) : "0";
-                        _alertEntity.DeclineCount = !string.IsNullOrEmpty(txtConsicativeDeclineCount.Text) ? txtConsicativeDeclineCount.Text.Trim() : null;
 
-                        StringBuilder sbquery = new StringBuilder();
-                        bool isFirstCondition = true;
-                        foreach (GridViewRow row in gvConditions.Rows)
+                        if (row.RowType == DataControlRowType.DataRow)
                         {
+                            DropDownList ddlAndOr = (DropDownList)row.FindControl("ddlAndOr");
+                            DropDownList ddlFieldName = (DropDownList)row.FindControl("ddlFieldName");
+                            DropDownList ddlOperator = (DropDownList)row.FindControl("ddlOperator");
+                            DropDownList ddlValue = (DropDownList)row.FindControl("ddlValue");
+                            string andOr = ddlAndOr.SelectedValue;
+                            string fieldName = ddlFieldName.SelectedValue;
+                            string operatorValue = ddlOperator.SelectedValue;
+                            string value = ddlValue.SelectedValue;
 
-                            if (row.RowType == DataControlRowType.DataRow)
+                            if (string.IsNullOrEmpty(fieldName) || string.IsNullOrEmpty(operatorValue) || string.IsNullOrEmpty(value))
                             {
-                                DropDownList ddlAndOr = (DropDownList)row.FindControl("ddlAndOr");
-                                DropDownList ddlFieldName = (DropDownList)row.FindControl("ddlFieldName");
-                                DropDownList ddlOperator = (DropDownList)row.FindControl("ddlOperator");
-                                DropDownList ddlValue = (DropDownList)row.FindControl("ddlValue");
-                                string andOr = ddlAndOr.SelectedValue;
-                                string fieldName = ddlFieldName.SelectedValue;
-                                string operatorValue = ddlOperator.SelectedValue;
-                                string value = ddlValue.SelectedValue;
-
-                                if (string.IsNullOrEmpty(fieldName) || string.IsNullOrEmpty(operatorValue) || string.IsNullOrEmpty(value))
-                                {
-                                    continue;
-                                }
-
-                                if (!isFirstCondition)
-                                {
-                                    sbquery.Append($" {andOr} ");
-                                }
-                                sbquery.Append($"{fieldName} {operatorValue} {value}");
-                                isFirstCondition = false;
+                                continue;
                             }
+
+                            if (!isFirstCondition)
+                            {
+                                sbquery.Append($" {andOr} ");
+                            }
+                            sbquery.Append($"{fieldName} {operatorValue} {value}");
+                            isFirstCondition = false;
                         }
-                        _alertEntity.QuerySelector = sbquery.ToString();
-                        _alertEntity.InsType = "members";
-                        _alertEntity.flag = (int)EnumCollection.EnumRuleType.Edit;
-                        string statusCode = _alertEntity.InsUpdateAlertDetails();
-                        if (statusCode == "UPD00")
-                        {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                        }
-                        else
-                        {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                        }
-                        var response = new
-                        {
-                            StatusMessage = _CommonEntity.ResponseMessage
-                        };
-                        ErrorLog.RuleTrace("AlertConfig: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                    }
+                    _alertEntity.QuerySelector = sbquery.ToString();
+                    _alertEntity.InsType = "members";
+                    _alertEntity.flag = (int)EnumCollection.EnumRuleType.Edit;
+                    string statusCode = _alertEntity.InsUpdateAlertDetails();
+                    if (statusCode == "UPD00")
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
                     }
                     else
                     {
-                        _alertEntity.CreatedBy = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
-                        _alertEntity.AlertGroupId = Convert.ToString(ddlGroupName.SelectedValue) != "0" ? Convert.ToString(ddlGroupName.SelectedValue) : "0";
-                        _alertEntity.AlertSwitch = Convert.ToString(ddlSwitch.SelectedValue) != "0" ? Convert.ToString(ddlSwitch.SelectedValue) : "0";
-                        _alertEntity.AlertGroupName = !string.IsNullOrEmpty(txtGroupName.Text) ? txtGroupName.Text.Trim() : null;
-                        _alertEntity.GroupType = "";
-                        _alertEntity.MemeberName = !string.IsNullOrEmpty(txtRuleName.Text) ? txtRuleName.Text.Trim() : null;
-                        _alertEntity.Email = !string.IsNullOrEmpty(txtEmail.Text) ? txtEmail.Text.Trim() : null;
-                        _alertEntity.Phone = !string.IsNullOrEmpty(txtMobile.Text) ? txtMobile.Text.Trim() : null;
-                        _alertEntity.EmailCC = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
-                        _alertEntity.EmailBcc = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
-                        _alertEntity.Subject = !string.IsNullOrEmpty(txtsubject.Text) ? txtsubject.Text.Trim() : null;
-                        //_alertEntity.EmailBody = !string.IsNullOrEmpty(txtemailBody.Text) ? txtemailBody.Text.Trim() : null;
-                        //_alertEntity.SMSBody = !string.IsNullOrEmpty(txtsmsBody.Text) ? txtsmsBody.Text.Trim() : null;
-
-                        string sanitizedEmailBody = SanitizeHtml(txtemailBody.Text.Trim());
-                        string sanitizedSMSBody = SanitizeHtml(txtsmsBody.Text.Trim());
-                        _alertEntity.EmailBody = !string.IsNullOrEmpty(sanitizedEmailBody) ? sanitizedEmailBody : null;
-                        _alertEntity.SMSBody = !string.IsNullOrEmpty(sanitizedSMSBody) ? sanitizedSMSBody : null;
-                        _alertEntity.AlertType = Convert.ToString(ddlAlertType.SelectedItem.Text) != "0" ? Convert.ToString(ddlAlertType.SelectedItem.Text) : "0";
-                        _alertEntity.AlertSentOn = Convert.ToString(ddlAlertsentOn.SelectedValue) != "0" ? Convert.ToString(ddlAlertsentOn.SelectedValue) : "0";
-                        _alertEntity.TimerInterval = !string.IsNullOrEmpty(txtTimerInterval.Text) ? txtTimerInterval.Text.Trim() : null;
-                        _alertEntity.MaxRetryCount = !string.IsNullOrEmpty(txtmaxRetry.Text) ? txtmaxRetry.Text.Trim() : null;
-                        _alertEntity.NextInterval = !string.IsNullOrEmpty(txtNxtInterval.Text) ? txtNxtInterval.Text.Trim() : null;
-                        _alertEntity.StartTime = !string.IsNullOrEmpty(txtStartTime.Text) ? txtStartTime.Text.Trim() : null;
-                        _alertEntity.EndTime = !string.IsNullOrEmpty(txtEndTime.Text) ? txtEndTime.Text.Trim() : null;
-                        _alertEntity.Bc = Convert.ToString(ddlBClist.SelectedItem.Text) != "0" ? Convert.ToString(ddlBClist.SelectedItem.Text) : "0";
-                        _alertEntity.Channels = Convert.ToString(ddlChannels.SelectedItem.Text) != "0" ? Convert.ToString(ddlChannels.SelectedItem.Text) : "0";
-                        _alertEntity.ColumSelector = !string.IsNullOrEmpty(ddlColumnSelected.Text) ? ddlColumnSelected.Text.Trim() : null;
-                        _alertEntity.TransactionType = Convert.ToString(ddlTxnType.SelectedItem.Text) != "0" ? Convert.ToString(ddlTxnType.SelectedItem.Text) : "0";
-                        _alertEntity.DeclineCount = !string.IsNullOrEmpty(txtConsicativeDeclineCount.Text) ? txtConsicativeDeclineCount.Text.Trim() : null;
-                        StringBuilder sbquery = new StringBuilder();
-                        bool isFirstCondition = true;
-                        foreach (GridViewRow row in gvConditions.Rows)
-                        {
-
-                            if (row.RowType == DataControlRowType.DataRow)
-                            {
-                                DropDownList ddlAndOr = (DropDownList)row.FindControl("ddlAndOr");
-                                DropDownList ddlFieldName = (DropDownList)row.FindControl("ddlFieldName");
-                                DropDownList ddlOperator = (DropDownList)row.FindControl("ddlOperator");
-                                DropDownList ddlValue = (DropDownList)row.FindControl("ddlValue");
-                                string andOr = ddlAndOr.SelectedValue;
-                                string fieldName = ddlFieldName.SelectedValue;
-                                string operatorValue = ddlOperator.SelectedValue;
-                                string value = ddlValue.SelectedValue;
-
-                                if (string.IsNullOrEmpty(fieldName) || string.IsNullOrEmpty(operatorValue) || string.IsNullOrEmpty(value))
-                                {
-                                    continue;
-                                }
-
-                                if (!isFirstCondition)
-                                {
-                                    sbquery.Append($" {andOr} ");
-                                }
-                                sbquery.Append($"{fieldName} {operatorValue} {value}");
-                                isFirstCondition = false;
-                            }
-                        }
-                        _alertEntity.QuerySelector = sbquery.ToString();
-                        _alertEntity.QuerySelector = txtQueryPreview.Text;
-                        _alertEntity.InsType = "members";
-                        _alertEntity.flag = (int)EnumCollection.EnumRuleType.Insert;
-                        string statusCode = _alertEntity.InsUpdateAlertDetails();
-
-                        if (statusCode == "INS00")
-                        {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                        }
-                        else if (statusCode == "EXIT00")
-                        {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                        }
-                        else
-                        {
-                            _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
-                            _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
-                        }
-                        var response = new
-                        {
-                            StatusMessage = _CommonEntity.ResponseMessage
-                        };
-                        ErrorLog.RuleTrace("AlertConfig: btnCreGroup_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
                     }
+                    var response = new
+                    {
+                        StatusMessage = _CommonEntity.ResponseMessage
+                    };
+                    ErrorLog.RuleTrace("AlertConfig: EditGroup() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
                 }
+                else
+                {
+                    _alertEntity.CreatedBy = !string.IsNullOrEmpty(Convert.ToString(Session["Username"])) ? Convert.ToString(Session["Username"]) : null;
+                    _alertEntity.AlertGroupId = Convert.ToString(ddlGroupName.SelectedValue) != "0" ? Convert.ToString(ddlGroupName.SelectedValue) : "0";
+                    _alertEntity.AlertSwitch = Convert.ToString(ddlSwitch.SelectedValue) != "0" ? Convert.ToString(ddlSwitch.SelectedValue) : "0";
+                    _alertEntity.AlertGroupName = !string.IsNullOrEmpty(txtGroupName.Text) ? txtGroupName.Text.Trim() : null;
+                    _alertEntity.GroupType = "";
+                    _alertEntity.MemeberName = !string.IsNullOrEmpty(txtRuleName.Text) ? txtRuleName.Text.Trim() : null;
+                    _alertEntity.Email = !string.IsNullOrEmpty(txtEmail.Text) ? txtEmail.Text.Trim() : null;
+                    _alertEntity.Phone = !string.IsNullOrEmpty(txtMobile.Text) ? txtMobile.Text.Trim() : null;
+                    _alertEntity.EmailCC = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
+                    _alertEntity.EmailBcc = !string.IsNullOrEmpty(txtEmailCC.Text) ? txtEmailCC.Text.Trim() : null;
+                    _alertEntity.Subject = !string.IsNullOrEmpty(txtsubject.Text) ? txtsubject.Text.Trim() : null;
+                    //_alertEntity.EmailBody = !string.IsNullOrEmpty(txtemailBody.Text) ? txtemailBody.Text.Trim() : null;
+                    //_alertEntity.SMSBody = !string.IsNullOrEmpty(txtsmsBody.Text) ? txtsmsBody.Text.Trim() : null;
+
+                    string sanitizedEmailBody = SanitizeHtml(txtemailBody.Text.Trim());
+                    string sanitizedSMSBody = SanitizeHtml(txtsmsBody.Text.Trim());
+                    _alertEntity.EmailBody = !string.IsNullOrEmpty(sanitizedEmailBody) ? sanitizedEmailBody : null;
+                    _alertEntity.SMSBody = !string.IsNullOrEmpty(sanitizedSMSBody) ? sanitizedSMSBody : null;
+                    _alertEntity.AlertType = Convert.ToString(ddlAlertType.SelectedItem.Text) != "0" ? Convert.ToString(ddlAlertType.SelectedItem.Text) : "0";
+                    _alertEntity.AlertSentOn = Convert.ToString(ddlAlertsentOn.SelectedValue) != "0" ? Convert.ToString(ddlAlertsentOn.SelectedValue) : "0";
+                    _alertEntity.TimerInterval = !string.IsNullOrEmpty(txtTimerInterval.Text) ? txtTimerInterval.Text.Trim() : null;
+                    _alertEntity.MaxRetryCount = !string.IsNullOrEmpty(txtmaxRetry.Text) ? txtmaxRetry.Text.Trim() : null;
+                    _alertEntity.NextInterval = !string.IsNullOrEmpty(txtNxtInterval.Text) ? txtNxtInterval.Text.Trim() : null;
+                    _alertEntity.StartTime = !string.IsNullOrEmpty(txtStartTime.Text) ? txtStartTime.Text.Trim() : null;
+                    _alertEntity.EndTime = !string.IsNullOrEmpty(txtEndTime.Text) ? txtEndTime.Text.Trim() : null;
+                    _alertEntity.Bc = Convert.ToString(ddlBClist.SelectedItem.Text) != "0" ? Convert.ToString(ddlBClist.SelectedItem.Text) : "0";
+                    _alertEntity.Channels = Convert.ToString(ddlChannels.SelectedItem.Text) != "0" ? Convert.ToString(ddlChannels.SelectedItem.Text) : "0";
+                    _alertEntity.ColumSelector = !string.IsNullOrEmpty(ddlColumnSelected.Text) ? ddlColumnSelected.Text.Trim() : null;
+                    _alertEntity.TransactionType = Convert.ToString(ddlTxnType.SelectedItem.Text) != "0" ? Convert.ToString(ddlTxnType.SelectedItem.Text) : "0";
+                    _alertEntity.DeclineCount = !string.IsNullOrEmpty(txtConsicativeDeclineCount.Text) ? txtConsicativeDeclineCount.Text.Trim() : null;
+                    StringBuilder sbquery = new StringBuilder();
+                    bool isFirstCondition = true;
+                    foreach (GridViewRow row in gvConditions.Rows)
+                    {
+
+                        if (row.RowType == DataControlRowType.DataRow)
+                        {
+                            DropDownList ddlAndOr = (DropDownList)row.FindControl("ddlAndOr");
+                            DropDownList ddlFieldName = (DropDownList)row.FindControl("ddlFieldName");
+                            DropDownList ddlOperator = (DropDownList)row.FindControl("ddlOperator");
+                            DropDownList ddlValue = (DropDownList)row.FindControl("ddlValue");
+                            string andOr = ddlAndOr.SelectedValue;
+                            string fieldName = ddlFieldName.SelectedValue;
+                            string operatorValue = ddlOperator.SelectedValue;
+                            string value = ddlValue.SelectedValue;
+
+                            if (string.IsNullOrEmpty(fieldName) || string.IsNullOrEmpty(operatorValue) || string.IsNullOrEmpty(value))
+                            {
+                                continue;
+                            }
+
+                            if (!isFirstCondition)
+                            {
+                                sbquery.Append($" {andOr} ");
+                            }
+                            sbquery.Append($"{fieldName} {operatorValue} {value}");
+                            isFirstCondition = false;
+                        }
+                    }
+                    _alertEntity.QuerySelector = sbquery.ToString();
+                    _alertEntity.QuerySelector = hidnEncData.Value;//txtQueryPreview.Text;
+                    _alertEntity.InsType = "members";
+                    _alertEntity.flag = (int)EnumCollection.EnumRuleType.Insert;
+                    string statusCode = _alertEntity.InsUpdateAlertDetails();
+
+                    if (statusCode == "INS00")
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    }
+                    else if (statusCode == "EXIT00")
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    }
+                    else
+                    {
+                        _CommonEntity.ResponseCode = CommonEntity.GetResponseCode(statusCode, (int)EnumCollection.TransactionSource.Others);
+                        _CommonEntity.ResponseMessage = CommonEntity.GetResponseCodeDescription(_CommonEntity.ResponseCode, (int)EnumCollection.TransactionSource.Others);
+                    }
+                    var response = new
+                    {
+                        StatusMessage = _CommonEntity.ResponseMessage
+                    };
+                    ErrorLog.RuleTrace("AlertConfig: btnCreGroup_Click() | DB_StatusCode : " + statusCode + " | ResponseCode : " + _CommonEntity.ResponseCode + " | ResponseMessage : " + _CommonEntity.ResponseMessage);
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "Warning", "showSuccess('" + _CommonEntity.ResponseMessage + "');", true);
+                }
+
                 BindGroup();
                 hdnShowModalR.Value = "false";
                 ClearLocalStorage();
@@ -1382,12 +1408,14 @@ namespace SOR.Pages.Monitoring
             string declineCount = txtConsicativeDeclineCount.Text.Trim();
             string txnType = ddlTxnType.SelectedValue;
             string columnField = ddlColumnSelected.SelectedValue;
+            string columnText = ddlColumnSelected.SelectedItem.Text;
             string ValueSelected = hdnValueSelc.Value;
             string retryInterval = txtTimerInterval.Text.Trim();
             string maxRetryCount = txtmaxRetry.Text.Trim();
             string nextInterval = txtNxtInterval.Text.Trim();
 
             StringBuilder newCondition = new StringBuilder();
+            StringBuilder QueryToVisbile = new StringBuilder();
             bool anyConditionAdded = false;
 
             //if (!string.IsNullOrEmpty(declineCount))
@@ -1411,9 +1439,11 @@ namespace SOR.Pages.Monitoring
                 if (!string.IsNullOrWhiteSpace(txtQueryPreview.Text))
                 {
                     newCondition.Append($" {ddlOperator0.SelectedValue} ");
+                    QueryToVisbile.Append($" {ddlOperator0.SelectedValue} ");
                 }
                 string columnOperator = ddlConditions.SelectedValue;
                 newCondition.Append($"{columnField} {columnOperator} '{ValueSelected}'");
+                QueryToVisbile.Append($"{columnText} {columnOperator} '{ValueSelected}'");
                 anyConditionAdded = true;
             }
 
@@ -1447,10 +1477,13 @@ namespace SOR.Pages.Monitoring
             {
                 conditions.Add(newCondition.ToString());
                 ViewState["Conditions"] = conditions;
+                QueryCondtions.Add(QueryToVisbile.ToString());
+                ViewState["QueryCondtions"] = QueryCondtions;
             }
 
+            txtQueryPreview.Text = string.Join(" ", QueryCondtions);
+            hidnEncData.Value = string.Join(" ", conditions);
 
-            txtQueryPreview.Text = string.Join(" ", conditions);
         }
 
         protected void btnClearCondition_Click(object sender, EventArgs e)
@@ -1465,8 +1498,11 @@ namespace SOR.Pages.Monitoring
             try
             {
                 txtQueryPreview.Text = string.Empty;
+                hidnEncData.Value = string.Empty;
                 string script = "localStorage.setItem('Conditions', JSON.stringify([]));";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "ClearConditions", script, true);
+                string script1 = "localStorage.setItem('QueryCondtions', JSON.stringify([]));";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "ClearConditions", script1, true);
             }
             catch (Exception ex)
             {
