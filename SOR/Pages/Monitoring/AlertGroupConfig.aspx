@@ -61,7 +61,65 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <%--mi sorting--%>
 
+    <script>
+        function validateForm() {
+            var txtName = document.getElementById('<%= txtRuleName.ClientID %>').value;
+            var ddlBClist = document.getElementById('<%= ddlBClist.ClientID %>').value;
+            var ddlSwitch = document.getElementById('<%= ddlSwitch.ClientID %>').value;
+            var ddlChannels = document.getElementById('<%= ddlChannels.ClientID %>').value;
+            var txtemailBody = document.getElementById('<%= txtemailBody.ClientID %>').value;
+            var txtsmsBody = document.getElementById('<%= txtsmsBody.ClientID %>').value;
+            var txtEmail = document.getElementById('<%= txtEmail.ClientID %>').value;
+            var txtMobile = document.getElementById('<%= txtMobile.ClientID %>').value;
+            var txtEmailCC = document.getElementById('<%= txtEmailCC.ClientID %>').value;
+            var txtsubject = document.getElementById('<%= txtsubject.ClientID %>').value;
+            var ddlAlertsentOn = document.getElementById('<%= ddlAlertsentOn.ClientID %>').value;
 
+            if (!txtName.trim()) {
+                showWarning("Please Enter Alert Name. Try again", "Warning");
+                return false;
+            } else if (ddlBClist === "0" && ddlBClist.trim() !== "") {
+                showWarning("Please Select BC's. Try again", "Warning");
+                return false;
+            } else if (ddlSwitch === "0" && ddlSwitch.trim() !== "") {
+                showWarning("Please Select Switch. Try again", "Warning");
+                return false;
+            } else if (ddlChannels === "0" && ddlChannels.trim() !== "") {
+                showWarning("Please Select Channel. Try again", "Warning");
+                return false;
+            } else if (!txtemailBody.trim()) {
+                showWarning("Please Enter Mail Body. Try again", "Warning");
+                return false;
+            } else if (!txtsmsBody.trim()) {
+                showWarning("Please Enter SMS Body. Try again", "Warning");
+                return false;
+            } else if (!txtEmail.trim()) {
+                showWarning("Please Enter Email Id. Try again", "Warning");
+                return false;
+            } else if (!txtMobile.trim()) {
+                showWarning("Please Enter Mobile Number. Try again", "Warning");
+                return false;
+            } else if (!txtEmailCC.trim()) {
+                showWarning("Please Enter Email CC. Try again", "Warning");
+                return false;
+            } else if (!txtsubject.trim()) {
+                showWarning("Please Enter Mail Subject. Try again", "Warning");
+                return false;
+            } else if (ddlAlertsentOn === "0" && ddlAlertsentOn.trim() !== "") {
+                showWarning("Please select Alert Mode. Try again", "Warning");
+                return false;
+            }
+
+
+            return true;
+        }
+
+        function showWarning(message, title) {
+            alert(title + ": " + message);
+        }
+
+
+    </script>
     <script>
         $(document).ready(function () {
             debugger;
@@ -198,6 +256,12 @@
             padding: 5px;
             border-bottom: 1px solid #ccc;
             width: 100%;
+        }
+    </style>
+    <style>
+        .text-danger {
+            color: red; /* Make the '*' symbol red */
+            font-weight: bold; /* Optional: Make it bold */
         }
     </style>
 
@@ -791,12 +855,12 @@
                             <div class="mform-group">
                                 <!-- Name Field -->
                                 <div class="row mb-3">
-                                    <label for="txtRuleName" class="col-md-2 col-form-label">Alert Name</label>
+                                    <label for="txtRuleName" class="col-md-2 col-form-label">Alert Name<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:TextBox ID="txtRuleName" CssClass="form-control" runat="server" placeholder="Enter Name"></asp:TextBox>
                                     </div>
                                     <!-- groupId Field -->
-                                    <label for="ddlGroupName" class="col-md-2 col-form-label">Group Name</label>
+                                    <label for="ddlGroupName" class="col-md-2 col-form-label">Group Name<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlGroupName" runat="server" CssClass="form-control">
                                         </asp:DropDownList>
@@ -808,7 +872,7 @@
                             <div class="mform-group">
                                 <!-- BC Field -->
                                 <div class="row mb-3">
-                                    <label for="ddlBClist" class="col-md-2 col-form-label">BC</label>
+                                    <label for="ddlBClist" class="col-md-2 col-form-label">BC<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlBClist" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlBClist_SelectedIndexChanged">
                                             <asp:ListItem Text="--Select--" Value="0" />
@@ -833,7 +897,7 @@
                                 <!-- Switch and Channel Fields in a single row -->
                                 <div class="row mb-3">
                                     <!-- Switch Field -->
-                                    <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
+                                    <label for="lblSwitch" class="col-md-2 col-form-label">Switch<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="form-control">
                                             <asp:ListItem Text="--Select--" Value="0" />
@@ -841,7 +905,7 @@
                                     </div>
 
                                     <!-- Channel Field -->
-                                    <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
+                                    <label for="lblChannel" class="col-md-2 col-form-label">Channel<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlChannels" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlChannel_SelectedIndexChanged">
                                             <asp:ListItem Text="--Select--" Value="" />
@@ -860,7 +924,7 @@
                             <div class="mform-group">
                                 <!-- Mobile Field -->
                                 <div class="row mb-3">
-                                    <label for="txtMobile" class="col-md-2 col-form-label">Mobile</label>
+                                    <label for="txtMobile" class="col-md-2 col-form-label">Mobile No.</label>
                                     <div class="col-md-8">
                                         <asp:TextBox ID="txtMobile" CssClass="form-control" runat="server" placeholder="Enter Mobile Number"></asp:TextBox>
                                     </div>
@@ -868,7 +932,7 @@
 
                                 <!-- Email Field -->
                                 <div class="row mb-3">
-                                    <label for="txtEmail" class="col-md-2 col-form-label">EmailTo</label>
+                                    <label for="txtEmail" class="col-md-2 col-form-label">Email To<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Enter Email Address"></asp:TextBox>
                                     </div>
@@ -876,7 +940,7 @@
 
                                 <!-- CCEmail Field -->
                                 <div class="row mb-3">
-                                    <label for="txtEmail" class="col-md-2 col-form-label">EmailCC</label>
+                                    <label for="txtEmail" class="col-md-2 col-form-label">Email CC</label>
                                     <div class="col-md-8">
                                         <asp:TextBox ID="txtEmailCC" CssClass="form-control" runat="server" placeholder="Enter EmailCC Address"></asp:TextBox>
                                     </div>
@@ -884,7 +948,7 @@
 
                                 <!-- Subject Field -->
                                 <div class="row mb-3">
-                                    <label for="RuleDescription" class="col-md-2 col-form-label">Subject</label>
+                                    <label for="RuleDescription" class="col-md-2 col-form-label">Subject<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <asp:TextBox ID="txtsubject" CssClass="form-control" TextMode="MultiLine" Rows="2" runat="server" placeholder="Enter Subject"></asp:TextBox>
                                     </div>
@@ -892,7 +956,7 @@
 
                                 <!-- Mailbody Field -->
                                 <div class="row mb-3">
-                                    <label for="RuleDescription" class="col-md-2 col-form-label">MailBody</label>
+                                    <label for="RuleDescription" class="col-md-2 col-form-label">Mail Body<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <asp:TextBox ID="txtemailBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter Email Body"></asp:TextBox>
                                     </div>
@@ -900,7 +964,7 @@
 
                                 <!-- SMSbody Field -->
                                 <div class="row mb-3">
-                                    <label for="RuleDescription" class="col-md-2 col-form-label">SMSBody</label>
+                                    <label for="RuleDescription" class="col-md-2 col-form-label">SMS Body</label>
                                     <div class="col-md-8">
                                         <asp:TextBox ID="txtsmsBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter SMS Body"></asp:TextBox>
                                     </div>
@@ -908,7 +972,7 @@
 
                                 <!-- AlertMode -->
                                 <div class="row mb-3">
-                                    <label for="contactType" class="col-md-2 col-form-label">Alert Mode</label>
+                                    <label for="contactType" class="col-md-2 col-form-label">Alert Mode<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList
                                             runat="server"
@@ -927,14 +991,14 @@
                             <div class="mform-group">
                                 <!-- AlertType Field -->
                                 <div class="row mb-3">
-                                    <label for="txtCount" class="col-md-2 col-form-label">Alert Type</label>
+                                    <label for="txtCount" class="col-md-2 col-form-label">Alert Type<span class="text-danger">*</span></label>
                                     <div class="col-md-3">
                                         <asp:TextBox ID="txtalertType" CssClass="form-control" runat="server" placeholder="Alert Type" Visible="false"></asp:TextBox>
                                         <asp:DropDownList ID="ddlAlertType" runat="server" CssClass="form-control">
                                         </asp:DropDownList>
                                     </div>
 
-                                    <label for="txtConsicativeDeclineCount" class="col-md-1 col-form-label">Count</label>
+                                    <label for="txtConsicativeDeclineCount" class="col-md-1 col-form-label">Count<span class="text-danger">*</span></label>
                                     <div class="col-md-2">
                                         <asp:TextBox ID="txtConsicativeDeclineCount" CssClass="form-control" runat="server" placeholder="Decline Count"></asp:TextBox>
                                     </div>
@@ -949,7 +1013,7 @@
                                 <!-- Retry Interval Count -->
                                 <div class="row mb-3">
                                     <!-- Retry Field -->
-                                    <label for="txtCount" class="col-md-2 col-form-label">Interval</label>
+                                    <label for="txtCount" class="col-md-2 col-form-label">Interval<span class="text-danger">*</span></label>
                                     <div class="col-md-3">
                                         <asp:TextBox ID="txtTimerInterval" CssClass="form-control" runat="server" placeholder="Interval Count"></asp:TextBox>
                                     </div>
@@ -974,14 +1038,14 @@
                                 <div class="row mb-3">
                                     <!-- Column Selections -->
                                     <div class="col-md-3">
-                                        <label for="ddlColumnSelected" class="col-form-label">Column Selections</label>
+                                        <label for="ddlColumnSelected" class="col-form-label">Column Selections<span class="text-danger">*</span></label>
                                         <asp:DropDownList ID="ddlColumnSelected" CssClass="form-control" runat="server"></asp:DropDownList>
                                     </div>
 
                                     <div class="col-md-3">
                                         <!-- SQL Operator (Conditions) -->
                                         <div class="col-md-12">
-                                            <label for="ddlConditions" class="col-form-label">Operator (Conditions)</label>
+                                            <label for="ddlConditions" class="col-form-label">Operator (Conditions)<span class="text-danger">*</span></label>
                                             <asp:DropDownList ID="ddlConditions" runat="server" CssClass="form-control">
                                                 <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
                                                 <asp:ListItem Text="=" Value="=" />
@@ -1027,7 +1091,7 @@
                                     <div class="col-md-3">
                                         <!-- Transaction Type/Value Selection -->
                                         <div class="col-md-12">
-                                            <label for="contactType" class="col-form-label">Value Selection</label>
+                                            <label for="contactType" class="col-form-label">Value Selection<span class="text-danger">*</span></label>
                                             <asp:HiddenField ID="hdnValueSelc" runat="server" Value="false" />
                                             <div id="divddlTransationType" runat="server" style="display: none">
                                                 <asp:DropDownList runat="server" ID="ddlTxnType" CssClass="form-control">
@@ -1071,6 +1135,7 @@
                                     <div class="col-md-12">
                                         <div class="query-preview-card">
                                             <div class="query-preview-title">Query Preview</div>
+                                            <asp:HiddenField ID="hidnEncData" runat="server" />
                                             <asp:TextBox ID="txtQueryPreview" runat="server" CssClass="query-preview-text" TextMode="MultiLine" Rows="5" ReadOnly="true"></asp:TextBox>
                                         </div>
                                     </div>
@@ -1151,7 +1216,13 @@
 
                 <!-- Footer -->
                 <div class="modal-footer">
-                    <asp:Button ID="btnCreateRule" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreateRule_Click" />
+                    <asp:Button
+                        ID="btnCreateRule"
+                        CssClass="btn btn-primary"
+                        runat="server"
+                        Text="Submit"
+                        OnClick="btnCreateRule_Click"
+                        OnClientClick="return validateForm();" />
                     <asp:Button ID="btnCloseRule" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseRule_Click" data-bs-dismiss="modal" />
                 </div>
             </div>
