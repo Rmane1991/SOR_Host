@@ -373,15 +373,6 @@ namespace SOR.Pages.Monitoring {
         protected global::System.Web.UI.WebControls.Button btnClearCondition;
         
         /// <summary>
-        /// hidnEncData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hidnEncData;
-        
-        /// <summary>
         /// txtQueryPreview control.
         /// </summary>
         /// <remarks>
