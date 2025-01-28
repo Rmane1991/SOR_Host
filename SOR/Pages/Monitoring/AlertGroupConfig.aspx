@@ -63,6 +63,97 @@
 
 
     <script>
+
+        function toggleAlertOptions(value) {
+            // Hide both by default
+            document.getElementById("dvMailBody").style.display = "none";
+            document.getElementById("dvSmSBody").style.display = "none";
+
+            if (value === "1") { // Email
+                document.getElementById("dvMailBody").style.display = "block";
+            } else if (value === "2") { // Phone
+                document.getElementById("dvSmSBody").style.display = "block";
+            } else if (value === "3") { // Both
+                document.getElementById("dvMailBody").style.display = "block";
+                document.getElementById("dvSmSBody").style.display = "block";
+            }
+        }
+
+        window.onload = function () {
+            var ddlValue = document.getElementById("<%= ddlAlertsentOn.ClientID %>").value;
+            toggleAlertOptions(ddlValue);
+        };
+
+        function validateForm() {
+            var txtName = document.getElementById('<%= txtRuleName.ClientID %>').value;
+            var ddlBClist = document.getElementById('<%= ddlBClist.ClientID %>').value;
+            var ddlSwitch = document.getElementById('<%= ddlSwitch.ClientID %>').value;
+            var ddlChannels = document.getElementById('<%= ddlChannels.ClientID %>').value;
+            var txtemailBody = document.getElementById('<%= txtemailBody.ClientID %>').value;
+            var txtsmsBody = document.getElementById('<%= txtsmsBody.ClientID %>').value;
+            var txtEmail = document.getElementById('<%= txtEmail.ClientID %>').value;
+            var txtMobile = document.getElementById('<%= txtMobile.ClientID %>').value;
+            var txtEmailCC = document.getElementById('<%= txtEmailCC.ClientID %>').value;
+            var txtsubject = document.getElementById('<%= txtsubject.ClientID %>').value;
+            var ddlAlertsentOn = document.getElementById('<%= ddlAlertsentOn.ClientID %>').value;
+
+            if (!txtName.trim()) {
+                showWarning("Please Enter Alert Name. Try again", "Warning");
+                return false;
+            } else if (ddlBClist === "0" && ddlBClist.trim() !== "") {
+                showWarning("Please Select BC's. Try again", "Warning");
+                return false;
+            } else if (ddlSwitch === "0" && ddlSwitch.trim() !== "") {
+                showWarning("Please Select Switch. Try again", "Warning");
+                return false;
+            } else if (ddlChannels === "0" && ddlChannels.trim() !== "") {
+                showWarning("Please Select Channel. Try again", "Warning");
+                return false;
+            } /*else if (!txtemailBody.trim()) {
+                showWarning("Please Enter Mail Body. Try again", "Warning");
+                return false;
+            } else if (!txtsmsBody.trim()) {
+                showWarning("Please Enter SMS Body. Try again", "Warning");
+                return false;
+            } */else if (!txtEmail.trim()) {
+                showWarning("Please Enter Email Id. Try again", "Warning");
+                return false;
+            } else if (!txtMobile.trim()) {
+                showWarning("Please Enter Mobile Number. Try again", "Warning");
+                return false;
+            } else if (!txtEmailCC.trim()) {
+                showWarning("Please Enter Email CC. Try again", "Warning");
+                return false;
+            } else if (!txtsubject.trim()) {
+                showWarning("Please Enter Mail Subject. Try again", "Warning");
+                return false;
+            } else if (ddlAlertsentOn === "0" && ddlAlertsentOn.trim() !== "") {
+                showWarning("Please select Alert Mode. Try again", "Warning");
+                return false;
+            } else if (ddlAlertsentOn !== "0" && ddlAlertsentOn.trim() !== "") {
+
+                if (ddlAlertsentOn === "1" && !txtemailBody.trim()) {
+                    showWarning("Please Enter Mail Body. Try again", "Warning");
+                }
+                else if (ddlAlertsentOn === "2" && !txtsmsBody.trim()) {
+                    showWarning("Please Enter SMS Body. Try again", "Warning");
+                }
+                else if (ddlAlertsentOn === "3" && !txtsmsBody.trim()) {
+                    showWarning("Please Enter SMS Body & Mail Body. Try again", "Warning");
+                }
+                return false;
+            }
+
+            return true;
+        }
+
+        function showWarning(message, title) {
+            alert(title + ": " + message);
+        }
+
+
+
+    <script>
         $(document).ready(function () {
             debugger;
             $('.clsslider').change(function () {
@@ -890,21 +981,8 @@
                                     </div>
                                 </div>
 
-                                <!-- Mailbody Field -->
-                                <div class="row mb-3">
-                                    <label for="RuleDescription" class="col-md-2 col-form-label">MailBody</label>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="txtemailBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter Email Body"></asp:TextBox>
-                                    </div>
-                                </div>
 
-                                <!-- SMSbody Field -->
-                                <div class="row mb-3">
-                                    <label for="RuleDescription" class="col-md-2 col-form-label">SMSBody</label>
-                                    <div class="col-md-8">
-                                        <asp:TextBox ID="txtsmsBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter SMS Body"></asp:TextBox>
-                                    </div>
-                                </div>
+
 
                                 <!-- AlertMode -->
                                 <div class="row mb-3">
@@ -913,7 +991,7 @@
                                         <asp:DropDownList
                                             runat="server"
                                             ID="ddlAlertsentOn"
-                                            CssClass="form-control">
+                                            CssClass="form-control" onchange="toggleAlertOptions(this.value)">
                                             <asp:ListItem Value="0" Selected="True">--Select--</asp:ListItem>
                                             <asp:ListItem Value="1">Email</asp:ListItem>
                                             <asp:ListItem Value="2">Phone</asp:ListItem>
@@ -921,6 +999,23 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
+
+                                <!-- Mailbody Field -->
+                                <div class="row mb-3" id="dvMailBody" style="display: none;">
+                                    <label for="RuleDescription" class="col-md-2 col-form-label">Mail Body<span class="text-danger">*</span></label>
+                                    <div class="col-md-8">
+                                        <asp:TextBox ID="txtemailBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter Email Body"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <!-- SMSbody Field -->
+                                <div class="row mb-3" id="dvSmSBody" style="display: none;">
+                                    <label for="RuleDescription" class="col-md-2 col-form-label">SMS Body<span class="text-danger">*</span></label>
+                                    <div class="col-md-8">
+                                        <asp:TextBox ID="txtsmsBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter SMS Body"></asp:TextBox>
+                                    </div>
+                                </div>
+                              
 
                             </div>
 
@@ -981,8 +1076,9 @@
                                     <div class="col-md-3">
                                         <!-- SQL Operator (Conditions) -->
                                         <div class="col-md-12">
-                                            <label for="ddlConditions" class="col-form-label">Operator (Conditions)</label>
-                                            <asp:DropDownList ID="ddlConditions" runat="server" CssClass="form-control">
+
+                                            <label for="ddlConditions" class="col-form-label">Operator(Conditions)<span class="text-danger">*</span></label>
+                                             <asp:DropDownList ID="ddlConditions" runat="server" CssClass="form-control">
                                                 <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
                                                 <asp:ListItem Text="=" Value="=" />
                                                 <asp:ListItem Text="!=" Value="!=" />
@@ -994,7 +1090,7 @@
                                                 <asp:ListItem Text="IS NOT NULL" Value="IS NOT NULL" />
                                                 <asp:ListItem Text="BETWEEN" Value="BETWEEN" />
                                                 <asp:ListItem Text="IN" Value="IN" />
-                                                <asp:ListItem Text="LIKE" Value="LIKE" />
+                                                <%--<asp:ListItem Text="LIKE" Value="LIKE" />
                                                 <asp:ListItem Text="ILIKE" Value="ILIKE" />
                                                 <asp:ListItem Text="SIMILAR TO" Value="SIMILAR TO" />
                                                 <asp:ListItem Text="~" Value="~" />
@@ -1019,7 +1115,7 @@
                                                 <asp:ListItem Text="::" Value="::" />
                                                 <asp:ListItem Text="&" Value="&" />
                                                 <asp:ListItem Text="|" Value="|" />
-                                                <asp:ListItem Text="#" Value="#" />
+                                                <asp:ListItem Text="#" Value="#" />--%>
                                             </asp:DropDownList>
                                         </div>
                                     </div>
@@ -1049,7 +1145,7 @@
                                     </div>
                                     <!-- SQL Operator Selection (AND/OR) -->
                                     <div class="col-md-3">
-                                        <label for="ddlOperator0" class="col-form-label">SQL Operator (AND/OR)</label>
+                                        <label for="ddlOperator0" class="col-form-label">Operator(AND/OR)</label>
                                         <asp:DropDownList ID="ddlOperator0" runat="server" CssClass="form-control">
                                             <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
                                             <asp:ListItem Value="AND">AND</asp:ListItem>
@@ -1058,14 +1154,16 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
+                                    <div class="col-md-8"></div>
                                     <!-- Query Add-->
                                     <div class="col-md-4">
-                                        <asp:Button ID="btnAddCondition" runat="server" Text="Add Condition" CssClass="btn btn-primary" OnClick="btnAddCondition_Click" />
-                                        <asp:Button ID="btnClearCondition" runat="server" Text="Clear Query" CssClass="btn btn-secondary" OnClick="btnClearCondition_Click" />
-                                        <%--<button type="button" class="btn btn-secondary" onclick="addCondition(); return false;">Add Condition</button>
-                                <button type="button" class="btn btn-primary" onclick="ClearCondition(); return false;">Clear Query</button>--%>
+                                        <div class="d-flex justify-content-end">
+                                            <asp:Button ID="btnAddCondition" runat="server" Text="Add Condition" CssClass="btn btn-primary mr-2" OnClick="btnAddCondition_Click" />
+                                            <asp:Button ID="btnClearCondition" runat="server" Text="Clear Query" CssClass="btn btn-secondary" OnClick="btnClearCondition_Click" />
+                                        </div>
                                     </div>
                                 </div>
+
                                 <!-- Query Preview-->
                                 <div class="row mb-3">
                                     <div class="col-md-12">
