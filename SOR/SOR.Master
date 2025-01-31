@@ -321,7 +321,7 @@
                             <%--<img src="../../images/proxima_logo.png" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">--%>
                             <%--data-bs-placement="bottom" data-bs-title="Version 6.0.0"--%>>
                             <%--<img src="../../images/nsdl.jpg" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">--%>
-                            <img src="../../images/proxima_logo.png" class="module-logo" alt="module_logo" style="width: 216px; margin-left: -16px; height: 48px;">
+                            <img src="../../images/proxima_logo_m.png" class="module-logo" alt="module_logo" style="width: 170px; height: 30px;">
                             <img src="../../images/nsdl.jpg" class="module-dark-logo" alt="module_logo">
                         </span>
                     </div>
