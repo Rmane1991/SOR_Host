@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" MasterPageFile="~/SOR.Master" CodeBehind="AlertGroupConfig.aspx.cs" Inherits="SOR.Pages.Monitoring.AlertGroupConfig" %>
+<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" MasterPageFile="~/SOR.Master" CodeBehind="AlertGroupConfig.aspx.cs" Inherits="SOR.Pages.Monitoring.AlertGroupConfig" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 

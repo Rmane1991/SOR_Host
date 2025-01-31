@@ -79,18 +79,7 @@ namespace SOR.Pages.Dashboard
 
             try
             {
-                /* var transactions = _DashDAL.GetMonthlyTxnDataCount();
-
-                 var formattedTransactions = transactions.Select(t => new
-                 {
-                     Day = t.Day,
-                     CurrentMonthCount = t.CurrentMonthCount,
-                     PreviousMonthCount = t.PreviousMonthCount
-                 }).ToList();
-
-                 var serializedTransactions = JsonConvert.SerializeObject(formattedTransactions);
-                 ViewState["Transactions"] = serializedTransactions;*/
-
+              
                 var summary = _DashDAL.GetMonthlySummaryCount();
                 var summaryData = summary.Select(t => new
                 {
@@ -121,6 +110,7 @@ namespace SOR.Pages.Dashboard
                     }
                 }
 
+
                 catch(Exception ex)
                 {
                     ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
@@ -129,6 +119,7 @@ namespace SOR.Pages.Dashboard
                 }
 
                 try
+
                 {
                     if (txnDetails.Tables.Contains("Aggregators"))
                     {
@@ -337,6 +328,7 @@ namespace SOR.Pages.Dashboard
                         ViewState["BankRevenueData"] = serializedTxn;
                     }
                 }
+
                 catch (Exception ex)
                 {
                     ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
@@ -409,6 +401,10 @@ namespace SOR.Pages.Dashboard
                     }
                 }
                 catch (Exception ex)
+
+
+                if (txnDetails.Tables.Contains("MonthlyBCData"))
+
                 {
                     ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Exception: {ex.Message}");
                     ErrorLog.DashboardTrace($"DashBoard: LoadTransactionCounts(): Stack Trace: {ex.StackTrace}");
