@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" MasterPageFile="~/SOR.Master" CodeBehind="AlertGroupConfig.aspx.cs" Inherits="SOR.Pages.Monitoring.AlertGroupConfig" %>
+<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" MasterPageFile="~/SOR.Master" CodeBehind="AlertGroupConfig.aspx.cs" Inherits="SOR.Pages.Monitoring.AlertGroupConfig" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -61,19 +61,34 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <%--mi sorting--%>
 
-
     <script>
+
+        function ClearModal() {
+            document.getElementById('<%= txtRuleName.ClientID %>').value = "";
+            document.getElementById('<%= txtemailBody.ClientID %>').value = "";
+            document.getElementById('<%= txtsmsBody.ClientID %>').value = "";
+            document.getElementById('<%= txtEmail.ClientID %>').value = "";
+            document.getElementById('<%= txtMobile.ClientID %>').value = "";
+            document.getElementById('<%= txtEmailCC.ClientID %>').value = "";
+            document.getElementById('<%= txtsubject.ClientID %>').value = "";
+            document.getElementById('<%= txtStartTime.ClientID %>').value = "";
+            document.getElementById('<%= txtEndTime.ClientID %>').value = "";
+            document.getElementById('<%= txtConsicativeDeclineCount.ClientID %>').value = "";
+            document.getElementById('<%= txtmaxRetry.ClientID %>').value = "";
+            document.getElementById('<%= txtTimerInterval.ClientID %>').value = "";
+            document.getElementById('<%= txtQueryPreview.ClientID %>').value = "";
+        }
 
         function toggleAlertOptions(value) {
             // Hide both by default
             document.getElementById("dvMailBody").style.display = "none";
             document.getElementById("dvSmSBody").style.display = "none";
 
-            if (value === "1") { // Email
+            if (value === "1") {
                 document.getElementById("dvMailBody").style.display = "block";
-            } else if (value === "2") { // Phone
+            } else if (value === "2") {
                 document.getElementById("dvSmSBody").style.display = "block";
-            } else if (value === "3") { // Both
+            } else if (value === "3") {
                 document.getElementById("dvMailBody").style.display = "block";
                 document.getElementById("dvSmSBody").style.display = "block";
             }
@@ -83,6 +98,46 @@
             var ddlValue = document.getElementById("<%= ddlAlertsentOn.ClientID %>").value;
             toggleAlertOptions(ddlValue);
         };
+
+
+
+        function validateMaxLength(txtBox, maxLength, countId, clearCountOnBlur) {
+            var currentLength = txtBox.value.length;
+            var charCount = document.getElementById(countId);
+
+            if (currentLength > maxLength) {
+                txtBox.value = txtBox.value.substring(0, maxLength);
+            }
+
+            if (clearCountOnBlur && !txtBox.matches(':focus')) {
+
+                charCount.textContent = '';
+            } else {
+
+                charCount.textContent = currentLength + " / " + maxLength + " characters";
+            }
+        }
+
+
+        function validateMobile() {
+            var mobileNumber = document.getElementById('<%= txtMobile.ClientID %>').value;
+            var regex = /^(?:\+91|91)?[789]\d{9}$/;
+            var errorMessage = document.getElementById('<%= txtMobile.ClientID %>');
+
+            if (regex.test(mobileNumber)) {
+                //errorMessage.textContent = ''; 
+                charCounttxtMobile.textContent = '';
+            } else {
+                errorMessage.textContent = 'Please enter a valid mobile number.';
+                alert('Please enter a valid Indian mobile number.');
+                charCounttxtMobile.textContent = '';
+
+            }
+            if (!mobileNumber.matches(':focus')) {
+
+                charCounttxtMobile.textContent = '';
+            }
+        }
 
         function validateForm() {
             var txtName = document.getElementById('<%= txtRuleName.ClientID %>').value;
@@ -100,22 +155,16 @@
             if (!txtName.trim()) {
                 showWarning("Please Enter Alert Name. Try again", "Warning");
                 return false;
-            } else if (ddlBClist === "0" && ddlBClist.trim() !== "") {
+            } else if (ddlBClist === "0") {
                 showWarning("Please Select BC's. Try again", "Warning");
                 return false;
-            } else if (ddlSwitch === "0" && ddlSwitch.trim() !== "") {
+            } else if (ddlSwitch === "0") {
                 showWarning("Please Select Switch. Try again", "Warning");
                 return false;
-            } else if (ddlChannels === "0" && ddlChannels.trim() !== "") {
+            } else if (ddlChannels === "0") {
                 showWarning("Please Select Channel. Try again", "Warning");
                 return false;
-            } /*else if (!txtemailBody.trim()) {
-                showWarning("Please Enter Mail Body. Try again", "Warning");
-                return false;
-            } else if (!txtsmsBody.trim()) {
-                showWarning("Please Enter SMS Body. Try again", "Warning");
-                return false;
-            } */else if (!txtEmail.trim()) {
+            } else if (!txtEmail.trim()) {
                 showWarning("Please Enter Email Id. Try again", "Warning");
                 return false;
             } else if (!txtMobile.trim()) {
@@ -127,21 +176,20 @@
             } else if (!txtsubject.trim()) {
                 showWarning("Please Enter Mail Subject. Try again", "Warning");
                 return false;
-            } else if (ddlAlertsentOn === "0" && ddlAlertsentOn.trim() !== "") {
+            } else if (ddlAlertsentOn === "0") {
                 showWarning("Please select Alert Mode. Try again", "Warning");
                 return false;
-            } else if (ddlAlertsentOn !== "0" && ddlAlertsentOn.trim() !== "") {
-
+            } else if (ddlAlertsentOn !== "0") {
                 if (ddlAlertsentOn === "1" && !txtemailBody.trim()) {
                     showWarning("Please Enter Mail Body. Try again", "Warning");
-                }
-                else if (ddlAlertsentOn === "2" && !txtsmsBody.trim()) {
+                    return false;
+                } else if (ddlAlertsentOn === "2" && !txtsmsBody.trim()) {
                     showWarning("Please Enter SMS Body. Try again", "Warning");
-                }
-                else if (ddlAlertsentOn === "3" && !txtsmsBody.trim()) {
+                    return false;
+                } else if (ddlAlertsentOn === "3" && (!txtsmsBody.trim() || !txtemailBody.trim())) {
                     showWarning("Please Enter SMS Body & Mail Body. Try again", "Warning");
+                    return false;
                 }
-                return false;
             }
 
             return true;
@@ -153,6 +201,7 @@
 
 
 
+    </script>
     <script>
         $(document).ready(function () {
             debugger;
@@ -291,10 +340,50 @@
             width: 100%;
         }
     </style>
+    <style>
+        .text-danger {
+            color: red; /* Make the '*' symbol red */
+            font-weight: bold; /* Optional: Make it bold */
+        }
+    </style>
 
     <link rel="stylesheet" href="../../css/style.css">
 
     <style>
+        /* Disabled style for the div */
+        .DisabledOnEdit {
+            opacity: 0.5;
+            position: relative;
+        }
+
+
+            .DisabledOnEdit input,
+            .DisabledOnEdit button,
+            .DisabledOnEdit select,
+            .DisabledOnEdit textarea {
+                pointer-events: none;
+            }
+
+            /* Tooltip style */
+            .DisabledOnEdit::after {
+                content: "Query Edit Disabled";
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5px 10px;
+                background-color: #333;
+                color: white;
+                border-radius: 5px;
+                font-size: 12px;
+                display: none;
+            }
+
+            .DisabledOnEdit:hover::after {
+                display: block; /* Show on hover */
+            }
+
+
         .fade {
             opacity: 1;
         }
@@ -822,14 +911,14 @@
         </div>
         <div class="col-md-5">
         </div>
-        <div class="col d-flex justify-content-end mb-2 mb-sm-0 col-12 col-sm-6">
+        <div class="d-flex justify-content-end">
             <asp:Button ID="btnAddGroup" runat="server" CssClass="btn btn-primary" Text="Add Group" OnClick="btnAddGroup_Click" Style="margin: 19px;" />
-            <asp:Button ID="btnAddRule" runat="server" CssClass="btn btn-primary" Text="Add Alert" OnClick="btnAddRule_Click" Style="margin: 19px;" />
-            <asp:Button ID="btnaddTemplate" runat="server" CssClass="btn btn-primary" Text="Add Template" OnClick="btnTemplateMaster_Click" Style="margin: 19px;" />
+            <asp:Button ID="btnAddRule" runat="server" CssClass="btn btn-primary" Text="Add Alert" OnClick="btnAddAlert_Click" Style="margin: 19px;" />
+            <asp:Button ID="btnaddTemplate" Visible="false" runat="server" CssClass="btn btn-primary" Text="Add Template" OnClick="btnTemplateMaster_Click" Style="margin: 19px;" />
         </div>
     </div>
 
-    <!-- Modal Group Alert-->
+    <!-- ModalGroup Alert-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -865,7 +954,9 @@
     </div>
     <asp:HiddenField ID="hdnShowModalG" runat="server" Value="false" />
 
-    <!--Modal Group AlertConfig Details-->
+
+    <!--ModalAlert Config Details-->
+
     <div class="modal fade" id="exampleModalR" tabindex="-1" aria-labelledby="exampleModalLabelR" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -882,12 +973,13 @@
                             <div class="mform-group">
                                 <!-- Name Field -->
                                 <div class="row mb-3">
-                                    <label for="txtRuleName" class="col-md-2 col-form-label">Alert Name</label>
+                                    <label for="txtRuleName" class="col-md-2 col-form-label">Alert Name<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
-                                        <asp:TextBox ID="txtRuleName" CssClass="form-control" runat="server" placeholder="Enter Name"></asp:TextBox>
+                                        <asp:TextBox ID="txtRuleName" CssClass="form-control" MaxLength="50" runat="server" placeholder="Enter Name" oninput="validateMaxLength(this, 70, 'charCountAlertName', false)" onblur="validateMaxLength(this, 50, 'charCountAlertName', true)"></asp:TextBox>
+                                        <span id="charCountAlertName" style="color: red;"></span>
                                     </div>
                                     <!-- groupId Field -->
-                                    <label for="ddlGroupName" class="col-md-2 col-form-label">Group Name</label>
+                                    <label for="ddlGroupName" class="col-md-2 col-form-label">Group Name<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlGroupName" runat="server" CssClass="form-control">
                                         </asp:DropDownList>
@@ -899,7 +991,7 @@
                             <div class="mform-group">
                                 <!-- BC Field -->
                                 <div class="row mb-3">
-                                    <label for="ddlBClist" class="col-md-2 col-form-label">BC</label>
+                                    <label for="ddlBClist" class="col-md-2 col-form-label">BC<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlBClist" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlBClist_SelectedIndexChanged">
                                             <asp:ListItem Text="--Select--" Value="0" />
@@ -924,7 +1016,7 @@
                                 <!-- Switch and Channel Fields in a single row -->
                                 <div class="row mb-3">
                                     <!-- Switch Field -->
-                                    <label for="lblSwitch" class="col-md-2 col-form-label">Switch</label>
+                                    <label for="lblSwitch" class="col-md-2 col-form-label">Switch<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlSwitch" runat="server" CssClass="form-control">
                                             <asp:ListItem Text="--Select--" Value="0" />
@@ -932,7 +1024,7 @@
                                     </div>
 
                                     <!-- Channel Field -->
-                                    <label for="lblChannel" class="col-md-2 col-form-label">Channel</label>
+                                    <label for="lblChannel" class="col-md-2 col-form-label">Channel<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList ID="ddlChannels" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlChannel_SelectedIndexChanged">
                                             <asp:ListItem Text="--Select--" Value="" />
@@ -951,42 +1043,44 @@
                             <div class="mform-group">
                                 <!-- Mobile Field -->
                                 <div class="row mb-3">
-                                    <label for="txtMobile" class="col-md-2 col-form-label">Mobile</label>
+                                    <label for="txtMobile" class="col-md-2 col-form-label">Mobile No.<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <asp:TextBox ID="txtMobile" CssClass="form-control" runat="server" placeholder="Enter Mobile Number"></asp:TextBox>
+                                        <asp:TextBox ID="txtMobile" CssClass="form-control" runat="server" placeholder="Enter Mobile Number" oninput="validateMaxLength(this, 10, 'charCounttxtMobile', false)" onblur="validateMobile()"></asp:TextBox>
+                                        <span id="charCounttxtMobile" style="color: red;"></span>
                                     </div>
                                 </div>
 
                                 <!-- Email Field -->
                                 <div class="row mb-3">
-                                    <label for="txtEmail" class="col-md-2 col-form-label">EmailTo</label>
+                                    <label for="txtEmail" class="col-md-2 col-form-label">Email To<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Enter Email Address"></asp:TextBox>
+                                        <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Enter Email Address" oninput="validateMaxLength(this, 50, 'charCounttxtEmail', false)" onblur="validateMaxLength(this, 50, 'charCounttxtEmail', true)"></asp:TextBox>
+                                        <span id="charCounttxtEmail" style="color: red;"></span>
                                     </div>
                                 </div>
 
                                 <!-- CCEmail Field -->
                                 <div class="row mb-3">
-                                    <label for="txtEmail" class="col-md-2 col-form-label">EmailCC</label>
+                                    <label for="txtEmail" class="col-md-2 col-form-label">Email CC<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <asp:TextBox ID="txtEmailCC" CssClass="form-control" runat="server" placeholder="Enter EmailCC Address"></asp:TextBox>
+                                        <asp:TextBox ID="txtEmailCC" CssClass="form-control" runat="server" placeholder="Enter EmailCC Address" oninput="validateMaxLength(this, 100, 'charCounttxtEmailCC', false)" onblur="validateMaxLength(this, 100, 'charCounttxtEmailCC', true)"></asp:TextBox>
+                                        <span id="charCounttxtEmailCC" style="color: red;"></span>
                                     </div>
                                 </div>
 
                                 <!-- Subject Field -->
                                 <div class="row mb-3">
-                                    <label for="RuleDescription" class="col-md-2 col-form-label">Subject</label>
+                                    <label for="RuleDescription" class="col-md-2 col-form-label">Subject<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <asp:TextBox ID="txtsubject" CssClass="form-control" TextMode="MultiLine" Rows="2" runat="server" placeholder="Enter Subject"></asp:TextBox>
+                                        <asp:TextBox ID="txtsubject" CssClass="form-control" TextMode="MultiLine" Rows="1" MaxLength="50" runat="server" placeholder="Enter Subject" oninput="validateMaxLength(this, 50, 'charCountSubject', false)" onblur="validateMaxLength(this, 50, 'charCountSubject', true)" />
+                                        <span id="charCountSubject" style="color: red;"></span>
                                     </div>
                                 </div>
 
 
-
-
                                 <!-- AlertMode -->
                                 <div class="row mb-3">
-                                    <label for="contactType" class="col-md-2 col-form-label">Alert Mode</label>
+                                    <label for="contactType" class="col-md-2 col-form-label">Alert Mode<span class="text-danger">*</span></label>
                                     <div class="col-md-4">
                                         <asp:DropDownList
                                             runat="server"
@@ -1004,7 +1098,7 @@
                                 <div class="row mb-3" id="dvMailBody" style="display: none;">
                                     <label for="RuleDescription" class="col-md-2 col-form-label">Mail Body<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <asp:TextBox ID="txtemailBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter Email Body"></asp:TextBox>
+                                        <asp:TextBox ID="txtemailBody" CssClass="form-control" TextMode="MultiLine" Rows="4" MaxLength="30" runat="server" placeholder="Enter Email Body"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -1012,41 +1106,40 @@
                                 <div class="row mb-3" id="dvSmSBody" style="display: none;">
                                     <label for="RuleDescription" class="col-md-2 col-form-label">SMS Body<span class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <asp:TextBox ID="txtsmsBody" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server" placeholder="Enter SMS Body"></asp:TextBox>
+                                        <asp:TextBox ID="txtsmsBody" CssClass="form-control" TextMode="MultiLine" Rows="4" MaxLength="20" runat="server" placeholder="Enter SMS Body"></asp:TextBox>
                                     </div>
                                 </div>
-                              
 
                             </div>
 
                             <div class="mform-group">
                                 <!-- AlertType Field -->
                                 <div class="row mb-3">
-                                    <label for="txtCount" class="col-md-2 col-form-label">Alert Type</label>
+                                    <label for="txtCount" class="col-md-2 col-form-label">Alert Type<span class="text-danger">*</span></label>
                                     <div class="col-md-3">
                                         <asp:TextBox ID="txtalertType" CssClass="form-control" runat="server" placeholder="Alert Type" Visible="false"></asp:TextBox>
                                         <asp:DropDownList ID="ddlAlertType" runat="server" CssClass="form-control">
                                         </asp:DropDownList>
                                     </div>
 
-                                    <label for="txtConsicativeDeclineCount" class="col-md-1 col-form-label">Count</label>
+                                    <label for="txtConsicativeDeclineCount" class="col-md-1 col-form-label">Count<span class="text-danger">*</span></label>
                                     <div class="col-md-2">
                                         <asp:TextBox ID="txtConsicativeDeclineCount" CssClass="form-control" runat="server" placeholder="Decline Count"></asp:TextBox>
                                     </div>
 
                                     <!-- MaxRetry Field -->
-                                    <label for="txtmaxRetry" class="col-md-2 col-form-label">Max Retry Count</label>
+                                    <label for="txtmaxRetry" class="col-md-2 col-form-label">Max Retry Count<span class="text-danger">*</span></label>
                                     <div class="col-md-2">
-                                        <asp:TextBox ID="txtmaxRetry" CssClass="form-control" runat="server" placeholder="Max Retry Count"></asp:TextBox>
+                                        <asp:TextBox ID="txtmaxRetry" CssClass="form-control" runat="server" placeholder="Max Retry Count(Min.)"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <!-- Retry Interval Count -->
                                 <div class="row mb-3">
                                     <!-- Retry Field -->
-                                    <label for="txtCount" class="col-md-2 col-form-label">Interval</label>
+                                    <label for="txtCount" class="col-md-2 col-form-label">Interval Count <span class="text-danger">*</span></label>
                                     <div class="col-md-3">
-                                        <asp:TextBox ID="txtTimerInterval" CssClass="form-control" runat="server" placeholder="Interval Count"></asp:TextBox>
+                                        <asp:TextBox ID="txtTimerInterval" CssClass="form-control" runat="server" placeholder="Interval Count (Min.)"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -1054,7 +1147,7 @@
                                 <div class="row mb-3" hidden="hidden">
                                     <label for="txtCount" class="col-md-2 col-form-label">Next Interval</label>
                                     <div class="col-md-4">
-                                        <asp:TextBox ID="txtNxtInterval" CssClass="form-control datetimepicker" runat="server" placeholder="Next Interval"></asp:TextBox>
+                                        <asp:TextBox ID="txtNxtInterval" CssClass="form-control datetimepicker" runat="server" placeholder="Next Interval (Min.)"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -1062,35 +1155,35 @@
                             </div>
 
                             <div class="mform-group">
-                                <!-- Consicative Decline Interval -->
-                                <div class="row mb-3" hidden="hidden">
-                                    <label for="txtCount" class="col-md-2 col-form-label">Decline Count</label>
-                                </div>
-                                <div class="row mb-3">
-                                    <!-- Column Selections -->
-                                    <div class="col-md-3">
-                                        <label for="ddlColumnSelected" class="col-form-label">Column Selections</label>
-                                        <asp:DropDownList ID="ddlColumnSelected" CssClass="form-control" runat="server"></asp:DropDownList>
+                                <div runat="server" id="DisabledOnEdit">
+                                    <!-- Consicative Decline Interval -->
+                                    <div class="row mb-3" hidden="hidden">
+                                        <label for="txtCount" class="col-md-2 col-form-label">Decline Count</label>
                                     </div>
+                                    <div class="row mb-3">
+                                        <!-- Column Selections -->
+                                        <div class="col-md-3">
+                                            <label for="ddlColumnSelected" class="col-form-label">Column Selections<span class="text-danger">*</span></label>
+                                            <asp:DropDownList ID="ddlColumnSelected" CssClass="form-control" runat="server"></asp:DropDownList>
+                                        </div>
 
-                                    <div class="col-md-3">
-                                        <!-- SQL Operator (Conditions) -->
-                                        <div class="col-md-12">
-
-                                            <label for="ddlConditions" class="col-form-label">Operator(Conditions)<span class="text-danger">*</span></label>
-                                             <asp:DropDownList ID="ddlConditions" runat="server" CssClass="form-control">
-                                                <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
-                                                <asp:ListItem Text="=" Value="=" />
-                                                <asp:ListItem Text="!=" Value="!=" />
-                                                <asp:ListItem Text="<" Value="<" />
-                                                <asp:ListItem Text="<=" Value="<=" />
-                                                <asp:ListItem Text=">" Value=">" />
-                                                <asp:ListItem Text=">=" Value=">=" />
-                                                <asp:ListItem Text="IS NULL" Value="IS NULL" />
-                                                <asp:ListItem Text="IS NOT NULL" Value="IS NOT NULL" />
-                                                <asp:ListItem Text="BETWEEN" Value="BETWEEN" />
-                                                <asp:ListItem Text="IN" Value="IN" />
-                                                <%--<asp:ListItem Text="LIKE" Value="LIKE" />
+                                        <div class="col-md-3">
+                                            <!-- SQL Operator (Conditions) -->
+                                            <div class="col-md-12">
+                                                <label for="ddlConditions" class="col-form-label">Operator(Conditions)<span class="text-danger">*</span></label>
+                                                <asp:DropDownList ID="ddlConditions" runat="server" CssClass="form-control">
+                                                    <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
+                                                    <asp:ListItem Text="=" Value="=" />
+                                                    <asp:ListItem Text="!=" Value="!=" />
+                                                    <asp:ListItem Text="<" Value="<" />
+                                                    <asp:ListItem Text="<=" Value="<=" />
+                                                    <asp:ListItem Text=">" Value=">" />
+                                                    <asp:ListItem Text=">=" Value=">=" />
+                                                    <asp:ListItem Text="IS NULL" Value="IS NULL" />
+                                                    <asp:ListItem Text="IS NOT NULL" Value="IS NOT NULL" />
+                                                    <asp:ListItem Text="BETWEEN" Value="BETWEEN" />
+                                                    <asp:ListItem Text="IN" Value="IN" />
+                                                    <%--<asp:ListItem Text="LIKE" Value="LIKE" />
                                                 <asp:ListItem Text="ILIKE" Value="ILIKE" />
                                                 <asp:ListItem Text="SIMILAR TO" Value="SIMILAR TO" />
                                                 <asp:ListItem Text="~" Value="~" />
@@ -1116,60 +1209,61 @@
                                                 <asp:ListItem Text="&" Value="&" />
                                                 <asp:ListItem Text="|" Value="|" />
                                                 <asp:ListItem Text="#" Value="#" />--%>
+                                                </asp:DropDownList>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <!-- Transaction Type/Value Selection -->
+                                            <div class="col-md-12">
+                                                <label for="contactType" class="col-form-label">Value Selection<span class="text-danger">*</span></label>
+                                                <asp:HiddenField ID="hdnValueSelc" runat="server" Value="false" />
+                                                <div id="divddlTransationType" runat="server" style="display: none">
+                                                    <asp:DropDownList runat="server" ID="ddlTxnType" CssClass="form-control">
+                                                        <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
+                                                        <asp:ListItem Value="1">BalanceEnquiry</asp:ListItem>
+                                                        <asp:ListItem Value="2">Withdrawal</asp:ListItem>
+                                                        <asp:ListItem Value="3">MiniStatement</asp:ListItem>
+                                                        <asp:ListItem Value="4">AuthRequest</asp:ListItem>
+                                                        <asp:ListItem Value="5">Fundtransfer</asp:ListItem>
+                                                        <asp:ListItem Value="6">Purchase</asp:ListItem>
+                                                        <asp:ListItem Value="7">CashDeposite</asp:ListItem>
+                                                        <asp:ListItem Value="8">ALL</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                </div>
+                                                <div id="divddlResponseCode" runat="server">
+                                                    <asp:DropDownList runat="server" ID="ddlResponseCode" CssClass="form-control"></asp:DropDownList>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- SQL Operator Selection (AND/OR) -->
+                                        <div class="col-md-3">
+                                            <label for="ddlOperator0" class="col-form-label">Operator(AND/OR)</label>
+                                            <asp:DropDownList ID="ddlOperator0" runat="server" CssClass="form-control">
+                                                <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
+                                                <asp:ListItem Value="AND">AND</asp:ListItem>
+                                                <asp:ListItem Value="OR">OR</asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
                                     </div>
-
-                                    <div class="col-md-3">
-                                        <!-- Transaction Type/Value Selection -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-8"></div>
+                                        <!-- Query Add-->
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-end">
+                                                <asp:Button ID="btnAddCondition" runat="server" Text="Add Condition" CssClass="btn btn-primary me-3" OnClick="btnAddCondition_Click" />
+                                                <asp:Button ID="btnClearCondition" runat="server" Text="Clear Query" CssClass="btn btn-secondary" OnClick="btnClearCondition_Click" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Query Preview-->
+                                    <div class="row mb-3">
                                         <div class="col-md-12">
-                                            <label for="contactType" class="col-form-label">Value Selection</label>
-                                            <asp:HiddenField ID="hdnValueSelc" runat="server" Value="false" />
-                                            <div id="divddlTransationType" runat="server" style="display: none">
-                                                <asp:DropDownList runat="server" ID="ddlTxnType" CssClass="form-control">
-                                                    <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
-                                                    <asp:ListItem Value="1">BalanceEnquiry</asp:ListItem>
-                                                    <asp:ListItem Value="2">Withdrawal</asp:ListItem>
-                                                    <asp:ListItem Value="3">MiniStatement</asp:ListItem>
-                                                    <asp:ListItem Value="4">AuthRequest</asp:ListItem>
-                                                    <asp:ListItem Value="5">Fundtransfer</asp:ListItem>
-                                                    <asp:ListItem Value="6">Purchase</asp:ListItem>
-                                                    <asp:ListItem Value="7">CashDeposite</asp:ListItem>
-                                                    <asp:ListItem Value="8">ALL</asp:ListItem>
-                                                </asp:DropDownList>
+                                            <div class="query-preview-card">
+                                                <div class="query-preview-title">Query Preview</div>
+                                                <asp:HiddenField ID="hidnEncData" runat="server" />
+                                                <asp:TextBox ID="txtQueryPreview" runat="server" CssClass="query-preview-text" TextMode="MultiLine" Rows="5" ReadOnly="true"></asp:TextBox>
                                             </div>
-                                            <div id="divddlResponseCode" runat="server">
-                                                <asp:DropDownList runat="server" ID="ddlResponseCode" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- SQL Operator Selection (AND/OR) -->
-                                    <div class="col-md-3">
-                                        <label for="ddlOperator0" class="col-form-label">Operator(AND/OR)</label>
-                                        <asp:DropDownList ID="ddlOperator0" runat="server" CssClass="form-control">
-                                            <asp:ListItem Value="0" Selected="true">--Select--</asp:ListItem>
-                                            <asp:ListItem Value="AND">AND</asp:ListItem>
-                                            <asp:ListItem Value="OR">OR</asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-8"></div>
-                                    <!-- Query Add-->
-                                    <div class="col-md-4">
-                                        <div class="d-flex justify-content-end">
-                                            <asp:Button ID="btnAddCondition" runat="server" Text="Add Condition" CssClass="btn btn-primary mr-2" OnClick="btnAddCondition_Click" />
-                                            <asp:Button ID="btnClearCondition" runat="server" Text="Clear Query" CssClass="btn btn-secondary" OnClick="btnClearCondition_Click" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Query Preview-->
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <div class="query-preview-card">
-                                            <div class="query-preview-title">Query Preview</div>
-                                            <asp:TextBox ID="txtQueryPreview" runat="server" CssClass="query-preview-text" TextMode="MultiLine" Rows="5" ReadOnly="true"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -1249,15 +1343,20 @@
 
                 <!-- Footer -->
                 <div class="modal-footer">
-                    <asp:Button ID="btnCreateRule" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnCreateRule_Click" />
+                    <asp:Button
+                        ID="btnCreateRule"
+                        CssClass="btn btn-primary"
+                        runat="server"
+                        Text="Submit"
+                        OnClick="btnSaveAlertConfig_Click"
+                        OnClientClick="return validateForm();" />
                     <asp:Button ID="btnCloseRule" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="btnCloseRule_Click" data-bs-dismiss="modal" />
                 </div>
             </div>
         </div>
     </div>
-
-
     <asp:HiddenField ID="hdnShowModalR" runat="server" Value="false" />
+
 
     <div id="pf-list-simple-expansion" class="list-group list-view-pf list-view-pf-view">
 
@@ -1358,7 +1457,7 @@
                                     </div>
                                 </div>
                                 <div class="list-group" style="width: 98%">
-                                    <asp:Repeater ID="rptRule" runat="server" OnItemCommand="rptRule_ItemCommand" OnItemDataBound="rptRule_ItemDataBound">
+                                    <asp:Repeater ID="rptRule" runat="server" OnItemCommand="rptAlert_ItemCommand" OnItemDataBound="rptAlert_ItemDataBound">
                                         <ItemTemplate>
                                             <div class="sortable-item" data-id='<%# Eval("id") %>'>
                                                 <div class="childGroup" data-id='<%# Eval("id") %>'>
@@ -1476,7 +1575,7 @@
                                                                                             <div class="card-body">
                                                                                                 <div class="email-body">
                                                                                                     <div class="email-preview" id="emailPreview">
-                                                                                                        <textarea class="form-control" rows="8" readonly><%# HttpUtility.HtmlEncode(Eval("mailbody").ToString()) %></textarea>
+                                                                                                        <textarea class="form-control" rows="2" readonly><%# HttpUtility.HtmlEncode(Eval("mailbody").ToString()) %></textarea>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -1771,8 +1870,6 @@
             });
         });
     </script>
-
-
 
 
     <script>
